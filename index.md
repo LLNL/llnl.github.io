@@ -31,7 +31,19 @@ If you have any questions, please don't hesitate to
     <p>{{ package.description }}</p>
 
     Author: {{ package.author }}
+
     <br/>
-    Source Code: <a href="{{ package.url }}">{{ package.url }}</a>
+
+    {% if package.source_code_url %}
+    Source Code: <a href="{{ package.source_code_url }}">{{ package.source_code_url }}</a>
+    {% endif %}
+
+    {% if package.source_code_url and package.project_url %}
+    <br/>
+    {% endif %}
+
+    {% if package.project_url %}
+    Project Page: <a href="{{ package.project_url }}">{{ package.project_url }}</a>
+    {% endif %}
 </div>
 {% endfor %}

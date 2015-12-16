@@ -1,5 +1,6 @@
 ---
 title: Chaos
 author: Livermore Computing
-url: https://github.com/chaos/chaos
+
+source_code_url: https://github.com/chaos/chaos
 ---
