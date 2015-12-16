@@ -22,3 +22,16 @@ Laboratory scientists and engineers.
 
 If you have any questions, please don't hesitate to
 [email our mailing list](mailto:open-source@llnl.gov).
+
+{% assign sorted_software = (site.software | sort: 'title') %}
+{% for package in sorted_software %}
+<div class="well">
+    <h1>{{ package.title }}</h1>
+
+    <p>{{ package.description }}</p>
+
+    Author: {{ package.author }}
+    <br/>
+    Source Code: <a href="{{ package.url }}">{{ package.url }}</a>
+</div>
+{% endfor %}
