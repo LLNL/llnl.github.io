@@ -10,6 +10,8 @@ description: >
   is non-destructive: installing a new version does not break existing
   installations, so many configurations can coexist on the same system.
 
+license: GPL 2.1
+release_number: LLNL-CODE-647188
 source_code_url: https://github.com/llnl/spack
 project_url: http://llnl.github.io/spack/
 ---
