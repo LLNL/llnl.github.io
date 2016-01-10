@@ -30,11 +30,12 @@ If you have any questions, please don't hesitate to
 
     <p>{{ package.description }}</p>
 
-    <strong>Author</strong>: {{ package.author }}
+    <!-- <strong>Author</strong>: {{ package.author }} -->
+    <!-- <br/> -->
 
-    <br/>
     <strong>License</strong>: {{ package.license }}</a>
     <br/>
+
     <strong>Release Number</strong>: {{ package.release_number }}</a>
 
     {% if package.source_code_url or package.project_url %}
