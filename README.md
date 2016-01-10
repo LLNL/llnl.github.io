@@ -10,5 +10,5 @@ Started by following the tutorial found here:
 
 Install the dependencies:
 
-    $ gem install jekyll
-    $ gem install rdiscount
+    $ gem install [--user-install] jekyll
+    $ gem install [--user-install] rdiscount
