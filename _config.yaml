@@ -14,6 +14,14 @@ collections:
 exclude:
   - _software/template.md
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "software"
+    values:
+      layout: "entry"
+
 markdown: rdiscount
 permalink: pretty
 highlighter: pygments

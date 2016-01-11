@@ -1,0 +1,33 @@
+{% include header.html %}
+
+<div class="container">
+  <div class="row">
+    <h1>{{ page.title }}</h1>
+
+    <div class="span8">
+      {{ content }}
+    </div>
+
+    <div class="span4">
+      <h3>Software Details</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td class="label">Author</td>
+            <td>{{ page.author }}</td>
+          </tr>
+          <tr>
+            <td class="label">Release Number</td>
+            <td>{{ page.release_number }}</td>
+          </tr>
+          <tr>
+            <td class="label">License</td>
+            <td>{{ page.license }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
