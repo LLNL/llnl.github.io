@@ -13,6 +13,7 @@ collections:
 
 exclude:
   - _software/template.md
+  - _software/chaos.md  # Hide chaos due to missing information
 
 defaults:
   -
@@ -21,6 +22,7 @@ defaults:
       type: "software"
     values:
       layout: "entry"
+      permalink: "/software/:title/"
 
 markdown: rdiscount
 permalink: pretty
