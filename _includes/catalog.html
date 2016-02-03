@@ -1,32 +1,16 @@
-{% assign sorted_software = (site.software | sort: 'title') %}
-{% for package in sorted_software %}
+## GitHub Repos
+
+<div class="row">
+{% for repo in site.github.public_repositories %}
+
 <div class="well">
-  <h1>{{ package.title }}</h1>
+    <h2><a href="{{ repo.html_url }}">{{ repo.name }}</a> <small>{{ repo.language }}</small></h2>
 
-  <p>{{ package.description }}</p>
+    <p>{{ repo.description }}</p>
 
-  <!-- <strong>Author</strong>: {{ package.author }} -->
-  <!-- <br/> -->
-
-  <strong>License</strong>: {{ package.license }}</a>
-  <br/>
-
-  <strong>Release Number</strong>: {{ package.release_number }}</a>
-
-  {% if package.source_code_url or package.project_url %}
-  <br/>
-  {% endif %}
-
-  {% if package.source_code_url %}
-  <strong>Source Code</strong>: <a href="{{ package.source_code_url }}">{{ package.source_code_url }}</a>
-  {% endif %}
-
-  {% if package.source_code_url and package.project_url %}
-  <br/>
-  {% endif %}
-
-  {% if package.project_url %}
-  <strong>Project Page</strong>: <a href="{{ package.project_url }}">{{ package.project_url }}</a>
-  {% endif %}
+    <span class="fa fa-code-fork"></span> {{ repo.forks }}
+    <span class="fa fa-star"></span> {{ repo.watchers }}
 </div>
+
 {% endfor %}
+</div>
