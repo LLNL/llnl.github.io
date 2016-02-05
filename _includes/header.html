@@ -1,4 +1,4 @@
-<div id="header-slim" class="navbar navbar-fixed-top navbar-noFixed">
+<div id="header-slim" class="navbar navbar-default">
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -9,10 +9,10 @@
 
       <p id="llnl-menu-tab" class="pull-left"><a href="https://www.llnl.gov"></a></p>
 
-      <a class="brand" href="/">{{ site.name }}</a>
+      <a class="navbar-brand" href="/">{{ site.name }}</a>
 
+      {% include nav.html %}
     </div>
   </div>
 
-  {% include nav.html %}
 </div>
