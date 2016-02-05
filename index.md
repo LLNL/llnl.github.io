@@ -3,7 +3,7 @@ title: Homepage
 layout: default
 ---
 
-## GitHub Repos
+## Open Source Software Repositories
 
 {% for repo in site.github.public_repositories %}
 
