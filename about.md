@@ -3,7 +3,8 @@ title: About the LLNL Software Portal
 layout: default
 ---
 
-# LLNL Software Portal
+## About this site
+{: .page-header}
 
 Welcome to the Lawrence Livermore National Laboratory software portal! The
 purpose of this software portal (or catalog if you prefer) is to serve as the

@@ -4,6 +4,7 @@ layout: default
 ---
 
 ## Open Source Software Repositories
+{: .page-header}
 
 {% for repo in site.github.public_repositories %}
 
