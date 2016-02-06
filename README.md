@@ -1,4 +1,4 @@
-# Basic Template for Jekyll formatted for the Laboratory
+# LLNL Software Catalog
 
 Author: Ian Lee <lee1001@llnl.gov>
 
