@@ -13,3 +13,9 @@ Install the dependencies:
     $ gem install [--user-install] jekyll
     $ gem install [--user-install] rdiscount
     $ gem install [--user-install] jekyll-github-metadata
+
+Run the server:
+
+    $ jekyll serve
+
+Open your web browser and browse to `localhost:4000`
