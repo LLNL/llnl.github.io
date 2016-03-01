@@ -17,8 +17,9 @@ The LLNL GitHub Organization has a limited number (currently 10) of private repo
 Remember that these repositories are *still hosted* on GitHub servers, and content placed in them should be limited to "email like" communications. That means:
 
 * NO Classified
-* NO Official Use Only (OUO)
 * NO Export Controlled
+* NO Official Use Only (OUO)
+* NO NDA or vendor-proprietary information
 * NO Unclassified Controlled Information (UCI)
 * NO Unclassified Controlled Nuclear Information (UCNI)
 
