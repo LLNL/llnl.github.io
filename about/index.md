@@ -26,6 +26,6 @@ When in doubt, contact a Derivative Classifer (DC) and / or Information Manageme
 
 ### Contact
 
-If you have any questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or one of the other organizational owners.
+If you have any questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or one of [the GitHub organization admins](mailto:github-admin@llnl.gov).
 
 You can also find us on our mailing list: <open-source@llnl.gov>
