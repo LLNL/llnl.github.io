@@ -30,6 +30,13 @@ defaults:
     values:
       layout: "entry"
       permalink: "/software/:title/"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: "/news/:year/:month/:day/:title/"
 
 markdown: kramdown
 permalink: pretty
