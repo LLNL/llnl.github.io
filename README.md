@@ -2,34 +2,12 @@
 
 Author: Ian Lee <lee1001@llnl.gov>
 
-Welcome to the Lawrence Livermore National Laboratory software portal! The
-purpose of this software portal (or catalog if you prefer) is to serve as the
-definitive source of truth pointing to all software that has been produced and
-released by Lawrence Livermore National Laboratory.
+Welcome to the Lawrence Livermore National Laboratory software portal! The purpose of this software portal is to serve as a hub for open source software that is produced by Lawrence Livermore National Laboratory.
 
-LLNL produces software on a daily basis. Some of this software is used only
-internally, other components are licensed for use by external partners and
-collaborators, still other software is released, or even actively developed, in
-the open on software hosting platforms such as GitHub.com, Bitbucket.org,
-Sourceforge.net, and others.
+LLNL produces software on a daily basis. Some of this software is used only internally, other components are licensed for use by external partners and collaborators, still other software is released, or even actively developed, in the open on software hosting platforms such as GitHub.com, Bitbucket.org, Sourceforge.net, and others.
 
-This page is designed to be a single stop to find all types of software
-produced and available due to the expertise of Lawrence Livermore National
-Laboratory scientists and engineers.
+### Contact
 
-If you have any questions, please don't hesitate to
-[email our mailing list](mailto:open-source@llnl.gov).
+If you have any questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or one of [the GitHub organization admins](mailto:github-admin@llnl.gov).
 
-## Quickstart
-
-Install the dependencies:
-
-    $ gem install [--user-install] jekyll
-    $ gem install [--user-install] rdiscount
-    $ gem install [--user-install] jekyll-github-metadata
-
-Run the server:
-
-    $ jekyll serve
-
-Open your web browser and browse to `localhost:4000`
+You can also find us on our mailing list: <open-source@llnl.gov>
