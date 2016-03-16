@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: LLNL Software Catalog
 layout: default
 ---
 
