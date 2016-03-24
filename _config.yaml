@@ -7,10 +7,6 @@ url: "http://software.llnl.gov"
 
 # paginate: 10
 
-collections:
-  software:
-    output: true
-
 # LLNL Piwik Analytics https://analytics.llnl.gov
 piwik_id: 250
 
@@ -22,10 +18,6 @@ google_analytics:
 twitter:
   username: llnl_opensource
 
-exclude:
-  - _software/template.md
-  - _software/chaos.md  # Hide chaos due to missing information
-
 # GitHub Metadata -- https://github.com/jekyll/github-metadata
 repository: llnl/llnl.github.io
 gems:
@@ -33,13 +25,6 @@ gems:
   - jekyll-seo-tag
 
 defaults:
-  -
-    scope:
-      path: ""
-      type: "software"
-    values:
-      layout: "entry"
-      permalink: "/software/:title/"
   -
     scope:
       path: ""
