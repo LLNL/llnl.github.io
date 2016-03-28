@@ -4,25 +4,36 @@ layout: default
 ---
 
 ## Open Source Software Repositories
-{: .page-header}
+{: .page-header .text-center}
 
-{% for repo in site.github.public_repositories %}
+{% assign repositories = (site.github.public_repositories | sort: 'stargazers_count' | reverse) %}
 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">
-            <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-            <small>{{ repo.language }}</small>
-            <span class="pull-right">
-                <span class="fa fa-code-fork"></span> {{ repo.forks }}
-                <span class="fa fa-star"></span> {{ repo.watchers }}
-            </span>
-        </h3>
+<section id="repositories" class="flex-container container">
+  {% for repo in repositories %}
+    <div class="flex-item {{repo.name}} {{repo.language}}">
+      <h4 class="text-center">
+        <a href="{{ repo.html_url }}"> {{ repo.name }} </a>
+        <small>{{ repo.language }}</small>
+      </h4>
+
+      <p class="text-justify">{{ repo.description }}</p>
+
+      <p class="stats text-center">
+        <!-- <span class="fa fa-github"></span> -->
+        <a href="{{ repo.html_url }}/network">
+          <span class="fa fa-code-fork"></span> {{ repo.forks_count }}
+        </a>
+
+        <a href="{{ repo.html_url }}/stargazers">
+          <span class="fa fa-star"></span> {{ repo.stargazers_count }}
+        </a>
+
+        {% if repo.homepage and repo.homepage != "" %}
+        <a href="{{ repo.homepage }}/">
+          <span class="fa fa-globe"></span>
+        </a>
+        {% endif %}
+      </p>
     </div>
-
-    <div class="panel-body">
-        <p>{{ repo.description }}</p>
-    </div>
-</div>
-
-{% endfor %}
+  {% endfor %}
+</section>
