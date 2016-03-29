@@ -8,12 +8,14 @@
 {% include header.html %}
 
 <div class="container">
-  <h2>
-    <a href="{{ page.url }}">{{ page.title }}</a>
-    <small class="pull-right">{{ page.date | date: '%B %d, %Y' }}</small>
-  </h2>
+  <div class="row">
+    <h2>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+      <small class="pull-right">{{ page.date | date: '%B %d, %Y' }}</small>
+    </h2>
 
-  {{ content }}
+    {{ content }}
+  </div>
 </div>
 
 {% include footer.html %}
