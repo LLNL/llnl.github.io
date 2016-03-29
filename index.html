@@ -7,6 +7,12 @@ layout: default
 
 {% assign repositories = (site.github.public_repositories | sort: 'stargazers_count' | reverse) %}
 
+<div class="container">
+  <div class="col-xs-6 col-xs-offset-3">
+    <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
+  </div>
+</div>
+
 <section id="repositories" class="flex-container container">
   {% for repo in repositories %}
     <div class="flex-item {{repo.name}} {{repo.language}}">
