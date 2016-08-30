@@ -23,7 +23,7 @@ Remember that these repositories are *still hosted* on GitHub servers, and conte
 * NO Unclassified Controlled Information (UCI)
 * NO Unclassified Controlled Nuclear Information (UCNI)
 
-When in doubt, contact a Derivative Classifer (DC) and / or Information Management (IM) for further guidance.
+When in doubt, contact a Derivative Classifier (DC) and / or Information Management (IM) for further guidance.
 
 ### Contact
 
