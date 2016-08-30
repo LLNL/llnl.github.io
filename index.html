@@ -3,9 +3,9 @@ title: LLNL Software Catalog
 layout: default
 ---
 
-<h2 class="page-header text-center">Open Source Software Repositories</h2>
-
 {% assign repositories = (site.github.public_repositories | sort: 'stargazers_count' | reverse) %}
+
+<h2 class="page-header text-center">{{ repositories | size }} Software Repositories</h2>
 
 <div class="container">
   <div class="col-xs-6 col-xs-offset-3">
