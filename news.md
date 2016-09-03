@@ -4,7 +4,6 @@ layout: default
 permalink: /news/
 ---
 
-<div class="container">
   {% for page in site.posts %}
   <div class="row">
     <h2>
@@ -15,4 +14,3 @@ permalink: /news/
     {{ page.content }}
   </div>
   {% endfor %}
-</div>
