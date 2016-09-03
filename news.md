@@ -12,5 +12,4 @@ permalink: /news/
     </h2>
 
     {{ page.content }}
-  </div>
   {% endfor %}
