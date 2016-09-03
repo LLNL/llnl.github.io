@@ -2,6 +2,7 @@
 
 .flex-container {
   align-items: stretch;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -9,28 +10,26 @@
 
 @media(max-width:767px) {
   .flex-item {
-    min-width: 100%;
+    width: 100%;
   }
 }
 
 @media(min-width:768px) {
   .flex-item {
-    min-width: 45%;
+    width: 45%;
   }
 }
 
 @media(min-width:992px) {
   .flex-item {
-    min-width: 30%;
+    width: 30%;
   }
 }
 
 .flex-item {
   border: 1px solid #ddd;
   border-radius: 4px;
-  flex: 1;
   margin: 10px;
-  max-width: 32%;
 }
 
 .flex-item > h4 {
