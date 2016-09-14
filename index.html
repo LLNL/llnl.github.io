@@ -1,9 +1,20 @@
 ---
 title: LLNL Software Catalog
-layout: default
+layout: portal
 ---
 
-{% assign repositories = (site.github.public_repositories | sort: 'stargazers_count' | reverse) %}
+<!-- {% assign repositories = (site.github.public_repositories | sort: 'stargazers_count' | reverse) %} -->
+
+<h1 class="text-center">
+    <span ng-hide="repoData"/>Loading...</span>
+    <span>{{ userData.name }}</span>
+    <br>
+    <a href="{{userData.html_url}}" class="btn btn-default">
+        <span class="octicon octicon-octoface"></span>
+        {{ userData.login }}
+    </a>
+
+</h1>
 
 <h2 class="page-header text-center">{{ repositories | size }} Software Repositories</h2>
 
@@ -42,3 +53,6 @@ layout: default
     </div>
   {% endfor %}
 </section>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="js/github-dynamic.js"></script>
