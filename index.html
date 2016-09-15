@@ -5,7 +5,10 @@ layout: portal
 
 {% raw %}
 
-<h2 class="page-header text-center">{{ repoData.length }} Software Repositories</h2>
+<h2 class="page-header text-center">
+<span ng-show="repoData"> {{ repoData.length }} </span>
+Software Repositories
+</h2>
 
 <div class="container">
   <div class="col-xs-6 col-xs-offset-3">

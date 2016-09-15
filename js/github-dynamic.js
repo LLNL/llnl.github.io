@@ -14,7 +14,6 @@ angular.module('app', [])
             'rose-compiler',
             'zfsonlinux',
         ];
-        $scope.repoData = [];
 
         angular.forEach($scope.orgs, function(value, key){
             console.log(value);
@@ -26,6 +25,7 @@ angular.module('app', [])
                 });
         });
 
+        $scope.repoData = [];
         var loadRepos = function () {
             $http.get($scope.userData.repos_url + "?per_page=100")
                 .success(function (data) {
