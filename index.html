@@ -7,11 +7,11 @@ layout: portal
 
 <h1 class="text-center">
     <span ng-hide="repoData"/>Loading...</span>
-    <span>{{ userData.name }}</span>
+    <span ng-bind="userData.name"></span>
     <br>
     <a href="{{userData.html_url}}" class="btn btn-default">
         <span class="octicon octicon-octoface"></span>
-        {{ userData.login }}
+        <span ng-bind="userData.login"></span>
     </a>
 
 </h1>
