@@ -26,6 +26,10 @@ Software Repositories
       <p class="text-justify">{{ repo.description }}</p>
 
       <p class="stats text-center">
+        <a href="{{ repo.html_url }}">
+          <span class="fa fa-github"></span>
+        </a>
+
         <a href="{{ repo.stargazers_url }}">
           <span class="fa fa-star"></span> {{ repo.stargazers_count }}
         </a>
