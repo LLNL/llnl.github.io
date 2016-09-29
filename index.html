@@ -11,38 +11,38 @@ Software Repositories
 </h2>
 
 <div class="container">
-  <div class="col-xs-6 col-xs-offset-3">
-    <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
-  </div>
+    <div class="col-xs-6 col-xs-offset-3">
+        <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
+    </div>
 </div>
 
 <section ng-show="repoData" id="repositories" class="flex-container">
     <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.language}}">
-      <h4 class="text-center">
+        <h4 class="text-center">
         <a href="{{ repo.html_url }}"> {{ repo.name }} </a>
         <small>{{ repo.language }}</small>
-      </h4>
+        </h4>
 
-      <p class="text-justify">{{ repo.description }}</p>
+        <p class="text-justify">{{ repo.description }}</p>
 
-      <p class="stats text-center">
-        <a href="{{ repo.html_url }}">
-          <span class="fa fa-github"></span>
-        </a>
+        <p class="stats text-center">
+            <a href="{{ repo.html_url }}">
+                <span class="fa fa-github"></span>
+            </a>
 
-        <a href="{{ repo.stargazers_url }}">
-          <span class="fa fa-star"></span> {{ repo.stargazers_count }}
-        </a>
+            <a href="{{ repo.stargazers_url }}">
+                <span class="fa fa-star"></span> {{ repo.stargazers_count }}
+            </a>
 
-        <a href="{{ repo.html_url }}/network">
-          <span class="fa fa-code-fork"></span> {{ repo.forks_count }}
-        </a>
+            <a href="{{ repo.html_url }}/network">
+                <span class="fa fa-code-fork"></span> {{ repo.forks_count }}
+            </a>
 
-        <a ng-if="repo.homepage" href="{{ repo.homepage }}/">
-          <span class="fa fa-globe"></span>
-        </a>
-      </p>
-  </div>
+            <a ng-if="repo.homepage" href="{{ repo.homepage }}/">
+                <span class="fa fa-globe"></span>
+            </a>
+        </p>
+    </div>
 </section>
 
 {% endraw %}
