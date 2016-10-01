@@ -21,12 +21,12 @@ angular.module('app', [])
                 .success(function (data) {
                     $scope.userData = data;
                     console.log(data);
-                    loadRepos();
+                    loadOrganizationRepos();
                 });
         });
 
         $scope.repoData = [];
-        var loadRepos = function () {
+        var loadOrganizationRepos = function () {
             $http.get($scope.userData.repos_url + "?per_page=100", {cache: true})
                 .success(function (data) {
                     $scope.repoData = $scope.repoData.concat(data);
