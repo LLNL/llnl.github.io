@@ -15,6 +15,11 @@ angular.module('app', [])
             'zfsonlinux',
         ];
 
+        $scope.repos = [
+            'dun/conman',
+            'dun/munge',
+        ];
+
         angular.forEach($scope.orgs, function(value, key){
             console.log(value);
             $http.get("https://api.github.com/users/" + value, {cache: true})
@@ -33,6 +38,15 @@ angular.module('app', [])
                     console.log(data);
                 });
         };
+
+        angular.forEach($scope.repos, function(value, key){
+            $http.get("https://api.github.com/repos/" + value, {cache: true})
+                .success(function (data) {
+                    $scope.repoData = $scope.repoData.concat(data);
+                    console.log(data);
+                    console.log($scope.userData.repos_url);
+                });
+        });
 
         $scope.predicate = '-stargazers_count';
 }]);
