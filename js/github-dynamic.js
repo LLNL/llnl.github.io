@@ -18,6 +18,12 @@ angular.module('app', [])
         $scope.repos = [
             'dun/conman',
             'dun/munge',
+            'hpc/dcp',
+            'hpc/mpifileutils',
+            'hpc/mvapich-cce',
+            'hpc/mvapich2-cce',
+            'hpc/openlorenz',
+            'hpc/Spindle',
         ];
 
         angular.forEach($scope.orgs, function(value, key) {
