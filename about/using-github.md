@@ -47,6 +47,21 @@ If you are an employee at LLNL, and have 2FA enabled, congratulations, you are e
 
 4. Welcome to the organization!
 
+### Private Repositories
+
+The LLNL GitHub Organization has a limited number (currently 10) of private repositories available for LLNL Employees to host software not ready or not applicable for unlimited public release. In general, we would like to encourage that all open source work be done completely in the open, but we want to be able to provide the flexibility to have some privacy available, e.g. for industrial partnerships, university collaborations leading up to a publication, etc.
+
+Remember that these repositories are *still hosted* on GitHub servers, and content placed in them should be limited to "email like" communications. That means:
+
+* NO Classified
+* NO Export Controlled
+* NO Official Use Only (OUO)
+* NO NDA or vendor-proprietary information
+* NO Unclassified Controlled Information (UCI)
+* NO Unclassified Controlled Nuclear Information (UCNI)
+
+When in doubt, contact a Derivative Classifier (DC) and / or Information Management (IM) for further guidance.
+
 ### Other References
 
 There are many great "getting started" guides for GitHub, here are a few that we recommend if you're looking for more information:
