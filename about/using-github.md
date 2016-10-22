@@ -16,6 +16,8 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
 1. [Create an account on GitHub](https://github.com/join)
 
+  - You *do not need* a separate work account and personal account, unless you prefer to.
+
 2. [Update your profile information](https://github.com/settings/profile)
 
   - **Photo**: A headshot photo, or image that is uniquely you.
@@ -25,7 +27,9 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
   - **Company**: Probably `Lawrence Livermore National Laboratory, @LLNL`.
   - **Location**: Your primary location.
 
-3. Add your
+3. Add your `@LLNL` email address (and any aliases) to your [Email Settings](https://github.com/settings/emails) page.
+
+  - This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
 
 4. [Enable Two-factor authentication](https://github.com/settings/security)
 
