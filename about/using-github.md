@@ -53,3 +53,7 @@ There are many great "getting started" guides for GitHub, here are a few that we
 
 - [18F Handbook: GitHub](https://handbook.18f.gov/github/)
 - https://github.com/fisma-ready/github
+
+The Federal government also provides some relevant information:
+
+- [Guidance for Agency Use of Third-Party Websites and Applications](https://www.whitehouse.gov/sites/default/files/omb/assets/memoranda_2010/m10-23.pdf)
