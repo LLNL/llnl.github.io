@@ -51,7 +51,11 @@ If you are an employee at LLNL, and have 2FA enabled, congratulations, you are e
 
 4. Welcome to the organization!
 
-### Private Repositories
+### Working with LLNL Repositories
+
+Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
+
+#### Private Repositories
 
 The LLNL GitHub Organization has a limited number (currently 10) of private repositories available for LLNL Employees to host software not ready or not applicable for unlimited public release. In general, we would like to encourage that all open source work be done completely in the open, but we want to be able to provide the flexibility to have some privacy available, e.g. for industrial partnerships, university collaborations leading up to a publication, etc.
 
