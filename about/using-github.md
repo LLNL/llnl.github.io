@@ -57,7 +57,7 @@ Repositories within the LLNL organization are owned and managed by LLNL. Please 
 
 #### Private Repositories
 
-The LLNL GitHub Organization has a limited number (currently 10) of private repositories available for LLNL Employees to host software not ready or not applicable for unlimited public release. In general, we would like to encourage that all open source work be done completely in the open, but we want to be able to provide the flexibility to have some privacy available, e.g. for industrial partnerships, university collaborations leading up to a publication, etc.
+The LLNL GitHub Organization has a limited number (currently 50) of private repositories available for LLNL Employees to host software not ready or not applicable for unlimited public release. In general, we would like to encourage that all open source work be done completely in the open, but we want to be able to provide the flexibility to have some privacy available, e.g. for industrial partnerships, university collaborations leading up to a publication, etc.
 
 Remember that these repositories are *still hosted* on GitHub servers, and content placed in them should be limited to "email like" communications. That means:
 
