@@ -80,3 +80,7 @@ There are many great "getting started" guides for GitHub, here are a few that we
 The Federal government also provides some relevant information:
 
 - [Guidance for Agency Use of Third-Party Websites and Applications](https://www.whitehouse.gov/sites/default/files/omb/assets/memoranda_2010/m10-23.pdf)
+
+See also:
+
+- [18F Blog: Facts about Publishing Open Source Code](https://18f.gsa.gov/2016/08/08/facts-about-publishing-open-source-code-in-government/)
