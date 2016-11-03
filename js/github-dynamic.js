@@ -34,19 +34,32 @@ angular.module('app', [])
                 .success(function(data) {
                     $scope.userData = data;
                     console.log(data);
-                    loadOrganizationRepos();
+
+                    var max_per_page = 100;
+                    var per_page = Math.min(data.public_repos, max_per_page)
+                    var num_pages = Math.ceil(data.public_repos / per_page);
+
+                    loadOrganizationRepos(num_pages, per_page);
                 });
         });
 
         $scope.repoData = [];
-        var loadOrganizationRepos = function() {
-            $http.get($scope.userData.repos_url + "?per_page=100", {
+        var loadOrganizationRepoPage = function(page=1, num_per_page=100) {
+            var query = "?per_page=" + num_per_page + "&page=" + page;
+
+            $http.get($scope.userData.repos_url + query, {
                     cache: true
                 })
                 .success(function(data) {
                     $scope.repoData = $scope.repoData.concat(data);
                     console.log(data);
                 });
+        };
+        var loadOrganizationRepos = function(num_pages, num_per_page) {
+            // Function for aggregating across all pages in an organization
+            for (var i = 1; i <= num_pages; i++) {
+                loadOrganizationRepoPage(i, num_per_page);
+            }
         };
 
         angular.forEach($scope.repos, function(value, key) {
