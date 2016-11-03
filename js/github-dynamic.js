@@ -44,7 +44,7 @@ angular.module('app', [])
         });
 
         $scope.repoData = [];
-        var loadOrganizationRepoPage = function(page=1, num_per_page=100) {
+        var loadOrganizationRepoPage = function(page = 1, num_per_page = 100) {
             var query = "?per_page=" + num_per_page + "&page=" + page;
 
             $http.get($scope.userData.repos_url + query, {
