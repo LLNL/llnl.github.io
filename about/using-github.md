@@ -34,6 +34,10 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 4. [Enable Two-factor authentication](https://github.com/settings/security)
 
   - *This will soon be a requirement for membership in the @LLNL GitHub organization.*
+  - Two-factor authentication is set at your account level.
+  - You will be given the option to setup two-factor authentication with an app (such as Google Authenticator) or SMS.
+  - Selecting either option also provides you with a list of recovery codes to get into your account in the event you are locked out.
+  - If you setup with an app, you will still have the option to set a backup SMS number.
   - For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
 
 
