@@ -5,9 +5,11 @@ rebuild_jekyll:
 clean:
 	rm -rf _site/
 
-build:
-	bundle exec jekyll build
+build: ~/.cspca.crt
+	# Requires the CSP certificate file obtained from:
+	# https://access.llnl.gov/cspca.cer
+	SSL_CERT_FILE=~/.cspca.crt bundle exec jekyll build
 
-deploy:
+deploy: clean build
 	chmod -R ugo+rX _site/
 	rsync -avz --delete _site/ timbl:/export/www/software-pre/html/
