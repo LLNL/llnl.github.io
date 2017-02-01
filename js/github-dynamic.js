@@ -11,6 +11,7 @@ angular.module('app', [])
             'glvis',
             'llnl',
             'mfem',
+            'pruners',
             'rose-compiler',
             'zfsonlinux',
         ];
