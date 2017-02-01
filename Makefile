@@ -5,10 +5,8 @@ rebuild_jekyll:
 clean:
 	rm -rf _site/
 
-build: ~/.cspca.crt
-	# Requires the CSP certificate file obtained from:
-	# https://access.llnl.gov/cspca.cer
-	SSL_CERT_FILE=~/.cspca.crt bundle exec jekyll build
+build:
+	bundle exec jekyll build
 
 deploy: clean build
 	chmod -R ugo+rX _site/
