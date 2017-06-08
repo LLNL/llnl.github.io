@@ -11,3 +11,10 @@ LLNL produces software on a daily basis. Some of this software is used only inte
 If you have any questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or one of [the GitHub organization admins](mailto:github-admin@llnl.gov).
 
 You can also find us on our mailing list: <open-source@llnl.gov>
+
+## Release
+
+The code of this site is released under the MIT License. For more details see the
+[LICENSE](LICENSE) File.
+
+LLNL-WEB-680594
