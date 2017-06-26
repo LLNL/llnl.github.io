@@ -1,0 +1,55 @@
+body { font: 14px Arial;}
+
+.bar {
+	fill: steelblue;
+}
+
+.bar:hover {
+	fill: lightblue;
+}
+
+.line {
+	fill: black;
+	stroke: steelblue;
+	stroke-width: 2px;
+}
+
+.circle {
+	fill: steelblue;
+	stroke: white;
+	stroke-width: 1px;
+}
+
+.circle:hover {
+	fill: lightblue;
+	stroke: steelblue;
+	stroke-width: 2px;
+}
+
+.axis text {
+	font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.xbar.axis path {
+	display: none;
+}
+
+.graphtitle {
+	font-size: 18px;
+}
+
+.d3-tip {
+	line-height: 1;
+	padding: 6px;
+	background: black;
+	color: white;
+	border-radius: 4px;
+	font-size: 12px;
+}

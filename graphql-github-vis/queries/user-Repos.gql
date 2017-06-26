@@ -1,0 +1,17 @@
+query { 
+  user(login:"USRNAME") {
+    contributedRepositories(first:50 PGCURS) {
+      ...repoinfo
+    }
+  }
+}
+fragment repoinfo on RepositoryConnection {
+  totalCount
+  nodes {
+    nameWithOwner
+  }
+  pageInfo {
+    endCursor
+    hasNextPage
+  }
+}

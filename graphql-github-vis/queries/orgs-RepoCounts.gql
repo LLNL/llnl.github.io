@@ -1,0 +1,35 @@
+query { 
+  llnl: organization(login:"llnl") {
+    ...testing
+  }
+  chaos: organization(login:"chaos") {
+    ...testing
+  }
+  esgf: organization(login:"esgf") {
+    ...testing
+  }
+  flux: organization(login:"flux-framework") {
+    ...testing
+  }
+  glvis: organization(login:"glvis") {
+    ...testing
+  }
+  mfem: organization(login:"mfem") {
+    ...testing
+  }
+  pruners: organization(login:"pruners") {
+    ...testing
+  }
+  rose: organization(login:"rose-compiler") {
+    ...testing
+  }
+  zfson: organization(login:"zfsonlinux") {
+    ...testing
+  }
+}
+fragment testing on Organization {
+  name
+  repositories {
+      totalCount
+    }
+}
