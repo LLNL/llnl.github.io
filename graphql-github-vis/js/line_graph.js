@@ -13,7 +13,7 @@ function line_drawLineGraph(data) {
 	var x = d3.scaleBand()
 		.domain(data.map(function(d) { return d.name; }))
 		.rangeRound([0, width])
-		.padding([0.1]);
+		.padding([1]);
 	
 	var y = d3.scaleLinear()
 		.domain([0, d3.max(data, function(d) { return d.value; })])
@@ -35,11 +35,11 @@ function line_drawLineGraph(data) {
 			}
 			return d.value + repos;
 		});
-
+	
 	var valueline = d3.line()
 		.x(function(d) { return x(d.name); })
 		.y(function(d) { return y(d.value); });
-	
+
 	var chart = d3.select(".line_chart")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
@@ -48,15 +48,18 @@ function line_drawLineGraph(data) {
 
 	chart.call(tip);
 	
+	// Add the x axis
 	chart.append("g")
 		.attr("class", "x axis")
 		.attr("transform", "translate(0," + height + ")")
 		.call(xAxis);
 	
+	// Add the y axis
 	chart.append("g")
 		.attr("class", "y axis")
 		.call(yAxis);
 
+	// Add title
 	chart.append("text")
 		.attr("class", "graphtitle")
 		.attr("x", (width / 2))
@@ -64,12 +67,13 @@ function line_drawLineGraph(data) {
 		.attr("text-anchor", "middle")
 		.text("Repository Counts 2");
 	
-	chart.selectAll(".line")
-		.data(data)
-	  .enter().append("path")
+	// Draw line
+	chart.append("path")
+		.datum(data)
 		.attr("class", "line")
 		.attr("d", valueline);
 
+	// Draw dots
 	chart.selectAll(".circle")
 		.data(data)
 	  .enter().append("circle")
@@ -80,6 +84,7 @@ function line_drawLineGraph(data) {
 		.on('mouseover', tip.show)
 		.on('mouseout', tip.hide);
 
+	// Angle the axis text
 	chart.select(".x.axis")
 		.selectAll("text")
 		.attr("transform", "rotate(12)")
