@@ -6,31 +6,39 @@ import re
 import time
 
 date = (time.strftime("%Y-%m-%d"))
+datfilepath = "../github-data/usrsRepos.json"
+allData = {}
 
-# If a file argument is specified, use that, otherwise use the relevant output file from today
-if (len(sys.argv) > 1) :
-	datfilename = str(sys.argv[1])
-	print "File argument detected"
+# Check for and read existing data file
+if not os.path.isfile(datfilepath) :
+	print "No existing data file '"+datfilepath+"', will create new file."
 else :
-	datfilename = "../github-data/orgsMembers_"+date+".json"
+	print "Reading existing data file '"+datfilepath+"' ..."
+	with open(datfilepath,"r") as q:
+		data_raw = q.read()
+	allData = json.loads(data_raw)
+	print "File read!"
 
-# Read requested, existing org member data
-if not os.path.isfile(datfilename) :
-	raise RuntimeError("Data file "+datfilename+" does not exist.")
-print "Reading "+datfilename+" ..."
-with open(datfilename,"r") as q:
+# Read existing org member data file
+orgsMembersPath = "../github-data/orgsMembers.json"
+if not os.path.isfile(orgsMembersPath) :
+	raise RuntimeError("Data file '"+orgsMembersPath+"' does not exist.")
+print "Reading '"+orgsMembersPath+"' ..."
+with open(orgsMembersPath,"r") as q:
 	data_raw = q.read()
 dataObj = json.loads(data_raw)
 print "File read!"
 
-# Populate user list
+# Populate today's user list
+if not date in dataObj :
+	raise RuntimeError("No orgsMembers data for "+date)
 userCountCheck = 0
 userlist = []
-for org in dataObj["data"] :
+for org in dataObj[date] :
 	print "Getting members of "+org+" ..."
-	for user in dataObj["data"][org]["members"]["nodes"] :
+	for user in dataObj[date][org]["members"]["nodes"] :
 		userlist.append(user["login"])
-	userCountCheck += dataObj["data"][org]["members"]["totalCount"]
+	userCountCheck += dataObj[date][org]["members"]["totalCount"]
 if not userCountCheck==len(userlist) :
 	raise RuntimeError("User count error: "+str(userCountCheck)+" reported, "+str(len(userlist))+" parsed")
 # Remove duplicates (from same user listed in multiple orgs)
@@ -40,8 +48,8 @@ print "User list complete. Found "+str(userCountCheck)+" total users, "+str(len(
 # Read pretty GraphQL query into single line string variable
 filename = "../queries/user-Repos.gql"
 if not os.path.isfile(filename) :
-	raise RuntimeError("Query "+filename+" does not exist.")
-print "Reading "+filename+" ..."
+	raise RuntimeError("Query '"+filename+"' does not exist.")
+print "Reading '"+filename+"' ..."
 with open(filename,"r") as q:
 	query_raw = q.read().replace('\n',' ')
 query_in = ' '.join(query_raw.split())
@@ -53,6 +61,7 @@ print "Reading authorization token..."
 token = os.environ['GITHUB_API_TOKEN']
 authhead = 'Authorization: bearer '+token
 print "Token read!"
+
 
 # Iterate through users
 print "Gathering data across multiple paginated queries..."
@@ -119,22 +128,15 @@ for usr in userlist:
 	print "'"+usr+"' Done!"
 
 print "\nCollective data gathering complete!"
-allData = json.dumps(collective)
+
+# Combine new data with existing data
+allData[date] = collective["data"]
+allDataString = json.dumps(allData)
 
 # Write output file
-outPrefix = "usrsRepos_"
-basename = outPrefix+date+".json"
-outputfile = "../github-data/"+basename
-print "\nWriting file "+outputfile
-with open(outputfile,"w") as fileout:
-	fileout.write(allData)
+print "\nWriting file '"+datfilepath+"'"
+with open(datfilepath,"w") as fileout:
+	fileout.write(allDataString)
 print "Wrote file!"
-
-# Update LATEST symlink
-linkbase = outPrefix+"LATEST"
-print "Making "+linkbase+" link"
-bashln = 'ln -sf '+basename+' ../github-data/'+linkbase
-subprocess.call(bashln.split())
-print "Made link!"
 
 print "\nDone!\n"
