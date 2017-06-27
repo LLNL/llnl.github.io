@@ -82,7 +82,7 @@ for org in orglist:
 		bashcurl_list[2] = authhead
 		bashcurl_list[6] = gitquery
 		result = subprocess.check_output(bashcurl_list)
-		print "Checking response..."
+		print tab+"Checking response..."
 		if '"message": "Bad credentials"' in result :
 			raise RuntimeError("Invalid response; Bad GitHub credentials")
 		print tab+"Data recieved!"
