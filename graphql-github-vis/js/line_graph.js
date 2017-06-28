@@ -93,20 +93,30 @@ function line_drawLineGraph(data) {
 
 // Turn json obj into desired working data
 function line_reformatData(obj) {
+	var dates = Object.keys(obj);
+	dates.sort();
+	var latest = obj[dates[dates.length-1]];
 	var data = [];
-	for (var org in obj.data) {
-		if (obj.data.hasOwnProperty(org)) {
-			var dName = obj.data[org].name;
-			var dValue = obj.data[org].repositories.totalCount;
+	var orglist = Object.keys(latest);
+	orglist.sort();
+	orglist.push(orglist[0]);
+	delete orglist[0];
+	console.log(orglist.toString());
+	orglist.forEach(function (org) {
+		console.log(org);
+		if (latest.hasOwnProperty(org)) {
+			var dName = latest[org].name;
+			var dValue = latest[org].repositories.totalCount;
 			var datpair = {name: dName, value: dValue};
 			data.push(datpair);
 		}
-	}
+	});
 	return data
 }
 
 // Main - load data file, then execute the above manipulations
-function line_makeLineGraph(url) {
+function line_makeLineGraph() {
+	var url = './github-data/orgsRepos.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {

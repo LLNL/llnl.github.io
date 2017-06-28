@@ -4,11 +4,25 @@ import json
 import re
 import time
 
+date = (time.strftime("%Y-%m-%d"))
+datfilepath = "../github-data/orgsMembers.json"
+allData = {}
+
+# Check for and read existing data file
+if not os.path.isfile(datfilepath) :
+	print "No existing data file '"+datfilepath+"', will create new file."
+else :
+	print "Reading existing data file '"+datfilepath+"' ..."
+	with open(datfilepath,"r") as q:
+		data_raw = q.read()
+	allData = json.loads(data_raw)
+	print "File read!"
+
 # Read input list of organizations of interest
 filename = "../inputs/Orgs"
 if not os.path.isfile(filename) :
-	raise RuntimeError("Input "+filename+" does not exist.")
-print "Reading input "+filename+" ..."
+	raise RuntimeError("Input '"+filename+"' does not exist.")
+print "Reading input '"+filename+"' ..."
 with open(filename,"r") as f_in:
 	inputList = f_in.read()
 orglist = inputList.split()
@@ -17,8 +31,8 @@ print "File read!"
 # Read pretty GraphQL query into single line string variable
 filename = "../queries/org-Members.gql"
 if not os.path.isfile(filename) :
-	raise RuntimeError("Query "+filename+" does not exist.")
-print "Reading query "+filename+" ..."
+	raise RuntimeError("Query '"+filename+"' does not exist.")
+print "Reading query '"+filename+"' ..."
 with open(filename,"r") as q:
 	query_raw = q.read().replace('\n',' ')
 query_in = ' '.join(query_raw.split())
@@ -58,9 +72,13 @@ for org in orglist:
 	if '"message": "Bad credentials"' in result :
 		raise RuntimeError("Invalid response; Bad GitHub credentials")
 	print tab+"Data recieved!"
+	outObj = json.loads(result)
+	# Check for null
+	if not outObj["data"]["organization"] :
+		print "'"+org+"' does not exist on GitHub."
+		continue
 
 	# Update collective data
-	outObj = json.loads(result)
 	collective["data"][org] = outObj["data"]["organization"]
 
 	# Paginate if needed
@@ -96,23 +114,15 @@ for org in orglist:
 	print "'"+org+"' Done!"
 
 print "\nCollective data gathering complete!"
-allData = json.dumps(collective)
+
+# Combine new data with existing data
+allData[date] = collective["data"]
+allDataString = json.dumps(allData)
 
 # Write output file
-outPrefix = "orgsMembers_"
-date = (time.strftime("%Y-%m-%d"))
-basename = outPrefix+date+".json"
-outputfile = "../github-data/"+basename
-print "\nWriting file "+outputfile
-with open(outputfile,"w") as fileout:
-	fileout.write(allData)
+print "\nWriting file '"+datfilepath+"'"
+with open(datfilepath,"w") as fileout:
+	fileout.write(allDataString)
 print "Wrote file!"
-
-# Update LATEST symlink
-linkbase = outPrefix+"LATEST"
-print "Making "+linkbase+" link"
-bashln = 'ln -sf '+basename+' ../github-data/'+linkbase
-subprocess.call(bashln.split())
-print "Made link!"
 
 print "\nDone!\n"
