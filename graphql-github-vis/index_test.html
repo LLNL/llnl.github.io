@@ -2,29 +2,36 @@
 <html>
 
 <head>
-	<title>GitHub Visualizations</title>
+	<title>GitHub GraphQL Testing</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
 
-	<h1><center>LLNL GitHub Visualizations</center></h1>
+	<h1><center>GitHub GraphQL Testing</center></h1>
 
 	<!-- Preset vis display areas -->
-	<!-- TODO -->
 	<svg class="chart"></svg>
+	<br><br>
+	<svg class="line_chart"></svg>
+	<br><br>
+	<pre id="contents"></pre>
 
 	<!-- Load basic D3 scripts -->
 	<script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="./d3-tip/d3-tip.js"></script>
 
 	<!-- Load drawing JS -->
-	<!-- TODO -->
+	<script type="text/javascript" src="./js/bar_graph.js"></script>
+	<script type="text/javascript" src="./js/line_graph.js"></script>
+	<script type="text/javascript" src="./js/organizeData.js"></script>
 
 	<!-- Call draw functions -->
 	<script>
-		// TODO
+		makeBarGraph();
+		line_makeLineGraph();
+		populatePre();
 	</script>
 
 </body>

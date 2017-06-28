@@ -34,6 +34,6 @@ index.html
 ./scripts
 	Scripts for data fetching and manipulation. Data is written to ./github-data in appropriate json formats.
 
-	New files are created for each day that the scripts are run. If a script is run multiple times in a single day, the data for that day will be overwritten.
+	New files are created for each type of data structure. A new entry is added to the file for each day that the scripts are run. If a script is run multiple times in a single day, the data for that day will be overwritten.
 
-	Running MASTER.sh will run all of the necessary scripts in the appropriate order to fetch updated data and perform any additional manipulation.
+	Running MASTER.sh will run all of the necessary scripts in the appropriate order to fetch updated data and perform any additional manipulation. It will also update LAST_MASTER_UPDATE.txt to record when the MASTER script was last run.
