@@ -1,20 +1,26 @@
 /* Creates line graph visualization for webpage */
-function makeLineGraph(areaID) {
+function draw_line_repoCount(areaID) {
+
+	var graphHeader = "Repositories";
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
+
+		var parseTime = d3.timeParse("%Y-%m-%d");
+		var formatTime = d3.timeFormat("%Y-%m-%d");
+
 		data.forEach(function(d) {
+			d.date = parseTime(d.date);
 			d.value = +d.value;
 		});
 
-		var margin = {top: 40, right: 30, bottom: 60, left: 40},
+		var margin = {top: 40, right: 40, bottom: 40, left: 40},
 			width = 1000 - margin.left - margin.right,
 			height = 500 - margin.top - margin.bottom;
 		
-		var x = d3.scaleBand()
-			.domain(data.map(function(d) { return d.name; }))
-			.rangeRound([0, width])
-			.padding([1]);
+		var x = d3.scaleTime()
+			.domain(d3.extent(data, function(d) { return d.date; }))
+			.range([0, width]);
 		
 		var y = d3.scaleLinear()
 			.domain([0, d3.max(data, function(d) { return d.value; })])
@@ -34,11 +40,11 @@ function makeLineGraph(areaID) {
 				if (d.value == 1) {
 					repos = " Repo";
 				}
-				return d.value + repos;
+				return "("+formatTime(d.date)+")"+"<br>"+"<strong>"+d.value+"</strong>"+repos;
 			});
 		
 		var valueline = d3.line()
-			.x(function(d) { return x(d.name); })
+			.x(function(d) { return x(d.date); })
 			.y(function(d) { return y(d.value); });
 
 		var chart = d3.select("."+areaID)
@@ -66,7 +72,7 @@ function makeLineGraph(areaID) {
 			.attr("x", (width / 2))
 			.attr("y", 0 - (margin.top / 3))
 			.attr("text-anchor", "middle")
-			.text("Repository Counts 2");
+			.text(graphHeader);
 		
 		// Draw line
 		chart.append("path")
@@ -79,7 +85,7 @@ function makeLineGraph(areaID) {
 			.data(data)
 		  .enter().append("circle")
 			.attr("class", "circle")
-			.attr("cx", function(d) { return x(d.name); })
+			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })
 			.attr("r", 5)
 			.on('mouseover', tip.show)
@@ -97,19 +103,15 @@ function makeLineGraph(areaID) {
 	function reformatData(obj) {
 		var dates = Object.keys(obj);
 		dates.sort();
-		var latest = obj[dates[dates.length-1]];
 		var data = [];
-		var orglist = Object.keys(latest);
-		orglist.sort();
-		orglist.push(orglist[0]);
-		delete orglist[0];
-		orglist.forEach(function (org) {
-			if (latest.hasOwnProperty(org)) {
-				var dName = latest[org].name;
-				var dValue = latest[org].repositories.totalCount;
-				var datpair = {name: dName, value: dValue};
-				data.push(datpair);
-			}
+		dates.forEach(function (timestamp) {
+			var repoTotal = 0;
+			for (var org in obj[timestamp]) {
+				if (obj[timestamp].hasOwnProperty(org)) {
+					repoTotal += obj[timestamp][org]["repositories"]["totalCount"];
+				};
+			};
+			data.push({date: timestamp, value: repoTotal});
 		});
 		return data
 	};

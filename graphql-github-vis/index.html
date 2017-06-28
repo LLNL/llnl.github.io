@@ -12,19 +12,18 @@
 	<h1><center>LLNL GitHub Visualizations</center></h1>
 
 	<!-- Preset vis display areas -->
-	<!-- TODO -->
-	<svg class="chart"></svg>
+	<svg class="repoCountTimeline"></svg>
 
 	<!-- Load basic D3 scripts -->
 	<script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="./d3-tip/d3-tip.js"></script>
 
 	<!-- Load drawing JS -->
-	<!-- TODO -->
+	<script type="text/javascript" src="./js/line_repoCount.js"></script>
 
 	<!-- Call draw functions -->
 	<script>
-		// TODO
+		draw_line_repoCount("repoCountTimeline")
 	</script>
 
 </body>
