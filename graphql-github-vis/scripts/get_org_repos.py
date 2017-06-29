@@ -1,6 +1,4 @@
-import sys
-import os.path
-import subprocess
+import helpers
 import json
 import re
 import time
@@ -10,61 +8,22 @@ datfilepath = "../github-data/orgsRepos.json"
 allData = {}
 
 # Check for and read existing data file
-if not os.path.isfile(datfilepath) :
-	print "No existing data file '"+datfilepath+"', will create new file."
-else :
-	print "Reading existing data file '"+datfilepath+"' ..."
-	with open(datfilepath,"r") as q:
-		data_raw = q.read()
-	allData = json.loads(data_raw)
-	print "File read!"
+allData = helpers.read_existing(datfilepath)
 
 # Read input list of organizations of interest
-filename = "../inputs/Orgs"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Input '"+filename+"' does not exist.")
-print "Reading input '"+filename+"' ..."
-with open(filename,"r") as f_in:
-	inputList = f_in.read()
-orglist = inputList.split()
-print "File read!"
+orglist = helpers.read_input("../inputs/Orgs")
 
 # Read input list of independent repos of interest
-filename = "../inputs/Repos"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Input '"+filename+"' does not exist.")
-print "Reading input '"+filename+"' ..."
-with open(filename,"r") as f_in:
-	inputList = f_in.read()
-repolist = inputList.split()
-print "File read!"
+repolist = helpers.read_input("../inputs/Repos")
 
-# Read pretty GraphQL queries into single line string variables
+# Read pretty GraphQL queries
 #	Main query
-filename = "../queries/org-Repos.gql"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Query '"+filename+"' does not exist.")
-print "Reading '"+filename+"' ..."
-with open(filename,"r") as q:
-	query_raw = q.read().replace('\n',' ')
-query_in = ' '.join(query_raw.split())
-print "File read!"
+query_in = helpers.read_gql("../queries/org-Repos.gql")
 #	Repo name query
-filename = "../queries/repo-PrettyName.gql"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Query '"+filename+"' does not exist.")
-print "Reading '"+filename+"' ..."
-with open(filename,"r") as q:
-	query_raw = q.read().replace('\n',' ')
-query_name_in = ' '.join(query_raw.split())
-print "File read!"
+query_name_in = helpers.read_gql("../queries/repo-PrettyName.gql")
 
 # Retrieve authorization token
-print "Reading authorization token..."
-# TODO: Might not really want this at global scope
-token = os.environ['GITHUB_API_TOKEN']
-authhead = 'Authorization: bearer '+token
-print "Token read!"
+authhead = helpers.get_gitauth()
 
 # Iterate through orgs of interest
 print "Gathering data across multiple paginated queries..."
@@ -83,17 +42,7 @@ for org in orglist:
 	print tab+"Query ready!"
 
 	# Actual query exchange
-	print tab+"Sending query..."
-	bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
-	bashcurl_list = bashcurl.split()
-	bashcurl_list[2] = authhead
-	bashcurl_list[6] = gitquery
-	result = subprocess.check_output(bashcurl_list)
-	print tab+"Checking response..."
-	if '"message": "Bad credentials"' in result :
-		raise RuntimeError("Invalid response; Bad GitHub credentials")
-	print tab+"Data recieved!"
-	outObj = json.loads(result)
+	outObj = helpers.query_github(authhead,gitquery)
 	# Check for null
 	if not outObj["data"]["organization"] :
 		print "'"+org+"' does not exist on GitHub."
@@ -115,19 +64,9 @@ for org in orglist:
 		print tab+"Query ready!"
 
 		# Actual query exchange
-		print tab+"Sending query..."
-		bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
-		bashcurl_list = bashcurl.split()
-		bashcurl_list[2] = authhead
-		bashcurl_list[6] = gitquery
-		result = subprocess.check_output(bashcurl_list)
-		print "Checking response..."
-		if '"message": "Bad credentials"' in result :
-			raise RuntimeError("Invalid response; Bad GitHub credentials")
-		print tab+"Data recieved!"
+		outObj = helpers.query_github(authhead,gitquery)
 
 		# Update collective data
-		outObj = json.loads(result)
 		collective["data"][org]["repositories"]["nodes"].extend(outObj["data"]["organization"]["repositories"]["nodes"])
 		hasNext = outObj["data"]["organization"]["repositories"]["pageInfo"]["hasNextPage"]
 
@@ -150,17 +89,7 @@ for repo in repolist :
 	print tab+"Query ready!"
 
 	# Actual query exchange
-	print tab+"Sending query..."
-	bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
-	bashcurl_list = bashcurl.split()
-	bashcurl_list[2] = authhead
-	bashcurl_list[6] = gitquery
-	result = subprocess.check_output(bashcurl_list)
-	print tab+"Checking response..."
-	if '"message": "Bad credentials"' in result :
-		raise RuntimeError("Invalid response; Bad GitHub credentials")
-	print tab+"Data recieved!"
-	outObj = json.loads(result)
+	outObj = helpers.query_github(authhead,gitquery)
 	# Check for null
 	if not outObj["data"]["repository"] :
 		print tab+"'"+repo+"' does not exist on GitHub."

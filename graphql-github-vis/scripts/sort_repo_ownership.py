@@ -1,4 +1,4 @@
-import os.path
+import helpers
 import json
 import time
 
@@ -7,46 +7,18 @@ datfilepath = "../github-data/reposOwnership.json"
 allData = {}
 
 # Check for and read existing data file
-if not os.path.isfile(datfilepath) :
-	print "No existing data file '"+datfilepath+"', will create new file."
-else :
-	print "Reading existing data file '"+datfilepath+"' ..."
-	with open(datfilepath,"r") as q:
-		data_raw = q.read()
-	allData = json.loads(data_raw)
-	print "File read!"
+allData = helpers.read_existing(datfilepath)
 
 # Read input list of organizations of interest
-filename = "../inputs/Orgs"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Input '"+filename+"' does not exist.")
-print "Reading input '"+filename+"' ..."
-with open(filename,"r") as f_in:
-	inputList = f_in.read()
-orgList = inputList.split()
-print "File read!"
+orgList = helpers.read_input("../inputs/Orgs")
 
-# Read existing org repos data file
-filename = "../github-data/orgsRepos.json"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Data file '"+filename+"' does not exist.")
-print "Reading '"+filename+"' ..."
-with open(filename,"r") as q:
-	data_raw = q.read()
-orgsReposObj = json.loads(data_raw)
-print "File read!"
+# Read org repos data file
+orgsReposObj = helpers.read_json("../github-data/orgsRepos.json")
 if not date in orgsReposObj :
 	raise RuntimeError("No orgsRepos data for "+date)
 
-# Read existing user repos data file
-filename = "../github-data/usrsRepos.json"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Data file '"+filename+"' does not exist.")
-print "Reading '"+filename+"' ..."
-with open(filename,"r") as q:
-	data_raw = q.read()
-usrsReposObj = json.loads(data_raw)
-print "File read!"
+# Read user repos data file
+usrsReposObj = helpers.read_json("../github-data/usrsRepos.json")
 if not date in usrsReposObj :
 	raise RuntimeError("No usrsRepos data for "+date)
 

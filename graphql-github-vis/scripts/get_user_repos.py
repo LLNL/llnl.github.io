@@ -1,6 +1,4 @@
-import sys
-import os.path
-import subprocess
+import helpers
 import json
 import re
 import time
@@ -10,28 +8,14 @@ datfilepath = "../github-data/usrsRepos.json"
 allData = {}
 
 # Check for and read existing data file
-if not os.path.isfile(datfilepath) :
-	print "No existing data file '"+datfilepath+"', will create new file."
-else :
-	print "Reading existing data file '"+datfilepath+"' ..."
-	with open(datfilepath,"r") as q:
-		data_raw = q.read()
-	allData = json.loads(data_raw)
-	print "File read!"
+allData = helpers.read_existing(datfilepath)
 
-# Read existing org member data file
-orgsMembersPath = "../github-data/orgsMembers.json"
-if not os.path.isfile(orgsMembersPath) :
-	raise RuntimeError("Data file '"+orgsMembersPath+"' does not exist.")
-print "Reading '"+orgsMembersPath+"' ..."
-with open(orgsMembersPath,"r") as q:
-	data_raw = q.read()
-dataObj = json.loads(data_raw)
-print "File read!"
-
-# Populate today's user list
+# Read org member data file
+dataObj = helpers.read_json("../github-data/orgsMembers.json")
 if not date in dataObj :
 	raise RuntimeError("No orgsMembers data for "+date)
+
+# Populate today's user list
 userCountCheck = 0
 userlist = []
 for org in dataObj[date] :
@@ -45,22 +29,11 @@ if not userCountCheck==len(userlist) :
 userlist = list(set(userlist))
 print "User list complete. Found "+str(userCountCheck)+" total users, "+str(len(userlist))+" unique users."
 
-# Read pretty GraphQL query into single line string variable
-filename = "../queries/user-Repos.gql"
-if not os.path.isfile(filename) :
-	raise RuntimeError("Query '"+filename+"' does not exist.")
-print "Reading '"+filename+"' ..."
-with open(filename,"r") as q:
-	query_raw = q.read().replace('\n',' ')
-query_in = ' '.join(query_raw.split())
-print "File read!"
+# Read pretty GraphQL query
+query_in = helpers.read_gql("../queries/user-Repos.gql")
 
 # Retrieve authorization token
-print "Reading authorization token..."
-# TODO: Might not really want this at global scope
-token = os.environ['GITHUB_API_TOKEN']
-authhead = 'Authorization: bearer '+token
-print "Token read!"
+authhead = helpers.get_gitauth()
 
 # Iterate through users
 print "Gathering data across multiple paginated queries..."
@@ -79,19 +52,9 @@ for usr in userlist:
 	print tab+"Query ready!"
 
 	# Actual query exchange
-	print tab+"Sending query..."
-	bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
-	bashcurl_list = bashcurl.split()
-	bashcurl_list[2] = authhead
-	bashcurl_list[6] = gitquery
-	result = subprocess.check_output(bashcurl_list)
-	print tab+"Checking response..."
-	if '"message": "Bad credentials"' in result :
-		raise RuntimeError("Invalid response; Bad GitHub credentials")
-	print tab+"Data recieved!"
+	outObj = helpers.query_github(authhead,gitquery)
 
 	# Update collective data
-	outObj = json.loads(result)
 	collective["data"][usr] = outObj["data"]["user"]
 
 	# Paginate if needed
@@ -107,19 +70,9 @@ for usr in userlist:
 		print tab+"Query ready!"
 
 		# Actual query exchange
-		print tab+"Sending query..."
-		bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
-		bashcurl_list = bashcurl.split()
-		bashcurl_list[2] = authhead
-		bashcurl_list[6] = gitquery
-		result = subprocess.check_output(bashcurl_list)
-		print "Checking response..."
-		if '"message": "Bad credentials"' in result :
-			raise RuntimeError("Invalid response; Bad GitHub credentials")
-		print tab+"Data recieved!"
+		outObj = helpers.query_github(authhead,gitquery)
 
 		# Update collective data
-		outObj = json.loads(result)
 		collective["data"][usr]["contributedRepositories"]["nodes"].extend(outObj["data"]["user"]["contributedRepositories"]["nodes"])
 		hasNext = outObj["data"]["user"]["contributedRepositories"]["pageInfo"]["hasNextPage"]
 
