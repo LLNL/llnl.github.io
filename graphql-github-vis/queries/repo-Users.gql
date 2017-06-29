@@ -1,9 +1,9 @@
-query { 
-  user(login:"USRNAME") {
-    contributedRepositories(first:50 PGCURS) {
+query {
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    mentionableUsers(first:50 PGCURS) {
       totalCount
       nodes {
-        nameWithOwner
+        login
       }
       pageInfo {
         endCursor

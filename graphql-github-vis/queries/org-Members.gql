@@ -1,17 +1,14 @@
 query { 
   organization(login:"ORGNAME") {
     members(first:50 PGCURS) {
-      ...usersinfo
+      totalCount
+      nodes {
+        login
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
     }
-  }
-}
-fragment usersinfo on UserConnection {
-  totalCount
-  nodes {
-    login
-  }
-  pageInfo {
-    endCursor
-    hasNextPage
   }
 }

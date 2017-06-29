@@ -2,17 +2,14 @@ query {
   organization(login:"ORGNAME") {
   	name
     repositories(first:50 PGCURS) {
-      ...repoinfo
+      totalCount
+      nodes {
+        nameWithOwner
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
     }
-  }
-}
-fragment repoinfo on RepositoryConnection {
-  totalCount
-  nodes {
-    nameWithOwner
-  }
-  pageInfo {
-    endCursor
-    hasNextPage
   }
 }

@@ -50,7 +50,7 @@ def read_gql(filepath):
 	print "File read!"
 	return query_in
 
-# Returns authorization header for GitHub GraphQL query
+# Returns authorization header for GitHub APIs
 def get_gitauth():
 	print "Reading authorization token..."
 	# TODO: Might not really want this at global scope
@@ -62,11 +62,26 @@ def get_gitauth():
 # Query GitHub GraphQL API, return result as json dictionary
 def query_github(authhead,gitquery):
 	tab = "    "
-	print tab+"Sending query..."
+	print tab+"Sending GraphQL query..."
 	bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
 	bashcurl_list = bashcurl.split()
 	bashcurl_list[2] = authhead
 	bashcurl_list[6] = gitquery
+	result = subprocess.check_output(bashcurl_list)
+	print tab+"Checking response..."
+	if '"message": "Bad credentials"' in result :
+		raise RuntimeError("Invalid response; Bad GitHub credentials")
+	print tab+"Data recieved!"
+	outObj = json.loads(result)
+	return outObj
+
+# Query GitHub REST API, return result as json dictionary
+def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
+	tab = "    "
+	print tab+"Sending REST query..."
+	bashcurl = 'curl -H TMPauthhead https://api.github.com'+endpoint
+	bashcurl_list = bashcurl.split()
+	bashcurl_list[2] = authhead
 	result = subprocess.check_output(bashcurl_list)
 	print tab+"Checking response..."
 	if '"message": "Bad credentials"' in result :
