@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoCount(areaID) {
+function draw_line_labUserCount(areaID) {
 
-	var graphHeader = "Lab Owned Repositories";
+	var graphHeader = "Members of the LLNL GitHub Organization";
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
@@ -36,9 +36,9 @@ function draw_line_repoCount(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var repos = " Repos";
+				var repos = " Users";
 				if (d.value == 1) {
-					repos = " Repo";
+					repos = " User";
 				}
 				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
@@ -105,20 +105,15 @@ function draw_line_repoCount(areaID) {
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			var repoTotal = 0;
-			for (var org in obj[timestamp]) {
-				if (obj[timestamp].hasOwnProperty(org)) {
-					repoTotal += obj[timestamp][org]["repositories"]["totalCount"];
-				};
-			};
-			data.push({date: timestamp, value: repoTotal});
+			var userTotal = Object.keys(obj[timestamp]).length;
+			data.push({date: timestamp, value: userTotal});
 		});
-		return data;
+		return data
 	};
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/orgsRepos.json';
+	var url = './github-data/usrsRepos.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {

@@ -12,7 +12,10 @@
 	<h1><center>LLNL GitHub Visualizations</center></h1>
 
 	<!-- Preset vis display areas -->
-	<svg class="repoCountTimeline"></svg>
+	<center>
+	<svg class="repoCountTimeline"></svg><svg class="outsideRepoCountTimeline"></svg>
+	<br><svg class="labUserCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
+	</center>
 
 	<!-- Load basic D3 scripts -->
 	<script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
@@ -20,10 +23,27 @@
 
 	<!-- Load drawing JS -->
 	<script type="text/javascript" src="./js/line_repoCount.js"></script>
+	<script type="text/javascript" src="./js/line_in2outCount.js"></script>
+	<script type="text/javascript" src="./js/line_labUserCount.js"></script>
+	<script type="text/javascript" src="./js/line_labUserOutCount.js"></script>
 
-	<!-- Call draw functions -->
 	<script>
+		// Helper method for arrays
+		Array.prototype.contains = function ( item ) {
+			for (i in this) {
+				if (this[i] == item) return true;
+			}
+			return false;
+		}
+		// Global standards
+		var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
+			stdWidth = 600 - stdMargin.left - stdMargin.right,
+			stdHeight = 400 - stdMargin.top - stdMargin.bottom;
+		// Call draw functions
 		draw_line_repoCount("repoCountTimeline")
+		draw_line_in2outCount("outsideRepoCountTimeline")
+		draw_line_labUserCount("labUserCountTimeline")
+		draw_line_labUserOutCount("labUserOutCountTimeline")
 	</script>
 
 </body>

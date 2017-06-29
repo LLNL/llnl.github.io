@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoCount(areaID) {
+function draw_line_labUserOutCount(areaID) {
 
-	var graphHeader = "Lab Owned Repositories";
+	var graphHeader = "Lab Members who Recently Contributed to Outside Repos";
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
@@ -36,9 +36,9 @@ function draw_line_repoCount(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var repos = " Repos";
+				var repos = " Users";
 				if (d.value == 1) {
-					repos = " Repo";
+					repos = " User";
 				}
 				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
@@ -99,33 +99,61 @@ function draw_line_repoCount(areaID) {
 	};
 
 
-	// Turn json obj into desired working data
-	function reformatData(obj) {
-		var dates = Object.keys(obj);
+	// Turn json objs into desired working data
+	function reformatData(objUsrs, objSorted) {
+		var dates = Object.keys(objSorted);
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			var repoTotal = 0;
-			for (var org in obj[timestamp]) {
-				if (obj[timestamp].hasOwnProperty(org)) {
-					repoTotal += obj[timestamp][org]["repositories"]["totalCount"];
+			// Get list of outsideRepositories for this date
+			var outsideNodes = objSorted[timestamp]["outsideRepositories"]["nodes"];
+			var outsideRepos = [];
+			for (var i=0; i < outsideNodes.length; i++) {
+				outsideRepos.push(outsideNodes[i]["nameWithOwner"]);
+			};
+			// Count users contributing to repos in that list
+			var userTotal = 0;
+			for (var usr in objUsrs[timestamp]) {
+				if (objUsrs[timestamp].hasOwnProperty(usr)) {
+					var usrRepoNodes = objUsrs[timestamp][usr]["contributedRepositories"]["nodes"];
+					for (var i=0; i < usrRepoNodes.length; i++) {
+						if (outsideRepos.contains(outsideNodes[i]["nameWithOwner"])) {
+							// Only count each user once as soon as any outside repo is found
+							userTotal += 1;
+							break;
+						};
+					};
 				};
 			};
-			data.push({date: timestamp, value: repoTotal});
+			data.push({date: timestamp, value: userTotal});
 		});
 		return data;
 	};
 
+	// load second data file, process data, and draw visualization
+	function loadFile2(objUsrs) {
+		var url = './github-data/reposOwnership.json';
+		var xhr = new XMLHttpRequest();
+		xhr.overrideMimeType("application/json");
+		xhr.onload = function () {
+			var dataSorted = this.responseText;
+			var objSorted = JSON.parse(dataSorted);
+			var data = reformatData(objUsrs, objSorted);
+			drawGraph(data, areaID);
+		};
+		xhr.open("GET", url, true);
+		xhr.send();
+	};
 
-	// load data file, process data, and draw visualization
-	var url = './github-data/orgsRepos.json';
+
+	// load first data file, queue second file
+	var url = './github-data/usrsRepos.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {
-		var data = this.responseText;
-		var obj = JSON.parse(data);
-		var data = reformatData(obj);
-		drawGraph(data, areaID);
+		var dataUsrs = this.responseText;
+		var objUsrs = JSON.parse(dataUsrs);
+		loadFile2(objUsrs);
 	};
 	xhr.open("GET", url, true);
 	xhr.send();

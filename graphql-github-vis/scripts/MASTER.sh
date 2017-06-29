@@ -10,7 +10,9 @@ python get_org_repos.py
 echo "Run - Get Org Members"
 python get_org_members.py
 echo "Run - Get User Repos"
-python get_user_repos.py # requires get_org_members.py output
+python get_user_repos.py # requires output from get_org_members.py
+echo "Run - Sort Repo Ownership"
+python sort_repo_ownership.py # requires output from get_org_repos.py, get_user_repos.py
 echo "End" >> ../github-data/LAST_MASTER_UPDATE.txt
 date >> ../github-data/LAST_MASTER_UPDATE.txt
 echo "MASTER UPDATE COMPLETE"
