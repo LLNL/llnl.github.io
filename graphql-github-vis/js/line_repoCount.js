@@ -40,7 +40,7 @@ function draw_line_repoCount(areaID) {
 				if (d.value == 1) {
 					repos = " Repo";
 				}
-				return "("+formatTime(d.date)+")"+"<br>"+"<strong>"+d.value+"</strong>"+repos;
+				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
 		
 		var valueline = d3.line()
