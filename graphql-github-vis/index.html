@@ -13,8 +13,9 @@
 
 	<!-- Preset vis display areas -->
 	<center>
-	<svg class="repoCountTimeline"></svg><svg class="outsideRepoCountTimeline"></svg>
-	<br><svg class="labUserCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
+	<svg class="labUserCountTimeline"></svg>
+	<br><svg class="repoCountTimeline"></svg><svg class="outsideRepoCountTimeline"></svg>
+	<br><svg class="outsideUserInCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
 	</center>
 
 	<!-- Load basic D3 scripts -->
@@ -26,6 +27,7 @@
 	<script type="text/javascript" src="./js/line_in2outCount.js"></script>
 	<script type="text/javascript" src="./js/line_labUserCount.js"></script>
 	<script type="text/javascript" src="./js/line_labUserOutCount.js"></script>
+	<script type="text/javascript" src="./js/line_outsideUserInCount.js"></script>
 
 	<script>
 		// Helper method for arrays
@@ -44,6 +46,7 @@
 		draw_line_in2outCount("outsideRepoCountTimeline")
 		draw_line_labUserCount("labUserCountTimeline")
 		draw_line_labUserOutCount("labUserOutCountTimeline")
+		draw_line_outsideUserInCount("outsideUserInCountTimeline")
 	</script>
 
 </body>

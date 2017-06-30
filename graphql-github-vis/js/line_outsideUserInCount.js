@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
-function draw_line_labUserOutCount(areaID) {
+function draw_line_outsideUserInCount(areaID) {
 
-	var graphHeader = "Lab Members Recently Contributing to Outside Repos";
+	var graphHeader = "Outside Users Recently Contributing to Lab Repos";
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
@@ -100,60 +100,28 @@ function draw_line_labUserOutCount(areaID) {
 
 
 	// Turn json objs into desired working data
-	function reformatData(objUsrs, objSorted) {
-		var dates = Object.keys(objSorted);
+	function reformatData(obj) {
+		// TODO
+		var dates = Object.keys(obj);
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			// Get list of outsideRepositories for this date
-			var outsideNodes = objSorted[timestamp]["outsideRepositories"]["nodes"];
-			var outsideRepos = [];
-			for (var i=0; i < outsideNodes.length; i++) {
-				outsideRepos.push(outsideNodes[i]["nameWithOwner"]);
-			};
-			// Count users contributing to repos in that list
-			var userTotal = 0;
-			for (var usr in objUsrs[timestamp]) {
-				if (objUsrs[timestamp].hasOwnProperty(usr)) {
-					var usrRepoNodes = objUsrs[timestamp][usr]["contributedRepositories"]["nodes"];
-					for (var i=0; i < usrRepoNodes.length; i++) {
-						if (outsideRepos.contains(outsideNodes[i]["nameWithOwner"])) {
-							// Only count each user once as soon as any outside repo is found
-							userTotal += 1;
-							break;
-						};
-					};
-				};
-			};
+			var userTotal = obj[timestamp]["outsideUsers"]["totalCount"];
 			data.push({date: timestamp, value: userTotal});
 		});
-		return data;
-	};
-
-	// load second data file, process data, and draw visualization
-	function loadFile2(objUsrs) {
-		var url = './github-data/reposOwnership.json';
-		var xhr = new XMLHttpRequest();
-		xhr.overrideMimeType("application/json");
-		xhr.onload = function () {
-			var dataSorted = this.responseText;
-			var objSorted = JSON.parse(dataSorted);
-			var data = reformatData(objUsrs, objSorted);
-			drawGraph(data, areaID);
-		};
-		xhr.open("GET", url, true);
-		xhr.send();
+		return data
 	};
 
 
-	// load first data file, queue second file
-	var url = './github-data/membersRepos.json';
+	// load data file, process data, and draw visualization
+	var url = './github-data/usersMembership.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {
-		var dataUsrs = this.responseText;
-		var objUsrs = JSON.parse(dataUsrs);
-		loadFile2(objUsrs);
+		var data = this.responseText;
+		var obj = JSON.parse(data);
+		var data = reformatData(obj);
+		drawGraph(data, areaID);
 	};
 	xhr.open("GET", url, true);
 	xhr.send();

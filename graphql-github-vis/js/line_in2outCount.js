@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
 function draw_line_in2outCount(areaID) {
 
-	var graphHeader = "Outside Repositories with Recent Lab Member Contributions";
+	var graphHeader = "Outside Repositories w/ Recent Lab Member Contributions";
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {

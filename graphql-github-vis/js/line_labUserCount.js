@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
 function draw_line_labUserCount(areaID) {
 
-	var graphHeader = "Members of the LLNL GitHub Organization";
+	var graphHeader = "Members of LLNL GitHub Organizations";
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
