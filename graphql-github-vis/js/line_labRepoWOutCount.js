@@ -1,10 +1,10 @@
 /* Creates line graph visualization for webpage */
-function draw_line_in2outCount(areaID) {
-
-	var graphHeader = "Outside Repositories w/ Recent Lab Member Contributions";
+function draw_line_labRepoWOutCount(areaID) {
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
+
+		var graphHeader = "Lab Repositories w/ Outside User Contributions";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
@@ -105,15 +105,23 @@ function draw_line_in2outCount(areaID) {
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			var outCount = obj[timestamp]["outsideRepositories"]["totalCount"];
-			data.push({date: timestamp, value: outCount});
+			var repoSet = new Set();
+			for (var usr in obj[timestamp]) {
+				if (obj[timestamp].hasOwnProperty(usr)) {
+					var repoNodes = obj[timestamp][usr]["contributedLabRepositories"]["nodes"]
+					for (i=0; i<repoNodes.length; i++) {
+						repoSet.add(repoNodes[i]["nameWithOwner"])
+					};
+				};
+			};
+			data.push({date: timestamp, value: repoSet.size});
 		});
 		return data;
 	};
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/reposOwnership.json';
+	var url = './github-data/outsidersLabRepos.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {

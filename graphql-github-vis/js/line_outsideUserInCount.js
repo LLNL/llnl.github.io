@@ -1,10 +1,10 @@
 /* Creates line graph visualization for webpage */
 function draw_line_outsideUserInCount(areaID) {
 
-	var graphHeader = "Outside Users Recently Contributing to Lab Repos";
-
 	// Draw graph from data
 	function drawGraph(data, areaID) {
+
+		var graphHeader = "Outside Users Contributing to Lab Repos";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");

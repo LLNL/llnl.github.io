@@ -13,40 +13,35 @@
 
 	<!-- Preset vis display areas -->
 	<center>
-	<svg class="labUserCountTimeline"></svg>
-	<br><svg class="repoCountTimeline"></svg><svg class="outsideRepoCountTimeline"></svg>
-	<br><svg class="outsideUserInCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
+	<svg class="repoCountTimeline"></svg><svg class="labUserCountTimeline"></svg>
+	<br><svg class="outsideRepoCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
+	<br><svg class="labRepoWOutCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
+	<br><svg class="reposPerOutsiderChart"></svg>
 	</center>
 
-	<!-- Load basic D3 scripts -->
+	<!-- Load basic D3 and helper scripts -->
 	<script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="./d3-tip/d3-tip.js"></script>
+	<script type="text/javascript" src="./js/helpers.js"></script>
 
 	<!-- Load drawing JS -->
 	<script type="text/javascript" src="./js/line_repoCount.js"></script>
-	<script type="text/javascript" src="./js/line_in2outCount.js"></script>
+	<script type="text/javascript" src="./js/line_outsideRepoCount.js"></script>
 	<script type="text/javascript" src="./js/line_labUserCount.js"></script>
 	<script type="text/javascript" src="./js/line_labUserOutCount.js"></script>
 	<script type="text/javascript" src="./js/line_outsideUserInCount.js"></script>
+	<script type="text/javascript" src="./js/line_labRepoWOutCount.js"></script>
+	<script type="text/javascript" src="./js/bar_reposPerOutsider.js"></script>
 
 	<script>
-		// Helper method for arrays
-		Array.prototype.contains = function ( item ) {
-			for (i in this) {
-				if (this[i] == item) return true;
-			}
-			return false;
-		}
-		// Global standards
-		var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
-			stdWidth = 600 - stdMargin.left - stdMargin.right,
-			stdHeight = 400 - stdMargin.top - stdMargin.bottom;
 		// Call draw functions
 		draw_line_repoCount("repoCountTimeline")
-		draw_line_in2outCount("outsideRepoCountTimeline")
+		draw_line_outsideRepoCount("outsideRepoCountTimeline")
 		draw_line_labUserCount("labUserCountTimeline")
 		draw_line_labUserOutCount("labUserOutCountTimeline")
 		draw_line_outsideUserInCount("outsideUserInCountTimeline")
+		draw_line_labRepoWOutCount("labRepoWOutCountTimeline")
+		draw_bar_reposPerOutsider("reposPerOutsiderChart")
 	</script>
 
 </body>

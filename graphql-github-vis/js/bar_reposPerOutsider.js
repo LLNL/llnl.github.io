@@ -1,31 +1,30 @@
-/* Creates line graph visualization for webpage */
-function draw_line_repoCount(areaID) {
+/* Creates bar graph visualization for webpage */
+function draw_bar_reposPerOutsider(areaID) {
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
+		var cutoff = 40;
 
-		var graphHeader = "Lab Owned Repositories";
-
-		var parseTime = d3.timeParse("%Y-%m-%d");
-		var formatTime = d3.timeFormat("%Y-%m-%d");
+		var graphHeader = "Lab Repositories Per Outside User [Top "+cutoff+"]";
 
 		data.forEach(function(d) {
-			d.date = parseTime(d.date);
 			d.value = +d.value;
 		});
+		data = GetTopX(data, cutoff);
 
-		var margin = stdMargin,
-			width = stdWidth,
+		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: 50, left: stdMargin.left},
+			width = 1200 - margin.left - margin.right,
 			height = stdHeight;
 		
-		var x = d3.scaleTime()
-			.domain(d3.extent(data, function(d) { return d.date; }))
-			.range([0, width]);
+		var x = d3.scaleBand()
+			.domain(data.map(function(d) { return d.name; }))
+			.rangeRound([0, width])
+			.padding([0.1]);
 		
 		var y = d3.scaleLinear()
 			.domain([0, d3.max(data, function(d) { return d.value; })])
 			.range([height, 0]);
-
+		
 		var xAxis = d3.axisBottom()
 			.scale(x);
 		
@@ -40,24 +39,20 @@ function draw_line_repoCount(areaID) {
 				if (d.value == 1) {
 					repos = " Repo";
 				}
-				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
+				return d.name+" : "+d.value+repos;
 			});
 		
-		var valueline = d3.line()
-			.x(function(d) { return x(d.date); })
-			.y(function(d) { return y(d.value); });
-
 		var chart = d3.select("."+areaID)
 			.attr("width", width + margin.left + margin.right)
 			.attr("height", height + margin.top + margin.bottom)
 		  .append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-		chart.call(tip);
 		
+		chart.call(tip);
+
 		// Add the x axis
 		chart.append("g")
-			.attr("class", "x axis")
+			.attr("class", "xbar axis")
 			.attr("transform", "translate(0," + height + ")")
 			.call(xAxis);
 		
@@ -74,27 +69,22 @@ function draw_line_repoCount(areaID) {
 			.attr("text-anchor", "middle")
 			.text(graphHeader);
 		
-		// Draw line
-		chart.append("path")
-			.datum(data)
-			.attr("class", "line")
-			.attr("d", valueline);
-
-		// Draw dots
-		chart.selectAll(".circle")
+		// Draw bars
+		chart.selectAll(".bar")
 			.data(data)
-		  .enter().append("circle")
-			.attr("class", "circle")
-			.attr("cx", function(d) { return x(d.date); })
-			.attr("cy", function(d) { return y(d.value); })
-			.attr("r", 5)
+		  .enter().append("rect")
+			.attr("class", "bar")
+			.attr("x", function(d) { return x(d.name); })
+			.attr("y", function(d) { return y(d.value); })
+			.attr("height", function(d) { return height - y(d.value); })
+			.attr("width", x.bandwidth())
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 
 		// Angle the axis text
-		chart.select(".x.axis")
+		chart.select(".xbar.axis")
 			.selectAll("text")
-			.attr("transform", "rotate(12)")
+			.attr("transform", "rotate(30)")
 			.attr("text-anchor", "start");
 	};
 
@@ -103,22 +93,24 @@ function draw_line_repoCount(areaID) {
 	function reformatData(obj) {
 		var dates = Object.keys(obj);
 		dates.sort();
+		var latest = obj[dates[dates.length-1]];
 		var data = [];
-		dates.forEach(function (timestamp) {
-			var repoTotal = 0;
-			for (var org in obj[timestamp]) {
-				if (obj[timestamp].hasOwnProperty(org)) {
-					repoTotal += obj[timestamp][org]["repositories"]["totalCount"];
-				};
-			};
-			data.push({date: timestamp, value: repoTotal});
+		var usrlist = Object.keys(latest);
+		usrlist.sort();
+		usrlist.forEach(function (usr) {
+			if (latest.hasOwnProperty(usr)) {
+				var dName = usr;
+				var dValue = latest[usr].contributedLabRepositories.totalCount;
+				var datpair = {name: dName, value: dValue};
+				data.push(datpair);
+			}
 		});
 		return data;
 	};
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/orgsRepos.json';
+	var url = './github-data/outsidersLabRepos.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {
@@ -129,6 +121,4 @@ function draw_line_repoCount(areaID) {
 	};
 	xhr.open("GET", url, true);
 	xhr.send();
-
-
 }

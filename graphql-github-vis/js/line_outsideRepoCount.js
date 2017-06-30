@@ -1,10 +1,10 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoCount(areaID) {
+function draw_line_outsideRepoCount(areaID) {
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Lab Owned Repositories";
+		var graphHeader = "Outside Repositories w/ Lab Member Contributions";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
@@ -105,20 +105,15 @@ function draw_line_repoCount(areaID) {
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			var repoTotal = 0;
-			for (var org in obj[timestamp]) {
-				if (obj[timestamp].hasOwnProperty(org)) {
-					repoTotal += obj[timestamp][org]["repositories"]["totalCount"];
-				};
-			};
-			data.push({date: timestamp, value: repoTotal});
+			var outCount = obj[timestamp]["outsideRepositories"]["totalCount"];
+			data.push({date: timestamp, value: outCount});
 		});
 		return data;
 	};
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/orgsRepos.json';
+	var url = './github-data/reposOwnership.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {
