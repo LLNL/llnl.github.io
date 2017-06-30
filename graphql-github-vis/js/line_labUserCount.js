@@ -113,7 +113,7 @@ function draw_line_labUserCount(areaID) {
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/usrsRepos.json';
+	var url = './github-data/membersRepos.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {

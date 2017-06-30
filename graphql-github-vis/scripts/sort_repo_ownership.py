@@ -18,9 +18,9 @@ if not date in orgsReposObj :
 	raise RuntimeError("No orgsRepos data for "+date)
 
 # Read user repos data file
-usrsReposObj = helpers.read_json("../github-data/usrsRepos.json")
-if not date in usrsReposObj :
-	raise RuntimeError("No usrsRepos data for "+date)
+membersReposObj = helpers.read_json("../github-data/membersRepos.json")
+if not date in membersReposObj :
+	raise RuntimeError("No membersRepos data for "+date)
 
 # Build repo inside/outside sets
 insideSet = set([])
@@ -31,8 +31,8 @@ for org in orgsReposObj[date] :
 		repoName = repo["nameWithOwner"]
 		insideSet.add(repoName)
 print "Sorting user repos..."
-for usr in usrsReposObj[date] :
-	for repo in usrsReposObj[date][usr]["contributedRepositories"]["nodes"] :
+for usr in membersReposObj[date] :
+	for repo in membersReposObj[date][usr]["contributedRepositories"]["nodes"] :
 		repoName = repo["nameWithOwner"]
 		if repoName in insideSet :
 			continue
