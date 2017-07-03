@@ -17,11 +17,13 @@
 	<br><svg class="outsideRepoCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
 	<br><svg class="labRepoWOutCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
 	<br><svg class="reposPerOutsiderChart"></svg>
+	<br><svg class="languageCloud"></svg>
 	</center>
 
 	<!-- Load basic D3 and helper scripts -->
 	<script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="./d3-tip/d3-tip.js"></script>
+	<script type="text/javascript" src="./d3-v4-cloud/src/d3-cloud.js"></script>
 	<script type="text/javascript" src="./js/helpers.js"></script>
 
 	<!-- Load drawing JS -->
@@ -32,6 +34,7 @@
 	<script type="text/javascript" src="./js/line_outsideUserInCount.js"></script>
 	<script type="text/javascript" src="./js/line_labRepoWOutCount.js"></script>
 	<script type="text/javascript" src="./js/bar_reposPerOutsider.js"></script>
+	<script type="text/javascript" src="./js/cloud_languages.js"></script>
 
 	<script>
 		// Call draw functions
@@ -42,6 +45,7 @@
 		draw_line_outsideUserInCount("outsideUserInCountTimeline")
 		draw_line_labRepoWOutCount("labRepoWOutCountTimeline")
 		draw_bar_reposPerOutsider("reposPerOutsiderChart")
+		draw_cloud_languages("languageCloud")
 	</script>
 
 </body>
