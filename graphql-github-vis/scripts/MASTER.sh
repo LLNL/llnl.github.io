@@ -29,6 +29,10 @@ echo "Run - Sort User Membership"
 # requires output from get_repos_mentionableusers.py, get_user_repos.py
 python sort_user_membership.py
 
+echo "Run - Get Repos Languages"
+# requires output from sort_repo_ownership.py
+python get_repos_languages.py
+
 echo "End" >> ../github-data/LAST_MASTER_UPDATE.txt
 date >> ../github-data/LAST_MASTER_UPDATE.txt
 echo "MASTER UPDATE COMPLETE"

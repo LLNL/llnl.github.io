@@ -109,7 +109,7 @@ function draw_line_labRepoWOutCount(areaID) {
 			for (var usr in obj[timestamp]) {
 				if (obj[timestamp].hasOwnProperty(usr)) {
 					var repoNodes = obj[timestamp][usr]["contributedLabRepositories"]["nodes"]
-					for (i=0; i<repoNodes.length; i++) {
+					for (var i=0; i<repoNodes.length; i++) {
 						repoSet.add(repoNodes[i]["nameWithOwner"])
 					};
 				};

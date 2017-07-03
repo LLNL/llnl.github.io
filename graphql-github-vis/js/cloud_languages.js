@@ -2,8 +2,17 @@
 function draw_cloud_languages(areaID) {
 
 	// Draw cloud from data
-	function drawCloud(wordList, areaID) {
+	function drawCloud(data, areaID) {
 
+		var wordList = [];
+		data.forEach(function (lang) {
+			wordList.push(lang.name);
+		});
+		wordList.sort();
+
+		var wordScale = d3.scaleLinear()
+			.domain([0, d3.max(data, function (d) { return d.value; })])
+			.range([12,90]);
 		var fill = d3.scaleOrdinal(d3.schemeCategory20);
 
 		var margin = {top: 0, right: 0, bottom: 0, left: 0},
@@ -12,8 +21,8 @@ function draw_cloud_languages(areaID) {
 
 		var layout = cloud()
 			.size([width, height])
-			.words(wordList.map(function(d) {
-				return {text: d, size: 14 + Math.random() * 90, test: "haha"};
+			.words(data.map(function(d) {
+				return {text: d.name, size: wordScale(d.value), test: "haha"};
 			}))
 			.padding(5)
 			.rotate(function() { return ~~(Math.random() * 2) * 90; })
@@ -45,21 +54,39 @@ function draw_cloud_languages(areaID) {
 
 	// Turn json obj into desired word list
 	function reformatData(obj) {
-		var wordList = ['Lorem','ipsum','dolor','sit','amet,','consectetur','adipiscing','elit.','Curabitur','ac','hendrerit','metus.','Proin','eu','lorem','aliquet,','placerat','elit','vitae,','hendrerit','ipsum.','Nam','tortor','turpis,','tempus','vel','hendrerit','eu,','aliquam','sit','amet','tortor.','Aenean','imperdiet','aliquet','dolor,','sollicitudin','dictum','justo','pellentesque','at.','Etiam','condimentum','sollicitudin','malesuada.','Pellentesque','vitae','sapien','suscipit,','hendrerit','dui','id,','venenatis','quam.','Nam','tempus','venenatis','molestie.','Nullam','maximus','nibh','sit','amet','felis','eleifend','euismod.','Fusce','eget','faucibus','leo,','ac','tristique','erat.','Cras','vehicula','eros','eget','bibendum','volutpat.','Aliquam','faucibus','orci','elit,','quis','ornare','lacus','congue','a.','Phasellus','nec','pharetra','enim.']
-		//var wordList = ["Hello", "world", "normally", "you", "want", "more", "words","than", "this"];
-		return wordList;
+		var wordDict = {};
+		for (var repo in obj["data"]) {
+			if (obj["data"].hasOwnProperty(repo)) {
+				var langNodes = obj["data"][repo]["languages"]["nodes"];
+				for (var i=0; i<langNodes.length; i++) {
+					var aWord = langNodes[i]["name"];
+					if (!Object.keys(wordDict).contains(aWord)) {
+						wordDict[aWord]=0;
+					}
+					wordDict[aWord]+=1;
+				}
+			}
+		}
+		var data = [];
+		for (var aWord in wordDict) {
+			if (wordDict.hasOwnProperty(aWord)) {
+				var datpair = {name: aWord, value: wordDict[aWord]};
+				data.push(datpair);
+			}
+		}
+		return data;
 	};
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/outsidersLabRepos.json';
+	var url = './github-data/reposLanguages.json';
 	var xhr = new XMLHttpRequest();
 	xhr.overrideMimeType("application/json");
 	xhr.onload = function () {
 		var data = this.responseText;
 		var obj = JSON.parse(data);
-		var wordList = reformatData(obj);
-		drawCloud(wordList, areaID);
+		var data = reformatData(obj);
+		drawCloud(data, areaID);
 	};
 	xhr.open("GET", url, true);
 	xhr.send();
