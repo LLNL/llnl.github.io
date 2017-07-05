@@ -13,8 +13,3 @@ function GetTopX(arrayData, x){
 	});
 	return arrayData.slice(0, x); 
 };
-
-// Global chart standards
-var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
-	stdWidth = 600 - stdMargin.left - stdMargin.right,
-	stdHeight = 400 - stdMargin.top - stdMargin.bottom;

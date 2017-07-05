@@ -17,7 +17,8 @@
 	<br><svg class="outsideRepoCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
 	<br><svg class="labRepoWOutCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
 	<br><svg class="reposPerOutsiderChart"></svg>
-	<br><svg class="languageCloud"></svg>
+	<br><br><pre class="graphtitle">Languages Used</pre><svg class="languageCloud"></svg>
+	<br><svg class="repoActivityChart"></svg>
 	</center>
 
 	<!-- Load basic D3 and helper scripts -->
@@ -35,8 +36,16 @@
 	<script type="text/javascript" src="./js/line_labRepoWOutCount.js"></script>
 	<script type="text/javascript" src="./js/bar_reposPerOutsider.js"></script>
 	<script type="text/javascript" src="./js/cloud_languages.js"></script>
+	<script type="text/javascript" src="./js/line_repoActivity.js"></script>
 
 	<script>
+		// Global chart standards
+		var stdTotalWidth = 600,
+			stdTotalHeight = 400;
+		var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
+			stdWidth = stdTotalWidth - stdMargin.left - stdMargin.right,
+			stdHeight = stdTotalHeight - stdMargin.top - stdMargin.bottom;
+		var stdDotRadius = 3;
 		// Call draw functions
 		draw_line_repoCount("repoCountTimeline")
 		draw_line_outsideRepoCount("outsideRepoCountTimeline")
@@ -46,6 +55,7 @@
 		draw_line_labRepoWOutCount("labRepoWOutCountTimeline")
 		draw_bar_reposPerOutsider("reposPerOutsiderChart")
 		draw_cloud_languages("languageCloud")
+		draw_line_repoActivity("repoActivityChart","LLNL/llnl.github.io")
 	</script>
 
 </body>

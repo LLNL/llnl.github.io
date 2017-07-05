@@ -23,15 +23,11 @@ function populatePre(areaID) {
 
 
 	var url = './github-data/orgsRepos.json';
-	var xhr = new XMLHttpRequest();
-	xhr.overrideMimeType("application/json");
-	xhr.onload = function () {
-		document.getElementById(areaID).textContent = this.responseText;
-		var obj = JSON.parse(document.getElementById(areaID).textContent);
-		document.getElementById(areaID).innerHTML = structureData(obj);
-	};
-	xhr.open("GET", url, true);
-	xhr.send();
-
+	d3.request(url)
+		.mimeType("application/json")
+		.response(function(xhr) { return JSON.parse(xhr.responseText); })
+		.get(function(obj) {
+			document.getElementById(areaID).innerHTML = structureData(obj);
+		});
 
 }

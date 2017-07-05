@@ -15,9 +15,9 @@ function draw_cloud_languages(areaID) {
 			.range([12,90]);
 		var fill = d3.scaleOrdinal(d3.schemeCategory20);
 
-		var margin = {top: 0, right: 0, bottom: 0, left: 0},
-			width = stdWidth - margin.left - margin.right,
-			height = stdHeight - margin.top - margin.bottom;
+		var margin = {top: 10, right: 10, bottom: 10, left: 10},
+			width = stdTotalWidth - margin.left - margin.right,
+			height = stdTotalHeight - margin.top - margin.bottom;
 
 		var layout = cloud()
 			.size([width, height])
@@ -33,11 +33,11 @@ function draw_cloud_languages(areaID) {
 		layout.start();
 
 		function draw(words) {
-			d3.select("."+areaID)
-				.attr("width", layout.size()[0])
-				.attr("height", layout.size()[1])
+			var wordCloud = d3.select("."+areaID)
+				.attr("width", width + margin.left + margin.right)
+				.attr("height", height + margin.top + margin.bottom)
 			  .append("g")
-				.attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+				.attr("transform", "translate(" + (width + margin.left + margin.right) / 2 + "," + (height + margin.top + margin.bottom) / 2 + ")")
 			  .selectAll("text")
 				.data(words)
 			  .enter().append("text")
@@ -51,6 +51,7 @@ function draw_cloud_languages(areaID) {
 				.text(function(d) { return d.text; });
 		};
 	};
+
 
 	// Turn json obj into desired word list
 	function reformatData(obj) {
@@ -80,14 +81,12 @@ function draw_cloud_languages(areaID) {
 
 	// load data file, process data, and draw visualization
 	var url = './github-data/reposLanguages.json';
-	var xhr = new XMLHttpRequest();
-	xhr.overrideMimeType("application/json");
-	xhr.onload = function () {
-		var data = this.responseText;
-		var obj = JSON.parse(data);
-		var data = reformatData(obj);
-		drawCloud(data, areaID);
-	};
-	xhr.open("GET", url, true);
-	xhr.send();
+	d3.request(url)
+		.mimeType("application/json")
+		.response(function(xhr) { return JSON.parse(xhr.responseText); })
+		.get(function(obj) {
+			var data = reformatData(obj);
+			drawCloud(data, areaID);
+		});
+
 }

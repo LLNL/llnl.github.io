@@ -87,7 +87,7 @@ function draw_line_labUserCount(areaID) {
 			.attr("class", "circle")
 			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })
-			.attr("r", 5)
+			.attr("r", stdDotRadius)
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 
@@ -114,16 +114,12 @@ function draw_line_labUserCount(areaID) {
 
 	// load data file, process data, and draw visualization
 	var url = './github-data/membersRepos.json';
-	var xhr = new XMLHttpRequest();
-	xhr.overrideMimeType("application/json");
-	xhr.onload = function () {
-		var data = this.responseText;
-		var obj = JSON.parse(data);
-		var data = reformatData(obj);
-		drawGraph(data, areaID);
-	};
-	xhr.open("GET", url, true);
-	xhr.send();
-
+	d3.request(url)
+		.mimeType("application/json")
+		.response(function(xhr) { return JSON.parse(xhr.responseText); })
+		.get(function(obj) {
+			var data = reformatData(obj);
+			drawGraph(data, areaID);
+		});
 
 }

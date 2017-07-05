@@ -33,6 +33,10 @@ echo "Run - Get Repos Languages"
 # requires output from sort_repo_ownership.py
 python get_repos_languages.py
 
+echo "Run - Get Repos Activity"
+# requires output from sort_repo_ownership.py
+python get_repos_activity.py
+
 echo "End" >> ../github-data/LAST_MASTER_UPDATE.txt
 date >> ../github-data/LAST_MASTER_UPDATE.txt
 echo "MASTER UPDATE COMPLETE"

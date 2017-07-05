@@ -87,7 +87,7 @@ function draw_line_labUserOutCount(areaID) {
 			.attr("class", "circle")
 			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })
-			.attr("r", 5)
+			.attr("r", stdDotRadius)
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 
@@ -133,30 +133,23 @@ function draw_line_labUserOutCount(areaID) {
 	// load second data file, process data, and draw visualization
 	function loadFile2(objUsrs) {
 		var url = './github-data/reposOwnership.json';
-		var xhr = new XMLHttpRequest();
-		xhr.overrideMimeType("application/json");
-		xhr.onload = function () {
-			var dataSorted = this.responseText;
-			var objSorted = JSON.parse(dataSorted);
-			var data = reformatData(objUsrs, objSorted);
-			drawGraph(data, areaID);
-		};
-		xhr.open("GET", url, true);
-		xhr.send();
+		d3.request(url)
+			.mimeType("application/json")
+			.response(function(xhr) { return JSON.parse(xhr.responseText); })
+			.get(function(objSorted) {
+				var data = reformatData(objUsrs, objSorted);
+				drawGraph(data, areaID);
+			});
 	};
 
 
 	// load first data file, queue second file
 	var url = './github-data/membersRepos.json';
-	var xhr = new XMLHttpRequest();
-	xhr.overrideMimeType("application/json");
-	xhr.onload = function () {
-		var dataUsrs = this.responseText;
-		var objUsrs = JSON.parse(dataUsrs);
-		loadFile2(objUsrs);
-	};
-	xhr.open("GET", url, true);
-	xhr.send();
-
+	d3.request(url)
+		.mimeType("application/json")
+		.response(function(xhr) { return JSON.parse(xhr.responseText); })
+		.get(function(obj) {
+			loadFile2(obj);
+		});
 
 }
