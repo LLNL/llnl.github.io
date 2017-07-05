@@ -10,7 +10,7 @@ def read_input(filepath):
 	print "Reading input '"+filepath+"' ..."
 	with open(filepath,"r") as f_in:
 		inputString = f_in.read()
-	inList = inputString.split()
+	inList = inputString.split('\n')
 	print "File read!"
 	return inList
 
@@ -86,6 +86,11 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	print tab+"Checking response..."
 	if '"message": "Bad credentials"' in result :
 		raise RuntimeError("Invalid response; Bad GitHub credentials")
-	print tab+"Data recieved!"
+	if result :
+		print tab+"Data recieved!"
+		result = '{ "data": '+result+' }'
+	else :
+		print tab+"NULL recieved"
+		result = '{ "data": null }'
 	outObj = json.loads(result)
 	return outObj

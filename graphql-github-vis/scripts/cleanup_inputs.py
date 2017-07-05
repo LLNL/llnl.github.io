@@ -10,7 +10,7 @@ for file in os.listdir(inputdir) :
 	print "    "+inputdir+file
 	with open(inputdir+file) as filein:
 		str_in = filein.read()
-	listWIP = str_in.lower().split()	# Standardize as all lowercase
+	listWIP = str_in.lower().split('\n')	# Standardize as all lowercase
 	listWIP = list(set(listWIP))		# Remove duplicates
 	listWIP.sort()						# List in alphabetical order
 	str_out = '\n'.join(listWIP)
