@@ -32,6 +32,11 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 		var yAxis = d3.axisLeft()
 			.scale(y);
 
+		var area = d3.area()
+			.x(function(d) { return x(d.date); })
+			.y0(height)
+			.y1(function(d) { return y(d.value); });
+
 		var tip = d3.tip()
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
@@ -74,10 +79,16 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 			.attr("text-anchor", "middle")
 			.text(graphHeader);
 		
+		// Draw fill
+		chart.append("path")
+			.datum(data)
+			.attr("class", "area")
+			.attr("d", area);
+
 		// Draw line
 		chart.append("path")
 			.datum(data)
-			.attr("class", "activity line")
+			.attr("class", "line")
 			.attr("d", valueline);
 
 		// Draw dots
