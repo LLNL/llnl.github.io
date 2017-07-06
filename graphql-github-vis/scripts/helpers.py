@@ -1,6 +1,10 @@
 import os.path
 import json
 import subprocess
+import time
+from datetime import datetime
+import dateutil.parser
+import pytz
 
 
 # Read input list file into array variable
@@ -62,35 +66,120 @@ def get_gitauth():
 # Query GitHub GraphQL API, return result as json dictionary
 def query_github(authhead,gitquery):
 	tab = "    "
+
 	print tab+"Sending GraphQL query..."
 	bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
 	bashcurl_list = bashcurl.split()
 	bashcurl_list[2] = authhead
 	bashcurl_list[6] = gitquery
 	result = subprocess.check_output(bashcurl_list)
+
 	print tab+"Checking response..."
-	if '"message": "Bad credentials"' in result :
-		raise RuntimeError("Invalid response; Bad GitHub credentials")
+	resultChecker = "".join(result.split())
+	if '"message":"Badcredentials"' in resultChecker :
+		raise RuntimeError(result)
+
 	print tab+"Data recieved!"
 	outObj = json.loads(result)
+
+	# Make sure the limit didn't run out
+	api = outObj["data"]["rateLimit"]
+	print json.dumps(api)
+	if api["cost"] > api["remaining"] :
+		print tab+"Limit reached during query."
+		awaitResetGraphQL(api["resetAt"])
+		print tab+"Repeating query..."
+		return query_github(authhead, gitquery)
+
+	# Strip limit data
+	del outObj["data"]["rateLimit"]
+
 	return outObj
 
 # Query GitHub REST API, return result as json dictionary
 def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	tab = "    "
+
 	print tab+"Sending REST query..."
-	bashcurl = 'curl -H TMPauthhead https://api.github.com'+endpoint
+	bashcurl = 'curl -iH TMPauthhead https://api.github.com'+endpoint
 	bashcurl_list = bashcurl.split()
 	bashcurl_list[2] = authhead
-	result = subprocess.check_output(bashcurl_list)
+	fullResponse = subprocess.check_output(bashcurl_list).split('\r\n\r\n')
+	heads = fullResponse[0].split('\r\n')
+	if len(fullResponse) > 1 :
+		result = fullResponse[1]
+	else :
+		result = ""
+
 	print tab+"Checking response..."
-	if '"message": "Bad credentials"' in result :
-		raise RuntimeError("Invalid response; Bad GitHub credentials")
+	resultChecker = "".join(result.split())
+	if '"message":"ProblemsparsingJSON"' in resultChecker :
+		raise RuntimeError(result)
+	if '"message":"BodyshouldbeaJSONobject"' in resultChecker :
+		raise RuntimeError(result)
+	if '"message":"ValidationFailed"' in resultChecker :
+		raise RuntimeError(result)
+	if '"message":"Badcredentials"' in resultChecker :
+		raise RuntimeError(result)
+	if '"message":"NotFound"' in resultChecker :
+		return None
+
+	print tab+"Data recieved!"
+
+	# Parse headers
+	del heads[0]
+	headdict = {}
+	for aHead in heads:
+		h = aHead.split(': ')
+		headdict[h[0]] = h[1]
+	api = {}
+	api["limit"] = int(headdict["X-RateLimit-Limit"])
+	api["remaining"] = int(headdict["X-RateLimit-Remaining"])
+	api["reset"] = int(headdict["X-RateLimit-Reset"])
+	# Make sure the limit didn't run out
+	print json.dumps(api)
+	if not api["remaining"] > 0 :
+		print tab+"Limit reached during query."
+		awaitResetREST(api["reset"])
+		print tab+"Repeating query..."
+		return query_githubrest(authhead,endpoint)
+
 	if result :
-		print tab+"Data recieved!"
 		result = '{ "data": '+result+' }'
 	else :
-		print tab+"NULL recieved"
 		result = '{ "data": null }'
 	outObj = json.loads(result)
 	return outObj
+
+
+def check_restAPI_limit(authhead):
+	tab = "    "
+	print tab+"Checking REST query limit..."
+	bashcurl = 'curl -H TMPauthhead https://api.github.com/rate_limit'
+	bashcurl_list = bashcurl.split()
+	bashcurl_list[2] = authhead
+	result = subprocess.check_output(bashcurl_list)
+	resultChecker = "".join(result.split())
+	if '"message":"Badcredentials"' in resultChecker :
+		raise RuntimeError(result)
+	outObj = json.loads(result)
+	return outObj["resources"]["core"]
+
+
+def awaitReset(datetimeObj):
+	print "--- Timestamp "+time.strftime('%c')
+	now = pytz.utc.localize(datetime.utcnow())
+	waitTime = round((datetimeObj - now).total_seconds())+1
+	print "--- Timestamp UTC "+now.strftime('%c')
+	print "--- GITHUB NEEDS A BREAK until UTC "+datetimeObj.strftime('%c')
+	print "--- Waiting "+str(waitTime)+" seconds..."
+	time.sleep(waitTime)
+	print "--- READY!"
+
+def awaitResetREST(utcTimeStamp):
+	resetTime = pytz.utc.localize(datetime.utcfromtimestamp(utcTimeStamp))
+	awaitReset(resetTime)
+
+def awaitResetGraphQL(isoString):
+	resetTime = dateutil.parser.parse(isoString)
+	awaitReset(resetTime)

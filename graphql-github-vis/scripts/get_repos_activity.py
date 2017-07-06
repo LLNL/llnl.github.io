@@ -34,6 +34,7 @@ authhead = helpers.get_gitauth()
 print "Gathering data across multiple queries..."
 collective = {u'data': {}}
 tab = "    "
+
 for repo in repolist:
 	print "\n'"+repo+"'"
 
@@ -47,9 +48,12 @@ for repo in repolist:
 	# Actual query exchange
 	outObj = helpers.query_githubrest(authhead,gitquery)
 	# Check for null
-	if not outObj["data"] :
+	if not outObj :
 		print "'"+repo+"' does not exist on GitHub."
 		continue
+	if not outObj["data"] :
+		print "Could not get commit history for '"+repo+"'."
+		outObj["data"] = []
 
 	# Convert unix timestamps into standard dates
 	for item in outObj["data"] :
