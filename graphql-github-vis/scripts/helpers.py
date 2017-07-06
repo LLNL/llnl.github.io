@@ -82,17 +82,17 @@ def query_github(authhead,gitquery):
 	print tab+"Data recieved!"
 	outObj = json.loads(result)
 
-	# Make sure the limit didn't run out
-	api = outObj["data"]["rateLimit"]
-	print json.dumps(api)
-	if api["cost"] > api["remaining"] :
-		print tab+"Limit reached during query."
-		awaitResetGraphQL(api["resetAt"])
-		print tab+"Repeating query..."
-		return query_github(authhead, gitquery)
-
-	# Strip limit data
-	del outObj["data"]["rateLimit"]
+	if "rateLimit" in outObj["data"].keys() :
+		# Make sure the limit didn't run out
+		api = outObj["data"]["rateLimit"]
+		print json.dumps(api)
+		if api["cost"] > api["remaining"] :
+			print tab+"Limit reached during query."
+			awaitResetGraphQL(api["resetAt"])
+			print tab+"Repeating query..."
+			return query_github(authhead, gitquery)
+		# Strip limit data
+		del outObj["data"]["rateLimit"]
 
 	return outObj
 
