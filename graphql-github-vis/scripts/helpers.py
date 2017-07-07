@@ -68,31 +68,50 @@ def query_github(authhead,gitquery):
 	tab = "    "
 
 	print tab+"Sending GraphQL query..."
-	bashcurl = 'curl -H TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
+	bashcurl = 'curl -iH TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
 	bashcurl_list = bashcurl.split()
 	bashcurl_list[2] = authhead
 	bashcurl_list[6] = gitquery
-	result = subprocess.check_output(bashcurl_list)
+	fullResponse = subprocess.check_output(bashcurl_list).split('\r\n\r\n')
+	heads = fullResponse[0].split('\r\n')
+	if len(fullResponse) > 1 :
+		result = fullResponse[1]
+	else :
+		result = ""
 
 	print tab+"Checking response..."
-	resultChecker = "".join(result.split())
-	if '"message":"Badcredentials"' in resultChecker :
+	print tab+heads[0]
+	http = heads[0].split()
+	statusNum = int(http[1])
+	# Check for accepted but not yet processed, usually due to un-cached data
+	if statusNum==202 :
+		print tab+"Query accepted but not yet processed. Trying again in 5sec..."
+		time.sleep(5)
+		return query_github(authhead,gitquery)
+	# Check for error responses
+	if statusNum>=400 :
 		raise RuntimeError(result)
 
 	print tab+"Data recieved!"
 	outObj = json.loads(result)
 
-	if "rateLimit" in outObj["data"].keys() :
-		# Make sure the limit didn't run out
-		api = outObj["data"]["rateLimit"]
-		print json.dumps(api)
-		if api["cost"] > api["remaining"] :
-			print tab+"Limit reached during query."
-			awaitResetGraphQL(api["resetAt"])
-			print tab+"Repeating query..."
-			return query_github(authhead, gitquery)
-		# Strip limit data
-		del outObj["data"]["rateLimit"]
+	# Parse headers
+	del heads[0]
+	headdict = {}
+	for aHead in heads:
+		h = aHead.split(': ')
+		headdict[h[0]] = h[1]
+	api = {}
+	api["limit"] = int(headdict["X-RateLimit-Limit"])
+	api["remaining"] = int(headdict["X-RateLimit-Remaining"])
+	api["reset"] = int(headdict["X-RateLimit-Reset"])
+	# Make sure the limit didn't run out
+	print tab+json.dumps(api)
+	if not api["remaining"] > 0 :
+		print tab+"Limit reached during query."
+		awaitReset(api["reset"])
+		print tab+"Repeating query..."
+		return query_github(authhead,gitquery)
 
 	return outObj
 
@@ -112,14 +131,17 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 		result = ""
 
 	print tab+"Checking response..."
+	print tab+heads[0]
+	http = heads[0].split()
+	statusNum = int(http[1])
+	# Check for accepted but not yet processed, usually due to un-cached data
+	if statusNum==202 :
+		print tab+"Query accepted but not yet processed. Trying again in 5sec..."
+		time.sleep(5)
+		return query_githubrest(authhead,endpoint)
+	# Check for error responses
 	resultChecker = "".join(result.split())
-	if '"message":"ProblemsparsingJSON"' in resultChecker :
-		raise RuntimeError(result)
-	if '"message":"BodyshouldbeaJSONobject"' in resultChecker :
-		raise RuntimeError(result)
-	if '"message":"ValidationFailed"' in resultChecker :
-		raise RuntimeError(result)
-	if '"message":"Badcredentials"' in resultChecker :
+	if statusNum>=400 :
 		raise RuntimeError(result)
 	if '"message":"NotFound"' in resultChecker :
 		return None
@@ -137,10 +159,10 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	api["remaining"] = int(headdict["X-RateLimit-Remaining"])
 	api["reset"] = int(headdict["X-RateLimit-Reset"])
 	# Make sure the limit didn't run out
-	print json.dumps(api)
+	print tab+json.dumps(api)
 	if not api["remaining"] > 0 :
 		print tab+"Limit reached during query."
-		awaitResetREST(api["reset"])
+		awaitReset(api["reset"])
 		print tab+"Repeating query..."
 		return query_githubrest(authhead,endpoint)
 
@@ -152,34 +174,16 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	return outObj
 
 
-def check_restAPI_limit(authhead):
-	tab = "    "
-	print tab+"Checking REST query limit..."
-	bashcurl = 'curl -H TMPauthhead https://api.github.com/rate_limit'
-	bashcurl_list = bashcurl.split()
-	bashcurl_list[2] = authhead
-	result = subprocess.check_output(bashcurl_list)
-	resultChecker = "".join(result.split())
-	if '"message":"Badcredentials"' in resultChecker :
-		raise RuntimeError(result)
-	outObj = json.loads(result)
-	return outObj["resources"]["core"]
-
-
-def awaitReset(datetimeObj):
-	print "--- Timestamp "+time.strftime('%c')
+def awaitReset(utcTimeStamp):
+	resetTime = pytz.utc.localize(datetime.utcfromtimestamp(utcTimeStamp))
+	print "--- Timestamp"
+	print "      "+time.strftime('%c')
 	now = pytz.utc.localize(datetime.utcnow())
-	waitTime = round((datetimeObj - now).total_seconds())+1
-	print "--- Timestamp UTC "+now.strftime('%c')
-	print "--- GITHUB NEEDS A BREAK until UTC "+datetimeObj.strftime('%c')
+	waitTime = round((resetTime - now).total_seconds())+1
+	print "--- UTC Timestamp"
+	print "      "+now.strftime('%c')
+	print "--- GITHUB NEEDS A BREAK Until UTC Timestamp"
+	print "      "+resetTime.strftime('%c')
 	print "--- Waiting "+str(waitTime)+" seconds..."
 	time.sleep(waitTime)
 	print "--- READY!"
-
-def awaitResetREST(utcTimeStamp):
-	resetTime = pytz.utc.localize(datetime.utcfromtimestamp(utcTimeStamp))
-	awaitReset(resetTime)
-
-def awaitResetGraphQL(isoString):
-	resetTime = dateutil.parser.parse(isoString)
-	awaitReset(resetTime)
