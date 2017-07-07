@@ -44,8 +44,9 @@
 			stdTotalHeight = 400;
 		var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
 			stdWidth = stdTotalWidth - stdMargin.left - stdMargin.right,
-			stdHeight = stdTotalHeight - stdMargin.top - stdMargin.bottom;
-		var stdDotRadius = 3;
+			stdHeight = stdTotalHeight - stdMargin.top - stdMargin.bottom,
+			stdMaxBuffer = 1.07;
+		var stdDotRadius = 4;
 		// Call draw functions
 		draw_line_repoCount("repoCountTimeline")
 		draw_line_outsideRepoCount("outsideRepoCountTimeline")

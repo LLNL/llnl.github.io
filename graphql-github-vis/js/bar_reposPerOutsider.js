@@ -14,7 +14,8 @@ function draw_bar_reposPerOutsider(areaID) {
 
 		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: 50, left: stdMargin.left},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
-			height = stdTotalHeight - margin.top - margin.bottom;
+			height = stdTotalHeight - margin.top - margin.bottom,
+			maxBuffer = stdMaxBuffer;
 		
 		var x = d3.scaleBand()
 			.domain(data.map(function(d) { return d.name; }))
@@ -22,7 +23,7 @@ function draw_bar_reposPerOutsider(areaID) {
 			.padding([0.1]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(data, function(d) { return d.value; })])
+			.domain([0, d3.max(data, function(d) { return d.value; })*maxBuffer])
 			.range([height, 0]);
 		
 		var xAxis = d3.axisBottom()
@@ -72,12 +73,16 @@ function draw_bar_reposPerOutsider(areaID) {
 		// Draw bars
 		chart.selectAll(".bar")
 			.data(data)
-		  .enter().append("rect")
+		  .enter().append("a")
+		  	.attr("xlink:href", function(d) { return "https://github.com/"+d.name; })
+		  .append("rect")
 			.attr("class", "bar")
 			.attr("x", function(d) { return x(d.name); })
 			.attr("y", function(d) { return y(d.value); })
 			.attr("height", function(d) { return height - y(d.value); })
 			.attr("width", x.bandwidth())
+			.attr("xlink:href", "https://github.com/LRWeber")
+			.attr("xlink:target", "_blank")
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 

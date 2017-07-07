@@ -4,7 +4,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Master Branch Activity for '"+repoNameWOwner+"'";
+		var graphHeader = "Activity for '"+repoNameWOwner+"' [Default Branch]";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
@@ -16,14 +16,15 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
 		var margin = stdMargin,
 			width = (stdTotalWidth*2) - margin.left - margin.right,
-			height = stdHeight;
+			height = stdHeight,
+			maxBuffer = stdMaxBuffer;
 		
 		var x = d3.scaleTime()
 			.domain(d3.extent(data, function(d) { return d.date; }))
 			.range([0, width]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(data, function(d) { return d.value; })])
+			.domain([0, d3.max(data, function(d) { return d.value; })*maxBuffer])
 			.range([height, 0]);
 
 		var xAxis = d3.axisBottom()
@@ -94,7 +95,9 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 		// Draw dots
 		chart.selectAll(".circle")
 			.data(data)
-		  .enter().append("circle")
+		  .enter().append("a")
+			.attr("xlink:href", "https://github.com/"+repoNameWOwner+"/graphs/commit-activity")
+		  .append("circle")
 			.attr("class", "circle")
 			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })

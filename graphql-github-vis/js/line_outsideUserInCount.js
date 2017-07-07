@@ -16,14 +16,15 @@ function draw_line_outsideUserInCount(areaID) {
 
 		var margin = stdMargin,
 			width = stdWidth,
-			height = stdHeight;
+			height = stdHeight,
+			maxBuffer = stdMaxBuffer;
 		
 		var x = d3.scaleTime()
 			.domain(d3.extent(data, function(d) { return d.date; }))
 			.range([0, width]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(data, function(d) { return d.value; })])
+			.domain([0, d3.max(data, function(d) { return d.value; })*maxBuffer])
 			.range([height, 0]);
 
 		var xAxis = d3.axisBottom()
