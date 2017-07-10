@@ -33,6 +33,10 @@ echo "Run - Get Repos Languages"
 # requires output from sort_repo_ownership.py
 python get_repos_languages.py
 
+echo "Run - Get Repos Topics"
+# requires output from sort_repo_ownership.py
+python get_repos_topics.py
+
 echo "Run - Get Repos Activity"
 # requires output from sort_repo_ownership.py
 python get_repos_activity.py

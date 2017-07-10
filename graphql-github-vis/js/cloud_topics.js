@@ -1,12 +1,12 @@
 /* Creates word cloud visualization for webpage */
-function draw_cloud_languages(areaID) {
+function draw_cloud_topics(areaID) {
 
 	// Draw cloud from data
 	function drawCloud(data, areaID) {
 
 		var wordList = [];
-		data.forEach(function (lang) {
-			wordList.push(lang.name);
+		data.forEach(function (topic) {
+			wordList.push(topic.name);
 		});
 		wordList.sort();
 
@@ -57,9 +57,9 @@ function draw_cloud_languages(areaID) {
 		var wordDict = {};
 		for (var repo in obj["data"]) {
 			if (obj["data"].hasOwnProperty(repo)) {
-				var langNodes = obj["data"][repo]["languages"]["nodes"];
-				for (var i=0; i<langNodes.length; i++) {
-					var aWord = langNodes[i]["name"];
+				var topicNodes = obj["data"][repo]["repositoryTopics"]["nodes"];
+				for (var i=0; i<topicNodes.length; i++) {
+					var aWord = topicNodes[i]["topic"]["name"];
 					if (!Object.keys(wordDict).contains(aWord)) {
 						wordDict[aWord]=0;
 					}
@@ -79,7 +79,7 @@ function draw_cloud_languages(areaID) {
 
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/reposLanguages.json';
+	var url = './github-data/reposTopics.json';
 	d3.request(url)
 		.mimeType("application/json")
 		.response(function(xhr) { return JSON.parse(xhr.responseText); })

@@ -18,6 +18,7 @@
 	<br><svg class="labRepoWOutCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
 	<br><svg class="reposPerOutsiderChart"></svg>
 	<br><br><pre class="graphtitle">Languages Used</pre><svg class="languageCloud"></svg>
+	<br><br><pre class="graphtitle">Repository Topics</pre><svg class="topicCloud"></svg>
 	<br><svg class="repoActivityChart"></svg>
 	</center>
 
@@ -36,6 +37,7 @@
 	<script type="text/javascript" src="./js/line_labRepoWOutCount.js"></script>
 	<script type="text/javascript" src="./js/bar_reposPerOutsider.js"></script>
 	<script type="text/javascript" src="./js/cloud_languages.js"></script>
+	<script type="text/javascript" src="./js/cloud_topics.js"></script>
 	<script type="text/javascript" src="./js/line_repoActivity.js"></script>
 
 	<script>
@@ -55,6 +57,7 @@
 		draw_line_outsideUserInCount("outsideUserInCountTimeline")
 		draw_line_labRepoWOutCount("labRepoWOutCountTimeline")
 		draw_bar_reposPerOutsider("reposPerOutsiderChart")
+		draw_cloud_topics("topicCloud")
 		draw_cloud_languages("languageCloud")
 		draw_line_repoActivity("repoActivityChart","LLNL/llnl.github.io")
 	</script>
