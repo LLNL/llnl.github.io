@@ -3,8 +3,6 @@ title: Using GitHub
 layout: default
 ---
 
-{::options gfm_quirks: "paragraph_end" /}
-
 ## {{ page.title }}
 {: .page-header}
 
