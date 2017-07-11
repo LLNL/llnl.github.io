@@ -16,29 +16,29 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
 1. [Create an account on GitHub](https://github.com/join)
 
-  - You *do not need* a separate work account and personal account, unless you prefer to.
+    - You *do not need* a separate work account and personal account, unless you prefer to.
 
 2. [Update your profile information](https://github.com/settings/profile)
 
-  - **Photo**: A headshot photo, or image that is uniquely you.
-  - **Name**: Your first and last name.
-  - **Bio**: Include a few words about yourself! Don't forget to mention @LLNL.
-  - **URL**: This might be your https://people.llnl.gov page, or a personal website if you prefer.
-  - **Company**: Probably `Lawrence Livermore National Laboratory, @LLNL`.
-  - **Location**: Your primary location.
+    - **Photo**: A headshot photo, or image that is uniquely you.
+    - **Name**: Your first and last name.
+    - **Bio**: Include a few words about yourself! Don't forget to mention @LLNL.
+    - **URL**: This might be your https://people.llnl.gov page, or a personal website if you prefer.
+    - **Company**: Probably `Lawrence Livermore National Laboratory, @LLNL`.
+    - **Location**: Your primary location.
 
 3. Add your `@LLNL` email address (and any aliases) to your [Email Settings](https://github.com/settings/emails) page.
 
-  - This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
+    - This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
 
 4. [Enable Two-factor authentication](https://github.com/settings/security)
 
-  - *This will soon be a requirement for membership in the @LLNL GitHub organization.*
-  - Two-factor authentication is set at your account level.
-  - You will be given the option to setup two-factor authentication with an app (such as Google Authenticator) or SMS.
-  - Selecting either option also provides you with a list of recovery codes to get into your account in the event you are locked out.
-  - If you setup with an app, you will still have the option to set a backup SMS number (recommended).
-  - For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
+    - *This will soon be a requirement for membership in the @LLNL GitHub organization.*
+    - Two-factor authentication is set at your account level.
+    - You will be given the option to setup two-factor authentication with an app (such as Google Authenticator) or SMS.
+    - Selecting either option also provides you with a list of recovery codes to get into your account in the event you are locked out.
+    - If you setup with an app, you will still have the option to set a backup SMS number (recommended).
+    - For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
 
 
 ### Joining the Organization
@@ -49,7 +49,7 @@ If you are an employee at LLNL, and have 2FA enabled, congratulations, you are e
 
 2. After an administrator has added you to the organization, you will receive a notification email from GitHub.
 
-  - Alternatively, once the invitation has been sent, you will see a notification banner at the top of https://github.com/llnl which you can use to accept the invitation.
+    - Alternatively, once the invitation has been sent, you will see a notification banner at the top of https://github.com/llnl which you can use to accept the invitation.
 
 3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people) page make your membership `Public`.
 
