@@ -5,6 +5,10 @@ function draw_line_labUserCountOutCount(areaID) {
 	function drawGraph(data, areaID) {
 
 		var graphHeader = "Lab Members Combo";
+		var seriesData = [
+			{label:"Total"},
+			{label:"Contributing Externally"}
+			];
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
@@ -14,7 +18,7 @@ function draw_line_labUserCountOutCount(areaID) {
 			d.value = +d.value;
 		});
 
-		var margin = stdMargin,
+		var margin = {top: stdMargin.top, right: stdMargin.right*1.75, bottom: stdMargin.bottom, left: stdMargin.left},
 			width = stdWidth,
 			height = stdHeight,
 			maxBuffer = stdMaxBuffer;
@@ -52,7 +56,7 @@ function draw_line_labUserCountOutCount(areaID) {
 				if (d.value == 1) {
 					users = " User";
 				}
-				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value2+users+"<br>who contribute externally";
+				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value2+users;
 			});
 		
 		var valueline = d3.line()
@@ -71,6 +75,17 @@ function draw_line_labUserCountOutCount(areaID) {
 
 		chart.call(tip);
 		chart.call(tip2);
+
+		// Calculate widths of legend text labels
+		chart.selectAll(".dummyText")
+			.data(seriesData)
+		  .enter().append("text")
+			.attr("class", "legendText")
+			.text(function(d) {return d;})
+			.each(function(d,i) {
+				d.width = this.getComputedTextLength();
+				this.remove();
+			});
 		
 		// Add the x axis
 		chart.append("g")
@@ -103,7 +118,7 @@ function draw_line_labUserCountOutCount(areaID) {
 			.attr("d", valueline2);
 
 		// Draw dots
-		chart.selectAll(".total-circle")
+		var points1 = chart.selectAll(".total-circle")
 			.data(data)
 		  .enter().append("circle")
 			.attr("class", "circle")
@@ -112,8 +127,10 @@ function draw_line_labUserCountOutCount(areaID) {
 			.attr("r", stdDotRadius)
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
+		seriesData[0].fillColor = points1.style("fill");
+		seriesData[0].strokeColor = points1.style("stroke");
 		// Draw dots2
-		chart.selectAll(".externals-circle")
+		var points2 = chart.selectAll(".externals-circle")
 			.data(data)
 		  .enter().append("circle")
 			.attr("class", "second circle")
@@ -122,12 +139,34 @@ function draw_line_labUserCountOutCount(areaID) {
 			.attr("r", stdDotRadius)
 			.on('mouseover', tip2.show)
 			.on('mouseout', tip2.hide);
+		seriesData[1].fillColor = points2.style("fill");
+		seriesData[1].strokeColor = points2.style("stroke");
 
 		// Angle the axis text
 		chart.select(".x.axis")
 			.selectAll("text")
 			.attr("transform", "rotate(12)")
 			.attr("text-anchor", "start");
+
+		// Add legend
+		chart.selectAll(".series-colors")
+			.data(seriesData)
+		  .enter().append("circle")
+			.attr("class", "legendCircle")
+			.style("fill", function(d) { return d.fillColor; })
+			.style("stroke", function(d) { return d.strokeColor; })
+			.attr("r", stdDotRadius*1.25 )
+			.attr("cx", function(d,i) { return (width+margin.right) - (stdDotRadius*1.25) })
+			.attr("cy", function(d,i) { return (height-10) - stdDotRadius*1.25 - 30*i });
+		chart.selectAll(".series-labels")
+			.data(seriesData)
+		  .enter().append("text")
+		  	.attr("class", "legendText")
+			.text(function(d) { return d.label; })
+			.attr("text-anchor", "end")
+			.attr("x", function(d,i) { return (width+margin.right) - (2*stdDotRadius*1.25 + 4) })
+			.attr("y", function(d,i) { return (height-10) - 30*i });
+
 	};
 
 
