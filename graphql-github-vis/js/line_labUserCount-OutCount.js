@@ -1,10 +1,10 @@
 /* Creates line graph visualization for webpage */
-function draw_line_labUserOutCount(areaID) {
+function draw_line_labUserCountOutCount(areaID) {
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Lab Members Contributing to Outside Repos";
+		var graphHeader = "Lab Members Combo";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
@@ -43,10 +43,25 @@ function draw_line_labUserOutCount(areaID) {
 				}
 				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+users;
 			});
+
+		var tip2 = d3.tip()
+			.attr('class', 'd3-tip')
+			.offset([-10, 0])
+			.html(function(d) {
+				var users = " Users";
+				if (d.value == 1) {
+					users = " User";
+				}
+				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value2+users+"<br>who contribute externally";
+			});
 		
 		var valueline = d3.line()
 			.x(function(d) { return x(d.date); })
 			.y(function(d) { return y(d.value); });
+
+		var valueline2 = d3.line()
+			.x(function(d) { return x(d.date); })
+			.y(function(d) { return y(d.value2); });
 
 		var chart = d3.select("."+areaID)
 			.attr("width", width + margin.left + margin.right)
@@ -55,6 +70,7 @@ function draw_line_labUserOutCount(areaID) {
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		chart.call(tip);
+		chart.call(tip2);
 		
 		// Add the x axis
 		chart.append("g")
@@ -80,9 +96,14 @@ function draw_line_labUserOutCount(areaID) {
 			.datum(data)
 			.attr("class", "line")
 			.attr("d", valueline);
+		// Draw line2
+		chart.append("path")
+			.datum(data)
+			.attr("class", "second line")
+			.attr("d", valueline2);
 
 		// Draw dots
-		chart.selectAll(".circle")
+		chart.selectAll(".total-circle")
 			.data(data)
 		  .enter().append("circle")
 			.attr("class", "circle")
@@ -91,6 +112,16 @@ function draw_line_labUserOutCount(areaID) {
 			.attr("r", stdDotRadius)
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
+		// Draw dots2
+		chart.selectAll(".externals-circle")
+			.data(data)
+		  .enter().append("circle")
+			.attr("class", "second circle")
+			.attr("cx", function(d) { return x(d.date); })
+			.attr("cy", function(d) { return y(d.value2); })
+			.attr("r", stdDotRadius)
+			.on('mouseover', tip2.show)
+			.on('mouseout', tip2.hide);
 
 		// Angle the axis text
 		chart.select(".x.axis")
@@ -100,52 +131,66 @@ function draw_line_labUserOutCount(areaID) {
 	};
 
 
-	// Turn json objs into desired working data
-	function reformatData(objUsrs, objSorted) {
-		var dates = Object.keys(objSorted);
+	// Turn json obj into desired working data
+	function reformatData(obj, objUsrs, objSorted) {
+		var dates = Object.keys(obj);
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			// Get list of outsideRepositories for this date
-			var outsideNodes = objSorted[timestamp]["outsideRepositories"]["nodes"];
-			var outsideRepos = [];
-			for (var i=0; i < outsideNodes.length; i++) {
-				outsideRepos.push(outsideNodes[i]["nameWithOwner"]);
-			};
-			// Count users contributing to repos in that list
-			var userTotal = 0;
-			for (var usr in objUsrs[timestamp]) {
-				if (objUsrs[timestamp].hasOwnProperty(usr)) {
-					var usrRepoNodes = objUsrs[timestamp][usr]["contributedRepositories"]["nodes"];
-					for (var i=0; i < usrRepoNodes.length; i++) {
-						if (outsideRepos.contains(outsideNodes[i]["nameWithOwner"])) {
-							// Only count each user once as soon as any outside repo is found
-							userTotal += 1;
-							break;
-						};
+			var userTotal = Object.keys(obj[timestamp]).length;
+			var userTotal2 = reformatData2(timestamp, objUsrs, objSorted);
+			data.push({date: timestamp, value: userTotal, value2: userTotal2});
+		});
+		return data
+	};
+	
+	function reformatData2(timestamp, objUsrs, objSorted) {
+		// Get list of outsideRepositories for this date
+		var outsideNodes = objSorted[timestamp]["outsideRepositories"]["nodes"];
+		var outsideRepos = [];
+		for (var i=0; i < outsideNodes.length; i++) {
+			outsideRepos.push(outsideNodes[i]["nameWithOwner"]);
+		};
+		// Count users contributing to repos in that list
+		var userTotal = 0;
+		for (var usr in objUsrs[timestamp]) {
+			if (objUsrs[timestamp].hasOwnProperty(usr)) {
+				var usrRepoNodes = objUsrs[timestamp][usr]["contributedRepositories"]["nodes"];
+				for (var i=0; i < usrRepoNodes.length; i++) {
+					if (outsideRepos.contains(outsideNodes[i]["nameWithOwner"])) {
+						// Only count each user once as soon as any outside repo is found
+						userTotal += 1;
+						break;
 					};
 				};
 			};
-			data.push({date: timestamp, value: userTotal});
-		});
-		return data;
+		};
+		return userTotal;
 	};
 
-
-	// load 2 data files, process data, and draw visualization
+	
+	// load 3 data files, process data, and draw visualization
 	var url = './github-data/membersRepos.json';
+	var url1 = './github-data/membersRepos.json';
 	var url2 = './github-data/reposOwnership.json';
 	d3.request(url)
 		.mimeType("application/json")
 		.response(function(xhr) { return JSON.parse(xhr.responseText); })
-		.get(function(objUsrs) {
-			d3.request(url2)
+		.get(function(obj) {
+			d3.request(url1)
 				.mimeType("application/json")
 				.response(function(xhr) { return JSON.parse(xhr.responseText); })
-				.get(function(objSorted) {
-					var data = reformatData(objUsrs, objSorted);
-					drawGraph(data, areaID);
+				.get(function(objUsrs) {
+					d3.request(url2)
+						.mimeType("application/json")
+						.response(function(xhr) { return JSON.parse(xhr.responseText); })
+						.get(function(objSorted) {
+							var data = reformatData(obj, objUsrs, objSorted);
+							drawGraph(data, areaID);
+						});
 				});
 		});
+
+	
 
 }

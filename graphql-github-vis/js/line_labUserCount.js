@@ -37,11 +37,11 @@ function draw_line_labUserCount(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var repos = " Users";
+				var users = " Users";
 				if (d.value == 1) {
-					repos = " User";
+					users = " User";
 				}
-				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
+				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+users;
 			});
 		
 		var valueline = d3.line()
