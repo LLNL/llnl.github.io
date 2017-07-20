@@ -1,4 +1,5 @@
 import os
+import json
 
 yearDict = {}
 
@@ -27,9 +28,9 @@ yearDataString = json.dumps(yearDict)
 datfilepath = "../github-data/YEARS.json"
 
 # Write year list file
-print "\nWriting file '"+datfilepath+"'"
+print "Writing file '"+datfilepath+"'"
 with open(datfilepath,"w") as fileout:
 	fileout.write(yearDataString)
 print "Wrote file!"
 
-print "\nDone!\n"
+print "Done!\n"
