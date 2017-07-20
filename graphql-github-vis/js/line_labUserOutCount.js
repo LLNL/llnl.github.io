@@ -1,17 +1,48 @@
 /* Creates line graph visualization for webpage */
 function draw_line_labUserOutCount(areaID) {
 
-	// load 2 data files, process data, and draw visualization
-	var url0 = './github-data/membersRepos.json';
-	var url1 = './github-data/reposOwnership.json';
-	d3.queue()
-		.defer(d3.json, url0)
-		.defer(d3.json, url1)
-		.awaitAll(function(error,response){
-			if (error) throw error;
-			var data = reformatData(response[0],response[1]);
-			drawGraph(data, areaID);
+	var UsersVars = {
+		obj:null,
+		yearList:null,
+		datPrefix:'membersRepos'
+	};
+	var SortedVars = {
+		obj:null,
+		yearList:null,
+		datPrefix:'reposOwnership'
+	};
+
+	d3.json('./github-data/YEARS.json', function(obj) {
+		UsersVars.yearList = obj[UsersVars.datPrefix];
+		SortedVars.yearList = obj[SortedVars.datPrefix];
+		yearCollection(UsersVars);
+		yearCollection(SortedVars);
+	});
+
+	function yearCollection(someVars) {
+		var yearList = someVars.yearList;
+		var datPrefix = someVars.datPrefix;
+		var yearQ = d3.queue();
+		// load each year file
+		yearList.forEach(function(nYEAR) {
+			var url = './github-data/'+datPrefix+'.'+nYEAR+'.json';
+			console.log(url);
+			yearQ.defer(d3.json, url);
 		});
+		// Merge data
+		yearQ.awaitAll(function(error, response){
+			var combinedData = {};
+			for (var i=0; i < response.length; i++) {
+				Object.assign(combinedData, response[i]);
+			};
+			someVars.obj = combinedData;
+			// Once all files are read, process data, and draw visualization
+			if (UsersVars.obj && SortedVars.obj) {
+				var data = reformatData(UsersVars.obj,SortedVars.obj);
+				drawGraph(data, areaID);
+			}
+		});
+	};
 	
 
 	// Draw graph from data

@@ -1,11 +1,26 @@
 /* Creates bar graph visualization for webpage */
 function draw_bar_reposPerOutsider(areaID) {
 
-	// load data file, process data, and draw visualization
-	var url = './github-data/outsidersLabRepos.json';
-	d3.json(url, function(obj) {
-		var data = reformatData(obj);
-		drawGraph(data, areaID);
+	var yearQ = d3.queue();
+	var datPrefix = 'outsidersLabRepos';
+	// Get list of years for relevant data
+	d3.json('./github-data/YEARS.json', function(obj) {
+		var yearList = obj[datPrefix];
+		// load each year file
+		yearList.forEach(function(nYEAR) {
+			var url = './github-data/'+datPrefix+'.'+nYEAR+'.json';
+			console.log(url);
+			yearQ.defer(d3.json, url);
+		});
+		// Merge data, process data, and draw visualization
+		yearQ.awaitAll(function(error, response){
+			var combinedData = {};
+			for (var i=0; i < response.length; i++) {
+				Object.assign(combinedData, response[i]);
+			};
+			var data = reformatData(combinedData);
+			drawGraph(data, areaID);
+		});
 	});
 	
 

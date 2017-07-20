@@ -4,7 +4,8 @@ import re
 import time
 
 date = (time.strftime("%Y-%m-%d"))
-datfilepath = "../github-data/orgsMembers.json"
+xYear = (time.strftime("%Y"))
+datfilepath = "../github-data/orgsMembers."+xYear+".json"
 allData = {}
 
 # Check for and read existing data file

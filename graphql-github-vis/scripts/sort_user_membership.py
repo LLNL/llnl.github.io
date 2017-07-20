@@ -3,9 +3,10 @@ import json
 import time
 
 date = (time.strftime("%Y-%m-%d"))
-datfilepath = "../github-data/usersMembership.json"
+xYear = (time.strftime("%Y"))
+datfilepath = "../github-data/usersMembership."+xYear+".json"
 allData = {}
-dat2filepath = "../github-data/outsidersLabRepos.json"
+dat2filepath = "../github-data/outsidersLabRepos."+xYear+".json"
 allData2 = {}
 
 # Check for and read existing data files

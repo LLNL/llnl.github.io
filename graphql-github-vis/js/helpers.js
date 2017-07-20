@@ -7,7 +7,7 @@ Array.prototype.contains = function ( item ) {
 };
 
 // Return only top X portion of an array of {name:value} pairs
-function GetTopX(arrayData, x){
+function GetTopX(arrayData, x) {
 	arrayData.sort(function(a, b) {
 		return parseFloat(b.value) - parseFloat(a.value);
 	});
