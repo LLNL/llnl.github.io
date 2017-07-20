@@ -1,5 +1,9 @@
 function populatePre(areaID) {
 
+	var url = './github-data/orgsRepos.json';
+	d3.json(url, function(obj) {
+		document.getElementById(areaID).innerHTML = structureData(obj);
+	});
 
 	function structureData(obj) {
 		var meat = "<strong>Repo Counts</strong><br>";
@@ -20,14 +24,5 @@ function populatePre(areaID) {
 		});
 		return meat;
 	};
-
-
-	var url = './github-data/orgsRepos.json';
-	d3.request(url)
-		.mimeType("application/json")
-		.response(function(xhr) { return JSON.parse(xhr.responseText); })
-		.get(function(obj) {
-			document.getElementById(areaID).innerHTML = structureData(obj);
-		});
 
 }

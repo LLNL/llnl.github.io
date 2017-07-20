@@ -1,6 +1,14 @@
 /* Creates line graph visualization for webpage */
 function draw_line_repoActivity(areaID, repoNameWOwner) {
 
+	// load data file, process data, and draw visualization
+	var url = './github-data/reposActivity.json';
+	d3.request(url, function(obj) {
+		var data = reformatData(obj);
+		drawGraph(data, areaID);
+	});
+	
+
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
@@ -127,16 +135,5 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 		}
 		return data;
 	};
-
-
-	// load data file, process data, and draw visualization
-	var url = './github-data/reposActivity.json';
-	d3.request(url)
-		.mimeType("application/json")
-		.response(function(xhr) { return JSON.parse(xhr.responseText); })
-		.get(function(obj) {
-			var data = reformatData(obj);
-			drawGraph(data, areaID);
-		});
 
 }

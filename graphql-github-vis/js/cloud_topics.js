@@ -1,6 +1,14 @@
 /* Creates word cloud visualization for webpage */
 function draw_cloud_topics(areaID) {
 
+	// load data file, process data, and draw visualization
+	var url = './github-data/reposTopics.json';
+	d3.json(url, function(obj) {
+		var data = reformatData(obj);
+		drawCloud(data, areaID);
+	});
+	
+
 	// Draw cloud from data
 	function drawCloud(data, areaID) {
 
@@ -76,16 +84,5 @@ function draw_cloud_topics(areaID) {
 		}
 		return data;
 	};
-
-
-	// load data file, process data, and draw visualization
-	var url = './github-data/reposTopics.json';
-	d3.request(url)
-		.mimeType("application/json")
-		.response(function(xhr) { return JSON.parse(xhr.responseText); })
-		.get(function(obj) {
-			var data = reformatData(obj);
-			drawCloud(data, areaID);
-		});
 
 }

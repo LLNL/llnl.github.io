@@ -1,6 +1,19 @@
 /* Creates line graph visualization for webpage */
 function draw_line_labUserOutCount(areaID) {
 
+	// load 2 data files, process data, and draw visualization
+	var url0 = './github-data/membersRepos.json';
+	var url1 = './github-data/reposOwnership.json';
+	d3.queue()
+		.defer(d3.json, url0)
+		.defer(d3.json, url1)
+		.awaitAll(function(error,response){
+			if (error) throw error;
+			var data = reformatData(response[0],response[1]);
+			drawGraph(data, areaID);
+		});
+	
+
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
@@ -130,22 +143,5 @@ function draw_line_labUserOutCount(areaID) {
 		});
 		return data;
 	};
-
-
-	// load 2 data files, process data, and draw visualization
-	var url = './github-data/membersRepos.json';
-	var url2 = './github-data/reposOwnership.json';
-	d3.request(url)
-		.mimeType("application/json")
-		.response(function(xhr) { return JSON.parse(xhr.responseText); })
-		.get(function(objUsrs) {
-			d3.request(url2)
-				.mimeType("application/json")
-				.response(function(xhr) { return JSON.parse(xhr.responseText); })
-				.get(function(objSorted) {
-					var data = reformatData(objUsrs, objSorted);
-					drawGraph(data, areaID);
-				});
-		});
 
 }

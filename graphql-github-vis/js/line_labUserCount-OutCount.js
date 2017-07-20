@@ -1,6 +1,18 @@
 /* Creates line graph visualization for webpage */
 function draw_line_labUserCountOutCount(areaID) {
 
+	// load 3 data files, process data, and draw visualization
+	var url0 = './github-data/membersRepos.json';
+	var url1 = './github-data/reposOwnership.json';
+	d3.queue()
+		.defer(d3.json, url0)
+		.defer(d3.json, url1)
+		.awaitAll(function(error,response){
+			if (error) throw error;
+			var data = reformatData(response[0],response[1]);
+			drawGraph(data, areaID);
+		});
+
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
@@ -171,12 +183,12 @@ function draw_line_labUserCountOutCount(areaID) {
 
 
 	// Turn json obj into desired working data
-	function reformatData(obj, objUsrs, objSorted) {
-		var dates = Object.keys(obj);
+	function reformatData(objUsrs, objSorted) {
+		var dates = Object.keys(objUsrs);
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			var userTotal = Object.keys(obj[timestamp]).length;
+			var userTotal = Object.keys(objUsrs[timestamp]).length;
 			var userTotal2 = reformatData2(timestamp, objUsrs, objSorted);
 			data.push({date: timestamp, value: userTotal, value2: userTotal2});
 		});
@@ -206,30 +218,6 @@ function draw_line_labUserCountOutCount(areaID) {
 		};
 		return userTotal;
 	};
-
-	
-	// load 3 data files, process data, and draw visualization
-	var url = './github-data/membersRepos.json';
-	var url1 = './github-data/membersRepos.json';
-	var url2 = './github-data/reposOwnership.json';
-	d3.request(url)
-		.mimeType("application/json")
-		.response(function(xhr) { return JSON.parse(xhr.responseText); })
-		.get(function(obj) {
-			d3.request(url1)
-				.mimeType("application/json")
-				.response(function(xhr) { return JSON.parse(xhr.responseText); })
-				.get(function(objUsrs) {
-					d3.request(url2)
-						.mimeType("application/json")
-						.response(function(xhr) { return JSON.parse(xhr.responseText); })
-						.get(function(objSorted) {
-							var data = reformatData(obj, objUsrs, objSorted);
-							drawGraph(data, areaID);
-						});
-				});
-		});
-
 	
 
 }
