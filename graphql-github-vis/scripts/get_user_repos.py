@@ -42,7 +42,7 @@ collective = {u'data': {}}
 tab = "    "
 
 for usr in userlist:
-	pageNum = 0
+	pageNum = 1
 	print "\n'"+usr+"'"
 	print tab+"page "+str(pageNum)
 

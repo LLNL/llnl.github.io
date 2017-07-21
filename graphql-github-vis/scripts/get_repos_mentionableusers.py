@@ -39,7 +39,7 @@ collective = {u'data': {}}
 tab = "    "
 
 for repo in repolist:
-	pageNum = 0
+	pageNum = 1
 	print "\n'"+repo+"'"
 	print tab+"page "+str(pageNum)
 

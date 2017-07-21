@@ -26,7 +26,7 @@ collective = {u'data': {}}
 tab = "    "
 
 for org in orglist:
-	pageNum = 0
+	pageNum = 1
 	print "\n'"+org+"'"
 	print tab+"page "+str(pageNum)
 
