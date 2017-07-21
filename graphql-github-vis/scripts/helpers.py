@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 import dateutil.parser
 import pytz
+import re
 
 
 # Read input list file into array variable
@@ -151,9 +152,13 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	# Parse headers
 	del heads[0]
 	headdict = {}
+	linkDict = None
 	for aHead in heads:
 		h = aHead.split(': ')
 		headdict[h[0]] = h[1]
+	if "Link" in headdict :
+		linkDict = parseRestLink(headdict["Link"])
+		print tab+json.dumps(linkDict)
 	api = {}
 	api["limit"] = int(headdict["X-RateLimit-Limit"])
 	api["remaining"] = int(headdict["X-RateLimit-Remaining"])
@@ -171,6 +176,9 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	else :
 		result = '{ "data": null }'
 	outObj = json.loads(result)
+	if linkDict and outObj :
+		for prop in linkDict.keys() :
+			outObj[prop] = linkDict[prop]
 	return outObj
 
 
@@ -187,3 +195,12 @@ def awaitReset(utcTimeStamp):
 	print "--- Waiting "+str(waitTime)+" seconds..."
 	time.sleep(waitTime)
 	print "--- READY!"
+
+
+def parseRestLink(linkinfo):
+	linkProperties = linkinfo.split(', ')
+	propDict = {}
+	for item in linkProperties :
+		divided = re.split(r'&page=|>; rel="|"', item)
+		propDict[divided[2]] = int(divided[1])
+	return propDict

@@ -2,11 +2,10 @@ import helpers
 import json
 import re
 import time
-from datetime import datetime
 
 date = (time.strftime("%Y-%m-%d"))
 xYear = (time.strftime("%Y"))
-datfilepath = "../github-data/reposActivity.json"
+datfilepath = "./foobar.json"
 allData = {}
 
 # Read repo ownership data file (to use as org repo list)
@@ -26,18 +25,21 @@ if not repoCountCheck==len(repolist) :
 print "Repo list complete. Found "+str(len(repolist))+" repos."
 
 # Rest endpoint query
-query_in = "/repos/OWNNAME/REPONAME/stats/commit_activity"
+query_in = "/repos/OWNNAME/REPONAME/commits?sha=master&since=2017-07-10T00:00:00Z"
 
 # Retrieve authorization token
 authhead = helpers.get_gitauth()
 
 # Iterate through internal repos
-print "Gathering data across multiple queries..."
+print "Gathering data across multiple paginated queries..."
 collective = {u'data': {}}
 tab = "    "
 
+repolist = ["llnl/llnl.github.io"]
 for repo in repolist:
+	pageNum = 1
 	print "\n'"+repo+"'"
+	print tab+"page "+str(pageNum)
 
 	repoSplit = repo.split("/")
 
@@ -56,12 +58,30 @@ for repo in repolist:
 		print "Could not get commit history for '"+repo+"'."
 		outObj["data"] = []
 
-	# Convert unix timestamps into standard dates
-	for item in outObj["data"] :
-		item["week"] = datetime.utcfromtimestamp(item["week"]).strftime('%Y-%m-%d')
+	# Extract data of interest TODO
 
-	# Update collective data
+	# Update collective data TODO fix
 	collective["data"][repo] = outObj["data"]
+
+	# Paginate if needed
+	hasNext = ("next" in outObj)
+	while hasNext :
+		pageNum += 1
+		print tab+"page "+str(pageNum)
+
+		print tab+"Modifying query..."
+		newquery = gitquery+"&page="+str(pageNum)
+		print tab+"Query ready!"
+
+		# Actual query exchange
+		outObj = helpers.query_githubrest(authhead,newquery)
+
+		# Extract data of interest TODO
+
+		# Update collective data TODO fix
+		collective["data"][repo].extend(outObj["data"])
+		hasNext = ("next" in outObj)
+
 	print "'"+repo+"' Done!"
 
 print "\nCollective data gathering complete!"
