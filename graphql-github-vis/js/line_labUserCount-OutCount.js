@@ -26,7 +26,6 @@ function draw_line_labUserCountOutCount(areaID) {
 		// load each year file
 		yearList.forEach(function(nYEAR) {
 			var url = './github-data/'+datPrefix+'.'+nYEAR+'.json';
-			console.log(url);
 			yearQ.defer(d3.json, url);
 		});
 		// Merge data
