@@ -12,7 +12,7 @@ allData = {}
 allData = helpers.read_existing(datfilepath)
 
 # Read repo ownership data file (to use as org repo list)
-dataObj = helpers.read_json("../github-data/reposOwnership.json")
+dataObj = helpers.read_json("../github-data/reposOwnership."+xYear+".json")
 if not date in dataObj :
 	raise RuntimeError("No reposOwnership data for "+date)
 

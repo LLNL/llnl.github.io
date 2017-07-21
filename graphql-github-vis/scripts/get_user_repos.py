@@ -12,7 +12,7 @@ allData = {}
 allData = helpers.read_existing(datfilepath)
 
 # Read org member data file
-dataObj = helpers.read_json("../github-data/orgsMembers.json")
+dataObj = helpers.read_json("../github-data/orgsMembers."+xYear+".json")
 if not date in dataObj :
 	raise RuntimeError("No orgsMembers data for "+date)
 

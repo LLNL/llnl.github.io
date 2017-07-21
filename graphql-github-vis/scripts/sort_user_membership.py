@@ -14,7 +14,7 @@ allData = helpers.read_existing(datfilepath)
 allData2 = helpers.read_existing(dat2filepath)
 
 # Read repo user data file (to use as general user list)
-usersObj = helpers.read_json("../github-data/reposUsers.json")
+usersObj = helpers.read_json("../github-data/reposUsers."+xYear+".json")
 if not date in usersObj :
 	raise RuntimeError("No reposUsers data for "+date)
 
@@ -33,7 +33,7 @@ userlist = list(set(userlist))
 print "User list complete. Found "+str(userCountCheck)+" total users, "+str(len(userlist))+" unique users."
 
 # Read user repo data file (to use as lab member list)
-membersObj = helpers.read_json("../github-data/membersRepos.json")
+membersObj = helpers.read_json("../github-data/membersRepos."+xYear+".json")
 if not date in membersObj :
 	raise RuntimeError("No membersRepos data for "+date)
 

@@ -14,12 +14,12 @@ allData = helpers.read_existing(datfilepath)
 orgList = helpers.read_input("../inputs/Orgs")
 
 # Read org repos data file
-orgsReposObj = helpers.read_json("../github-data/orgsRepos.json")
+orgsReposObj = helpers.read_json("../github-data/orgsRepos."+xYear+".json")
 if not date in orgsReposObj :
 	raise RuntimeError("No orgsRepos data for "+date)
 
 # Read user repos data file
-membersReposObj = helpers.read_json("../github-data/membersRepos.json")
+membersReposObj = helpers.read_json("../github-data/membersRepos."+xYear+".json")
 if not date in membersReposObj :
 	raise RuntimeError("No membersRepos data for "+date)
 
