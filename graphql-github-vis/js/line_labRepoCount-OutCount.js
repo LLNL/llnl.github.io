@@ -1,22 +1,22 @@
 /* Creates line graph visualization for webpage */
-function draw_line_labUserCountOutCount(areaID) {
+function draw_line_labRepoCountOutCount(areaID) {
 
-	var UsersVars = {
+	var RepoVars = {
 		obj:null,
 		yearList:null,
-		datPrefix:'membersRepos'
+		datPrefix:'orgsRepos'
 	};
-	var SortedVars = {
+	var OutsiderVars = {
 		obj:null,
 		yearList:null,
-		datPrefix:'reposOwnership'
+		datPrefix:'outsidersLabRepos'
 	};
 
 	d3.json('./github-data/YEARS.json', function(obj) {
-		UsersVars.yearList = obj[UsersVars.datPrefix];
-		SortedVars.yearList = obj[SortedVars.datPrefix];
-		yearCollection(UsersVars);
-		yearCollection(SortedVars);
+		RepoVars.yearList = obj[RepoVars.datPrefix];
+		OutsiderVars.yearList = obj[OutsiderVars.datPrefix];
+		yearCollection(RepoVars);
+		yearCollection(OutsiderVars);
 	});
 
 	function yearCollection(someVars) {
@@ -37,8 +37,8 @@ function draw_line_labUserCountOutCount(areaID) {
 			};
 			someVars.obj = combinedData;
 			// Once all files are read, process data, and draw visualization
-			if (UsersVars.obj && SortedVars.obj) {
-				var data = reformatData(UsersVars.obj,SortedVars.obj);
+			if (RepoVars.obj && OutsiderVars.obj) {
+				var data = reformatData(RepoVars.obj,OutsiderVars.obj);
 				drawGraph(data["data"], data["data2"], areaID);
 			}
 		});
@@ -48,10 +48,10 @@ function draw_line_labUserCountOutCount(areaID) {
 	// Draw graph from data
 	function drawGraph(data, data2, areaID) {
 
-		var graphHeader = "Lab Members Combo";
+		var graphHeader = "Lab Repos Combo";
 		var seriesData = [
 			{label:"Total"},
-			{label:"Contributing Externally"}
+			{label:"W/ External Contributors"}
 			];
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
@@ -90,11 +90,11 @@ function draw_line_labUserCountOutCount(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var users = " Users";
+				var repos = " Repos";
 				if (d.value == 1) {
-					users = " User";
+					repos = " Repo";
 				}
-				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+users;
+				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
 		
 		var valueline = d3.line()
@@ -204,47 +204,41 @@ function draw_line_labUserCountOutCount(areaID) {
 
 
 	// Turn json obj into desired working data
-	function reformatData(objUsrs, objSorted) {
-
-		var obj = objUsrs;
+	function reformatData(objRepos, objOutsider) {
+		var obj = objRepos;
 		var dates = Object.keys(obj);
 		dates.sort();
 		var data = [];
 		dates.forEach(function (timestamp) {
-			var userTotal = Object.keys(obj[timestamp]).length;
-			data.push({date: timestamp, value: userTotal});
+			var repoTotal = 0;
+			for (var org in obj[timestamp]) {
+				if (obj[timestamp].hasOwnProperty(org)) {
+					repoTotal += obj[timestamp][org]["repositories"]["totalCount"];
+				};
+			};
+			data.push({date: timestamp, value: repoTotal});
 		});
 
-		var obj = objSorted;
-		var dates = Object.keys(objSorted);
+		var obj = objOutsider;
+		var dates = Object.keys(obj);
 		dates.sort();
 		var data2 = [];
 		dates.forEach(function (timestamp) {
-			// Get list of outsideRepositories for this date
-			var outsideNodes = objSorted[timestamp]["outsideRepositories"]["nodes"];
-			var outsideRepos = [];
-			for (var i=0; i < outsideNodes.length; i++) {
-				outsideRepos.push(outsideNodes[i]["nameWithOwner"]);
-			};
-			// Count users contributing to repos in that list
-			var userTotal = 0;
-			for (var usr in objUsrs[timestamp]) {
-				if (objUsrs[timestamp].hasOwnProperty(usr)) {
-					var usrRepoNodes = objUsrs[timestamp][usr]["contributedRepositories"]["nodes"];
-					for (var i=0; i < usrRepoNodes.length; i++) {
-						if (outsideRepos.contains(outsideNodes[i]["nameWithOwner"])) {
-							// Only count each user once as soon as any outside repo is found
-							userTotal += 1;
-							break;
-						};
+			var repoSet = new Set();
+			for (var usr in obj[timestamp]) {
+				if (obj[timestamp].hasOwnProperty(usr)) {
+					var repoNodes = obj[timestamp][usr]["contributedLabRepositories"]["nodes"]
+					for (var i=0; i<repoNodes.length; i++) {
+						repoSet.add(repoNodes[i]["nameWithOwner"])
 					};
 				};
 			};
-			data2.push({date: timestamp, value: userTotal});
+			data2.push({date: timestamp, value: repoSet.size});
 		});
 
 		var allData = {"data":data, "data2":data2};
 		return allData;
 	};
+	
 
 }

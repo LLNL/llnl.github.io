@@ -13,10 +13,8 @@
 
 	<!-- Preset vis display areas -->
 	<center>
-	<svg class="labUserCombo"></svg>
-	<br><svg class="repoCountTimeline"></svg><svg class="labUserCountTimeline"></svg>
-	<br><svg class="outsideRepoCountTimeline"></svg><svg class="labUserOutCountTimeline"></svg>
-	<br><svg class="labRepoWOutCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
+	<svg class="labUserCombo"></svg><svg class="labRepoCombo"></svg>
+	<br><svg class="outsideRepoCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
 	<br><svg class="reposPerOutsiderChart"></svg>
 	<br><br><pre class="graphtitle">Languages Used</pre><svg class="languageCloud"></svg>
 	<br><br><pre class="graphtitle">Repository Topics</pre><svg class="topicCloud"></svg>
@@ -31,12 +29,9 @@
 
 	<!-- Load drawing JS -->
 	<script type="text/javascript" src="./js/line_labUserCount-OutCount.js"></script>
-	<script type="text/javascript" src="./js/line_repoCount.js"></script>
+	<script type="text/javascript" src="./js/line_labRepoCount-OutCount.js"></script>
 	<script type="text/javascript" src="./js/line_outsideRepoCount.js"></script>
-	<script type="text/javascript" src="./js/line_labUserCount.js"></script>
-	<script type="text/javascript" src="./js/line_labUserOutCount.js"></script>
 	<script type="text/javascript" src="./js/line_outsideUserInCount.js"></script>
-	<script type="text/javascript" src="./js/line_labRepoWOutCount.js"></script>
 	<script type="text/javascript" src="./js/bar_reposPerOutsider.js"></script>
 	<script type="text/javascript" src="./js/cloud_languages.js"></script>
 	<script type="text/javascript" src="./js/cloud_topics.js"></script>
@@ -53,12 +48,9 @@
 		var stdDotRadius = 4;
 		// Call draw functions
 		draw_line_labUserCountOutCount("labUserCombo")
-		draw_line_repoCount("repoCountTimeline")
+		draw_line_labRepoCountOutCount("labRepoCombo")
 		draw_line_outsideRepoCount("outsideRepoCountTimeline")
-		draw_line_labUserCount("labUserCountTimeline")
-		draw_line_labUserOutCount("labUserOutCountTimeline")
 		draw_line_outsideUserInCount("outsideUserInCountTimeline")
-		draw_line_labRepoWOutCount("labRepoWOutCountTimeline")
 		draw_bar_reposPerOutsider("reposPerOutsiderChart")
 		draw_cloud_topics("topicCloud")
 		draw_cloud_languages("languageCloud")
