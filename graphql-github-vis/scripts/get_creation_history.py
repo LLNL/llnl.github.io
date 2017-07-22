@@ -50,6 +50,10 @@ for repo in repolist:
 
 	# Actual query exchange
 	outObj = helpers.query_githubrest(authhead,gitquery)
+	if outObj["errors"] :
+		print tab+"Could not complete '"+repo+"'"
+		collective["data"].pop(repo, None)
+		continue
 	# Check for null
 	if not outObj :
 		print "'"+repo+"' does not exist on GitHub."
@@ -75,6 +79,10 @@ for repo in repolist:
 
 		# Actual query exchange
 		outObj = helpers.query_githubrest(authhead,newquery)
+		if outObj["errors"] :
+			print tab+"Could not complete '"+repo+"'"
+			collective["data"].pop(repo, None)
+			continue
 
 		# Extract data of interest TODO
 

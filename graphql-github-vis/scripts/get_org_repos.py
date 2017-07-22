@@ -44,6 +44,10 @@ for org in orglist:
 
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
+	if outObj["errors"] :
+		print tab+"Could not complete '"+org+"'"
+		collective["data"].pop(org, None)
+		continue
 	# Check for null
 	if not outObj["data"]["organization"] :
 		print "'"+org+"' does not exist on GitHub."
@@ -66,6 +70,10 @@ for org in orglist:
 
 		# Actual query exchange
 		outObj = helpers.query_github(authhead,gitquery)
+		if outObj["errors"] :
+			print tab+"Could not complete '"+org+"'"
+			collective["data"].pop(org, None)
+			continue
 
 		# Update collective data
 		collective["data"][org]["repositories"]["nodes"].extend(outObj["data"]["organization"]["repositories"]["nodes"])
@@ -91,6 +99,10 @@ for repo in repolist :
 
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
+	if outObj["errors"] :
+		print tab+"Could not complete '"+repo+"'"
+		collective["data"].pop(repo, None)
+		continue
 	# Check for null
 	if not outObj["data"]["repository"] :
 		print tab+"'"+repo+"' does not exist on GitHub."

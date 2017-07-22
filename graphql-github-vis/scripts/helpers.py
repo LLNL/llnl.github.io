@@ -6,6 +6,7 @@ from datetime import datetime
 import dateutil.parser
 import pytz
 import re
+import warnings
 
 
 # Read input list file into array variable
@@ -67,6 +68,7 @@ def get_gitauth():
 # Query GitHub GraphQL API, return result as json dictionary
 def query_github(authhead,gitquery):
 	tab = "    "
+	apiError = False
 
 	print tab+"Sending GraphQL query..."
 	bashcurl = 'curl -iH TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
@@ -91,7 +93,8 @@ def query_github(authhead,gitquery):
 		return query_github(authhead,gitquery)
 	# Check for error responses
 	if statusNum>=400 :
-		raise RuntimeError(result)
+		warning.warn(result, Warning)
+		apiError = True
 
 	print tab+"Data recieved!"
 	outObj = json.loads(result)
@@ -114,11 +117,14 @@ def query_github(authhead,gitquery):
 		print tab+"Repeating query..."
 		return query_github(authhead,gitquery)
 
+	if outObj :
+		outObj["errors"] = apiError
 	return outObj
 
 # Query GitHub REST API, return result as json dictionary
 def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	tab = "    "
+	apiError = False
 
 	print tab+"Sending REST query..."
 	bashcurl = 'curl -iH TMPauthhead https://api.github.com'+endpoint
@@ -143,7 +149,8 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	# Check for error responses
 	resultChecker = "".join(result.split())
 	if statusNum>=400 :
-		raise RuntimeError(result)
+		warning.warn(result, Warning)
+		apiError = True
 	if '"message":"NotFound"' in resultChecker :
 		return None
 
@@ -176,9 +183,11 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	else :
 		result = '{ "data": null }'
 	outObj = json.loads(result)
-	if linkDict and outObj :
-		for prop in linkDict.keys() :
-			outObj[prop] = linkDict[prop]
+	if outObj :
+		outObj["errors"] = apiError
+		if linkDict and outObj :
+			for prop in linkDict.keys() :
+				outObj[prop] = linkDict[prop]
 	return outObj
 
 

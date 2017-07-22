@@ -54,6 +54,10 @@ for repo in repolist:
 
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
+	if outObj["errors"] :
+		print tab+"Could not complete '"+repo+"'"
+		collective["data"].pop(repo, None)
+		continue
 	# Update collective data
 	collective["data"][repo] = outObj["data"]["repository"]
 
@@ -71,6 +75,10 @@ for repo in repolist:
 
 		# Actual query exchange
 		outObj = helpers.query_github(authhead,gitquery)
+		if outObj["errors"] :
+			print tab+"Could not complete '"+repo+"'"
+			collective["data"].pop(repo, None)
+			continue
 
 		# Update collective data
 		collective["data"][repo]["mentionableUsers"]["nodes"].extend(outObj["data"]["repository"]["mentionableUsers"]["nodes"])
