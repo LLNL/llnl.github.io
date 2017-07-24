@@ -48,10 +48,6 @@ for org in orglist:
 		print tab+"Could not complete '"+org+"'"
 		collective["data"].pop(org, None)
 		continue
-	# Check for null
-	if not outObj["data"]["organization"] :
-		print "'"+org+"' does not exist on GitHub."
-		continue
 
 	# Update collective data
 	collective["data"][org] = outObj["data"]["organization"]
@@ -102,10 +98,6 @@ for repo in repolist :
 	if outObj["errors"] :
 		print tab+"Could not complete '"+repo+"'"
 		collective["data"].pop(repo, None)
-		continue
-	# Check for null
-	if not outObj["data"]["repository"] :
-		print tab+"'"+repo+"' does not exist on GitHub."
 		continue
 	indynodes.append(outObj["data"]["repository"])
 

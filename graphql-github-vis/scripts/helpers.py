@@ -93,11 +93,13 @@ def query_github(authhead,gitquery):
 		return query_github(authhead,gitquery)
 	# Check for error responses
 	if statusNum>=400 :
-		warning.warn(result, Warning)
+		warnings.warn(result, Warning)
 		apiError = True
 
 	print tab+"Data recieved!"
 	outObj = json.loads(result)
+	if "errors" in outObj.keys() :
+		warnings.warn(json.dumps(outObj["errors"]), Warning)
 
 	# Parse headers
 	del heads[0]
@@ -149,10 +151,8 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	# Check for error responses
 	resultChecker = "".join(result.split())
 	if statusNum>=400 :
-		warning.warn(result, Warning)
+		warnings.warn(result, Warning)
 		apiError = True
-	if '"message":"NotFound"' in resultChecker :
-		return None
 
 	print tab+"Data recieved!"
 

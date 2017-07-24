@@ -42,10 +42,6 @@ for org in orglist:
 		print tab+"Could not complete '"+org+"'"
 		collective["data"].pop(org, None)
 		continue
-	# Check for null
-	if not outObj["data"]["organization"] :
-		print "'"+org+"' does not exist on GitHub."
-		continue
 
 	# Update collective data
 	collective["data"][org] = outObj["data"]["organization"]

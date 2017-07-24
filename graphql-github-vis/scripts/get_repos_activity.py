@@ -52,13 +52,6 @@ for repo in repolist:
 		print tab+"Could not complete '"+repo+"'"
 		collective["data"].pop(repo, None)
 		continue
-	# Check for null
-	if not outObj :
-		print "'"+repo+"' does not exist on GitHub."
-		continue
-	if not outObj["data"] :
-		print "Could not get commit history for '"+repo+"'."
-		outObj["data"] = []
 
 	# Convert unix timestamps into standard dates
 	for item in outObj["data"] :
