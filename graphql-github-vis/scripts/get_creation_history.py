@@ -44,6 +44,12 @@ tab = "    "
 
 for repo in repolist:
 
+	# History doesn't change, only update new repos or those that had no previous commits
+	if "data" in allData.keys() and repo in allData["data"].keys() :
+		if allData["data"][repo]["firstCommitAt"] :
+			print tab+"Already recorded data for '"+repo+"'"
+			continue
+
 	pageNum = 1
 	print "\n'"+repo+"'"
 	print tab+"page "+str(pageNum)
@@ -64,14 +70,6 @@ for repo in repolist:
 		print tab+"Could not complete '"+repo+"'"
 		collective["data"].pop(repo, None)
 		continue
-
-	# History doesn't change, only update new repos or those that have changed default branches or had no previous commits
-	defaultBranch = outObj["data"]["repository"]["defaultBranchRef"]["name"]
-	print tab+"Branch = '"+defaultBranch+"'"
-	if "data" in allData.keys() and repo in allData["data"].keys() :
-		if allData["data"][repo]["firstCommitAt"] and allData["data"][repo]["defaultBranchRef"]["name"] == defaultBranch :
-			print tab+"Already recorded data for '"+repo+"'"
-			continue
 
 	# Update collective data
 	collective["data"][repo] = outObj["data"]["repository"]
