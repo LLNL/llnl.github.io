@@ -1,60 +1,30 @@
 /* Creates line graph visualization for webpage */
-function draw_line_labUserCountOutCount(areaID) {
+function draw_line_repoCreationHistory(areaID) {
 
-	var UsersVars = {
-		obj:null,
-		yearList:null,
-		datPrefix:'membersRepos'
-	};
-	var SortedVars = {
-		obj:null,
-		yearList:null,
-		datPrefix:'reposOwnership'
-	};
-
-	d3.json('./github-data/YEARS.json', function(obj) {
-		UsersVars.yearList = obj[UsersVars.datPrefix];
-		SortedVars.yearList = obj[SortedVars.datPrefix];
-		yearCollection(UsersVars);
-		yearCollection(SortedVars);
+	// load data file, process data, and draw visualization
+	var url = './github-data/reposCreationHistory.json';
+	d3.json(url, function(obj) {
+		var data = reformatData(obj);
+		drawGraph(data["data"], data["data2"], areaID);
 	});
-
-	function yearCollection(someVars) {
-		var yearList = someVars.yearList;
-		var datPrefix = someVars.datPrefix;
-		var yearQ = d3.queue();
-		// load each year file
-		yearList.forEach(function(nYEAR) {
-			var url = './github-data/'+datPrefix+'.'+nYEAR+'.json';
-			yearQ.defer(d3.json, url);
-		});
-		// Merge data
-		yearQ.awaitAll(function(error, response){
-			var combinedData = {};
-			for (var i=0; i < response.length; i++) {
-				Object.assign(combinedData, response[i]);
-			};
-			someVars.obj = combinedData;
-			// Once all files are read, process data, and draw visualization
-			if (UsersVars.obj && SortedVars.obj) {
-				var data = reformatData(UsersVars.obj,SortedVars.obj);
-				drawGraph(data["data"], data["data2"], areaID);
-			}
-		});
-	};
 
 
 	// Draw graph from data
 	function drawGraph(data, data2, areaID) {
 
-		var graphHeader = "Lab Members Combo";
+		var graphHeader = "Repo Creation History";
 		var seriesData = [
-			{label:"Total"},
-			{label:"Contributing Externally"}
+			{label:"Repos Created"},
+			{label:"Added to GitHub"}
 			];
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
+
+		// Initial release of Git
+		var gitrelease = parseTime("2005-04-07");
+		// GitHub founded
+		var ghfounded = parseTime("2008-02-08");
 
 		data.forEach(function(d) {
 			d.date = parseTime(d.date);
@@ -67,15 +37,19 @@ function draw_line_labUserCountOutCount(areaID) {
 		});
 
 		var margin = {top: stdMargin.top, right: stdMargin.right*1.75, bottom: stdMargin.bottom, left: stdMargin.left},
-			width = stdWidth,
+			width = (stdTotalWidth*2) - margin.left - margin.right,
 			height = stdHeight,
 			maxBuffer = stdMaxBuffer;
+		var dotRadius = 2;
 		
 		// Get min-max timestamps across both datasets
 		var timerange = d3.extent(data, function(d) { return d.date; });
 		timerange.push.apply(timerange,
 			d3.extent(data2, function(d) { return d.date; })
 			);
+		timerange.push(gitrelease);
+		timerange.push(ghfounded);
+
 
 		// Get min-max values across both datasets
 		var datrange = d3.extent(data, function(d) { return d.value; });
@@ -101,12 +75,19 @@ function draw_line_labUserCountOutCount(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var users = " Users";
+				var repos = " Repos";
 				if (d.value == 1) {
-					users = " User";
+					repos = " Repo";
 				}
-				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+users;
+				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
+
+		var gittip = d3.tip()
+			.attr('class', 'd3-tip')
+			.html("<sub>["+formatTime(gitrelease)+"]</sub>"+"<br>"+"Git Released");
+		var ghtip = d3.tip()
+			.attr('class', 'd3-tip')
+			.html("<sub>["+formatTime(ghfounded)+"]</sub>"+"<br>"+"GitHub Founded");
 		
 		var valueline = d3.line()
 			.x(function(d) { return x(d.date); })
@@ -119,6 +100,8 @@ function draw_line_labUserCountOutCount(areaID) {
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		chart.call(tip);
+		chart.call(gittip);
+		chart.call(ghtip);
 		
 		// Add the x axis
 		chart.append("g")
@@ -130,6 +113,26 @@ function draw_line_labUserCountOutCount(areaID) {
 		chart.append("g")
 			.attr("class", "y axis")
 			.call(yAxis);
+
+		// Draw reference date lines
+		chart.append("path")
+			.datum([
+				{date:gitrelease, value:y.domain()[0]},
+				{date:gitrelease, value:y.domain()[1]}
+				])
+			.attr("class", "refline")
+			.attr("d", valueline)
+			.on('mouseover', gittip.show)
+			.on('mouseout', gittip.hide);
+		chart.append("path")
+			.datum([
+				{date:ghfounded, value:y.domain()[0]},
+				{date:ghfounded, value:y.domain()[1]}
+				])
+			.attr("class", "refline")
+			.attr("d", valueline)
+			.on('mouseover', ghtip.show)
+			.on('mouseout', ghtip.hide);
 
 		// Add title
 		chart.append("text")
@@ -154,10 +157,10 @@ function draw_line_labUserCountOutCount(areaID) {
 		var points1 = chart.selectAll(".total-circle")
 			.data(data)
 		  .enter().append("circle")
-			.attr("class", "circle")
+			.attr("class", "dense circle")
 			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })
-			.attr("r", stdDotRadius)
+			.attr("r", dotRadius)
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 		seriesData[0].fillColor = points1.style("fill");
@@ -166,10 +169,10 @@ function draw_line_labUserCountOutCount(areaID) {
 		var points2 = chart.selectAll(".externals-circle")
 			.data(data2)
 		  .enter().append("circle")
-			.attr("class", "second circle")
+			.attr("class", "dense second circle")
 			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })
-			.attr("r", stdDotRadius)
+			.attr("r", dotRadius)
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 		seriesData[1].fillColor = points2.style("fill");
@@ -204,47 +207,40 @@ function draw_line_labUserCountOutCount(areaID) {
 
 
 	// Turn json obj into desired working data
-	function reformatData(objUsrs, objSorted) {
+	function reformatData(obj) {
+		// Build lists of timestamps
+		var repos = Object.keys(obj["data"]);
+		var ghcreateDates = [];
+		var commitDates = [];
+		repos.forEach(function (repo) {
+			var tCreate = obj["data"][repo]["createdAt"].split("T");
+			var tCommit = obj["data"][repo]["firstCommitAt"].split("T");
+			ghcreateDates.push(tCreate[0]);
+			commitDates.push(tCommit[0]);
+		});
+		ghcreateDates.sort();
+		commitDates.sort();
 
-		var obj = objUsrs;
-		var dates = Object.keys(obj);
-		dates.sort();
+		// Count accumulated timestamps over time
+		var ghCreatedCounts = {};
+		var commitCounts = {};
+		for (var i=0; i<ghcreateDates.length; i++) {
+			ghCreatedCounts[ghcreateDates[i]] = i+1;
+			commitCounts[commitDates[i]] = i+1;
+		};
+
+		// Format data for graphing
 		var data = [];
-		dates.forEach(function (timestamp) {
-			var userTotal = Object.keys(obj[timestamp]).length;
-			data.push({date: timestamp, value: userTotal});
-		});
-
-		var obj = objSorted;
-		var dates = Object.keys(objSorted);
-		dates.sort();
 		var data2 = [];
-		dates.forEach(function (timestamp) {
-			// Get list of outsideRepositories for this date
-			var outsideNodes = objSorted[timestamp]["outsideRepositories"]["nodes"];
-			var outsideRepos = [];
-			for (var i=0; i < outsideNodes.length; i++) {
-				outsideRepos.push(outsideNodes[i]["nameWithOwner"]);
-			};
-			// Count users contributing to repos in that list
-			var userTotal = 0;
-			for (var usr in objUsrs[timestamp]) {
-				if (objUsrs[timestamp].hasOwnProperty(usr)) {
-					var usrRepoNodes = objUsrs[timestamp][usr]["contributedRepositories"]["nodes"];
-					for (var i=0; i < usrRepoNodes.length; i++) {
-						if (outsideRepos.contains(outsideNodes[i]["nameWithOwner"])) {
-							// Only count each user once as soon as any outside repo is found
-							userTotal += 1;
-							break;
-						};
-					};
-				};
-			};
-			data2.push({date: timestamp, value: userTotal});
-		});
+		for (var timestamp in ghCreatedCounts) {
+			data2.push({date: timestamp, value: ghCreatedCounts[timestamp]});
+		};
+		for (var timestamp in commitCounts) {
+			data.push({date: timestamp, value: commitCounts[timestamp]});
+		};
 
 		var allData = {"data":data, "data2":data2};
 		return allData;
-	};
+	}
 
 }

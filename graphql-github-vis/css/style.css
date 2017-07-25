@@ -39,6 +39,14 @@ body { font: 14px Arial;}
 	stroke: seagreen;
 }
 
+.dense.circle {
+	stroke: none;
+}
+
+.dense.circle:hover {
+	stroke: none;
+}
+
 .area {
 	fill: lightblue;
 }
@@ -49,6 +57,12 @@ body { font: 14px Arial;}
 
 .legendText {
 	font: 12px sans-serif;
+}
+
+.refline {
+	fill: none;
+	stroke: lightgray;
+	stroke-width: 3px;
 }
 
 .axis text {

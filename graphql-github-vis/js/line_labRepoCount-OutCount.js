@@ -71,12 +71,24 @@ function draw_line_labRepoCountOutCount(areaID) {
 			height = stdHeight,
 			maxBuffer = stdMaxBuffer;
 		
+		// Get min-max timestamps across both datasets
+		var timerange = d3.extent(data, function(d) { return d.date; });
+		timerange.push.apply(timerange,
+			d3.extent(data2, function(d) { return d.date; })
+			);
+
+		// Get min-max values across both datasets
+		var datrange = d3.extent(data, function(d) { return d.value; });
+		datrange.push.apply(datrange,
+			d3.extent(data2, function(d) { return d.value; })
+			);
+
 		var x = d3.scaleTime()
-			.domain(d3.extent(data, function(d) { return d.date; }))
+			.domain(d3.extent(timerange))
 			.range([0, width]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(data, function(d) { return d.value; })*maxBuffer])
+			.domain([0, d3.max(datrange)*maxBuffer])
 			.range([height, 0]);
 
 		var xAxis = d3.axisBottom()
@@ -107,17 +119,6 @@ function draw_line_labRepoCountOutCount(areaID) {
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		chart.call(tip);
-
-		// Calculate widths of legend text labels
-		chart.selectAll(".dummyText")
-			.data(seriesData)
-		  .enter().append("text")
-			.attr("class", "legendText")
-			.text(function(d) {return d;})
-			.each(function(d,i) {
-				d.width = this.getComputedTextLength();
-				this.remove();
-			});
 		
 		// Add the x axis
 		chart.append("g")
