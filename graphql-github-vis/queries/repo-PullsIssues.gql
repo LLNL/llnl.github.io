@@ -1,0 +1,10 @@
+{
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    pullRequests(states: MERGED) {
+      totalCount
+    }
+    issues(states: OPEN) {
+      totalCount
+    }
+  }
+}

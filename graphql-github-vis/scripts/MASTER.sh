@@ -41,6 +41,10 @@ echo "Run - Get Repos Activity"
 # requires output from sort_repo_ownership.py
 python get_repos_activity.py
 
+echo "Run - Get Repos Pulls and Issues"
+# requires output from sort_repo_ownership.py
+python get_repos_pulls_issues.py
+
 echo "Run - Get Creation History"
 # requires output from sort_repo_ownership.py
 python get_creation_history.py
