@@ -1,5 +1,5 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoActivity(areaID, repoNameWOwner) {
+function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 
 	// load data file, process data, and draw visualization
 	var url = './github-data/reposActivity.json';
@@ -12,7 +12,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Activity for '"+repoNameWOwner+"' [Default Branch]";
+		var graphHeader = "Activity Across All Repos [Default Branches]";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");
@@ -103,9 +103,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 		// Draw dots
 		chart.selectAll(".circle")
 			.data(data)
-		  .enter().append("a")
-			.attr("xlink:href", "https://github.com/"+repoNameWOwner+"/graphs/commit-activity")
-		  .append("circle")
+		  .enter().append("circle")
 			.attr("class", "circle")
 			.attr("cx", function(d) { return x(d.date); })
 			.attr("cy", function(d) { return y(d.value); })
@@ -123,15 +121,29 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
 	// Turn json obj into desired working data
 	function reformatData(obj) {
-		var data = [];
-		var repo = repoNameWOwner;
-		if (obj["data"].hasOwnProperty(repo)) {
-			var weeklyNodes = obj["data"][repo];
-			for (var i=0; i<weeklyNodes.length; i++) {
-				var datpair = {date: weeklyNodes[i]["week"], value: weeklyNodes[i]["total"]};
-				data.push(datpair);
+		// Calculate combined values
+		var dataTotals = {};
+		var repos = Object.keys(obj["data"]);
+		repos.forEach(function (repo) {
+			if (obj["data"].hasOwnProperty(repo)) {
+				var weeklyNodes = obj["data"][repo];
+				for (var i=0; i<weeklyNodes.length; i++) {
+					var weekstamp = weeklyNodes[i]["week"];
+					var weeklytotal = weeklyNodes[i]["total"];
+					if (!Object.keys(dataTotals).contains(weekstamp)) {
+						dataTotals[weekstamp]=0;
+					}
+					dataTotals[weekstamp] += weeklytotal;
+				}
 			}
-		}
+		});
+
+		// Formate data for graphing
+		var data = [];
+		for (var timestamp in dataTotals) {
+			data.push({date: timestamp, value: dataTotals[timestamp]});
+		};
+
 		return data;
 	};
 

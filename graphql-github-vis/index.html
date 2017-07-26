@@ -20,6 +20,7 @@
 	<br><br><pre class="graphtitle">Languages Used</pre><svg class="languageCloud"></svg>
 	<br><br><pre class="graphtitle">Repository Topics</pre><svg class="topicCloud"></svg>
 	<br><svg class="repoActivityChart"></svg>
+	<br><svg class="repoActivityTotalChart"></svg>
 	</center>
 
 	<!-- Load basic D3 and helper scripts -->
@@ -37,6 +38,7 @@
 	<script type="text/javascript" src="./js/cloud_languages.js"></script>
 	<script type="text/javascript" src="./js/cloud_topics.js"></script>
 	<script type="text/javascript" src="./js/line_repoActivity.js"></script>
+	<script type="text/javascript" src="./js/line_repoActivityTotal.js"></script>
 	<script type="text/javascript" src="./js/line_repoCreationHistory.js"></script>
 
 	<script>
@@ -57,6 +59,7 @@
 		draw_cloud_topics("topicCloud");
 		draw_cloud_languages("languageCloud");
 		draw_line_repoActivity("repoActivityChart","LLNL/llnl.github.io");
+		draw_line_repoActivityTotal("repoActivityTotalChart");
 		draw_line_repoCreationHistory("repoCreationHistory");
 	</script>
 

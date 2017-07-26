@@ -55,7 +55,9 @@ for repo in repolist:
 
 	# Convert unix timestamps into standard dates
 	for item in outObj["data"] :
-		item["week"] = datetime.utcfromtimestamp(item["week"]).strftime('%Y-%m-%d')
+		weekinfo = datetime.utcfromtimestamp(item["week"]).isocalendar()
+		weekstring = str(weekinfo[0])+"-W"+str(weekinfo[1])+"-1"
+		item["week"] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime('%Y-%m-%d')
 
 	# Update collective data
 	collective["data"][repo] = outObj["data"]
