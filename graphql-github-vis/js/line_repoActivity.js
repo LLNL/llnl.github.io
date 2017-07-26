@@ -12,7 +12,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Activity for '"+repoNameWOwner+"' [Default Branch]";
+		var graphHeader = "Activity for '"+repoNameWOwner+"' [Default Branch, 1 Year]";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");

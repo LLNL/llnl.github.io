@@ -26,7 +26,7 @@ function draw_line_repoCount(areaID) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Lab Owned Repositories";
+		var graphHeader = "Lab Owned GitHub Repositories";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");

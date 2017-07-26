@@ -12,6 +12,8 @@ function draw_cloud_languages(areaID) {
 	// Draw cloud from data
 	function drawCloud(data, areaID) {
 
+		var graphHeader = "Languages Used";
+
 		var wordList = [];
 		data.forEach(function (lang) {
 			wordList.push(lang.name);
@@ -23,7 +25,7 @@ function draw_cloud_languages(areaID) {
 			.range([12,90]);
 		var fill = d3.scaleOrdinal(d3.schemeCategory20);
 
-		var margin = {top: 0, right: 0, bottom: 0, left: 0},
+		var margin = {top: stdMargin.top, right: stdMargin.right/2, bottom: stdMargin.bottom/2, left: stdMargin.left/2},
 			width = stdTotalWidth - margin.left - margin.right,
 			height = stdTotalHeight - margin.top - margin.bottom;
 
@@ -39,12 +41,22 @@ function draw_cloud_languages(areaID) {
 
 		layout.start();
 
+		// Add title
+		d3.select("."+areaID).append("text")
+			.attr("class", "graphtitle")
+			.attr("x", margin.left + (width / 2))
+			.attr("y", margin.top - (margin.top / 3))
+			.attr("text-anchor", "middle")
+			.text(graphHeader);
+
 		function draw(words) {
 			var wordCloud = d3.select("."+areaID)
 				.attr("width", width + margin.left + margin.right)
 				.attr("height", height + margin.top + margin.bottom)
 			  .append("g")
-				.attr("transform", "translate(" + (width + margin.left + margin.right) / 2 + "," + (height + margin.top + margin.bottom) / 2 + ")")
+			  	.attr("width", width)
+			  	.attr("height", height)
+				.attr("transform", "translate(" + (width/2 + margin.left) + "," + (height/2 + margin.top) + ")")
 			  .selectAll("text")
 				.data(words)
 			  .enter().append("text")

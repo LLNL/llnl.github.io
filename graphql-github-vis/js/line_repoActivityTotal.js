@@ -12,7 +12,7 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Activity Across All Repos [Default Branches]";
+		var graphHeader = "Activity Across All Repos [Default Branches, 1 Year]";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");

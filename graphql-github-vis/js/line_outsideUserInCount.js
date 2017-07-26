@@ -26,7 +26,7 @@ function draw_line_outsideUserInCount(areaID) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Outside Users Contributing to Lab Repos";
+		var graphHeader = "External Contributors to Lab Repos";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");

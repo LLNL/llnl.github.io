@@ -27,14 +27,14 @@ function draw_bar_reposPerOutsider(areaID) {
 	function drawGraph(data, areaID) {
 		var cutoff = 40;
 
-		var graphHeader = "Lab Repositories Per Outside User [Top "+cutoff+"]";
+		var graphHeader = "Lab Repositories Per External User [Top "+cutoff+"]";
 
 		data.forEach(function(d) {
 			d.value = +d.value;
 		});
 		data = GetTopX(data, cutoff);
 
-		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: 50, left: stdMargin.left},
+		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: 80, left: stdMargin.left},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
 			height = stdTotalHeight - margin.top - margin.bottom,
 			maxBuffer = stdMaxBuffer;

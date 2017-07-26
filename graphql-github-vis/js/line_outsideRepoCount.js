@@ -26,7 +26,7 @@ function draw_line_outsideRepoCount(areaID) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "Outside Repositories w/ Lab Member Contributions";
+		var graphHeader = "External Repositories w/ Lab Member Contributions";
 
 		var parseTime = d3.timeParse("%Y-%m-%d");
 		var formatTime = d3.timeFormat("%Y-%m-%d");

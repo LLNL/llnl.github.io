@@ -47,7 +47,7 @@ function draw_line_labUserCountOutCount(areaID) {
 	// Draw graph from data
 	function drawGraph(data, data2, areaID) {
 
-		var graphHeader = "Lab Members Combo";
+		var graphHeader = "Members of LLNL GitHub Organization";
 		var seriesData = [
 			{label:"Total"},
 			{label:"Contributing Externally"}
@@ -189,7 +189,7 @@ function draw_line_labUserCountOutCount(areaID) {
 			.style("fill", function(d) { return d.fillColor; })
 			.style("stroke", function(d) { return d.strokeColor; })
 			.attr("r", stdDotRadius*1.25 )
-			.attr("cx", function(d,i) { return (width+margin.right) - (stdDotRadius*1.25) })
+			.attr("cx", function(d,i) { return (width+margin.right/2) - (stdDotRadius*1.25) })
 			.attr("cy", function(d,i) { return (height-10) - stdDotRadius*1.25 - 30*i });
 		chart.selectAll(".series-labels")
 			.data(seriesData)
@@ -197,7 +197,7 @@ function draw_line_labUserCountOutCount(areaID) {
 		  	.attr("class", "legendText")
 			.text(function(d) { return d.label; })
 			.attr("text-anchor", "end")
-			.attr("x", function(d,i) { return (width+margin.right) - (2*stdDotRadius*1.25 + 4) })
+			.attr("x", function(d,i) { return (width+margin.right/2) - (2*stdDotRadius*1.25 + 4) })
 			.attr("y", function(d,i) { return (height-10) - 30*i });
 
 	};
