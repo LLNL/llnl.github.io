@@ -66,9 +66,11 @@ def get_gitauth():
 	return authhead
 
 # Query GitHub GraphQL API, return result as json dictionary
-def query_github(authhead,gitquery):
+def query_github(authhead,gitquery,requestCount=0):
 	tab = "    "
 	apiError = False
+	requestCount += 1
+	maxRequests = 5
 
 	print tab+"Sending GraphQL query..."
 	bashcurl = 'curl -iH TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
@@ -88,13 +90,21 @@ def query_github(authhead,gitquery):
 	statusNum = int(http[1])
 	# Check for accepted but not yet processed, usually due to un-cached data
 	if statusNum==202 :
+		if requestCount >= maxRequests :
+			return maxRequestFailure(maxRequests,tab)
 		print tab+"Query accepted but not yet processed. Trying again in 5sec..."
 		time.sleep(5)
-		return query_github(authhead,gitquery)
+		return query_github(authhead,gitquery,requestCount)
 	# Check for error responses
 	if statusNum>=400 :
 		warnings.warn(result, Warning)
 		apiError = True
+	if statusNum==502 or statusNum==503 :
+		if requestCount >= maxRequests :
+			return maxRequestFailure(maxRequests,tab)
+		print tab+"Server error. Trying again in 5sec..."
+		time.sleep(5)
+		return query_github(authhead,gitquery,requestCount)
 
 	print tab+"Data recieved!"
 	outObj = json.loads(result)
@@ -124,9 +134,11 @@ def query_github(authhead,gitquery):
 	return outObj
 
 # Query GitHub REST API, return result as json dictionary
-def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
+def query_githubrest(authhead,endpoint,requestCount=0): # e.g. endpoint = '/users/defunkt'
 	tab = "    "
 	apiError = False
+	requestCount += 1
+	maxRequests = 5
 
 	print tab+"Sending REST query..."
 	bashcurl = 'curl -iH TMPauthhead https://api.github.com'+endpoint
@@ -145,14 +157,22 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 	statusNum = int(http[1])
 	# Check for accepted but not yet processed, usually due to un-cached data
 	if statusNum==202 :
+		if requestCount >= maxRequests :
+			return maxRequestFailure(maxRequests,tab)
 		print tab+"Query accepted but not yet processed. Trying again in 5sec..."
 		time.sleep(5)
-		return query_githubrest(authhead,endpoint)
+		return query_githubrest(authhead,endpoint,requestCount)
 	# Check for error responses
 	resultChecker = "".join(result.split())
 	if statusNum>=400 :
 		warnings.warn(result, Warning)
 		apiError = True
+	if statusNum==502 or statusNum==503 :
+		if requestCount >= maxRequests :
+			return maxRequestFailure(maxRequests,tab)
+		print tab+"Server error. Trying again in 5sec..."
+		time.sleep(5)
+		return query_githubrest(authhead,endpoint,requestCount)
 
 	print tab+"Data recieved!"
 
@@ -188,6 +208,13 @@ def query_githubrest(authhead,endpoint): # e.g. endpoint = '/users/defunkt'
 		if linkDict and outObj :
 			for prop in linkDict.keys() :
 				outObj[prop] = linkDict[prop]
+	return outObj
+
+
+def maxRequestFailure(maxRequests,tab="    "):
+	print tab+"Query attempted but failed "+str(maxRequests)+" times"
+	outObj = json.loads('{ "data": null }')
+	outObj["errors"] = True
 	return outObj
 
 
