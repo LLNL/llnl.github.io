@@ -20,6 +20,7 @@
 	<br><svg class="outsideRepoCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
 	<br><svg class="reposPerOutsiderChart"></svg>
 	<br><svg class="repoActivityChart"></svg>
+	<br><svg class="repoPullsVIssues"></svg>
 	</center>
 
 	<!-- Load basic D3 and helper scripts -->
@@ -39,6 +40,7 @@
 	<script type="text/javascript" src="./js/line_repoActivity.js"></script>
 	<script type="text/javascript" src="./js/line_repoActivityTotal.js"></script>
 	<script type="text/javascript" src="./js/line_repoCreationHistory.js"></script>
+	<script type="text/javascript" src="./js/scatter_repoPulls-V-Issues.js"></script>
 
 	<script>
 		// Global chart standards
@@ -60,6 +62,7 @@
 		draw_line_repoActivity("repoActivityChart","LLNL/llnl.github.io");
 		draw_line_repoActivityTotal("repoActivityTotalChart");
 		draw_line_repoCreationHistory("repoCreationHistory");
+		draw_scatter_repoPullsVIssues("repoPullsVIssues");
 	</script>
 
 </body>

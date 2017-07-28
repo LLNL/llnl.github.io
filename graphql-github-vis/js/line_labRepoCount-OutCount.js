@@ -89,7 +89,8 @@ function draw_line_labRepoCountOutCount(areaID) {
 		
 		var y = d3.scaleLinear()
 			.domain([0, d3.max(datrange)*maxBuffer])
-			.range([height, 0]);
+			.range([height, 0])
+			.nice();
 
 		var xAxis = d3.axisBottom()
 			.scale(x);

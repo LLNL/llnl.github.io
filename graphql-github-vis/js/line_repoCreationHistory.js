@@ -38,8 +38,7 @@ function draw_line_repoCreationHistory(areaID) {
 
 		var margin = {top: stdMargin.top, right: stdMargin.right*1.75, bottom: stdMargin.bottom, left: stdMargin.left},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
-			height = stdHeight,
-			maxBuffer = stdMaxBuffer;
+			height = stdHeight;
 		var dotRadius = 2;
 		
 		// Get min-max timestamps across both datasets
@@ -62,8 +61,9 @@ function draw_line_repoCreationHistory(areaID) {
 			.range([0, width]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(datrange)*maxBuffer])
-			.range([height, 0]);
+			.domain([0, d3.max(datrange)])
+			.range([height, 0])
+			.nice();
 
 		var xAxis = d3.axisBottom()
 			.scale(x);

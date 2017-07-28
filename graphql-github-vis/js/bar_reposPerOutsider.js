@@ -36,8 +36,7 @@ function draw_bar_reposPerOutsider(areaID) {
 
 		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: 80, left: stdMargin.left},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
-			height = stdTotalHeight - margin.top - margin.bottom,
-			maxBuffer = stdMaxBuffer;
+			height = stdTotalHeight - margin.top - margin.bottom;
 		
 		var x = d3.scaleBand()
 			.domain(data.map(function(d) { return d.name; }))
@@ -45,8 +44,9 @@ function draw_bar_reposPerOutsider(areaID) {
 			.padding([0.1]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(data, function(d) { return d.value; })*maxBuffer])
-			.range([height, 0]);
+			.domain([0, d3.max(data, function(d) { return d.value; })])
+			.range([height, 0])
+			.nice();
 		
 		var xAxis = d3.axisBottom()
 			.scale(x);

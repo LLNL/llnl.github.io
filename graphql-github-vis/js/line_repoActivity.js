@@ -24,16 +24,16 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
 		var margin = stdMargin,
 			width = (stdTotalWidth*2) - margin.left - margin.right,
-			height = stdHeight,
-			maxBuffer = stdMaxBuffer;
+			height = stdHeight;
 		
 		var x = d3.scaleTime()
 			.domain(d3.extent(data, function(d) { return d.date; }))
 			.range([0, width]);
 		
 		var y = d3.scaleLinear()
-			.domain([0, d3.max(data, function(d) { return d.value; })*maxBuffer])
-			.range([height, 0]);
+			.domain([0, d3.max(data, function(d) { return d.value; })])
+			.range([height, 0])
+			.nice();
 
 		var xAxis = d3.axisBottom()
 			.scale(x);
