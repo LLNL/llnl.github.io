@@ -43,8 +43,6 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.scale(y)
 			.ticks(10,d3.format("d"));
 
-		// TODO axis labels
-
 		var tip = d3.tip()
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
@@ -87,6 +85,23 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.attr("y", 0 - (margin.top / 3))
 			.attr("text-anchor", "middle")
 			.text(graphHeader);
+
+		// Add x axis label
+		chart.append("text")
+			.attr("class", "axistitle")
+			.attr("x", (width / 2))
+			.attr("y", (height+margin.bottom) - (margin.bottom / 4))
+			.attr("text-anchor", "middle")
+			.text("Merged Pull Requests");
+
+		// Add y axis label
+		chart.append("text")
+			.attr("class", "axistitle")
+			.attr("transform", "rotate(-90)")
+			.attr("y", 0 - margin.left + (margin.left / 4))
+			.attr("x", 0 - (height / 2))
+			.attr("text-anchor", "middle")
+			.text("Open Issues");
 
 		// Draw dots
 		chart.selectAll(".circle")
