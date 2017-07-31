@@ -125,7 +125,6 @@ function draw_line_outsideUserInCount(areaID) {
 
 	// Turn json objs into desired working data
 	function reformatData(obj) {
-		// TODO
 		var dates = Object.keys(obj);
 		dates.sort();
 		var data = [];
