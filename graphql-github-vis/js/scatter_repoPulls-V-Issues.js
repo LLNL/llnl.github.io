@@ -14,6 +14,9 @@ function draw_scatter_repoPullsVIssues(areaID) {
 
 		var graphHeader = "Merged Pull Requests VS Open Issues";
 
+		// sort dots biggest to smallest so smallest dots drawn on top
+		data = sortByNamesLength(data).reverse();
+
 		data.forEach(function(d) {
 			d.valueX = +d.valueX;
 			d.valueY = +d.valueY;
@@ -34,6 +37,10 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.domain([1, d3.max(data, function(d) { return d.valueY; })])
 			.range([height, 0])
 			.nice();
+
+		var bubbleSize = d3.scaleLog()
+			.domain([1, d3.max(data, function(d) { return d.names.length })])
+			.range([stdDotRadius, stdDotRadius+16]);
 
 		var xAxis = d3.axisBottom()
 			.scale(x)
@@ -56,7 +63,12 @@ function draw_scatter_repoPullsVIssues(areaID) {
 					issues = " Issue";
 				}
 				var tipstring = "<sub>["+d.valueX+pulls+" - "+d.valueY+issues+"]</sub><br>"
-				return tipstring+d.names.join("<br>");
+				if (d.names.length > 20) {
+					tipstring += d.names.slice(0,18).join("<br>")+"<br>... [+"+(d.names.length-18)+"]"
+				} else {
+					tipstring += d.names.join("<br>");
+				}
+				return tipstring;
 			});
 
 		var chart = d3.select("."+areaID)
@@ -110,10 +122,26 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.attr("class", "circle")
 			.attr("cx", function(d) { return x(d.valueX); })
 			.attr("cy", function(d) { return y(d.valueY); })
-			.attr("r", stdDotRadius)
+			.attr("r", function(d) { return bubbleSize(d.names.length); })
 			.on('mouseover', tip.show)
 			.on('mouseout', tip.hide);
 
+	};
+
+
+	// Sort array of dictionaries by names.length
+	function sortByNamesLength(someArray) {
+		return someArray.sort(
+			function(a,b){
+				if (a.names.length==b.names.length) {
+					return 0
+				} else if (a.names.length>b.names.length) {
+					return 1
+				} else if (a.names.length<b.names.length) {
+					return -1
+				}
+			}
+		);
 	};
 
 

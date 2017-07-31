@@ -14,12 +14,6 @@ function draw_cloud_topics(areaID) {
 
 		var graphHeader = "Repository Topics";
 
-		var wordList = [];
-		data.forEach(function (topic) {
-			wordList.push(topic.name);
-		});
-		wordList.sort();
-
 		var wordScale = d3.scaleLinear()
 			.domain([0, d3.max(data, function (d) { return d.value; })])
 			.range([12,90]);
