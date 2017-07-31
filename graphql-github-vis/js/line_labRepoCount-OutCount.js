@@ -12,7 +12,7 @@ function draw_line_labRepoCountOutCount(areaID) {
 		datPrefix:'outsidersLabRepos'
 	};
 
-	d3.json('./github-data/YEARS.json', function(obj) {
+	d3.json(ghDataDir+'/YEARS.json', function(obj) {
 		RepoVars.yearList = obj[RepoVars.datPrefix];
 		OutsiderVars.yearList = obj[OutsiderVars.datPrefix];
 		yearCollection(RepoVars);
@@ -25,7 +25,7 @@ function draw_line_labRepoCountOutCount(areaID) {
 		var yearQ = d3.queue();
 		// load each year file
 		yearList.forEach(function(nYEAR) {
-			var url = './github-data/'+datPrefix+'.'+nYEAR+'.json';
+			var url = ghDataDir+'/'+datPrefix+'.'+nYEAR+'.json';
 			yearQ.defer(d3.json, url);
 		});
 		// Merge data

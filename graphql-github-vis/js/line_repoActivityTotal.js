@@ -2,7 +2,7 @@
 function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/reposActivity.json';
+	var url = ghDataDir+'/reposActivity.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawGraph(data, areaID);

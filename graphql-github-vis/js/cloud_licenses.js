@@ -2,7 +2,7 @@
 function draw_cloud_licenses(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = './github-data/reposLicenses.json';
+	var url = ghDataDir+'/reposLicenses.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawCloud(data, areaID);
