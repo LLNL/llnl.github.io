@@ -1,11 +1,5 @@
 ## About the contents of this directory...
 
-#### [index.html][index html]
-A simple example webpage for testing data visualization using [D3][d3 home] and Javascript.
-
-#### [./css][css dir]
-CSS for the webpage.
-
 #### [./d3-tip][tip dir]
 An additional script required for tool tip style labels on D3 graphs.  
 [_Source Repo_][tip source]
