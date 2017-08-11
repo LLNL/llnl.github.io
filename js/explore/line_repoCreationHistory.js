@@ -14,7 +14,7 @@ function draw_line_repoCreationHistory(areaID) {
 
 		var graphHeader = "Repo Creation History";
 		var seriesData = [
-			{label:"Repos Created"},
+			{label:"First Commit"},
 			{label:"Added to GitHub"}
 			];
 
@@ -36,7 +36,7 @@ function draw_line_repoCreationHistory(areaID) {
 			d.value = +d.value;
 		});
 
-		var margin = {top: stdMargin.top, right: stdMargin.right*1.75, bottom: stdMargin.bottom, left: stdMargin.left},
+		var margin = {top: stdMargin.top, right: stdMargin.right*1.75, bottom: stdMargin.bottom, left: stdMargin.left*1.15},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
 			height = stdHeight;
 		var dotRadius = 2;
@@ -115,6 +115,7 @@ function draw_line_repoCreationHistory(areaID) {
 			.call(yAxis);
 
 		// Draw reference date lines
+		//   Git Released
 		chart.append("path")
 			.datum([
 				{date:gitrelease, value:y.domain()[0]},
@@ -124,6 +125,14 @@ function draw_line_repoCreationHistory(areaID) {
 			.attr("d", valueline)
 			.on('mouseover', gittip.show)
 			.on('mouseout', gittip.hide);
+		chart.append("text")
+			.attr("class", "reftext")
+			.attr("transform", "rotate(-90)")
+			.attr("y",  x(gitrelease)-4 )
+			.attr("x", 0 - (height / 4))
+			.attr("text-anchor", "middle")
+			.text("Git Released");
+		//    GitHub Founded
 		chart.append("path")
 			.datum([
 				{date:ghfounded, value:y.domain()[0]},
@@ -133,6 +142,13 @@ function draw_line_repoCreationHistory(areaID) {
 			.attr("d", valueline)
 			.on('mouseover', ghtip.show)
 			.on('mouseout', ghtip.hide);
+		chart.append("text")
+			.attr("class", "reftext")
+			.attr("transform", "rotate(-90)")
+			.attr("y",  x(ghfounded)-4 )
+			.attr("x", 0 - (height / 4))
+			.attr("text-anchor", "middle")
+			.text("GitHub Founded");
 
 		// Add title
 		chart.append("text")
@@ -141,6 +157,15 @@ function draw_line_repoCreationHistory(areaID) {
 			.attr("y", 0 - (margin.top / 3))
 			.attr("text-anchor", "middle")
 			.text(graphHeader);
+
+		// Add y axis label
+		chart.append("text")
+			.attr("class", "axistitle")
+			.attr("transform", "rotate(-90)")
+			.attr("y", 0 - margin.left + (margin.left / 4))
+			.attr("x", 0 - (height / 2))
+			.attr("text-anchor", "middle")
+			.text("Repositories");
 		
 		// Draw line
 		chart.append("path")

@@ -1,8 +1,8 @@
 /* Creates word cloud visualization for webpage */
-function draw_cloud_topics(areaID) {
+function draw_cloud_licenses(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/reposTopics.json';
+	var url = ghDataDir+'/reposLicenses.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawCloud(data, areaID);
@@ -12,11 +12,11 @@ function draw_cloud_topics(areaID) {
 	// Draw cloud from data
 	function drawCloud(data, areaID) {
 
-		var graphHeader = "Repository Topics";
+		var graphHeader = "Repo Licenses";
 
 		var wordScale = d3.scaleLinear()
 			.domain([0, d3.max(data, function (d) { return d.value; })])
-			.range([12,90]);
+			.range([12,60]);
 		var fill = d3.scaleOrdinal(d3.schemeCategory20);
 
 		var margin = {top: stdMargin.top, right: stdMargin.right/2, bottom: stdMargin.bottom/2, left: stdMargin.left/2},
@@ -71,24 +71,44 @@ function draw_cloud_topics(areaID) {
 		var wordDict = {};
 		for (var repo in obj["data"]) {
 			if (obj["data"].hasOwnProperty(repo)) {
-				var topicNodes = obj["data"][repo]["repositoryTopics"]["nodes"];
-				for (var i=0; i<topicNodes.length; i++) {
-					var aWord = topicNodes[i]["topic"]["name"];
-					if (!Object.keys(wordDict).contains(aWord)) {
-						wordDict[aWord]=0;
-					}
-					wordDict[aWord]+=1;
+				var aWord = obj["data"][repo]["license"];
+				if (aWord == null || aWord == "Other") { continue }
+				if (!Object.keys(wordDict).contains(aWord)) {
+					wordDict[aWord]=0;
 				}
+				wordDict[aWord]+=1;
 			}
 		}
 		var data = [];
 		for (var aWord in wordDict) {
 			if (wordDict.hasOwnProperty(aWord)) {
-				var datpair = {name: aWord, value: wordDict[aWord]};
+				var datpair = {name: shortLic(aWord), value: wordDict[aWord]};
 				data.push(datpair);
 			}
 		}
 		return data;
+	};
+
+
+	// Replace a long license name with its abbreviation
+	function shortLic(licName) {
+		var licDict = {
+			"Apache License 2.0" : "Apache-2.0",
+			"BSD 2-clause \"Simplified\" License" : "BSD-2-Clause",
+			"BSD 3-clause \"New\" or \"Revised\" License" : "BSD-3-Clause",
+			"GNU Affero General Public License v3.0" : "AGPL-3.0",
+			"GNU General Public License v2.0" : "GPL-2.0",
+			"GNU General Public License v3.0" : "GPL-3.0",
+			"GNU Lesser General Public License v2.1" : "LGPL-2.1",
+			"GNU Lesser General Public License v3.0" : "LGPL-3.0",
+			"MIT License" : "MIT"
+			};
+		if (Object.keys(licDict).contains(licName)) {
+			licName = licDict[licName];
+		} else {
+			console.log(licName);
+		}
+		return licName;
 	};
 
 }

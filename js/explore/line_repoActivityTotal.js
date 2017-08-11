@@ -22,7 +22,7 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 			d.value = +d.value;
 		});
 
-		var margin = stdMargin,
+		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left*1.15},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
 			height = stdHeight;
 		
@@ -87,6 +87,15 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 			.attr("y", 0 - (margin.top / 3))
 			.attr("text-anchor", "middle")
 			.text(graphHeader);
+
+		// Add y axis label
+		chart.append("text")
+			.attr("class", "axistitle")
+			.attr("transform", "rotate(-90)")
+			.attr("y", 0 - margin.left + (margin.left / 4))
+			.attr("x", 0 - (height / 2))
+			.attr("text-anchor", "middle")
+			.text("Commits");
 		
 		// Draw fill
 		chart.append("path")

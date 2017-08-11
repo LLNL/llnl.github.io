@@ -14,31 +14,21 @@ layout: default
 <br><svg class="repoActivityTotalChart"></svg>
 <br><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
 <br><svg class="licenseCloud"></svg><svg class="repoPullsVIssues"></svg>
-<br><svg class="labUserCombo"></svg><svg class="labRepoCombo"></svg>
-<br><svg class="outsideRepoCountTimeline"></svg><svg class="outsideUserInCountTimeline"></svg>
-<br><svg class="reposPerOutsiderChart"></svg>
-<br><svg class="repoActivityChart"></svg>
 </center>
 
 <!-- Load basic D3 and helper scripts -->
 <script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="./d3-tip/d3-tip.js"></script>
 <script type="text/javascript" src="./d3-v4-cloud/src/d3-cloud.js"></script>
-<script type="text/javascript" src="./js/helpers.js"></script>
+<script type="text/javascript" src="../js/explore/helpers.js"></script>
 
 <!-- Load drawing JS -->
-<script type="text/javascript" src="./js/line_labUserCount-OutCount.js"></script>
-<script type="text/javascript" src="./js/line_labRepoCount-OutCount.js"></script>
-<script type="text/javascript" src="./js/line_outsideRepoCount.js"></script>
-<script type="text/javascript" src="./js/line_outsideUserInCount.js"></script>
-<script type="text/javascript" src="./js/bar_reposPerOutsider.js"></script>
-<script type="text/javascript" src="./js/cloud_languages.js"></script>
-<script type="text/javascript" src="./js/cloud_topics.js"></script>
-<script type="text/javascript" src="./js/cloud_licenses.js"></script>
-<script type="text/javascript" src="./js/line_repoActivity.js"></script>
-<script type="text/javascript" src="./js/line_repoActivityTotal.js"></script>
-<script type="text/javascript" src="./js/line_repoCreationHistory.js"></script>
-<script type="text/javascript" src="./js/scatter_repoPulls-V-Issues.js"></script>
+<script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
+<script type="text/javascript" src="../js/explore/line_repoActivityTotal.js"></script>
+<script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
+<script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
+<script type="text/javascript" src="../js/explore/cloud_licenses.js"></script>
+<script type="text/javascript" src="../js/explore/scatter_repoPulls-V-Issues.js"></script>
 
 <script>
 	// GiHub Data Directory
@@ -52,17 +42,11 @@ layout: default
 		stdMaxBuffer = 1.07;
 	var stdDotRadius = 4;
 	// Call draw functions
-	draw_line_labUserCountOutCount("labUserCombo");
-	draw_line_labRepoCountOutCount("labRepoCombo");
-	draw_line_outsideRepoCount("outsideRepoCountTimeline");
-	draw_line_outsideUserInCount("outsideUserInCountTimeline");
-	draw_bar_reposPerOutsider("reposPerOutsiderChart");
-	draw_cloud_topics("topicCloud");
-	draw_cloud_languages("languageCloud");
-	draw_cloud_licenses("licenseCloud");
-	draw_line_repoActivity("repoActivityChart","LLNL/llnl.github.io");
-	draw_line_repoActivityTotal("repoActivityTotalChart");
 	draw_line_repoCreationHistory("repoCreationHistory");
+	draw_line_repoActivityTotal("repoActivityTotalChart");
+	draw_cloud_languages("languageCloud");
+	draw_cloud_topics("topicCloud");
+	draw_cloud_licenses("licenseCloud");
 	draw_scatter_repoPullsVIssues("repoPullsVIssues");
 </script>
 
