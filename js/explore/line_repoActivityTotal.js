@@ -7,15 +7,15 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 		var data = reformatData(obj);
 		drawGraph(data, areaID);
 	});
+
+	var parseTime = d3.timeParse("%Y-%m-%d");
+	var formatTime = d3.timeFormat("%Y-%m-%d");
 	
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
 		var graphHeader = "Activity Across All Repos [Default Branches, 1 Year]";
-
-		var parseTime = d3.timeParse("%Y-%m-%d");
-		var formatTime = d3.timeFormat("%Y-%m-%d");
 
 		data.forEach(function(d) {
 			d.date = parseTime(d.date);
@@ -27,6 +27,7 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 			height = stdHeight;
 		
 		var x = d3.scaleTime()
+			.clamp(true)
 			.domain(d3.extent(data, function(d) { return d.date; }))
 			.range([0, width]);
 		
@@ -34,6 +35,14 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 			.domain([0, d3.max(data, function(d) { return d.value; })])
 			.range([height, 0])
 			.nice();
+
+		var dToday = x.domain()[1];
+		// Supercomputing
+		var dSupercomp = getYearDate("11-18",dToday);
+		// Thanksgiving
+		var dThnxgiv = getYearDate("11-25",dToday);
+		// Christmas
+		var dXmas = getYearDate("12-25",dToday);
 
 		var xAxis = d3.axisBottom()
 			.scale(x);
@@ -109,6 +118,53 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 			.attr("class", "line")
 			.attr("d", valueline);
 
+		// Draw date-of-interest reference lines
+		//    Supercomputing
+		chart.append("path")
+			.datum([
+				{date:dSupercomp, value:y.domain()[0]},
+				{date:dSupercomp, value:y.domain()[1]}
+				])
+			.attr("class", "refline")
+			.attr("d", valueline);
+		chart.append("text")
+			.attr("class", "reftext")
+			.attr("transform", "rotate(-90)")
+			.attr("y",  x(dSupercomp)-4 )
+			.attr("x", 0 - (height / 4))
+			.attr("text-anchor", "middle")
+			.text("Supercomputing");
+		//    Thanksgiving
+		chart.append("path")
+			.datum([
+				{date:dThnxgiv, value:y.domain()[0]},
+				{date:dThnxgiv, value:y.domain()[1]}
+				])
+			.attr("class", "refline")
+			.attr("d", valueline);
+		chart.append("text")
+			.attr("class", "reftext")
+			.attr("transform", "rotate(-90)")
+			.attr("y",  x(dThnxgiv)-4 )
+			.attr("x", 0 - (height / 4))
+			.attr("text-anchor", "middle")
+			.text("Thanksgiving");
+		//    Thanksgiving
+		chart.append("path")
+			.datum([
+				{date:dXmas, value:y.domain()[0]},
+				{date:dXmas, value:y.domain()[1]}
+				])
+			.attr("class", "refline")
+			.attr("d", valueline);
+		chart.append("text")
+			.attr("class", "reftext")
+			.attr("transform", "rotate(-90)")
+			.attr("y",  x(dXmas)-4 )
+			.attr("x", 0 - (height / 4))
+			.attr("text-anchor", "middle")
+			.text("Christmas");
+
 		// Draw dots
 		chart.selectAll(".circle")
 			.data(data)
@@ -154,6 +210,18 @@ function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
 		};
 
 		return data;
+	};
+
+
+	// Return appropriate date object for a month-day date given the graph's time range
+	function getYearDate(monthDayString, dToday) {
+		var thisYear = formatTime(dToday).split("-")[0];
+		if (d3.min([dToday,parseTime(thisYear+"-"+monthDayString)]) == dToday) {
+			var aYear = (parseInt(thisYear)-1).toString();
+			return parseTime(aYear+"-"+monthDayString);
+		} else {
+			return parseTime(thisYear+"-"+monthDayString);
+		}
 	};
 
 }
