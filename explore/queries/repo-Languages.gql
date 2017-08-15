@@ -1,6 +1,6 @@
 query {
   repository(owner:"OWNNAME", name:"REPONAME") {
-    languages(first:25 PGCURS) {
+    languages(first:25 PGCURS orderBy:{field:SIZE, direction:DESC}) {
       totalCount
       nodes {
         name

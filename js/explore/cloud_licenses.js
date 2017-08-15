@@ -71,8 +71,11 @@ function draw_cloud_licenses(areaID) {
 		var wordDict = {};
 		for (var repo in obj["data"]) {
 			if (obj["data"].hasOwnProperty(repo)) {
-				var aWord = obj["data"][repo]["license"];
-				if (aWord == null || aWord == "Other") { continue }
+				var licInfo = obj["data"][repo]["licenseInfo"];
+				if (licInfo == null) { continue } // skip if no license info
+				var aWord = licInfo["spdxId"];
+				if (aWord == null) { aWord = licInfo["name"] } // use long name if no short name
+				if (aWord == null || aWord == "Other") { continue } // skip if no license name or Other
 				if (!Object.keys(wordDict).contains(aWord)) {
 					wordDict[aWord]=0;
 				}
@@ -82,33 +85,12 @@ function draw_cloud_licenses(areaID) {
 		var data = [];
 		for (var aWord in wordDict) {
 			if (wordDict.hasOwnProperty(aWord)) {
-				var datpair = {name: shortLic(aWord), value: wordDict[aWord]};
+				var datpair = {name: aWord, value: wordDict[aWord]};
 				data.push(datpair);
 			}
 		}
 		return data;
 	};
 
-
-	// Replace a long license name with its abbreviation
-	function shortLic(licName) {
-		var licDict = {
-			"Apache License 2.0" : "Apache-2.0",
-			"BSD 2-clause \"Simplified\" License" : "BSD-2-Clause",
-			"BSD 3-clause \"New\" or \"Revised\" License" : "BSD-3-Clause",
-			"GNU Affero General Public License v3.0" : "AGPL-3.0",
-			"GNU General Public License v2.0" : "GPL-2.0",
-			"GNU General Public License v3.0" : "GPL-3.0",
-			"GNU Lesser General Public License v2.1" : "LGPL-2.1",
-			"GNU Lesser General Public License v3.0" : "LGPL-3.0",
-			"MIT License" : "MIT"
-			};
-		if (Object.keys(licDict).contains(licName)) {
-			licName = licDict[licName];
-		} else {
-			console.log(licName);
-		}
-		return licName;
-	};
 
 }
