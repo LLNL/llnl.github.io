@@ -12,8 +12,9 @@ layout: default
 <center>
 <svg class="repoCreationHistory"></svg>
 <br><svg class="repoActivityTotalChart"></svg>
+<br><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
 <br><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
-<br><svg class="licenseCloud"></svg><svg class="repoPullsVIssues"></svg>
+<br><svg class="licenseCloud"></svg>
 </center>
 
 <!-- Load basic D3 and helper scripts -->
@@ -28,7 +29,8 @@ layout: default
 <script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_licenses.js"></script>
-<script type="text/javascript" src="../js/explore/scatter_repoPulls-V-Issues.js"></script>
+<script type="text/javascript" src="../js/explore/scatter_repoPulls.js"></script>
+<script type="text/javascript" src="../js/explore/scatter_repoIssues.js"></script>
 
 <script>
 	// GiHub Data Directory
@@ -47,7 +49,8 @@ layout: default
 	draw_cloud_languages("languageCloud");
 	draw_cloud_topics("topicCloud");
 	draw_cloud_licenses("licenseCloud");
-	draw_scatter_repoPullsVIssues("repoPullsVIssues");
+	draw_scatter_repoPulls("repoPulls");
+	draw_scatter_repoIssues("repoIssues");
 </script>
 
 {% endraw %}

@@ -1,5 +1,5 @@
 /* Creates scatter plot graph visualization for webpage */
-function draw_scatter_repoPullsVIssues(areaID) {
+function draw_scatter_repoPulls(areaID) {
 
 	// load data file, process data, and draw visualization
 	var url = ghDataDir+'/reposPullsIssues.json';
@@ -12,7 +12,7 @@ function draw_scatter_repoPullsVIssues(areaID) {
 	// Draw scatter plot from data
 	function drawScatter(data, areaID) {
 
-		var graphHeader = "Merged Pull Requests VS Open Issues";
+		var graphHeader = "Pull Requests";
 
 		// sort dots biggest to smallest so smallest dots drawn on top
 		data = sortByNamesLength(data).reverse();
@@ -54,15 +54,7 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var pulls = " Pulls";
-				if (d.valueX == 1) {
-					pulls = " Pull";
-				}
-				var issues = " Issues";
-				if (d.valueY == 1) {
-					issues = " Issue";
-				}
-				var tipstring = "<sub>["+d.valueX+pulls+" - "+d.valueY+issues+"]</sub><br>"
+				var tipstring = "<sub>["+d.valueX+" Merged - "+d.valueY+" Open ]</sub><br>"
 				if (d.names.length > 20) {
 					tipstring += d.names.slice(0,18).join("<br>")+"<br>... [+"+(d.names.length-18)+"]"
 				} else {
@@ -104,7 +96,7 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.attr("x", (width / 2))
 			.attr("y", (height+margin.bottom) - (margin.bottom / 4))
 			.attr("text-anchor", "middle")
-			.text("Merged Pull Requests");
+			.text("Merged");
 
 		// Add y axis label
 		chart.append("text")
@@ -113,7 +105,7 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			.attr("y", 0 - margin.left + (margin.left / 4))
 			.attr("x", 0 - (height / 2))
 			.attr("text-anchor", "middle")
-			.text("Open Issues");
+			.text("Open");
 
 		// Draw dots
 		chart.selectAll(".circle")
@@ -152,8 +144,8 @@ function draw_scatter_repoPullsVIssues(areaID) {
 			if (obj["data"].hasOwnProperty(repo)) {
 				var repoDict = obj["data"][repo],
 					pullsMerged = repoDict["pullRequests_Merged"]["totalCount"],
-					issuesOpen = repoDict["issues_Open"]["totalCount"],
-					doubleKey = [pullsMerged,issuesOpen];
+					pullsOpen = repoDict["pullRequests_Open"]["totalCount"],
+					doubleKey = [pullsMerged,pullsOpen];
 				if (!Object.keys(dataDict).contains(doubleKey)) {
 					dataDict[doubleKey] = [];
 				}
@@ -167,7 +159,7 @@ function draw_scatter_repoPullsVIssues(areaID) {
 				var dataset = {
 					names: dataDict[doubleKey].sort(),
 					valueX: +numbers[0], // pulls merged
-					valueY: +numbers[1] // isues open
+					valueY: +numbers[1] // pulls open
 				};
 				data.push(dataset);
 			}
