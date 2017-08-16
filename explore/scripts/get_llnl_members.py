@@ -3,12 +3,11 @@ import json
 import re
 import time
 
-datfilepath = "../github-data/labMembers.json"
+datfilepath = "../github-data/labUsers.json"
 allData = {}
 
-# Read input list of organizations of interest
-# orglist = helpers.read_input("../inputs/Orgs")
-orglist = ["llnl"] # only want LLNL org members
+# Only looking at LLNL org members
+orglist = ["llnl"]
 
 # Read pretty GraphQL query
 query_in = helpers.read_gql("../queries/org-Members.gql")

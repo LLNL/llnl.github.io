@@ -1,6 +1,6 @@
-query { 
-  organization(login:"ORGNAME") {
-    members(first:50 PGCURS) {
+query {
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    mentionableUsers(first:50 PGCURS) {
       nodes {
         login
         name
