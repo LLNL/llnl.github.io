@@ -45,7 +45,7 @@ function draw_scatter_repoPulls(areaID) {
 		var xAxis = d3.axisBottom()
 			.scale(x)
 			.ticks(10,d3.format("d"));
-		
+
 		var yAxis = d3.axisLeft()
 			.scale(y)
 			.ticks(10,d3.format("d"));
@@ -54,7 +54,7 @@ function draw_scatter_repoPulls(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var tipstring = "<sub>["+d.valueX+" Merged - "+d.valueY+" Open ]</sub><br>"
+				var tipstring = "<sub>[ "+d.valueY+" Open - "+d.valueX+" Merged ]</sub><br>"
 				if (d.names.length > 20) {
 					tipstring += d.names.slice(0,18).join("<br>")+"<br>... [+"+(d.names.length-18)+"]"
 				} else {
@@ -76,7 +76,7 @@ function draw_scatter_repoPulls(areaID) {
 			.attr("class", "x axis")
 			.attr("transform", "translate(0," + height + ")")
 			.call(xAxis);
-		
+
 		// Add the y axis
 		chart.append("g")
 			.attr("class", "y axis")
