@@ -1,4 +1,4 @@
-{
+query {
   repository(owner:"OWNNAME", name:"REPONAME") {
     pullRequests_Open: pullRequests(states: OPEN) {
       totalCount

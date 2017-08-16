@@ -1,0 +1,15 @@
+query { 
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    nameWithOwner
+    name
+    url
+    stargazers {
+      totalCount
+    }
+    forks {
+      totalCount
+    }
+    homepageUrl
+    description
+  }
+}
