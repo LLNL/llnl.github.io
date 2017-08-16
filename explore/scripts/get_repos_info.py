@@ -3,7 +3,7 @@ import json
 import re
 import time
 
-datfilepath = "../github-data/reposInfo.json"
+datfilepath = "../github-data/labReposInfo.json"
 allData = {}
 
 # Read input list of organizations of interest
