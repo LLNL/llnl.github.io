@@ -6,9 +6,6 @@ import time
 datfilepath = "../github-data/extUsers.json"
 allData = {}
 
-# Check for and read existing data file
-allData = helpers.read_existing(datfilepath)
-
 # Read repo info data file (to use as repo list)
 dataObj = helpers.read_json("../github-data/labReposInfo.json")
 
