@@ -54,7 +54,7 @@ function draw_scatter_repoIssues(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var tipstring = "<sub>[ "+d.valueY+" Open - "+d.valueX+" Merged ]</sub><br>"
+				var tipstring = "<sub>[ "+d.valueY+" Open - "+d.valueX+" Closed ]</sub><br>"
 				if (d.names.length > 20) {
 					tipstring += d.names.slice(0,18).join("<br>")+"<br>... [+"+(d.names.length-18)+"]"
 				} else {
