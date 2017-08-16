@@ -1,0 +1,111 @@
+/* For D3 graph visualizations */
+
+.bar {
+	fill: steelblue;
+}
+
+.bar:hover {
+	fill: lightblue;
+}
+
+.line {
+	fill: none;
+	stroke: steelblue;
+	stroke-width: 2px;
+}
+
+.circle {
+	fill: steelblue;
+	stroke: white;
+	stroke-width: 1px;
+}
+
+.circle:hover {
+	fill: lightblue;
+	stroke: steelblue;
+	stroke-width: 2px;
+}
+
+.second.line {
+	stroke: seagreen;
+}
+
+.second.circle {
+	fill: seagreen;
+}
+
+.second.circle:hover {
+	fill: lightgreen;
+	stroke: seagreen;
+}
+
+.dense.circle {
+	stroke: none;
+}
+
+.dense.circle:hover {
+	stroke: none;
+}
+
+.area {
+	fill: lightblue;
+}
+
+.legendCircle {
+	stroke-width: 1px;
+}
+
+.legendText {
+	font: 12px sans-serif;
+}
+
+.refline {
+	fill: none;
+	stroke: gray;
+	stroke-width: 1px;
+}
+
+.reftext {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.axis text {
+	font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+.xbar.axis path {
+	display: none;
+}
+
+.graphtitle {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.axistitle {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.d3-tip {
+	line-height: 1;
+	padding: 6px;
+	background: black;
+	color: white;
+	border-radius: 4px;
+	font: 12px sans-serif;
+	text-align: center;
+}
+
+.cloudtext {
+	font-family: Impact;
+	font: Impact;
+}

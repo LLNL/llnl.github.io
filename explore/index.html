@@ -1,0 +1,56 @@
+---
+title: Explore
+layout: default
+---
+
+{% raw %}
+
+<link rel="stylesheet" type="text/css" href="../css/graphstyle.css" />
+<h1><center>LLNL GitHub Visualizations</center></h1>
+
+<!-- Preset vis display areas -->
+<center>
+<svg class="repoCreationHistory"></svg>
+<br><svg class="repoActivityTotalChart"></svg>
+<br><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
+<br><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
+<br><svg class="licenseCloud"></svg>
+</center>
+
+<!-- Load basic D3 and helper scripts -->
+<script src="https://d3js.org/d3.v4.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./d3-tip/d3-tip.js"></script>
+<script type="text/javascript" src="./d3-v4-cloud/src/d3-cloud.js"></script>
+<script type="text/javascript" src="../js/explore/helpers.js"></script>
+
+<!-- Load drawing JS -->
+<script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
+<script type="text/javascript" src="../js/explore/line_repoActivityTotal.js"></script>
+<script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
+<script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
+<script type="text/javascript" src="../js/explore/cloud_licenses.js"></script>
+<script type="text/javascript" src="../js/explore/scatter_repoPulls.js"></script>
+<script type="text/javascript" src="../js/explore/scatter_repoIssues.js"></script>
+
+<script>
+	// GiHub Data Directory
+	var ghDataDir = "./github-data";
+	// Global chart standards
+	var stdTotalWidth = 500,
+		stdTotalHeight = 400;
+	var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
+		stdWidth = stdTotalWidth - stdMargin.left - stdMargin.right,
+		stdHeight = stdTotalHeight - stdMargin.top - stdMargin.bottom,
+		stdMaxBuffer = 1.07;
+	var stdDotRadius = 4;
+	// Call draw functions
+	draw_line_repoCreationHistory("repoCreationHistory");
+	draw_line_repoActivityTotal("repoActivityTotalChart");
+	draw_cloud_languages("languageCloud");
+	draw_cloud_topics("topicCloud");
+	draw_cloud_licenses("licenseCloud");
+	draw_scatter_repoPulls("repoPulls");
+	draw_scatter_repoIssues("repoIssues");
+</script>
+
+{% endraw %}

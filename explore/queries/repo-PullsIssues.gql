@@ -1,0 +1,19 @@
+{
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    pullRequests_Open: pullRequests(states: OPEN) {
+      totalCount
+    }
+    pullRequests_Closed: pullRequests(states: CLOSED) {
+      totalCount
+    }
+    pullRequests_Merged: pullRequests(states: MERGED) {
+      totalCount
+    }
+    issues_Open: issues(states: OPEN) {
+      totalCount
+    }
+    issues_Closed: issues(states: CLOSED) {
+      totalCount
+    }
+  }
+}

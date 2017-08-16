@@ -1,0 +1,14 @@
+query { 
+  user(login:"USRNAME") {
+    contributedRepositories(first:50 PGCURS) {
+      totalCount
+      nodes {
+        nameWithOwner
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

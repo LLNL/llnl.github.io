@@ -1,0 +1,14 @@
+query {
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    mentionableUsers(first:50 PGCURS) {
+      totalCount
+      nodes {
+        login
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

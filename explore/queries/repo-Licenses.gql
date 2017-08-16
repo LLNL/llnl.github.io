@@ -1,0 +1,10 @@
+query { 
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    licenseInfo {
+      name
+      nickname
+      spdxId
+      url
+    }
+  }
+}

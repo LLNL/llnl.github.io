@@ -1,0 +1,14 @@
+query { 
+  organization(login:"ORGNAME") {
+    members(first:50 PGCURS) {
+      totalCount
+      nodes {
+        login
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

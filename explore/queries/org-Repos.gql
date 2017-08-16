@@ -1,0 +1,15 @@
+query { 
+  organization(login:"ORGNAME") {
+  	name
+    repositories(first:50 PGCURS) {
+      totalCount
+      nodes {
+        nameWithOwner
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
