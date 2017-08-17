@@ -1,7 +1,6 @@
 import helpers
 import json
 import re
-import time
 
 datfilepath = "../github-data/extUsers.json"
 allData = {}
