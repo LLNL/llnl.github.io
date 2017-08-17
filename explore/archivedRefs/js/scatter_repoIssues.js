@@ -1,8 +1,8 @@
 /* Creates scatter plot graph visualization for webpage */
-function draw_scatter_repoPulls(areaID) {
+function draw_scatter_repoIssues(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/labRepos_PullsIssues.json';
+	var url = ghDataDir+'/reposPullsIssues.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawScatter(data, areaID);
@@ -12,7 +12,7 @@ function draw_scatter_repoPulls(areaID) {
 	// Draw scatter plot from data
 	function drawScatter(data, areaID) {
 
-		var graphHeader = "Pull Requests";
+		var graphHeader = "Issues";
 
 		// sort dots biggest to smallest so smallest dots drawn on top
 		data = sortByNamesLength(data).reverse();
@@ -54,7 +54,7 @@ function draw_scatter_repoPulls(areaID) {
 			.attr('class', 'd3-tip')
 			.offset([-10, 0])
 			.html(function(d) {
-				var tipstring = "<sub>[ "+d.valueY+" Open - "+d.valueX+" Merged ]</sub><br>"
+				var tipstring = "<sub>[ "+d.valueY+" Open - "+d.valueX+" Closed ]</sub><br>"
 				if (d.names.length > 20) {
 					tipstring += d.names.slice(0,18).join("<br>")+"<br>... [+"+(d.names.length-18)+"]"
 				} else {
@@ -96,7 +96,7 @@ function draw_scatter_repoPulls(areaID) {
 			.attr("x", (width / 2))
 			.attr("y", (height+margin.bottom) - (margin.bottom / 4))
 			.attr("text-anchor", "middle")
-			.text("Merged");
+			.text("Closed");
 
 		// Add y axis label
 		chart.append("text")
@@ -143,9 +143,9 @@ function draw_scatter_repoPulls(areaID) {
 		for (var repo in obj["data"]) {
 			if (obj["data"].hasOwnProperty(repo)) {
 				var repoDict = obj["data"][repo],
-					pullsMerged = repoDict["pullRequests_Merged"]["totalCount"],
-					pullsOpen = repoDict["pullRequests_Open"]["totalCount"],
-					doubleKey = [pullsMerged,pullsOpen];
+					issuesClosed = repoDict["issues_Closed"]["totalCount"],
+					issuesOpen = repoDict["issues_Open"]["totalCount"],
+					doubleKey = [issuesClosed,issuesOpen];
 				if (!Object.keys(dataDict).contains(doubleKey)) {
 					dataDict[doubleKey] = [];
 				}
@@ -158,8 +158,8 @@ function draw_scatter_repoPulls(areaID) {
 				var numbers = doubleKey.split(",");
 				var dataset = {
 					names: dataDict[doubleKey].sort(),
-					valueX: +numbers[0], // pulls merged
-					valueY: +numbers[1] // pulls open
+					valueX: +numbers[0], // issues closed
+					valueY: +numbers[1] // issues open
 				};
 				data.push(dataset);
 			}

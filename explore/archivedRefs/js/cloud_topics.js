@@ -1,8 +1,8 @@
 /* Creates word cloud visualization for webpage */
-function draw_cloud_languages(areaID) {
+function draw_cloud_topics(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/labRepos_Languages.json';
+	var url = ghDataDir+'/reposTopics.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawCloud(data, areaID);
@@ -12,7 +12,7 @@ function draw_cloud_languages(areaID) {
 	// Draw cloud from data
 	function drawCloud(data, areaID) {
 
-		var graphHeader = "Languages Used";
+		var graphHeader = "Repository Topics";
 
 		var wordScale = d3.scaleLinear()
 			.domain([0, d3.max(data, function (d) { return d.value; })])
@@ -71,9 +71,9 @@ function draw_cloud_languages(areaID) {
 		var wordDict = {};
 		for (var repo in obj["data"]) {
 			if (obj["data"].hasOwnProperty(repo)) {
-				var langNodes = obj["data"][repo]["languages"]["nodes"];
-				for (var i=0; i<langNodes.length; i++) {
-					var aWord = langNodes[i]["name"];
+				var topicNodes = obj["data"][repo]["repositoryTopics"]["nodes"];
+				for (var i=0; i<topicNodes.length; i++) {
+					var aWord = topicNodes[i]["topic"]["name"];
 					if (!Object.keys(wordDict).contains(aWord)) {
 						wordDict[aWord]=0;
 					}

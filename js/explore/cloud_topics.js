@@ -2,7 +2,7 @@
 function draw_cloud_topics(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/reposTopics.json';
+	var url = ghDataDir+'/labRepos_Topics.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawCloud(data, areaID);

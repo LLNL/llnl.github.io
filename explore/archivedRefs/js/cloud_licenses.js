@@ -1,8 +1,8 @@
 /* Creates word cloud visualization for webpage */
-function draw_cloud_languages(areaID) {
+function draw_cloud_licenses(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/labRepos_Languages.json';
+	var url = ghDataDir+'/reposLicenses.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawCloud(data, areaID);
@@ -12,11 +12,11 @@ function draw_cloud_languages(areaID) {
 	// Draw cloud from data
 	function drawCloud(data, areaID) {
 
-		var graphHeader = "Languages Used";
+		var graphHeader = "Repo Licenses";
 
 		var wordScale = d3.scaleLinear()
 			.domain([0, d3.max(data, function (d) { return d.value; })])
-			.range([12,80]);
+			.range([12,60]);
 		var fill = d3.scaleOrdinal(d3.schemeCategory20);
 
 		var margin = {top: stdMargin.top, right: stdMargin.right/2, bottom: stdMargin.bottom/2, left: stdMargin.left/2},
@@ -71,14 +71,15 @@ function draw_cloud_languages(areaID) {
 		var wordDict = {};
 		for (var repo in obj["data"]) {
 			if (obj["data"].hasOwnProperty(repo)) {
-				var langNodes = obj["data"][repo]["languages"]["nodes"];
-				for (var i=0; i<langNodes.length; i++) {
-					var aWord = langNodes[i]["name"];
-					if (!Object.keys(wordDict).contains(aWord)) {
-						wordDict[aWord]=0;
-					}
-					wordDict[aWord]+=1;
+				var licInfo = obj["data"][repo]["licenseInfo"];
+				if (licInfo == null) { continue } // skip if no license info
+				var aWord = licInfo["spdxId"];
+				if (aWord == null) { aWord = licInfo["name"] } // use long name if no short name
+				if (aWord == null || aWord == "Other") { continue } // skip if no license name or Other
+				if (!Object.keys(wordDict).contains(aWord)) {
+					wordDict[aWord]=0;
 				}
+				wordDict[aWord]+=1;
 			}
 		}
 		var data = [];
@@ -90,5 +91,6 @@ function draw_cloud_languages(areaID) {
 		}
 		return data;
 	};
+
 
 }

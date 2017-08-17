@@ -2,7 +2,7 @@
 function draw_scatter_repoPulls(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/labRepos_PullsIssues.json';
+	var url = ghDataDir+'/reposPullsIssues.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawScatter(data, areaID);
