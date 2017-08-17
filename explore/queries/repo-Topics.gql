@@ -1,0 +1,18 @@
+query {
+  repository(owner:"OWNNAME", name:"REPONAME") {
+    repositoryTopics(first:50 PGCURS) {
+      totalCount
+      nodes {
+        topic {
+          name
+        }
+        resourcePath
+        url
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
