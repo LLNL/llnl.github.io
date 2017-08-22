@@ -149,7 +149,7 @@ if "data" not in allData.keys() :
 	allData["data"] = {}
 for repo in collective["data"].keys() :
 	allData["data"][repo] = collective["data"][repo]
-allDataString = json.dumps(allData)
+allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
 print "\nWriting file '"+datfilepath+"'"

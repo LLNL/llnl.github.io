@@ -24,7 +24,7 @@ for prefix in yearDict.keys():
 	yearList.sort()
 	yearDict[prefix] = yearList
 
-yearDataString = json.dumps(yearDict)
+yearDataString = json.dumps(yearDict, indent=4, sort_keys=True)
 datfilepath = "../github-data/YEARS.json"
 
 # Write year list file

@@ -103,7 +103,7 @@ print "\nCollective data gathering complete!"
 
 # Combine new data with existing data
 allData["data"] = collective["data"]
-allDataString = json.dumps(allData)
+allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
 print "\nWriting file '"+datfilepath+"'"

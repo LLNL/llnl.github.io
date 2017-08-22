@@ -5,11 +5,10 @@ import re
 datfilepath = "../github-data/labReposInfo.json"
 allData = {}
 
-# Read input list of organizations of interest
-orglist = helpers.read_input("../inputs/Orgs")
-
-# Read input list of independent repos of interest
-repolist = helpers.read_input("../inputs/Repos")
+# Read input lists of organizations and independent repos of interest
+inputLists = helpers.read_json("../INPUT_LISTS.json")
+orglist = inputLists["orgs"]
+repolist = inputLists["repos"]
 
 # Read pretty GraphQL queries
 #	Org repos
@@ -104,7 +103,7 @@ print "\nCollective data gathering Part2of2 complete!"
 
 # Combine new data with existing data
 allData["data"] = collective["data"]
-allDataString = json.dumps(allData)
+allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
 print "\nWriting file '"+datfilepath+"'"
