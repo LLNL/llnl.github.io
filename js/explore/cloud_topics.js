@@ -23,7 +23,7 @@ function draw_cloud_topics(areaID) {
 			width = stdTotalWidth - margin.left - margin.right,
 			height = stdTotalHeight - margin.top - margin.bottom;
 
-		var layout = cloud()
+		var layout = d3.layout.cloud()
 			.size([width, height])
 			.words(data.map(function(d) {
 				return {text: d.name, size: wordScale(d.value)};
