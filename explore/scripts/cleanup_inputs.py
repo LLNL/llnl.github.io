@@ -3,7 +3,7 @@ import json
 
 # Take all input lists, process, and write back to file
 
-fileIn = "../INPUT_LISTS.json"
+fileIn = "../input_lists.json"
 
 inputLists = helpers.read_json(fileIn)
 

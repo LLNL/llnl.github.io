@@ -6,7 +6,7 @@ datfilepath = "../github-data/labReposInfo.json"
 allData = {}
 
 # Read input lists of organizations and independent repos of interest
-inputLists = helpers.read_json("../INPUT_LISTS.json")
+inputLists = helpers.read_json("../input_lists.json")
 orglist = inputLists["orgs"]
 repolist = inputLists["repos"]
 

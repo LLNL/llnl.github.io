@@ -5,7 +5,7 @@ angular.module('app', [])
         $scope.username = "llnl";
 
         var getInputLists = function() {
-            return $http.get("./explore/INPUT_LISTS.json", {
+            return $http.get("./explore/input_lists.json", {
                     cache: true
                 })
                 .then(function (res) {
