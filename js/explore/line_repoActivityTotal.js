@@ -1,5 +1,5 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
+function draw_line_repoActivityTotal(areaID) {
 
 	// load data file, process data, and draw visualization
 	var url = ghDataDir+'/labRepos_Activity.json';

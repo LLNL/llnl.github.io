@@ -39,7 +39,9 @@ function draw_line_repoCreationHistory(areaID) {
 		var margin = {top: stdMargin.top, right: stdMargin.right*1.75, bottom: stdMargin.bottom, left: stdMargin.left*1.15},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
 			height = stdHeight;
-		var dotRadius = 2;
+		var dotRadius = 2,
+			legendDotRadius = stdLgndDotRadius,
+			legendSpacing = stdLgndSpacing;
 		
 		// Get min-max timestamps across both datasets
 		var timerange = d3.extent(data, function(d) { return d.date; });
@@ -213,20 +215,20 @@ function draw_line_repoCreationHistory(areaID) {
 		chart.selectAll(".series-colors")
 			.data(seriesData)
 		  .enter().append("circle")
-			.attr("class", "legendCircle")
+			.attr("class", "legend")
 			.style("fill", function(d) { return d.fillColor; })
 			.style("stroke", function(d) { return d.strokeColor; })
-			.attr("r", stdDotRadius*1.25 )
-			.attr("cx", function(d,i) { return (width+margin.right/2) - (stdDotRadius*1.25) })
-			.attr("cy", function(d,i) { return (height-10) - stdDotRadius*1.25 - 30*i });
+			.attr("r", legendDotRadius )
+			.attr("cx", function(d,i) { return (width+margin.right/2) - legendDotRadius })
+			.attr("cy", function(d,i) { return (height-10) - legendDotRadius - legendSpacing*i });
 		chart.selectAll(".series-labels")
 			.data(seriesData)
 		  .enter().append("text")
-		  	.attr("class", "legendText")
+		  	.attr("class", "legend")
 			.text(function(d) { return d.label; })
 			.attr("text-anchor", "end")
-			.attr("x", function(d,i) { return (width+margin.right/2) - (2*stdDotRadius*1.25 + 4) })
-			.attr("y", function(d,i) { return (height-10) - 30*i });
+			.attr("x", function(d,i) { return (width+margin.right/2) - (2*legendDotRadius + 4) })
+			.attr("y", function(d,i) { return (height-10) - legendSpacing*i });
 
 	};
 
