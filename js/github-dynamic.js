@@ -13,6 +13,7 @@ angular.module('app', [])
             'mfem',
             'pruners',
             'rose-compiler',
+            'uv-cdat',
             'zfsonlinux',
         ];
 
