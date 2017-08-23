@@ -9,17 +9,6 @@ import re
 import warnings
 
 
-# Read input list file into array variable
-def read_input(filepath):
-	if not os.path.isfile(filepath) :
-		raise RuntimeError("Input '"+filepath+"' does not exist.")
-	print "Reading input '"+filepath+"' ..."
-	with open(filepath,"r") as f_in:
-		inputString = f_in.read()
-	inList = inputString.split('\n')
-	print "File read!"
-	return inList
-
 # Read json data file into dictionary if it exists, return filled or empty dictionary
 def read_existing(filepath):
 	dataObj = {}

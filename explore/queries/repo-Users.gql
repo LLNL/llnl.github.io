@@ -1,9 +1,9 @@
 query {
   repository(owner:"OWNNAME", name:"REPONAME") {
     mentionableUsers(first:50 PGCURS) {
-      totalCount
       nodes {
         login
+        name
       }
       pageInfo {
         endCursor

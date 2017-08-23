@@ -1,0 +1,23 @@
+query { 
+  organization(login:"ORGNAME") {
+    repositories(first:50 PGCURS) {
+      nodes {
+        nameWithOwner
+        name
+        url
+        stargazers {
+          totalCount
+        }
+        forks {
+          totalCount
+        }
+        homepageUrl
+        description
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}

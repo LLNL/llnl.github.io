@@ -1,8 +1,8 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoActivityTotal(areaID, repoNameWOwner) {
+function draw_line_repoActivityTotal(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url = ghDataDir+'/reposActivity.json';
+	var url = ghDataDir+'/labRepos_Activity.json';
 	d3.json(url, function(obj) {
 		var data = reformatData(obj);
 		drawGraph(data, areaID);

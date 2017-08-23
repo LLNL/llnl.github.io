@@ -1,28 +1,19 @@
 import helpers
 import json
 import re
-import time
 
-date = (time.strftime("%Y-%m-%d"))
-xYear = (time.strftime("%Y"))
-datfilepath = "../github-data/reposLanguages.json"
+datfilepath = "../github-data/labRepos_Languages.json"
 allData = {}
 
-# Read repo ownership data file (to use as org repo list)
-dataObj = helpers.read_json("../github-data/reposOwnership."+xYear+".json")
-if not date in dataObj :
-	raise RuntimeError("No reposOwnership data for "+date)
+# Read repo info data file (to use as repo list)
+dataObj = helpers.read_json("../github-data/labReposInfo.json")
 
-# Populate today's repo list
+# Populate repo list
 repolist = []
 print "Getting internal repos ..."
-repoNodes = dataObj[date]["insideRepositories"]["nodes"]
-for repo in repoNodes :
-	repolist.append(repo["nameWithOwner"])
-repoCountCheck = dataObj[date]["insideRepositories"]["totalCount"]
-if not repoCountCheck==len(repolist) :
-	raise RuntimeError("User count error: "+str(repoCountCheck)+" reported, "+str(len(repolist))+" parsed")
+repolist = dataObj["data"].keys()
 print "Repo list complete. Found "+str(len(repolist))+" repos."
+repolist.sort()
 
 # Read pretty GraphQL query
 query_in = helpers.read_gql("../queries/repo-Languages.gql")
@@ -88,7 +79,7 @@ print "\nCollective data gathering complete!"
 
 # Combine new data with existing data
 allData["data"] = collective["data"]
-allDataString = json.dumps(allData)
+allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
 print "\nWriting file '"+datfilepath+"'"

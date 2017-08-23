@@ -1,58 +1,69 @@
 # Run this script to refresh all data for today
+
+
+# On exit
+function finish {
+	# Log end time
+	echo "End" >> ../github-data/LAST_MASTER_UPDATE.txt
+	date >> ../github-data/LAST_MASTER_UPDATE.txt
+}
+trap finish EXIT
+
+# Stop and Log for failed scripts
+function errorCheck() {
+	if [ $ret -ne 0 ]; then
+		echo "FAILED - $1"
+		echo "FAILED - $1" >> ../github-data/LAST_MASTER_UPDATE.txt
+		exit
+	fi
+}
+
+# Basic script run procedure
+function runScript() {
+	echo "Run - $1"
+	python $1
+	ret=$?
+	errorCheck "$1"
+}
+
+
 echo "RUNNING MASTER UPDATE SCRIPT"
+
+# Log start time
 date -I > ../github-data/LAST_MASTER_UPDATE.txt
 echo "Start" >> ../github-data/LAST_MASTER_UPDATE.txt
 date >> ../github-data/LAST_MASTER_UPDATE.txt
 
-echo "Run - Cleanup Inputs"
-python cleanup_inputs.py
 
-echo "Run - Get Org Repos"
-python get_org_repos.py
+# RUN THIS FIRST
+runScript cleanup_inputs.py
 
-echo "Run - Get Org Members"
-python get_org_members.py
 
-echo "Run - Get User Repos"
-# requires output from get_org_members.py
-python get_user_repos.py
+# --- BASIC DATA ---
+# Required before any other repo scripts (output used as repo list)
+runScript get_repos_info.py
+# Required before any other member scripts (output used as member list)
+runScript get_llnl_members.py
 
-echo "Run - Sort Repo Ownership"
-# requires output from get_org_repos.py, get_user_repos.py
-python sort_repo_ownership.py
 
-echo "Run - Get Repos Mentionable Users"
-# requires output from sort_repo_ownership.py
-python get_repos_mentionableusers.py
+# --- EXTERNAL V INTERNAL ---
+runScript get_members_extrepos.py
+runScript get_repos_extusers.py
 
-echo "Run - Sort User Membership"
-# requires output from get_repos_mentionableusers.py, get_user_repos.py
-python sort_user_membership.py
 
-echo "Run - Get Repos Languages"
-# requires output from sort_repo_ownership.py
-python get_repos_languages.py
+# --- ADDITIONAL REPO DETAILS ---
+runScript get_repos_licenses.py
+runScript get_repos_languages.py
+runScript get_repos_topics.py
+runScript get_repos_pullsissues.py
+runScript get_repos_activity.py
 
-echo "Run - Get Repos Topics"
-# requires output from sort_repo_ownership.py
-python get_repos_topics.py
 
-echo "Run - Get Repos Activity"
-# requires output from sort_repo_ownership.py
-python get_repos_activity.py
+# --- HISTORY FOR ALL TIME ---
+runScript get_repos_creationhistory.py
 
-echo "Run - Get Repos Pulls and Issues"
-# requires output from sort_repo_ownership.py
-python get_repos_pulls_issues.py
+# RUN THIS LAST, used in case of long term cumulative data
+runScript build_yearlist.py
 
-echo "Run - Get Creation History"
-# requires output from sort_repo_ownership.py
-python get_creation_history.py
 
-echo "Run - Build Year List"
-# RUN THIS LAST
-python build_yearlist.py
-
-echo "End" >> ../github-data/LAST_MASTER_UPDATE.txt
-date >> ../github-data/LAST_MASTER_UPDATE.txt
 echo "MASTER UPDATE COMPLETE"

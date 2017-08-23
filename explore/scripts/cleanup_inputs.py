@@ -1,20 +1,25 @@
-import os
+import helpers
+import json
 
-# Take all input files, process, and write back to file
+# Take all input lists, process, and write back to file
 
-inputdir = "../inputs/"
+fileIn = "../input_lists.json"
 
-print "Cleaning input list files..."
+inputLists = helpers.read_json(fileIn)
 
-for file in os.listdir(inputdir) :
-	print "    "+inputdir+file
-	with open(inputdir+file) as filein:
-		str_in = filein.read()
-	listWIP = str_in.lower().split('\n')	# Standardize as all lowercase
+print "Cleaning input lists..."
+
+for aList in inputLists.keys() :
+	print "    "+aList
+	# Standardize as all lowercase
+	listWIP = [x.lower() for x in inputLists[aList]]
 	listWIP = list(set(listWIP))		# Remove duplicates
 	listWIP.sort()						# List in alphabetical order
-	str_out = '\n'.join(listWIP)
-	with open(inputdir+file,"w") as fileout:
-		fileout.write(str_out)
+	inputLists[aList] = listWIP
+
+str_out = json.dumps(inputLists, indent=4, sort_keys=True)
+
+with open(fileIn,"w") as fileout:
+	fileout.write(str_out)
 
 print "Input lists cleaned!"
