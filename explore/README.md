@@ -1,6 +1,10 @@
 ## How to Generate New Data
-1. Navigate to the [`explore/scripts`][scripts dir] directory.
-2. Run the [`./MASTER.sh`][mastersh] script.  
+
+```bash
+cd explore/scripts/
+./MASTER.sh
+```
+
 _(Additional script functionality detailed in the [`./scripts` section below][jump2 scripts].)_
 
 **IMPORTANT!**  
