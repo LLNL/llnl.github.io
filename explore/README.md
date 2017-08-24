@@ -28,7 +28,7 @@ Other scripts may collect cumulative data with a daily timestamp. If one of thes
 
 Running [`MASTER.sh`][mastersh] will run all of the necessary scripts in the appropriate order to fetch the latest data. It will also update [`LAST_MASTER_UPDATE.txt`][lastmasterup] to record when this complete data update was last run.
 
-The scripts are only for gathering new data. You do not need them to run to view the visualizations on the sample webpage.
+The scripts are only for gathering new data. You do not need them to run in order to view the webpage visualizations.
 
 [jump2 scripts]: #scripts
 [inputs file]: input_lists.json
