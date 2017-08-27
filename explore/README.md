@@ -1,4 +1,16 @@
-## About the contents of this directory...
+## How to Generate New Data
+
+```bash
+cd explore/scripts/
+./MASTER.sh
+```
+
+_(Additional script functionality detailed in the [`./scripts` section below][jump2 scripts].)_
+
+**IMPORTANT!**  
+Data fetching scripts require an environment variable `GITHUB_API_TOKEN` containing a valid GitHub [OAuth token][oauth] or [personal access token][personaltoken].
+
+## About the Contents of this Directory...
 
 #### [./input_lists.json][inputs file]
 Simple text files containing input lists. (e.g. list of organizations, list of independent repositories)
@@ -20,10 +32,9 @@ Other scripts may collect cumulative data with a daily timestamp. If one of thes
 
 Running [`MASTER.sh`][mastersh] will run all of the necessary scripts in the appropriate order to fetch the latest data. It will also update [`LAST_MASTER_UPDATE.txt`][lastmasterup] to record when this complete data update was last run.
 
-**IMPORTANT!**  
-Data fetching scripts require an environment variable `GITHUB_API_TOKEN` containing a valid GitHub [OAuth token][oauth] or [personal access token][personaltoken].  
-The scripts are only for gathering new data. You do not need them to run to view the visualizations on the sample webpage.
+The scripts are only for gathering new data. You do not need them to run in order to view the webpage visualizations.
 
+[jump2 scripts]: #scripts
 [inputs file]: input_lists.json
 [data dir]: github-data
 [js dir]: ../js/explore
