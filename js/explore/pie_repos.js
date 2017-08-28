@@ -1,9 +1,9 @@
 /* Creates pie chart visualization for webpage */
-function draw_pie_members(areaID) {
+function draw_pie_repos(areaID) {
 
 	// load data file, process data, and draw visualization
-	var url0 = ghDataDir+'/labUsers.json';
-	var url1 = ghDataDir+'/extRepos.json';
+	var url0 = ghDataDir+'/labReposInfo.json';
+	var url1 = ghDataDir+'/extUsers.json';
 	d3.queue()
 		.defer(d3.json, url0)
 		.defer(d3.json, url1)
@@ -17,7 +17,7 @@ function draw_pie_members(areaID) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "LLNL Organization Members";
+		var graphHeader = "LLNL GitHub Repositories";
 
 		data.forEach(function(d) {
 			d.count = +d.count;
@@ -31,7 +31,7 @@ function draw_pie_members(areaID) {
 		var legendRectSize = 18,
 			legendSpacing = 4;
 
-		var color = d3.scaleOrdinal(d3.schemeCategory20c);
+		var color = d3.scaleOrdinal(d3.schemeCategory20b);
 
 		var tip = d3.tip()
 			.attr('class', 'd3-tip')
@@ -39,11 +39,11 @@ function draw_pie_members(areaID) {
 				return [this.getBBox().height / 2, 0]
 			})
 			.html(function(d) {
-				var members = " Members";
+				var repos = " Repos";
 				if (d.data.count == 1) {
-					members = " Member";
+					repos = " Repo";
 				}
-				return d.data.count+members+"<br>"+d.data.label;
+				return d.data.count+repos+"<br>"+d.data.label;
 			});
 
 		var chart = d3.select("."+areaID)
@@ -118,22 +118,22 @@ function draw_pie_members(areaID) {
 
 
 	// Turn json obj into desired working data
-	function reformatData(objLabUsers,objExtRepos) {
-		var userTotal = Object.keys(objLabUsers["data"]).length;
-		var userSubset = new Set();
-		var extRepos = Object.keys(objExtRepos["data"]);
-		extRepos.forEach( function(repo) {
-			if (objExtRepos["data"].hasOwnProperty(repo)) {
-				var labContrib = objExtRepos["data"][repo]["labContributors"]["nodes"];
-				labContrib.forEach( function(member) {
-					userSubset.add(member);
+	function reformatData(objLabRepos,objExtUsers) {
+		var repoTotal = Object.keys(objLabRepos["data"]).length;
+		var repoSubset = new Set();
+		var extUsers = Object.keys(objExtUsers["data"]);
+		extUsers.forEach( function(user) {
+			if (objExtUsers["data"].hasOwnProperty(user)) {
+				var labRepos = objExtUsers["data"][user]["contributedLabRepositories"]["nodes"];
+				labRepos.forEach( function(repo) {
+					repoSubset.add(repo);
 				});
 			}
 		});
-		var subTotal = userSubset.size;
+		var subTotal = repoSubset.size;
 		var data = [
-			{ label: 'No External Repos', count: userTotal-subTotal },
-			{ label: 'Contributing Externally', count: subTotal }
+			{ label: 'Only LLNL Contributors', count: repoTotal-subTotal },
+			{ label: 'External Contributors', count: subTotal }
 		];
 		return data;
 	};

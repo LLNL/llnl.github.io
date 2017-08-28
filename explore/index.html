@@ -11,6 +11,7 @@ layout: default
 <!-- Preset vis display areas -->
 <center>
 <svg class="repoCreationHistory"></svg>
+<br><svg class="pieMembers"></svg><svg class="pieRepos"></svg>
 <br><svg class="repoActivityTotalChart"></svg>
 <br><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
 <br><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
@@ -31,6 +32,8 @@ layout: default
 <script type="text/javascript" src="../js/explore/cloud_licenses.js"></script>
 <script type="text/javascript" src="../js/explore/scatter_repoPulls.js"></script>
 <script type="text/javascript" src="../js/explore/scatter_repoIssues.js"></script>
+<script type="text/javascript" src="../js/explore/pie_members.js"></script>
+<script type="text/javascript" src="../js/explore/pie_repos.js"></script>
 
 <script>
 	// GiHub Data Directory
@@ -53,6 +56,8 @@ layout: default
 	draw_cloud_licenses("licenseCloud");
 	draw_scatter_repoPulls("repoPulls");
 	draw_scatter_repoIssues("repoIssues");
+	draw_pie_members("pieMembers");
+	draw_pie_repos("pieRepos");
 </script>
 
 {% endraw %}
