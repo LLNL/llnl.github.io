@@ -23,6 +23,8 @@ function draw_pie_members(areaID) {
 			d.count = +d.count;
 		});
 
+		var dataTotalCount = data[0].count + data[1].count;
+
 		var margin = {top: 8, right: 8, bottom: 8, left: 8},
 			width = stdTotalWidth - margin.left - margin.right,
 			height = stdTotalHeight - margin.top - margin.bottom,
@@ -43,7 +45,7 @@ function draw_pie_members(areaID) {
 				if (d.data.count == 1) {
 					members = " Member";
 				}
-				return d.data.count+members+"<br>"+d.data.label;
+				return d.data.count+members+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
 			});
 
 		var chart = d3.select("."+areaID)
@@ -112,7 +114,7 @@ function draw_pie_members(areaID) {
 			.attr("x", 0)
 			.attr("y", -25)
 			.attr("text-anchor", "middle")
-			.text(data[0].count + data[1].count);
+			.text(dataTotalCount);
 
 	};
 

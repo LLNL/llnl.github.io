@@ -17,11 +17,13 @@ function draw_pie_repos(areaID) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "LLNL GitHub Repositories";
+		var graphHeader = "LLNL Repositories";
 
 		data.forEach(function(d) {
 			d.count = +d.count;
 		});
+
+		var dataTotalCount = data[0].count + data[1].count;
 
 		var margin = {top: 8, right: 8, bottom: 8, left: 8},
 			width = stdTotalWidth - margin.left - margin.right,
@@ -43,7 +45,7 @@ function draw_pie_repos(areaID) {
 				if (d.data.count == 1) {
 					repos = " Repo";
 				}
-				return d.data.count+repos+"<br>"+d.data.label;
+				return d.data.count+repos+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
 			});
 
 		var chart = d3.select("."+areaID)
@@ -112,7 +114,7 @@ function draw_pie_repos(areaID) {
 			.attr("x", 0)
 			.attr("y", -25)
 			.attr("text-anchor", "middle")
-			.text(data[0].count + data[1].count);
+			.text(dataTotalCount);
 
 	};
 
