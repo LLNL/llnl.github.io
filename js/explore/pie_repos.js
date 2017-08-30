@@ -30,7 +30,7 @@ function draw_pie_repos(areaID) {
 			height = stdTotalHeight - margin.top - margin.bottom,
 			radius = d3.min([width-margin.left-margin.right, height-margin.top-margin.bottom]) / 2,
 			donutWidth = 70;
-		var legendRectSize = 18,
+		var legendRectSize = 15,
 			legendSpacing = 4;
 
 		var color = d3.scaleOrdinal(d3.schemeCategory20b);
@@ -77,14 +77,14 @@ function draw_pie_repos(areaID) {
 
 		// Add legend
 		var legend = chart.selectAll('.legend')
-			.data(color.domain())
+			.data(data)
 		  .enter()
 			.append('g')
 			.attr('class', 'legend')
 			.attr('transform', function(d, i) {
 				var height = legendRectSize + legendSpacing;
 				var offset =  -height * color.domain().length / 2;
-				var horz = -4 * legendRectSize;
+				var horz = -6 * legendRectSize;
 				var vert = i * height - offset;
 				return 'translate(' + horz + ',' + vert + ')';
 			});
@@ -98,7 +98,7 @@ function draw_pie_repos(areaID) {
 		legend.append('text')
 			.attr('x', legendRectSize + legendSpacing)
 			.attr('y', legendRectSize - legendSpacing)
-			.text(function(d) { return d; })
+			.text(function(d) { return d3.format(".0%")(d.count/dataTotalCount)+" "+d.label; })
 			.attr("text-anchor", "start");
 
 		// Add title
