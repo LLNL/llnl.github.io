@@ -17,28 +17,29 @@ Software Repositories
 </div>
 
 <section ng-show="repoData" id="repositories" class="flex-container">
-    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.language}}">
+    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}">
         <h4 class="text-center">
-        <a href="{{ repo.html_url }}"> {{ repo.name }} </a>
-        <small>{{ repo.language }}</small>
+        <a href="{{ repo.url }}"> {{ repo.name }} </a>
+        <small><a href="https://github.com/{{ repo.owner.login }}"> {{ repo.owner.login }} </a></small>
+        <small>{{ repo.primaryLanguage.name }}</small>
         </h4>
 
         <p class="text-justify">{{ repo.description }}</p>
 
         <p class="stats text-center">
-            <a href="{{ repo.html_url }}">
+            <a href="{{ repo.url }}">
                 <span class="fa fa-github"></span>
             </a>
 
-            <a href="{{ repo.html_url }}/stargazers">
-                <span class="fa fa-star"></span> {{ repo.stargazers_count }}
+            <a href="{{ repo.url }}/stargazers">
+                <span class="fa fa-star"></span> {{ repo.stargazers.totalCount }}
             </a>
 
-            <a href="{{ repo.html_url }}/network">
-                <span class="fa fa-code-fork"></span> {{ repo.forks_count }}
+            <a href="{{ repo.url }}/network">
+                <span class="fa fa-code-fork"></span> {{ repo.forks.totalCount }}
             </a>
 
-            <a ng-if="repo.homepage" href="{{ repo.homepage }}/">
+            <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}">
                 <span class="fa fa-globe"></span>
             </a>
         </p>

@@ -81,8 +81,8 @@ def query_github(authhead,gitquery,requestCount=0):
 	if statusNum==202 :
 		if requestCount >= maxRequests :
 			return maxRequestFailure(maxRequests,tab)
-		print tab+"Query accepted but not yet processed. Trying again in 5sec..."
-		time.sleep(5)
+		print tab+"Query accepted but not yet processed. Trying again in 3sec..."
+		time.sleep(3)
 		return query_github(authhead,gitquery,requestCount)
 	# Check for error responses
 	if statusNum>=400 :
@@ -91,8 +91,8 @@ def query_github(authhead,gitquery,requestCount=0):
 	if statusNum==502 or statusNum==503 :
 		if requestCount >= maxRequests :
 			return maxRequestFailure(maxRequests,tab)
-		print tab+"Server error. Trying again in 5sec..."
-		time.sleep(5)
+		print tab+"Server error. Trying again in 3sec..."
+		time.sleep(3)
 		return query_github(authhead,gitquery,requestCount)
 
 	print tab+"Data recieved!"
@@ -148,8 +148,8 @@ def query_githubrest(authhead,endpoint,requestCount=0): # e.g. endpoint = '/user
 	if statusNum==202 :
 		if requestCount >= maxRequests :
 			return maxRequestFailure(maxRequests,tab)
-		print tab+"Query accepted but not yet processed. Trying again in 5sec..."
-		time.sleep(5)
+		print tab+"Query accepted but not yet processed. Trying again in 3sec..."
+		time.sleep(3)
 		return query_githubrest(authhead,endpoint,requestCount)
 	# Check for error responses
 	resultChecker = "".join(result.split())
@@ -159,8 +159,8 @@ def query_githubrest(authhead,endpoint,requestCount=0): # e.g. endpoint = '/user
 	if statusNum==502 or statusNum==503 :
 		if requestCount >= maxRequests :
 			return maxRequestFailure(maxRequests,tab)
-		print tab+"Server error. Trying again in 5sec..."
-		time.sleep(5)
+		print tab+"Server error. Trying again in 3sec..."
+		time.sleep(3)
 		return query_githubrest(authhead,endpoint,requestCount)
 
 	print tab+"Data recieved!"
