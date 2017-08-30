@@ -4,6 +4,9 @@ query {
       nodes {
         nameWithOwner
         name
+        owner {
+          login
+        }
         url
         stargazers {
           totalCount
@@ -13,6 +16,9 @@ query {
         }
         homepageUrl
         description
+        primaryLanguage {
+          name
+        }
       }
       pageInfo {
         endCursor

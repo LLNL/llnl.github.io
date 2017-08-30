@@ -4,8 +4,8 @@ angular.module('app', [])
         $scope.userLoaded = false;
         $scope.username = "llnl";
 
-        var getInputLists = function() {
-            return $http.get("./explore/input_lists.json", {
+        var getRepoInfo = function() {
+            return $http.get("./explore/github-data/labReposInfo.json", {
                     cache: true
                 })
                 .then(function (res) {
@@ -13,59 +13,35 @@ angular.module('app', [])
                 });
         }
 
-        var myDataPromise = getInputLists();
-        myDataPromise.then( function(dataLists) {
-
-            $scope.orgs = dataLists.orgs;
-            $scope.repos = dataLists.repos;
-
-            angular.forEach($scope.orgs, function(value, key) {
-                    console.log(value);
-                    $http.get("https://api.github.com/users/" + value, {
-                            cache: true
-                        })
-                        .success(function(data) {
-                            $scope.userData = data;
-                            console.log(data);
-        
-                            var max_per_page = 100;
-                            var per_page = Math.min(data.public_repos, max_per_page)
-                            var num_pages = Math.ceil(data.public_repos / per_page);
-        
-                            loadOrganizationRepos(num_pages, per_page);
-                        });
+        var getRepoLangs = function() {
+            return $http.get("./explore/github-data/labRepos_Languages.json", {
+                    cache: true
+                })
+                .then(function (res) {
+                    return res.data;
                 });
-        
-                $scope.repoData = [];
-                var loadOrganizationRepoPage = function(page = 1, num_per_page = 100) {
-                    var query = "?per_page=" + num_per_page + "&page=" + page;
-        
-                    $http.get($scope.userData.repos_url + query, {
-                            cache: true
-                        })
-                        .success(function(data) {
-                            $scope.repoData = $scope.repoData.concat(data);
-                            console.log(data);
-                        });
-                };
-                var loadOrganizationRepos = function(num_pages, num_per_page) {
-                    // Function for aggregating across all pages in an organization
-                    for (var i = 1; i <= num_pages; i++) {
-                        loadOrganizationRepoPage(i, num_per_page);
-                    }
-                };
-        
-                angular.forEach($scope.repos, function(value, key) {
-                    $http.get("https://api.github.com/repos/" + value, {
-                            cache: true
-                        })
-                        .success(function(data) {
-                            $scope.repoData = $scope.repoData.concat(data);
-                            console.log(data);
-                            console.log($scope.userData.repos_url);
-                        });
-                });
-        
-                $scope.predicate = '-stargazers_count';
+        }
+
+        function sortByKey(array, key) {
+            return array.sort(function(a, b) {
+                var x = a[key].toLowerCase(); var y = b[key].toLowerCase();
+                return ((x < y) ? -1 : ((x > y) ? 1 : 0));
             });
+        }
+
+        var myDataPromise = getRepoInfo();
+        myDataPromise.then( function(reposObj) {
+            $scope.repos = Object.keys(reposObj.data);
+            $scope.repoData = [];
+            angular.forEach($scope.repos, function(value, key) {
+                var data = reposObj["data"][value];
+                if (data.primaryLanguage == null) {
+                    data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
+                }
+                $scope.repoData.push(data);
+                console.log(data);
+            });
+            $scope.repoData = sortByKey($scope.repoData,"name")
+        });
+
     }]);
