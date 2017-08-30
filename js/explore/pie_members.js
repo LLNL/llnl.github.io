@@ -92,8 +92,8 @@ function draw_pie_members(areaID) {
 		legend.append('rect')
 			.attr('width', legendRectSize)
 			.attr('height', legendRectSize)
-			.style('fill', color)
-			.style('stroke', color);
+			.style('fill', function(d) {return color(d.label)})
+			.style('stroke', function(d) {return color(d.label)});
 		// Text
 		legend.append('text')
 			.attr('x', legendRectSize + legendSpacing)
@@ -134,8 +134,8 @@ function draw_pie_members(areaID) {
 		});
 		var subTotal = userSubset.size;
 		var data = [
-			{ label: 'No External Repos', count: userTotal-subTotal },
-			{ label: 'Contributing Externally', count: subTotal }
+			{ label: 'Contributing Externally', count: subTotal },
+			{ label: 'No External Repos', count: userTotal-subTotal }
 		];
 		return data;
 	};

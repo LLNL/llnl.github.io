@@ -92,8 +92,8 @@ function draw_pie_repos(areaID) {
 		legend.append('rect')
 			.attr('width', legendRectSize)
 			.attr('height', legendRectSize)
-			.style('fill', color)
-			.style('stroke', color);
+			.style('fill', function(d) {return color(d.label)})
+			.style('stroke', function(d) {return color(d.label)});
 		// Text
 		legend.append('text')
 			.attr('x', legendRectSize + legendSpacing)
@@ -134,8 +134,8 @@ function draw_pie_repos(areaID) {
 		});
 		var subTotal = repoSubset.size;
 		var data = [
-			{ label: 'Only LLNL Contributors', count: repoTotal-subTotal },
-			{ label: 'External Contributors', count: subTotal }
+			{ label: 'External Contributors', count: subTotal },
+			{ label: 'Only LLNL Contributors', count: repoTotal-subTotal }
 		];
 		return data;
 	};
