@@ -17,7 +17,7 @@ function draw_pie_members(areaID) {
 	// Draw graph from data
 	function drawGraph(data, areaID) {
 
-		var graphHeader = "LLNL Organization Members";
+		var graphHeader = "LLNL Org. Members";
 
 		data.forEach(function(d) {
 			d.count = +d.count;

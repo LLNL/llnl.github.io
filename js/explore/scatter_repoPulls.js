@@ -22,7 +22,7 @@ function draw_scatter_repoPulls(areaID) {
 			d.valueY = +d.valueY;
 		});
 
-		var margin = stdMargin,
+		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom+2, left: stdMargin.left+4},
 			width = stdWidth,
 			height = stdHeight;
 
@@ -102,7 +102,7 @@ function draw_scatter_repoPulls(areaID) {
 		chart.append("text")
 			.attr("class", "axistitle")
 			.attr("transform", "rotate(-90)")
-			.attr("y", 0 - margin.left + (margin.left / 4))
+			.attr("y", 0 - margin.left + (margin.left / 3))
 			.attr("x", 0 - (height / 2))
 			.attr("text-anchor", "middle")
 			.text("Open");
