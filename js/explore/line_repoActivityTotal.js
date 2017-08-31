@@ -38,27 +38,15 @@ function draw_line_repoActivityTotal(areaID) {
 
 		var dToday = x.domain()[1];
 		// Supercomputing
-		var dSupercomp = getYearDate("11-18",dToday);
+		var dSupercomp = "11-18";
 		// Thanksgiving
-		var dThnxgiv = getYearDate("11-25",dToday);
+		var dThnxgiv = "11-25";
 		// Christmas
-		var dXmas = getYearDate("12-25",dToday);
+		var dXmas = "12-25";
 
-		function addDateLine(dateObj,label) {
-			chart.append("path")
-				.datum([
-					{date:dateObj, value:y.domain()[0]},
-					{date:dateObj, value:y.domain()[1]}
-					])
-				.attr("class", "refline")
-				.attr("d", valueline);
-			chart.append("text")
-				.attr("class", "reftext")
-				.attr("transform", "rotate(-90)")
-				.attr("y",  x(dateObj)-4 )
-				.attr("x", 0 - (height / 4))
-				.attr("text-anchor", "middle")
-				.text(label);
+		function addDateLine(dateString,label) {
+			var dateObj = getYearDate(dateString,dToday);
+			drawDateLine(dateObj,label,chart,x,y,height,valueline);
 		}
 
 		var xAxis = d3.axisBottom()

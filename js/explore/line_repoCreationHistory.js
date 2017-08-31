@@ -22,27 +22,13 @@ function draw_line_repoCreationHistory(areaID) {
 		var formatTime = d3.timeFormat("%Y-%m-%d");
 
 		// Initial release of Git
-		var gitrelease = parseTime("2005-04-07");
+		var gitrelease = "2005-04-07";
 		// GitHub founded
-		var ghfounded = parseTime("2008-02-08");
+		var ghfounded = "2008-02-08";
 
-		function addDateLine(dateObj,label,tipObj) {
-			chart.append("path")
-				.datum([
-					{date:dateObj, value:y.domain()[0]},
-					{date:dateObj, value:y.domain()[1]}
-					])
-				.attr("class", "refline")
-				.attr("d", valueline)
-				.on('mouseover', tipObj.show)
-				.on('mouseout', tipObj.hide);
-			chart.append("text")
-				.attr("class", "reftext")
-				.attr("transform", "rotate(-90)")
-				.attr("y",  x(dateObj)-4 )
-				.attr("x", 0 - (height / 4))
-				.attr("text-anchor", "middle")
-				.text(label);
+		function addDateLine(dateString,label) {
+			var dateObj = parseTime(dateString);
+			drawDateLine(dateObj,label,chart,x,y,height,valueline);
 		}
 
 		data.forEach(function(d) {
@@ -102,13 +88,6 @@ function draw_line_repoCreationHistory(areaID) {
 				}
 				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
-
-		var gittip = d3.tip()
-			.attr('class', 'd3-tip')
-			.html("<sub>["+formatTime(gitrelease)+"]</sub>"+"<br>"+"Git Released");
-		var ghtip = d3.tip()
-			.attr('class', 'd3-tip')
-			.html("<sub>["+formatTime(ghfounded)+"]</sub>"+"<br>"+"GitHub Founded");
 		
 		var valueline = d3.line()
 			.x(function(d) { return x(d.date); })
@@ -121,8 +100,6 @@ function draw_line_repoCreationHistory(areaID) {
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		chart.call(tip);
-		chart.call(gittip);
-		chart.call(ghtip);
 		
 		// Add the x axis
 		chart.append("g")
@@ -136,8 +113,8 @@ function draw_line_repoCreationHistory(areaID) {
 			.call(yAxis);
 
 		// Draw reference date lines
-		addDateLine(gitrelease,"Git Released",gittip);
-		addDateLine(ghfounded,"GitHub Founded",ghtip);
+		addDateLine(gitrelease,"Git Released");
+		addDateLine(ghfounded,"GitHub Founded");
 
 		// Add title
 		chart.append("text")
