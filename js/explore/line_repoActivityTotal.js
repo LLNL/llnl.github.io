@@ -10,7 +10,7 @@ function draw_line_repoActivityTotal(areaID) {
 
 	var parseTime = d3.timeParse("%Y-%m-%d");
 	var formatTime = d3.timeFormat("%Y-%m-%d");
-	
+
 
 	// Draw graph from data
 	function drawGraph(data, areaID) {
@@ -25,12 +25,12 @@ function draw_line_repoActivityTotal(areaID) {
 		var margin = {top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left*1.15},
 			width = (stdTotalWidth*2) - margin.left - margin.right,
 			height = stdHeight;
-		
+
 		var x = d3.scaleTime()
 			.clamp(true)
 			.domain(d3.extent(data, function(d) { return d.date; }))
 			.range([0, width]);
-		
+
 		var y = d3.scaleLinear()
 			.domain([0, d3.max(data, function(d) { return d.value; })])
 			.range([height, 0])
@@ -46,7 +46,7 @@ function draw_line_repoActivityTotal(areaID) {
 
 		var xAxis = d3.axisBottom()
 			.scale(x);
-		
+
 		var yAxis = d3.axisLeft()
 			.scale(y);
 
@@ -65,7 +65,7 @@ function draw_line_repoActivityTotal(areaID) {
 				}
 				return "<sub>[Week of "+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
-		
+
 		var valueline = d3.line()
 			.x(function(d) { return x(d.date); })
 			.y(function(d) { return y(d.value); });
@@ -77,13 +77,13 @@ function draw_line_repoActivityTotal(areaID) {
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		chart.call(tip);
-		
+
 		// Add the x axis
 		chart.append("g")
 			.attr("class", "x axis")
 			.attr("transform", "translate(0," + height + ")")
 			.call(xAxis);
-		
+
 		// Add the y axis
 		chart.append("g")
 			.attr("class", "y axis")
@@ -105,7 +105,7 @@ function draw_line_repoActivityTotal(areaID) {
 			.attr("x", 0 - (height / 2))
 			.attr("text-anchor", "middle")
 			.text("Commits");
-		
+
 		// Draw fill
 		chart.append("path")
 			.datum(data)
@@ -149,7 +149,7 @@ function draw_line_repoActivityTotal(areaID) {
 			.attr("x", 0 - (height / 4))
 			.attr("text-anchor", "middle")
 			.text("Thanksgiving");
-		//    Thanksgiving
+		//    Christmas
 		chart.append("path")
 			.datum([
 				{date:dXmas, value:y.domain()[0]},
