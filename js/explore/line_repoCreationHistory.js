@@ -26,6 +26,25 @@ function draw_line_repoCreationHistory(areaID) {
 		// GitHub founded
 		var ghfounded = parseTime("2008-02-08");
 
+		function addDateLine(dateObj,label,tipObj) {
+			chart.append("path")
+				.datum([
+					{date:dateObj, value:y.domain()[0]},
+					{date:dateObj, value:y.domain()[1]}
+					])
+				.attr("class", "refline")
+				.attr("d", valueline)
+				.on('mouseover', tipObj.show)
+				.on('mouseout', tipObj.hide);
+			chart.append("text")
+				.attr("class", "reftext")
+				.attr("transform", "rotate(-90)")
+				.attr("y",  x(dateObj)-4 )
+				.attr("x", 0 - (height / 4))
+				.attr("text-anchor", "middle")
+				.text(label);
+		}
+
 		data.forEach(function(d) {
 			d.date = parseTime(d.date);
 			d.value = +d.value;
@@ -117,40 +136,8 @@ function draw_line_repoCreationHistory(areaID) {
 			.call(yAxis);
 
 		// Draw reference date lines
-		//   Git Released
-		chart.append("path")
-			.datum([
-				{date:gitrelease, value:y.domain()[0]},
-				{date:gitrelease, value:y.domain()[1]}
-				])
-			.attr("class", "refline")
-			.attr("d", valueline)
-			.on('mouseover', gittip.show)
-			.on('mouseout', gittip.hide);
-		chart.append("text")
-			.attr("class", "reftext")
-			.attr("transform", "rotate(-90)")
-			.attr("y",  x(gitrelease)-4 )
-			.attr("x", 0 - (height / 4))
-			.attr("text-anchor", "middle")
-			.text("Git Released");
-		//    GitHub Founded
-		chart.append("path")
-			.datum([
-				{date:ghfounded, value:y.domain()[0]},
-				{date:ghfounded, value:y.domain()[1]}
-				])
-			.attr("class", "refline")
-			.attr("d", valueline)
-			.on('mouseover', ghtip.show)
-			.on('mouseout', ghtip.hide);
-		chart.append("text")
-			.attr("class", "reftext")
-			.attr("transform", "rotate(-90)")
-			.attr("y",  x(ghfounded)-4 )
-			.attr("x", 0 - (height / 4))
-			.attr("text-anchor", "middle")
-			.text("GitHub Founded");
+		addDateLine(gitrelease,"Git Released",gittip);
+		addDateLine(ghfounded,"GitHub Founded",ghtip);
 
 		// Add title
 		chart.append("text")
