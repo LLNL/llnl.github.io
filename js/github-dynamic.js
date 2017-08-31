@@ -44,4 +44,6 @@ angular.module('app', [])
             $scope.repoData = sortByKey($scope.repoData,"name")
         });
 
+        $scope.predicate = '-stargazers.totalCount';
+
     }]);
