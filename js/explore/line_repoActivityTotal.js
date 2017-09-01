@@ -38,11 +38,16 @@ function draw_line_repoActivityTotal(areaID) {
 
 		var dToday = x.domain()[1];
 		// Supercomputing
-		var dSupercomp = getYearDate("11-18",dToday);
+		var dSupercomp = "11-18";
 		// Thanksgiving
-		var dThnxgiv = getYearDate("11-25",dToday);
+		var dThnxgiv = "11-25";
 		// Christmas
-		var dXmas = getYearDate("12-25",dToday);
+		var dXmas = "12-25";
+
+		function addDateLine(dateString,label) {
+			var dateObj = getYearDate(dateString,dToday);
+			drawDateLine(dateObj,label,chart,x,y,height,valueline);
+		}
 
 		var xAxis = d3.axisBottom()
 			.scale(x);
@@ -119,51 +124,9 @@ function draw_line_repoActivityTotal(areaID) {
 			.attr("d", valueline);
 
 		// Draw date-of-interest reference lines
-		//    Supercomputing
-		chart.append("path")
-			.datum([
-				{date:dSupercomp, value:y.domain()[0]},
-				{date:dSupercomp, value:y.domain()[1]}
-				])
-			.attr("class", "refline")
-			.attr("d", valueline);
-		chart.append("text")
-			.attr("class", "reftext")
-			.attr("transform", "rotate(-90)")
-			.attr("y",  x(dSupercomp)-4 )
-			.attr("x", 0 - (height / 4))
-			.attr("text-anchor", "middle")
-			.text("Supercomputing");
-		//    Thanksgiving
-		chart.append("path")
-			.datum([
-				{date:dThnxgiv, value:y.domain()[0]},
-				{date:dThnxgiv, value:y.domain()[1]}
-				])
-			.attr("class", "refline")
-			.attr("d", valueline);
-		chart.append("text")
-			.attr("class", "reftext")
-			.attr("transform", "rotate(-90)")
-			.attr("y",  x(dThnxgiv)-4 )
-			.attr("x", 0 - (height / 4))
-			.attr("text-anchor", "middle")
-			.text("Thanksgiving");
-		//    Christmas
-		chart.append("path")
-			.datum([
-				{date:dXmas, value:y.domain()[0]},
-				{date:dXmas, value:y.domain()[1]}
-				])
-			.attr("class", "refline")
-			.attr("d", valueline);
-		chart.append("text")
-			.attr("class", "reftext")
-			.attr("transform", "rotate(-90)")
-			.attr("y",  x(dXmas)-4 )
-			.attr("x", 0 - (height / 4))
-			.attr("text-anchor", "middle")
-			.text("Christmas");
+		addDateLine(dSupercomp,"Supercomputing");
+		addDateLine(dThnxgiv,"Thanksgiving");
+		addDateLine(dXmas,"Christmas");
 
 		// Draw dots
 		chart.selectAll(".circle")
