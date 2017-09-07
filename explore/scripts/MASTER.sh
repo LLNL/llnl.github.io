@@ -30,7 +30,7 @@ function runScript() {
 echo "RUNNING MASTER UPDATE SCRIPT"
 
 # Log start time
-date -I > ../github-data/LAST_MASTER_UPDATE.txt
+date '+%Y-%m-%d' > ../github-data/LAST_MASTER_UPDATE.txt
 echo "Start" >> ../github-data/LAST_MASTER_UPDATE.txt
 date >> ../github-data/LAST_MASTER_UPDATE.txt
 
