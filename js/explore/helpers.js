@@ -26,8 +26,8 @@ function drawDateLine(dateObj,label,chart,x,y,height,valueline) {
 	chart.append("text")
 		.attr("class", "reftext")
 		.attr("transform", "rotate(-90)")
-		.attr("y",  x(dateObj)-4 )
-		.attr("x", 0 - (height / 4))
-		.attr("text-anchor", "middle")
+		.attr("y",  x(dateObj)-6 )
+		.attr("x", 0 - (height / 16))
+		.attr("text-anchor", "end")
 		.text(label);
 }

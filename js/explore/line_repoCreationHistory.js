@@ -113,8 +113,8 @@ function draw_line_repoCreationHistory(areaID) {
 			.call(yAxis);
 
 		// Draw reference date lines
-		addDateLine(gitrelease,"Git Released");
-		addDateLine(ghfounded,"GitHub Founded");
+		addDateLine(gitrelease,"Git Released - ["+gitrelease+"]");
+		addDateLine(ghfounded,"GitHub Founded - ["+ghfounded+"]");
 
 		// Add title
 		chart.append("text")
