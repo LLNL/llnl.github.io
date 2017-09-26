@@ -85,7 +85,7 @@ def query_github(authhead,gitquery,requestCount=0):
 		time.sleep(3)
 		return query_github(authhead,gitquery,requestCount)
 	# Check for error responses
-	if statusNum>=400 :
+	if statusNum>=400 or statusNum==204 :
 		warnings.warn(result, Warning)
 		apiError = True
 	if statusNum==502 or statusNum==503 :
@@ -153,7 +153,7 @@ def query_githubrest(authhead,endpoint,requestCount=0): # e.g. endpoint = '/user
 		return query_githubrest(authhead,endpoint,requestCount)
 	# Check for error responses
 	resultChecker = "".join(result.split())
-	if statusNum>=400 :
+	if statusNum>=400 or statusNum==204 :
 		warnings.warn(result, Warning)
 		apiError = True
 	if statusNum==502 or statusNum==503 :
