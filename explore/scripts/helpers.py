@@ -59,7 +59,7 @@ def query_github(authhead,gitquery,requestCount=0):
 	tab = "    "
 	apiError = False
 	requestCount += 1
-	maxRequests = 5
+	maxRequests = 10
 
 	print(tab+"Sending GraphQL query...")
 	bashcurl = 'curl -iH TMPauthhead -X POST -d TMPgitquery https://api.github.com/graphql'
