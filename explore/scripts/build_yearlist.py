@@ -1,10 +1,10 @@
-import os
+import os.path
 import json
 
 yearDict = {}
 
 # Gather all file name data
-print "Checking GitHub data file names with year stamps..."
+print("Checking GitHub data file names with year stamps...")
 for file in os.listdir("../github-data"):
 	if file.endswith(".json"):
 		nameSplit = file.split(".")
@@ -16,7 +16,7 @@ for file in os.listdir("../github-data"):
 				yearDict[prefix] = []
 			yearDict[prefix].append(yearX)
 
-print "Sorting year data..."
+print("Sorting year data...")
 # Remove duplicate years (though shouldn't be possible) and sort list
 for prefix in yearDict.keys():
 	yearList = yearDict[prefix]
@@ -28,9 +28,9 @@ yearDataString = json.dumps(yearDict, indent=4, sort_keys=True)
 datfilepath = "../github-data/YEARS.json"
 
 # Write year list file
-print "Writing file '"+datfilepath+"'"
+print("Writing file '",datfilepath,"'")
 with open(datfilepath,"w") as fileout:
 	fileout.write(yearDataString)
-print "Wrote file!"
+print("Wrote file!")
 
-print "Done!\n"
+print("Done!\n")
