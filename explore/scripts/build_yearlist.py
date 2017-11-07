@@ -28,7 +28,7 @@ yearDataString = json.dumps(yearDict, indent=4, sort_keys=True)
 datfilepath = "../github-data/YEARS.json"
 
 # Write year list file
-print("Writing file '",datfilepath,"'")
+print("Writing file '%s'" %(datfilepath))
 with open(datfilepath,"w") as fileout:
 	fileout.write(yearDataString)
 print("Wrote file!")

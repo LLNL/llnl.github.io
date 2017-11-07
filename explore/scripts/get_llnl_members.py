@@ -21,8 +21,8 @@ tab = "    "
 
 for org in orglist:
 	pageNum = 1
-	print("\n'"+org+"'")
-	print(tab+"page "+str(pageNum))
+	print("\n'%s'" %(org))
+	print(tab+"page %d" %(pageNum))
 
 	print(tab+"Modifying query...")
 	newqueryOrg = re.sub('ORGNAME', org, query_in)
@@ -33,7 +33,7 @@ for org in orglist:
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
 	if outObj["errors"] :
-		print(tab+"Could not complete '"+org+"'")
+		print(tab+"Could not complete '%s'" %(org))
 		collective["data"].pop(org, None)
 		continue
 
@@ -46,7 +46,7 @@ for org in orglist:
 	hasNext = outObj["data"]["organization"]["members"]["pageInfo"]["hasNextPage"]
 	while hasNext :
 		pageNum += 1
-		print(tab+"page "+str(pageNum))
+		print(tab+"page %d" %(pageNum))
 		cursor = outObj["data"]["organization"]["members"]["pageInfo"]["endCursor"]
 
 		print(tab+"Modifying query...")
@@ -57,7 +57,7 @@ for org in orglist:
 		# Actual query exchange
 		outObj = helpers.query_github(authhead,gitquery)
 		if outObj["errors"] :
-			print(tab+"Could not complete '"+org+"'")
+			print(tab+"Could not complete '%s'" %(org))
 			collective["data"].pop(org, None)
 			continue
 
@@ -67,7 +67,7 @@ for org in orglist:
 			collective["data"][userKey] = user
 		hasNext = outObj["data"]["organization"]["members"]["pageInfo"]["hasNextPage"]
 
-	print("'"+org+"' Done!")
+	print("'%s' Done!" %(org))
 
 print("\nCollective data gathering complete!")
 
@@ -76,7 +76,7 @@ allData["data"] = collective["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '"+datfilepath+"'")
+print("\nWriting file '%s'" %(datfilepath))
 with open(datfilepath,"w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")

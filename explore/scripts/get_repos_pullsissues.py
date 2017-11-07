@@ -12,7 +12,7 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 repolist = []
 print("Getting internal repos ...")
 repolist = dataObj["data"].keys()
-print("Repo list complete. Found "+str(len(repolist))+" repos.")
+print("Repo list complete. Found %d repos." %(len(repolist)))
 repolist.sort()
 
 # Read pretty GraphQL query
@@ -27,7 +27,7 @@ collective = {u'data': {}}
 tab = "    "
 
 for repo in repolist:
-	print("\n'"+repo+"'")
+	print("\n'%s'" %(repo))
 
 	repoSplit = repo.split("/")
 
@@ -40,13 +40,13 @@ for repo in repolist:
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
 	if outObj["errors"] :
-		print(tab+"Could not complete '"+repo+"'")
+		print(tab+"Could not complete '%s'" %(repo))
 		collective["data"].pop(repo, None)
 		continue
 	# Update collective data
 	collective["data"][repo] = outObj["data"]["repository"]
 
-	print("'"+repo+"' Done!")
+	print("'%s' Done!" %(repo))
 
 print("\nCollective data gathering complete!")
 
@@ -55,7 +55,7 @@ allData["data"] = collective["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '"+datfilepath+"'")
+print("\nWriting file '%s'" %(datfilepath))
 with open(datfilepath,"w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")
