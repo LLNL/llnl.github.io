@@ -15,7 +15,7 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 repolist = []
 print("Getting internal repos ...")
 repolist = dataObj["data"].keys()
-print("Repo list complete. Found "+str(len(repolist))+" repos.")
+print("Repo list complete. Found %d repos." %(len(repolist)))
 repolist.sort()
 
 # Read pretty GraphQL query
@@ -38,12 +38,12 @@ for repo in repolist:
 	# History doesn't change, only update new repos or those that had no previous commits
 	if "data" in allData.keys() and repo in allData["data"].keys() :
 		if allData["data"][repo]["firstCommitAt"] :
-			print(tab+"Already recorded data for '"+repo+"'")
+			print(tab+"Already recorded data for '%s'" %(repo))
 			continue
 
 	pageNum = 1
-	print("\n'"+repo+"'")
-	print(tab+"page "+str(pageNum))
+	print("\n'%s'" %(repo))
+	print(tab+"page %d" %(pageNum))
 
 	repoSplit = repo.split("/")
 
@@ -58,7 +58,7 @@ for repo in repolist:
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
 	if outObj["errors"] :
-		print(tab+"Could not complete '"+repo+"'")
+		print(tab+"Could not complete '%s'" %(repo))
 		collective["data"].pop(repo, None)
 		continue
 
@@ -76,7 +76,7 @@ for repo in repolist:
 	# Actual query exchange
 	outObj = helpers.query_githubrest(authhead,gitquery)
 	if outObj["errors"] :
-		print(tab+"Could not get pre-GitHub commits for '"+repo+"'")
+		print(tab+"Could not get pre-GitHub commits for '%s'" %(repo))
 		outObj["data"] = []
 
 	# Update collective data
@@ -100,7 +100,7 @@ for repo in repolist:
 		# Actual query exchange
 		outObj = helpers.query_githubrest(authhead,gitquery)
 		if outObj["errors"] :
-			print(tab+"Could not complete '"+repo+"'")
+			print(tab+"Could not complete '%s'" %(repo))
 			collective["data"].pop(repo, None)
 			continue
 
@@ -112,7 +112,7 @@ for repo in repolist:
 	hasNext = ("next" in outObj)
 	while hasNext :
 		pageNum += 1
-		print(tab+"page "+str(pageNum))
+		print(tab+"page %d" %(pageNum))
 
 		print(tab+"Modifying query...")
 		newquery = gitquery+"&page="+str(pageNum)
@@ -121,7 +121,7 @@ for repo in repolist:
 		# Actual query exchange
 		outObj = helpers.query_githubrest(authhead,newquery)
 		if outObj["errors"] :
-			print(tab+"Could not complete '"+repo+"'")
+			print(tab+"Could not complete '%s'" %(repo))
 			collective["data"].pop(repo, None)
 			continue
 		
@@ -140,7 +140,7 @@ for repo in repolist:
 	collective["data"][repo]["firstCommitAt"] = firstdate
 
 	del collective["data"][repo]["commitTimestamps"]
-	print("'"+repo+"' Done!")
+	print("'%s' Done!" %(repo))
 
 print("\nCollective data gathering complete!")
 
@@ -152,7 +152,7 @@ for repo in collective["data"].keys() :
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '"+datfilepath+"'")
+print("\nWriting file '%s'" %(datfilepath))
 with open(datfilepath,"w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")

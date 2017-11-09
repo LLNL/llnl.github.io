@@ -13,9 +13,9 @@ import warnings
 def read_existing(filepath):
 	dataObj = {}
 	if not os.path.isfile(filepath) :
-		print("No existing data file '"+filepath+"', will create new file.")
+		print("No existing data file '%s', will create new file." %(filepath))
 	else :
-		print("Reading existing data file '"+filepath+"' ...")
+		print("Reading existing data file '%s' ..." %(filepath))
 		with open(filepath,"r") as q:
 			data_raw = q.read()
 		dataObj = json.loads(data_raw)
@@ -25,8 +25,8 @@ def read_existing(filepath):
 # Read json data file into dictionary
 def read_json(filepath):
 	if not os.path.isfile(filepath) :
-		raise RuntimeError("Data file '"+filepath+"' does not exist.")
-	print("Reading '"+filepath+"' ...")
+		raise RuntimeError("Data file '%s' does not exist." %(filepath))
+	print("Reading '%s' ..." %(filepath))
 	with open(filepath,"r") as q:
 		data_raw = q.read()
 	dataObj = json.loads(data_raw)
@@ -37,8 +37,8 @@ def read_json(filepath):
 # Read pretty GraphQL query into single line string variable
 def read_gql(filepath):
 	if not os.path.isfile(filepath) :
-		raise RuntimeError("Query '"+filepath+"' does not exist.")
-	print("Reading '"+filepath+"' ...")
+		raise RuntimeError("Query '%s' does not exist." %(filepath))
+	print("Reading '%s' ..." %(filepath))
 	with open(filepath,"r") as q:
 		query_raw = q.read().replace('\n',' ')
 	query_in = ' '.join(query_raw.split())
@@ -201,7 +201,7 @@ def query_githubrest(authhead,endpoint,requestCount=0): # e.g. endpoint = '/user
 
 
 def maxRequestFailure(maxRequests,tab="    "):
-	print(tab+"Query attempted but failed "+str(maxRequests)+" times")
+	print(tab+"Query attempted but failed %d times" %(maxRequests))
 	outObj = json.loads('{ "data": null }')
 	outObj["errors"] = True
 	return outObj
@@ -217,7 +217,7 @@ def awaitReset(utcTimeStamp):
 	print("      "+now.strftime('%c'))
 	print("--- GITHUB NEEDS A BREAK Until UTC Timestamp")
 	print("      "+resetTime.strftime('%c'))
-	print("--- Waiting "+str(waitTime)+" seconds...")
+	print("--- Waiting %d seconds..." %(waitTime))
 	time.sleep(waitTime)
 	print("--- READY!")
 

@@ -12,7 +12,7 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 repolist = []
 print("Getting internal repos ...")
 repolist = dataObj["data"].keys()
-print("Repo list complete. Found "+str(len(repolist))+" repos.")
+print("Repo list complete. Found %d repos." %(len(repolist)))
 repolist.sort()
 
 # Read lab user data file (to use as member list)
@@ -22,7 +22,7 @@ dataObj = helpers.read_json("../github-data/labUsers.json")
 memberlist = []
 print("Getting LLNL members ...")
 memberlist = dataObj["data"].keys()
-print("Member list complete. Found "+str(len(memberlist))+" users.")
+print("Member list complete. Found %d users." %(len(memberlist)))
 memberlist.sort()
 
 # Read pretty GraphQL query
@@ -38,8 +38,8 @@ tab = "    "
 
 for repo in repolist:
 	pageNum = 1
-	print("\n'"+repo+"'")
-	print(tab+"page "+str(pageNum))
+	print("\n'%s'" %(repo))
+	print(tab+"page %d" %(pageNum))
 
 	repoSplit = repo.split("/")
 
@@ -53,7 +53,7 @@ for repo in repolist:
 	# Actual query exchange
 	outObj = helpers.query_github(authhead,gitquery)
 	if outObj["errors"] :
-		print(tab+"Could not complete '"+repo+"'")
+		print(tab+"Could not complete '%s'" %(repo))
 		collective["data"].pop(repo, None)
 		continue
 
@@ -72,7 +72,7 @@ for repo in repolist:
 	hasNext = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["hasNextPage"]
 	while hasNext :
 		pageNum += 1
-		print(tab+"page "+str(pageNum))
+		print(tab+"page %d" %(pageNum))
 		cursor = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["endCursor"]
 
 		print(tab+"Modifying query...")
@@ -83,7 +83,7 @@ for repo in repolist:
 		# Actual query exchange
 		outObj = helpers.query_github(authhead,gitquery)
 		if outObj["errors"] :
-			print(tab+"Could not complete '"+repo+"'")
+			print(tab+"Could not complete '%s'" %(repo))
 			collective["data"].pop(repo, None)
 			continue
 
@@ -100,7 +100,7 @@ for repo in repolist:
 		
 		hasNext = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["hasNextPage"]
 
-	print("'"+repo+"' Done!")
+	print("'%s' Done!" %(repo))
 
 print("\nCollective data gathering complete!")
 
@@ -109,7 +109,7 @@ allData["data"] = collective["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '"+datfilepath+"'")
+print("\nWriting file '%s'" %(datfilepath))
 with open(datfilepath,"w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")
