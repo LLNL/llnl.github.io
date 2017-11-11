@@ -21,19 +21,19 @@ tab = "    "
 
 for org in orglist:
 	pageNum = 1
-	print("\n'%s'" %(org))
-	print(tab+"page %d" %(pageNum))
+	print("\n'%s'" % (org))
+	print(tab + "page %d" % (pageNum))
 
-	print(tab+"Modifying query...")
+	print(tab + "Modifying query...")
 	newqueryOrg = re.sub('ORGNAME', org, query_in)
 	newquery = re.sub(' PGCURS', '', newqueryOrg)
 	gitquery = json.dumps({'query': newquery})
-	print(tab+"Query ready!")
+	print(tab + "Query ready!")
 
 	# Actual query exchange
-	outObj = helpers.query_github(authhead,gitquery)
-	if outObj["errors"] :
-		print(tab+"Could not complete '%s'" %(org))
+	outObj = helpers.query_github(authhead, gitquery)
+	if outObj["errors"]:
+		print(tab + "Could not complete '%s'" % (org))
 		collective["data"].pop(org, None)
 		continue
 
@@ -44,20 +44,20 @@ for org in orglist:
 
 	# Paginate if needed
 	hasNext = outObj["data"]["organization"]["members"]["pageInfo"]["hasNextPage"]
-	while hasNext :
+	while hasNext:
 		pageNum += 1
-		print(tab+"page %d" %(pageNum))
+		print(tab + "page %d" % (pageNum))
 		cursor = outObj["data"]["organization"]["members"]["pageInfo"]["endCursor"]
 
-		print(tab+"Modifying query...")
-		newquery = re.sub(' PGCURS', ', after:"'+cursor+'"', newqueryOrg)
+		print(tab + "Modifying query...")
+		newquery = re.sub(' PGCURS', ', after:"' + cursor + '"', newqueryOrg)
 		gitquery = json.dumps({'query': newquery})
-		print(tab+"Query ready!")
+		print(tab + "Query ready!")
 
 		# Actual query exchange
-		outObj = helpers.query_github(authhead,gitquery)
-		if outObj["errors"] :
-			print(tab+"Could not complete '%s'" %(org))
+		outObj = helpers.query_github(authhead, gitquery)
+		if outObj["errors"]:
+			print(tab + "Could not complete '%s'" % (org))
 			collective["data"].pop(org, None)
 			continue
 
@@ -67,7 +67,7 @@ for org in orglist:
 			collective["data"][userKey] = user
 		hasNext = outObj["data"]["organization"]["members"]["pageInfo"]["hasNextPage"]
 
-	print("'%s' Done!" %(org))
+	print("'%s' Done!" % (org))
 
 print("\nCollective data gathering complete!")
 
@@ -76,8 +76,8 @@ allData["data"] = collective["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '%s'" %(datfilepath))
-with open(datfilepath,"w") as fileout:
+print("\nWriting file '%s'" % (datfilepath))
+with open(datfilepath, "w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")
 
