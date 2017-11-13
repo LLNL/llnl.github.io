@@ -13,7 +13,7 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 repolist = []
 print("Getting internal repos ...")
 repolist = dataObj["data"].keys()
-print("Repo list complete. Found %d repos." %(len(repolist)))
+print("Repo list complete. Found %d repos." % (len(repolist)))
 repolist.sort()
 
 # Rest endpoint query
@@ -28,31 +28,31 @@ collective = {u'data': {}}
 tab = "    "
 
 for repo in repolist:
-	print("\n'%s'" %(repo))
+	print("\n'%s'" % (repo))
 
 	repoSplit = repo.split("/")
 
-	print(tab+"Modifying query...")
+	print(tab + "Modifying query...")
 	gitquery = re.sub('OWNNAME', repoSplit[0], query_in)
 	gitquery = re.sub('REPONAME', repoSplit[1], gitquery)
-	print(tab+"Query ready!")
+	print(tab + "Query ready!")
 
 	# Actual query exchange
-	outObj = helpers.query_githubrest(authhead,gitquery)
-	if outObj["errors"] :
-		print(tab+"Could not complete '%s'" %(repo))
+	outObj = helpers.query_githubrest(authhead, gitquery)
+	if outObj["errors"]:
+		print(tab + "Could not complete '%s'" % (repo))
 		collective["data"].pop(repo, None)
 		continue
 
 	# Convert unix timestamps into standard dates
-	for item in outObj["data"] :
+	for item in outObj["data"]:
 		weekinfo = datetime.utcfromtimestamp(item["week"]).isocalendar()
-		weekstring = str(weekinfo[0])+"-W"+str(weekinfo[1])+"-1"
+		weekstring = str(weekinfo[0]) + "-W" + str(weekinfo[1]) + "-1"
 		item["week"] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime('%Y-%m-%d')
 
 	# Update collective data
 	collective["data"][repo] = outObj["data"]
-	print("'%s' Done!" %(repo))
+	print("'%s' Done!" % (repo))
 
 print("\nCollective data gathering complete!")
 
@@ -61,8 +61,8 @@ allData["data"] = collective["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '%s'" %(datfilepath))
-with open(datfilepath,"w") as fileout:
+print("\nWriting file '%s'" % (datfilepath))
+with open(datfilepath, "w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")
 

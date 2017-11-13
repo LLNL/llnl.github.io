@@ -9,10 +9,10 @@ for file in os.listdir("../github-data"):
 	if file.endswith(".json"):
 		nameSplit = file.split(".")
 		# Must have format "somePrefix.0000.json"
-		if not nameSplit[0] == "YEARS" and nameSplit[1].isdigit() :
+		if not nameSplit[0] == "YEARS" and nameSplit[1].isdigit():
 			prefix = nameSplit[0]
 			yearX = int(nameSplit[1])
-			if not prefix in yearDict.keys():
+			if prefix not in yearDict.keys():
 				yearDict[prefix] = []
 			yearDict[prefix].append(yearX)
 
@@ -28,8 +28,8 @@ yearDataString = json.dumps(yearDict, indent=4, sort_keys=True)
 datfilepath = "../github-data/YEARS.json"
 
 # Write year list file
-print("Writing file '%s'" %(datfilepath))
-with open(datfilepath,"w") as fileout:
+print("Writing file '%s'" % (datfilepath))
+with open(datfilepath, "w") as fileout:
 	fileout.write(yearDataString)
 print("Wrote file!")
 

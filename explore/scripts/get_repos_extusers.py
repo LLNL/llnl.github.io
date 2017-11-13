@@ -12,7 +12,7 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 repolist = []
 print("Getting internal repos ...")
 repolist = dataObj["data"].keys()
-print("Repo list complete. Found %d repos." %(len(repolist)))
+print("Repo list complete. Found %d repos." % (len(repolist)))
 repolist.sort()
 
 # Read lab user data file (to use as member list)
@@ -22,7 +22,7 @@ dataObj = helpers.read_json("../github-data/labUsers.json")
 memberlist = []
 print("Getting LLNL members ...")
 memberlist = dataObj["data"].keys()
-print("Member list complete. Found %d users." %(len(memberlist)))
+print("Member list complete. Found %d users." % (len(memberlist)))
 memberlist.sort()
 
 # Read pretty GraphQL query
@@ -38,69 +38,69 @@ tab = "    "
 
 for repo in repolist:
 	pageNum = 1
-	print("\n'%s'" %(repo))
-	print(tab+"page %d" %(pageNum))
+	print("\n'%s'" % (repo))
+	print(tab + "page %d" % (pageNum))
 
 	repoSplit = repo.split("/")
 
-	print(tab+"Modifying query...")
+	print(tab + "Modifying query...")
 	newqueryRep = re.sub('OWNNAME', repoSplit[0], query_in)
 	newqueryRep = re.sub('REPONAME', repoSplit[1], newqueryRep)
 	newquery = re.sub(' PGCURS', '', newqueryRep)
 	gitquery = json.dumps({'query': newquery})
-	print(tab+"Query ready!")
+	print(tab + "Query ready!")
 
 	# Actual query exchange
-	outObj = helpers.query_github(authhead,gitquery)
-	if outObj["errors"] :
-		print(tab+"Could not complete '%s'" %(repo))
+	outObj = helpers.query_github(authhead, gitquery)
+	if outObj["errors"]:
+		print(tab + "Could not complete '%s'" % (repo))
 		collective["data"].pop(repo, None)
 		continue
 
 	# Update collective data
 	for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 		userKey = user["login"]
-		if userKey in memberlist :
+		if userKey in memberlist:
 			continue
-		if not userKey in collective["data"].keys() :
+		if userKey not in collective["data"].keys():
 			collective["data"][userKey] = user
-			collective["data"][userKey]["contributedLabRepositories"] = {"nodes":[]}
+			collective["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 		collective["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
 		collective["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 
 	# Paginate if needed
 	hasNext = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["hasNextPage"]
-	while hasNext :
+	while hasNext:
 		pageNum += 1
-		print(tab+"page %d" %(pageNum))
+		print(tab + "page %d" % (pageNum))
 		cursor = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["endCursor"]
 
-		print(tab+"Modifying query...")
-		newquery = re.sub(' PGCURS', ', after:"'+cursor+'"', newqueryRep)
+		print(tab + "Modifying query...")
+		newquery = re.sub(' PGCURS', ', after:"' + cursor + '"', newqueryRep)
 		gitquery = json.dumps({'query': newquery})
-		print(tab+"Query ready!")
+		print(tab + "Query ready!")
 
 		# Actual query exchange
-		outObj = helpers.query_github(authhead,gitquery)
-		if outObj["errors"] :
-			print(tab+"Could not complete '%s'" %(repo))
+		outObj = helpers.query_github(authhead, gitquery)
+		if outObj["errors"]:
+			print(tab + "Could not complete '%s'" % (repo))
 			collective["data"].pop(repo, None)
 			continue
 
 		# Update collective data
 		for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 			userKey = user["login"]
-			if userKey in memberlist :
+			if userKey in memberlist:
 				continue
-			if not userKey in collective["data"].keys() :
+			if userKey not in collective["data"].keys():
 				collective["data"][userKey] = user
-				collective["data"][userKey]["contributedLabRepositories"] = {"nodes":[]}
+				collective["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 			collective["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
 			collective["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
-		
+
 		hasNext = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["hasNextPage"]
 
-	print("'%s' Done!" %(repo))
+	print("'%s' Done!" % (repo))
 
 print("\nCollective data gathering complete!")
 
@@ -109,8 +109,8 @@ allData["data"] = collective["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '%s'" %(datfilepath))
-with open(datfilepath,"w") as fileout:
+print("\nWriting file '%s'" % (datfilepath))
+with open(datfilepath, "w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")
 
