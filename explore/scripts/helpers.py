@@ -130,7 +130,7 @@ def query_githubrest(authhead, endpoint, requestCount=0):  # e.g. endpoint = '/u
 	tab = "    "
 	apiError = False
 	requestCount += 1
-	maxRequests = 5
+	maxRequests = 10
 
 	print(tab + "Sending REST query...")
 	bashcurl = 'curl -iH TMPauthhead https://api.github.com' + endpoint
