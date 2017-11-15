@@ -12,9 +12,8 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
-repolist = dataObj["data"].keys()
+repolist = sorted(dataObj["data"].keys())
 print("Repo list complete. Found %d repos." % (len(repolist)))
-repolist.sort()
 
 # Rest endpoint query
 query_in = "/repos/OWNNAME/REPONAME/stats/commit_activity"

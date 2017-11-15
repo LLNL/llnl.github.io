@@ -11,9 +11,8 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
-repolist = dataObj["data"].keys()
+repolist = sorted(dataObj["data"].keys())
 print("Repo list complete. Found %d repos." % (len(repolist)))
-repolist.sort()
 
 # Read pretty GraphQL query
 query_in = helpers.read_gql("../queries/repo-Licenses.gql")
