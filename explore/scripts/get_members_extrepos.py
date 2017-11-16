@@ -11,9 +11,8 @@ dataObj = helpers.read_json("../github-data/labUsers.json")
 # Populate member list
 memberlist = []
 print("Getting LLNL members ...")
-memberlist = dataObj["data"].keys()
+memberlist = sorted(dataObj["data"].keys())
 print("Member list complete. Found %d users." % (len(memberlist)))
-memberlist.sort()
 
 # Read repo info data file (to use as repo list)
 dataObj = helpers.read_json("../github-data/labReposInfo.json")
@@ -21,9 +20,8 @@ dataObj = helpers.read_json("../github-data/labReposInfo.json")
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
-repolist = dataObj["data"].keys()
+repolist = sorted(dataObj["data"].keys())
 print("Repo list complete. Found %d repos." % (len(repolist)))
-repolist.sort()
 
 # Read pretty GraphQL query
 query_in = helpers.read_gql("../queries/user-Repos.gql")
