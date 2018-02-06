@@ -53,21 +53,27 @@ If you are an employee at LLNL, and have 2FA enabled, congratulations, you are e
 
 3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people) page make your membership `Public`.
 
-4. Welcome to the organization!
+4. Review the "Working with LLNL Repositories" information below.
+
+5. Welcome to the organization!
 
 ### Working with LLNL Repositories
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
 
-#### Private Repositories
+Reminder, that all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy.
 
-The LLNL GitHub Organization has a limited number (currently 50) of private repositories available for LLNL Employees to host software not ready or not applicable for unlimited public release. In general, we would like to encourage that all open source work be done completely in the open, but we want to be able to provide the flexibility to have some privacy available, e.g. for industrial partnerships, university collaborations leading up to a publication, etc.
+#### Repository Content
 
-Remember that these repositories are *still hosted* on GitHub servers, and content placed in them should be limited to "email like" communications. That means:
+Before content is placed into an LLNL GitHub.com repository it should be reviewed and released via the Information Management (IM) process. Once released, an appropriate open source license and `LLNL-CODE-` release number should be provided and included in the repository.
+
+Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL servers*, and content placed in them should be limited to "email like" communications. That means:
 
 * NO Classified
 * NO Export Controlled
 * NO Official Use Only (OUO)
+* NO Health Insurance Portability and Accountability Act (HIPAA)
+* NO Personally Identifiable Information (PII)
 * NO NDA or vendor-proprietary information
 * NO Unclassified Controlled Information (UCI)
 * NO Unclassified Controlled Nuclear Information (UCNI)
