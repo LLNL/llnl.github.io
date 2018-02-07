@@ -2,7 +2,8 @@ import helpers
 import json
 import re
 
-datfilepath = "../github-data/extUsers.json"
+datfilepathExt = "../github-data/extUsers.json"
+datfilepathInt = "../github-data/labUsers.json"
 allData = {}
 
 # Read repo info data file (to use as repo list)
@@ -16,6 +17,7 @@ print("Repo list complete. Found %d repos." % (len(repolist)))
 
 # Read lab user data file (to use as member list)
 dataObj = helpers.read_json("../github-data/labUsers.json")
+collectiveInt = dataObj
 
 # Populate member list
 memberlist = []
@@ -31,7 +33,7 @@ authhead = helpers.get_gitauth()
 
 # Iterate through internal repos
 print("Gathering data across multiple paginated queries...")
-collective = {u'data': {}}
+collectiveExt = {u'data': {}}
 tab = "    "
 
 for repo in repolist:
@@ -52,19 +54,23 @@ for repo in repolist:
 	outObj = helpers.query_github(authhead, gitquery)
 	if outObj["errors"]:
 		print(tab + "Could not complete '%s'" % (repo))
-		collective["data"].pop(repo, None)
+		collectiveExt["data"].pop(repo, None)
 		continue
 
 	# Update collective data
 	for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 		userKey = user["login"]
 		if userKey in memberlist:
-			continue
-		if userKey not in collective["data"].keys():
-			collective["data"][userKey] = user
-			collective["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
-		collective["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
-		collective["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
+			if "contributedLabRepositories" not in collectiveInt["data"][userKey].keys():
+				collectiveInt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
+			collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
+			collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
+		else:
+			if userKey not in collectiveExt["data"].keys():
+				collectiveExt["data"][userKey] = user
+				collectiveExt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
+			collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
+			collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 
 	# Paginate if needed
 	hasNext = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["hasNextPage"]
@@ -82,19 +88,23 @@ for repo in repolist:
 		outObj = helpers.query_github(authhead, gitquery)
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (repo))
-			collective["data"].pop(repo, None)
+			collectiveExt["data"].pop(repo, None)
 			continue
 
 		# Update collective data
 		for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 			userKey = user["login"]
 			if userKey in memberlist:
-				continue
-			if userKey not in collective["data"].keys():
-				collective["data"][userKey] = user
-				collective["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
-			collective["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
-			collective["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
+				if "contributedLabRepositories" not in collectiveInt["data"][userKey].keys():
+					collectiveInt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
+				collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
+				collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
+			else:
+				if userKey not in collectiveExt["data"].keys():
+					collectiveExt["data"][userKey] = user
+					collectiveExt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
+				collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
+				collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 
 		hasNext = outObj["data"]["repository"]["mentionableUsers"]["pageInfo"]["hasNextPage"]
 
@@ -103,12 +113,22 @@ for repo in repolist:
 print("\nCollective data gathering complete!")
 
 # Combine new data with existing data
-allData["data"] = collective["data"]
+allData["data"] = collectiveExt["data"]
 allDataString = json.dumps(allData, indent=4, sort_keys=True)
 
 # Write output file
-print("\nWriting file '%s'" % (datfilepath))
-with open(datfilepath, "w") as fileout:
+print("\nWriting file '%s'" % (datfilepathExt))
+with open(datfilepathExt, "w") as fileout:
+	fileout.write(allDataString)
+print("Wrote file!")
+
+# Combine new data with existing data
+allData["data"] = collectiveInt["data"]
+allDataString = json.dumps(allData, indent=4, sort_keys=True)
+
+# Write output file
+print("\nWriting file '%s'" % (datfilepathInt))
+with open(datfilepathInt, "w") as fileout:
 	fileout.write(allDataString)
 print("Wrote file!")
 
