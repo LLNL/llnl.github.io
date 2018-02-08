@@ -48,7 +48,7 @@ runScript get_llnl_members.py
 
 # --- EXTERNAL V INTERNAL ---
 runScript get_members_extrepos.py
-runScript get_repos_extusers.py
+runScript get_repos_users.py
 
 
 # --- ADDITIONAL REPO DETAILS ---
