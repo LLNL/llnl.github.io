@@ -122,8 +122,7 @@ for repo in repolist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (repo))
 			collective["data"].pop(repo, None)
-			hasNext = False
-			continue
+			break
 
 		# Update collective data
 		for commit in outObj["data"]:
