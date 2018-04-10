@@ -99,8 +99,9 @@ def query_github(authhead, gitquery, requestCount=0):
 
 	print(tab + "Data recieved!")
 	outObj = json.loads(result)
-	if "errors" in outObj.keys():
+	if "errors" in outObj:
 		warnings.warn(json.dumps(outObj["errors"]), Warning)
+		apiError = True
 
 	# Parse headers
 	del heads[0]

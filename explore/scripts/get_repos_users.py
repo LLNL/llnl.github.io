@@ -62,12 +62,12 @@ for repo in repolist:
 	for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 		userKey = user["login"]
 		if userKey in memberlist:
-			if "contributedLabRepositories" not in collectiveInt["data"][userKey].keys():
+			if "contributedLabRepositories" not in collectiveInt["data"][userKey]:
 				collectiveInt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 			collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
 			collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 		else:
-			if userKey not in collectiveExt["data"].keys():
+			if userKey not in collectiveExt["data"]:
 				collectiveExt["data"][userKey] = user
 				collectiveExt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 			collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
@@ -97,12 +97,12 @@ for repo in repolist:
 		for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 			userKey = user["login"]
 			if userKey in memberlist:
-				if "contributedLabRepositories" not in collectiveInt["data"][userKey].keys():
+				if "contributedLabRepositories" not in collectiveInt["data"][userKey]:
 					collectiveInt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 				collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
 				collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 			else:
-				if userKey not in collectiveExt["data"].keys():
+				if userKey not in collectiveExt["data"]:
 					collectiveExt["data"][userKey] = user
 					collectiveExt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 				collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)

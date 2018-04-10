@@ -57,7 +57,7 @@ for usr in memberlist:
 		repoKey = repo["nameWithOwner"]
 		if repoKey in repolist:
 			continue
-		if repoKey not in collective["data"].keys():
+		if repoKey not in collective["data"]:
 			collective["data"][repoKey] = repo
 			collective["data"][repoKey]["labContributors"] = {"nodes": []}
 		collective["data"][repoKey]["labContributors"]["nodes"].append(usr)
@@ -87,7 +87,7 @@ for usr in memberlist:
 			repoKey = repo["nameWithOwner"]
 			if repoKey in repolist:
 				continue
-			if repoKey not in collective["data"].keys():
+			if repoKey not in collective["data"]:
 				collective["data"][repoKey] = repo
 				collective["data"][repoKey]["labContributors"] = {"nodes": []}
 			collective["data"][repoKey]["labContributors"]["nodes"].append(usr)
