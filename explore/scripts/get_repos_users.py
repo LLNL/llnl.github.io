@@ -55,6 +55,7 @@ for repo in repolist:
 	if outObj["errors"]:
 		print(tab + "Could not complete '%s'" % (repo))
 		collectiveExt["data"].pop(repo, None)
+		collectiveInt["data"].pop(repo, None)
 		continue
 
 	# Update collective data
@@ -89,6 +90,7 @@ for repo in repolist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (repo))
 			collectiveExt["data"].pop(repo, None)
+			collectiveInt["data"].pop(repo, None)
 			continue
 
 		# Update collective data
