@@ -91,6 +91,7 @@ for repo in repolist:
 			print(tab + "Could not complete '%s'" % (repo))
 			collectiveExt["data"].pop(repo, None)
 			collectiveInt["data"].pop(repo, None)
+			hasNext = False
 			continue
 
 		# Update collective data

@@ -80,6 +80,7 @@ for usr in memberlist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (usr))
 			collective["data"].pop(usr, None)
+			hasNext = False
 			continue
 
 		# Update collective data
