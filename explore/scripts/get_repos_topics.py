@@ -65,7 +65,7 @@ for repo in repolist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (repo))
 			collective["data"].pop(repo, None)
-			continue
+			break
 
 		# Update collective data
 		collective["data"][repo]["repositoryTopics"]["nodes"].extend(outObj["data"]["repository"]["repositoryTopics"]["nodes"])

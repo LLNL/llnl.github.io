@@ -55,18 +55,19 @@ for repo in repolist:
 	if outObj["errors"]:
 		print(tab + "Could not complete '%s'" % (repo))
 		collectiveExt["data"].pop(repo, None)
+		collectiveInt["data"].pop(repo, None)
 		continue
 
 	# Update collective data
 	for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 		userKey = user["login"]
 		if userKey in memberlist:
-			if "contributedLabRepositories" not in collectiveInt["data"][userKey].keys():
+			if "contributedLabRepositories" not in collectiveInt["data"][userKey]:
 				collectiveInt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 			collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
 			collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 		else:
-			if userKey not in collectiveExt["data"].keys():
+			if userKey not in collectiveExt["data"]:
 				collectiveExt["data"][userKey] = user
 				collectiveExt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 			collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
@@ -89,18 +90,19 @@ for repo in repolist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (repo))
 			collectiveExt["data"].pop(repo, None)
-			continue
+			collectiveInt["data"].pop(repo, None)
+			break
 
 		# Update collective data
 		for user in outObj["data"]["repository"]["mentionableUsers"]["nodes"]:
 			userKey = user["login"]
 			if userKey in memberlist:
-				if "contributedLabRepositories" not in collectiveInt["data"][userKey].keys():
+				if "contributedLabRepositories" not in collectiveInt["data"][userKey]:
 					collectiveInt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 				collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
 				collectiveInt["data"][userKey]["contributedLabRepositories"]["nodes"].sort()
 			else:
-				if userKey not in collectiveExt["data"].keys():
+				if userKey not in collectiveExt["data"]:
 					collectiveExt["data"][userKey] = user
 					collectiveExt["data"][userKey]["contributedLabRepositories"] = {"nodes": []}
 				collectiveExt["data"][userKey]["contributedLabRepositories"]["nodes"].append(repo)
