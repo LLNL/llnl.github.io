@@ -60,8 +60,8 @@ Use of this source code is governed by the LICENSE file.
 The following are the official texts for various open source licenses approved
 by LLNL:
 
-- [MIT License](/about/mit.txt)
-- [BSD-3 License](/about/bsd-3.txt)
+- [MIT License](/about/licenses/mit.txt)
+- [BSD-3 License](/about/licenses/bsd-3.txt)
 
 #### If: Limited Release
 
