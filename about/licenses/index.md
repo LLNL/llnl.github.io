@@ -7,7 +7,8 @@ layout: default
 {: .page-header}
 
 *This page contains information meant for LLNL Employees with instructions for
-how to mark their source code projects.*
+how to mark their source code projects. It is not intended to serve as legal
+advice*
 
 ### Required Content
 
@@ -47,24 +48,35 @@ and shall not be used for advertising or product endorsement purposes.
 #### 3. Source Code Headers
 
 All source code files in a repository shall have a comment with the following
-content at the top of each file:
+content at the top of each source code file:
 
 ```
 Copyright (c) 2018, Lawrence Livermore National Security, LLC
 
-Use of this source code is governed by the LICENSE file.
+Use of this source code is governed by the LICENSE file at: <URL>
 ```
+
+The `<URL>` should be the path to the license file at the root of the Git
+repository.
+
+Note: For the purposes of these instructions, a "source code file" is defined as
+a file where a comment such as the above could be added to the file without
+affecting the behavior of the source code. Examples include, but are not limited
+to: `.c`, `.cpp`, `.py`, `.java`, etc
 
 #### If: Open Source licenses
 
 The following are the official texts for various open source licenses approved
-by LLNL:
+by LLNL. Remember that any open source release (and license) must be reviewed
+and approved via the Information Management system, found at:
+<https://im-int.llnl.gov/policy/software>
 
 - [MIT License](/about/licenses/mit.txt)
 - [BSD-3 License](/about/licenses/bsd-3.txt)
-
-#### If: Limited Release
-
+- [Apache 2.0 License](/about/licenses/apache-2.0.txt)
+- [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
+- [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
+- [GPL-3 License](/about/licenses/gpl-3.0.txt)
 
 ### Have Questions?
 
