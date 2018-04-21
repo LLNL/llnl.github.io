@@ -850,6 +850,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
@@ -1251,7 +1252,6 @@
                     "CDAT/uvcdat-testdata",
                     "CDAT/uvcdat-web-be",
                     "CDAT/vcdat",
-                    "CDAT/vcs-js",
                     "CDAT/vcsaddons",
                     "CDAT/wk"
                 ]
@@ -1583,6 +1583,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
@@ -1799,7 +1800,7 @@
                 ]
             },
             "login": "abraunegg",
-            "name": null
+            "name": ""
         },
         "abyxcos": {
             "contributedLabRepositories": {
@@ -2600,6 +2601,15 @@
             "login": "atorrez",
             "name": "Alfred Torrez"
         },
+        "attie": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "zfsonlinux/zfs-auto-snapshot"
+                ]
+            },
+            "login": "attie",
+            "name": "Attie Grande"
+        },
         "augu5te": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -2855,6 +2865,15 @@
             },
             "login": "bensallen",
             "name": "Ben Allen"
+        },
+        "beren12": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "zfsonlinux/zfs"
+                ]
+            },
+            "login": "beren12",
+            "name": null
         },
         "bergwolf": {
             "contributedLabRepositories": {
@@ -3117,7 +3136,7 @@
                 ]
             },
             "login": "brad-lewis",
-            "name": null
+            "name": "Brad Lewis"
         },
         "bradking": {
             "contributedLabRepositories": {
@@ -5883,33 +5902,54 @@
         "gardoll": {
             "contributedLabRepositories": {
                 "nodes": [
+                    "ESGF/DiagnosticsViewer",
                     "ESGF/apache-frontend",
+                    "ESGF/basejump",
                     "ESGF/compute",
+                    "ESGF/config",
+                    "ESGF/dep-filters",
+                    "ESGF/dream",
                     "ESGF/esg-orp",
                     "ESGF/esg-publisher",
                     "ESGF/esg-search",
                     "ESGF/esgf-artifacts",
+                    "ESGF/esgf-auth",
+                    "ESGF/esgf-build",
+                    "ESGF/esgf-ca",
+                    "ESGF/esgf-compute-api",
                     "ESGF/esgf-compute-wps",
                     "ESGF/esgf-dashboard",
+                    "ESGF/esgf-dashboard-ui",
                     "ESGF/esgf-dist",
                     "ESGF/esgf-docker",
+                    "ESGF/esgf-dream-data-service",
                     "ESGF/esgf-drslib",
                     "ESGF/esgf-fetcher",
                     "ESGF/esgf-getcert",
                     "ESGF/esgf-helm",
                     "ESGF/esgf-idp",
+                    "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
+                    "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
                     "ESGF/esgf-pyclient",
                     "ESGF/esgf-security",
+                    "ESGF/esgf-slcs-server",
+                    "ESGF/esgf-slcs-server-playbook",
                     "ESGF/esgf-stager",
+                    "ESGF/esgf-stats-api",
                     "ESGF/esgf-swt",
                     "ESGF/esgf-test-suite",
                     "ESGF/esgf-toolbox",
+                    "ESGF/esgf-tracking",
                     "ESGF/esgf-utils",
                     "ESGF/esgf-web-fe",
-                    "ESGF/esgf.github.io"
+                    "ESGF/esgf.github.io",
+                    "ESGF/esgfpy-solr",
+                    "ESGF/icnwg",
+                    "ESGF/output_viewer"
                 ]
             },
             "login": "gardoll",
@@ -6179,6 +6219,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
@@ -6503,6 +6544,15 @@
             },
             "login": "hardy21",
             "name": "Carla Hardy"
+        },
+        "harisubramoni": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/mpiBench"
+                ]
+            },
+            "login": "harisubramoni",
+            "name": null
         },
         "hartzell": {
             "contributedLabRepositories": {
@@ -7472,6 +7522,7 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "LLNL/SAMRAI",
+                    "LLNL/mgmol",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
@@ -7660,53 +7711,7 @@
         "jfharney77": {
             "contributedLabRepositories": {
                 "nodes": [
-                    "ESGF/DiagnosticsViewer",
-                    "ESGF/apache-frontend",
-                    "ESGF/basejump",
-                    "ESGF/compute",
-                    "ESGF/config",
-                    "ESGF/dep-filters",
-                    "ESGF/dream",
-                    "ESGF/esg-orp",
-                    "ESGF/esg-publisher",
-                    "ESGF/esg-search",
-                    "ESGF/esgf-artifacts",
-                    "ESGF/esgf-auth",
-                    "ESGF/esgf-build",
-                    "ESGF/esgf-ca",
-                    "ESGF/esgf-compute-api",
-                    "ESGF/esgf-compute-wps",
-                    "ESGF/esgf-dashboard",
-                    "ESGF/esgf-dashboard-ui",
-                    "ESGF/esgf-dist",
-                    "ESGF/esgf-docker",
-                    "ESGF/esgf-dream-data-service",
-                    "ESGF/esgf-drslib",
-                    "ESGF/esgf-fetcher",
-                    "ESGF/esgf-getcert",
-                    "ESGF/esgf-helm",
-                    "ESGF/esgf-idp",
-                    "ESGF/esgf-ingestion",
-                    "ESGF/esgf-installer",
-                    "ESGF/esgf-node-manager",
-                    "ESGF/esgf-prepare",
-                    "ESGF/esgf-publisher-resources",
-                    "ESGF/esgf-pyclient",
-                    "ESGF/esgf-security",
-                    "ESGF/esgf-slcs-server",
-                    "ESGF/esgf-slcs-server-playbook",
-                    "ESGF/esgf-stager",
-                    "ESGF/esgf-stats-api",
-                    "ESGF/esgf-swt",
-                    "ESGF/esgf-test-suite",
-                    "ESGF/esgf-toolbox",
-                    "ESGF/esgf-tracking",
-                    "ESGF/esgf-utils",
-                    "ESGF/esgf-web-fe",
-                    "ESGF/esgf.github.io",
-                    "ESGF/esgfpy-solr",
-                    "ESGF/icnwg",
-                    "ESGF/output_viewer"
+                    "ESGF/esgf-web-fe"
                 ]
             },
             "login": "jfharney77",
@@ -8567,8 +8572,7 @@
                     "CDAT/cdatweb",
                     "CDAT/imageloader.js",
                     "CDAT/usage",
-                    "CDAT/uvcdat-web-be",
-                    "CDAT/vcs-js"
+                    "CDAT/uvcdat-web-be"
                 ]
             },
             "login": "kkuivenhoven",
@@ -9404,6 +9408,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-publisher-resources",
                     "ESGF/esgf-pyclient",
@@ -9491,6 +9496,15 @@
             },
             "login": "mailinglists35",
             "name": null
+        },
+        "maiterth": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "spack/spack"
+                ]
+            },
+            "login": "maiterth",
+            "name": "Matthias Maiterth"
         },
         "mamelara": {
             "contributedLabRepositories": {
@@ -9705,56 +9719,29 @@
                     "CDAT/wk",
                     "CDAT/xmgrace",
                     "ESGF/DiagnosticsViewer",
-                    "ESGF/apache-frontend",
-                    "ESGF/basejump",
                     "ESGF/compute",
-                    "ESGF/config",
-                    "ESGF/dep-filters",
                     "ESGF/dream",
-                    "ESGF/esg-orp",
-                    "ESGF/esg-publisher",
-                    "ESGF/esg-search",
-                    "ESGF/esgf-artifacts",
-                    "ESGF/esgf-auth",
-                    "ESGF/esgf-build",
-                    "ESGF/esgf-ca",
                     "ESGF/esgf-compute-api",
                     "ESGF/esgf-compute-wps",
-                    "ESGF/esgf-dashboard",
-                    "ESGF/esgf-dashboard-ui",
-                    "ESGF/esgf-dist",
-                    "ESGF/esgf-docker",
-                    "ESGF/esgf-dream-data-service",
-                    "ESGF/esgf-drslib",
-                    "ESGF/esgf-fetcher",
-                    "ESGF/esgf-getcert",
-                    "ESGF/esgf-helm",
-                    "ESGF/esgf-idp",
-                    "ESGF/esgf-ingestion",
-                    "ESGF/esgf-installer",
-                    "ESGF/esgf-node-manager",
-                    "ESGF/esgf-prepare",
-                    "ESGF/esgf-publisher-resources",
                     "ESGF/esgf-pyclient",
                     "ESGF/esgf-security",
-                    "ESGF/esgf-slcs-server",
-                    "ESGF/esgf-slcs-server-playbook",
-                    "ESGF/esgf-stager",
-                    "ESGF/esgf-stats-api",
                     "ESGF/esgf-swt",
-                    "ESGF/esgf-test-suite",
-                    "ESGF/esgf-toolbox",
-                    "ESGF/esgf-tracking",
-                    "ESGF/esgf-utils",
                     "ESGF/esgf-web-fe",
                     "ESGF/esgf.github.io",
-                    "ESGF/esgfpy-solr",
-                    "ESGF/icnwg",
-                    "ESGF/output_viewer"
+                    "ESGF/icnwg"
                 ]
             },
             "login": "mattben",
             "name": "Matthew Harris"
+        },
+        "matteoguglielmi": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "spack/spack"
+                ]
+            },
+            "login": "matteoguglielmi",
+            "name": "Matteo Guglielmi"
         },
         "matthewkotila": {
             "contributedLabRepositories": {
@@ -10088,6 +10075,15 @@
             "login": "mdkent",
             "name": "Matthew Kent"
         },
+        "megari": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "zfsonlinux/zfs"
+                ]
+            },
+            "login": "megari",
+            "name": null
+        },
         "metasim": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -10114,6 +10110,15 @@
             },
             "login": "mfherbst",
             "name": "Michael F. Herbst"
+        },
+        "mgerdts": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "zfsonlinux/zfs"
+                ]
+            },
+            "login": "mgerdts",
+            "name": "Mike Gerdts"
         },
         "mgsternberg": {
             "contributedLabRepositories": {
@@ -10320,33 +10325,54 @@
         "mkjpryor-stfc": {
             "contributedLabRepositories": {
                 "nodes": [
+                    "ESGF/DiagnosticsViewer",
                     "ESGF/apache-frontend",
+                    "ESGF/basejump",
                     "ESGF/compute",
+                    "ESGF/config",
+                    "ESGF/dep-filters",
+                    "ESGF/dream",
                     "ESGF/esg-orp",
                     "ESGF/esg-publisher",
                     "ESGF/esg-search",
                     "ESGF/esgf-artifacts",
+                    "ESGF/esgf-auth",
+                    "ESGF/esgf-build",
+                    "ESGF/esgf-ca",
+                    "ESGF/esgf-compute-api",
                     "ESGF/esgf-compute-wps",
                     "ESGF/esgf-dashboard",
+                    "ESGF/esgf-dashboard-ui",
                     "ESGF/esgf-dist",
                     "ESGF/esgf-docker",
+                    "ESGF/esgf-dream-data-service",
                     "ESGF/esgf-drslib",
                     "ESGF/esgf-fetcher",
                     "ESGF/esgf-getcert",
                     "ESGF/esgf-helm",
                     "ESGF/esgf-idp",
+                    "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
+                    "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
                     "ESGF/esgf-pyclient",
                     "ESGF/esgf-security",
+                    "ESGF/esgf-slcs-server",
+                    "ESGF/esgf-slcs-server-playbook",
                     "ESGF/esgf-stager",
+                    "ESGF/esgf-stats-api",
                     "ESGF/esgf-swt",
                     "ESGF/esgf-test-suite",
                     "ESGF/esgf-toolbox",
+                    "ESGF/esgf-tracking",
                     "ESGF/esgf-utils",
                     "ESGF/esgf-web-fe",
-                    "ESGF/esgf.github.io"
+                    "ESGF/esgf.github.io",
+                    "ESGF/esgfpy-solr",
+                    "ESGF/icnwg",
+                    "ESGF/output_viewer"
                 ]
             },
             "login": "mkjpryor-stfc",
@@ -10552,7 +10578,8 @@
                     "CDAT/vcs",
                     "CDAT/vcs-js",
                     "CDAT/vcsaddons",
-                    "CDAT/wk"
+                    "CDAT/wk",
+                    "ESGF/esgf-jenkins"
                 ]
             },
             "login": "muryanto1",
@@ -10574,7 +10601,7 @@
                 ]
             },
             "login": "mwilliammyers",
-            "name": ""
+            "name": "William Myers"
         },
         "mwkrentel": {
             "contributedLabRepositories": {
@@ -10706,6 +10733,7 @@
         "neely4": {
             "contributedLabRepositories": {
                 "nodes": [
+                    "LLNL/UMT",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
@@ -11279,6 +11307,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
@@ -11526,6 +11555,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
@@ -11848,6 +11878,15 @@
             "login": "pyhalov",
             "name": "Alexander Pyhalov"
         },
+        "pzakha": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "zfsonlinux/zfs"
+                ]
+            },
+            "login": "pzakha",
+            "name": "Pavel Zakharov"
+        },
         "qb-cea": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -11869,7 +11908,8 @@
         "rajachan": {
             "contributedLabRepositories": {
                 "nodes": [
-                    "LLNL/cruise"
+                    "LLNL/cruise",
+                    "spack/spack"
                 ]
             },
             "login": "rajachan",
@@ -12173,6 +12213,15 @@
             },
             "login": "rincebrain",
             "name": "Rich Ercolani"
+        },
+        "riyad": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "zfsonlinux/zfs-auto-snapshot"
+                ]
+            },
+            "login": "riyad",
+            "name": "Riyad Preukschas"
         },
         "rlaager": {
             "contributedLabRepositories": {
@@ -12623,6 +12672,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
@@ -13525,53 +13575,13 @@
                 "nodes": [
                     "CDAT/cdat",
                     "CDAT/cdms",
-                    "ESGF/DiagnosticsViewer",
-                    "ESGF/apache-frontend",
-                    "ESGF/basejump",
-                    "ESGF/compute",
-                    "ESGF/config",
-                    "ESGF/dep-filters",
-                    "ESGF/dream",
                     "ESGF/esg-orp",
                     "ESGF/esg-publisher",
                     "ESGF/esg-search",
-                    "ESGF/esgf-artifacts",
-                    "ESGF/esgf-auth",
-                    "ESGF/esgf-build",
-                    "ESGF/esgf-ca",
-                    "ESGF/esgf-compute-api",
-                    "ESGF/esgf-compute-wps",
-                    "ESGF/esgf-dashboard",
-                    "ESGF/esgf-dashboard-ui",
-                    "ESGF/esgf-dist",
-                    "ESGF/esgf-docker",
-                    "ESGF/esgf-dream-data-service",
                     "ESGF/esgf-drslib",
-                    "ESGF/esgf-fetcher",
-                    "ESGF/esgf-getcert",
-                    "ESGF/esgf-helm",
                     "ESGF/esgf-idp",
-                    "ESGF/esgf-ingestion",
-                    "ESGF/esgf-installer",
-                    "ESGF/esgf-node-manager",
-                    "ESGF/esgf-prepare",
-                    "ESGF/esgf-publisher-resources",
                     "ESGF/esgf-pyclient",
-                    "ESGF/esgf-security",
-                    "ESGF/esgf-slcs-server",
-                    "ESGF/esgf-slcs-server-playbook",
-                    "ESGF/esgf-stager",
-                    "ESGF/esgf-stats-api",
-                    "ESGF/esgf-swt",
-                    "ESGF/esgf-test-suite",
-                    "ESGF/esgf-toolbox",
-                    "ESGF/esgf-tracking",
-                    "ESGF/esgf-utils",
-                    "ESGF/esgf-web-fe",
-                    "ESGF/esgf.github.io",
-                    "ESGF/esgfpy-solr",
-                    "ESGF/icnwg",
-                    "ESGF/output_viewer"
+                    "ESGF/esgf-security"
                 ]
             },
             "login": "stephenpascoe",
@@ -14816,6 +14826,7 @@
                     "ESGF/esgf-idp",
                     "ESGF/esgf-ingestion",
                     "ESGF/esgf-installer",
+                    "ESGF/esgf-jenkins",
                     "ESGF/esgf-node-manager",
                     "ESGF/esgf-prepare",
                     "ESGF/esgf-publisher-resources",
