@@ -25,6 +25,8 @@ function draw_line_repoCreationHistory(areaID) {
 		var gitrelease = "2005-04-07";
 		// GitHub founded
 		var ghfounded = "2008-02-08";
+		// Software.llnl.gov founded
+		var sw_llnl = "2015-11-24";
 
 		function addDateLine(dateString,label) {
 			var dateObj = parseTime(dateString);
@@ -47,7 +49,7 @@ function draw_line_repoCreationHistory(areaID) {
 		var dotRadius = 2,
 			legendDotRadius = stdLgndDotRadius,
 			legendSpacing = stdLgndSpacing;
-		
+
 		// Get min-max timestamps across both datasets
 		var timerange = d3.extent(data, function(d) { return d.date; });
 		timerange.push.apply(timerange,
@@ -55,6 +57,7 @@ function draw_line_repoCreationHistory(areaID) {
 			);
 		timerange.push(gitrelease);
 		timerange.push(ghfounded);
+		timerange.push(sw_llnl);
 
 
 		// Get min-max values across both datasets
@@ -66,7 +69,7 @@ function draw_line_repoCreationHistory(areaID) {
 		var x = d3.scaleTime()
 			.domain(d3.extent(timerange))
 			.range([0, width]);
-		
+
 		var y = d3.scaleLinear()
 			.domain([0, d3.max(datrange)])
 			.range([height, 0])
@@ -74,7 +77,7 @@ function draw_line_repoCreationHistory(areaID) {
 
 		var xAxis = d3.axisBottom()
 			.scale(x);
-		
+
 		var yAxis = d3.axisLeft()
 			.scale(y);
 
@@ -88,7 +91,7 @@ function draw_line_repoCreationHistory(areaID) {
 				}
 				return "<sub>["+formatTime(d.date)+"]</sub>"+"<br>"+d.value+repos;
 			});
-		
+
 		var valueline = d3.line()
 			.x(function(d) { return x(d.date); })
 			.y(function(d) { return y(d.value); });
@@ -100,13 +103,13 @@ function draw_line_repoCreationHistory(areaID) {
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 		chart.call(tip);
-		
+
 		// Add the x axis
 		chart.append("g")
 			.attr("class", "x axis")
 			.attr("transform", "translate(0," + height + ")")
 			.call(xAxis);
-		
+
 		// Add the y axis
 		chart.append("g")
 			.attr("class", "y axis")
@@ -115,6 +118,7 @@ function draw_line_repoCreationHistory(areaID) {
 		// Draw reference date lines
 		addDateLine(gitrelease,"Git Released - ["+gitrelease+"]");
 		addDateLine(ghfounded,"GitHub Founded - ["+ghfounded+"]");
+		addDateLine(sw_llnl,"LLNL Software Portal - ["+sw_llnl+"]");
 
 		// Add title
 		chart.append("text")
@@ -132,7 +136,7 @@ function draw_line_repoCreationHistory(areaID) {
 			.attr("x", 0 - (height / 2))
 			.attr("text-anchor", "middle")
 			.text("Repositories");
-		
+
 		// Draw line
 		chart.append("path")
 			.datum(data)
