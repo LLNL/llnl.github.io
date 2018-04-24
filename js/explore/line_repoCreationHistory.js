@@ -30,7 +30,7 @@ function draw_line_repoCreationHistory(areaID) {
 
 		function addDateLine(dateString,label) {
 			var dateObj = parseTime(dateString);
-			drawDateLine(dateObj,label,chart,x,y,height,valueline);
+			drawDateLine(dateObj,label,true,chart,x,y,height,valueline);
 		}
 
 		data.forEach(function(d) {
@@ -116,9 +116,9 @@ function draw_line_repoCreationHistory(areaID) {
 			.call(yAxis);
 
 		// Draw reference date lines
-		addDateLine(gitrelease,"Git Released - ["+gitrelease+"]");
-		addDateLine(ghfounded,"GitHub Founded - ["+ghfounded+"]");
-		addDateLine(sw_llnl,"LLNL Software Portal - ["+sw_llnl+"]");
+		addDateLine(gitrelease,"Git Released");
+		addDateLine(ghfounded,"GitHub Founded");
+		addDateLine(sw_llnl,"LLNL Soft. Portal");
 
 		// Add title
 		chart.append("text")
