@@ -47,8 +47,8 @@ and shall not be used for advertising or product endorsement purposes.
 
 #### 3. Source Code Headers
 
-All source code files in a repository shall have a comment with the following
-content at the top of each source code file:
+All source code files in a repository shall have a comment at the top of each
+source code file with the following content:
 
 ```
 Copyright (c) 2018, Lawrence Livermore National Security, LLC
@@ -64,7 +64,7 @@ a file where a comment such as the above could be added to the file without
 affecting the behavior of the source code. Examples include, but are not limited
 to: `.c`, `.cpp`, `.py`, `.java`, etc
 
-#### If: Open Source licenses
+#### Open Source licenses
 
 The following are the official texts for various open source licenses approved
 by LLNL. Remember that any open source release (and license) must be reviewed
@@ -75,8 +75,8 @@ and approved via the Information Management system, found at:
 - [BSD-3 License](/about/licenses/bsd-3.txt)
 - [Apache 2.0 License](/about/licenses/apache-2.0.txt)
 - [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
+- [GPL-3.0 License](/about/licenses/gpl-3.0.txt)
 - [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
-- [GPL-3 License](/about/licenses/gpl-3.0.txt)
 
 ### Have Questions?
 
