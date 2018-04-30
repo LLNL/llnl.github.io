@@ -24,7 +24,8 @@ including at least the following information:
 
 #### 2. Disclaimer file
 
-At the root of every source code repository shall be the following text in a file named `DISCLAIMER`:
+At the root of every source code repository shall be the following text in a
+file named `DISCLAIMER`:
 
 ```
 This work was produced under the auspices of the U.S. Department of Energy by
@@ -80,4 +81,5 @@ and approved via the Information Management system, found at:
 
 ### Have Questions?
 
-If you still have questions / need more information, contact: <github-admin@llnl.gov>
+If you still have questions / need more information, contact:
+<github-admin@llnl.gov>
