@@ -64,7 +64,7 @@ for org in orglist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (org))
 			collective["data"].pop(org, None)
-			continue
+			break
 
 		# Update collective data
 		for repo in outObj["data"]["organization"]["repositories"]["nodes"]:

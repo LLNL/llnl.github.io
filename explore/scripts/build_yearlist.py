@@ -12,7 +12,7 @@ for file in os.listdir("../github-data"):
 		if not nameSplit[0] == "YEARS" and nameSplit[1].isdigit():
 			prefix = nameSplit[0]
 			yearX = int(nameSplit[1])
-			if prefix not in yearDict.keys():
+			if prefix not in yearDict:
 				yearDict[prefix] = []
 			yearDict[prefix].append(yearX)
 

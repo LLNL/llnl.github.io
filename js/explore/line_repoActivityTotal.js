@@ -46,7 +46,7 @@ function draw_line_repoActivityTotal(areaID) {
 
 		function addDateLine(dateString,label) {
 			var dateObj = getYearDate(dateString,dToday);
-			drawDateLine(dateObj,label,chart,x,y,height,valueline);
+			drawDateLine(dateObj,label,false,chart,x,y,height,valueline);
 		}
 
 		var xAxis = d3.axisBottom()

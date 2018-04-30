@@ -35,7 +35,7 @@ tab = "    "
 for repo in repolist:
 
 	# History doesn't change, only update new repos or those that had no previous commits
-	if "data" in allData.keys() and repo in allData["data"].keys():
+	if "data" in allData.keys() and repo in allData["data"]:
 		if allData["data"][repo]["firstCommitAt"]:
 			print(tab + "Already recorded data for '%s'" % (repo))
 			continue
@@ -122,7 +122,7 @@ for repo in repolist:
 		if outObj["errors"]:
 			print(tab + "Could not complete '%s'" % (repo))
 			collective["data"].pop(repo, None)
-			continue
+			break
 
 		# Update collective data
 		for commit in outObj["data"]:
@@ -144,7 +144,7 @@ for repo in repolist:
 print("\nCollective data gathering complete!")
 
 # Combine new data with existing data
-if "data" not in allData.keys():
+if "data" not in allData:
 	allData["data"] = {}
 for repo in collective["data"].keys():
 	allData["data"][repo] = collective["data"][repo]

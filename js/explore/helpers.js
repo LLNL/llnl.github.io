@@ -15,7 +15,7 @@ function GetTopX(arrayData, x) {
 };
 
 // Draw date-of-interest reference lines on a graph
-function drawDateLine(dateObj,label,chart,x,y,height,valueline) {
+function drawDateLine(dateObj,label,includeDate,chart,x,y,height,valueline) {
 	chart.append("path")
 		.datum([
 			{date:dateObj, value:y.domain()[0]},
@@ -27,7 +27,18 @@ function drawDateLine(dateObj,label,chart,x,y,height,valueline) {
 		.attr("class", "reftext")
 		.attr("transform", "rotate(-90)")
 		.attr("y",  x(dateObj)-6 )
-		.attr("x", 0 - (height / 16))
+		.attr("x", 0 - (height / 50))
 		.attr("text-anchor", "end")
 		.text(label);
+	if (includeDate) {
+		var formatTime = d3.timeFormat("[ %Y - %m - %d ]");
+		var dateString = formatTime(dateObj);
+		chart.append("text")
+			.attr("class", "reftext sub")
+			.attr("transform", "rotate(-90)")
+			.attr("y",  x(dateObj)+11 )
+			.attr("x", 0 - (height / 50))
+			.attr("text-anchor", "end")
+			.text(dateString);
+	}
 }
