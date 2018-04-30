@@ -12,7 +12,7 @@ advice*
 
 ### Required Content
 
-All LLNL software must contain the following markings:
+All LLNL software must contain the following files and markings:
 
 #### 1. README file
 
@@ -65,19 +65,22 @@ a file where a comment such as the above could be added to the file without
 affecting the behavior of the source code. Examples include, but are not limited
 to: `.c`, `.cpp`, `.py`, `.java`, etc
 
-#### Open Source licenses
+#### 4. Open Source license file
 
-The following are the official texts for various open source licenses approved
-by LLNL. Remember that any open source release (and license) must be reviewed
-and approved via the Information Management system, found at:
-<https://im-int.llnl.gov/policy/software>
+One of the following files must be included at the top level of your repository
+with the file name `LICENSE`. The only content which may be changed in the file
+is the copyright year.
 
 - [MIT License](/about/licenses/mit.txt)
-- [BSD-3 License](/about/licenses/bsd-3.txt)
+- [BSD-3 License](/about/licenses/bsd-3-clause.txt)
 - [Apache 2.0 License](/about/licenses/apache-2.0.txt)
 - [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
 - [GPL-3.0 License](/about/licenses/gpl-3.0.txt)
 - [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
+
+If your repository was approved for release under a different open source
+license, that file content will be provided by the Innovation and Partnerships
+Office.
 
 ### Have Questions?
 
