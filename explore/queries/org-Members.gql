@@ -1,6 +1,6 @@
-query { 
-  organization(login:"ORGNAME") {
-    members(first:50 PGCURS) {
+query ($orgName: String!, $numUsers: Int!, $pgCursor: String) {
+  organization(login: $orgName) {
+    members(first: $numUsers, after: $pgCursor) {
       nodes {
         login
         name
@@ -12,3 +12,4 @@ query {
     }
   }
 }
+# {"orgName": "LLNL", "numUsers": 50, "pgCursor": null}

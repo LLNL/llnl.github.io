@@ -1,6 +1,6 @@
-query {
-  repository(owner:"OWNNAME", name:"REPONAME") {
-    repositoryTopics(first:50 PGCURS) {
+query ($ownName: String!, $repoName: String!, $numTopics: Int!, $pgCursor: String) {
+  repository(owner: $ownName, name: $repoName) {
+    repositoryTopics(first: $numTopics, after: $pgCursor) {
       totalCount
       nodes {
         topic {
@@ -16,3 +16,4 @@ query {
     }
   }
 }
+# {"ownName": "LLNL", "repoName": "llnl.github.io", "numTopics": 25, "pgCursor": null}

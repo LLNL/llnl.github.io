@@ -1,62 +1,47 @@
-import helpers
-import json
-import re
+import queryManager as qm
 
 datfilepath = "../github-data/labRepos_Licenses.json"
-allData = {}
+queryPath = "../queries/repo-Licenses.gql"
 
 # Read repo info data file (to use as repo list)
-dataObj = helpers.read_json("../github-data/labReposInfo.json")
-
+inputLists = qm.DataManager("../github-data/labReposInfo.json", True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
-repolist = sorted(dataObj["data"].keys())
+repolist = sorted(inputLists.data["data"].keys())
 print("Repo list complete. Found %d repos." % (len(repolist)))
 
-# Read pretty GraphQL query
-query_in = helpers.read_gql("../queries/repo-Licenses.gql")
+# Initialize data collector
+dataCollector = qm.DataManager(datfilepath, False)
+dataCollector.data = {"data": {}}
 
-# Retrieve authorization token
-authhead = helpers.get_gitauth()
+# Initialize query manager
+queryMan = qm.GitHubQueryManager()
 
 # Iterate through internal repos
 print("Gathering data across multiple queries...")
-collective = {u'data': {}}
-tab = "    "
-
 for repo in repolist:
-	print("\n'%s'" % (repo))
+    print("\n'%s'" % (repo))
 
-	repoSplit = repo.split("/")
+    r = repo.split("/")
+    try:
+        outObj = queryMan.queryGitHubFromFile(
+            queryPath,
+            {"ownName": r[0], "repoName": r[1]}
+        )
+    except Exception as error:
+        print("Warning: Could not complete '%s'" % (repo))
+        print(error)
+        continue
 
-	print(tab + "Modifying query...")
-	newquery = re.sub('OWNNAME', repoSplit[0], query_in)
-	newquery = re.sub('REPONAME', repoSplit[1], newquery)
-	gitquery = json.dumps({'query': newquery})
-	print(tab + "Query ready!")
+    # Update collective data
+    dataCollector.data["data"][repo] = outObj["data"]["repository"]
 
-	# Actual query exchange
-	outObj = helpers.query_github(authhead, gitquery)
-	if outObj["errors"]:
-		print(tab + "Could not complete '%s'" % (repo))
-		collective["data"].pop(repo, None)
-		continue
-	# Update collective data
-	collective["data"][repo] = outObj["data"]["repository"]
-
-	print("'%s' Done!" % (repo))
+    print("'%s' Done!" % (repo))
 
 print("\nCollective data gathering complete!")
 
-# Combine new data with existing data
-allData["data"] = collective["data"]
-allDataString = json.dumps(allData, indent=4, sort_keys=True)
-
 # Write output file
-print("\nWriting file '%s'" % (datfilepath))
-with open(datfilepath, "w") as fileout:
-	fileout.write(allDataString)
-print("Wrote file!")
+dataCollector.fileSave()
 
 print("\nDone!\n")

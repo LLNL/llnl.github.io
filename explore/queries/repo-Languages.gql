@@ -1,6 +1,6 @@
-query {
-  repository(owner:"OWNNAME", name:"REPONAME") {
-    languages(first:25 PGCURS orderBy:{field:SIZE, direction:DESC}) {
+query ($ownName: String!, $repoName: String!, $numLangs: Int!, $pgCursor: String) {
+  repository(owner: $ownName, name: $repoName) {
+    languages(first: $numLangs, after: $pgCursor, orderBy: {field: SIZE, direction: DESC}) {
       totalCount
       nodes {
         name
@@ -12,3 +12,4 @@ query {
     }
   }
 }
+# {"ownName": "LLNL", "repoName": "llnl.github.io", "numLangs": 25, "pgCursor": null}

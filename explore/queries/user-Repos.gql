@@ -1,6 +1,6 @@
-query { 
-  user(login:"USRNAME") {
-    contributedRepositories(first:50 PGCURS) {
+query ($userName: String!, $numRepos: Int!, $pgCursor: String) {
+  user(login: $userName) {
+    repositoriesContributedTo(first: $numRepos, after: $pgCursor) {
       nodes {
         nameWithOwner
       }
@@ -11,3 +11,4 @@ query {
     }
   }
 }
+# {"userName": "LRWeber", "numRepos": 50, "pgCursor": null}

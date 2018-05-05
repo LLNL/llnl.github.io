@@ -1,5 +1,5 @@
-query { 
-  repository(owner:"OWNNAME", name:"REPONAME") {
+query ($ownName: String!, $repoName: String!) {
+  repository(owner: $ownName, name: $repoName) {
     nameWithOwner
     name
     owner {
@@ -22,3 +22,4 @@ query {
     }
   }
 }
+# {"ownName": "LLNL", "repoName": "llnl.github.io"}

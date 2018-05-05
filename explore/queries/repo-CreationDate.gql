@@ -1,8 +1,9 @@
-query { 
-  repository(owner:"OWNNAME", name:"REPONAME") {
+query ($ownName: String!, $repoName: String!) {
+  repository(owner: $ownName, name: $repoName) {
     createdAt
     defaultBranchRef {
       name
     }
   }
 }
+# {"ownName": "LLNL", "repoName": "llnl.github.io"}
