@@ -27,7 +27,7 @@ Additionally, it is recommended that all projects have the following sections:
 
 - "Getting Started" instructions
 
-#### 2. Notice file
+#### 2. NOTICE file
 
 At the root of every source code repository shall be the following text in a
 file named `NOTICE`:
@@ -51,7 +51,7 @@ of the United States Government or Lawrence Livermore National Security, LLC,
 and shall not be used for advertising or product endorsement purposes.
 ```
 
-#### 3. Open Source license file
+#### 3. Open Source LICENSE file
 
 One of the following files must be included at the top level of your repository
 with the file name `LICENSE`. The only content which may be changed in the file
