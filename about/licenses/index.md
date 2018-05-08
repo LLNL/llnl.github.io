@@ -12,7 +12,8 @@ advice*
 
 ### Required Files
 
-All LLNL software must contain the following files:
+All LLNL software must contain the following files at the root of the source
+code repository:
 
 #### 1. README file
 
