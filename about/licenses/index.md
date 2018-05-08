@@ -8,7 +8,7 @@ layout: default
 
 *This page contains information meant for LLNL Employees with instructions for
 how to mark their source code projects. It is not intended to serve as legal
-advice*
+advice.*
 
 ### Required Files
 
