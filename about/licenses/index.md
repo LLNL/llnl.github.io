@@ -19,8 +19,12 @@ All LLNL software must contain the following files:
 All projects shall have a `README.md` file at the root of the repository,
 including at least the following information:
 
+- "Releasability" section:
+    - Typically near the bottom, containing the `LLNL-CODE-XXXXXX` number
+
+Additionally, it is recommended that all projects have the following sections:
+
 - "Getting Started" instructions
-- "Releasability" section, containing the `LLNL-CODE-XXXXXX` number
 
 #### 2. Notice file
 
