@@ -64,8 +64,8 @@ is the copyright year.
 - [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
 
 If your repository was approved for release under a different open source
-license, that file content will be provided by the Innovation and Partnerships
-Office.
+license, the text of that license will be provided by the Innovation and
+Partnerships Office.
 
 ### Have Questions?
 
