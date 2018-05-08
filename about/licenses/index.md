@@ -22,10 +22,10 @@ including at least the following information:
 - "Getting Started" instructions
 - "Releasability" section, containing the `LLNL-CODE-XXXXXX` number
 
-#### 2. Disclaimer file
+#### 2. Notice file
 
 At the root of every source code repository shall be the following text in a
-file named `DISCLAIMER`:
+file named `NOTICE`:
 
 ```
 This work was produced under the auspices of the U.S. Department of Energy by
