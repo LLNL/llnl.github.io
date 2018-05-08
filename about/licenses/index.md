@@ -10,9 +10,9 @@ layout: default
 how to mark their source code projects. It is not intended to serve as legal
 advice*
 
-### Required Content
+### Required Files
 
-All LLNL software must contain the following files and markings:
+All LLNL software must contain the following files:
 
 #### 1. README file
 
@@ -46,26 +46,7 @@ of the United States Government or Lawrence Livermore National Security, LLC,
 and shall not be used for advertising or product endorsement purposes.
 ```
 
-#### 3. Source Code Headers
-
-All source code files in a repository shall have a comment at the top of each
-source code file with the following content:
-
-```
-Copyright (c) 2018, Lawrence Livermore National Security, LLC
-
-Use of this source code is governed by the LICENSE file at: <URL>
-```
-
-The `<URL>` should be the path to the license file at the root of the Git
-repository.
-
-Note: For the purposes of these instructions, a "source code file" is defined as
-a file where a comment such as the above could be added to the file without
-affecting the behavior of the source code. Examples include, but are not limited
-to: `.c`, `.cpp`, `.py`, `.java`, etc
-
-#### 4. Open Source license file
+#### 3. Open Source license file
 
 One of the following files must be included at the top level of your repository
 with the file name `LICENSE`. The only content which may be changed in the file
