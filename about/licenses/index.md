@@ -17,15 +17,31 @@ code repository:
 
 #### 1. README file
 
-All projects shall have a `README.md` file at the root of the repository,
-including at least the following information:
+All projects shall have a `README.md` file at the root of the repository.
+The `README.md` must contain the LLNL release number
+(`LLNL-CODE-XXXXXX`). We recommend putting it at the bottom in a section
+called "Release".  See
+[this example](https://github.com/spack/spack#release).
 
-- "Releasability" section:
-    - Typically near the bottom, containing the `LLNL-CODE-XXXXXX` number
+Additionally, we recommend that all projects have the following sections:
 
-Additionally, it is recommended that all projects have the following sections:
+- A description of your project.
+- "Getting Started": Simple instructions for how to install and use your
+  project.
+- "Getting Involved": Information about mailing lists or other ways users
+  connect with you and each other.
+- "Contributing": Instructions for how you'd like people to contribute to
+  your code.
 
-- "Getting Started" instructions
+The `.md` suffix stands for "markdown".  Markdown is a plain text format.
+It's easy to read and write, but it also allows you to add simple
+formatting and links so that your `README.md` will render nicely on
+GitHub. Take a look at GitHub's
+[markdown guide](https://guides.github.com/features/mastering-markdown/)
+for the basics.  For inspiration, look at other projects' `README.md`
+files at [software.llnl.gov](https://software.llnl.gov/), or take a look
+at this
+[simple README.md template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
 
 #### 2. NOTICE file
 
