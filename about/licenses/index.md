@@ -26,11 +26,11 @@ called "Release".  See
 Additionally, we recommend that all projects have the following sections:
 
 - A description of your project.
-- Getting Started: simple instructions for how to install and use your
+- "Getting Started": Simple instructions for how to install and use your
   project.
-- Getting involved: information about mailing lists or other ways users
+- "Getting Involved": Information about mailing lists or other ways users
   connect with you and each other.
-- Contributing: instructions for how you'd like people to contribute to
+- "Contributing": Instructions for how you'd like people to contribute to
   your code.
 
 The `.md` suffix stands for "markdown".  Markdown is a plain text format.
