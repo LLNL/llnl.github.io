@@ -1,4 +1,4 @@
-import queryManager as qm
+from scraper.github import queryManager as qm
 
 datfilepathExt = "../github-data/extUsers.json"
 datfilepathInt = "../github-data/labUsers.json"

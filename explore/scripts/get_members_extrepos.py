@@ -1,4 +1,4 @@
-import queryManager as qm
+from scraper.github import queryManager as qm
 
 datfilepath = "../github-data/extRepos.json"
 queryPath = "../queries/user-Repos.gql"

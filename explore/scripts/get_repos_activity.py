@@ -1,4 +1,4 @@
-import queryManager as qm
+from scraper.github import queryManager as qm
 import re
 from datetime import datetime
 

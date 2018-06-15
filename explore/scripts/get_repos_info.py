@@ -1,4 +1,4 @@
-import queryManager as qm
+from scraper.github import queryManager as qm
 
 datfilepath = "../github-data/labReposInfo.json"
 queryPath = "../queries/org-Repos-Info.gql"

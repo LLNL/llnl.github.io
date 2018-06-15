@@ -1,4 +1,4 @@
-import queryManager as qm
+from scraper.github import queryManager as qm
 import re
 
 datfilepath = "../github-data/labRepos_CreationHistory.json"
