@@ -16,7 +16,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
 1. [Create an account on GitHub](https://github.com/join)
 
-    - You *do not need* a separate work account and personal account, unless you prefer to.
+    - You *do not need* a separate work account and personal account, unless you prefer to. Instead, you can [link multiple email addresses to the same GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/), which is almost always preferred.
 
 2. [Update your profile information](https://github.com/settings/profile)
 
