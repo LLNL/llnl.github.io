@@ -1,159 +1,140 @@
-import helpers
-import json
+from scraper.github import queryManager as qm
 import re
 
 datfilepath = "../github-data/labRepos_CreationHistory.json"
-allData = {}
-
-# Check for and read existing data file
-allData = helpers.read_existing(datfilepath)
-
-# Read repo info data file (to use as repo list)
-dataObj = helpers.read_json("../github-data/labReposInfo.json")
-
-# Populate repo list
-repolist = []
-print("Getting internal repos ...")
-repolist = sorted(dataObj["data"].keys())
-print("Repo list complete. Found %d repos." % (len(repolist)))
-
-# Read pretty GraphQL query
-query_in = helpers.read_gql("../queries/repo-CreationDate.gql")
-
-# Rest endpoint query
+queryPath = "../queries/repo-CreationDate.gql"
 query_commits_in = "/repos/OWNNAME/REPONAME/commits?until=CREATETIME&per_page=100"
 query_commits_in2 = "/repos/OWNNAME/REPONAME/commits?per_page=100"
 
-# Retrieve authorization token
-authhead = helpers.get_gitauth()
+# Read repo info data file (to use as repo list)
+inputLists = qm.DataManager("../github-data/labReposInfo.json", True)
+# Populate repo list
+repolist = []
+print("Getting internal repos ...")
+repolist = sorted(inputLists.data["data"].keys())
+print("Repo list complete. Found %d repos." % (len(repolist)))
+
+# Initialize data collector
+dataCollector = qm.DataManager(datfilepath, False)
+try:
+    # Load existing data
+    dataCollector.fileLoad()
+except FileNotFoundError as error:
+    # If no existing data, initialize the data object
+    dataCollector.data = {"data": {}}
+
+# Initialize query manager
+queryMan = qm.GitHubQueryManager()
 
 # Iterate through internal repos
 print("Gathering data across multiple paginated queries...")
-collective = {u'data': {}}
-tab = "    "
-
 for repo in repolist:
+    print("\n'%s'" % (repo))
 
-	# History doesn't change, only update new repos or those that had no previous commits
-	if "data" in allData.keys() and repo in allData["data"]:
-		if allData["data"][repo]["firstCommitAt"]:
-			print(tab + "Already recorded data for '%s'" % (repo))
-			continue
+    # History doesn't change, only update new repos or those that had no previous commits
+    if "data" in dataCollector.data.keys() and repo in dataCollector.data["data"]:
+        if dataCollector.data["data"][repo]["firstCommitAt"]:
+            print("Already recorded data for '%s'" % (repo))
+            continue
 
-	pageNum = 1
-	print("\n'%s'" % (repo))
-	print(tab + "page %d" % (pageNum))
+    repoData = {}  # Collect data from multiple queries for a single repo first
+    r = repo.split("/")
 
-	repoSplit = repo.split("/")
+    # Query 1
+    print("Part 1)  Get creation date and default branch...")
+    try:
+        outObj1 = queryMan.queryGitHubFromFile(
+            queryPath,
+            {"ownName": r[0], "repoName": r[1]}
+        )
+    except Exception as error:
+        print("Warning: Could not complete '%s'" % (repo))
+        print(error)
+        continue
 
-	# Query 1
-	print(tab + "Get creation date and default branch")
-	print(tab + "Modifying query...")
-	newquery = re.sub('OWNNAME', repoSplit[0], query_in)
-	newquery = re.sub('REPONAME', repoSplit[1], newquery)
-	gitquery = json.dumps({'query': newquery})
-	print(tab + "Query ready!")
+    # Update repo data
+    repoData = outObj1["data"]["repository"]
 
-	# Actual query exchange
-	outObj = helpers.query_github(authhead, gitquery)
-	if outObj["errors"]:
-		print(tab + "Could not complete '%s'" % (repo))
-		collective["data"].pop(repo, None)
-		continue
+    # Query 2
+    print("Part 2)  Get pre-GitHub commit timestamps...")
 
-	# Update collective data
-	collective["data"][repo] = outObj["data"]["repository"]
+    gitquery2 = re.sub('OWNNAME', r[0], query_commits_in)
+    gitquery2 = re.sub('REPONAME', r[1], gitquery2)
+    gitquery2 = re.sub('CREATETIME', repoData["createdAt"], gitquery2)
 
-	# Query 2
-	print(tab + "Get pre-GitHub commit timestamps")
-	print(tab + "Modifying query...")
-	gitquery = re.sub('OWNNAME', repoSplit[0], query_commits_in)
-	gitquery = re.sub('REPONAME', repoSplit[1], gitquery)
-	gitquery = re.sub('CREATETIME', collective["data"][repo]["createdAt"], gitquery)
-	print(tab + "Query ready!")
+    try:
+        outObj2 = queryMan.queryGitHub(
+            gitquery2,
+            rest=True,
+            paginate=True
+        )
+    except Exception as error:
+        print("Could not complete '%s'" % (repo))
+        print(error)
 
-	# Actual query exchange
-	outObj = helpers.query_githubrest(authhead, gitquery)
-	if outObj["errors"]:
-		print(tab + "Could not get pre-GitHub commits for '%s'" % (repo))
-		outObj["data"] = []
+    # Update repo data
+    repoData["commitTimestamps"] = []
+    try:
+        for commit in outObj2:
+            repoData["commitTimestamps"].append(commit["commit"]["committer"]["date"])
+    except NameError as error:
+        print("Could not get pre-GitHub commits for '%s'" % (repo))
 
-	# Update collective data
-	collective["data"][repo]["commitTimestamps"] = []
-	for commit in outObj["data"]:
-		collective["data"][repo]["commitTimestamps"].append(commit["commit"]["committer"]["date"])
+    # If no pre-GitHub commits, check the greater commit history
+    if len(repoData["commitTimestamps"]) > 0 and repoData["commitTimestamps"][0]:
+        repoData["initBeforeGitHubRepo"] = True
+    else:
+        repoData["initBeforeGitHubRepo"] = False
 
-	# If no pre-GitHub commits, check the greater commit history
-	if len(collective["data"][repo]["commitTimestamps"]) > 0 and collective["data"][repo]["commitTimestamps"][0]:
-		collective["data"][repo]["initBeforeGitHubRepo"] = True
-	else:
-		print(tab + "No pre-GitHub commits found, getting full history")
-		collective["data"][repo]["initBeforeGitHubRepo"] = False
+        # Query 3
+        print("Part 3)  No pre-GitHub commits found, getting full history...")
 
-		# Query 3
-		print(tab + "Modifying query...")
-		gitquery = re.sub('OWNNAME', repoSplit[0], query_commits_in2)
-		gitquery = re.sub('REPONAME', repoSplit[1], gitquery)
-		print(tab + "Query ready!")
+        gitquery3 = re.sub('OWNNAME', r[0], query_commits_in2)
+        gitquery3 = re.sub('REPONAME', r[1], gitquery3)
 
-		# Actual query exchange
-		outObj = helpers.query_githubrest(authhead, gitquery)
-		if outObj["errors"]:
-			print(tab + "Could not complete '%s'" % (repo))
-			collective["data"].pop(repo, None)
-			continue
+        try:
+            outObj3 = queryMan.queryGitHub(
+                gitquery3,
+                rest=True,
+                paginate=True
+            )
+        except Exception as error:
+            print("Warning: Could not complete '%s'" % (repo))
+            print(error)
 
-		# Update collective data
-		for commit in outObj["data"]:
-			collective["data"][repo]["commitTimestamps"].append(commit["commit"]["committer"]["date"])
+        # Update repo data
+        try:
+            for commit in outObj3:
+                repoData["commitTimestamps"].append(commit["commit"]["committer"]["date"])
+        except NameError as error:
+            print("Could not get any commits for '%s'." % (repo))
+            continue
 
-	# Paginate if needed
-	hasNext = ("next" in outObj)
-	while hasNext:
-		pageNum += 1
-		print(tab + "page %d" % (pageNum))
+    # Sort dates
+    repoData["commitTimestamps"].sort()
+    # Save earliest commit date
+    firstdate = None
+    if len(repoData["commitTimestamps"]) > 0:
+        firstdate = repoData["commitTimestamps"][0]
+    repoData["firstCommitAt"] = firstdate
+    # Delete commit timestamp data (only needed to find first commit)
+    del repoData["commitTimestamps"]
 
-		print(tab + "Modifying query...")
-		newquery = gitquery + "&page=" + str(pageNum)
-		print(tab + "Query ready!")
+    # Update collective data
+    dataCollector.data["data"][repo] = repoData
 
-		# Actual query exchange
-		outObj = helpers.query_githubrest(authhead, newquery)
-		if outObj["errors"]:
-			print(tab + "Could not complete '%s'" % (repo))
-			collective["data"].pop(repo, None)
-			break
-
-		# Update collective data
-		for commit in outObj["data"]:
-			collective["data"][repo]["commitTimestamps"].append(commit["commit"]["committer"]["date"])
-
-		hasNext = ("next" in outObj)
-
-	# Sort dates
-	collective["data"][repo]["commitTimestamps"].sort()
-	# Save earliest commit date
-	firstdate = None
-	if len(collective["data"][repo]["commitTimestamps"]) > 0:
-		firstdate = collective["data"][repo]["commitTimestamps"][0]
-	collective["data"][repo]["firstCommitAt"] = firstdate
-
-	del collective["data"][repo]["commitTimestamps"]
-	print("'%s' Done!" % (repo))
+    print("'%s' Done!" % (repo))
 
 print("\nCollective data gathering complete!")
 
-# Combine new data with existing data
-if "data" not in allData:
-	allData["data"] = {}
-for repo in collective["data"].keys():
-	allData["data"][repo] = collective["data"][repo]
-allDataString = json.dumps(allData, indent=4, sort_keys=True)
+# Remove any data for repos no longer in the list
+print("Deleting unwanted data (from unlisted repos)...")
+for repo in list(dataCollector.data["data"].keys()):
+    if repo not in repolist:
+        dataCollector.data["data"].pop(repo, None)
+        print("Removed '%s'" % (repo))
 
 # Write output file
-print("\nWriting file '%s'" % (datfilepath))
-with open(datfilepath, "w") as fileout:
-	fileout.write(allDataString)
-print("Wrote file!")
+dataCollector.fileSave()
 
 print("\nDone!\n")

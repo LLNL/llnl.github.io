@@ -1,25 +1,21 @@
-import helpers
-import json
+from scraper.github import queryManager as qm
 
 # Take all input lists, process, and write back to file
 
 fileIn = "../input_lists.json"
 
-inputLists = helpers.read_json(fileIn)
+inputLists = qm.DataManager("../input_lists.json", True)
 
 print("Cleaning input lists...")
 
-for aList in inputLists.keys():
-	print("    " + aList)
-	# Standardize as all lowercase
-	listWIP = [x.lower() for x in inputLists[aList]]
-	listWIP = list(set(listWIP))        # Remove duplicates
-	listWIP.sort()                      # List in alphabetical order
-	inputLists[aList] = listWIP
+for aList in inputLists.data.keys():
+    print("\t%s" % aList)
+    # Standardize as all lowercase
+    listWIP = [x.lower() for x in inputLists.data[aList]]
+    listWIP = list(set(listWIP))        # Remove duplicates
+    listWIP.sort()                      # List in alphabetical order
+    inputLists.data[aList] = listWIP
 
-str_out = json.dumps(inputLists, indent=4, sort_keys=True)
-
-with open(fileIn, "w") as fileout:
-	fileout.write(str_out)
+inputLists.fileSave()
 
 print("Input lists cleaned!")

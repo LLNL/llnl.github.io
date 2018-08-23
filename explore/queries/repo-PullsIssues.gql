@@ -1,5 +1,5 @@
-query {
-  repository(owner:"OWNNAME", name:"REPONAME") {
+query ($ownName: String!, $repoName: String!) {
+  repository(owner: $ownName, name: $repoName) {
     pullRequests_Open: pullRequests(states: OPEN) {
       totalCount
     }
@@ -17,3 +17,4 @@ query {
     }
   }
 }
+# {"ownName": "LLNL", "repoName": "llnl.github.io"}

@@ -1,6 +1,6 @@
-query { 
-  organization(login:"ORGNAME") {
-    repositories(first:50 PGCURS) {
+query ($orgName: String!, $numRepos: Int!, $pgCursor: String) {
+  organization(login: $orgName) {
+    repositories(first: $numRepos, after: $pgCursor) {
       nodes {
         nameWithOwner
         name
@@ -27,3 +27,4 @@ query {
     }
   }
 }
+# {"orgName": "LLNL", "numRepos": 50, "pgCursor": null}
