@@ -17,22 +17,6 @@
             "login": "3dubmedia",
             "name": null
         },
-        "BarrySmith": {
-            "contributedLabRepositories": {
-                "nodes": [
-                    "CEED/Laghos",
-                    "mfem/PyMFEM",
-                    "mfem/data",
-                    "mfem/doxygen",
-                    "mfem/mfem",
-                    "mfem/releases",
-                    "mfem/web",
-                    "spack/spack"
-                ]
-            },
-            "login": "BarrySmith",
-            "name": "Barry Smith"
-        },
         "BenCasses": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -132,7 +116,8 @@
         "Follett2": {
             "contributedLabRepositories": {
                 "nodes": [
-                    "CEED/Laghos"
+                    "CEED/Laghos",
+                    "CEED/benchmarks"
                 ]
             },
             "login": "Follett2",
@@ -170,6 +155,7 @@
                     "LLNL/ADAPT",
                     "LLNL/AMG",
                     "LLNL/AMPE",
+                    "LLNL/ANS",
                     "LLNL/Adagio",
                     "LLNL/AriesNCL",
                     "LLNL/AutomaDeD",
@@ -182,6 +168,7 @@
                     "LLNL/Collabmaps",
                     "LLNL/Curvallis",
                     "LLNL/CxxPolyFit",
+                    "LLNL/DJINN",
                     "LLNL/DragonView",
                     "LLNL/DysectAPI",
                     "LLNL/Elemental",
@@ -196,6 +183,7 @@
                     "LLNL/Jekyll-LLNL-Theme",
                     "LLNL/Kripke",
                     "LLNL/LH2Transfer",
+                    "LLNL/LOKI",
                     "LLNL/LULESH",
                     "LLNL/LaunchMON",
                     "LLNL/MACSio",
@@ -246,8 +234,12 @@
                     "LLNL/caliper-compiler",
                     "LLNL/caliper-examples",
                     "LLNL/callpath",
+                    "LLNL/camp",
+                    "LLNL/certipy",
+                    "LLNL/chatterbug",
                     "LLNL/coda-calibration-tool",
                     "LLNL/conduit",
+                    "LLNL/configurable-http-proxy",
                     "LLNL/coreFPUtest",
                     "LLNL/core_stack_merge",
                     "LLNL/cowc",
@@ -274,6 +266,7 @@
                     "LLNL/irep",
                     "LLNL/iris",
                     "LLNL/json-cwx",
+                    "LLNL/jupyterhub",
                     "LLNL/lbann",
                     "LLNL/ldapotp-java-api",
                     "LLNL/ldapotp-jni-lib",
@@ -310,6 +303,7 @@
                     "LLNL/pmgr_collective",
                     "LLNL/prorad",
                     "LLNL/psuade",
+                    "LLNL/py-hostlist",
                     "LLNL/pynamic",
                     "LLNL/pyranda",
                     "LLNL/python-lora",
@@ -318,9 +312,11 @@
                     "LLNL/refex-rolx",
                     "LLNL/rhizome",
                     "LLNL/rover",
+                    "LLNL/rst2slides",
                     "LLNL/rubik",
                     "LLNL/saamge",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/scraper",
                     "LLNL/selfsupervised",
                     "LLNL/shroud",
@@ -457,6 +453,15 @@
             "login": "XiaohuaZhangLLNL",
             "name": "Xiaohua Zhang"
         },
+        "YaJuFanLLNL": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/ANS"
+                ]
+            },
+            "login": "YaJuFanLLNL",
+            "name": "Ya Ju Fan"
+        },
         "aavilaherrera": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -478,6 +483,8 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "GLVis/doxygen",
                     "GLVis/glvis",
                     "GLVis/releases",
@@ -533,6 +540,7 @@
                     "LLNL/qball",
                     "LLNL/rhizome",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/spawnnet",
                     "LLNL/tox",
                     "LLNL/umap",
@@ -624,7 +632,7 @@
                 ]
             },
             "login": "alfredo-gimenez",
-            "name": "Alfredo Adolfo Gimenez"
+            "name": "Alfredo Gimenez"
         },
         "amarathe84": {
             "login": "amarathe84",
@@ -658,22 +666,12 @@
             "login": "artv3",
             "name": "Arturo Vargas"
         },
-        "balay": {
+        "balos1": {
             "contributedLabRepositories": {
                 "nodes": [
-                    "mfem/PyMFEM",
-                    "mfem/data",
-                    "mfem/doxygen",
-                    "mfem/mfem",
-                    "mfem/releases",
-                    "mfem/web",
-                    "spack/spack"
+                    "LLNL/sundials"
                 ]
             },
-            "login": "balay",
-            "name": "Satish Balay"
-        },
-        "balos1": {
             "login": "balos1",
             "name": "Cody Balos"
         },
@@ -712,10 +710,12 @@
                     "LLNL/dtcmp",
                     "LLNL/lwgrp",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "spack/spack",
                     "spack/spack-buildbot-config",
-                    "spack/spack.io",
-                    "spack/testing-sandbox"
+                    "spack/spack-configs",
+                    "spack/spack-infrastructure",
+                    "spack/spack.io"
                 ]
             },
             "login": "becker33",
@@ -846,6 +846,7 @@
                     "LLNL/adept-utils",
                     "LLNL/boxfish",
                     "LLNL/callpath",
+                    "LLNL/chatterbug",
                     "LLNL/core_stack_merge",
                     "LLNL/cram",
                     "LLNL/damselfly",
@@ -1143,6 +1144,7 @@
                     "flux-framework/flux-framework.github.io",
                     "flux-framework/flux-hierarchy",
                     "flux-framework/flux-sched",
+                    "flux-framework/flux-security",
                     "flux-framework/rfc"
                 ]
             },
@@ -1168,6 +1170,16 @@
             },
             "login": "cleary3",
             "name": "Geoff Cleary"
+        },
+        "cmoussa1": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/py-hostlist",
+                    "LLNL/scr-fe"
+                ]
+            },
+            "login": "cmoussa1",
+            "name": "Christopher Moussa"
         },
         "cnpetra": {
             "contributedLabRepositories": {
@@ -1219,15 +1231,6 @@
             },
             "login": "correaa",
             "name": "Alfredo Correa"
-        },
-        "curfman": {
-            "contributedLabRepositories": {
-                "nodes": [
-                    "spack/spack"
-                ]
-            },
-            "login": "curfman",
-            "name": "Lois Curfman McInnes"
         },
         "cyrush": {
             "contributedLabRepositories": {
@@ -1389,9 +1392,12 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "LLNL/ADAPT",
                     "LLNL/AMG",
                     "LLNL/AMPE",
+                    "LLNL/ANS",
                     "LLNL/Adagio",
                     "LLNL/AriesNCL",
                     "LLNL/AutomaDeD",
@@ -1404,6 +1410,7 @@
                     "LLNL/Collabmaps",
                     "LLNL/Curvallis",
                     "LLNL/CxxPolyFit",
+                    "LLNL/DJINN",
                     "LLNL/DragonView",
                     "LLNL/DysectAPI",
                     "LLNL/Elemental",
@@ -1418,6 +1425,7 @@
                     "LLNL/Jekyll-LLNL-Theme",
                     "LLNL/Kripke",
                     "LLNL/LH2Transfer",
+                    "LLNL/LOKI",
                     "LLNL/LULESH",
                     "LLNL/LaunchMON",
                     "LLNL/MACSio",
@@ -1468,8 +1476,12 @@
                     "LLNL/caliper-compiler",
                     "LLNL/caliper-examples",
                     "LLNL/callpath",
+                    "LLNL/camp",
+                    "LLNL/certipy",
+                    "LLNL/chatterbug",
                     "LLNL/coda-calibration-tool",
                     "LLNL/conduit",
+                    "LLNL/configurable-http-proxy",
                     "LLNL/coreFPUtest",
                     "LLNL/core_stack_merge",
                     "LLNL/cowc",
@@ -1496,6 +1508,7 @@
                     "LLNL/irep",
                     "LLNL/iris",
                     "LLNL/json-cwx",
+                    "LLNL/jupyterhub",
                     "LLNL/lbann",
                     "LLNL/ldapotp-java-api",
                     "LLNL/ldapotp-jni-lib",
@@ -1532,6 +1545,7 @@
                     "LLNL/pmgr_collective",
                     "LLNL/prorad",
                     "LLNL/psuade",
+                    "LLNL/py-hostlist",
                     "LLNL/pynamic",
                     "LLNL/pyranda",
                     "LLNL/python-lora",
@@ -1540,9 +1554,11 @@
                     "LLNL/refex-rolx",
                     "LLNL/rhizome",
                     "LLNL/rover",
+                    "LLNL/rst2slides",
                     "LLNL/rubik",
                     "LLNL/saamge",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/scraper",
                     "LLNL/selfsupervised",
                     "LLNL/shroud",
@@ -1609,6 +1625,11 @@
             "name": "Debojyoti Ghosh"
         },
         "dhmunro": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/rst2slides"
+                ]
+            },
             "login": "dhmunro",
             "name": "David Munro"
         },
@@ -1618,6 +1639,7 @@
                     "LLNL/ADAPT",
                     "LLNL/AMG",
                     "LLNL/AMPE",
+                    "LLNL/ANS",
                     "LLNL/Adagio",
                     "LLNL/AriesNCL",
                     "LLNL/AutomaDeD",
@@ -1630,6 +1652,7 @@
                     "LLNL/Collabmaps",
                     "LLNL/Curvallis",
                     "LLNL/CxxPolyFit",
+                    "LLNL/DJINN",
                     "LLNL/DragonView",
                     "LLNL/DysectAPI",
                     "LLNL/Elemental",
@@ -1644,6 +1667,7 @@
                     "LLNL/Jekyll-LLNL-Theme",
                     "LLNL/Kripke",
                     "LLNL/LH2Transfer",
+                    "LLNL/LOKI",
                     "LLNL/LULESH",
                     "LLNL/LaunchMON",
                     "LLNL/MACSio",
@@ -1694,8 +1718,12 @@
                     "LLNL/caliper-compiler",
                     "LLNL/caliper-examples",
                     "LLNL/callpath",
+                    "LLNL/camp",
+                    "LLNL/certipy",
+                    "LLNL/chatterbug",
                     "LLNL/coda-calibration-tool",
                     "LLNL/conduit",
+                    "LLNL/configurable-http-proxy",
                     "LLNL/coreFPUtest",
                     "LLNL/core_stack_merge",
                     "LLNL/cowc",
@@ -1722,6 +1750,7 @@
                     "LLNL/irep",
                     "LLNL/iris",
                     "LLNL/json-cwx",
+                    "LLNL/jupyterhub",
                     "LLNL/lbann",
                     "LLNL/ldapotp-java-api",
                     "LLNL/ldapotp-jni-lib",
@@ -1758,6 +1787,7 @@
                     "LLNL/pmgr_collective",
                     "LLNL/prorad",
                     "LLNL/psuade",
+                    "LLNL/py-hostlist",
                     "LLNL/pynamic",
                     "LLNL/pyranda",
                     "LLNL/python-lora",
@@ -1766,9 +1796,11 @@
                     "LLNL/refex-rolx",
                     "LLNL/rhizome",
                     "LLNL/rover",
+                    "LLNL/rst2slides",
                     "LLNL/rubik",
                     "LLNL/saamge",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/scraper",
                     "LLNL/selfsupervised",
                     "LLNL/shroud",
@@ -1901,6 +1933,30 @@
             "login": "dsikich",
             "name": "dsikich"
         },
+        "dylan-copeland": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/Collabmaps",
+                    "LLNL/GOTCHA-tracer",
+                    "LLNL/GRAPE",
+                    "LLNL/LOKI",
+                    "LLNL/iris",
+                    "LLNL/magpie",
+                    "LLNL/qball",
+                    "LLNL/rhizome",
+                    "LLNL/tox",
+                    "LLNL/umap",
+                    "mfem/PyMFEM",
+                    "mfem/data",
+                    "mfem/doxygen",
+                    "mfem/mfem",
+                    "mfem/releases",
+                    "mfem/web"
+                ]
+            },
+            "login": "dylan-copeland",
+            "name": "Dylan Copeland"
+        },
         "escobarj": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -1980,9 +2036,11 @@
                     "LLNL/maestrowf",
                     "LLNL/magpie",
                     "LLNL/melodee",
+                    "LLNL/py-hostlist",
                     "LLNL/qball",
                     "LLNL/rhizome",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/scraper",
                     "LLNL/tox",
                     "LLNL/umap",
@@ -1991,7 +2049,7 @@
                 ]
             },
             "login": "gonsie",
-            "name": "Elsa Gonsiorowski"
+            "name": "Elsa Gonsiorowski, PhD"
         },
         "goxberry": {
             "contributedLabRepositories": {
@@ -2099,6 +2157,11 @@
             "name": "George Zagaris"
         },
         "hauten": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "spack/spack"
+                ]
+            },
             "login": "hauten",
             "name": "Holly"
         },
@@ -2127,6 +2190,8 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "LLNL/Collabmaps",
                     "LLNL/GOTCHA-tracer",
                     "LLNL/GRAPE",
@@ -2178,6 +2243,11 @@
             "name": "Ignacio Laguna"
         },
         "jafh": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/LOKI"
+                ]
+            },
             "login": "jafh",
             "name": "Jeffrey A. F. Hittinger"
         },
@@ -2185,8 +2255,11 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "GLVis/doxygen",
                     "GLVis/glvis",
+                    "GLVis/glvis-jupyter",
                     "GLVis/releases",
                     "GLVis/web",
                     "LLNL/Collabmaps",
@@ -2200,6 +2273,7 @@
                     "LLNL/rhizome",
                     "LLNL/tox",
                     "LLNL/umap",
+                    "XBraid/xbraid",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
@@ -2240,6 +2314,7 @@
                     "LLNL/rhizome",
                     "LLNL/tox",
                     "LLNL/umap",
+                    "XBraid/xbraid",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
@@ -2438,6 +2513,11 @@
             "name": "Justin Barno"
         },
         "kanye-quest": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "GLVis/glvis"
+                ]
+            },
             "login": "kanye-quest",
             "name": "Max Yang"
         },
@@ -2461,6 +2541,7 @@
                     "LLNL/lwgrp",
                     "LLNL/mpi-tools",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "hpc/OpenLorenz",
                     "hpc/Spindle",
                     "hpc/dcp",
@@ -2469,6 +2550,15 @@
             },
             "login": "kathrynmohror",
             "name": "Kathryn Mohror"
+        },
+        "kcathey": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/maestrowf"
+                ]
+            },
+            "login": "kcathey",
+            "name": "Kevin Athey"
         },
         "kdickerson": {
             "login": "kdickerson",
@@ -2544,6 +2634,11 @@
             "name": "Kento Sato"
         },
         "khumbird": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/DJINN"
+                ]
+            },
             "login": "khumbird",
             "name": "Kelli Humbird"
         },
@@ -2630,6 +2725,10 @@
             "login": "kshoga1",
             "name": null
         },
+        "lam2mo": {
+            "login": "lam2mo",
+            "name": "Mike Lam"
+        },
         "lc-bot": {
             "login": "lc-bot",
             "name": "David B. Ott"
@@ -2664,6 +2763,7 @@
                     "LLNL/ADAPT",
                     "LLNL/AMG",
                     "LLNL/AMPE",
+                    "LLNL/ANS",
                     "LLNL/Adagio",
                     "LLNL/AriesNCL",
                     "LLNL/AutomaDeD",
@@ -2676,6 +2776,7 @@
                     "LLNL/Collabmaps",
                     "LLNL/Curvallis",
                     "LLNL/CxxPolyFit",
+                    "LLNL/DJINN",
                     "LLNL/DragonView",
                     "LLNL/DysectAPI",
                     "LLNL/Elemental",
@@ -2690,6 +2791,7 @@
                     "LLNL/Jekyll-LLNL-Theme",
                     "LLNL/Kripke",
                     "LLNL/LH2Transfer",
+                    "LLNL/LOKI",
                     "LLNL/LULESH",
                     "LLNL/LaunchMON",
                     "LLNL/MACSio",
@@ -2740,8 +2842,12 @@
                     "LLNL/caliper-compiler",
                     "LLNL/caliper-examples",
                     "LLNL/callpath",
+                    "LLNL/camp",
+                    "LLNL/certipy",
+                    "LLNL/chatterbug",
                     "LLNL/coda-calibration-tool",
                     "LLNL/conduit",
+                    "LLNL/configurable-http-proxy",
                     "LLNL/coreFPUtest",
                     "LLNL/core_stack_merge",
                     "LLNL/cowc",
@@ -2768,6 +2874,7 @@
                     "LLNL/irep",
                     "LLNL/iris",
                     "LLNL/json-cwx",
+                    "LLNL/jupyterhub",
                     "LLNL/lbann",
                     "LLNL/ldapotp-java-api",
                     "LLNL/ldapotp-jni-lib",
@@ -2804,6 +2911,7 @@
                     "LLNL/pmgr_collective",
                     "LLNL/prorad",
                     "LLNL/psuade",
+                    "LLNL/py-hostlist",
                     "LLNL/pynamic",
                     "LLNL/pyranda",
                     "LLNL/python-lora",
@@ -2812,9 +2920,11 @@
                     "LLNL/refex-rolx",
                     "LLNL/rhizome",
                     "LLNL/rover",
+                    "LLNL/rst2slides",
                     "LLNL/rubik",
                     "LLNL/saamge",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/scraper",
                     "LLNL/selfsupervised",
                     "LLNL/shroud",
@@ -2850,8 +2960,9 @@
                     "PRUNERS/sword",
                     "spack/spack",
                     "spack/spack-buildbot-config",
-                    "spack/spack.io",
-                    "spack/testing-sandbox"
+                    "spack/spack-configs",
+                    "spack/spack-infrastructure",
+                    "spack/spack.io"
                 ]
             },
             "login": "lee218llnl",
@@ -3011,15 +3122,6 @@
             "login": "lucpeterson",
             "name": "Luc Peterson"
         },
-        "luszczek": {
-            "contributedLabRepositories": {
-                "nodes": [
-                    "spack/spack"
-                ]
-            },
-            "login": "luszczek",
-            "name": "Piotr Luszczek"
-        },
         "markcmiller86": {
             "contributedLabRepositories": {
                 "nodes": [
@@ -3030,6 +3132,7 @@
                     "LLNL/MACSio",
                     "LLNL/ior",
                     "LLNL/iris",
+                    "LLNL/json-cwx",
                     "LLNL/magpie",
                     "LLNL/qball",
                     "LLNL/rhizome",
@@ -3062,6 +3165,7 @@
                     "LLNL/Umpire",
                     "LLNL/blt",
                     "LLNL/msr-safe",
+                    "LLNL/simpool",
                     "LLNL/umap",
                     "spack/spack"
                 ]
@@ -3085,7 +3189,13 @@
                     "LLNL/strawman",
                     "LLNL/tox",
                     "LLNL/umap",
-                    "LLNL/zfp"
+                    "LLNL/zfp",
+                    "mfem/PyMFEM",
+                    "mfem/data",
+                    "mfem/doxygen",
+                    "mfem/mfem",
+                    "mfem/releases",
+                    "mfem/web"
                 ]
             },
             "login": "mclarsen",
@@ -3195,6 +3305,8 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "GLVis/doxygen",
                     "GLVis/glvis",
                     "GLVis/releases",
@@ -3276,6 +3388,7 @@
                     "flux-framework/flux-core",
                     "flux-framework/flux-sched",
                     "flux-framework/rfc",
+                    "hpc/mpifileutils",
                     "spack/spack-buildbot-config"
                 ]
             },
@@ -3330,8 +3443,9 @@
                     "hpc/Spindle",
                     "spack/spack",
                     "spack/spack-buildbot-config",
-                    "spack/spack.io",
-                    "spack/testing-sandbox"
+                    "spack/spack-configs",
+                    "spack/spack-infrastructure",
+                    "spack/spack.io"
                 ]
             },
             "login": "mplegendre",
@@ -3494,6 +3608,7 @@
                     "LLNL/DragonView",
                     "LLNL/OMSClient",
                     "LLNL/TraceR",
+                    "LLNL/chatterbug",
                     "LLNL/damselfly",
                     "LLNL/graphator",
                     "LLNL/rubik",
@@ -3545,6 +3660,35 @@
                     "LLNL/tox",
                     "LLNL/umap",
                     "LLNL/zfs",
+                    "chaos/9nbd",
+                    "chaos/apt",
+                    "chaos/cerebro",
+                    "chaos/chaos.github.com",
+                    "chaos/diod",
+                    "chaos/dpkg",
+                    "chaos/dpkg-dotkit",
+                    "chaos/dpkg-scripts",
+                    "chaos/genders",
+                    "chaos/gendersllnl",
+                    "chaos/ldiskfs",
+                    "chaos/ldiskfsprogs",
+                    "chaos/lmt-gui",
+                    "chaos/lustre-kdmu",
+                    "chaos/mrsh",
+                    "chaos/netroot",
+                    "chaos/nfsroot",
+                    "chaos/ngrm",
+                    "chaos/nodediag",
+                    "chaos/nph",
+                    "chaos/pathwalk",
+                    "chaos/pdsh",
+                    "chaos/powerman",
+                    "chaos/rquota",
+                    "chaos/scrub",
+                    "chaos/slurm",
+                    "chaos/slurm-spank-plugins",
+                    "chaos/v9fs",
+                    "chaos/whatsup",
                     "zfsonlinux/arcstat",
                     "zfsonlinux/debian-installers",
                     "zfsonlinux/dkms",
@@ -3703,26 +3847,6 @@
         "ptbremer": {
             "contributedLabRepositories": {
                 "nodes": [
-                    "CDAT/ParaView",
-                    "CDAT/UVIS_DV3D",
-                    "CDAT/VCS-widgets",
-                    "CDAT/VTK",
-                    "CDAT/VisTrails",
-                    "CDAT/cdat",
-                    "CDAT/cdatweb",
-                    "CDAT/cdms",
-                    "CDAT/cdp",
-                    "CDAT/cdtime",
-                    "CDAT/cdutil",
-                    "CDAT/ci-bots",
-                    "CDAT/genutil",
-                    "CDAT/thermo",
-                    "CDAT/uvcdat-testdata",
-                    "CDAT/vcdat",
-                    "CDAT/vcs",
-                    "CDAT/vcs-js",
-                    "CDAT/vcsaddons",
-                    "CDAT/wk",
                     "LLNL/ADAPT",
                     "LLNL/Adagio",
                     "LLNL/AutomaDeD",
@@ -3814,6 +3938,7 @@
                     "LLNL/rhizome",
                     "LLNL/tox",
                     "LLNL/umap",
+                    "XBraid/xbraid",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
@@ -3839,6 +3964,7 @@
                     "LLNL/magpie",
                     "LLNL/qball",
                     "LLNL/rhizome",
+                    "LLNL/simpool",
                     "LLNL/tox",
                     "LLNL/umap"
                 ]
@@ -3867,6 +3993,7 @@
                     "LLNL/qball",
                     "LLNL/rhizome",
                     "LLNL/shroud",
+                    "LLNL/simpool",
                     "LLNL/tox",
                     "LLNL/umap",
                     "mfem/PyMFEM",
@@ -3999,6 +4126,8 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "GLVis/doxygen",
                     "GLVis/glvis",
                     "GLVis/releases",
@@ -4321,6 +4450,15 @@
             "login": "stevenmz",
             "name": "Steven Maga\u00f1a-Zook"
         },
+        "tadesautels": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/maestrowf"
+                ]
+            },
+            "login": "tadesautels",
+            "name": "Thomas Desautels"
+        },
         "templetond": {
             "login": "templetond",
             "name": "Dennise Templeton"
@@ -4331,6 +4469,7 @@
                     "LLNL/ADAPT",
                     "LLNL/AMG",
                     "LLNL/AMPE",
+                    "LLNL/ANS",
                     "LLNL/Adagio",
                     "LLNL/AriesNCL",
                     "LLNL/AutomaDeD",
@@ -4343,6 +4482,7 @@
                     "LLNL/Collabmaps",
                     "LLNL/Curvallis",
                     "LLNL/CxxPolyFit",
+                    "LLNL/DJINN",
                     "LLNL/DragonView",
                     "LLNL/DysectAPI",
                     "LLNL/Elemental",
@@ -4357,6 +4497,7 @@
                     "LLNL/Jekyll-LLNL-Theme",
                     "LLNL/Kripke",
                     "LLNL/LH2Transfer",
+                    "LLNL/LOKI",
                     "LLNL/LULESH",
                     "LLNL/LaunchMON",
                     "LLNL/MACSio",
@@ -4407,8 +4548,12 @@
                     "LLNL/caliper-compiler",
                     "LLNL/caliper-examples",
                     "LLNL/callpath",
+                    "LLNL/camp",
+                    "LLNL/certipy",
+                    "LLNL/chatterbug",
                     "LLNL/coda-calibration-tool",
                     "LLNL/conduit",
+                    "LLNL/configurable-http-proxy",
                     "LLNL/coreFPUtest",
                     "LLNL/core_stack_merge",
                     "LLNL/cowc",
@@ -4435,6 +4580,7 @@
                     "LLNL/irep",
                     "LLNL/iris",
                     "LLNL/json-cwx",
+                    "LLNL/jupyterhub",
                     "LLNL/lbann",
                     "LLNL/ldapotp-java-api",
                     "LLNL/ldapotp-jni-lib",
@@ -4471,6 +4617,7 @@
                     "LLNL/pmgr_collective",
                     "LLNL/prorad",
                     "LLNL/psuade",
+                    "LLNL/py-hostlist",
                     "LLNL/pynamic",
                     "LLNL/pyranda",
                     "LLNL/python-lora",
@@ -4479,9 +4626,11 @@
                     "LLNL/refex-rolx",
                     "LLNL/rhizome",
                     "LLNL/rover",
+                    "LLNL/rst2slides",
                     "LLNL/rubik",
                     "LLNL/saamge",
                     "LLNL/scr",
+                    "LLNL/scr-fe",
                     "LLNL/scraper",
                     "LLNL/selfsupervised",
                     "LLNL/shroud",
@@ -4512,8 +4661,9 @@
                     "mfem/web",
                     "spack/spack",
                     "spack/spack-buildbot-config",
-                    "spack/spack.io",
-                    "spack/testing-sandbox"
+                    "spack/spack-configs",
+                    "spack/spack-infrastructure",
+                    "spack/spack.io"
                 ]
             },
             "login": "tgamblin",
@@ -4525,7 +4675,10 @@
                     "LLNL/Collabmaps",
                     "LLNL/GOTCHA-tracer",
                     "LLNL/GRAPE",
+                    "LLNL/certipy",
+                    "LLNL/configurable-http-proxy",
                     "LLNL/iris",
+                    "LLNL/jupyterhub",
                     "LLNL/magpie",
                     "LLNL/qball",
                     "LLNL/rhizome",
@@ -4634,7 +4787,9 @@
         "trujillo13": {
             "contributedLabRepositories": {
                 "nodes": [
-                    "CEED/Laghos"
+                    "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED"
                 ]
             },
             "login": "trujillo13",
@@ -4663,6 +4818,7 @@
                     "LLNL/adept-utils",
                     "LLNL/boxfish",
                     "LLNL/callpath",
+                    "LLNL/camp",
                     "LLNL/core_stack_merge",
                     "LLNL/cram",
                     "LLNL/damselfly",
@@ -4736,8 +4892,11 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "GLVis/doxygen",
                     "GLVis/glvis",
+                    "GLVis/glvis-jupyter",
                     "GLVis/releases",
                     "GLVis/web",
                     "LLNL/Collabmaps",
@@ -4753,13 +4912,15 @@
                     "LLNL/rhizome",
                     "LLNL/tox",
                     "LLNL/umap",
+                    "XBraid/xbraid",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
                     "mfem/mfem",
                     "mfem/releases",
                     "mfem/web",
-                    "spack/spack"
+                    "spack/spack",
+                    "spack/spack-configs"
                 ]
             },
             "login": "tzanio",
@@ -4770,6 +4931,7 @@
                 "nodes": [
                     "LLNL/AMG",
                     "LLNL/hypre",
+                    "XBraid/xbraid",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
@@ -4785,8 +4947,11 @@
             "contributedLabRepositories": {
                 "nodes": [
                     "CEED/Laghos",
+                    "CEED/benchmarks",
+                    "CEED/libCEED",
                     "GLVis/doxygen",
                     "GLVis/glvis",
+                    "GLVis/glvis-jupyter",
                     "GLVis/releases",
                     "GLVis/web",
                     "LLNL/Collabmaps",
@@ -4800,13 +4965,15 @@
                     "LLNL/rhizome",
                     "LLNL/tox",
                     "LLNL/umap",
+                    "XBraid/xbraid",
                     "mfem/PyMFEM",
                     "mfem/data",
                     "mfem/doxygen",
                     "mfem/mfem",
                     "mfem/releases",
                     "mfem/web",
-                    "spack/spack"
+                    "spack/spack",
+                    "spack/spack-configs"
                 ]
             },
             "login": "v-dobrev",
@@ -4854,6 +5021,23 @@
             },
             "login": "white238",
             "name": "Chris White"
+        },
+        "white6": {
+            "contributedLabRepositories": {
+                "nodes": [
+                    "LLNL/Collabmaps",
+                    "LLNL/GOTCHA-tracer",
+                    "LLNL/GRAPE",
+                    "LLNL/iris",
+                    "LLNL/magpie",
+                    "LLNL/qball",
+                    "LLNL/rhizome",
+                    "LLNL/tox",
+                    "LLNL/umap"
+                ]
+            },
+            "login": "white6",
+            "name": "Greg White"
         },
         "whitesides1": {
             "contributedLabRepositories": {
