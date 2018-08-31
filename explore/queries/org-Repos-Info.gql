@@ -1,6 +1,6 @@
 query ($orgName: String!, $numRepos: Int!, $pgCursor: String) {
   organization(login: $orgName) {
-    repositories(first: $numRepos, after: $pgCursor) {
+    repositories(privacy: PUBLIC, first: $numRepos, after: $pgCursor) {
       nodes {
         nameWithOwner
         name
