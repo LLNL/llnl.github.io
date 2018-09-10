@@ -1,6 +1,6 @@
 query ($userName: String!, $numRepos: Int!, $pgCursor: String) {
   user(login: $userName) {
-    repositoriesContributedTo(first: $numRepos, after: $pgCursor) {
+    repositoriesContributedTo(privacy: PUBLIC, first: $numRepos, after: $pgCursor) {
       nodes {
         nameWithOwner
       }
