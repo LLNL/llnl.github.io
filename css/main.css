@@ -80,3 +80,20 @@
   color: #005dab;
   font-weight: bold;
 }
+
+/* Dropdown */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    min-width: 160px;
+    align: center;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .dropdown-content { visibility: hidden; }
+}
+
+.dropdown:hover .dropdown-content { display: block; }
