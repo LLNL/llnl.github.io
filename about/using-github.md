@@ -49,7 +49,7 @@ If you are an employee at LLNL, and have 2FA enabled, congratulations, you are e
 
 2. After an administrator has added you to the organization, you will receive a notification email from GitHub.
 
-    - Alternatively, once the invitation has been sent, you will see a notification banner at the top of https://github.com/llnl which you can use to accept the invitation.
+    - Alternatively, once the invitation has been sent, you will see a notification banner at the top of [https://github.com/llnl](https://github.com/llnl) which you can use to accept the invitation.
 
 3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people) page make your membership `Public`.
 
@@ -79,6 +79,16 @@ Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL serve
 * NO Unclassified Controlled Nuclear Information (UCNI)
 
 When in doubt, contact a Derivative Classifier (DC) and / or Information Management (IM) for further guidance.
+
+#### Repository Visibility
+
+Now that your project is on GitHub, make sure users and contributors can find it! There are several ways to do this. Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) for help with the following tasks:
+
+* Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
+    * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
+* Include a summary of your project with GitHub and documentation links on LLNL's [Computation website](https://computation.llnl.gov/).
+* Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub.
+* Publicize any outreach activities related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
 
 ### Other References
 
