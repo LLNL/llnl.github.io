@@ -16,7 +16,18 @@
       <ul class="nav navbar-nav navbar-right navbar-collapse">
         <li id="home" {% if page.url == "/" %} class="active" {% endif %}><a href="/">Catalog</a></li>
         <li id="news" {% if page.url == "/news/" %} class="active" {% endif %}><a href="/news/">News</a></li>
-        <li id="about" {% if page.url == "/about/" %} class="active" {% endif %}><a href="/about/">About</a></li>
+        <li id="about"
+            {% if page.url == "/about/" %} class="active dropdown"
+            {% else %} class="dropdown"
+            {% endif %}><a href="/about/">About</a>
+          <div class="dropdown-content">
+            <p><a href="/about/using-github/">Using GitHub</a></p>
+            <p><a href="/about/contributing/">Contributing</a></p>
+            <p><a href="/about/licenses/">Licenses Guide</a></p>
+            <p><a href="/about/open-source/">LLNL and Open Source</a></p>
+          </div>
+        </li>
+
         <li id="explore" {% if page.url == "/explore/" %} class="active" {% endif %}><a href="/explore/">Explore</a></li>
         <li id="github"><a href="https://github.com/llnl"><span class="fa fa-github fa-lg"></span></a></li>
       </ul>
