@@ -1,0 +1,7 @@
+---
+title: SCR: Scalable Checkpoint/Restart for MPI
+---
+
+Multilevel checkpointing allows HPC applications to take both frequent inexpensive checkpoints and less frequent, more resilient checkpoints, resulting in better efficiency and reduced load on the parallel file system. Accordingly, LLNL researchers developed the Scalable Checkpoint/Restart (SCR) library for the large-scale, production system context.
+
+Learn more on our [Computation website](https://computation.llnl.gov/projects/scalable-checkpoint-restart-for-mpi). Read the [SCR user guide](https://scr.readthedocs.io/en/latest/) and fork the code on [GitHub](https://github.com/LLNL/scr).

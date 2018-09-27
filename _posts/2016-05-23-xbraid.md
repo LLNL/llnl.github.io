@@ -1,0 +1,7 @@
+---
+title: XBraid: Parallel Time Integration with Multigrid
+---
+
+LLNL scientists have developed an open-source, non-intrusive, and general purpose parallel-in-time code, XBraid. This tool solves for all time steps simultaneously with the help of a new multilevel algorithm and the massively parallel processing capabilities of current and future high-performance computers.
+
+Learn more on our [Computation website](https://computation.llnl.gov/projects/parallel-time-integration-multigrid), and download the software on [GitHub](https://github.com/XBraid/xbraid).

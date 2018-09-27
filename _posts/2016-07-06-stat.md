@@ -1,0 +1,7 @@
+---
+title: STAT: Discovering Supercomputers' Code Errors
+---
+
+LLNL's Stack Trace Analysis Tool (STAT) reduces the number of processes requiring more in-depth analysis by organizing processes within a parallel application based on behavioral patterns. This analytic tool was designed and developed by LLNL computer scientists with collaborators at the University of Wisconsin at Madison and the University of New Mexico.  A [video](https://youtu.be/Lv8rR03ez04) explains more.
+
+Learn more on our [Computation website](https://computation.llnl.gov/projects/stat/discovering-computers-code-errors), and download the software on [GitHub](https://github.com/LLNL/STAT).

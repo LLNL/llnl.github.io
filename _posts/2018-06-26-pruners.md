@@ -1,0 +1,7 @@
+---
+title: PRUNERS: Providing Reproducibility for Uncovering Non-Deterministic Errors
+---
+
+Non-deterministic software bugs are one of the most time-consuming and expensive problems to solve in software development. Furthermore, non-deterministic debugging of parallel applications running on large supercomputers, such as those at LLNL, presents even greater challenges. The PRUNERS toolset offers four novel debugging and testing tools to assist programmers with detecting, remediating, and preventing these errors in a coordinated manner.
+
+Learn more on our [Computation website](https://computation.llnl.gov/projects/pruners), explore the [toolset](https://pruners.github.io/), and fork the [code](https://github.com/PRUNERS).

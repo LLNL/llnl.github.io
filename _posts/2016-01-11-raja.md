@@ -1,0 +1,7 @@
+---
+title: RAJA: Managing Application Portability for Next-Generation Platforms
+---
+
+RAJA is a software abstraction that systematically encapsulates platform-specific code to enable applications to be portable across diverse hardware architectures without major source code disruption. RAJA is designed to integrate with existing codes and provide a development model for new codes to be portable from inception.
+
+Learn more on our [Computation website](https://computation.llnl.gov/projects/raja-managing-application-portability-next-generation-platforms) and fork the [code](https://github.com/LLNL/raja).

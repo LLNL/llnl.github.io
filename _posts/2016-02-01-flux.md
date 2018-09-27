@@ -1,0 +1,7 @@
+---
+title: Flux: Building a Framework for Resource Management
+---
+
+ Flux is a next-generation resource and job management framework that expands the scheduler’s view beyond the single dimension of “nodes.” Instead of simply developing a replacement for SLURM and Moab, Flux offers a framework that enables new resource types, schedulers, and framework services to be deployed as data centers continue to evolve. This approach is especially important for extremely large Linux clusters like those at LLNL.
+
+Learn more on our [Computation website](https://computation.llnl.gov/projects/flux-building-framework-resource-management) and fork the code on [GitHub](https://github.com/flux-framework).
