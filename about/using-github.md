@@ -51,7 +51,7 @@ If you are an employee at LLNL, and have 2FA enabled, congratulations, you are e
 
     - Alternatively, once the invitation has been sent, you will see a notification banner at the top of https://github.com/llnl which you can use to accept the invitation.
 
-3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people) page make your membership `Public`.
+3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people) page and make your membership `Public`.
 
 4. Review the "Working with LLNL Repositories" information below.
 
