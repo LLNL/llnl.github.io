@@ -33,13 +33,18 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
 4. [Enable Two-factor authentication](https://github.com/settings/security)
 
-    - *This will soon be a requirement for membership in the @LLNL GitHub organization.*
-    - Two-factor authentication is set at your account level.
-    - You will be given the option to setup two-factor authentication with an app (such as Google Authenticator) or SMS.
-    - Selecting either option also provides you with a list of recovery codes to get into your account in the event you are locked out.
-    - If you setup with an app, you will still have the option to set a backup SMS number (recommended).
+    - *Membership in the @LLNL GitHub organization requires that 2FA has been enabled on your GitHub account*
+    - There are several options for configuring 2FA for your GitHub account:
+        1. [YubiKey](https://yubico.com) hardware security keys
+            - Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
+            - YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
+        2. Google Authenticator
+            - Google Authenticator is a mobile application which you can install on your personal or government issued phone. It allows provides a one time token (OTP) which you can use
+        3. Authy
+            - Authy is a desktop (or laptop) based application which can be used to generate a one time token (OTP) for use logging in to GitHub.com.
+            - This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
+    - You will also have the option during 2FA to generate and save a list of recovery codes to get into your account in the event you lose access to one of your 2FA methods. This is *highly* recommended, and the recovery codes should be stored
     - For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
-
 
 ### Joining the Organization
 
