@@ -86,5 +86,5 @@ Partnerships Office.
 
 ### Have Questions?
 
-If you still have questions / need more information, contact:
-<github-admin@llnl.gov>
+If you still have questions or need more information, contact the
+[LLNL GitHub Admins](github-admin@llnl.gov).
