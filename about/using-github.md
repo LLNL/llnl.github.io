@@ -38,10 +38,10 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
         1. [YubiKey](https://yubico.com) hardware security keys
             - Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
             - YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
-        2. Google Authenticator
+        2. [Google Authenticator](https://support.google.com/accounts/answer/1066447)
             - Google Authenticator is a mobile application which you can install on your personal or government issued phone.
             - It allows provides a one time token (OTP) which you can use to authenticate to GitHub.com
-        3. Authy
+        3. [Authy](https://authy.com/guides/github/)
             - Authy is a desktop (or laptop) based application which can be used to generate a one time token (OTP) for use logging in to GitHub.com.
             - This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
     - You will also have the option during 2FA to generate and save a list of recovery codes to get into your account in the event you lose access to one of your 2FA methods. This is *highly* recommended, and the recovery codes should be stored
