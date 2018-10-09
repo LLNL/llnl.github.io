@@ -33,7 +33,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
 4. [Enable Two-factor authentication](https://github.com/settings/security)
 
-    - *Membership in the @LLNL GitHub organization requires that 2FA has been enabled on your GitHub account*
+    - *Membership in the @LLNL GitHub organization will soon require that 2FA has been enabled on your GitHub account*
     - There are several options for configuring 2FA for your GitHub account:
         1. [YubiKey](https://yubico.com) hardware security keys
             - Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
