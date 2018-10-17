@@ -47,7 +47,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
     - You will also have the option during 2FA to generate and save a list of recovery codes to get into your account in the event you lose access to one of your 2FA methods. This is *highly* recommended, and the recovery codes should be stored
     - It is recommended that you set up *MULTIPLE* 2FA options. This can protect your access to account in the even that you lose access to one of your authenticators.
     - For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
-    - Having trouble setting up 2FA? Contact the [LLNL GitHub Admins](mailto:github-admin@llnl.gov) who will be happy to help.
+    - Having trouble setting up 2FA? Contact the [LLNL GitHub Admins](mailto:github-admin@llnl.gov) who may be able to help.
 
 ### Joining the Organization
 
