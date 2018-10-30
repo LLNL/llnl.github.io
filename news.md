@@ -6,10 +6,11 @@ permalink: /news/
 
   {% for page in site.posts %}
   <article>
-    <h2>
-      <a href="{{ page.url }}">{{ page.title }}</a>
+    <h3>
+      {{ page.title }}
       <small class="pull-right">{{ page.date | date: '%B %d, %Y' }}</small>
-    </h2>
+    </h3>
 
     {{ page.content }}
+    </article>
   {% endfor %}
