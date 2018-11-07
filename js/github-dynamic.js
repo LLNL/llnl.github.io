@@ -1,5 +1,5 @@
 angular.module('app', [])
-    .controller('gitHubDataController', ['$scope', '$http', function($scope, $http) {
+    .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
         $scope.reposLoaded = false;
         $scope.userLoaded = false;
         $scope.username = "llnl";
@@ -45,5 +45,9 @@ angular.module('app', [])
         });
 
         $scope.predicate = '-stargazers.totalCount';
+
+        $scope.repoHref = function(nametag) {
+            $window.location.href = 'repo/'+nametag;
+        };
 
     }]);

@@ -17,14 +17,14 @@ Software Repositories
 </div>
 
 <section ng-show="repoData" id="repositories" class="flex-container">
-    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" onclick="location.href='#';">
+    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)">
         <h4 class="text-center">
-        <a href="{{ repo.url }}" alt="View Project on GitHub" title="View Project on GitHub"> {{ repo.name }} </a>
-        <small><a href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub"> {{ repo.owner.login }} </a></small>
-        <small><span alt="Primary Language" title="Primary Language">{{ repo.primaryLanguage.name }}</span></small>
+            <a href="{{ repo.url }}" alt="View Project on GitHub" title="View Project on GitHub"> {{ repo.name }} </a>
+            <small><a href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub"> {{ repo.owner.login }} </a></small>
+            <small><span alt="Primary Language" title="Primary Language"> {{ repo.primaryLanguage.name }} </span></small>
         </h4>
 
-        <p class="text-justify">{{ repo.description }}</p>
+        <p class="text-justify"> {{ repo.description }} </p>
 
         <p class="stats text-center">
             <a href="{{ repo.url }}" alt="GitHub Page" title="GitHub Page">
