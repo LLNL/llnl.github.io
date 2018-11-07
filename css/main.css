@@ -34,6 +34,12 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   margin: 10px;
+  cursor: pointer;
+}
+
+.flex-item:hover {
+  border: 1px solid #005dab;
+  box-shadow: 3px 3px #ddd;
 }
 
 .flex-item > h4 {
@@ -41,6 +47,10 @@
   margin: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.flex-item:hover > h4 {
+  background-color: #ebf2f8;
 }
 
 .flex-item > p {
