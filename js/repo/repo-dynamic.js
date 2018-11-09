@@ -14,18 +14,27 @@ angular.module('app', [])
         var myDataPromise = getRepoInfo();
         myDataPromise.then( function(reposObj) {
             $scope.repos = Object.keys(reposObj.data);
-            var data = reposObj["data"][hash];
-            if (data.primaryLanguage == null) {
-                data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
+            if (reposObj["data"].hasOwnProperty(hash)) {
+                var data = reposObj["data"][hash];
+                $scope.repo = data;
+                console.log(data);
+                draw_graphs($scope.repo.nameWithOwner);
+            } else {
+                repo404();
             }
-            $scope.repo = data;
-            console.log(data);
-            draw_graphs();
         });
 
-        var draw_graphs = function() {
-            var nametag = $scope.repo.nameWithOwner;
-            console.log("nametag = "+nametag);
+        var repo404 = function() {
+            var errorString = '<h1><span class="fa fa-exclamation-circle"></span> Whoops...</h1>';
+            if (hash == '') {
+                errorString += 'No repository specified.';
+            } else {
+                errorString += 'The repository "'+hash+'" is not in our catalog.'
+            }
+            document.getElementById("mainContent").innerHTML = errorString;
+        }
+
+        var draw_graphs = function(nametag) {
             draw_line_repoActivity("repoActivityChart", nametag);
         };
 
