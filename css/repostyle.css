@@ -1,18 +1,20 @@
 /* For individual repository pages */
 
-.subtitle {
-  font-size: 60%;
-  vertical-align: super;
+a.title {
+  font-size: 150%;
+  color: inherit;
+  text-decoration: none;
 }
 
-a.plain-link {
-  color: inherit;
+a.subtitle {
+  font-size: 70%;
+  vertical-align: super;
+  color: #777;
   text-decoration: none;
 }
 
 span.fa {
   margin-right: 8px;
-  font-size: 110%;
 }
 
 p.stats {
@@ -22,9 +24,6 @@ p.stats {
 p.stats > a {
   color: inherit;
   text-decoration: none;
-  margin-left: 30px;
-}
-
-p.stats > a:last-child {
-  margin-right: 30px;
+  white-space: nowrap;
+  margin: 20px;
 }

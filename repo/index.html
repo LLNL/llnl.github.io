@@ -8,10 +8,10 @@ layout: repo
 <link rel="stylesheet" type="text/css" href="../css/repostyle.css" />
 <link rel="stylesheet" type="text/css" href="../css/graphstyle.css" />
 
-<h1 class="text-center">
-    <a class="plain-link" href="{{ repo.url }}" alt="View Project on GitHub" title="View Project on GitHub">{{ repo.name }}</a>
+<h1 class="page-header text-center">
+    <a class="title" href="{{ repo.url }}" alt="View Project on GitHub" title="View Project on GitHub">{{ repo.name }}</a>
     <br>
-    <a class="subtitle plain-link" href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub">[ {{ repo.owner.login }} ]</a>
+    <a class="subtitle" href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub">[ {{ repo.owner.login }} ]</a>
 </h1>
 
 <p class="stats text-center">
@@ -32,7 +32,36 @@ layout: repo
     </a>
 </p>
 
-<p class="text-justify">{{ repo.description }}</p>
+<blockquote ng-if="repo.description" cite="{{ repo.url }}">{{ repo.description }}</blockquote>
+
+<!-- Preset vis display areas -->
+<center>
+    <svg class="repoActivityChart"></svg>
+</center>
+
+<!-- Load basic D3 and helper scripts -->
+<script src="https://cdn.llnl.gov/d3/4.2.2/d3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://cdn.llnl.gov/d3-tip/1.0/d3-tip.js"></script>
+<script type="text/javascript" src="https://cdn.llnl.gov/d3-v4-cloud/1.2.2/build/d3.layout.cloud.js"></script>
+<script type="text/javascript" src="../js/explore/helpers.js"></script>
+
+<!-- Load drawing JS -->
+<script type="text/javascript" src="../js/explore/line_repoActivity.js"></script>
+
+<script>
+    // GiHub Data Directory
+    var ghDataDir = "../explore/github-data";
+    // Global chart standards
+    var stdTotalWidth = 500,
+        stdTotalHeight = 400;
+    var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
+        stdWidth = stdTotalWidth - stdMargin.left - stdMargin.right,
+        stdHeight = stdTotalHeight - stdMargin.top - stdMargin.bottom,
+        stdMaxBuffer = 1.07;
+    var stdDotRadius = 4,
+        stdLgndDotRadius = 5,
+        stdLgndSpacing = 20;
+</script>
 
 {% endraw %}
 

@@ -20,6 +20,13 @@ angular.module('app', [])
             }
             $scope.repo = data;
             console.log(data);
+            draw_graphs();
         });
+
+        var draw_graphs = function() {
+            var nametag = $scope.repo.nameWithOwner;
+            console.log("nametag = "+nametag);
+            draw_line_repoActivity("repoActivityChart", nametag);
+        };
 
     }]);
