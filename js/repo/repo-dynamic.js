@@ -18,7 +18,7 @@ angular.module('app', [])
             if (data.primaryLanguage == null) {
                 data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
             }
-            $scope.repoData = data;
+            $scope.repo = data;
             console.log(data);
         });
 

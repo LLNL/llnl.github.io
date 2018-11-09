@@ -5,10 +5,34 @@ layout: repo
 
 {% raw %}
 
+<link rel="stylesheet" type="text/css" href="../css/repostyle.css" />
 <link rel="stylesheet" type="text/css" href="../css/graphstyle.css" />
-<h1><center>{{repoData.name}}</center></h1>
 
-{{repoData}}
+<h1 class="text-center">
+    <a class="plain-link" href="{{ repo.url }}" alt="View Project on GitHub" title="View Project on GitHub">{{ repo.name }}</a>
+    <br>
+    <a class="subtitle plain-link" href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub">[ {{ repo.owner.login }} ]</a>
+</h1>
+
+<p class="stats text-center">
+    <a href="{{ repo.url }}">
+        <span class="fa fa-github"></span>GitHub Page
+    </a>
+
+    <a href="{{ repo.url }}/stargazers">
+        <span class="fa fa-star"></span>Stargazers - {{ repo.stargazers.totalCount }}
+    </a>
+
+    <a href="{{ repo.url }}/network">
+        <span class="fa fa-code-fork"></span>Forks - {{ repo.forks.totalCount }}
+    </a>
+
+    <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}">
+        <span class="fa fa-globe"></span>Project Website
+    </a>
+</p>
+
+<p class="text-justify">{{ repo.description }}</p>
 
 {% endraw %}
 
