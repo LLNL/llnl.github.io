@@ -84,9 +84,9 @@ function draw_cloud_languages(areaID, repoNameWOwner) {
 						wordDict[aWord]=0;
 					}
 					if (repoNameWOwner == null) {
-						wordDict[aWord]+=1;
+						wordDict[aWord]+=1;  // across multiple repos, count once per repo
 					} else {
-						wordDict[aWord]+=langNodes.length-i;
+						wordDict[aWord]+=langNodes.length-i;  // across single repo, count by usage rank
 					}
 				}
 			}
