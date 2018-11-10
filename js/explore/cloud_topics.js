@@ -16,7 +16,7 @@ function draw_cloud_topics(areaID) {
 
 		var wordScale = d3.scaleLinear()
 			.domain([0, d3.max(data, function (d) { return d.value; })])
-			.range([12,80]);
+			.range([12,60]);
 		var fill = d3.scaleOrdinal(d3.schemeCategory20);
 
 		var margin = {top: stdMargin.top, right: stdMargin.right/2, bottom: stdMargin.bottom/2, left: stdMargin.left/2},
