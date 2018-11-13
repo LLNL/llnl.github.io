@@ -91,7 +91,7 @@ function draw_cloud_licenses(areaID) {
 				fullnameDict[licInfo["spdxId"]] = licInfo["name"];
 				var aWord = licInfo["spdxId"];
 				if (aWord == null) { aWord = licInfo["name"] } // use long name if no short name
-				if (aWord == null || aWord == "Other") { continue } // skip if no license name or Other
+				if (aWord == null || aWord == "NOASSERTION") { continue } // skip if no license name or Other
 				if (!Object.keys(wordDict).contains(aWord)) {
 					wordDict[aWord]=0;
 				}
