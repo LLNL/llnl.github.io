@@ -105,6 +105,8 @@ function draw_cloud_licenses(areaID) {
 				data.push(datpair);
 			}
 		}
+		// Prioritize highest counts
+		data.sort((a,b) => (a.value < b.value) ? 1 : ((a.value > b.value) ? -1 : 0));
 		return data;
 	};
 

@@ -6,6 +6,8 @@ query ($ownName: String!, $repoName: String!) {
       login
     }
     url
+    homepageUrl
+    description
     stargazers {
       totalCount
     }
@@ -15,10 +17,14 @@ query ($ownName: String!, $repoName: String!) {
     forks {
       totalCount
     }
-    homepageUrl
-    description
     primaryLanguage {
       name
+    }
+    languages {
+      totalCount
+    }
+    repositoryTopics {
+      totalCount
     }
   }
 }

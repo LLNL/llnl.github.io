@@ -1,5 +1,5 @@
 /* Creates word cloud visualization for webpage */
-function draw_cloud_topics(areaID) {
+function draw_cloud_topics(areaID, repoNameWOwner) {
 
 	// load data file, process data, and draw visualization
 	var url = ghDataDir+'/labRepos_Topics.json';
@@ -69,7 +69,13 @@ function draw_cloud_topics(areaID) {
 	// Turn json obj into desired word list
 	function reformatData(obj) {
 		var wordDict = {};
-		for (var repo in obj["data"]) {
+		var repos;
+		if (repoNameWOwner == null) {
+			repos = Object.keys(obj["data"]);
+		} else {
+			repos = [repoNameWOwner];
+		}
+		repos.forEach(function (repo) {
 			if (obj["data"].hasOwnProperty(repo)) {
 				var topicNodes = obj["data"][repo]["repositoryTopics"]["nodes"];
 				for (var i=0; i<topicNodes.length; i++) {
@@ -80,7 +86,7 @@ function draw_cloud_topics(areaID) {
 					wordDict[aWord]+=1;
 				}
 			}
-		}
+		});
 		var data = [];
 		for (var aWord in wordDict) {
 			if (wordDict.hasOwnProperty(aWord)) {
@@ -88,6 +94,8 @@ function draw_cloud_topics(areaID) {
 				data.push(datpair);
 			}
 		}
+		// Prioritize highest counts
+		data.sort((a,b) => (a.value < b.value) ? 1 : ((a.value > b.value) ? -1 : 0));
 		return data;
 	};
 

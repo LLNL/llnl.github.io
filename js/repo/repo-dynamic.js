@@ -36,7 +36,9 @@ angular.module('app', [])
 
         var draw_graphs = function(nametag) {
             draw_line_repoActivity("repoActivityChart", nametag);
+            draw_pie_repoUsers("pieUsers", nametag);
             draw_cloud_languages("languageCloud", nametag);
+            draw_cloud_topics("topicCloud", nametag);
         };
 
     }]);

@@ -53,14 +53,14 @@ layout: default
         stdLgndSpacing = 20;
     // Call draw functions
     draw_line_repoCreationHistory("repoCreationHistory");
+    draw_pie_members("pieMembers");
+    draw_pie_repos("pieRepos");
     draw_line_repoActivity("repoActivityChart");
+    draw_scatter_repoPulls("repoPulls");
+    draw_scatter_repoIssues("repoIssues");
     draw_cloud_languages("languageCloud");
     draw_cloud_topics("topicCloud");
     draw_cloud_licenses("licenseCloud");
-    draw_scatter_repoPulls("repoPulls");
-    draw_scatter_repoIssues("repoIssues");
-    draw_pie_members("pieMembers");
-    draw_pie_repos("pieRepos");
 </script>
 
 {% endraw %}
