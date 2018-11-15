@@ -13,7 +13,9 @@ layout: repo
 <h1 class="page-header text-center">
     <a class="title" href="{{ repo.url }}" alt="View Project on GitHub" title="View Project on GitHub">{{ repo.name }}</a>
     <br>
-    <a class="subtitle" href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub">[ {{ repo.owner.login }} ]</a>
+    <a class="subtitle" href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub"><span class="fa fa-user-circle"></span>{{ repo.owner.login }}</a>
+    <span ng-if="repo.primaryLanguage" class="subtitle" alt="Primary Language" title="Primary Language"><span class="fa fa-code"></span>{{ repo.primaryLanguage.name }}</span>
+    <a ng-if="licenseInfo && licenseInfo.spdxId!='NOASSERTION'" class="subtitle" href="{{ licenseInfo.url }}" alt="{{ licenseInfo.name }}" title="{{ licenseInfo.name }}"><span class="fa fa-balance-scale"></span>{{ licenseInfo.spdxId }}</a>
 </h1>
 
 <p class="stats text-center">
@@ -22,11 +24,11 @@ layout: repo
     </a>
 
     <a href="{{ repo.url }}/stargazers">
-        <span class="fa fa-star"></span>Stargazers - {{ repo.stargazers.totalCount }}
+        <span class="fa fa-star"></span>Stargazers : {{ repo.stargazers.totalCount }}
     </a>
 
     <a href="{{ repo.url }}/network">
-        <span class="fa fa-code-fork"></span>Forks - {{ repo.forks.totalCount }}
+        <span class="fa fa-code-fork"></span>Forks : {{ repo.forks.totalCount }}
     </a>
 
     <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}">
@@ -40,7 +42,9 @@ layout: repo
 <center>
     <svg class="repoActivityChart"></svg>
     <br><svg class="pieUsers"></svg>
-    <br><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
+    <span ng-if="repo.languages.totalCount || repo.repositoryTopics.totalCount">
+        <br><svg ng-if="repo.languages.totalCount" class="languageCloud"></svg><svg ng-if="repo.repositoryTopics.totalCount" class="topicCloud"></svg>
+    </span>
 </center>
 
 </div>
@@ -53,7 +57,7 @@ layout: repo
 
 <!-- Load drawing JS -->
 <script type="text/javascript" src="../js/explore/line_repoActivity.js"></script>
-<script type="text/javascript" src="../js/repo/pie_repoUsers.js"></script>
+<script type="text/javascript" src="../js/explore/pie_repoUsers.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
 

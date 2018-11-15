@@ -11,9 +11,17 @@ angular.module('app', [])
                 });
         }
 
+        var getRepoLic = function() {
+            return $http.get("../explore/github-data/labRepos_Licenses.json", {
+                    cache: true
+                })
+                .then(function (res) {
+                    return res.data;
+                });
+        }
+
         var myDataPromise = getRepoInfo();
         myDataPromise.then( function(reposObj) {
-            $scope.repos = Object.keys(reposObj.data);
             if (reposObj["data"].hasOwnProperty(hash)) {
                 var data = reposObj["data"][hash];
                 $scope.repo = data;
@@ -21,6 +29,15 @@ angular.module('app', [])
                 draw_graphs($scope.repo.nameWithOwner);
             } else {
                 repo404();
+            }
+        });
+
+        var myLicPromise = getRepoLic();
+        myLicPromise.then( function(repoLicObj) {
+            if (repoLicObj["data"].hasOwnProperty(hash)) {
+                var data = repoLicObj["data"][hash]["licenseInfo"];
+                $scope.licenseInfo = data;
+                console.log(data);
             }
         });
 

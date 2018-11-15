@@ -8,16 +8,25 @@ query ($orgName: String!, $numRepos: Int!, $pgCursor: String) {
           login
         }
         url
+        homepageUrl
+        description
         stargazers {
+          totalCount
+        }
+        mentionableUsers {
           totalCount
         }
         forks {
           totalCount
         }
-        homepageUrl
-        description
         primaryLanguage {
           name
+        }
+        languages {
+          totalCount
+        }
+        repositoryTopics {
+          totalCount
         }
       }
       pageInfo {

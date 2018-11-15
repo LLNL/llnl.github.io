@@ -1,20 +1,31 @@
 /* For individual repository pages */
 
-a.title {
+.title {
   font-size: 150%;
+}
+
+a.title {
   color: inherit;
   text-decoration: none;
 }
 
-a.subtitle {
+.subtitle {
   font-size: 70%;
-  vertical-align: super;
+  color: #777;
+}
+
+a.subtitle {
   color: #777;
   text-decoration: none;
 }
 
-span.fa {
+.subtitle > span.fa {
   margin-right: 8px;
+}
+
+.subtitle + .subtitle {
+  border-left: 1px solid #777;
+  padding-left: 10px;
 }
 
 p.stats {
@@ -25,5 +36,9 @@ p.stats > a {
   color: inherit;
   text-decoration: none;
   white-space: nowrap;
-  margin: 20px;
+  margin: 15px;
+}
+
+p.stats > a > span.fa {
+  margin-right: 8px;
 }

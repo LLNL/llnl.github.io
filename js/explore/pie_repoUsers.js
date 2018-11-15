@@ -129,6 +129,7 @@ function draw_pie_repoUsers(areaID, repoNameWOwner) {
 				if (objUsers["data"].hasOwnProperty(user) && objUsers["data"][user].hasOwnProperty("contributedLabRepositories")) {
 					var labRepos = objUsers["data"][user]["contributedLabRepositories"]["nodes"];
 					if (repoNameWOwner == null) {
+						var userLogin = objUsers["data"][user]["login"];
 						contribs.add(userLogin);
 					} else {
 						labRepos.forEach( function(repo) {
