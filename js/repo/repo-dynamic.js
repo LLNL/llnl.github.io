@@ -56,6 +56,7 @@ angular.module('app', [])
             draw_pie_repoUsers("pieUsers", nametag);
             draw_cloud_languages("languageCloud", nametag);
             draw_cloud_topics("topicCloud", nametag);
+            draw_line_repoCreationHistory("repoCreationHistory", nametag);
         };
 
     }]);
