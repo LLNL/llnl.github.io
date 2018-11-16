@@ -41,11 +41,11 @@ function draw_pie_repoUsers(areaID, repoNameWOwner) {
                 return [this.getBBox().height / 2, 0]
             })
             .html(function(d) {
-                var repos = " Users";
+                var units = " Users";
                 if (d.data.count == 1) {
-                    repos = " User";
+                    units = " User";
                 }
-                return d.data.count+repos+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
+                return d.data.count+units+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
             });
 
         var chart = d3.select("."+areaID)

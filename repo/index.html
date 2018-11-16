@@ -42,10 +42,11 @@ layout: repo
 <center>
     <svg class="repoActivityChart"></svg>
     <br><svg class="pieUsers"></svg>
+    <br><svg class="piePulls"></svg><svg class="pieIssues"></svg>
+    <br><svg class="repoCreationHistory"></svg>
     <span ng-if="repo.languages.totalCount || repo.repositoryTopics.totalCount">
         <br><svg ng-if="repo.languages.totalCount" class="languageCloud"></svg><svg ng-if="repo.repositoryTopics.totalCount" class="topicCloud"></svg>
     </span>
-    <br><svg class="repoCreationHistory"></svg>
 </center>
 
 </div>
@@ -59,9 +60,11 @@ layout: repo
 <!-- Load drawing JS -->
 <script type="text/javascript" src="../js/explore/line_repoActivity.js"></script>
 <script type="text/javascript" src="../js/explore/pie_repoUsers.js"></script>
+<script type="text/javascript" src="../js/explore/pie_repoPulls.js"></script>
+<script type="text/javascript" src="../js/explore/pie_repoIssues.js"></script>
+<script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
-<script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
 
 <script>
     // GiHub Data Directory

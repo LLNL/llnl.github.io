@@ -69,12 +69,7 @@ function draw_cloud_topics(areaID, repoNameWOwner) {
     // Turn json obj into desired word list
     function reformatData(obj) {
         var wordDict = {};
-        var repos;
-        if (repoNameWOwner == null) {
-            repos = Object.keys(obj["data"]);
-        } else {
-            repos = [repoNameWOwner];
-        }
+        var repos = (repoNameWOwner == null) ? Object.keys(obj["data"]) : [repoNameWOwner];
         repos.forEach(function (repo) {
             if (obj["data"].hasOwnProperty(repo)) {
                 var topicNodes = obj["data"][repo]["repositoryTopics"]["nodes"];

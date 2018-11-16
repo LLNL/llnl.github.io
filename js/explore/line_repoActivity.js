@@ -157,12 +157,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
     function reformatData(obj) {
         // Calculate combined values
         var dataTotals = {};
-        var repos;
-        if (repoNameWOwner == null) {
-            repos = Object.keys(obj["data"]);
-        } else {
-            repos = [repoNameWOwner];
-        }
+        var repos = (repoNameWOwner == null) ? Object.keys(obj["data"]) : [repoNameWOwner];
         repos.forEach(function (repo) {
             if (obj["data"].hasOwnProperty(repo)) {
                 var weeklyNodes = obj["data"][repo];

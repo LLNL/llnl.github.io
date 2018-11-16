@@ -41,11 +41,11 @@ function draw_pie_members(areaID) {
                 return [this.getBBox().height / 2, 0]
             })
             .html(function(d) {
-                var members = " Members";
+                var units = " Members";
                 if (d.data.count == 1) {
-                    members = " Member";
+                    units = " Member";
                 }
-                return d.data.count+members+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
+                return d.data.count+units+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
             });
 
         var chart = d3.select("."+areaID)

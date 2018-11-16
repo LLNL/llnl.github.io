@@ -1,23 +1,18 @@
 /* Creates pie chart visualization for webpage */
-function draw_pie_repos(areaID) {
+function draw_pie_repoIssues(areaID, repoNameWOwner) {
 
     // load data file, process data, and draw visualization
-    var url0 = ghDataDir+'/labReposInfo.json';
-    var url1 = ghDataDir+'/extUsers.json';
-    d3.queue()
-        .defer(d3.json, url0)
-        .defer(d3.json, url1)
-        .awaitAll(function(error,response){
-            if (error) throw error;
-            var data = reformatData(response[0],response[1]);
-            drawGraph(data, areaID);
-        });
+    var url = ghDataDir+'/labRepos_PullsIssues.json';
+    d3.json(url, function(obj) {
+        var data = reformatData(obj);
+        drawGraph(data, areaID);
+    });
 
 
     // Draw graph from data
     function drawGraph(data, areaID) {
 
-        var graphHeader = "LLNL Repositories";
+        var graphHeader = "Issues";
 
         data.forEach(function(d) {
             d.count = +d.count;
@@ -33,7 +28,7 @@ function draw_pie_repos(areaID) {
         var legendRectSize = 15,
             legendSpacing = 4;
 
-        var color = d3.scaleOrdinal().range([d3.schemeCategory20c[12], d3.schemeCategory20c[13]]);
+        var color = d3.scaleOrdinal().range([d3.schemeCategory20c[8], d3.schemeCategory20c[9]]);
 
         var tip = d3.tip()
             .attr('class', 'd3-tip')
@@ -41,9 +36,9 @@ function draw_pie_repos(areaID) {
                 return [this.getBBox().height / 2, 0]
             })
             .html(function(d) {
-                var units = " Repos";
+                var units = " Issues";
                 if (d.data.count == 1) {
-                    units = " Repo";
+                    units = " Issue";
                 }
                 return d.data.count+units+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
             });
@@ -84,7 +79,7 @@ function draw_pie_repos(areaID) {
             .attr('transform', function(d, i) {
                 var height = legendRectSize + legendSpacing;
                 var offset =  -height * color.domain().length / 2;
-                var horz = -6 * legendRectSize;
+                var horz = -3.2 * legendRectSize;
                 var vert = i * height - offset;
                 return 'translate(' + horz + ',' + vert + ')';
             });
@@ -120,22 +115,22 @@ function draw_pie_repos(areaID) {
 
 
     // Turn json obj into desired working data
-    function reformatData(objLabRepos,objExtUsers) {
-        var repoTotal = Object.keys(objLabRepos["data"]).length;
-        var repoSubset = new Set();
-        var extUsers = Object.keys(objExtUsers["data"]);
-        extUsers.forEach( function(user) {
-            if (objExtUsers["data"].hasOwnProperty(user)) {
-                var labRepos = objExtUsers["data"][user]["contributedLabRepositories"]["nodes"];
-                labRepos.forEach( function(repo) {
-                    repoSubset.add(repo);
-                });
+    function reformatData(obj) {
+        var closedTotal = 0,
+            openTotal = 0;
+        var repos = (repoNameWOwner == null) ? Object.keys(obj["data"]) : [repoNameWOwner];
+        repos.forEach(function (repo) {
+            if (obj["data"].hasOwnProperty(repo)) {
+                var repoDict = obj["data"][repo],
+                    issuesClosed = repoDict["issues_Closed"]["totalCount"],
+                    issuesOpen = repoDict["issues_Open"]["totalCount"];
+                closedTotal += issuesClosed;
+                openTotal += issuesOpen;
             }
         });
-        var subTotal = repoSubset.size;
         var data = [
-            { label: 'External Contributors', count: subTotal },
-            { label: 'Only LLNL Contributors', count: repoTotal-subTotal }
+            { label: 'Closed', count: closedTotal },
+            { label: 'Open', count: openTotal }
         ];
         return data;
     };
