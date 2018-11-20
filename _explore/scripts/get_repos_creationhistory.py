@@ -2,13 +2,14 @@ from scraper.github import queryManager as qm
 from os import environ as env
 import re
 
-datfilepath = "%s/labRepos_CreationHistory.json" % env['GITHUB_DATA']
+ghDataDir = env.get('GITHUB_DATA', '../github-data')
+datfilepath = "%s/labRepos_CreationHistory.json" % ghDataDir
 queryPath = "../queries/repo-CreationDate.gql"
 query_commits_in = "/repos/OWNNAME/REPONAME/commits?until=CREATETIME&per_page=100"
 query_commits_in2 = "/repos/OWNNAME/REPONAME/commits?per_page=100"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % env['GITHUB_DATA'], True)
+inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
