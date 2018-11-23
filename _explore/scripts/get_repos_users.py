@@ -1,12 +1,13 @@
 from scraper.github import queryManager as qm
 from os import environ as env
 
-datfilepathExt = "%s/extUsers.json" % env['GITHUB_DATA']
-datfilepathInt = "%s/labUsers.json" % env['GITHUB_DATA']
+ghDataDir = env.get('GITHUB_DATA', '../github-data')
+datfilepathExt = "%s/extUsers.json" % ghDataDir
+datfilepathInt = "%s/labUsers.json" % ghDataDir
 queryPath = "../queries/repo-Users.gql"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % env['GITHUB_DATA'], True)
+inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")

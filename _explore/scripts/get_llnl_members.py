@@ -1,7 +1,8 @@
 from scraper.github import queryManager as qm
 from os import environ as env
 
-datfilepath = "%s/labUsers.json" % env['GITHUB_DATA']
+ghDataDir = env.get('GITHUB_DATA', '../github-data')
+datfilepath = "%s/labUsers.json" % ghDataDir
 queryPath = "../queries/org-Members.gql"
 
 # Only looking at LLNL org members

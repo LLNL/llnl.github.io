@@ -2,11 +2,14 @@ from scraper.github import queryManager as qm
 from os import environ as env
 import os.path
 
+ghDataDir = env.get('GITHUB_DATA', '../github-data')
 yearDict = {}
 
 # Gather all file name data
 print("Checking GitHub data file names with year stamps...")
-for file in os.listdir(env['GITHUB_DATA']):
+if not os.path.exists(ghDataDir):
+    raise FileNotFoundError("Directory path '%s' does not exist." % (ghDataDir))
+for file in os.listdir(ghDataDir):
     if file.endswith(".json"):
         nameSplit = file.split(".")
         # Must have format "somePrefix.0000.json"
@@ -25,7 +28,7 @@ for prefix in yearDict.keys():
     yearList.sort()
     yearDict[prefix] = yearList
 
-yearData = qm.DataManager("%s/YEARS.json" % env['GITHUB_DATA'], False)
+yearData = qm.DataManager("%s/YEARS.json" % ghDataDir, False)
 yearData.fileSave()
 
 print("Done!\n")
