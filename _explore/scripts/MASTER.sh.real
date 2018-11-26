@@ -2,12 +2,12 @@
 # Run this script to refresh all data for today
 
 export GITHUB_DATA=../../explore/github-data
+DATELOG=../LAST_MASTER_UPDATE.txt
 
 # On exit
 function finish {
     # Log end time
-    echo "End" >> $GITHUB_DATA/LAST_MASTER_UPDATE.txt
-    date >> $GITHUB_DATA/LAST_MASTER_UPDATE.txt
+    echo -e "END\t$(date)" >> $DATELOG
 }
 trap finish EXIT
 
@@ -15,7 +15,7 @@ trap finish EXIT
 function errorCheck() {
     if [ $ret -ne 0 ]; then
         echo "FAILED - $1"
-        echo "FAILED - $1" >> $GITHUB_DATA/LAST_MASTER_UPDATE.txt
+        echo -e "FAILED\t$1" >> $DATELOG
         exit
     fi
 }
@@ -32,9 +32,8 @@ function runScript() {
 echo "RUNNING MASTER UPDATE SCRIPT"
 
 # Log start time
-date '+%Y-%m-%d' > $GITHUB_DATA/LAST_MASTER_UPDATE.txt
-echo "Start" >> $GITHUB_DATA/LAST_MASTER_UPDATE.txt
-date >> $GITHUB_DATA/LAST_MASTER_UPDATE.txt
+echo -e "$(date '+%Y-%m-%d')" > $DATELOG
+echo -e "START\t$(date)" >> $DATELOG
 
 
 # RUN THIS FIRST

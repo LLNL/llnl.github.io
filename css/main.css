@@ -36,11 +36,21 @@
   margin: 10px;
 }
 
+.flex-item:hover {
+  border: 1px solid steelblue;
+  box-shadow: 3px 3px #ddd;
+  cursor: pointer;
+}
+
 .flex-item > h4 {
   background-color: #f5f5f5;
   margin: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.flex-item:hover > h4 {
+  background-color: #d8ecf3;
 }
 
 .flex-item > p {

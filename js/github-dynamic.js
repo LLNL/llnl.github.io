@@ -1,20 +1,8 @@
 angular.module('app', [])
-    .controller('gitHubDataController', ['$scope', '$http', function($scope, $http) {
-        $scope.reposLoaded = false;
-        $scope.userLoaded = false;
-        $scope.username = "llnl";
+    .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
         var getRepoInfo = function() {
             return $http.get("./explore/github-data/labReposInfo.json", {
-                    cache: true
-                })
-                .then(function (res) {
-                    return res.data;
-                });
-        }
-
-        var getRepoLangs = function() {
-            return $http.get("./explore/github-data/labRepos_Languages.json", {
                     cache: true
                 })
                 .then(function (res) {
@@ -39,11 +27,15 @@ angular.module('app', [])
                     data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
                 }
                 $scope.repoData.push(data);
-                console.log(data);
+                // console.log(data);
             });
             $scope.repoData = sortByKey($scope.repoData,"name")
         });
 
         $scope.predicate = '-stargazers.totalCount';
+
+        $scope.repoHref = function(nametag) {
+            $window.location.href = 'repo#'+nametag;
+        };
 
     }]);

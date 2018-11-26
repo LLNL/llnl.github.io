@@ -35,7 +35,7 @@ The scripts are only for gathering new data. You do not need them to run in orde
 [queries dir]: queries
 [scripts dir]: scripts
 [mastersh]: scripts/MASTER.sh
-[lastmasterup]: github-data/LAST_MASTER_UPDATE.txt
+[lastmasterup]: LAST_MASTER_UPDATE.txt
 [gitgraphql]: https://developer.github.com/v4/
 [oauth]: https://github.com/settings/developers
 [personaltoken]: https://github.com/settings/tokens
