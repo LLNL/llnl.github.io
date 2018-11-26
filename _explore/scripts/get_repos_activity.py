@@ -3,11 +3,12 @@ from os import environ as env
 import re
 from datetime import datetime
 
-datfilepath = "%s/labRepos_Activity.json" % env['GITHUB_DATA']
+ghDataDir = env.get('GITHUB_DATA', '../github-data')
+datfilepath = "%s/labRepos_Activity.json" % ghDataDir
 query_in = "/repos/OWNNAME/REPONAME/stats/commit_activity"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % env['GITHUB_DATA'], True)
+inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
