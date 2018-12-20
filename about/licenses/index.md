@@ -69,6 +69,18 @@ If your repository was approved for release under a different open source
 license, the text of that license will be provided by the Innovation and
 Partnerships Office.
 
+If your project has more than one license, then you must include *all* of
+the relevant licenses in your repository.  We recommend that you name
+them with descriptive suffixes.  For example, if your project is dual
+licensed under Apache-2.0 and MIT, you should have top-level
+`LICENSE-APACHE` and `LICENSE-MIT` files. Because GitHub does not
+automatically detect multiple licenses, we recommend *also* adding a
+top-level `COPYRIGHT` file with a summary of license details. GitHub's
+"view license" link will then point to this file.  You can look at
+[Spack](https://github.com/spack/spack) and its `README.md`, `COPYRIGHT`,
+and `LICENSE-*` files for an example of how to organize a project with
+two licenses.
+
 ### Other considerations
 
 In addition to the required files above, you should read the following
@@ -142,6 +154,11 @@ line allows us to avoid pasting much longer license headers into each
 file.  All together, this makes for a much shorter and more concise
 header.
 
+The Spack example mentions a
+[`COPYRIGHT`](https://github.com/spack/spack/blob/develop/COPYRIGHT) file
+because Spack is dual-licensed (see above). If you just have a single
+license, you can simply refer to the `LICENSE` file in your header.
+
 For more information on using SPDX in your code, you can refer to
 [this presentation](https://spdx.org/sites/cpstandard/files/pages/files/using_spdx_license_list_short_identifiers.pdf).
 
@@ -168,6 +185,7 @@ You are not required to use the DCO, and it may add overhead to your
 process that deters potential contributors.  Unless you feel that you
 need this level of assurance for your project, we recommend that you
 simply rely on the default inbound = outbound assumption.
+
 
 ### Have Questions?
 
