@@ -69,6 +69,47 @@ If your repository was approved for release under a different open source
 license, the text of that license will be provided by the Innovation and
 Partnerships Office.
 
+### Other Considerations
+
+#### SPDX
+
+Use of [SPDX identifiers](https://spdx.org/) in source code for projects is
+allowed. It isn’t a requirement, but if projects want to use them, they are
+welcome to. If used, the identifiers must correspond to the license and other
+parameters under which the project was approved for release. E.g.
+[Cardioid](https://github.com/llnl/cardioid) was released under the MIT license
+so it would use the `SPDX-License-Identifier: (MIT)` SPDX identifier.
+
+Additionally, while not all open source licenses require a license notice in
+every source file (instead they rely on the top level files LICENSE / COPYRIGHT
+and NOTICE in the source code repository, typically with text like "A copy of
+the license and copyright notice must be included with the software"), for
+those that do require or wish to include a copy in every file, the SPDX short
+headers are sufficient. As an example, [Spack](https://github.com/spack/spack)
+would include the following comment block at the top of it's source code files:
+
+```bash
+# Copyright 2013-2018 Lawrence Livermore National Security, LLC and other
+# Spack Project Developers. See the top-level COPYRIGHT file for details.
+#
+# SPDX-License-Identifier: (Apache-2.0 OR MIT)
+```
+
+#### Developer Certificate of Origin
+
+LLNL projects may elect to require their contributors to explicitly use the Git
+`Signed-off-by: ...` feature which implies the Developer Certificate of Origin
+(DCO) (see: https://developercertificate.org/). This is NOT a license nor a
+CLA, but instead is a positive assertion by the contributor that they are
+authorized to make the contribution they are making.
+
+The other option is implicit and relies on a less formal understanding that
+"contributions in = licensing out" where the incoming contributions are treated
+the same as the original license.
+
+Again, this won’t be a requirement, but is an implementation detail of the way
+a project may elect to take contributions from it’s contributors.
+
 ### Have Questions?
 
 If you still have questions or need more information, contact the
