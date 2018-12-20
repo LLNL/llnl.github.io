@@ -90,15 +90,15 @@ sections and determine whether they apply to your code.
 
 If you host your code publicly, you may receive contributions from
 outside the lab.  You should consider documenting your contribution
-policies in your `README.md` or in a `CONTRIBUTING.md` file at the
-top level of your repository.  It is good practice to make the following
-details explicit:
+policies in your `README.md` or in a
+[`CONTRIBUTING.md` file](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
+It is good practice to make the following details explicit:
 
-- What license contributions should be made under
+- The license under whichcontributions should be made
 - How to submit contributions (pull requests, branches, etc.)
 
 With most open source projects, it is assumed that contributions are made
-under the *same* license that the project is distributed under. For
+under the *same* license under which the project is distributed. For
 example, if you distribute your project under the `MIT` license,
 contributed code is assumed to be under that license as well. The
 [Cardioid](https://github.com/llnl/cardioid) project makes this explicit
@@ -111,8 +111,11 @@ contributions must be made under this license.
 
 If you want to provide instructions to your users that they should follow
 when submitting code to your project, you can put these types of
-instructions in a top-level `CONTRIBUTING.md` file.  This file typically
-deals more with workflow than with copyright or other IP concerns.
+instructions in a
+[`CONTRIBUTING.md` file](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
+This file typically deals more with workflow than with copyright or other
+IP concerns. A link to this file is shown to users when they submit pull
+requests.
 
 #### SPDX
 
@@ -178,8 +181,8 @@ In this model, you can require contributors to use Git's
 feature to acknowledge the DCO.  This is NOT a license nor a CLA, but
 instead is a positive assertion by the contributor that they are
 authorized to make the contribution they are making.  You should document
-your project's requirement of DCO sign-off in your top-level
-`CONTRIBUTING.md` file.
+your project's requirement of DCO sign-off in your `README.md` or your
+[`CONTRIBUTING.md` file](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
 
 You are not required to use the DCO, and it may add overhead to your
 process that deters potential contributors.  Unless you feel that you
