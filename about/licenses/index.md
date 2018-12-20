@@ -153,7 +153,7 @@ As mentioned above, the default assumption for open source projects is
 i.e., contributors provide their code under the same license under which
 the code is distributed. If this is not enough assurance for your project,
 you may elect to use the
-[Distributor Certificate of Origin (DCO)](https://developercertificate.org/)
+[Developer Certificate of Origin (DCO)](https://developercertificate.org/)
 with your project.
 
 In this model, you can require contributors to use Git's
@@ -166,7 +166,7 @@ your project's requirement of DCO sign-off in your top-level
 
 You are not required to use the DCO, and it may add overhead to your
 process that deters potential contributors.  Unless you feel that you
-need this level of assuarnce for your project, we recommend that you
+need this level of assurance for your project, we recommend that you
 simply rely on the default inbound = outbound assumption.
 
 ### Have Questions?
