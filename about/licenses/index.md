@@ -86,7 +86,7 @@ two licenses.
 In addition to the required files above, you should read the following
 sections and determine whether they apply to your code.
 
-#### Contribution policies
+#### Contribution Policies
 
 If you host your code publicly, you may receive contributions from
 outside the lab.  You should consider documenting your contribution
