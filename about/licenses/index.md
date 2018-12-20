@@ -69,46 +69,105 @@ If your repository was approved for release under a different open source
 license, the text of that license will be provided by the Innovation and
 Partnerships Office.
 
-### Other Considerations
+### Other considerations
+
+In addition to the required files above, you should read the following
+sections and determine whether they apply to your code.
+
+#### Contribution policies
+
+If you host your code publicly, you may receive contributions from
+outside the lab.  You should consider documenting your contribution
+policies in your `README.md` or in a `CONTRIBUTING.md` file at the
+top level of your repository.  It is good practice to make the following
+details explicit:
+
+- What license contributions should be made under
+- How to submit contributions (pull requests, branches, etc.)
+
+With most open source projects, it is assumed that contributions are made
+under the *same* license that the project is distributed under. For
+example, if you distribute your project under the `MIT` license,
+contributed code is assumed to be under that license as well. The
+[Cardioid](https://github.com/llnl/cardioid) project makes this explicit
+in its `README.md`:
+
+```
+Cardioid is distributed under the terms of the MIT license. All new
+contributions must be made under this license.
+```
+
+If you want to provide instructions to your users that they should follow
+when submitting code to your project, you can put these types of
+instructions in a top-level `CONTRIBUTING.md` file.  This file typically
+deals more with workflow than with copyright or other IP concerns.
 
 #### SPDX
 
-Use of [SPDX identifiers](https://spdx.org/) in source code for projects is
-allowed. It isn’t a requirement, but if projects want to use them, they are
-welcome to. If used, the identifiers must correspond to the license and other
-parameters under which the project was approved for release. E.g.
-[Cardioid](https://github.com/llnl/cardioid) was released under the MIT license
-so it would use the `SPDX-License-Identifier: (MIT)` SPDX identifier.
+[SPDX](https://spdx.org/) is an emerging standard for concisely labeling
+source code with license information.  While it is not a requirement, we
+encourage you to use SPDX identifiers in your code, as they significantly
+reduce the amount of license boilerplate included in each source file.
 
-Additionally, while not all open source licenses require a license notice in
-every source file (instead they rely on the top level files LICENSE / COPYRIGHT
-and NOTICE in the source code repository, typically with text like "A copy of
-the license and copyright notice must be included with the software"), for
-those that do require or wish to include a copy in every file, the SPDX short
-headers are sufficient. As an example, [Spack](https://github.com/spack/spack)
-would include the following comment block at the top of it's source code files:
+SPDX provides a standard
+[list of license identifiers](https://spdx.org/licenses/) that can be
+used to label code.  To use SPDX identifiers in your project, you should
+find your license's short identifier in the list, and add a special
+`SPDX-License-Identifier` line to your `README.md`. For example, if your
+code is licensed under the `MIT` license like
+[Cardioid](https://github.com/llnl/cardioid), you would add this at the
+bottom of your README file:
 
-```bash
+```
+SPDX-License-Identifier: MIT
+```
+
+Additionally, you can use SPDX to label your source files. While not all
+open source licenses require you to add license information to every
+source file, for projects that do require a copy in every file, the SPDX
+short headers are sufficient. For example, source files in
+[Spack](https://github.com/spack/spack) start with the following comment:
+
+```python
 # Copyright 2013-2018 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 ```
 
+There are two interesting parts here. First, the copyright section
+prominently mentions LLNS.  It also mentions other Spack developers, who
+hold the copyright on the parts of the code they contributed.  The SPDX
+line allows us to avoid pasting much longer license headers into each
+file.  All together, this makes for a much shorter and more concise
+header.
+
+For more information on using SPDX in your code, you can refer to
+[this presentation](https://spdx.org/sites/cpstandard/files/pages/files/using_spdx_license_list_short_identifiers.pdf).
+
+
 #### Developer Certificate of Origin
 
-LLNL projects may elect to require their contributors to explicitly use the Git
-`Signed-off-by: ...` feature which implies the Developer Certificate of Origin
-(DCO) (see: https://developercertificate.org/). This is NOT a license nor a
-CLA, but instead is a positive assertion by the contributor that they are
-authorized to make the contribution they are making.
+As mentioned above, the default assumption for open source projects is
+["inbound license = outbound license"](https://opensource.guide/legal/),
+i.e., contributors provide their code under the same license under which
+the code is distributed. If this is not enough assurance for your project,
+you may elect to use the
+[Distributor Certificate of Origin (DCO)](https://developercertificate.org/)
+with your project.
 
-The other option is implicit and relies on a less formal understanding that
-"contributions in = licensing out" where the incoming contributions are treated
-the same as the original license.
+In this model, you can require contributors to use Git's
+[sign-off](https://stackoverflow.com/questions/1962094/what-is-the-sign-off-feature-in-git-for)
+feature to acknowledge the DCO.  This is NOT a license nor a CLA, but
+instead is a positive assertion by the contributor that they are
+authorized to make the contribution they are making.  You should document
+your project's requirement of DCO sign-off in your top-level
+`CONTRIBUTING.md` file.
 
-Again, this won’t be a requirement, but is an implementation detail of the way
-a project may elect to take contributions from it’s contributors.
+You are not required to use the DCO, and it may add overhead to your
+process that deters potential contributors.  Unless you feel that you
+need this level of assuarnce for your project, we recommend that you
+simply rely on the default inbound = outbound assumption.
 
 ### Have Questions?
 
