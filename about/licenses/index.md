@@ -94,7 +94,7 @@ policies in your `README.md` or in a
 [`CONTRIBUTING.md` file](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
 It is good practice to make the following details explicit:
 
-- The license under whichcontributions should be made
+- The license under which contributions should be made
 - How to submit contributions (pull requests, branches, etc.)
 
 With most open source projects, it is assumed that contributions are made
