@@ -2,7 +2,7 @@
 title: "OpenZFS on Linux 0.6.5.6"
 ---
 
-Version 0.6.5.6 of OpenZFS on Linux, the native Linux kernel port of the ZFS filesystem, is now available at: [http://zfsonlinux.org](http://zfsonlinux.org)
+Version 0.6.5.6 of OpenZFS on Linux, the native Linux kernel port of the ZFS filesystem, is now available at: [https://zfsonlinux.org](https://zfsonlinux.org)
 
 Some notable improvements in version 0.6.5.6 are:
 
