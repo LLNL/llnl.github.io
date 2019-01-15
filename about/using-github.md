@@ -14,7 +14,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
 1. [Create an account on GitHub](https://github.com/join)
 
-    - You *do not need* a separate work account and personal account, unless you prefer to. Instead, you can [link multiple email addresses to the same GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/), which is almost always preferred.
+    - You *do not need* a separate work account and personal account. Instead, you can [link multiple email addresses to the same GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/), which is almost always preferred.
 
 2. [Update your profile information](https://github.com/settings/profile)
 
@@ -29,7 +29,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
 
     - This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
 
-4. [Enable two-factor authentication](https://github.com/settings/security) (2FA)
+4. [Enable two-factor authentication (2FA)](https://github.com/settings/security)
 
     - *Membership in the @LLNL GitHub organization will soon require that 2FA has been enabled on your GitHub account*
     - There are several options for configuring 2FA for your GitHub account:
@@ -38,14 +38,14 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
             - YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
         2. [Google Authenticator](https://support.google.com/accounts/answer/1066447)
             - Google Authenticator is a mobile application which you can install on your personal or government issued phone.
-            - It allows provides a one-time token (OTP) which you can use to authenticate to GitHub.com
+            - It provides a one-time token (OTP) which you can use to authenticate to GitHub.com
         3. [Authy](https://authy.com/guides/github/).
             - Authy is a desktop- or laptop-based application which can be used to generate a one-time token (OTP) for use logging in to GitHub.com.
             - This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
     - You will also have the option during 2FA to generate and save a list of recovery codes to get into your account in the event you lose access to one of your 2FA methods. This is *highly* recommended, and the recovery codes should be stored someplace safe. Some options for storing your recovery codes include:
         - Printing the codes and storing them in a safe place in your office.
         - Storing the recovery codes in a password manager that you might be using.
-    - We recommend that you set up *MULTIPLE* 2FA options. This can protect your access to account in the even that you lose access to one of your authenticators.
+    - We recommend that you set up *MULTIPLE* 2FA options. This can protect your access to your account in the event that you lose access to one of your authenticators.
     - For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
     - Having trouble setting up 2FA? Contact the [LLNL GitHub Admins](mailto:github-admin@llnl.gov) who may be able to help.
 
@@ -99,7 +99,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 * Publicize any outreach activities related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
 * Make sure your repository is included in this website’s [Catalog](https://software.llnl.gov/). If you’ve set up your repository within the LLNL organization, you don’t need to take any action; it will automatically appear after the next monthly update.
     * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
-    * Alternatively, you can submit a pull request to this [website](https://github.com/LLNL/llnl.github.io), updating **explore/input_lists.json** with your organization and repository names.
+    * Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json), with your organization and/or repository names.
 
 ### Other References
 
