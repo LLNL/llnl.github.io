@@ -19,10 +19,4 @@ Refer to individual projects for their requirements on accepting contributions. 
 
 ### Employees
 
-If you are an LLNL employee and you are interested in joining the [LLNL GitHub organization](https://github.com/llnl) and appearing in the [member list](https://github.com/orgs/LLNL/people), do the following:
-
-* [Create a GitHub account](https://github.com/join)
-    * This can be anything you like, e.g. `JohnDoe`, as this is your personal GitHub username
-* [Upload a profile picture](https://help.github.com/articles/how-do-i-set-up-my-profile-picture/) to identify yourself to the community
-* Using your `@llnl.gov` email address, send a message to [the GitHub organization admins](mailto:github-admin@llnl.gov) requesting to join the GitHub organization
-* After receiving the invitation via email, and accepting it, please set your [organization visibility](https://help.github.com/articles/publicizing-or-hiding-organization-membership/) to `Public`, so that everyone can know that you're a member
+If you are an LLNL employee and you are interested in joining the [LLNL GitHub organization](https://github.com/llnl) and appearing in the [member list](https://github.com/orgs/LLNL/people), please see the instructions on [Using GitHub](https://software.llnl.gov/about/using-github/) for setting up your account (including two-factor authentication) and joining the organization.
