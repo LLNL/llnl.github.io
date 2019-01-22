@@ -15,7 +15,14 @@
     <div id="siteNavbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right navbar-collapse">
         <li id="home" {% if page.url == "/" %} class="active" {% endif %}><a href="/">Catalog</a></li>
-        <li id="news" {% if page.url == "/news/" %} class="active" {% endif %}><a href="/news/">News</a></li>
+        <li id="news"
+            {% if page.url == "/news/" %} class="active dropdown"
+            {% else %} class="dropdown"
+            {% endif %}><a href="/news/">News</a>
+          <div class="dropdown-content">
+            <p><a href="/news/news-archive/">News Archive</a></p>
+          </div>
+        </li>
         <li id="about"
             {% if page.url == "/about/" %} class="active dropdown"
             {% else %} class="dropdown"

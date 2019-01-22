@@ -1,10 +1,10 @@
 ---
-title: News
+title: News Archive
 layout: default
-permalink: /news/
+permalink: /news/news-archive
 ---
 
-  {% for page in site.posts %}
+  {% for page in site.posts.newsarchive %}
   <article>
     <h3>
       {{ page.title }}
