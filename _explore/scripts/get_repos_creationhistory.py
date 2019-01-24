@@ -21,7 +21,7 @@ dataCollector = qm.DataManager(datfilepath, False)
 try:
     # Load existing data
     dataCollector.fileLoad()
-except FileNotFoundError as error:
+except FileNotFoundError:
     # If no existing data, initialize the data object
     dataCollector.data = {"data": {}}
 
@@ -79,7 +79,7 @@ for repo in repolist:
     try:
         for commit in outObj2:
             repoData["commitTimestamps"].append(commit["commit"]["committer"]["date"])
-    except NameError as error:
+    except NameError:
         print("Could not get pre-GitHub commits for '%s'" % (repo))
 
     # If no pre-GitHub commits, check the greater commit history
@@ -108,7 +108,7 @@ for repo in repolist:
         try:
             for commit in outObj3:
                 repoData["commitTimestamps"].append(commit["commit"]["committer"]["date"])
-        except NameError as error:
+        except NameError:
             print("Could not get any commits for '%s'." % (repo))
             continue
 
