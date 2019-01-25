@@ -36,12 +36,15 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
         1. [YubiKey](https://yubico.com) hardware security keys
             - Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
             - YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
+            - [Learn more about setting up your Yubikey with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
         2. [Google Authenticator](https://support.google.com/accounts/answer/1066447)
             - Google Authenticator is a mobile application which you can install on your personal or government issued phone.
             - It provides a one-time token (OTP) which you can use to authenticate to GitHub.com
+            - [Learn more about setting up Google Authenticator with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-a-totp-mobile-app)
         3. [Authy](https://authy.com/guides/github/).
             - Authy is a desktop- or laptop-based application which can be used to generate a one-time token (OTP) for use logging in to GitHub.com.
             - This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
+            - [Learn more about setting up Authy with GitHub.com](https://authy.com/guides/github/)
     - You will also have the option during 2FA to generate and save a list of recovery codes to get into your account in the event you lose access to one of your 2FA methods. This is *highly* recommended, and the recovery codes should be stored someplace safe. Some options for storing your recovery codes include:
         - Printing the codes and storing them in a safe place in your office.
         - Storing the recovery codes in a password manager that you might be using.
