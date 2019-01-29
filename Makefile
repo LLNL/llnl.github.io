@@ -11,3 +11,6 @@ build:
 deploy: clean build
 	chmod -R ugo+rX _site/
 	rsync -avz --delete _site/ typhon:/export/www/software-pre/html/
+
+test:
+	flake8
