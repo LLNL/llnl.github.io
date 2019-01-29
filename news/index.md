@@ -17,4 +17,4 @@ permalink: /news/
   {% endfor %}
 
 <br />
-<a class="btn btn-primary btn-block" href="https://software.llnl.gov/news/archive/" role="button">See all news in the archive</a>
+<a class="btn btn-primary btn-block" href="/news/archive/" role="button">See all news in the archive</a>
