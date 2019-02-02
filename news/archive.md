@@ -1,7 +1,7 @@
 ---
 title: News Archive
 layout: default
-permalink: /news/archive
+permalink: /news/archive/
 ---
 
   {% for page in site.posts %}
