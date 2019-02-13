@@ -1,6 +1,8 @@
 #!/bin/bash
 # Run this script to refresh all data for today
 
+exec &> >(tee ../LAST_MASTER_UPDATE.log)
+
 export GITHUB_DATA=../../explore/github-data
 DATELOG=../LAST_MASTER_UPDATE.txt
 
@@ -23,7 +25,7 @@ function errorCheck() {
 # Basic script run procedure
 function runScript() {
     echo "Run - $1"
-    python $1
+    python -u $1
     ret=$?
     errorCheck "$1"
 }
