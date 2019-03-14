@@ -97,12 +97,12 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
 * Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
-* Include a summary of your project with GitHub and documentation links on LLNL's [Computation website](https://computation.llnl.gov/).
 * Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub.
 * Publicize any outreach activities related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
 * Make sure your repository is included in this website’s [Catalog](https://software.llnl.gov/). If you’ve set up your repository within the LLNL organization, you don’t need to take any action; it will automatically appear after the next monthly update.
     * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
     * Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json), with your organization and/or repository names.
+* Include a summary of your project with GitHub and documentation links on LLNL's [Computation website](https://computation.llnl.gov/). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
 
 ### Other References
 
