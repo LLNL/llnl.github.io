@@ -38,7 +38,6 @@ This portal abounds with examples of projects that have found a home in the open
 - [GitHub Accounts and Organization](using-github)
 - [Contributing Guidelines](contributing)
 - [LLNL Licensing Guidelines](licenses)
-- [Organizations with LLNL Contributors](open-source)
 
 ### Contact
 
