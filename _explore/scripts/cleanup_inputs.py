@@ -2,8 +2,6 @@ from scraper.github import queryManager as qm
 
 # Take all input lists, process, and write back to file
 
-fileIn = "../input_lists.json"
-
 inputLists = qm.DataManager("../input_lists.json", True)
 
 print("Cleaning input lists...")
