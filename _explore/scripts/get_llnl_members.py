@@ -26,7 +26,7 @@ for org in orglist:
             {"orgName": org, "numUsers": 50, "pgCursor": None},
             paginate=True,
             cursorVar="pgCursor",
-            keysToList=["data", "organization", "members", "nodes"]
+            keysToList=["data", "organization", "membersWithRole", "nodes"]
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (org))
@@ -34,7 +34,7 @@ for org in orglist:
         continue
 
     # Update collective data
-    for user in outObj["data"]["organization"]["members"]["nodes"]:
+    for user in outObj["data"]["organization"]["membersWithRole"]["nodes"]:
         userKey = user["login"]
         dataCollector.data["data"][userKey] = user
 
