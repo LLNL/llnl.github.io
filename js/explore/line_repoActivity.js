@@ -38,7 +38,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .range([0, width]);
         
         var y = d3.scaleLinear()
-            .domain([0, d3.max(data, function(d) { return d.value; })])
+            .domain([0, d3.max(data, function(d) { return (d.value == 0) ? 10 : d.value; })])  // Force non 0 scale for line visibility
             .range([height, 0])
             .nice();
 
@@ -169,6 +169,14 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     }
                     dataTotals[weekstamp] += weeklytotal;
                 }
+            } else {
+                console.log("No activity data recorded for " + repo + ", using dummy data.")
+                // Today
+                var end = new Date;
+                dataTotals[formatTime(end)]=0;
+                // Tomorrow, 1 year ago
+                var start = new Date( new Date().getFullYear()-1, new Date().getMonth(), new Date().getDate()+1);
+                dataTotals[formatTime(start)]=0;
             }
         });
 
