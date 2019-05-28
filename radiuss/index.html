@@ -1,24 +1,25 @@
 ---
-title: LLNL Software Catalog
+title: LLNL RADIUSS Catalog
 layout: portal
 ---
 
-Welcome to the LLNL software portal&mdash;a hub for our open source projects. This catalog is updated automatically as repositories are added or modified.
+LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash;aims to broaden usage across LLNL and the open source community of a set of libraries and tools used for HPC scientific application development.
 
 {% raw %}
 
 <h2 class="page-header text-center">
     <span ng-show="repoData"> {{ repoData.length }} </span>
-    Software Repositories
+    RADIUSS Software Repositories
 </h2>
 
 <div class="container">
     <div class="col-xs-6 col-xs-offset-3">
-        <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
+        <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter RADIUSS Repositories">
     </div>
 </div>
 
-<section ng-show="repoData" id="repositories" class="flex-container">
+<section ng-show="repoData" id="radiuss repositories" class="flex-container">
+
     <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)">
         <h4 class="text-center">
             <span alt="Name" title="Name"> {{ repo.name }} </span>
