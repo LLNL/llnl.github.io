@@ -35,7 +35,7 @@ angular.module('app', [])
         $scope.predicate = '-stargazers.totalCount';
 
         $scope.repoHref = function(nametag) {
-            $window.location.href = 'repo#'+nametag;
+            $window.location.href = '../repo#'+nametag;
         };
 
     }]);
