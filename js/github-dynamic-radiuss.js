@@ -2,7 +2,7 @@ angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
         var getRepoInfo = function() {
-            return $http.get("./explore/github-data/labReposInfo_RADIUSS.json", {
+            return $http.get("../explore/github-data/labReposInfo_RADIUSS.json", {
                     cache: true
                 })
                 .then(function (res) {
