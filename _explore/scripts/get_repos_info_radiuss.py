@@ -7,9 +7,9 @@ queryPath = "../queries/org-Repos-Info.gql"
 queryPathInd = "../queries/repo-Info.gql"
 
 # Read input lists of organizations and independent repos of interest
-inputLists = qm.DataManager("../input_lists_radiuss.json", True)
-orglist = inputLists.data["orgs"]
-repolist = inputLists.data["repos"]
+inputLists = qm.DataManager("../input_lists_subsets.json", True)
+orglist = inputLists.data["radiuss"]["orgs"]
+repolist = inputLists.data["radiuss"]["repos"]
 
 # Initialize data collector
 dataCollector = qm.DataManager(datfilepath, False)

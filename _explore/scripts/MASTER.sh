@@ -40,7 +40,6 @@ echo -e "START\t$(date)" >> $DATELOG
 
 # RUN THIS FIRST
 runScript cleanup_inputs.py
-runScript cleanup_inputs_radiuss.py
 
 
 # --- BASIC DATA ---
