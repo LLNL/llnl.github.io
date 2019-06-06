@@ -66,8 +66,10 @@ runScript get_repos_activity.py
 # --- HISTORY FOR ALL TIME ---
 runScript get_repos_creationhistory.py
 
-# RUN THIS LAST, used in case of long term cumulative data
-runScript build_yearlist.py
+
+# RUN THIS LAST
+runScript build_subsets.py   # List subsets of repos included in data
+runScript build_yearlist.py  # Used in case of long term cumulative data
 
 
 echo "MASTER UPDATE COMPLETE"
