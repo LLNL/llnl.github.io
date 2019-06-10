@@ -2,7 +2,7 @@ angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
         var getRepoInfo = function() {
-            return $http.get("./explore/github-data/labReposInfo.json", {
+            return $http.get("/explore/github-data/labReposInfo.json", {
                     cache: true
                 })
                 .then(function (res) {
@@ -17,17 +17,22 @@ angular.module('app', [])
             });
         }
 
+       
         var myDataPromise = getRepoInfo();
+       // console.log("catalog github-dynamic")
         myDataPromise.then( function(reposObj) {
             $scope.repos = Object.keys(reposObj.data);
+           //console.log("repos: "+ $scope.repos);
             $scope.repoData = [];
+         //   console.log("marK");
             angular.forEach($scope.repos, function(value, key) {
                 var data = reposObj["data"][value];
                 if (data.primaryLanguage == null) {
                     data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
                 }
                 $scope.repoData.push(data);
-                // console.log(data);
+               // console.log("repoData: " + data);
+               
             });
             $scope.repoData = sortByKey($scope.repoData,"name")
         });
