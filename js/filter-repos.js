@@ -1,6 +1,6 @@
 // Script for filtering the repository results based on search strings
 
-(function() {
+$(function() {
     function tokenize(str) {
         return str.replace(/\s+/g, ' ').split(' ').filter(function(s) {
             return (s !== '');
