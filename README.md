@@ -43,7 +43,7 @@ This will build the site, and rsync it to the staging server. The staging server
 
 #### Tips
 
-The gems in your sourcefile get updated frequently. It is a good idea to occasionally run `bundle update` from with your project's root directory to make sure the sotware on your computer is up to date.
+The gems in your sourcefile get updated frequently. It is a good idea to occasionally run `bundle update` from within your project's root directory to make sure the sotware on your computer is up to date.
 
 ### Contact
 
