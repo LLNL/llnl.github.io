@@ -1,14 +1,9 @@
 angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
-        var getRepoInfo = function() {
-            return $http.get("./explore/github-data/labReposInfo.json", {
-                    cache: true
-                })
-                .then(function (res) {
-                    return res.data;
-                });
-        }
+        var promiseRepoInfo = $http.get("./explore/github-data/labReposInfo.json", {
+            cache: true
+        });
 
         function sortByKey(array, key) {
             return array.sort(function(a, b) {
@@ -17,19 +12,19 @@ angular.module('app', [])
             });
         }
 
-        var myDataPromise = getRepoInfo();
-        myDataPromise.then( function(reposObj) {
-            $scope.repos = Object.keys(reposObj.data);
+        promiseRepoInfo.then( function(response) {
+            var reposObj = response.data.data;
+            $scope.repos = Object.keys(reposObj);
             $scope.repoData = [];
             angular.forEach($scope.repos, function(value, key) {
-                var data = reposObj["data"][value];
-                if (data.primaryLanguage == null) {
-                    data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
+                var singleData = reposObj[value];
+                if (singleData.primaryLanguage == null) {
+                    singleData.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
                 }
-                $scope.repoData.push(data);
-                // console.log(data);
+                $scope.repoData.push(singleData);
+                // console.log(singleData);
             });
-            $scope.repoData = sortByKey($scope.repoData,"name")
+            $scope.repoData = sortByKey($scope.repoData,"name");
         });
 
         $scope.predicate = '-stargazers.totalCount';

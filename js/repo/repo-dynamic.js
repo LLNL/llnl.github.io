@@ -2,37 +2,22 @@ angular.module('app', [])
     .controller('repoDataController', ['$scope', '$http', '$location', function($scope, $http, $location) {
         var hash = $location.url().substring(1);
 
-        var getRepoInfo = function() {
-            return $http.get("../explore/github-data/labReposInfo.json", {
-                    cache: true
-                })
-                .then(function (res) {
-                    return res.data;
-                });
-        }
+        var promiseRepoInfo = $http.get("../explore/github-data/labReposInfo.json", {
+            cache: true
+        });
 
-        var getRepoLic = function() {
-            return $http.get("../explore/github-data/labRepos_Licenses.json", {
-                    cache: true
-                })
-                .then(function (res) {
-                    return res.data;
-                });
-        }
+        var promiseRepoLic = $http.get("../explore/github-data/labRepos_Licenses.json", {
+            cache: true
+        });
 
-        var getRepoPI = function() {
-            return $http.get("../explore/github-data/labRepos_PullsIssues.json", {
-                    cache: true
-                })
-                .then(function (res) {
-                    return res.data;
-                });
-        }
+        var promiseRepoPI = $http.get("../explore/github-data/labRepos_PullsIssues.json", {
+            cache: true
+        });
 
-        var myDataPromise = getRepoInfo();
-        myDataPromise.then( function(reposObj) {
-            if (reposObj["data"].hasOwnProperty(hash)) {
-                var data = reposObj["data"][hash];
+        promiseRepoInfo.then( function(response) {
+            var reposObj = response.data.data;
+            if (reposObj.hasOwnProperty(hash)) {
+                var data = reposObj[hash];
                 $scope.repo = data;
                 draw_graphs(hash);
             } else {
@@ -40,26 +25,26 @@ angular.module('app', [])
             }
         });
 
-        var myLicPromise = getRepoLic();
-        myLicPromise.then( function(repoLicObj) {
-            if (repoLicObj["data"].hasOwnProperty(hash)) {
-                var data = repoLicObj["data"][hash]["licenseInfo"];
+        promiseRepoLic.then( function(response) {
+            var repoLicObj = response.data.data
+            if (repoLicObj.hasOwnProperty(hash)) {
+                var data = repoLicObj[hash]["licenseInfo"];
                 $scope.licenseInfo = data;
             }
         });
 
-        var myPIPromise = getRepoPI();
-        myPIPromise.then( function(repoPIObj) {
-            if (repoPIObj["data"].hasOwnProperty(hash)) {
+        promiseRepoPI.then( function(response) {
+            var repoPIObj = response.data.data
+            if (repoPIObj.hasOwnProperty(hash)) {
                 var sumP = 0;
                 var sumI = 0;
                 var pullCounters = ["pullRequests_Merged", "pullRequests_Open"];
                 var issueCounters = ["issues_Closed", "issues_Open"];
                 pullCounters.forEach(function(c) {
-                    sumP += repoPIObj["data"][hash][c]["totalCount"];
+                    sumP += repoPIObj[hash][c]["totalCount"];
                 });
                 issueCounters.forEach(function(c) {
-                    sumI += repoPIObj["data"][hash][c]["totalCount"];
+                    sumI += repoPIObj[hash][c]["totalCount"];
                 });
                 $scope.count = { "pulls":sumP, "issues":sumI };
                 if ($scope.count.pulls) {
