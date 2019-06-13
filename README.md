@@ -7,7 +7,7 @@ Welcome to the Lawrence Livermore National Laboratory software portal! The purpo
 LLNL produces software on a daily basis. Some of this software is used only internally, other components are licensed for use by external partners and collaborators, still other software is released, or even actively developed, in the open on software hosting platforms such as GitHub.com, Bitbucket.org, Sourceforge.net, and others.
 ### Prerequisites
 
-Before you begin, make sure you have working installs of Git, Ruby, and Bundler https://bundler.io/ You will need these tools for development.
+Before you begin, make sure you have working installs of Git, Ruby, and Bundler <https://bundler.io/> You will need these tools for development.
 
 ### Getting Started
 
@@ -43,7 +43,7 @@ This will build the site, and rsync it to the staging server. The staging server
 
 #### Tips
 
-The gems in your sourcefile are open source projects that get update frequently. It is a good idea to occasionally run `bundle update` from with your project's root directory to make sure the sotware on your computer is up to date.
+The gems in your sourcefile get updated frequently. It is a good idea to occasionally run `bundle update` from with your project's root directory to make sure the sotware on your computer is up to date.
 
 ### Contact
 

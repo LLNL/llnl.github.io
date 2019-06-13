@@ -3,42 +3,82 @@ title: LLNL Software Catalog
 layout: portal
 ---
 
-
-
 {% raw %}
 
 <h3 class="text-center"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </h3>
 
-<section class="flex-container-category">
-    <div class="flex-category">
-        <h4 class="text-center">BUILD TOOLS</h4>
-        <p class="text-center">Automate and simplify complex dependencies and deployments</p>
-    </div>
+<section class="flex-container-category" id="categories">
+    <div ng-repeat="category in catData" class="flex-category">
+        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+        <h4 class="text-center">{{category.title}}</h4>
+        <p class="text-center">{{category.description}}</p>
 
-    <div class="flex-category" >
-        <h4 class="text-center">MATH & PHYSICS LIBRARIES</h4>
-        <p class="text-center">Optimize solvers, higher order methods, and AMR frameworks</p>
-    </div>
+        <p class="links">
+            <a href="https://www.shortcutfoo.com/" alt="Name" title="Name">
+                <span>zfs</span>
+            </a>
 
-    <div class="flex-category" >
-        <h4 class="text-center">DATA MANAGEMENT & VIS</h4>
-        <p class="text-center">Manage visualizations with robust features and configurable analysis</p>
-    </div>
+            <a href="https://www.shortcutfoo.com/" alt="GitHub Page" title="GitHub Page">
+                <span class="fa fa-github"></span>
+            </a>
 
-    <div class="flex-category">
-        <h4 class="text-center">AP INFRASTRUCTURE</h4>
-        <p class="text-center">Provide unified data storage and parallel logging solutions</p>
-    </div>
+            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
+                <span class="fa fa-globe text-right"></span>
+            </a>
+        </p>
 
-    <div class="flex-category" >
-        <h4 class="text-center">PORTABLE EXECUTION & MEMORY MGMT</h4>
-        <p class="text-center">Automate data motion and memory allocation on advanced architectures</p>
-    </div>
+        <p class="links">
+            <a href="https://www.shortcutfoo.com/" alt="Name" title="Name">
+                <span>spack</span>
+            </a>
 
-    <div class="flex-category" >
-        <h4 class="text-center">PERFORMANCE & WORKFLOW</h4>
-        
-        <p class="text-center">Manage and scale complex workflows, tracking, and data collectio</p>
+            <a href="https://www.shortcutfoo.com/" alt="GitHub Page" title="GitHub Page">
+                <span class="fa fa-github"></span>
+            </a>
+
+            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
+                <span class="fa fa-globe text-right"></span>
+            </a>
+        </p>
+        <p class="links">
+            <a href="https://www.shortcutfoo.com/" alt="Name" title="Name">
+                <span>zfs-auto-snapshot</span>
+            </a>
+
+            <a href="https://www.shortcutfoo.com/" alt="GitHub Page" title="GitHub Page">
+                <span class="fa fa-github"></span>
+            </a>
+
+            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
+                <span class="fa fa-globe text-right"></span>
+            </a>
+        </p>
+        <p class="links">
+            <a href="https://www.shortcutfoo.com/" alt="Name" title="Name">
+                <span>mfem</span>
+            </a>
+
+            <a href="https://www.shortcutfoo.com/" alt="GitHub Page" title="GitHub Page">
+                <span class="fa fa-github"></span>
+            </a>
+
+            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
+                <span class="fa fa-globe text-right"></span>
+            </a>
+        </p>
+        <p class="links">
+            <a href="https://www.shortcutfoo.com/" alt="Name" title="Name">
+                <span>spl</span>
+            </a>
+
+            <a href="https://www.shortcutfoo.com/" alt="GitHub Page" title="GitHub Page">
+                <span class="fa fa-github"></span>
+            </a>
+
+            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
+                <span class="fa fa-globe text-right"></span>
+            </a>
+        </p>
     </div>
 
 </section>
@@ -47,4 +87,6 @@ layout: portal
 {% endraw %}
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="/js/category-info.js"></script>
 

@@ -18,7 +18,7 @@ LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional 
     </div>
 </div>
 
-<section ng-show="repoData" id="radiuss repositories" class="flex-container">
+<section ng-show="repoData" id="repositories" class="flex-container">
 
     <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)">
         <h4 class="text-center">
