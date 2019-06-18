@@ -40,13 +40,11 @@ echo -e "START\t$(date)" >> $DATELOG
 
 # RUN THIS FIRST
 runScript cleanup_inputs.py
-runScript cleanup_inputs_radiuss.py
 
 
 # --- BASIC DATA ---
 # Required before any other repo scripts (output used as repo list)
 runScript get_repos_info.py
-runScript get_repos_info_radiuss.py
 # Required before any other member scripts (output used as member list)
 runScript get_llnl_members.py
 
@@ -67,8 +65,10 @@ runScript get_repos_activity.py
 # --- HISTORY FOR ALL TIME ---
 runScript get_repos_creationhistory.py
 
-# RUN THIS LAST, used in case of long term cumulative data
-runScript build_yearlist.py
+
+# RUN THIS LAST
+runScript build_subsets.py   # List subsets of repos included in data
+runScript build_yearlist.py  # Used in case of long term cumulative data
 
 
 echo "MASTER UPDATE COMPLETE"
