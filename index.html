@@ -1,11 +1,12 @@
 ---
 title: LLNL Software Catalog
-layout: portal
+layout: homepage
 ---
 
 {% raw %}
 
-<h3 class="text-center"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </h3>
+
+<p class="page-title"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </p>
 
 <section class="flex-container-category" id="categories">
     <div ng-repeat="category in catData" class="flex-category">
@@ -13,72 +14,23 @@ layout: portal
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
 
-        <p class="links">
-            <a href="/repo/#/zfsonlinux/zfs" alt="Name" title="Name">
-                <span>zfs</span>
-            </a>
 
-            <a href="https://github.com/zfsonlinux/zfs" alt="GitHub Page" title="GitHub Page">
-                <span class="fa fa-github"></span>
-            </a>
+        <div ng-repeat="repo in topicRepos" ng-show="repo.topics.indexOf(category.topic) != -1">
+            <p class="links">
+                <a ng-click="repoHref(repo.nameWithOwner)" alt="Name" title="Name">
+                    <span>{{repo.name}}</span>
+                </a>
 
-            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
-                <span class="fa fa-globe text-right"></span>
-            </a>
-        </p>
+                <a href="{{repo.gitUrl}}" alt="GitHub Page" title="GitHub Page">
+                    <span class="fa fa-github"></span>
+                </a>
 
-        <p class="links">
-            <a href="/repo/#/spack/spack"  alt="Name" title="Name">
-                <span>spack</span>
-            </a>
-
-            <a href="https://github.com/spack/spack" alt="GitHub Page" title="GitHub Page">
-                <span class="fa fa-github"></span>
-            </a>
-
-            <a href="https://spack.io/" alt="Project Website" title="Project Website">
-                <span class="fa fa-globe text-right"></span>
-            </a>
-        </p>
-        <p class="links">
-            <a href="/repo/#/zfsonlinux/zfs-auto-snapshot" alt="Name" title="Name">
-                <span>zfs-auto-snapshot</span>
-            </a>
-
-            <a href="https://github.com/zfsonlinux/zfs-auto-snapshot" alt="GitHub Page" title="GitHub Page">
-                <span class="fa fa-github"></span>
-            </a>
-
-            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
-                <span class="fa fa-globe text-right"></span>
-            </a>
-        </p>
-        <p class="links">
-            <a href="/repo/#/mfem/mfem" alt="Name" title="Name">
-                <span>mfem</span>
-            </a>
-
-            <a href="https://github.com/mfem/mfem" alt="GitHub Page" title="GitHub Page">
-                <span class="fa fa-github"></span>
-            </a>
-
-            <a href="https://mfem.org/" alt="Project Website" title="Project Website">
-                <span class="fa fa-globe text-right"></span>
-            </a>
-        </p>
-        <p class="links">
-            <a href="/repo/#/zfsonlinux/spl" alt="Name" title="Name">
-                <span>spl</span>
-            </a>
-
-            <a href="https://github.com/zfsonlinux/spl" alt="GitHub Page" title="GitHub Page">
-                <span class="fa fa-github"></span>
-            </a>
-
-            <a href="https://zfsonlinux.org/" alt="Project Website" title="Project Website">
-                <span class="fa fa-globe text-right"></span>
-            </a>
-        </p>
+                <a ng-if="repo.homepageUrl" href="{{repo.homepageUrl}}" alt="Project Website" title="Project Website">
+                    <span class="fa fa-globe text-right"></span>
+                </a>
+            </p>
+        </div>
+    
     </div>
 
 </section>

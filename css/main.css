@@ -93,7 +93,7 @@
 }
 
 #categories p.links > a:last-child{
-    margin-right: 15px;
+    margin-right: 60px;
 }
 
 #categories p.links{
@@ -102,7 +102,7 @@
 
 
 #categories p.links > a:first-child{
-    margin-left: 15px;
+    margin-left: 60px;
     float:left;
 }
 
@@ -110,6 +110,9 @@
 .navbar-header a.navbar-brand {
   color: #005dab;
   font-weight: bold;
+}
+.navbar {
+    margin-bottom: 0;
 }
 
 /* Dropdown */
@@ -148,7 +151,8 @@
 }
 
 .flex-category {
-   margin: 0px;
+    margin: 0px;
+    margin-bottom: 30px
 }
 
 .flex-category > h4 {
@@ -160,6 +164,7 @@
 .flex-category > p {
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 50px;
 }
 
 .flex-category a {
@@ -177,12 +182,61 @@
     margin-bottom: -15%
 }
 
-.repoName {
-    font-weight: bold;
-    margin-left:15px;
+.page-title {
+    font-size: 20px;
+    padding-top: 50px;
+    text-align: center;
 }
 
-.gitInfo {
-    text-align: right;
+[ng-click] {
+    cursor: pointer;
 }
 
+@media(max-width:767px) {
+    .banner {
+        background-image: 
+            url('/assets/images/banner-top.svg'),
+            url('/assets/images/OS-logo-white.png');
+        background-color: #2b4047;
+        background-position:  center, 50% 90%;
+        background-repeat: no-repeat, no-repeat;
+        background-size:  auto, 100px 100px;
+        height: 300px;
+    }
+}
+
+@media(min-width:768px) {
+    .banner {
+        background-image: 
+            url('/assets/images/banner-top.svg'),
+            url('/assets/images/OS-logo-white.png');
+        background-color: #2b4047;
+        background-position: center, 50% 90%;
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, 130px 130px;
+        height: 300px;
+    }
+}
+
+
+@media(min-width:1200px) {
+    .banner {
+        background-image: 
+            url('/assets/images/OS-icon-color.png'),
+            url('/assets/images/banner-top.svg'),
+            url('/assets/images/OS-logo-white.png');
+        background-color: #2b4047;
+        background-position: 30% 50%, 70% 50%, 67% 90%;
+        background-position: -webkit-calc(50% - 310px) 50%, -webkit-calc(50% + 310px) 50%, -webkit-calc(50% + 310px) 90%;
+        background-position: calc(50% - 310px) 50%, calc(50% + 310px) 50%, calc(50% + 310px) 90%;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: 550px 550px, auto, 130px 130px;
+        height: 300px;
+    }
+}
+
+.header{
+    height: 100%;
+    width: 100%;
+           
+}

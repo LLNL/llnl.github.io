@@ -31,8 +31,6 @@ angular.module('app', [])
                     data.primaryLanguage = {"name":"-"}; // Substitute text in case of no language
                 }
                 $scope.repoData.push(data);
-               // console.log("repoData: " + data);
-               
             });
             $scope.repoData = sortByKey($scope.repoData,"name")
         });
