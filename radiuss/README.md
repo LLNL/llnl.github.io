@@ -11,3 +11,4 @@ These tags correspond to the six categories on the home page and on /radiuss. Ad
 - `performance`
 - `portability`
 - `radiuss`
+- `workflows`
