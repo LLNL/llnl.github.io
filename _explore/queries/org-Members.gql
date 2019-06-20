@@ -4,6 +4,7 @@ query ($orgName: String!, $numUsers: Int!, $pgCursor: String) {
       nodes {
         login
         name
+        avatarUrl
       }
       pageInfo {
         endCursor
