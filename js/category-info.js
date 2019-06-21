@@ -50,6 +50,8 @@ angular.module('app', [])
                         for (var j in $scope.topicRepos){
                             if(reposInfoObj[i].nameWithOwner == $scope.topicRepos[j].nameWithOwner){
                                 $scope.topicRepos[j]["name"]= reposInfoObj[i].name;
+                                $scope.topicRepos[j]['ownerAvatar'] = reposInfoObj[i].owner.avatarUrl;
+                                $scope.topicRepos[j]['ownerLogin'] = reposInfoObj[i].owner.login;
                                 $scope.topicRepos[j]["gitUrl"]= reposInfoObj[i].url;
                                 $scope.topicRepos[j]["homepageUrl"]= reposInfoObj[i].homepageUrl;
                             }
