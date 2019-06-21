@@ -11,7 +11,15 @@ angular.module('app', [])
 
         var getReposInfo =  $http.get("./explore/github-data/labReposInfo.json", {
                 cache: true
-                });
+        });
+
+        //function to sort repos in descending order of stars
+        function sortByStars(array, key) {
+            return array.sort(function(a, b) {
+                var x = a[key] ; var y = b[key];
+                return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+            });
+        }
 
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
@@ -49,16 +57,21 @@ angular.module('app', [])
                         // console.log("repo name: "+ reposInfoObj.data[i].name);
                         for (var j in $scope.topicRepos){
                             if(reposInfoObj[i].nameWithOwner == $scope.topicRepos[j].nameWithOwner){
+                                //save only necessary data fields
                                 $scope.topicRepos[j]["name"]= reposInfoObj[i].name;
                                 $scope.topicRepos[j]['ownerAvatar'] = reposInfoObj[i].owner.avatarUrl;
                                 $scope.topicRepos[j]['ownerLogin'] = reposInfoObj[i].owner.login;
+                                $scope.topicRepos[j]['stars'] = reposInfoObj[i].stargazers.totalCount;
                                 $scope.topicRepos[j]["gitUrl"]= reposInfoObj[i].url;
                                 $scope.topicRepos[j]["homepageUrl"]= reposInfoObj[i].homepageUrl;
                             }
                         }
                     }
+                    //sort repos by stars descending
+                    $scope.topicRepos = sortByStars($scope.topicRepos, "stars");
                 });
 
+                //create function for generating hash url for each repo
                 $scope.repoHref = function(nametag) {
                     $window.location.href = '../repo#'+nametag;
                 };

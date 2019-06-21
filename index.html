@@ -19,14 +19,14 @@ layout: homepage
             <p class="links">
 
                 <span>
-                <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="{{repo.ownerLogin}}">
+                <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
                     <img class ="orgAvatar" src="{{repo.ownerAvatar}}">
                 </a>
                 </span>
 
                 <span>
                 <a ng-click="repoHref(repo.nameWithOwner)" alt="Name" title="Name">
-                    <span>{{repo.name}}</span>
+                    {{repo.name}}
                 </a>
                 </span>
 
