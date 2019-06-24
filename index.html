@@ -15,7 +15,7 @@ layout: homepage
         <p class="text-center">{{category.description}}</p>
 
 
-        <div ng-repeat="repo in topicRepos" ng-show="repo.topics.indexOf(category.topic) != -1">
+        <div ng-repeat="repo in topicRepos[catData.indexOf(category)]">
             <p class="links">
 
                 <span>

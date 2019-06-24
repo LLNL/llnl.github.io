@@ -1,15 +1,15 @@
 angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
-        var getCategoryInfo =  $http.get("../categories/category_info.json", {
+        var getCategoryInfo =  $http.get("../radiuss/category_info_radiuss.json", {
                     cache: true
                 });
 
-        var getReposTopics = $http.get("./explore/github-data/labRepos_Topics.json", {
+        var getReposTopics = $http.get("../explore/github-data/labRepos_Topics.json", {
                 cache: true
                 });
 
-        var getReposInfo =  $http.get("./explore/github-data/labReposInfo.json", {
+        var getReposInfo =  $http.get("../explore/github-data/labReposInfo.json", {
                 cache: true
         });
 
@@ -21,10 +21,10 @@ angular.module('app', [])
             });
         }
 
-        //check if repo is tagged as one of the categories
+        //check if repo is tagged as "radiuss" as well as one of the categories
         function containsTopics(catTopics, repoTopics){
             for (var i = 0; i < catTopics.length; i++){
-                if($.inArray(catTopics[i], repoTopics) != -1){
+                if($.inArray(catTopics[i], repoTopics) != -1 && $.inArray("radiuss", repoTopics) != -1){
                     return true;
                 } 
             }
