@@ -10,10 +10,10 @@
                         "name": "Fortran"
                     },
                     {
-                        "name": "Python"
+                        "name": "JavaScript"
                     },
                     {
-                        "name": "JavaScript"
+                        "name": "Python"
                     },
                     {
                         "name": "CMake"
@@ -31,13 +31,13 @@
                         "name": "Makefile"
                     },
                     {
+                        "name": "CSS"
+                    },
+                    {
                         "name": "Dockerfile"
                     },
                     {
                         "name": "Objective-C"
-                    },
-                    {
-                        "name": "CSS"
                     }
                 ],
                 "totalCount": 12
@@ -1831,8 +1831,18 @@
         },
         "ESGF/cmec_project": {
             "languages": {
-                "nodes": [],
-                "totalCount": 0
+                "nodes": [
+                    {
+                        "name": "JavaScript"
+                    },
+                    {
+                        "name": "HTML"
+                    },
+                    {
+                        "name": "CSS"
+                    }
+                ],
+                "totalCount": 3
             }
         },
         "ESGF/compute": {
@@ -2738,6 +2748,46 @@
                 "totalCount": 3
             }
         },
+        "GMLC-TDC/HELICS": {
+            "languages": {
+                "nodes": [
+                    {
+                        "name": "C++"
+                    },
+                    {
+                        "name": "C"
+                    },
+                    {
+                        "name": "CMake"
+                    },
+                    {
+                        "name": "Java"
+                    },
+                    {
+                        "name": "MATLAB"
+                    },
+                    {
+                        "name": "Python"
+                    },
+                    {
+                        "name": "Objective-C"
+                    },
+                    {
+                        "name": "Shell"
+                    },
+                    {
+                        "name": "C#"
+                    },
+                    {
+                        "name": "Makefile"
+                    },
+                    {
+                        "name": "CSS"
+                    }
+                ],
+                "totalCount": 11
+            }
+        },
         "GMLC-TDC/HELICS-BBX": {
             "languages": {
                 "nodes": [
@@ -2900,46 +2950,6 @@
                     }
                 ],
                 "totalCount": 1
-            }
-        },
-        "GMLC-TDC/HELICS-src": {
-            "languages": {
-                "nodes": [
-                    {
-                        "name": "C++"
-                    },
-                    {
-                        "name": "C"
-                    },
-                    {
-                        "name": "CMake"
-                    },
-                    {
-                        "name": "Java"
-                    },
-                    {
-                        "name": "MATLAB"
-                    },
-                    {
-                        "name": "Python"
-                    },
-                    {
-                        "name": "Objective-C"
-                    },
-                    {
-                        "name": "Shell"
-                    },
-                    {
-                        "name": "C#"
-                    },
-                    {
-                        "name": "Makefile"
-                    },
-                    {
-                        "name": "CSS"
-                    }
-                ],
-                "totalCount": 11
             }
         },
         "GMLC-TDC/HELICS.jl": {
@@ -5231,9 +5241,12 @@
                 "nodes": [
                     {
                         "name": "C++"
+                    },
+                    {
+                        "name": "Makefile"
                     }
                 ],
-                "totalCount": 1
+                "totalCount": 2
             }
         },
         "LLNL/adept-utils": {
@@ -5452,6 +5465,16 @@
                     }
                 ],
                 "totalCount": 2
+            }
+        },
+        "LLNL/bridge-kernel": {
+            "languages": {
+                "nodes": [
+                    {
+                        "name": "Python"
+                    }
+                ],
+                "totalCount": 1
             }
         },
         "LLNL/burstfs": {
@@ -5966,30 +5989,39 @@
         },
         "LLNL/gidiplus": {
             "languages": {
-                "nodes": [],
-                "totalCount": 0
-            }
-        },
-        "LLNL/glvis": {
-            "languages": {
                 "nodes": [
-                    {
-                        "name": "C++"
-                    },
                     {
                         "name": "C"
                     },
                     {
-                        "name": "Shell"
+                        "name": "C++"
                     },
                     {
-                        "name": "CMake"
+                        "name": "TeX"
+                    },
+                    {
+                        "name": "Python"
                     },
                     {
                         "name": "Makefile"
+                    },
+                    {
+                        "name": "Objective-C"
+                    },
+                    {
+                        "name": "RPC"
+                    },
+                    {
+                        "name": "DIGITAL Command Language"
+                    },
+                    {
+                        "name": "MATLAB"
+                    },
+                    {
+                        "name": "Mathematica"
                     }
                 ],
-                "totalCount": 5
+                "totalCount": 10
             }
         },
         "LLNL/googletest-mpi-listener": {
@@ -6724,25 +6756,6 @@
                     },
                     {
                         "name": "C"
-                    }
-                ],
-                "totalCount": 4
-            }
-        },
-        "LLNL/mfem": {
-            "languages": {
-                "nodes": [
-                    {
-                        "name": "C++"
-                    },
-                    {
-                        "name": "CMake"
-                    },
-                    {
-                        "name": "Makefile"
-                    },
-                    {
-                        "name": "Shell"
                     }
                 ],
                 "totalCount": 4
@@ -7644,6 +7657,19 @@
                     }
                 ],
                 "totalCount": 5
+            }
+        },
+        "LLNL/spify": {
+            "languages": {
+                "nodes": [
+                    {
+                        "name": "C++"
+                    },
+                    {
+                        "name": "Python"
+                    }
+                ],
+                "totalCount": 2
             }
         },
         "LLNL/spl": {
