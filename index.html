@@ -1,30 +1,17 @@
 ---
-title: LLNL Software Catalog
+title: LLNL Software Portal
 layout: homepage
 ---
 
 {% raw %}
 
 
+
+
 <p class="page-title"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </p>
 
-<div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'London')">
-        <img src="{{catData[0].icon.path}}" alt ="build tools">
-        Build Tools
-    </button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">
-        <img src="{{catData[1].icon.path}}" alt ="build tools">
-        Math & Physics Libraries
-    </button>
-    <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-        <img src="{{catData[2].icon.path}}" alt ="build tools">
-        Data Management
-    </button>
-</div>
-
 <section class="flex-container-category" id="categories">
-    <div ng-repeat="category in catData" class="flex-category">
+    <div ng-repeat="category in catData" class="flex-category" ng-click="categoryHref(category.title)">
         <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
@@ -32,7 +19,7 @@ layout: homepage
 
         <div ng-repeat="repo in topicRepos" ng-show="repo.topics.indexOf(category.topic) != -1">
             <p class="links">
-                <a ng-click="repoHref(repo.nameWithOwner)" alt="Name" title="Name">
+                <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Name" title="Name">
                     <span>{{repo.name}}</span>
                 </a>
 
@@ -46,7 +33,7 @@ layout: homepage
             </p>
         </div>
     
-    </div>
+    </div> 
 
 </section>
 

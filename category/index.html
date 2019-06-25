@@ -1,0 +1,33 @@
+---
+title: Category
+layout: category
+---
+
+
+{% raw %}
+
+
+
+<div class="wrapper">
+    <div class="sidebar">
+        <nav class="stickynav">
+            <div ng-repeat="category in catData">
+                <a href="#{{category.title}}">{{category.title}}</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div ng-repeat="category in catData">
+            <div id="{{category.title}}" class="page">
+                <p class="page-title"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </p>
+                <p> {{category.title}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endraw %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="/js/category-info.js"></script>

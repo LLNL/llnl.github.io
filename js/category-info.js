@@ -1,7 +1,7 @@
 angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
-        var getCategoryInfo =  $http.get("../categories/category_info.json", {
+        var getCategoryInfo =  $http.get("../category/category_info.json", {
                     cache: true
                 });
 
@@ -59,6 +59,10 @@ angular.module('app', [])
 
                 $scope.repoHref = function(nametag) {
                     $window.location.href = '../repo#'+nametag;
+                };
+
+                $scope.categoryHref = function(nametag) {
+                    $window.location.href = '../category#'+nametag;
                 };
             });
         });
