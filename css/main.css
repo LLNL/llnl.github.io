@@ -240,36 +240,58 @@
     width: 100%; 
 }
 
-/* Style the tab */
-.tab {
-    float: left;
-    width: 10%;}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-    display: block;
-    background-color: inherit;
-    padding: 10%;
-    color: black;
+.main {
     width: 100%;
-    border: none;
-    text-align: center;
-    margin-bottom: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 50%;
-    border-color:  #2b4047;
-    font-size: 20px;
+    height: 150vh;
+    padding-right: 40px;
+    padding-left: 15px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
+.sidebar {
+    width: 30%;
+    height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: left;
+    top: 0;
+    background-color:  #f8f8f8;
 }
 
-/* Create an active/current "tab button" class */
-.tab button.active {
-    background-color: #ccc;
+.stickynav a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height:40px;
+    text-decoration:none;
+    color: black;
+    font-size: 2rem;
+    display: block;
+}
+
+.stickynav a:hover {
+    background-color: rgba(0,0,0,0.1)
+}
+
+
+/* This hides all pages */
+.page {
+    display: none;
+    padding-left:20px;
+    padding-top:20px;
+    margin:0px;
+    height: 100%;
+    background-color: blue;
+}
+
+/* This displays the page corresponding to the one you clicked on */
+:target {
+    display: block;
+
 }
 
 
