@@ -1,15 +1,15 @@
 angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
-        var getCategoryInfo =  $http.get("../category/category_info.json", {
+        var getCategoryInfo =  $http.get("../radiuss/category_info_radiuss.json", {
                     cache: true
                 });
 
-        var getReposTopics = $http.get("./explore/github-data/labRepos_Topics.json", {
+        var getReposTopics = $http.get("../explore/github-data/labRepos_Topics.json", {
                 cache: true
                 });
 
-        var getReposInfo =  $http.get("./explore/github-data/labReposInfo.json", {
+        var getReposInfo =  $http.get("../explore/github-data/labReposInfo.json", {
                 cache: true
         });
 
@@ -21,10 +21,10 @@ angular.module('app', [])
             });
         }
 
-        //check if repo is tagged as one of the categories
+        //check if repo is tagged as "radiuss" as well as one of the categories
         function containsTopics(catTopics, repoTopics){
             for (var i = 0; i < catTopics.length; i++){
-                if($.inArray(catTopics[i], repoTopics) != -1){
+                if($.inArray(catTopics[i], repoTopics) != -1 && $.inArray("radiuss", repoTopics) != -1){
                     return true;
                 } 
             }
@@ -38,7 +38,6 @@ angular.module('app', [])
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
                 $scope.catData.push(data);
-                console.log("data: " + data.title);
             });
 
             getReposTopics.then(function(response){
@@ -51,6 +50,7 @@ angular.module('app', [])
                     var catRepos = [];
 
                     for (var r in reposObj){
+
                         var repo = reposObj[r];
                         var topics = [];
                         for (var t in repo.repositoryTopics.nodes){
@@ -67,7 +67,6 @@ angular.module('app', [])
 
                 getReposInfo.then(function(response){
                     var reposInfoObj = response.data.data;
-
                     for (var repo in reposInfoObj){
                         //reposInfoObj[repo] is the actual repo object
                         for (var j in $scope.topicRepos){
@@ -97,10 +96,6 @@ angular.module('app', [])
                 //create function for generating hash url for each repo
                 $scope.repoHref = function(nametag) {
                     $window.location.href = '../repo#'+nametag;
-                };
-
-                $scope.categoryHref = function(nametag) {
-                    $window.location.href = '../category#'+nametag;
                 };
             });
         });

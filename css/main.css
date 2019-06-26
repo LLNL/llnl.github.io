@@ -92,18 +92,27 @@
   margin-right: 15px;
 }
 
-#categories p.links > a:last-child{
+#categories p.links > span:last-child{
     margin-right: 60px;
 }
 
 #categories p.links{
     text-align: right;
+    padding-bottom: 8px;
+    padding-top: 8px;
 }
 
 
-#categories p.links > a:first-child{
-    margin-left: 60px;
+#categories p.links > span:first-child{
+    margin-left: 15%;
+    margin-right: 10px;
     float:left;
+}
+
+#categories p.links > span:nth-child(2) {
+    float:left;
+    font-weight: bold;
+    font-size: 110%;
 }
 
 /* --- */
@@ -335,4 +344,9 @@
 /* This displays the page corresponding to the one you clicked on */
 :target {
     display: block;
+
+.orgAvatar {
+    width: 35px;
+    height: 35px;
 }
+
