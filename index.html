@@ -16,7 +16,6 @@ layout: homepage
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
 
-
         <div ng-repeat="repo in topicRepos" ng-show="repo.topics.indexOf(category.topic) != -1">
             <p class="links">
                 <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Name" title="Name">
@@ -32,11 +31,8 @@ layout: homepage
                 </a>
             </p>
         </div>
-    
     </div> 
-
 </section>
-
 
 {% endraw %}
 

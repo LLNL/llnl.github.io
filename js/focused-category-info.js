@@ -1,15 +1,15 @@
 angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
-        var getCategoryInfo =  $http.get("../category/category_info.json", {
+        var getCategoryInfo =  $http.get("/category/category_info.json", {
                     cache: true
                 });
 
-        var getReposTopics = $http.get("./explore/github-data/labRepos_Topics.json", {
+        var getReposTopics = $http.get("/explore/github-data/labRepos_Topics.json", {
                 cache: true
                 });
 
-        var getReposInfo =  $http.get("./explore/github-data/labReposInfo.json", {
+        var getReposInfo =  $http.get("/explore/github-data/labReposInfo.json", {
                 cache: true
                 });
 
@@ -20,11 +20,9 @@ angular.module('app', [])
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
                 $scope.catData.push(data);
-                console.log("data: " + data.title);
             });
-           
+
             getReposTopics.then(function(response){
-                
                 var reposObj = response.data.data;
                 var allRepos = Object.keys(reposObj);
                 $scope.topicRepos = [];
@@ -48,12 +46,18 @@ angular.module('app', [])
                 getReposInfo.then(function(response){
                     var reposInfoObj = response.data.data;
                     for (var i in reposInfoObj){
-                        console.log("repo name: "+ reposInfoObj[i].name);
+                       // console.log("repo name: "+ reposInfoObj[i].name);
                         for (var j in $scope.topicRepos){
                             if(reposInfoObj[i].nameWithOwner == $scope.topicRepos[j].nameWithOwner){
                                 $scope.topicRepos[j]["name"]= reposInfoObj[i].name;
+                                $scope.topicRepos[j]["owner"]= reposInfoObj[i].owner.login;
+                                $scope.topicRepos[j]["language"]= reposInfoObj[i].primaryLanguage.name;
+                                $scope.topicRepos[j]["stars"]= reposInfoObj[i].stargazers.totalCount;
+                                $scope.topicRepos[j]["forks"]= reposInfoObj[i].forks.totalCount;
+                                $scope.topicRepos[j]["description"]= reposInfoObj[i].description;
                                 $scope.topicRepos[j]["gitUrl"]= reposInfoObj[i].url;
                                 $scope.topicRepos[j]["homepageUrl"]= reposInfoObj[i].homepageUrl;
+                                //console.log($scope.topicRepos[j]);
                             }
                         }
                     }
@@ -67,7 +71,5 @@ angular.module('app', [])
                     $window.location.href = '../category#'+nametag;
                 };
             });
-           
         });
-        
     }]);

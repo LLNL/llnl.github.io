@@ -6,7 +6,7 @@ layout: category
 
 {% raw %}
 
-
+<router-outlet (activate)="onActivate($event)" ></router-outlet>
 
 <div class="wrapper">
     <div class="sidebar">
@@ -18,10 +18,49 @@ layout: category
     </div>
 
     <div class="main">
-        <div ng-repeat="category in catData">
+        <div class="anchor" ng-repeat="category in catData">
             <div id="{{category.title}}" class="page">
-                <p class="page-title"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </p>
-                <p> {{category.title}} </p>
+
+                
+                    <div class="flex-category-focused">
+                        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+                        <h3 class="text-center">{{category.title}}</h3>
+                        <p class="text-center">{{category.description}} </p>
+
+                        <section class="flex-container" id="repositories">
+                            <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}" ng-repeat="repo in topicRepos" ng-show="repo.topics.indexOf(category.topic) != -1"  ng-click="repoHref(repo.nameWithOwner)">
+                                <h4 class="text-center">
+                                    <span alt="Name" title="Name"> {{ repo.name }} </span>
+                                    <small><span alt="Owner" title="Owner"> {{ repo.owner }} </span></small>
+                                    <small><span alt="Primary Language" title="Primary Language"> {{ repo.language }} </span></small>
+                                </h4>
+
+                                <p class="text-justify"> {{ repo.description }} </p>
+
+                                <p class="stats text-center">
+                                    <a href="{{ repo.gitUrl }}" alt="GitHub Page" title="GitHub Page">
+                                        <span class="fa fa-github"></span>
+                                    </a>
+
+                                    <a href="{{ repo.gitUrl }}/stargazers" alt="Stargazers" title="Stargazers">
+                                        <span class="fa fa-star"></span> {{ repo.stars }}
+                                    </a>
+
+                                    <a href="{{ repo.gitUrl }}/network" alt="Forks" title="Forks">
+                                        <span class="fa fa-code-fork"></span> {{ repo.forks}}
+                                    </a>
+
+                                    <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}" alt="Project Website" title="Project Website">
+                                        <span class="fa fa-globe"></span>
+                                    </a>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+
+                
+
+
             </div>
         </div>
     </div>
@@ -30,4 +69,4 @@ layout: category
 {% endraw %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="/js/category-info.js"></script>
+<script src="/js/focused-category-info.js"></script>

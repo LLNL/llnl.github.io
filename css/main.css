@@ -151,12 +151,52 @@
 }
 
 .flex-category {
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.flex-category:hover {
+    border: 1px solid steelblue;
+    box-shadow: 3px 3px #ddd;
+    cursor: pointer;
+}
+
+.flex-category-focused{
+    width: 100%;
     margin: 0px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+}
+.flex-category-focused > h3 {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.flex-category-focused > p {
+    margin: 50px;
+    font-size: 2rem;
+}
+
+.flex-category-focused a {
+    /* Don't decorate links in repo items */
+    color: inherit;
+    text-decoration: none;
+}
+
+.flex-category-focused a:first-child {
+    font-weight: bold;
+}
+
+.flex-category-focused > img {
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    width: 30%
+
 }
 
 .flex-category > h4 {
     margin: 0px;
+    margin-top: 15px;
     padding-bottom: 25px;
     font-weight: bold;
 }
@@ -178,8 +218,9 @@
 }
 
 .flex-category > img {
-    align-items: center;
-    margin-bottom: -15%
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20px;
 }
 
 .page-title {
@@ -247,13 +288,15 @@
 
 .main {
     width: 100%;
-    height: 150vh;
     padding-right: 40px;
     padding-left: 15px;
+    position: relative;
 }
 
+
+
 .sidebar {
-    width: 30%;
+    width: 300px;
     height: 100%;
     position: -webkit-sticky;
     position: sticky;
@@ -263,36 +306,33 @@
 }
 
 .stickynav a {
+    padding: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height:40px;
     text-decoration:none;
     color: black;
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: block;
+    transition: 0.3s;
 }
 
 .stickynav a:hover {
-    background-color: rgba(0,0,0,0.1)
+    background-color: steelblue;
+    color: white;
 }
-
 
 /* This hides all pages */
 .page {
     display: none;
     padding-left:20px;
     padding-top:20px;
-    margin:0px;
     height: 100%;
-    background-color: blue;
+//    background-color: blue;
 }
 
 /* This displays the page corresponding to the one you clicked on */
 :target {
     display: block;
-
-
 }
-
-
