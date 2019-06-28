@@ -1,54 +1,57 @@
 ---
 title: LLNL Software Catalog
-layout: portal
+layout: homepage
 ---
-
-Welcome to the LLNL software portal&mdash;a hub for our open source projects. This catalog is updated automatically as repositories are added or modified.
 
 {% raw %}
 
-<h2 class="page-header text-center">
-    <span ng-show="repoData"> {{ repoData.length }} </span>
-    Software Repositories
-</h2>
 
-<div class="container">
-    <div class="col-xs-6 col-xs-offset-3">
-        <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
+<p class="page-title"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </p>
+
+<section class="flex-container-category" id="categories">
+    <div ng-repeat="category in catData" class="flex-category {{repo.ownerAvatar}} {{repo.name}} {{repo.gitUrl}} {{repo.homepageUrl}}">
+        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+        <h4 class="text-center">{{category.title}}</h4>
+        <p class="text-center">{{category.description}}</p>
+
+
+        <div ng-repeat="repo in topicRepos[catData.indexOf(category)]">
+            <p class="links">
+
+                <span>
+                <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
+                    <img class ="orgAvatar" src="{{repo.ownerAvatar}}">
+                </a>
+                </span>
+
+                <span>
+                <a ng-click="repoHref(repo.nameWithOwner)" alt="Name" title="Name">
+                    {{repo.name}}
+                </a>
+                </span>
+
+                <span>
+                <a href="{{repo.gitUrl}}" alt="GitHub Page" title="GitHub Page">
+                    <span class="fa fa-github"></span>
+                </a>
+                </span>
+
+                <span>
+                <a ng-if="repo.homepageUrl" href="{{repo.homepageUrl}}" alt="Project Website" title="Project Website">
+                    <span class="fa fa-globe text-right"></span>
+                </a>
+                </span>
+            </p>
+        </div>
+    
     </div>
-</div>
 
-<section ng-show="repoData" id="repositories" class="flex-container">
-    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)">
-        <h4 class="text-center">
-            <span alt="Name" title="Name"> {{ repo.name }} </span>
-            <small><span alt="Owner" title="Owner"> {{ repo.owner.login }} </span></small>
-            <small><span alt="Primary Language" title="Primary Language"> {{ repo.primaryLanguage.name }} </span></small>
-        </h4>
-
-        <p class="text-justify"> {{ repo.description }} </p>
-
-        <p class="stats text-center">
-            <a href="{{ repo.url }}" alt="GitHub Page" title="GitHub Page">
-                <span class="fa fa-github"></span>
-            </a>
-
-            <a href="{{ repo.url }}/stargazers" alt="Stargazers" title="Stargazers">
-                <span class="fa fa-star"></span> {{ repo.stargazers.totalCount }}
-            </a>
-
-            <a href="{{ repo.url }}/network" alt="Forks" title="Forks">
-                <span class="fa fa-code-fork"></span> {{ repo.forks.totalCount }}
-            </a>
-
-            <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}" alt="Project Website" title="Project Website">
-                <span class="fa fa-globe"></span>
-            </a>
-        </p>
-    </div>
 </section>
+
 
 {% endraw %}
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="js/github-dynamic.js"></script>
+<script src="/js/category-info.js"></script>
+

@@ -1,7 +1,7 @@
 angular.module('app', [])
     .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
 
-        var promiseRepoInfo = $http.get("./explore/github-data/labReposInfo.json", {
+        var promiseRepoInfo = $http.get("/explore/github-data/labReposInfo.json", {
             cache: true
         });
 
@@ -30,7 +30,7 @@ angular.module('app', [])
         $scope.predicate = '-stargazers.totalCount';
 
         $scope.repoHref = function(nametag) {
-            $window.location.href = 'repo#'+nametag;
+            $window.location.href = '../repo#'+nametag;
         };
 
-    }]);
+}]);
