@@ -10,7 +10,7 @@ layout: homepage
 
 <p class="page-title"> Welcome to the LLNL software portal—a hub for our open source projects. This catalog is updated automatically as repositories are added or modified. </p>
 
-<section class="flex-container-category" id="categories">
+<section class="flex-container" id="categories">
 
     <div ng-repeat="category in catData" class="flex-category" ng-click="categoryHref(category.title)">
 
@@ -20,18 +20,17 @@ layout: homepage
 
 
         <div ng-repeat="repo in topicRepos[catData.indexOf(category)]">
-            <p class="links">
+            <p class="links"  ng-show="topicRepos[catData.indexOf(category)].indexOf(repo) < 4">
 
                 <span>
                 <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
-                    <img class ="orgAvatar" src="{{repo.ownerAvatar}}">
+                    <img  class ="orgAvatar" src="{{repo.ownerAvatar}}">
                 </a>
                 </span>
 
                 <span>
                     <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Name" title="Name">
-                    {{repo.name}}
-
+                        {{repo.name}}
                 </a>
                 </span>
 
@@ -48,7 +47,8 @@ layout: homepage
                 </span>
             </p>
         </div>
-    </div> 
+        <a class="more" ng-if="topicRepos[catData.indexOf(category)].length > 4">...MORE</a>
+    </div>
 </section>
 
 {% endraw %}

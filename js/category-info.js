@@ -99,8 +99,10 @@ angular.module('app', [])
                     $window.location.href = '../repo#'+nametag;
                 };
 
+                //function to generate hash url for each category
                 $scope.categoryHref = function(nametag) {
-                    $window.location.href = '../category#'+nametag;
+                    var result = nametag.replace(/ /g, "");
+                    $window.location.href = '../category#'+result;
                 };
             });
         });

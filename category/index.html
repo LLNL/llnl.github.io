@@ -6,29 +6,34 @@ layout: category
 
 {% raw %}
 
-<router-outlet (activate)="onActivate($event)" ></router-outlet>
-
+<div class="hamburger-container">
+    <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
+    <div class="hamburger-nav" ng-if="showHamburger" >
+        <div ng-repeat="category in catData">
+            <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab" ng-click="categoryHref(category.title)"> {{category.title}} </a>
+        </div>
+    </div>
+</div>
 <div class="wrapper">
-    <div class="sidebar">
+    <div class="nav-container">
         <nav class="stickynav">
             <div ng-repeat="category in catData">
-                <a href="#{{category.title}}">{{category.title}}</a>
+                <a ng-class="{'selected-tab': $index == selectedIndex }" ng-click="categoryHref(category.title)" class="tab">{{category.title}}</a>
             </div>
         </nav>
     </div>
 
     <div class="main">
-        <div class="anchor" ng-repeat="category in catData">
-            <div id="{{category.title}}" class="page">
+        <div ng-repeat="category in catData">
+            <div class="page">
 
-                
-                    <div class="flex-category-focused">
-                        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
-                        <h3 class="text-center">{{category.title}}</h3>
-                        <p class="text-center">{{category.description}} </p>
+                    <div class="flex-category-focused" ng-if="category.title === currentLocation">
+                        <img class="main-icon" src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+                        <h3>{{category.title}}</h3>
+                        <p>{{category.description}} </p>
 
-                        <section class="flex-container" id="repositories">
-                            <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}" ng-repeat="repo in topicRepos" ng-show="repo.topics.indexOf(category.topic) != -1"  ng-click="repoHref(repo.nameWithOwner)">
+                        <section class="flex-container-category" id="repositories">
+                            <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}" ng-repeat="repo in topicRepos[catData.indexOf(category)]" ng-click="repoHref(repo.nameWithOwner)">
                                 <h4 class="text-center">
                                     <span alt="Name" title="Name"> {{ repo.name }} </span>
                                     <small><span alt="Owner" title="Owner"> {{ repo.owner }} </span></small>

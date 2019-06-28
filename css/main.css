@@ -17,7 +17,10 @@
     display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media(max-width:767px) {
@@ -98,7 +101,7 @@
 
 #categories p.links{
     text-align: right;
-    padding-bottom: 8px;
+    padding-bottom: 15px;
     padding-top: 8px;
 }
 
@@ -178,11 +181,13 @@
 .flex-category-focused > h3 {
     margin: 0px;
     font-weight: bold;
+    text-align: center;
 }
 
 .flex-category-focused > p {
     margin: 50px;
     font-size: 2rem;
+    text-align: center;
 }
 
 .flex-category-focused a {
@@ -196,11 +201,11 @@
 }
 
 .flex-category-focused > img {
-    align-items: center;
-    justify-content: center;
-    margin-left: 35%;
-    width: 30%
-
+    width: 15%;
+    min-width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 .flex-category > h4 {
@@ -232,9 +237,28 @@
     margin-top: 20px;
 }
 
+.orgAvatar {
+    width: 35px;
+    height: 35px;
+}
+
+.more {
+    float:right;
+    font-weight:bold;
+    margin-right:60px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    font-size: 1.3rem;
+}
+
+a .more :hover {
+    fornt-size: 1.3rem;
+}
+
 .page-title {
     font-size: 20px;
     padding-top: 50px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -285,11 +309,6 @@
     }
 }
 
-.header{
-    height: 100%;
-    width: 100%; 
-}
-
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -297,56 +316,127 @@
 
 .main {
     width: 100%;
-    padding-right: 40px;
-    padding-left: 15px;
-    position: relative;
+    padding-top: 20px;
+   // position: relative;
 }
 
-
-
-.sidebar {
-    width: 300px;
+.page {
+    justify-content:center;
     height: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    text-align: left;
-    top: 0;
-    background-color:  #f8f8f8;
 }
+
+@media(max-width:1199px){
+    .nav-container {
+        display: none;
+    }
+    .hamburger-container {
+        width: 100%;
+        background-color: red;
+        height: 30px;
+    }
+}
+@media(min-width:1200px){
+    .nav-container {
+        min-width: 300px;
+        height: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        text-align: left;
+        top: 0;
+        background-color:  #f8f8f8;
+    }
+    .hamburger-container {
+        display: none;
+    }
+}
+
+@media(max-width:1199px){
+    .hamburger-container {
+        width: 100%;
+        background-color: #f8f8f8;
+        height: 45px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        border-bottom: lightgrey solid 1px;
+        padding-left: 15px;
+    }
+}
+@media(min-width:1200px){
+    .hamburger-container {
+        display: none;
+    }
+}
+
 
 .stickynav a {
-    padding: 15px;
+    padding-left: 15px;
+    padding-right:15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height:40px;
+    line-height:50px;
     text-decoration:none;
-    color: black;
     font-size: 1.8rem;
     display: block;
     transition: 0.3s;
+    border: solid 1px lightgrey;
+    border-top: none;
 }
 
 .stickynav a:hover {
     background-color: steelblue;
     color: white;
+    padding-left: 18px;
 }
 
-/* This hides all pages */
-.page {
-    display: none;
-    padding-left:20px;
-    padding-top:20px;
-    height: 100%;
-//    background-color: blue;
-}
-
-/* This displays the page corresponding to the one you clicked on */
-:target {
+.hamburger-nav a{
+    padding-left: 15px;
+    padding-right:15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height:50px;
+    text-decoration:none;
+    font-size: 1.8rem;
     display: block;
+    transition: 0.3s;
+    border: solid 1px lightgrey;
+    border-top: none;
+    background-color: #f8f8f8;
+}
 
-.orgAvatar {
-    width: 35px;
-    height: 35px;
+.hamburger-nav a:hover {
+    background-color: steelblue;
+    color: white;
+    padding-left: 18px;
+}
+
+.tab{
+    color: black;
+}
+.selected-tab {
+    color: steelblue;
+    font-weight: bold;
+}
+
+
+
+.hamburger-container span {
+    color: gray;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.hamburger-container span:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.hamburger-nav{
+    padding-top: 50px;
+    padding-right: 15px;
 }
 
