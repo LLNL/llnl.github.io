@@ -117,6 +117,12 @@
     font-weight: bold;
     font-size: 110%;
 }
+#categories p.links > span:nth-child(3) {
+    margin-right: 5px;
+}
+#categories p.links > span:nth-child(4) {
+    margin-right: 5px;
+}
 
 /* --- */
 .navbar-header a.navbar-brand {
@@ -167,10 +173,35 @@
     transition: 0.3s;
 }
 
-.flex-category:hover {
+.dynamic:hover {
     border: 1px solid steelblue;
     box-shadow: 3px 3px #ddd;
     cursor: pointer;
+}
+
+.flex-category > img {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+
+.flex-category > h4 {
+    margin: 0px;
+    margin-top: 15px;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+
+.flex-category > p {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.flex-category a {
+    /* Don't decorate links in repo items */
+    color: inherit;
+    text-decoration: none;
 }
 
 .flex-category-focused{
@@ -208,35 +239,6 @@
     margin-right:auto;
 }
 
-.flex-category > h4 {
-    margin: 0px;
-    margin-top: 15px;
-    padding-bottom: 25px;
-    font-weight: bold;
-}
-
-.flex-category > p {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-}
-
-.flex-category a {
-    /* Don't decorate links in repo items */
-    color: inherit;
-    text-decoration: none;
-}
-
-.flex-category a:first-child {
-    font-weight: bold;
-}
-
-.flex-category > img {
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 20px;
-}
-
 .orgAvatar {
     width: 35px;
     height: 35px;
@@ -249,10 +251,6 @@
     margin-bottom: 20px;
     transition: 0.3s;
     font-size: 1.3rem;
-}
-
-a .more :hover {
-    fornt-size: 1.3rem;
 }
 
 .page-title {

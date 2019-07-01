@@ -21,6 +21,15 @@ angular.module('app', [])
             });
         }
 
+        //sort by alphabetical key
+        function sortAlphabetically(array, key){
+            return array.sort(function(a,b){
+                var x = a[key].toLowerCase() ; var y = b[key].toLowerCase();
+                console.log("x: " + x +  " y: " + y);
+                return ((x < y) ? -1 : ((x >y) ? 1:0));
+            });
+        }
+
         //check if repo is tagged as one of the categories
         function containsTopics(catTopics, repoTopics){
             for (var i = 0; i < catTopics.length; i++){
@@ -39,6 +48,7 @@ angular.module('app', [])
                 var data = catsObj[value];
                 $scope.catData.push(data);
             });
+            $scope.catData = sortAlphabetically($scope.catData, "title");
 
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;

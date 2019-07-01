@@ -12,7 +12,7 @@ layout: homepage
 
 <section class="flex-container" id="categories">
 
-    <div ng-repeat="category in catData" class="flex-category" ng-click="categoryHref(category.title)">
+    <div ng-repeat="category in catData" class="flex-category dynamic" ng-click="categoryHref(category.title)">
 
         <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
         <h4 class="text-center">{{category.title}}</h4>
@@ -40,10 +40,18 @@ layout: homepage
                 </a>
                 </span>
 
+               
+
                 <span>
-                <a ng-if="repo.homepageUrl" href="{{repo.homepageUrl}}" alt="Project Website" title="Project Website">
+                <a ng-show="repo.homepageUrl" href="{{repo.homepageUrl}}" alt="Project Website" title="Project Website">
                     <span class="fa fa-globe text-right"></span>
                 </a>
+                </span>
+
+                <span>
+                    <a href="{{ repo.gitUrl }}/stargazers" alt ="Stargazers" title="Stargazers">
+                        <span class="fa fa-star"></span> {{repo.stars}} 
+                    </a>
                 </span>
             </p>
         </div>

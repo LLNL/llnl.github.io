@@ -8,7 +8,7 @@ layout: portal
 <p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash;aims to broaden usage across LLNL and the open source community of a set of libraries and tools used for HPC scientific application development.</p>
 
 <section class="flex-container" id="categories">
-    <div ng-repeat="category in catData" class="flex-category {{repo.ownerAvatar}} {{repo.name}} {{repo.gitUrl}} {{repo.homepageUrl}}">
+    <div ng-repeat="category in catData" class="flex-category">
         <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
