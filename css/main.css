@@ -410,17 +410,6 @@
     //background-color: green;
 }
 
-.title-description {
-    justify-content: center;
-    display: -webkit-flex;
-    display: flex;
-    flex-flow: column wrap;
-    text-align: left;
-    //min-width: 700px;
-    //background-color: red;
-    padding-left: 5%;
-}
-
 .title-container img {
     min-height: 100px;
     min-width: 100px;
@@ -428,6 +417,25 @@
     max-width: 15%;
 }
 
-.title-description p {
-    
+.title-description {
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 5%;
+}
+
+
+
+@media(max-width:767px) {
+    .title-description{
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media(min-width:768px) {
+    .text-description{
+        text-align: left;
+    }
 }
