@@ -72,7 +72,7 @@ If you are an employee at LLNL and have 2FA enabled, congratulations! You are el
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
 
-Remember, all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy for both [initial release{% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions{% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/contributing/).
+Remember, all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy for both [initial release {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/contributing/).
 
 #### Repository Content
 
