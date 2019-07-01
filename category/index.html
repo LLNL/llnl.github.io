@@ -27,10 +27,14 @@ layout: category
         <div ng-repeat="category in catData">
             <div class="page">
 
-                    <div class="flex-category-focused" ng-if="category.title === currentLocation">
-                        <img class="main-icon" src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+                <div class="flex-category-focused" ng-if="category.title === currentLocation">
+                    <div class="title-container">
+                        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+                        <div class="title-description">
                         <h3>{{category.title}}</h3>
                         <p>{{category.description}} </p>
+                        </div>
+                    </div>
 
                         <section class="flex-container-category" id="repositories">
                             <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}" ng-repeat="repo in topicRepos[catData.indexOf(category)]" ng-click="repoHref(repo.nameWithOwner)">

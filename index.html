@@ -29,28 +29,20 @@ layout: homepage
                 </span>
 
                 <span>
-                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Name" title="Name">
+                    <a href="{{repo.gitUrl}}" alt="Name" title="Name">
                         {{repo.name}}
                 </a>
                 </span>
 
                 <span>
-                <a href="{{repo.gitUrl}}" alt="GitHub Page" title="GitHub Page">
-                    <span class="fa fa-github"></span>
-                </a>
-                </span>
-
-               
-
-                <span>
-                <a ng-show="repo.homepageUrl" href="{{repo.homepageUrl}}" alt="Project Website" title="Project Website">
-                    <span class="fa fa-globe text-right"></span>
-                </a>
-                </span>
-
-                <span>
                     <a href="{{ repo.gitUrl }}/stargazers" alt ="Stargazers" title="Stargazers">
-                        <span class="fa fa-star"></span> {{repo.stars}} 
+                        {{repo.stars}}  <span class="fa fa-star"/>
+                    </a>
+                </span>
+
+                <span>
+                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Rpo Info" title="Repo Info">
+                        <span class="fa fa-info-circle"/>
                     </a>
                 </span>
             </p>

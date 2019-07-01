@@ -95,33 +95,35 @@
   margin-right: 15px;
 }
 
-#categories p.links > span:last-child{
-    margin-right: 60px;
-}
-
+/* links for each repo in a category */
 #categories p.links{
     text-align: right;
-    padding-bottom: 15px;
-    padding-top: 8px;
+    align-items: center;
+    line-height: 2.5;
 }
 
-
+/* Org logo */
 #categories p.links > span:first-child{
     margin-left: 15%;
     margin-right: 10px;
     float:left;
 }
 
+/* repo name */
 #categories p.links > span:nth-child(2) {
     float:left;
     font-weight: bold;
-    font-size: 110%;
+    font-size: 1.6rem;
 }
+
+/* repo stars */
 #categories p.links > span:nth-child(3) {
-    margin-right: 5px;
+    margin-right: 10px;
 }
-#categories p.links > span:nth-child(4) {
-    margin-right: 5px;
+
+/* repo info */
+#categories p.links > span:last-child{
+    margin-right: 15%;
 }
 
 /* --- */
@@ -204,40 +206,6 @@
     text-decoration: none;
 }
 
-.flex-category-focused{
-    width: 100%;
-    margin: 0px;
-    margin-bottom: 30px;
-}
-.flex-category-focused > h3 {
-    margin: 0px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.flex-category-focused > p {
-    margin: 50px;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.flex-category-focused a {
-    /* Don't decorate links in repo items */
-    color: inherit;
-    text-decoration: none;
-}
-
-.flex-category-focused a:first-child {
-    font-weight: bold;
-}
-
-.flex-category-focused > img {
-    width: 15%;
-    min-width: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right:auto;
-}
 
 .orgAvatar {
     width: 35px;
@@ -269,7 +237,7 @@
         background-image: 
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
-        background-color: #2b4047;
+        background-color: #3d444a;
         background-position:  center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
         background-size:  auto, 100px 100px;
@@ -282,7 +250,7 @@
         background-image: 
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
-        background-color: #2b4047;
+        background-color: #3d444a;
         background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
         background-size: auto, 130px 130px;
@@ -297,7 +265,7 @@
             url('/assets/images/OS-icon-color.png'),
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
-        background-color: #2b4047;
+        background-color: #3d444a;
         background-position: 30% 50%, 70% 50%, 67% 90%;
         background-position: -webkit-calc(50% - 310px) 50%, -webkit-calc(50% + 310px) 50%, -webkit-calc(50% + 310px) 90%;
         background-position: calc(50% - 310px) 50%, calc(50% + 310px) 50%, calc(50% + 310px) 90%;
@@ -327,11 +295,6 @@
     .nav-container {
         display: none;
     }
-    .hamburger-container {
-        width: 100%;
-        background-color: red;
-        height: 30px;
-    }
 }
 @media(min-width:1200px){
     .nav-container {
@@ -342,9 +305,6 @@
         text-align: left;
         top: 0;
         background-color:  #f8f8f8;
-    }
-    .hamburger-container {
-        display: none;
     }
 }
 
@@ -438,3 +398,36 @@
     padding-right: 15px;
 }
 
+.title-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    //background-color: green;
+}
+
+.title-description {
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    //min-width: 700px;
+    //background-color: red;
+    padding-left: 5%;
+}
+
+.title-container img {
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 15%;
+    max-width: 15%;
+}
+
+.title-description p {
+    
+}
