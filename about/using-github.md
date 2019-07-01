@@ -72,7 +72,7 @@ If you are an employee at LLNL and have 2FA enabled, congratulations! You are el
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
 
-Remember, all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy for both [initial release](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions](https://dev.llnl.gov/opensource/contributing/). **Need to add lock icons for both links**
+Remember, all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy for both [initial release{% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions{% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/contributing/).
 
 #### Repository Content
 
@@ -96,7 +96,8 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 Now that your project is on GitHub, make sure users and contributors can find it! There are several ways to do this. Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) for help with the following tasks:
 
 * Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
-    * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux). **Need to add link to .md file where we will list standard/recommended tags**
+    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/master/categories/README.md) of recommended, standardized topics.
+    * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
     * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/), be sure to add the `radiuss` topic along with the appropriate [category tags](https://github.com/LLNL/llnl.github.io/blob/master/radiuss/README.md).
 * Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub.
 * Publicize any outreach activities or major milestones related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
