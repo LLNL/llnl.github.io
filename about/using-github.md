@@ -72,11 +72,11 @@ If you are an employee at LLNL and have 2FA enabled, congratulations! You are el
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
 
-Remember, all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy.
+Remember, all information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy for both [initial release](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions](https://dev.llnl.gov/opensource/contributing/). **Need to add lock icons for both links**
 
 #### Repository Content
 
-Before content is placed into an LLNL GitHub.com repository it should be reviewed and released via the Information Management (IM) process. Once released, an appropriate open source license and `LLNL-CODE-` release number should be provided and included in the repository.
+Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via the IM process. Once released, an appropriate open source license and `LLNL-CODE-` release number should be provided and included in the repository.
 
 Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL servers*, and content placed in them should be limited to "email like" communications. That means:
 
@@ -89,20 +89,22 @@ Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL serve
 * NO Unclassified Controlled Information (UCI)
 * NO Unclassified Controlled Nuclear Information (UCNI)
 
-When in doubt, contact a Derivative Classifier (DC) and / or Information Management (IM) for further guidance.
+When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidance.
 
 #### Repository Visibility
 
 Now that your project is on GitHub, make sure users and contributors can find it! There are several ways to do this. Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) for help with the following tasks:
 
 * Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
-    * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
+    * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux). **Need to add link to .md file where we will list standard/recommended tags**
+    * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/), be sure to add the `radiuss` topic along with the appropriate [category tags](https://github.com/LLNL/llnl.github.io/blob/master/radiuss/README.md).
 * Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub.
-* Publicize any outreach activities related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
-* Make sure your repository is included in this website’s [Catalog](https://software.llnl.gov/). If you’ve set up your repository within the LLNL organization, you don’t need to take any action; it will automatically appear after the next monthly update.
+* Publicize any outreach activities or major milestones related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
+* Make sure your repository is included on this website’s home page and [full catalog](https://software.llnl.gov/). If you’ve set up your repository within the LLNL organization, you don’t need to take any action; it will automatically appear after the next data update.
     * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
     * Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json), with your organization and/or repository names.
-* Include a summary of your project with GitHub and documentation links on LLNL's [Computation website](https://computation.llnl.gov/). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
+    * If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/master/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
+* Include a summary of your project with GitHub and documentation links on LLNL's [Computing website](https://computation.llnl.gov/). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
 
 ### Other References
 
