@@ -13,11 +13,23 @@ angular.module('app', [])
                 cache: true
         });
 
+        var getReposLogos =  $http.get("../assets/images/logos/repo_logos.json", {
+            cache: true
+        });
+
         //function to sort repos in descending order of stars
         function sortByStars(array, key) {
             return array.sort(function(a, b) {
                 var x = a[key] ; var y = b[key];
                 return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+            });
+        }
+
+        //sort by alphabetical key
+        function sortAlphabetically(array, key){
+            return array.sort(function(a,b){
+                var x = a[key].toLowerCase() ; var y = b[key].toLowerCase();
+                return ((x < y) ? -1 : ((x >y) ? 1:0));
             });
         }
 
@@ -39,6 +51,7 @@ angular.module('app', [])
                 var data = catsObj[value];
                 $scope.catData.push(data);
             });
+            $scope.catData = sortAlphabetically($scope.catData, "title"); 
 
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;
@@ -64,7 +77,10 @@ angular.module('app', [])
                     }
                     $scope.topicRepos.push(catRepos);
                 }
-
+                getReposLogos.then(function(response){
+                    var logos = response.data.data;
+                    console.log(logos);
+                
                 getReposInfo.then(function(response){
                     var reposInfoObj = response.data.data;
                     for (var repo in reposInfoObj){
@@ -78,13 +94,25 @@ angular.module('app', [])
                                 if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
                                     //save only necessary data fields
                                     category[count]["name"]= reposInfoObj[repo].name;
-                                    category[count]['ownerAvatar'] = reposInfoObj[repo].owner.avatarUrl;
+                                    //check if repo has unique logo, if not use org logo
+                                        var match = false; var name; var file;
+                                        for (var f in logos){
+                                            if (logos[f].name == category[count]["name"]){
+                                                match = true; name = logos[f].name ; file = logos[f].file;
+                                            }
+                                        }
+                                        //if repo has unique logo use it
+                                        if (match) {
+                                            category[count]['ownerAvatar'] = "../assets/images/logos/"+name +"-repo-logo." + file;
+                                        }
+                                        //if repo does not have unique logo use org logo
+                                        else if(!match){
+                                            category[count]['ownerAvatar'] = reposInfoObj[repo].owner.avatarUrl;
+                                        }
                                     category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
                                     category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                                     category[count]["gitUrl"]= reposInfoObj[repo].url;
                                     category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
-
-                                    console.log(category[count]['name']);
                                 }
                             }
                         }
@@ -95,10 +123,11 @@ angular.module('app', [])
                     }
                 });
 
-                //create function for generating hash url for each repo
-                $scope.repoHref = function(nametag) {
-                    $window.location.href = '../repo#'+nametag;
-                };
+                    //create function for generating hash url for each repo
+                    $scope.repoHref = function(nametag) {
+                        $window.location.href = '../repo#'+nametag;
+                    };
+                });
             });
         });
     }]);
