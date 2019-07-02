@@ -96,13 +96,15 @@ angular.module('app', [])
                                         //check if repo has unique logo, if not use org logo
                                         var match = false; var name; var file;
                                         for (var f in logos){
-                                            if (logos[f].name == category[count]["name"]){
-                                                match = true; name = logos[f].name ; file = logos[f].file;
+                                            name =  Object.keys(logos[f]);
+                                            if (name == category[count].nameWithOwner.toLowerCase()){
+                                                match = true; file = logos[f][name];
                                             }
                                         }
                                         //if repo has unique logo use it
                                         if (match) {
-                                            category[count]['ownerAvatar'] = "./assets/images/logos/"+name +"-repo-logo." + file;
+                                            category[count]['ownerAvatar'] = "./assets/images/logos/"+category[count]["name"] +"-repo-logo." + file;
+                                            console.log("./assets/images/logos/"+category[count]["name"] +"-repo-logo." + file);
                                         }
                                         //if repo does not have unique logo use org logo
                                         else if(!match){
