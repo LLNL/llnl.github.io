@@ -193,4 +193,4 @@ simply rely on the default inbound = outbound assumption.
 ### Have Questions?
 
 If you still have questions or need more information, contact the
-[LLNL GitHub Admins](github-admin@llnl.gov).
+[LLNL GitHub Admins](mailto:github-admin@llnl.gov).
