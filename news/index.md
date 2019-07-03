@@ -7,8 +7,8 @@ permalink: /news/
 <div class="wrapper">
 
 <div class="twitterFeed">
-<h4 class="twitter-title"> Latest from Twitter </h4>
-<a class="twitter-timeline" data-chrome="noheader" href="https://twitter.com/LLNL_OpenSource?ref_src=twsrc%5Etfw" data-tweet-limit="3"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<h4 class="twitter-title "> Latest from Twitter </h4>
+<a class="twitter-timeline " data-chrome="nofooter noheader" href="https://twitter.com/LLNL_OpenSource?ref_src=twsrc%5Etfw" data-tweet-limit="3"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 <a href="https://twitter.com/LLNL_OpenSource?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @LLNL_OpenSource</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
@@ -27,8 +27,15 @@ permalink: /news/
     </article>
   {% endfor %}
   
- <br />
-<a class="btn btn-primary btn-block news" href="/news/archive/" role="button">See all news in the archive</a>
+  <br />
+  <a class="btn btn-primary btn-block news" href="/news/archive/" role="button">See all news in the archive</a>
+  
+  <div class="twitterFeed-mobile" >
+      <h4 class="twitter-title"> Latest from Twitter </h4>
+      <a class="twitter-timeline" data-chrome="nofooter noheader" href="https://twitter.com/LLNL_OpenSource?ref_src=twsrc%5Etfw" data-tweet-limit="2"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+      <a href="https://twitter.com/LLNL_OpenSource?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @LLNL_OpenSource</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  
   
   </div>
 </div>
