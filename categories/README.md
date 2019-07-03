@@ -11,22 +11,11 @@ This data is read by the [category info javascript][js dir].
 [icon dir]: ../assets/images/
 [js dir]: ../js/category-info.js
 
-- Applications - Advance science with modeling and simulation codes
--- `applications`
-- Build Tools  - Automate and simplify complex dependencies and deployments
--- `build-tools`
-- Data Management & Viz - Manage visualizations with robust features and configurable analysis
--- `data-management`
--- `data-viz`
-- Math & Physics Libraries - Optimize solvers, higher order methods, and AMR frameworks
--- `math-physics`
-- Performance & Workflow - Manage and scale complex workflows, tracking, and data collection
--- `performance`
--- `workflows`
-- Portable Execution & Memory Mgmt - Automate data motion and memory allocation on advanced architectures
--- `memory-management`
--- `portability`
-- Proxy Applciations - Prepare for testing and porting applications
--- `proxy-applications`
-- System Software - Manage clusters and parallel environments
--- `system-software`
+- Applications: Advance science with modeling and simulation codes - `applications`
+- Build Tools: Automate and simplify complex dependencies and deployments - `build-tools`
+- Data Management & Viz: Manage visualizations with robust features and configurable analysis - `data-management`, `data-viz`
+- Math & Physics Libraries: Optimize solvers, higher order methods, and AMR frameworks - `math-physics`
+- Performance & Workflow: Manage and scale complex workflows, tracking, and data collection - `performance`, `workflows`
+- Portable Execution & Memory Mgmt: Automate data motion and memory allocation on advanced architectures - `memory-management`, `portability`
+- Proxy Applications: Prepare for testing and porting applications - `proxy-applications`
+- System Software: Manage clusters and parallel environments - `system-software`
