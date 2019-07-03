@@ -4,7 +4,10 @@ layout: default
 ---
 
 ## {{ page.title }}
-{: .page-header}
+{: .page-header .no_toc}
+
+* Table of Contents
+{:toc}
 
 If you're new to GitHub and open source in general, figuring out how to get set up can be a challenge. This guide is for getting started with GitHub, and specifically targets LLNL developers working in the [LLNL GitHub organization](https://github.com/LLNL).
 
