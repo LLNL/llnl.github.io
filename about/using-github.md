@@ -4,7 +4,10 @@ layout: default
 ---
 
 ## {{ page.title }}
-{: .page-header}
+{: .page-header .no_toc}
+
+* Table of Contents
+{:toc}
 
 If you're new to GitHub and open source in general, figuring out how to get set up can be a challenge. This guide is for getting started with GitHub, and specifically targets LLNL developers working in the [LLNL GitHub organization](https://github.com/LLNL).
 
@@ -21,7 +24,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
     - **Photo**: A headshot photo, or image that is uniquely you.
     - **Name**: Your first and last name.
     - **Bio**: Include a few words about yourself! Don't forget to mention @LLNL.
-    - **URL**: This might be your https://people.llnl.gov page, or a personal website if you prefer.
+    - **URL**: This might be your [people.llnl.gov](https://people.llnl.gov) page, or a personal website if you prefer.
     - **Company**: Probably `Lawrence Livermore National Laboratory, @LLNL`.
     - **Location**: Your primary location.
 
@@ -60,7 +63,7 @@ If you are an employee at LLNL and have 2FA enabled, congratulations! You are el
 
 2. After an administrator has added you to the organization, you will receive a notification email from GitHub.
 
-    - Alternatively, once the invitation has been sent, you will see a notification banner at the top of [https://github.com/llnl](https://github.com/llnl) which you can use to accept the invitation.
+    - Alternatively, once the invitation has been sent, you will see a notification banner at the top of [github.com/llnl](https://github.com/llnl) which you can use to accept the invitation.
 
 3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people) page and make your membership `Public`.
 
