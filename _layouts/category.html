@@ -11,6 +11,8 @@
             <div class="banner"/>
         </div>
 
+        {% raw %}
+
         <div class="hamburger-container">
             <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
             <div class="hamburger-nav" ng-if="showHamburger" >
@@ -43,19 +45,45 @@
 
                             <section class="flex-container-category" id="repositories">
                                 <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}" ng-repeat="repo in topicRepos[catData.indexOf(category)]" ng-click="repoHref(repo.nameWithOwner)">
+                                    <h4 class="text-center">
+                                        <span alt="Name" title="Name"> {{ repo.name }} </span>
+                                        <small><span alt="Owner" title="Owner"> {{ repo.owner }} </span></small>
+                                        <small><span alt="Primary Language" title="Primary Language"> {{ repo.language }} </span></small>
+                                    </h4>
 
-                                    {{ content }}
+                                    <p class="text-justify"> {{ repo.description }} </p>
 
+                                    <p class="stats text-center">
+                                        <a href="{{ repo.gitUrl }}" alt="GitHub Page" title="GitHub Page">
+                                            <span class="fa fa-github"></span>
+                                        </a>
+
+                                        <a href="{{ repo.gitUrl }}/stargazers" alt="Stargazers" title="Stargazers">
+                                            <span class="fa fa-star"></span> {{ repo.stars }}
+                                        </a>
+
+                                        <a href="{{ repo.gitUrl }}/network" alt="Forks" title="Forks">
+                                            <span class="fa fa-code-fork"></span> {{ repo.forks}}
+                                        </a>
+
+                                        <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}" alt="Project Website" title="Project Website">
+                                            <span class="fa fa-globe"></span>
+                                        </a>
+                                    </p>
                                 </div>
                             </section>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        {% endraw %}
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="/js/focused-category-info.js"></script>
+
 
         {% include footer.html %}
 
