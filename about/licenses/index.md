@@ -1,6 +1,6 @@
 ---
 title: LLNL Software Licensing
-layout: default
+layout: info
 ---
 
 ## {{ page.title }}

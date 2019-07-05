@@ -1,6 +1,6 @@
 ---
 title: Using GitHub
-layout: default
+layout: info
 ---
 
 ## {{ page.title }}
