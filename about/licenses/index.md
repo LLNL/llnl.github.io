@@ -4,7 +4,10 @@ layout: info
 ---
 
 ## {{ page.title }}
-{: .page-header}
+{: .page-header .no_toc}
+
+* Table of Contents
+{:toc}
 
 *This page contains information meant for LLNL Employees with instructions for
 how to mark their source code projects. It is not intended to serve as legal
@@ -193,4 +196,4 @@ simply rely on the default inbound = outbound assumption.
 ### Have Questions?
 
 If you still have questions or need more information, contact the
-[LLNL GitHub Admins](github-admin@llnl.gov).
+[LLNL GitHub Admins](mailto:github-admin@llnl.gov).
