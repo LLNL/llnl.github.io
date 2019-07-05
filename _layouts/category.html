@@ -17,7 +17,7 @@
             <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
             <div class="hamburger-nav" ng-if="showHamburger" >
                 <div ng-repeat="category in catData">
-                    <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab" ng-click="categoryHref(category.title)"> {{category.title}} </a>
+                    <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab" ng-click="categoryHref(category.title)"> {{category.displayTitle}} </a>
                 </div>
             </div>
         </div>
@@ -25,12 +25,13 @@
             <div class="nav-container">
                 <nav class="stickynav">
                     <div ng-repeat="category in catData">
-                        <a ng-class="{'selected-tab': $index == selectedIndex }" ng-click="categoryHref(category.title)" class="tab">{{category.title}}</a>
+                        <a ng-class="{'selected-tab': $index == selectedIndex }" ng-click="categoryHref(category.title)" class="tab">{{category.displayTitle}}</a>
                     </div>
                 </nav>
             </div>
 
             <div class="main">
+
                 <div ng-repeat="category in catData">
                     <div class="page">
 
@@ -44,7 +45,7 @@
                             </div>
 
                             <section class="flex-container-category" id="repositories">
-                                <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}" ng-repeat="repo in topicRepos[catData.indexOf(category)]" ng-click="repoHref(repo.nameWithOwner)">
+                                <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-repeat="repo in topicRepos[catData.indexOf(category)]" ng-click="repoHref(repo.nameWithOwner)">
                                     <h4 class="text-center">
                                         <span alt="Name" title="Name"> {{ repo.name }} </span>
                                         <small><span alt="Owner" title="Owner"> {{ repo.owner }} </span></small>
@@ -76,6 +77,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 

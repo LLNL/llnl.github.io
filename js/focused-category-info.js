@@ -25,7 +25,6 @@ angular.module('app', [])
         function sortAlphabetically(array, key){
             return array.sort(function(a,b){
                 var x = a[key].toLowerCase() ; var y = b[key].toLowerCase();
-                console.log("x: " + x +  " y: " + y);
                 return ((x < y) ? -1 : ((x >y) ? 1:0));
             });
         }
@@ -40,12 +39,19 @@ angular.module('app', [])
             return false;
         }
 
+        function titleCase(str) {
+            return str.toLowerCase().split(' ').map(function(word) {
+                return (word.charAt(0).toUpperCase() + word.slice(1));
+            }).join(' ');
+        }
+
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
             $scope.catData = [];
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
+                data['displayTitle'] = titleCase(data.title);
                 $scope.catData.push(data);
             });
             $scope.catData = sortAlphabetically($scope.catData, "title");

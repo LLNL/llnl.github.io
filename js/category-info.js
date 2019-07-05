@@ -25,7 +25,6 @@ angular.module('app', [])
         function sortAlphabetically(array, key){
             return array.sort(function(a,b){
                 var x = a[key].toLowerCase() ; var y = b[key].toLowerCase();
-                console.log("x: " + x +  " y: " + y);
                 return ((x < y) ? -1 : ((x >y) ? 1:0));
             });
         }
@@ -47,11 +46,8 @@ angular.module('app', [])
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
                 $scope.catData.push(data);
-                console.log("data: " + data.title);
             });
             $scope.catdata = sortAlphabetically($scope.catData, "title");
-
-            console.log("sorted: " + $scope.catData[0].title);
 
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;
