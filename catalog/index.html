@@ -14,20 +14,21 @@ layout: portal
     Software Repositories
 </h2>
 
-<div class="container">
-    <div class="col-xs-6 col-xs-offset-3">
-        <input ng-model="searchText" type="text" style="width: 100%; margin-bottom: 10px;" autofocus placeholder="Filter Repositories">
 
-        <p> Sort Repositories By:
-        <select ng-model="orderProp">
-            <option value="-stargazers.totalCount"> Stars </option>
-            <option value="-forks.totalCount"> Forks </option>
-            <option value="name"> Name </option>
-            <option value="owner.login">Owner </option>
-        </select>
-        </p>
+<div class="text-center" style="width: 100%;  display: -webkit-flex; display: flex; justify-content: center;">
+    <input ng-model="searchText" type="text" style="width: 40%;margin-right: 20px; margin-bottom: 10px;" autofocus placeholder="Filter Repositories">
+
+            <span>
+                Sort By:
+                <select ng-model="orderProp">
+                    <option value="-stargazers.totalCount"> Stars </option>
+                    <option value="-forks.totalCount"> Forks </option>
+                    <option value="name"> Name </option>
+                    <option value="owner.login">Org </option>
+                </select>
+            </span>
     </div>
-</div>
+
 
 <section ng-show="repoData" id="searchTextResults" class="flex-container">
     <div ng-repeat="repo in repoData | filter:searchText  | orderBy: orderProp" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)" id="repositories">
