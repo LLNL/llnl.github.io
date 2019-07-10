@@ -43,6 +43,23 @@ angular.module('app', [])
             return false;
         }
 
+        function uniqueLogo(logos, fileName, ownerAvatar){
+            var match = false; var file;
+            for (var f in logos){
+                if (logos[f] == fileName){
+                    match = true; file=logos[f];
+                }
+            }
+            //if repo has unique logo use it
+            if (match) {
+                return  "/assets/images/logos/"+ file;
+            }
+            //if repo does not have unique logo use org logo
+            else if(!match){
+                return ownerAvatar;
+            }
+        }
+
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
@@ -79,7 +96,6 @@ angular.module('app', [])
                 }
                 getReposLogos.then(function(response){
                     var logos = response.data.data;
-                    
                 getReposInfo.then(function(response){
                     var reposInfoObj = response.data.data;
                     for (var repo in reposInfoObj){
@@ -93,22 +109,8 @@ angular.module('app', [])
                                 if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
                                     //save only necessary data fields
                                     category[count]["name"]= reposInfoObj[repo].name;
-                                    //check if repo has unique logo, if not use org logo
-                                        var match = false; var name; var file;
-                                        for (var f in logos){
-                                            name =  Object.keys(logos[f]);
-                                            if (name == category[count].nameWithOwner.toLowerCase()){
-                                                match = true; file = logos[f][name];
-                                            }
-                                        }
-                                        //if repo has unique logo use it
-                                        if (match) {
-                                            category[count]['ownerAvatar'] = "/assets/images/logos/"+category[count]["name"] +"-repo-logo." + file;
-                                        }
-                                        //if repo does not have unique logo use org logo
-                                        else if(!match){
-                                            category[count]['ownerAvatar'] = reposInfoObj[repo].owner.avatarUrl;
-                                        }
+                                    //call unique logo function to get repo logo uniqueLogo(logos, filename, ownerAvatar)
+                                    category[count]['ownerAvatar'] = uniqueLogo(logos, category[count].nameWithOwner.toLowerCase()+".png", reposInfoObj[repo].owner.avatarUrl);
                                     category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
                                     category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                                     category[count]["gitUrl"]= reposInfoObj[repo].url;
