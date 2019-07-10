@@ -1,15 +1,15 @@
 angular.module('app', [])
-    .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+    .controller('gitHubDataController', ['$scope', '$http', '$window', '$location', function($scope, $http, $window, $location) {
 
-        var getCategoryInfo =  $http.get("../category/category_info.json", {
+        var getCategoryInfo =  $http.get("/category/category_info.json", {
                     cache: true
                 });
 
-        var getReposTopics = $http.get("./explore/github-data/labRepos_Topics.json", {
+        var getReposTopics = $http.get("/explore/github-data/labRepos_Topics.json", {
                 cache: true
                 });
 
-        var getReposInfo =  $http.get("./explore/github-data/labReposInfo.json", {
+        var getReposInfo =  $http.get("/explore/github-data/labReposInfo.json", {
                 cache: true
         });
 
@@ -39,15 +39,22 @@ angular.module('app', [])
             return false;
         }
 
+        function titleCase(str) {
+            return str.toLowerCase().split(' ').map(function(word) {
+                return (word.charAt(0).toUpperCase() + word.slice(1));
+            }).join(' ');
+        }
+
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
             $scope.catData = [];
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
+                data['displayTitle'] = titleCase(data.title);
                 $scope.catData.push(data);
             });
-            $scope.catdata = sortAlphabetically($scope.catData, "title");
+            $scope.catData = sortAlphabetically($scope.catData, "title");
 
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;
@@ -88,10 +95,13 @@ angular.module('app', [])
                                     //save only necessary data fields
                                     category[count]["name"]= reposInfoObj[repo].name;
                                     category[count]['ownerAvatar'] = reposInfoObj[repo].owner.avatarUrl;
-                                    category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
+                                    category[count]['owner'] = reposInfoObj[repo].owner.login;
                                     category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                                     category[count]["gitUrl"]= reposInfoObj[repo].url;
                                     category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
+                                    category[count]["language"]= reposInfoObj[repo].primaryLanguage.name;
+                                    category[count]["forks"]= reposInfoObj[repo].forks.totalCount;
+                                    category[count]["description"]= reposInfoObj[repo].description;
                                 }
                             }
                         }
@@ -100,6 +110,7 @@ angular.module('app', [])
                     for(var i in $scope.topicRepos){
                         $scope.topicRepos[i] = sortByStars($scope.topicRepos[i], "stars");
                     }
+
                 });
 
                 //create function for generating hash url for each repo
@@ -112,6 +123,18 @@ angular.module('app', [])
                     var result = nametag.replace(/ /g, "");
                     $window.location.href = '../category#'+result;
                 };
+
+                var catTitle = $location.path().slice(1);
+
+                //set selected index to whatever category is currently being displayed
+                for ( var c in $scope.catData){
+                    var modified = $scope.catData[c].title.replace(/ /g, "");
+                    if (modified == catTitle){
+                        $scope.currentLocation =  $scope.catData[c].title;
+                        $scope.selectedIndex = $scope.catData.indexOf($scope.catData[c]);
+                    }
+                }
+                $scope.showHamburger = false;
             });
         });
     }]);

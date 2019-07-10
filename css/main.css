@@ -17,7 +17,10 @@
     display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media(max-width:767px) {
@@ -92,27 +95,35 @@
   margin-right: 15px;
 }
 
-#categories p.links > span:last-child{
-    margin-right: 60px;
-}
-
+/* links for each repo in a category */
 #categories p.links{
     text-align: right;
-    padding-bottom: 8px;
-    padding-top: 8px;
+    align-items: center;
+    line-height: 2.5;
 }
 
-
+/* Org logo */
 #categories p.links > span:first-child{
     margin-left: 15%;
     margin-right: 10px;
     float:left;
 }
 
+/* repo name */
 #categories p.links > span:nth-child(2) {
     float:left;
     font-weight: bold;
-    font-size: 110%;
+    font-size: 1.6rem;
+}
+
+/* repo stars */
+#categories p.links > span:nth-child(3) {
+    margin-right: 10px;
+}
+
+/* repo info */
+#categories p.links > span:last-child{
+    margin-right: 15%;
 }
 
 /* --- */
@@ -160,12 +171,25 @@
 }
 
 .flex-category {
-    margin: 0px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.dynamic:hover {
+    border: 1px solid steelblue;
+    box-shadow: 3px 3px #ddd;
+    cursor: pointer;
+}
+
+.flex-category > img {
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 20px;
 }
 
 .flex-category > h4 {
     margin: 0px;
+    margin-top: 15px;
     padding-bottom: 25px;
     font-weight: bold;
 }
@@ -182,18 +206,25 @@
     text-decoration: none;
 }
 
-.flex-category a:first-child {
-    font-weight: bold;
+
+.orgAvatar {
+    width: 35px;
+    height: 35px;
 }
 
-.flex-category > img {
-    align-items: center;
-    margin-bottom: -15%
+.more {
+    float:right;
+    font-weight:bold;
+    margin-right:60px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    font-size: 1.3rem;
 }
 
 .page-title {
     font-size: 20px;
     padding-top: 50px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -206,7 +237,7 @@
         background-image: 
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
-        background-color: #2b4047;
+        background-color: #3d444a;
         background-position:  center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
         background-size:  auto, 100px 100px;
@@ -219,7 +250,7 @@
         background-image: 
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
-        background-color: #2b4047;
+        background-color: #3d444a;
         background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
         background-size: auto, 130px 130px;
@@ -234,7 +265,7 @@
             url('/assets/images/OS-icon-color.png'),
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
-        background-color: #2b4047;
+        background-color: #3d444a;
         background-position: 30% 50%, 70% 50%, 67% 90%;
         background-position: -webkit-calc(50% - 310px) 50%, -webkit-calc(50% + 310px) 50%, -webkit-calc(50% + 310px) 90%;
         background-position: calc(50% - 310px) 50%, calc(50% + 310px) 50%, calc(50% + 310px) 90%;
@@ -244,9 +275,167 @@
     }
 }
 
-.orgAvatar {
-    width: 35px;
-    height: 35px;
-
+.wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
+.main {
+    width: 100%;
+    padding-top: 20px;
+   // position: relative;
+}
+
+.page {
+    justify-content:center;
+    height: 100%;
+}
+
+@media(max-width:1199px){
+    .nav-container {
+        display: none;
+    }
+}
+@media(min-width:1200px){
+    .nav-container {
+        min-width: 300px;
+        height: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        text-align: left;
+        top: 0;
+        background-color:  #f8f8f8;
+    }
+}
+
+@media(max-width:1199px){
+    .hamburger-container {
+        width: 100%;
+        background-color: #f8f8f8;
+        height: 45px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        border-bottom: lightgrey solid 1px;
+        padding-left: 15px;
+    }
+}
+@media(min-width:1200px){
+    .hamburger-container {
+        display: none;
+    }
+}
+
+
+.stickynav a {
+    padding-left: 15px;
+    padding-right:15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height:50px;
+    text-decoration:none;
+    font-size: 1.8rem;
+    display: block;
+    transition: 0.3s;
+    border: solid 1px lightgrey;
+    border-top: none;
+}
+
+.stickynav a:hover {
+    background-color: steelblue;
+    color: white;
+    padding-left: 18px;
+}
+
+.hamburger-nav a{
+    padding-left: 15px;
+    padding-right:15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height:50px;
+    text-decoration:none;
+    font-size: 1.8rem;
+    display: block;
+    transition: 0.3s;
+    border: solid 1px lightgrey;
+    border-top: none;
+    background-color: #f8f8f8;
+}
+
+.hamburger-nav a:hover {
+    background-color: steelblue;
+    color: white;
+    padding-left: 18px;
+}
+
+.tab{
+    color: black;
+}
+.selected-tab {
+    color: steelblue;
+    font-weight: bold;
+}
+
+
+
+.hamburger-container span {
+    color: gray;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.hamburger-container span:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.hamburger-nav{
+    padding-top: 50px;
+    padding-right: 15px;
+}
+
+.title-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    //background-color: green;
+}
+
+.title-container img {
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 15%;
+    max-width: 15%;
+}
+
+.title-description {
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 5%;
+}
+
+
+
+@media(max-width:767px) {
+    .title-description{
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media(min-width:768px) {
+    .text-description{
+        text-align: left;
+    }
+}

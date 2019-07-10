@@ -16,12 +16,21 @@ layout: portal
 
 <div class="container">
     <div class="col-xs-6 col-xs-offset-3">
-        <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
+        <input ng-model="searchText" type="text" style="width: 100%; margin-bottom: 10px;" autofocus placeholder="Filter Repositories">
+
+        <p> Sort Repositories By:
+        <select ng-model="orderProp">
+            <option value="-stargazers.totalCount"> Stars </option>
+            <option value="-forks.totalCount"> Forks </option>
+            <option value="name"> Name </option>
+            <option value="owner.login">Owner </option>
+        </select>
+        </p>
     </div>
 </div>
 
-<section ng-show="repoData" id="repositories" class="flex-container">
-    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)">
+<section ng-show="repoData" id="searchTextResults" class="flex-container">
+    <div ng-repeat="repo in repoData | filter:searchText  | orderBy: orderProp" class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-click="repoHref(repo.nameWithOwner)" id="repositories">
         <h4 class="text-center">
             <span alt="Name" title="Name"> {{ repo.name }} </span>
             <small><span alt="Owner" title="Owner"> {{ repo.owner.login }} </span></small>

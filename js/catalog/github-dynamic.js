@@ -27,7 +27,7 @@ angular.module('app', [])
             $scope.repoData = sortByKey($scope.repoData,"name");
         });
 
-        $scope.predicate = '-stargazers.totalCount';
+        $scope.orderProp = "-stargazers.totalCount";
 
         $scope.repoHref = function(nametag) {
             $window.location.href = '../repo#'+nametag;
