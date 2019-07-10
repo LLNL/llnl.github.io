@@ -1,5 +1,4 @@
-angular.module('app', [])
-    .controller('gitHubDataController', ['$scope', '$http', '$window', function($scope, $http, $window) {
+app.controller('gitHubDataController', function($scope, $http, $window, Category) {
 
         var getCategoryInfo =  $http.get("../radiuss/category_info_radiuss.json", {
                     cache: true
@@ -17,49 +16,6 @@ angular.module('app', [])
             cache: true
         });
 
-        //function to sort repos in descending order of stars
-        function sortByStars(array, key) {
-            return array.sort(function(a, b) {
-                var x = a[key] ; var y = b[key];
-                return ((x > y) ? -1 : ((x < y) ? 1 : 0));
-            });
-        }
-
-        //sort by alphabetical key
-        function sortAlphabetically(array, key){
-            return array.sort(function(a,b){
-                var x = a[key].toLowerCase() ; var y = b[key].toLowerCase();
-                return ((x < y) ? -1 : ((x >y) ? 1:0));
-            });
-        }
-
-        //check if repo is tagged as "radiuss" as well as one of the categories
-        function containsTopics(catTopics, repoTopics){
-            for (var i = 0; i < catTopics.length; i++){
-                if($.inArray(catTopics[i], repoTopics) != -1 && $.inArray("radiuss", repoTopics) != -1){
-                    return true;
-                } 
-            }
-            return false;
-        }
-
-        function uniqueLogo(logos, fileName, ownerAvatar){
-            var match = false; var file;
-            for (var f in logos){
-                if (logos[f] == fileName){
-                    match = true; file=logos[f];
-                }
-            }
-            //if repo has unique logo use it
-            if (match) {
-                return  "/assets/images/logos/"+ file;
-            }
-            //if repo does not have unique logo use org logo
-            else if(!match){
-                return ownerAvatar;
-            }
-        }
-
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
@@ -68,7 +24,8 @@ angular.module('app', [])
                 var data = catsObj[value];
                 $scope.catData.push(data);
             });
-            $scope.catData = sortAlphabetically($scope.catData, "title"); 
+            //call service function
+            $scope.catData = Category.sortAlphabetically($scope.catData, "title"); 
 
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;
@@ -87,7 +44,8 @@ angular.module('app', [])
                             var repoTopic = repo.repositoryTopics.nodes[t].topic.name;
                             topics.push(repoTopic);
                         }
-                        var included = containsTopics(cat.topics, topics);
+                        //call service function
+                        var included = Category.containsRadiussTopics(cat.topics, topics);
                         if(included){
                             catRepos.push({"nameWithOwner": r});
                         }
@@ -96,34 +54,35 @@ angular.module('app', [])
                 }
                 getReposLogos.then(function(response){
                     var logos = response.data.data;
-                getReposInfo.then(function(response){
-                    var reposInfoObj = response.data.data;
-                    for (var repo in reposInfoObj){
-                        //reposInfoObj[repo] is the actual repo object
-                        for (var j in $scope.topicRepos){
-                            //var category is arrary of objects
-                            var category = $scope.topicRepos[j];
-                            for (var count in category){
-                                // category[count] is a specific repo within a category
-                                //if we find a repo that is included in the category repos, we save more info on it
-                                if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
-                                    //save only necessary data fields
-                                    category[count]["name"]= reposInfoObj[repo].name;
-                                    //call unique logo function to get repo logo uniqueLogo(logos, filename, ownerAvatar)
-                                    category[count]['ownerAvatar'] = uniqueLogo(logos, category[count].nameWithOwner.toLowerCase()+".png", reposInfoObj[repo].owner.avatarUrl);
-                                    category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
-                                    category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
-                                    category[count]["gitUrl"]= reposInfoObj[repo].url;
-                                    category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
+                    getReposInfo.then(function(response){
+                        var reposInfoObj = response.data.data;
+                        for (var repo in reposInfoObj){
+                            //reposInfoObj[repo] is the actual repo object
+                            for (var j in $scope.topicRepos){
+                                //var category is arrary of objects
+                                var category = $scope.topicRepos[j];
+                                for (var count in category){
+                                    // category[count] is a specific repo within a category
+                                    //if we find a repo that is included in the category repos, we save more info on it
+                                    if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
+                                        //save only necessary data fields
+                                        category[count]["name"]= reposInfoObj[repo].name;
+                                        //call service function to get repo logo uniqueLogo(logos, filename, ownerAvatar)
+                                        category[count]['ownerAvatar'] = Category.uniqueLogo(logos, category[count].nameWithOwner.toLowerCase()+".png", reposInfoObj[repo].owner.avatarUrl);
+                                        category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
+                                        category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
+                                        category[count]["gitUrl"]= reposInfoObj[repo].url;
+                                        category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
+                                    }
                                 }
                             }
                         }
-                    }
-                    //sort categories by stars descending
-                    for(var i in $scope.topicRepos){
-                        $scope.topicRepos[i] = sortByStars($scope.topicRepos[i], "stars");
-                    }
-                });
+                        //sort categories by stars descending
+                        for(var i in $scope.topicRepos){
+                            //call service function
+                            $scope.topicRepos[i] = Category.sortStars($scope.topicRepos[i], "stars");
+                        }
+                    });
 
                     //create function for generating hash url for each repo
                     $scope.repoHref = function(nametag) {
@@ -132,4 +91,4 @@ angular.module('app', [])
                 });
             });
         });
-    }]);
+    });
