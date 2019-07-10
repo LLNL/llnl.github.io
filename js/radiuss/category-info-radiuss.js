@@ -83,8 +83,6 @@ angular.module('app', [])
                                     category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                                     category[count]["gitUrl"]= reposInfoObj[repo].url;
                                     category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
-
-                                    console.log(category[count]['name']);
                                 }
                             }
                         }
