@@ -31,7 +31,7 @@ This portal abounds with examples of projects that have found a home in the open
 - 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
 - *Science & Technology Review* coverage
 	- Cover story: [Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
-	- [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computation associate director
+	- [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
 	- Video (3:04): [Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
 - LLNL news: [Spack, A Lab-Developed 'App Store for Supercomputers,' becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
 - Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
