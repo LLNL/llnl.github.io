@@ -31,6 +31,9 @@ angular.module('app', [])
 
         //check if repo is tagged as one of the categories
         function containsTopics(catTopics, repoTopics){
+            if (catTopics.length == 0){
+                return true;
+            }
             for (var i = 0; i < catTopics.length; i++){
                 if($.inArray(catTopics[i], repoTopics) != -1){
                     return true;
@@ -48,7 +51,7 @@ angular.module('app', [])
                 $scope.catData.push(data);
             });
             $scope.catdata = sortAlphabetically($scope.catData, "title");
-
+           
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;
                 var allRepos = Object.keys(reposObj);

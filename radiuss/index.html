@@ -9,7 +9,7 @@ layout: portal
 
 <section class="flex-container" id="categories">
     <div ng-repeat="category in catData" class="flex-category">
-        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+        <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
 
@@ -19,7 +19,7 @@ layout: portal
 
                 <span>
                     <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
-                        <img class ="orgAvatar" src="{{repo.ownerAvatar}}">
+                        <img class ="orgAvatar" ng-src="{{repo.ownerAvatar}}">
                     </a>
                 </span>
 

@@ -11,7 +11,7 @@ layout: homepage
 
     <div ng-repeat="category in catData" class="flex-category dynamic" ng-click="categoryHref(category.title)">
 
-        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+        <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
 
@@ -21,7 +21,7 @@ layout: homepage
 
                 <span>
                 <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
-                    <img  class ="orgAvatar" src="{{repo.ownerAvatar}}">
+                    <img  class ="orgAvatar" ng-src="{{repo.ownerAvatar}}">
                 </a>
                 </span>
 
@@ -48,6 +48,8 @@ layout: homepage
 
     </div>
 </section>
+
+<h4>Browse our <a ng-click="categoryHref('ALL SOFTWARE')" style="cursor: pointer">full catalog</a> of open source projects!</h4>
 
 {% endraw %}
 

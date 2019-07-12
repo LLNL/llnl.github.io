@@ -31,6 +31,9 @@ angular.module('app', [])
 
         //check if repo is tagged as one of the categories
         function containsTopics(catTopics, repoTopics){
+            if (catTopics.length == 0){
+                return true;
+            }
             for (var i = 0; i < catTopics.length; i++){
                 if($.inArray(catTopics[i], repoTopics) != -1){
                     return true;
@@ -45,6 +48,11 @@ angular.module('app', [])
             }).join(' ');
         }
 
+        $scope.orderProp = "-stars";
+
+
+        $scope.showHamburger = false;
+
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
@@ -55,6 +63,35 @@ angular.module('app', [])
                 $scope.catData.push(data);
             });
             $scope.catData = sortAlphabetically($scope.catData, "title");
+            var complete={"title": "ALL SOFTWARE",
+                          "icon": {
+                              "path":"/assets/images/math.svg",
+                              "alt": "Math & Physics Libraries Icon"
+                          },
+                          "description": "Browse all LLNL open source projects",
+                          "displayTitle": "All Software",
+                          "topics": []
+                         };
+            $scope.catData.unshift(complete);
+
+            var catTitle = $location.path().slice(1);
+
+            //set selected index to whatever category is currently being displayed
+            for ( var c in $scope.catData){
+                var modified = $scope.catData[c].title.replace(/ /g, "");
+                console.log( "modified: " + modified + " catTitle: " + catTitle);
+                if (modified == catTitle){
+                    $scope.currentLocation = $scope.catData[c].title;
+                    $scope.selectedIndex = $scope.catData.indexOf($scope.catData[c]);
+                    console.log("selectedIndex: " + $scope.selectedIndex);
+                }
+                if(catTitle == ""){
+                    var index = ($scope.catData.length -1);
+                    $scope.selectedIndex = index;
+                    var result = $scope.catData[index].title.replace(/ /g, "");
+                    $window.location.href = '../category#'+result;
+                }
+            }
 
             getReposTopics.then(function(response){
                 var reposObj = response.data.data;
@@ -99,7 +136,12 @@ angular.module('app', [])
                                     category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
                                     category[count]["gitUrl"]= reposInfoObj[repo].url;
                                     category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
-                                    category[count]["language"]= reposInfoObj[repo].primaryLanguage.name;
+                                    if (reposInfoObj[repo].primaryLanguage){
+                                        category[count]["language"]= reposInfoObj[repo].primaryLanguage.name;
+                                    }
+                                    else{
+                                        category[count]["language"]= "";
+                                    }
                                     category[count]["forks"]= reposInfoObj[repo].forks.totalCount;
                                     category[count]["description"]= reposInfoObj[repo].description;
                                 }
@@ -124,17 +166,8 @@ angular.module('app', [])
                     $window.location.href = '../category#'+result;
                 };
 
-                var catTitle = $location.path().slice(1);
 
-                //set selected index to whatever category is currently being displayed
-                for ( var c in $scope.catData){
-                    var modified = $scope.catData[c].title.replace(/ /g, "");
-                    if (modified == catTitle){
-                        $scope.currentLocation =  $scope.catData[c].title;
-                        $scope.selectedIndex = $scope.catData.indexOf($scope.catData[c]);
-                    }
-                }
-                $scope.showHamburger = false;
+               
             });
         });
     }]);
