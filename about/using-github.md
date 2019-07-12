@@ -108,7 +108,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
     * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
     * Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json), with your organization and/or repository names.
     * If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/master/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
-* Include a summary of your project with GitHub and documentation links on LLNL's [Computing website](https://computation.llnl.gov/). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
+* Include a summary of your project with GitHub and documentation links on LLNL's [Computing website](https://computing.llnl.gov/). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
 
 ### Other References
 
