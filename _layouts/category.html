@@ -16,8 +16,8 @@
         <div class="hamburger-container">
             <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
             <div class="hamburger-nav" ng-if="showHamburger" >
-                <div ng-repeat="category in catData">
-                    <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab" ng-click="categoryHref(category.title)"> {{category.displayTitle}} </a>
+                <div ng-repeat="category in catData" ng-click="categoryHref(category.title)">
+                    <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab"> {{category.displayTitle}} </a>
                 </div>
             </div>
         </div>
@@ -32,11 +32,10 @@
             </div>
 
             <div class="main">
-
                 <div ng-repeat="category in catData">
                     <div class="page">
 
-                        <div class="flex-category-focused" ng-if="category.title === currentLocation">
+                        <div ng-if="category.title === currentLocation">
                             <div class="title-container page-header">
                                 <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
                                 <div class="title-description">
@@ -45,7 +44,7 @@
                                 </div>
                             </div>
                             <div style="display: flex; display: -webkit-flex; justify-content: center;"> 
-                            <input ng-model="searchText" type="text" style="width: 23%; margin-bottom: 10px; margin-right: 10px;" autofocus placeholder="Filter Repositories">
+                            <input ng-model="searchText" type="text" style="width: 25%; margin-bottom: 10px; margin-right: 10px;" autofocus placeholder="Filter Repositories">
                             <p> Sort By:
                                 <select ng-model="orderProp">
                                     <option value="-stars"> Stars </option>

@@ -1,6 +1,6 @@
 ---
 title: About the LLNL Software Portal
-layout: default
+layout: info
 ---
 
 ## {{ page.title }}

@@ -118,7 +118,7 @@
 
 /* repo stars */
 #categories p.links > span:nth-child(3) {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 /* repo info */
@@ -173,6 +173,8 @@
 .flex-category {
     margin-bottom: 30px;
     transition: 0.3s;
+    align-items: center;
+   // background-color: red;
 }
 
 .dynamic:hover {
@@ -182,22 +184,26 @@
 }
 
 .flex-category > img {
-    width: 40%;
-    margin-left: 30%;
-    margin-top: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    height: 150px;
+    width: 150px;
 }
 
 .flex-category > h4 {
-    margin: 0px;
-    margin-top: 15px;
-    padding-bottom: 25px;
+   // margin-left: 18px;
+   margin-top: 15px;
+    padding-bottom: 10px;
     font-weight: bold;
+    text-align: center;
+//    background-color: green;
 }
 
 .flex-category > p {
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .flex-category a {
@@ -223,8 +229,8 @@
 
 .page-title {
     font-size: 20px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -240,8 +246,8 @@
         background-color: #3d444a;
         background-position:  center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
-        background-size:  auto, 100px 100px;
-        height: 300px;
+        background-size:  auto, 80px 80px;
+        height: 200px;
     }
 }
 
@@ -253,8 +259,8 @@
         background-color: #3d444a;
         background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
-        background-size: auto, 130px 130px;
-        height: 300px;
+        background-size: auto, 100px 100px;
+        height: 200px;
     }
 }
 
@@ -283,8 +289,6 @@
 
 .main {
     width: 100%;
-    padding-top: 20px;
-   // position: relative;
 }
 
 .page {
@@ -314,12 +318,10 @@
     .hamburger-container {
         width: 100%;
         background-color: #f8f8f8;
-        height: 45px;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        border-bottom: lightgrey solid 1px;
-        padding-left: 15px;
+        z-index:1;
     }
 }
 @media(min-width:1200px){
@@ -341,7 +343,6 @@
     border: solid 1px lightgrey;
     border-top: none;
 }
-
 .stickynav a {
     text-decoration: none;
     transition: 0.3s;
@@ -358,15 +359,14 @@
     color: white;
 }
 
-.hamburger-nav a{
+.hamburger-nav div{
+    width: 100%;
     padding-left: 15px;
-    padding-right:15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height:50px;
-    text-decoration:none;
-    font-size: 1.8rem;
+    line-height:35px;
+    font-size: 1.5rem;
     display: block;
     transition: 0.3s;
     border: solid 1px lightgrey;
@@ -374,10 +374,20 @@
     background-color: #f8f8f8;
 }
 
-.hamburger-nav a:hover {
+.hamburger-nav a {
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.hamburger-nav div:hover > a{
+    color: white;
+}
+
+.hamburger-nav div:hover {
     background-color: steelblue;
     color: white;
-    padding-left: 18px;
+    padding-left: 10px;
 }
 
 .tab{
@@ -388,14 +398,16 @@
     font-weight: bold;
 }
 
-
-
 .hamburger-container span {
     color: gray;
     margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
     position: absolute;
-    top: 50%;
-    transform: translate(0, -50%)
+    background-color: #f8f8f8;
+    border-bottom: solid 1px lightgrey;
+    width: 100%
 }
 
 .hamburger-container span:hover {
@@ -404,8 +416,7 @@
 }
 
 .hamburger-nav{
-    padding-top: 50px;
-    padding-right: 15px;
+    padding-top: 40px;
 }
 
 .title-container {
@@ -417,7 +428,6 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 20px;
-    //background-color: green;
 }
 
 .title-container img {
@@ -440,12 +450,65 @@
 @media(max-width:767px) {
     .title-description{
         text-align: center;
-        padding-left: 0;
+    }
+    .title-description h3 {
+        font-size: 1.3em;
     }
 }
 
 @media(min-width:768px) {
     .text-description{
         text-align: left;
+    }
+}
+
+.twitterFeed {
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    //height: 100%;
+    // margin-top: 30px;
+}
+
+.twitter-title{
+    font-weight: bold;
+    text-align: center;
+}
+
+.tweet-border{
+    border-left: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    padding-left:30px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.twitterFeed-mobile {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+@media (max-width: 767px){
+    .twitterFeed {
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .twitterFeed-mobile{
+        display: none;
+    }
+}
+
+@media (min-width:768px), and (max-width: 988px){
+    .twitterFeed{
+        width: 280px;
+    }
+}
+
+@media (min-width: 989px){
+    .twitterFeed{
+        width: 330px;
     }
 }
