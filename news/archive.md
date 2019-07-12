@@ -1,11 +1,11 @@
 ---
 title: News Archive
-layout: default
+layout: news
 permalink: /news/archive/
 ---
 
   {% for page in site.posts %}
-  <article>
+  <article class="news">
     <h3>
       {{ page.title }}
       <small class="pull-right">{{ page.date | date: '%B %d, %Y' }}</small>
