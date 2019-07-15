@@ -52,6 +52,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                     }
                     $scope.topicRepos.push(catRepos);
                 }
+
                 getReposLogos.then(function(response){
                     var logos = response.data.data;
                     getReposInfo.then(function(response){
@@ -74,6 +75,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                                         category[count]["gitUrl"]= reposInfoObj[repo].url;
                                         category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
                                     }
+
                                 }
                             }
                         }
