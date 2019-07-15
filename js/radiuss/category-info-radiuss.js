@@ -16,6 +16,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
             cache: true
         });
 
+
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
@@ -24,6 +25,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                 var data = catsObj[value];
                 $scope.catData.push(data);
             });
+
             //call service function
             $scope.catData = Category.sortAlphabetically($scope.catData, "title"); 
 

@@ -5,11 +5,11 @@ layout: portal
 
 {% raw %}
 
-<p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash;aims to broaden usage across LLNL and the open source community of a set of libraries and tools used for HPC scientific application development.</p>
+<p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash; <br/>aims to broaden usage across LLNL and the open source community of a set of libraries and tools <br/>used for HPC scientific application development.</p>
 
-<section class="flex-container-category" id="categories">
-    <div ng-repeat="category in catData" class="flex-category {{repo.ownerAvatar}} {{repo.name}} {{repo.gitUrl}} {{repo.homepageUrl}}">
-        <img src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+<section class="flex-container" id="categories">
+    <div ng-repeat="category in catData" class="flex-category">
+        <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
         <h4 class="text-center">{{category.title}}</h4>
         <p class="text-center">{{category.description}}</p>
 
@@ -19,25 +19,25 @@ layout: portal
 
                 <span>
                     <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
-                        <img class ="orgAvatar" src="{{repo.ownerAvatar}}">
+                        <img class ="orgAvatar" ng-src="{{repo.ownerAvatar}}">
                     </a>
                 </span>
 
                 <span>
-                    <a ng-click="repoHref(repo.nameWithOwner)" alt="Name" title="Name">
+                    <a href="{{repo.gitUrl}}" alt="Name" title="Name">
                         {{repo.name}}
                     </a>
                 </span>
 
                 <span>
-                    <a href="{{repo.gitUrl}}" alt="GitHub Page" title="GitHub Page">
-                        <span class="fa fa-github"></span>
+                    <a href="{{repo.gitUrl}}/stargazers" alt="Stargazers" title="Stargazers">
+                        {{repo.stars}} <span class="fa fa-star"></span>
                     </a>
                 </span>
 
                 <span>
-                    <a ng-if="repo.homepageUrl" href="{{repo.homepageUrl}}" alt="Project Website" title="Project Website">
-                        <span class="fa fa-globe text-right"></span>
+                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Rpo Info" title="Repo Info">
+                        <span class="fa fa-info-circle"/>
                     </a>
                 </span>
             </p>

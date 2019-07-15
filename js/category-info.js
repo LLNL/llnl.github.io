@@ -1,6 +1,6 @@
 app.controller('gitHubDataController', function($scope, $http, $window, Category) {
 
-        var getCategoryInfo =  $http.get("../categories/category_info.json", {
+        var getCategoryInfo =  $http.get("../category/category_info.json", {
                     cache: true
         });
 
@@ -16,6 +16,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
             cache: true
         });
 
+
         getCategoryInfo.then( function(response) {
             var catsObj = response.data.data;
             $scope.cats = Object.keys(catsObj);
@@ -24,6 +25,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                 var data = catsObj[value];
                 $scope.catData.push(data);
             });
+
             $scope.catdata = Category.sortAlphabetically($scope.catData, "title");
 
             getReposTopics.then(function(response){
@@ -49,6 +51,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                     }
                     $scope.topicRepos.push(catRepos);
                 }
+
 
                 getReposLogos.then(function(response){
                     var logos = response.data.data;
