@@ -1,6 +1,7 @@
 ---
 title: RADIUSS Policies and Guidelines
 layout: info
+permalink: /radiuss/radiuss-policies-guidelines
 release_number: LLNL-TR-781103
 ---
 
@@ -25,7 +26,7 @@ Items marked with **M** are *mandatory*, whereas those marked with **R** are *re
 others to build a copy of the code and to incorporate needed fixes in dependency tools 
 and libraries.
 
-**M1.2: All RADIIUS products must support installation using [RADIUSS Policies and Guidelinespack](https://spack.io/>).**  
+**M1.2: All RADIIUS products must support installation using [Spack](https://spack.io/>).**  
 
 *Rationale*: Spack is a package management tool designed for both HPC environments and 
 for laptops that allows easy configuration with multiple dependency versions, 
@@ -73,7 +74,7 @@ tracking.  Git is the most popular version control system by a wide margin and m
 sophisticated web-based collaboration tools are available for it.
 
 
-**M2.2: Each RADIUSS product must be maintained at** [GitHub](https://github.com).
+**M2.2: Each RADIUSS product must be maintained at [GitHub](https://github.com).**
 *Rationale*: GitHub is one of the most-used repositories of open source software.
 It includes collaboration tools such as issue tracking, pull requests, and wikis.
 
