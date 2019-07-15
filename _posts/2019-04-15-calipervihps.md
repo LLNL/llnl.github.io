@@ -11,4 +11,4 @@ The workshop also provided an opportunity to discuss common software infrastruct
 Learn more about Caliper:
 - [GitHub repo](https://github.com/LLNL/Caliper)
 - [Documentation](https://llnl.github.io/Caliper/)
-- [Caliper: Application Introspection System](https://computation.llnl.gov/projects/caliper)
+- [Caliper: Application Introspection System](https://computing.llnl.gov/projects/caliper)

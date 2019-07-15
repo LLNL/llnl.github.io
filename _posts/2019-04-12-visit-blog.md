@@ -9,4 +9,4 @@ Learn more:
 - [Primary source code repo](https://github.com/visit-dav/visit)
 - [User wiki](https://www.visitusers.org/index.php?title=Main_Page)
 - [Website](https://wci.llnl.gov/simulation/computer-codes/visit/)
-- Article: [The Great Migration: VisIt Moves from Subversion to GitHub](https://computation.llnl.gov/newsroom/great-migration-visit-moves-subversion-github)
+- Article: [The Great Migration: VisIt Moves from Subversion to GitHub](https://computing.llnl.gov/newsroom/great-migration-visit-moves-subversion-github)
