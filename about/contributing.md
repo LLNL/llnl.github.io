@@ -1,6 +1,6 @@
 ---
 title: Contributing to LLNL Open Source Projects
-layout: default
+layout: info
 ---
 
 ## {{ page.title }}
