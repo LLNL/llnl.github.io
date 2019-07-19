@@ -1,6 +1,6 @@
 FROM fedora:latest
 
-LABEL "com.github.actions.name"="Data Auto Update"
+LABEL "com.github.actions.name"="Run Data Update"
 
 LABEL "repository"="https://github.com/LLNL/llnl.github.io"
 
