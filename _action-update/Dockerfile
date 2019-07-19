@@ -1,10 +1,13 @@
 FROM fedora:latest
 
-RUN apt-get update && apt-get install \
-    -y --no-install-recommends python3 python3-virtualenv
+LABEL "repository"="https://github.com/LLNL/llnl.github.io"
 
-RUN python3 -m virtualenv --python=/usr/bin/python3 /opt/venv
+# RUN apt-get update && apt-get install \
+#     -y --no-install-recommends python3 python3-virtualenv
 
-RUN . /opt/venv/bin/activate && pip install llnl-scraper
+# RUN python3 -m virtualenv --python=/usr/bin/python3 /opt/venv
 
-CMD ["echo", "Hello World"]
+# RUN . /opt/venv/bin/activate && pip install llnl-scraper
+
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
