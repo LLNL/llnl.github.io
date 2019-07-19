@@ -1,5 +1,7 @@
 FROM fedora:latest
 
+LABEL "com.github.actions.name"="Data Auto Update"
+
 LABEL "repository"="https://github.com/LLNL/llnl.github.io"
 
 # RUN apt-get update && apt-get install \
