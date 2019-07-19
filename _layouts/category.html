@@ -16,17 +16,17 @@
         <div class="hamburger-container">
             <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
             <div class="hamburger-nav" ng-if="showHamburger" >
-                <div ng-repeat="category in catData" ng-click="categoryHref(category.title)">
-                    <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab"> {{category.displayTitle}} </a>
+                <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }">
+                    <a class="tab"> {{category.displayTitle}} </a>
                 </div>
             </div>
         </div>
         <div class="wrapper">
             <div class="nav-container">
                 <nav class="stickynav">
-                    <div ng-repeat="category in catData" ng-click="categoryHref(category.title)">
+                    <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }" >
                         <img ng-src="{{category.icon.path}}" style="width: 40px; height: 40px; margin-right: 10px;">
-                            <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab">{{category.displayTitle}}</a>
+                            <a class="tab">{{category.displayTitle}}</a>
                     </div>
                 </nav>
             </div>

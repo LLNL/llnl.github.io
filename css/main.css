@@ -311,7 +311,12 @@
         position: sticky;
         text-align: left;
         top: 0;
-        background-color:  #f8f8f8;
+        background-color: white;
+        border-radius: 0px 0px 5px 0px;
+        border: solid 1px lightgrey;
+        border-top: none;
+        border-left: none;
+        overflow: hidden;
     }
 }
 
@@ -337,13 +342,12 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height:50px;
+    line-height:60px;
     font-size: 1.8rem;
     display: block;
     transition: 0.3s;
-    border: solid 1px lightgrey;
-    border-top: none;
 }
+
 .stickynav a {
     text-decoration: none;
     transition: 0.3s;
@@ -351,13 +355,12 @@
 
 
 .stickynav div:hover {
-    background-color: steelblue;
-    color: white;
+    background-color: #f2f2f2;
     padding-left: 10px;
 }
 
 .stickynav div:hover > a{
-    color: white;
+    color: black;
 }
 
 .hamburger-nav div{
@@ -372,31 +375,33 @@
     transition: 0.3s;
     border: solid 1px lightgrey;
     border-top: none;
-    background-color: #f8f8f8;
+  //  background-color: #f8f8f8;
 }
 
 .hamburger-nav a {
     text-decoration: none;
     transition: 0.3s;
-    width: 100%;
 }
 
 .hamburger-nav div:hover > a{
-    color: white;
+    color: black;
 }
 
 .hamburger-nav div:hover {
-    background-color: steelblue;
-    color: white;
-    padding-left: 10px;
+    background-color: lightgrey;
+    padding-left: 18px;
 }
 
 .tab{
     color: black;
 }
 .selected-tab {
-    color: steelblue;
-    font-weight: bold;
+    background-color: steelblue;
+    color: white;
+}
+
+.selected-tab > a{
+    color: white;
 }
 
 .hamburger-container span {
