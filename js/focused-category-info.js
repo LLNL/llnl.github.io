@@ -37,7 +37,7 @@ angular.module('app', [])
             for (var i = 0; i < catTopics.length; i++){
                 if($.inArray(catTopics[i], repoTopics) != -1){
                     return true;
-                } 
+                }
             }
             return false;
         }
@@ -65,8 +65,8 @@ angular.module('app', [])
             $scope.catData = sortAlphabetically($scope.catData, "title");
             var complete={"title": "ALL SOFTWARE",
                           "icon": {
-                              "path":"/assets/images/math.svg",
-                              "alt": "Math & Physics Libraries Icon"
+                              "path":"/assets/images/catalog.svg",
+                              "alt": "All Software Icon"
                           },
                           "description": "Browse all LLNL open source projects",
                           "displayTitle": "All Software",
@@ -167,7 +167,7 @@ angular.module('app', [])
                 };
 
 
-               
+
             });
         });
     }]);

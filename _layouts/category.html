@@ -16,17 +16,17 @@
         <div class="hamburger-container">
             <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
             <div class="hamburger-nav" ng-if="showHamburger" >
-                <div ng-repeat="category in catData" ng-click="categoryHref(category.title)">
-                    <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab"> {{category.displayTitle}} </a>
+                <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }">
+                    <a class="tab"> {{category.displayTitle}} </a>
                 </div>
             </div>
         </div>
         <div class="wrapper">
             <div class="nav-container">
                 <nav class="stickynav">
-                    <div ng-repeat="category in catData" ng-click="categoryHref(category.title)">
+                    <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }" >
                         <img ng-src="{{category.icon.path}}" style="width: 40px; height: 40px; margin-right: 10px;">
-                            <a ng-class="{'selected-tab': $index == selectedIndex }" class="tab">{{category.displayTitle}}</a>
+                        <a class="tab">{{category.displayTitle}}</a>
                     </div>
                 </nav>
             </div>
@@ -43,7 +43,7 @@
                                     <p>{{category.description}} </p>
                                 </div>
                             </div>
-                            <div style="display: flex; display: -webkit-flex; justify-content: center;"> 
+                            <div style="display: flex; display: -webkit-flex; justify-content: center;">
                             <input ng-model="searchText" type="text" style="width: 25%; margin-bottom: 10px; margin-right: 10px;" autofocus placeholder="Filter Repositories">
                             <p> Sort By:
                                 <select ng-model="orderProp">

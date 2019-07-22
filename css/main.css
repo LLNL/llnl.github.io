@@ -212,12 +212,6 @@
     text-decoration: none;
 }
 
-
-.orgAvatar {
-    width: 35px;
-    height: 35px;
-}
-
 .more {
     float:right;
     font-weight:bold;
@@ -240,7 +234,7 @@
 
 @media(max-width:767px) {
     .banner {
-        background-image: 
+        background-image:
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
@@ -253,7 +247,7 @@
 
 @media(min-width:768px) {
     .banner {
-        background-image: 
+        background-image:
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
@@ -267,7 +261,7 @@
 
 @media(min-width:1200px) {
     .banner {
-        background-image: 
+        background-image:
             url('/assets/images/OS-icon-color.png'),
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
@@ -311,7 +305,12 @@
         position: sticky;
         text-align: left;
         top: 0;
-        background-color:  #f8f8f8;
+        background-color: #f8f8f8;
+        border-radius: 0px 0px 5px 0px;
+        border: solid 1px lightgrey;
+        border-top: none;
+        border-left: none;
+        overflow: hidden;
     }
 }
 
@@ -341,9 +340,12 @@
     font-size: 1.8rem;
     display: block;
     transition: 0.3s;
-    border: solid 1px lightgrey;
-    border-top: none;
+    border-top: solid 1px lightgrey;
 }
+.stickynav div:first-child {
+  border-top: none;
+}
+
 .stickynav a {
     text-decoration: none;
     transition: 0.3s;
@@ -351,13 +353,12 @@
 
 
 .stickynav div:hover {
-    background-color: steelblue;
-    color: white;
+    background-color: #e6e6e6;
     padding-left: 10px;
 }
 
 .stickynav div:hover > a{
-    color: white;
+    color: black;
 }
 
 .hamburger-nav div{
@@ -372,31 +373,33 @@
     transition: 0.3s;
     border: solid 1px lightgrey;
     border-top: none;
-    background-color: #f8f8f8;
+  //  background-color: #f8f8f8;
 }
 
 .hamburger-nav a {
     text-decoration: none;
     transition: 0.3s;
-    width: 100%;
 }
 
 .hamburger-nav div:hover > a{
-    color: white;
+    color: black;
 }
 
 .hamburger-nav div:hover {
-    background-color: steelblue;
-    color: white;
-    padding-left: 10px;
+    background-color: lightgrey;
+    padding-left: 18px;
 }
 
 .tab{
     color: black;
 }
 .selected-tab {
-    color: steelblue;
-    font-weight: bold;
+    background-color: steelblue;
+    color: white;
+}
+
+.selected-tab > a{
+    color: white;
 }
 
 .hamburger-container span {
