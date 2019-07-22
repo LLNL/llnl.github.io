@@ -18,7 +18,7 @@ function errorCheck() {
     if [ $ret -ne 0 ]; then
         echo "FAILED - $1"
         echo -e "FAILED\t$1" >> $DATELOG
-        exit
+        exit 1
     fi
 }
 
