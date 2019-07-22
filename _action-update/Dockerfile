@@ -15,6 +15,8 @@ RUN python3 -m virtualenv --python=/usr/bin/python3 /opt/venv
 
 RUN . /opt/venv/bin/activate && pip install pytz llnl-scraper
 
+# Requires GITHUB_TOKEN, DATA_BRANCHNAME, GIT_EMAIL, GIT_NAME to be included by workflow
+
 ENV GITHUB_API_TOKEN=$GITHUB_TOKEN
 
 ADD entrypoint.sh /entrypoint.sh

@@ -22,7 +22,7 @@ cd $REPO_ROOT/_explore/scripts
 cd $REPO_ROOT
 TODAY_STAMP=$(date "+%Y-%m-%d")
 git add -A .
-git commit -m "$TODAY_STAMP Auto Data Update"
+git commit -m "$TODAY_STAMP Data Update (via bot)"
 
 # Push update
 git push https://$GITHUB_API_TOKEN:x-oauth-basic@github.com/LLNL/llnl.github.io.git $DATA_BRANCHNAME
