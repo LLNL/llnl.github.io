@@ -25,7 +25,7 @@
             <div class="nav-container">
                 <nav class="stickynav">
                     <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }" >
-                        <img ng-src="{{category.icon.path}}" style="width: 45px; height: 45px; margin-right: 10px;">
+                        <img ng-src="{{category.icon.path}}" style="width: 40px; height: 40px; margin-right: 10px;">
                         <a class="tab">{{category.displayTitle}}</a>
                     </div>
                 </nav>
@@ -43,7 +43,7 @@
                                     <p>{{category.description}} </p>
                                 </div>
                             </div>
-                            <div style="display: flex; display: -webkit-flex; justify-content: center;"> 
+                            <div style="display: flex; display: -webkit-flex; justify-content: center;">
                             <input ng-model="searchText" type="text" style="width: 25%; margin-bottom: 10px; margin-right: 10px;" autofocus placeholder="Filter Repositories">
                             <p> Sort By:
                                 <select ng-model="orderProp">
