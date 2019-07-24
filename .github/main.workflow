@@ -1,6 +1,6 @@
 workflow "Scheduled Data Updates" {
-  on = "schedule(0 1,13 * * *)"
   resolves = ["Run Data Update"]
+  on = "schedule(0 1/2 * * *)"
 }
 
 action "Run Data Update" {
