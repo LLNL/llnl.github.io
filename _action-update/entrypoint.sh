@@ -3,6 +3,9 @@
 set -eu
 . /opt/venv/bin/activate
 
+# Requires GITHUB_TOKEN, DATA_BRANCHNAME, GIT_EMAIL, GIT_NAME to be included by workflow
+export GITHUB_API_TOKEN=$GITHUB_TOKEN
+
 # Get latest copy of repository
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
