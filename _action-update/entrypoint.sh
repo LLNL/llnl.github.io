@@ -28,4 +28,4 @@ git add -A .
 git commit -m "$TODAY_STAMP Data Update (via bot)"
 
 # Push update
-git push https://$GITHUB_TOKEN:x-oauth-basic@github.com/LLNL/llnl.github.io.git $DATA_BRANCHNAME
+git push --set-upstream origin $DATA_BRANCHNAME
