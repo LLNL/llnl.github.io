@@ -160,11 +160,12 @@
 
 @media(min-width:768px) {
     .flex-category {
-        width: 45%;
+        width: 50%;
     }
 }
 
-@media(min-width:992px) {
+
+@media(min-width:1200px) {
     .flex-category {
         width: 33%;
     }
@@ -212,12 +213,6 @@
     text-decoration: none;
 }
 
-
-.orgAvatar {
-    width: 35px;
-    height: 35px;
-}
-
 .more {
     float:right;
     font-weight:bold;
@@ -228,7 +223,6 @@
 }
 
 .page-title {
-    font-size: 20px;
     padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
@@ -238,9 +232,9 @@
     cursor: pointer;
 }
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     .banner {
-        background-image: 
+        background-image:
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
@@ -251,23 +245,35 @@
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:769px) {
     .banner {
-        background-image: 
+        background-image:
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
         background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
         background-size: auto, 100px 100px;
-        height: 200px;
+        height: 300px;
     }
 }
 
+/* @media(min-width:768px), and (max-width: 1199px) {
+    .banner {
+        background-image:
+            url('/assets/images/banner-top.svg'),
+            url('/assets/images/OS-logo-white.png');
+        background-color: #3d444a;
+        background-position:  center, 50% 90%;
+        background-repeat: no-repeat, no-repeat;
+        background-size:  auto, 80px 80px;
+        height: 200px;
+    }
+} */
 
 @media(min-width:1200px) {
     .banner {
-        background-image: 
+        background-image:
             url('/assets/images/OS-icon-color.png'),
             url('/assets/images/banner-top.svg'),
             url('/assets/images/OS-logo-white.png');
@@ -446,7 +452,11 @@
     padding-left: 5%;
 }
 
-
+.orgAvatar {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
 
 @media(max-width:767px) {
     .title-description{
@@ -455,6 +465,10 @@
     .title-description h3 {
         font-size: 1.3em;
     }
+    .page-title {
+      font-size: 16px;
+    }
+
 }
 
 @media(min-width:768px) {
@@ -462,12 +476,11 @@
         text-align: left;
     }
 
-.orgAvatar {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
+    .page-title {
+      font-size: 20px;
+    }
 
-}
+
 
 .twitterFeed {
     float: right;
