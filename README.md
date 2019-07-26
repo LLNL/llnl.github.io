@@ -31,16 +31,6 @@ bundle exec jekyll serve
 
 Followed by opening http://localhost:4000 in a web browser.
 
-#### Deployment
-
-To deploy updated content, use:
-
-```
-make deploy
-```
-
-This will build the site, and rsync it to the staging server. The staging server is sync'd to the production server every 15 minutes. So be patient. :)
-
 #### Tips
 
 The gems in your sourcefile get updated frequently. It is a good idea to occasionally run `bundle update` from within your project's root directory to make sure the sotware on your computer is up to date.
