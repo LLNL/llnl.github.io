@@ -9,7 +9,7 @@ export GITHUB_API_TOKEN=$BOT_TOKEN
 # Get latest copy of repository
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
-git clone --depth 1 https://github.com/LLNL/llnl.github.io.git
+git clone --depth 1 --no-single-branch https://github.com/LLNL/llnl.github.io.git
 cd llnl.github.io
 REPO_ROOT=$(pwd)
 
