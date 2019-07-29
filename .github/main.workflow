@@ -10,7 +10,7 @@ action "Run Data Update" {
     "BOT_TOKEN",
   ]
   env = {
-    DATA_BRANCHNAME = "bot-data-update"
+    BRANCH_PREFIX = "bot-update/"
     GIT_EMAIL = "lc-bot@users.noreply.github.com"
     GIT_NAME = "David B. Ott"
   }
@@ -25,7 +25,7 @@ action "Create Pull Request" {
   uses = "vsoch/pull-request-action@master"
   secrets = ["GITHUB_TOKEN"]
   env = {
-    BRANCH_PREFIX = "bot-data-update"
+    BRANCH_PREFIX = "bot-update/"
     PULL_REQUEST_BRANCH = "master"
   }
 }
