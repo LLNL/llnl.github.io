@@ -15,17 +15,3 @@ action "Run Data Update" {
     GIT_NAME = "David B. Ott"
   }
 }
-
-workflow "Pull Request for Data Updates" {
-  on = "push"
-  resolves = ["Create Pull Request"]
-}
-
-action "Create Pull Request" {
-  uses = "vsoch/pull-request-action@master"
-  secrets = ["GITHUB_TOKEN"]
-  env = {
-    BRANCH_PREFIX = "bot-update/"
-    PULL_REQUEST_BRANCH = "master"
-  }
-}

@@ -29,3 +29,6 @@ git commit -m "$DATA_TIMESTAMP Data Update (via bot)"
 
 # Push update
 git push --set-upstream origin $DATA_BRANCHNAME
+
+# Create pull request
+hub pull-request
