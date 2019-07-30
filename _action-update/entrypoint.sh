@@ -3,7 +3,8 @@
 set -eu
 . /opt/venv/bin/activate
 
-# Requires BOT_TOKEN, BRANCH_PREFIX, GIT_EMAIL, GIT_NAME to be included by workflow
+# Requires BOT_TOKEN, BRANCH_PREFIX, GIT_USER, GIT_EMAIL, GIT_NAME to be included by workflow
+export GITHUB_USER=$GIT_USER
 export GITHUB_API_TOKEN=$BOT_TOKEN
 DATA_TIMESTAMP=$(date "+%Y-%m-%d-%H")
 DATA_BRANCHNAME=$BRANCH_PREFIX$DATA_TIMESTAMP
