@@ -14,7 +14,7 @@ To work locally, you can use `bundler` to install the Ruby dependencies, and the
 bundle exec jekyll serve
 ```
 
-Followed by opening http://localhost:4000 in a web browser.
+Followed by opening <http://localhost:4000> in a web browser.
 
 #### Deployment
 

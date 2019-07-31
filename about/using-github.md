@@ -23,7 +23,7 @@ If you're new to GitHub, you may want to read through the GitHub Help pages on [
     - **Photo**: A headshot photo, or image that is uniquely you.
     - **Name**: Your first and last name.
     - **Bio**: Include a few words about yourself! Don't forget to mention @LLNL.
-    - **URL**: This might be your https://people.llnl.gov page, or a personal website if you prefer.
+    - **URL**: This might be your <https://people.llnl.gov> page, or a personal website if you prefer.
     - **Company**: Probably `Lawrence Livermore National Laboratory, @LLNL`.
     - **Location**: Your primary location.
 
