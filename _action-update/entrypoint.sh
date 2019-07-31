@@ -3,6 +3,9 @@
 set -eu
 . /opt/venv/bin/activate
 
+# Check hub installation
+hub version
+
 # Requires BOT_TOKEN, BRANCH_PREFIX, GIT_USER, GIT_EMAIL, GIT_NAME to be included by workflow
 export GITHUB_USER=$GIT_USER
 export GITHUB_API_TOKEN=$BOT_TOKEN

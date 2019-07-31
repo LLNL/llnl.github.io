@@ -9,10 +9,13 @@ LABEL "repository"="https://github.com/LLNL/llnl.github.io"
 LABEL "homepage"="https://software.llnl.gov"
 
 RUN apt-get update && apt-get install \
-    -y --no-install-recommends curl git hub python3 python3-virtualenv
+    -y --no-install-recommends curl git python3 python3-virtualenv
+
+COPY hub-linux-amd64-2.12.3.tgz /hub-linux-amd64-2.12.3.tgz
+RUN tar -zxf /hub-linux-amd64-2.12.3.tgz -C / && rm /hub-linux-amd64-2.12.3.tgz
+RUN /hub-linux-amd64-2.12.3/install
 
 RUN python3 -m virtualenv --python=/usr/bin/python3 /opt/venv
-
 RUN . /opt/venv/bin/activate && pip install pytz llnl-scraper
 
 ADD entrypoint.sh /entrypoint.sh
