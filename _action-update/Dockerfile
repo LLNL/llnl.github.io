@@ -16,7 +16,7 @@ RUN tar -zxf /hub-linux-amd64-2.12.3.tgz -C / && rm /hub-linux-amd64-2.12.3.tgz
 RUN /hub-linux-amd64-2.12.3/install
 
 RUN python3 -m virtualenv --python=/usr/bin/python3 /opt/venv
-RUN . /opt/venv/bin/activate && pip install pytz llnl-scraper
+RUN . /opt/venv/bin/activate && pip install llnl-scraper
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
