@@ -18,5 +18,3 @@ deploy: clean build
 
 test:
 	flake8
-	bundle install
-	bundle exec mdl ./ # --style markdown_style.rb
