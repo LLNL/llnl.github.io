@@ -1,10 +1,13 @@
 ---
 title: LLNL Software Licensing
-layout: default
+layout: info
 ---
 
 ## {{ page.title }}
-{: .page-header}
+{: .page-header .no_toc}
+
+* Table of Contents
+{:toc}
 
 *This page contains information meant for LLNL Employees with instructions for
 how to mark their source code projects. It is not intended to serve as legal

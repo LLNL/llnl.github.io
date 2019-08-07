@@ -1,9 +1,10 @@
 query ($orgName: String!, $numUsers: Int!, $pgCursor: String) {
   organization(login: $orgName) {
-    members(first: $numUsers, after: $pgCursor) {
+    membersWithRole(first: $numUsers, after: $pgCursor) {
       nodes {
         login
         name
+        avatarUrl
       }
       pageInfo {
         endCursor

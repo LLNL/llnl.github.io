@@ -1,7 +1,8 @@
 name: "LLNL Software Portal"
-author: "Ian Lee <lee1001@llnl.gov>"
+author: "LLNL Open Source <open-source@llnl.gov>"
 title: LLNL Software Portal
 description: "Lawrence Livermore National Laboratory Software Portal"
+remote_theme: LLNL/Jekyll-LLNL-Theme
 
 url: "https://software.llnl.gov"
 
@@ -22,6 +23,11 @@ plugins:
   - jekyll-github-metadata
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-remote-theme
+
+kramdown:
+  auto_ids: true
 
 defaults:
   -

@@ -17,5 +17,5 @@ deploy: clean build
 	rsync -avz --delete _site/ typhon:/export/www/software-pre/html/
 
 test:
-	#flake8
+	flake8
 	bundle exec mdl ./ # --style markdown_style.rb
