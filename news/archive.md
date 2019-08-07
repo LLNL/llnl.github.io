@@ -3,14 +3,25 @@ title: News Archive
 layout: news
 permalink: /news/archive/
 ---
+{% assign postsByYear = site.posts | group_by_exp:"page", "page.date | date: '%Y'" %}
 
-  {% for page in site.posts %}
-  <article class="news">
-    <h3>
-      {{ page.title }}
-      <small class="pull-right">{{ page.date | date: '%B %d, %Y' }}</small>
-    </h3>
+<p>
+    {% for year in postsByYear %}
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{year.name}}" aria-expanded="true" aria-controls="{{year.name}}"> {{year.name}} <i class= "fa fa-caret-down"></i></button>
 
-    {{ page.content }}
-    </article>
-  {% endfor %}
+        <p>
+            <div class="collapse in" id="{{year.name}}" >
+                {% for post in year.items %}
+                    <article class="news">
+                        <h3>
+                            {{post.title}}
+                            <small class="pull-right">{{ post.date | date: '%B %d, %Y' }}</small>
+                        </h3>
+
+                        {{ post.content }}
+                    </article>
+                {% endfor %}
+            </div>
+        </p>
+    {% endfor %}
+</p>
