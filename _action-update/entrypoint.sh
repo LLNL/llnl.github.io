@@ -6,21 +6,22 @@ set -eu
 # Check hub installation
 hub version
 
-# Requires BOT_TOKEN, BRANCH_PREFIX, GIT_USER, GIT_EMAIL, GIT_NAME to be included by workflow
+# Requires BOT_TOKEN, BRANCH_NAME, GIT_USER, GIT_EMAIL, GIT_NAME to be included by workflow
 export GITHUB_USER=$GIT_USER
 export GITHUB_API_TOKEN=$BOT_TOKEN
 DATA_TIMESTAMP=$(date "+%Y-%m-%d-%H")
-DATA_BRANCHNAME=$BRANCH_PREFIX$DATA_TIMESTAMP
+CLONE_CUTOFF=$(date "+%Y-%m-%d" -d "7 days ago")
 
 # Get latest copy of repository
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
-git clone --depth 2 https://github.com/LLNL/llnl.github.io.git
+git clone --shallow-since=$CLONE_CUTOFF --no-single-branch https://github.com/LLNL/llnl.github.io.git
 cd llnl.github.io
 REPO_ROOT=$(pwd)
 
-# Checkout new branch
-git checkout -b $DATA_BRANCHNAME
+# Checkout data update branch, creating new if necessary
+git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
+git merge --ff-only master
 
 # Run MASTER script
 cd $REPO_ROOT/_explore/scripts
@@ -29,10 +30,10 @@ cd $REPO_ROOT/_explore/scripts
 # Commit update
 cd $REPO_ROOT
 git add -A .
-git commit -m "$DATA_TIMESTAMP Data Update (via bot)"
+git commit -m "$DATA_TIMESTAMP Data Update by $GIT_USER"
 
 # Push update
-git push --set-upstream origin $DATA_BRANCHNAME
+git push --set-upstream origin $BRANCH_NAME
 
-# Create pull request
-hub pull-request --no-edit
+# Create pull request, or list existing
+hub pull-request --no-edit --message "Data Update by $GIT_USER" || hub pr list --state open --head $BRANCH_NAME

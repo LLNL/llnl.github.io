@@ -10,7 +10,7 @@ action "Run Data Update" {
     "BOT_TOKEN",
   ]
   env = {
-    BRANCH_PREFIX = "bot-update/"
+    BRANCH_NAME = "bot-update"
     GIT_USER = "lc-bot"
     GIT_EMAIL = "lc-bot@users.noreply.github.com"
     GIT_NAME = "David B. Ott"
