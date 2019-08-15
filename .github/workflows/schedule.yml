@@ -1,6 +1,6 @@
 on:
-  schedules:
-  - cron: 15 8/12 * * *
+  schedule:
+  - cron: "15 8/12 * * *"
 name: Scheduled Data Updates
 jobs:
   runDataUpdate:
