@@ -88,3 +88,13 @@ R → Recommended
 **R.log.1** [Use consistent, formatted logs](/radiuss/policies_guidelines/logging-debugging.md)
 
 **R.log.2** [Provide production and debugging builds](/radiuss/policies_guidelines/logging-debugging.md)
+
+---
+
+## References
+
+[Better Scientific Software](https://bssw.io)
+
+[xSDK Community Policies](https://xsdk.info/policies)
+
+[Smart Libraries: Best SQE Practices for Libraries with Emphasis on Scientific Computing](https://www.osti.gov/biblio/936460)

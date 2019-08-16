@@ -22,7 +22,7 @@ Ref: xSDK M5
 
 ---
 
-**R.doc.4** Web and pdf documentation should be produced from a reabable plain-text format. Suggested examples are Sphinx, LaTeX, or Doxygen.
+**R.doc.4** Web and pdf documentation should be produced from a reabable plain-text format. Suggested examples are [Sphinx](http://www.sphinx-doc.org/en/master/#), [LaTeX](https://www.latex-project.org/), or [Doxygen](http://www.doxygen.nl/).
 
 > Rationale: All of these tools allow to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format.
 

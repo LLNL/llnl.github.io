@@ -1,6 +1,6 @@
 # Logging and Debugging
 
-**R.log.1**  Consistent, formated logs is a recommended practice. RADIUSS products may use SLIC to achieve this.
+**R.log.1**  Consistent, formated logs is a recommended practice. RADIUSS products may use [SLIC](https://axom.readthedocs.io/en/develop/axom/slic/docs/sphinx/index.html) to achieve this.
 
 Tag: Tools 
 
