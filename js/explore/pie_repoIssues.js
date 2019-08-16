@@ -2,7 +2,7 @@
 function draw_pie_repoIssues(areaID, repoNameWOwner) {
 
     // load data file, process data, and draw visualization
-    var url = ghDataDir+'/labRepos_PullsIssues.json';
+    var url = ghDataDir+'/labReposInfo.json';
     d3.json(url, function(obj) {
         var data = reformatData(obj);
         drawGraph(data, areaID);

@@ -55,10 +55,8 @@ runScript get_repos_users.py
 
 
 # --- ADDITIONAL REPO DETAILS ---
-runScript get_repos_licenses.py
 runScript get_repos_languages.py
 runScript get_repos_topics.py
-runScript get_repos_pullsissues.py
 runScript get_repos_activity.py
 
 

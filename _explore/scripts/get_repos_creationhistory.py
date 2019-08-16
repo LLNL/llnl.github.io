@@ -4,7 +4,6 @@ import re
 
 ghDataDir = env.get('GITHUB_DATA', '../github-data')
 datfilepath = "%s/labRepos_CreationHistory.json" % ghDataDir
-queryPath = "../queries/repo-CreationDate.gql"
 query_commits_in = "/repos/OWNNAME/REPONAME/commits?until=CREATETIME&per_page=100"
 query_commits_in2 = "/repos/OWNNAME/REPONAME/commits?per_page=100"
 
@@ -42,22 +41,11 @@ for repo in repolist:
     repoData = {}  # Collect data from multiple queries for a single repo first
     r = repo.split("/")
 
-    # Query 1
-    print("Part 1)  Get creation date and default branch...")
-    try:
-        outObj1 = queryMan.queryGitHubFromFile(
-            queryPath,
-            {"ownName": r[0], "repoName": r[1]}
-        )
-    except Exception as error:
-        print("Warning: Could not complete '%s'" % (repo))
-        print(error)
-        continue
+    # Copy creation date from main info file
+    print("Part 1)  Get creation date...")
+    repoData = {"createdAt": inputLists.data["data"][repo]["createdAt"]}
 
-    # Update repo data
-    repoData = outObj1["data"]["repository"]
-
-    # Query 2
+    # Query
     print("Part 2)  Get pre-GitHub commit timestamps...")
 
     gitquery2 = re.sub('OWNNAME', r[0], query_commits_in)
