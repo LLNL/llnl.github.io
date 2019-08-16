@@ -6,15 +6,17 @@ set -eu
 # Check hub installation
 hub version
 
-# Requires BOT_TOKEN, BRANCH_NAME, GIT_USER, GIT_EMAIL, GIT_NAME to be included by workflow
-export GITHUB_USER=$GIT_USER
-export GITHUB_API_TOKEN=$BOT_TOKEN
+# Requires BRANCH_NAME, GIT_EMAIL, GIT_NAME, GITHUB_USER, GITHUB_API_TOKEN, GITHUB_TOKEN to be included by workflow
+
 DATA_TIMESTAMP=$(date "+%Y-%m-%d-%H")
 CLONE_CUTOFF=$(date "+%Y-%m-%d" -d "7 days ago")
 
-# Get latest copy of repository
+# Configure git + hub
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
+git config --global hub.protocol https
+
+# Get latest copy of repository
 git clone --shallow-since=$CLONE_CUTOFF --no-single-branch https://github.com/LLNL/llnl.github.io.git
 cd llnl.github.io
 REPO_ROOT=$(pwd)
@@ -31,10 +33,10 @@ cd $REPO_ROOT/_explore/scripts
 cd $REPO_ROOT
 git config --list
 git add -A .
-git commit -m "$DATA_TIMESTAMP Data Update by $GIT_USER"
+git commit -m "$DATA_TIMESTAMP Data Update by $GITHUB_USER"
 
 # Push update
 git push --set-upstream origin $BRANCH_NAME
 
 # Create pull request, or list existing
-hub pull-request --no-edit --message "Data Update by $GIT_USER" || hub pr list --state open --head $BRANCH_NAME
+hub pull-request --no-edit --message "Data Update by $GITHUB_USER" || hub pr list --state open --head $BRANCH_NAME
