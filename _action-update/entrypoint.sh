@@ -29,6 +29,7 @@ cd $REPO_ROOT/_explore/scripts
 
 # Commit update
 cd $REPO_ROOT
+git config --list
 git add -A .
 git commit -m "$DATA_TIMESTAMP Data Update by $GIT_USER"
 
