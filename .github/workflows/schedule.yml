@@ -12,8 +12,5 @@ jobs:
       uses: ./_action-update
       env:
         BRANCH_NAME: bot-update
-        GIT_EMAIL: lc-bot@users.noreply.github.com
-        GIT_NAME: David B. Ott
-        GITHUB_USER: lc-bot
-        GITHUB_API_TOKEN: ${{ secrets.BOT_TOKEN }}
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
