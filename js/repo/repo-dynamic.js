@@ -6,45 +6,21 @@ angular.module('app', [])
             cache: true
         });
 
-        var promiseRepoLic = $http.get("../explore/github-data/labRepos_Licenses.json", {
-            cache: true
-        });
-
-        var promiseRepoPI = $http.get("../explore/github-data/labRepos_PullsIssues.json", {
-            cache: true
-        });
-
         promiseRepoInfo.then( function(response) {
             var reposObj = response.data.data;
             if (reposObj.hasOwnProperty(hash)) {
                 var data = reposObj[hash];
                 $scope.repo = data;
                 draw_graphs(hash);
-            } else {
-                repo404();
-            }
-        });
-
-        promiseRepoLic.then( function(response) {
-            var repoLicObj = response.data.data
-            if (repoLicObj.hasOwnProperty(hash)) {
-                var data = repoLicObj[hash]["licenseInfo"];
-                $scope.licenseInfo = data;
-            }
-        });
-
-        promiseRepoPI.then( function(response) {
-            var repoPIObj = response.data.data
-            if (repoPIObj.hasOwnProperty(hash)) {
                 var sumP = 0;
                 var sumI = 0;
                 var pullCounters = ["pullRequests_Merged", "pullRequests_Open"];
                 var issueCounters = ["issues_Closed", "issues_Open"];
                 pullCounters.forEach(function(c) {
-                    sumP += repoPIObj[hash][c]["totalCount"];
+                    sumP += data[c]["totalCount"];
                 });
                 issueCounters.forEach(function(c) {
-                    sumI += repoPIObj[hash][c]["totalCount"];
+                    sumI += data[c]["totalCount"];
                 });
                 $scope.count = { "pulls":sumP, "issues":sumI };
                 if ($scope.count.pulls) {
@@ -53,6 +29,8 @@ angular.module('app', [])
                 if ($scope.count.issues) {
                     draw_pie_repoIssues("pieIssues", hash);
                 }
+            } else {
+                repo404();
             }
         });
 

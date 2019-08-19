@@ -9,6 +9,16 @@ query ($ownName: String!, $repoName: String!) {
     url
     homepageUrl
     description
+    createdAt
+    defaultBranchRef {
+      name
+    }
+    licenseInfo {
+      name
+      nickname
+      spdxId
+      url
+    }
     stargazers {
       totalCount
     }
@@ -25,6 +35,21 @@ query ($ownName: String!, $repoName: String!) {
       totalCount
     }
     repositoryTopics {
+      totalCount
+    }
+    pullRequests_Open: pullRequests(states: OPEN) {
+      totalCount
+    }
+    pullRequests_Closed: pullRequests(states: CLOSED) {
+      totalCount
+    }
+    pullRequests_Merged: pullRequests(states: MERGED) {
+      totalCount
+    }
+    issues_Open: issues(states: OPEN) {
+      totalCount
+    }
+    issues_Closed: issues(states: CLOSED) {
       totalCount
     }
   }

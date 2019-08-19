@@ -2,7 +2,7 @@
 function draw_cloud_licenses(areaID) {
 
     // load data file, process data, and draw visualization
-    var url = ghDataDir+'/labRepos_Licenses.json';
+    var url = ghDataDir+'/labReposInfo.json';
     d3.json(url, function(obj) {
         var fullnameDict = {};
         var data = reformatData(obj, fullnameDict);

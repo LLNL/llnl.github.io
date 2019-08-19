@@ -1,9 +1,0 @@
-query ($ownName: String!, $repoName: String!) {
-  repository(owner: $ownName, name: $repoName) {
-    createdAt
-    defaultBranchRef {
-      name
-    }
-  }
-}
-# {"ownName": "LLNL", "repoName": "llnl.github.io"}

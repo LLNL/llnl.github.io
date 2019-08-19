@@ -15,7 +15,7 @@ layout: repo
     <br>
     <a class="subtitle" href="https://github.com/{{ repo.owner.login }}" alt="View Owner on GitHub" title="View Owner on GitHub"><span class="fa fa-user-circle"></span>{{ repo.owner.login }}</a>
     <span ng-if="repo.primaryLanguage" class="subtitle" alt="Primary Language" title="Primary Language"><span class="fa fa-code"></span>{{ repo.primaryLanguage.name }}</span>
-    <a ng-if="licenseInfo && licenseInfo.spdxId!='NOASSERTION'" class="subtitle" href="{{ licenseInfo.url }}" alt="{{ licenseInfo.name }}" title="{{ licenseInfo.name }}"><span class="fa fa-balance-scale"></span>{{ licenseInfo.spdxId }}</a>
+    <a ng-if="repo.licenseInfo && repo.licenseInfo.spdxId!='NOASSERTION'" class="subtitle" href="{{ repo.licenseInfo.url }}" alt="{{ repo.licenseInfo.name }}" title="{{ repo.licenseInfo.name }}"><span class="fa fa-balance-scale"></span>{{ repo.licenseInfo.spdxId }}</a>
 </h1>
 
 <p class="stats text-center">
