@@ -6,14 +6,16 @@ set -eu
 # Check hub installation
 hub version
 
-# Requires BRANCH_NAME, GIT_EMAIL, GIT_NAME, GITHUB_USER, GITHUB_API_TOKEN, GITHUB_TOKEN to be included by workflow
+# Requires BRANCH_NAME, BOT_TOKEN, GITHUB_TOKEN to be included by workflow
+export GITHUB_API_TOKEN=$BOT_TOKEN
 
 DATA_TIMESTAMP=$(date "+%Y-%m-%d-%H")
 CLONE_CUTOFF=$(date "+%Y-%m-%d" -d "7 days ago")
 
 # Configure git + hub
-git config --global user.email "$GIT_EMAIL"
-git config --global user.name "$GIT_NAME"
+export GITHUB_USER=$GITHUB_ACTOR
+git config --global user.name "${GITHUB_ACTOR}"
+git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global hub.protocol https
 
 # Get latest copy of repository
@@ -33,10 +35,10 @@ cd $REPO_ROOT/_explore/scripts
 cd $REPO_ROOT
 git config --list
 git add -A .
-git commit -m "$DATA_TIMESTAMP Data Update by $GITHUB_USER"
+git commit -m "${DATA_TIMESTAMP} Data Update by ${GITHUB_ACTOR}"
 
 # Push update
 git push --set-upstream origin $BRANCH_NAME
 
 # Create pull request, or list existing
-hub pull-request --no-edit --message "Data Update by $GITHUB_USER" || hub pr list --state open --head $BRANCH_NAME
+hub pull-request --no-edit --message "Data Update by ${GITHUB_ACTOR}" || hub pr list --state open --head $BRANCH_NAME
