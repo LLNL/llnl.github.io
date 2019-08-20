@@ -50,13 +50,15 @@ IM #975025
 
 [![Generic badge](https://img.shields.io/badge/M.doc-1-blue.svg)](/radiuss/policies/documentation/) &emsp;Publish documentation in a web-based form
 
-[![Generic badge](https://img.shields.io/badge/M.doc-2-blue.svg)](/radiuss/policies/documentation/) &emsp;Version control documentation coherently with source code
+[![Generic badge](https://img.shields.io/badge/M.doc-2-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide a concise description of the project
 
-[![Generic badge](https://img.shields.io/badge/M.doc-3-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide contact information of development team
+[![Generic badge](https://img.shields.io/badge/M.doc-3-blue.svg)](/radiuss/policies/documentation/) &emsp;Version control documentation coherently with source code
 
-[![Generic badge](https://img.shields.io/badge/R.doc-4-blue.svg)](/radiuss/policies/documentation/) &emsp;Document using a human-readable format that can be converted to PDF and HTML
+[![Generic badge](https://img.shields.io/badge/M.doc-4-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide contact information of development team
 
-[![Generic badge](https://img.shields.io/badge/R.doc-5-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide code samples along with documentation
+[![Generic badge](https://img.shields.io/badge/R.doc-5-blue.svg)](/radiuss/policies/documentation/) &emsp;Document using a human-readable format that can be converted to PDF and HTML
+
+[![Generic badge](https://img.shields.io/badge/R.doc-6-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide and maintain example codes along with documentation
 
 &nbsp;
 
