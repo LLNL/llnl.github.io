@@ -1,8 +1,14 @@
-## Packaging
+---
+title: Packaging
+layout: info
+---
+
+## {{ page.title }}
+{: .page-header}
 
 **M.pac.1** Version and build characteristics must be easily accessible.
 
-Details: Each RADIUSS product API must include a way to return the current version number of the software and indicate which configure/CMAKE and compiler options were used to build the package. For development versions of the software, each package must provide the current commit ID in the repository.
+Details: Each RADIUSS product API must include a way to return the current version number of the software and indicate which configure/CMake and compiler options were used to build the package. For development versions of the software, each package must provide the current commit ID in the repository.
 
 > Rationale: This allows users to make an inventory of what they have, which can aid debugging and configuration management. 
 
@@ -10,9 +16,9 @@ Ref: Smart Libraries Practice 10 / xSDK M8
 
 ---
 
-**M.pac.2** Usage a limited and well-defined symbol, macro, library, and include file namespace is considered a mandatory practice.
+**M.pac.2** Usage of a limited and well-defined symbol, macro, library, and include file namespace is considered a mandatory practice.
 
-Details: For example, there should be no publicly-visible include files such as utils.h, or package named libutil.a or macros named YES or TRUE. Namespacing of include files can be handled either by prepending installed include files with a package name, for example <XXXutils.h>, or by placing and referencing all installed include files in a subdirectory with a package name, for example <XXX/utils.h>. 
+Details: For example, there should be no publicly visible include files such as `utils.h`, package named `libutil.a`, or macros named YES or TRUE. Namespacing of include files can be handled either by prepending installed include files with a package name (e.g.,`<XXXutils.h>`) or by placing and referencing all installed include files in a subdirectory with a package name (e.g.,`<XXX/utils.h>`). 
 
 > Rationale: This allows users to unambiguously identify the components within their installed configuration. 
 

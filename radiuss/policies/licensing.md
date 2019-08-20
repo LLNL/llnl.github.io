@@ -1,4 +1,10 @@
-# Licensing
+---
+title: Licensing
+layout: info
+---
+
+## {{ page.title }}
+{: .page-header}
 
 **M.lic.1**  New RADIUSS products must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, MIT, or BSD 3-Clause).  
 
@@ -24,7 +30,7 @@ Ref: xSDK M7
 
 **R.lic.4**  RADIUSS products should provide a list of dependencies and their associated licenses in [Software Package Data Exchange (SPDX)](https://spdx.org/licenses) format.
 
-> Rationale: The SPDX License List is a list of commonly found licenses and exceptions used in open source software that enables easy and efficient identification of such licenses. See also M4.2.
+> Rationale: The SPDX License List is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. See also M4.2.
 
 Example:  See the Spack [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT) file.
 

@@ -1,4 +1,10 @@
-## Testing and Continuous Integration
+---
+title: Testing and Continuous Integration
+layout: info
+---
+
+## {{ page.title }}
+{: .page-header}
 
 **M.tes.1** Usage of regression tests in the development process is considered a mandatory practice.
 
@@ -16,21 +22,21 @@ Ref: xSDK M2
 
 ---
 
-**M.tes.3** Usage of Continuous Integration (CI) is considered a mandatory practice. 
+**M.tes.3** Usage of continuous integration (CI) is considered a mandatory practice. 
 
-> Rationale: CI helps to prevent integration problems by identifying issues as they arise instead of allowing them to compound. This helps reduce rework and reduces cost and time. Examples of CI tools include [Travis CI](https://travis-ci.org) for projects hosted on GitHub or [GitLab CI](https://about.gitlab.com) for projects hosted on a GitLab instance such as [LC-GitLab](https://lc.llnl.gov/gitlab). Some products may use Azure Pipelines in the future.
+> Rationale: CI helps to prevent integration problems by identifying issues as they arise instead of allowing them to compound. This process helps reduce rework, cost, and time. Examples of CI tools include [Travis CI](https://travis-ci.org) for projects hosted on GitHub, or [GitLab CI](https://about.gitlab.com) for projects hosted on a GitLab instance such as [LC-GitLab](https://lc.llnl.gov/gitlab). Some products may use Azure Pipelines in the future.
 
 Examples:
- - RAJA with Travis CI on GitHub.  See [.travis.yml](https://lc.llnl.gov/gitlab) 
- - VisIT with Circle CI on GitHub.  See  [.circleci/config.yml](https://github.com/visit-dav/visit/blob/develop/.circleci/config.yml)
- - MFEM with AppVeyor on GitHub.  See  [.appveyor.yml](https://github.com/mfem/mfem/blob/master/.appveyor.yml)
+ - RAJA with Travis CI on GitHub. See [.travis.yml](https://lc.llnl.gov/gitlab) 
+ - VisIT with Circle CI on GitHub. See [.circleci/config.yml](https://github.com/visit-dav/visit/blob/develop/.circleci/config.yml)
+ - MFEM with AppVeyor on GitHub. See [.appveyor.yml](https://github.com/mfem/mfem/blob/master/.appveyor.yml)
  - Ascent with Azure Pipelines on GitHub. See [azure-pipelines.yml](https://github.com/Alpine-DAV/ascent/blob/develop/azure-pipelines.yml)
 
 ---
 
-**R.tes.4** During the devolopment process, tests should include compilation across a matrix of compilers.
+**R.tes.4** During the development process, tests should include compilation across a matrix of compilers.
 
-> Rationale: This help to guard against platform-specific or compiler-specific errors.
+> Rationale: This helps to guard against platform-specific or compiler-specific errors.
 
 ---
 
