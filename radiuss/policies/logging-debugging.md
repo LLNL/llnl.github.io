@@ -5,6 +5,7 @@ layout: info
 
 ## {{ page.title }}
 {: .page-header}
+[Back to Policies and Guidelines home](/radiuss/policies/)
 
 **R.log.1**  Consistent, formatted logs is a recommended practice. RADIUSS products may use [SLIC](https://axom.readthedocs.io/en/develop/axom/slic/docs/sphinx/index.html) to achieve this.
 
