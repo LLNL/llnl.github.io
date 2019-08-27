@@ -17,7 +17,7 @@ To work locally, first clone into the repository:
 git clone https://github.com/LLNL/llnl.github.io.git
 ```
 
-Make sure you are in the directory you just created by running `cd llnl.github.io` Then you can use `bundler` to install the Ruby dependencies:
+Make sure you are in the directory you just created by running `cd llnl.github.io` Then you can use `bundler` to install the Ruby dependencies (see the [Jekyll installation docs](https://jekyllrb.com/docs/installation/) for step-by-step guides to setting this up):
 
 ```
 bundle install
