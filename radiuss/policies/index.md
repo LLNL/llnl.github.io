@@ -16,9 +16,22 @@ LLNL-TR-781103
 IM #975025
 -->
 
-M → Mandatory
 
-R → Recommended
+>#### About
+>
+>The RADIUSS project aims at promoting and supporting a selection of open source software developed at the LLNL. With these tools and libraries, we expect to cover a wide range of features a team would need to develop a modern simulation code, particularly when targeting High Performance Computing (HPC). 
+>
+>As an initial step, we wanted to provide some quality assurance with a set of policies and guidelines the RADIUSS projects respectively must and should comply with. These Mandatory and Recommended practices are directed to RADIUSS projects developers and leaders, but we are convinced RADIUSS users in particular may find these advices useful for their own projects as well.
+>
+>Since we intend to keep our best practices up-to-date, these policies and guidelines may evolve in the future. In particular, tools mentioned are not to be eternal. However, we tried to make these recommendation as generic as possible, so that they could apply to the various types of projects RADIUSS has to deal with, and may serve to others. While we try not to interfere to much in projects management, with found relevant to focus or support effort on a subset of fundamental tools, so that knowledge and practices can easily be shared, and for the sake of interoperability.
+>
+>RADIUSS and the Projects it covers are open-source and widely using GitHub for repository management. It means we are open to suggestions and you are free to submit an issue or a pull request.
+>
+>#### Legend
+>
+>M → Mandatory (Policy)
+>
+>R → Recommended (Guideline)
 
 
 ### Licensing

@@ -3,9 +3,13 @@ title: Portability
 layout: info
 ---
 
-## {{ page.title }}
+### {{ page.title }}
 {: .page-header}
 [Back to Policies and Guidelines home](/radiuss/policies/)
+
+M → Mandatory
+
+R → Recommended
 
 **M.por.1** RADIUSS products give best effort at portability to common HPC platforms and compiling toolchains.
 

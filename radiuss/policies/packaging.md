@@ -3,9 +3,13 @@ title: Packaging
 layout: info
 ---
 
-## {{ page.title }}
+### {{ page.title }}
 {: .page-header}
 [Back to Policies and Guidelines home](/radiuss/policies/)
+
+M → Mandatory
+
+R → Recommended
 
 **M.pac.1** Version and build characteristics must be easily accessible.
 

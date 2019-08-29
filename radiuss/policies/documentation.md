@@ -3,9 +3,13 @@ title: Documentation
 layout: info
 ---
 
-## {{ page.title }}
+### {{ page.title }}
 {: .page-header}
 [Back to Policies and Guidelines home](/radiuss/policies/)
+
+M → Mandatory
+
+R → Recommended
 
 **M.doc.1** RADIUSS products must publish documentation in a web-based form.
 

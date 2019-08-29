@@ -3,9 +3,13 @@ title: Version Control
 layout: info
 ---
 
-## {{ page.title }}
+### {{ page.title }}
 {: .page-header}
 [Back to Policies and Guidelines home](/radiuss/policies/)
+
+M → Mandatory
+
+R → Recommended
 
 **M.ver.1** All RADIUSS products must be version controlled. In particular, using [Git](https://git-scm.com) is considered mandatory for convenience concerns.
 

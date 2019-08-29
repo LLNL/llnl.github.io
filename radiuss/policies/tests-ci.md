@@ -3,9 +3,13 @@ title: Testing and Continuous Integration
 layout: info
 ---
 
-## {{ page.title }}
+### {{ page.title }}
 {: .page-header}
 [Back to Policies and Guidelines home](/radiuss/policies/)
+
+M → Mandatory
+
+R → Recommended
 
 **M.tes.1** Usage of regression tests in the development process is considered a mandatory practice.
 
