@@ -1,5 +1,5 @@
 ---
-title: RADIUSS Policies and Guidelines
+title: RADIUSS Policies & Guidelines
 layout: info
 ---
 
@@ -19,11 +19,11 @@ IM #975025
 
 >#### About
 >
->The RADIUSS project aims at promoting and supporting a selection of open source software developed at the LLNL. With these tools and libraries, we expect to cover a wide range of features a team would need to develop a modern simulation code, particularly when targeting High Performance Computing (HPC). 
+>The RADIUSS project aims at promoting and supporting a selection of open source software developed at the LLNL. With these tools and libraries, we expect to cover a wide range of features a team would need to develop a modern simulation code, particularly when targeting High Performance Computing (HPC). 
 >
->As an initial step, we wanted to provide some quality assurance with a set of policies and guidelines the RADIUSS projects respectively must and should comply with. These Mandatory and Recommended practices are directed to RADIUSS projects developers and leaders, but we are convinced RADIUSS users in particular may find these advices useful for their own projects as well.
+>As an initial step, we wanted to provide some quality assurance with a set of policies and guidelines the RADIUSS projects respectively must and should comply with. These Mandatory and Recommended practices are directed to RADIUSS projects developers and leaders, but we are convinced RADIUSS users in particular may find these advices useful for their own projects as well.
 >
->Since we intend to keep our best practices up-to-date, these policies and guidelines may evolve in the future. In particular, tools mentioned are not to be eternal. However, we tried to make these recommendation as generic as possible, so that they could apply to the various types of projects RADIUSS has to deal with, and may serve to others. While we try not to interfere to much in projects management, with found relevant to focus or support effort on a subset of fundamental tools, so that knowledge and practices can easily be shared, and for the sake of interoperability.
+>Since we intend to keep our best practices up-to-date, these policies and guidelines may evolve in the future. In particular, tools mentioned are not to be eternal. However, we tried to make these recommendation as generic as possible, so that they could apply to the various types of projects RADIUSS has to deal with, and may serve to others. While we try not to interfere to much in projects management, with found relevant to focus or support effort on a subset of fundamental tools, so that knowledge and practices can easily be shared, and for the sake of interoperability.
 >
 >RADIUSS and the Projects it covers are open-source and widely using GitHub for repository management. It means we are open to suggestions and you are free to submit an issue or a pull request.
 >
@@ -34,82 +34,89 @@ IM #975025
 >R → Recommended (Guideline)
 
 
-### Licensing
+#### Licensing
 
-**M.lic.1**  [Use OSI-approved permissive open-source license for new projects](/radiuss/policies/licensing/)
+[![Generic badge](https://img.shields.io/badge/M.lic-1-blue.svg)](/radiuss/policies/licensing/) &emsp;Use OSI-approved permissive open-source license for new projects
 
-**M.lic.2**  [Provide a list of dependencies and their license](/radiuss/policies/licensing/)
+[![Generic badge](https://img.shields.io/badge/M.lic-2-blue.svg)](/radiuss/policies/licensing/) &emsp;Provide a list of dependencies and their license
 
-**R.lic.3**  [Consider moving to an OSI-approved, permissive open-source license](/radiuss/policies/licensing/)
+[![Generic badge](https://img.shields.io/badge/R.lic-3-blue.svg)](/radiuss/policies/licensing/) &emsp;Consider moving to an OSI-approved, permissive open-source license
 
-**R.lic.4**  [Format dependencies and their licenses with SPDX](/radiuss/policies/licensing/)
+[![Generic badge](https://img.shields.io/badge/R.lic-4-blue.svg)](/radiuss/policies/licensing/) &emsp;Format dependencies and their licenses with SPDX
 
+&nbsp;
 
-### Documentation
+#### Documentation
 
-**M.doc.1** [Publish documentation in a web-based form](/radiuss/policies/documentation/)
+[![Generic badge](https://img.shields.io/badge/M.doc-1-blue.svg)](/radiuss/policies/documentation/) &emsp;Publish documentation in a web-based form
 
-**M.doc.2** [Version control documentation coherently with source code](/radiuss/policies/documentation/)
+[![Generic badge](https://img.shields.io/badge/M.doc-2-blue.svg)](/radiuss/policies/documentation/) &emsp;Version control documentation coherently with source code
 
-**M.doc.3** [Provide contact information of development team](/radiuss/policies/documentation/)
+[![Generic badge](https://img.shields.io/badge/M.doc-3-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide contact information of development team
 
-**R.doc.4** [Document using a human-readable format that can be converted to PDF and HTML](/radiuss/policies/documentation/)
+[![Generic badge](https://img.shields.io/badge/R.doc-4-blue.svg)](/radiuss/policies/documentation/) &emsp;Document using a human-readable format that can be converted to PDF and HTML
 
-**R.doc.5** [Provide code samples along with documentation](/radiuss/policies/documentation/)
+[![Generic badge](https://img.shields.io/badge/R.doc-5-blue.svg)](/radiuss/policies/documentation/) &emsp;Provide code samples along with documentation
 
+&nbsp;
 
-### Build
+#### Build
 
-**M.bui.1** [Package installation and provide automated builds of dependencies (Spack)](/radiuss/policies/build/)
+[![Generic badge](https://img.shields.io/badge/M.bui-1-blue.svg)](/radiuss/policies/build/) &emsp;Package installation and provide automated builds of dependencies (Spack)
 
-**R.bui.2** [Have C/C++ and FORTRAN projects buildable with CMake](/radiuss/policies/build/)
+[![Generic badge](https://img.shields.io/badge/R.bui-2-blue.svg)](/radiuss/policies/build/) &emsp;Have C/C++ and FORTRAN projects buildable with CMake
 
+&nbsp;
 
-### Version Control
+#### Version Control
 
-**M.ver.1** [The source code has to be version controlled (Git)](/radiuss/policies/version-control/)
+[![Generic badge](https://img.shields.io/badge/M.ver-1-blue.svg)](/radiuss/policies/version-control/) &emsp;The source code has to be version controlled (Git)
 
-**M.ver.2** [Accept online contribution based on pull requests, and collect issues (GitHub)](/radiuss/policies/version-control/)
+[![Generic badge](https://img.shields.io/badge/M.ver-2-blue.svg)](/radiuss/policies/version-control/) &emsp;Accept online contribution based on pull requests, and collect issues (GitHub)
 
+&nbsp;
 
-### Testing and Continuous Integration
+#### Testing and Continuous Integration
 
-**M.tes.1** [Use regression tests in the development process](/radiuss/policies/tests-ci/)
+[![Generic badge](https://img.shields.io/badge/M.tes-1-blue.svg)](/radiuss/policies/tests-ci/) &emsp;Use regression tests in the development process
 
-**M.tes.2** [Provide a comprehensive test suite for correctness of installation verification](/radiuss/policies/tests-ci/)
+[![Generic badge](https://img.shields.io/badge/M.tes-2-blue.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a comprehensive test suite for correctness of installation verification
 
-**M.tes.3** [Take advantage of Continuous Integration](/radiuss/policies/tests-ci/)
+[![Generic badge](https://img.shields.io/badge/M.tes-3-blue.svg)](/radiuss/policies/tests-ci/) &emsp;Take advantage of Continuous Integration
 
-**R.tes.4** [Verify continuously the compatibility with different compilers](/radiuss/policies/tests-ci/)
+[![Generic badge](https://img.shields.io/badge/R.tes-4-blue.svg)](/radiuss/policies/tests-ci/) &emsp;Verify continuously the compatibility with different compilers
 
-**R.tes.5** [Ensure code quality/health in an automated manner](/radiuss/policies/tests-ci/)
+[![Generic badge](https://img.shields.io/badge/R.tes-5-blue.svg)](/radiuss/policies/tests-ci/) &emsp;Ensure code quality/health in an automated manner
 
+&nbsp;
 
-### Portability
+#### Portability
 
-**M.por.1** [Support common HPC platforms and toolchains](/radiuss/policies/portability/)
+[![Generic badge](https://img.shields.io/badge/M.por-1-blue.svg)](/radiuss/policies/portability/) &emsp;Support common HPC platforms and toolchains
 
-**R.por.2** [Support Apple MacOS and Microsoft Windows](/radiuss/policies/portability/)
+[![Generic badge](https://img.shields.io/badge/R.por-2-blue.svg)](/radiuss/policies/portability/) &emsp;Support Apple MacOS and Microsoft Windows
 
+&nbsp;
 
-### Packaging
+#### Packaging
 
-**M.pac.1** [Provide current version number and build information](/radiuss/policies/packaging/)
+[![Generic badge](https://img.shields.io/badge/M.pac-1-blue.svg)](/radiuss/policies/packaging/) &emsp;Provide current version number and build information
 
-**R.pac.2** [Use a limited and well-defined symbol, macro, library, and include file namespace](/radiuss/policies/packaging/)
+[![Generic badge](https://img.shields.io/badge/R.pac-2-blue.svg)](/radiuss/policies/packaging/) &emsp;Use a limited and well-defined symbol, macro, library, and include file namespace
 
-**M.pac.3** [Respect MPI compatibility best practices](/radiuss/policies/packaging/)
+[![Generic badge](https://img.shields.io/badge/M.pac-3-blue.svg)](/radiuss/policies/packaging/) &emsp;Respect MPI compatibility best practices
 
+&nbsp;
 
-### Logging and Debugging
+#### Logging and Debugging
 
-**R.log.1** [Use consistent, formatted logs](/radiuss/policies/logging-debugging/)
+[![Generic badge](https://img.shields.io/badge/R.log-1-blue.svg)](/radiuss/policies/logging-debugging/) &emsp;Use consistent, formatted logs
 
-**R.log.2** [Provide production and debugging builds](/radiuss/policies/logging-debugging/)
+[![Generic badge](https://img.shields.io/badge/R.log-2-blue.svg)](/radiuss/policies/logging-debugging/) &emsp;Provide production and debugging builds
 
 ---
 
-### References
+#### References
 
 - [Better Scientific Software](https://bssw.io)
 - [xSDK Community Policies](https://xsdk.info/policies)
