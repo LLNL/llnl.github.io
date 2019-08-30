@@ -40,7 +40,7 @@ IM #975025
 
 [![Generic badge](https://img.shields.io/badge/M.lic-2-blue.svg)](/radiuss/policies/licensing/) &emsp;Provide a list of dependencies and their associated licenses in SPDX format.
 
-[![Generic badge](https://img.shields.io/badge/R.lic-3-9cf.svg)](/radiuss/policies/licensing/) &emsp;Consider moving to an OSI-approved, permissive open-source license for existing projects.
+[![Generic badge](https://img.shields.io/badge/R.lic-3-9cf.svg)](/radiuss/policies/licensing/) &emsp;Consider moving to an [OSI](https://opensource.org/licenses)-approved, permissive open-source license for existing projects.
 
 &nbsp;
 
@@ -62,7 +62,7 @@ IM #975025
 
 #### Build
 
-[![Generic badge](https://img.shields.io/badge/M.bui-1-blue.svg)](/radiuss/policies/build/) &emsp;Package installation and provide automated builds of dependencies (Spack).
+[![Generic badge](https://img.shields.io/badge/M.bui-1-blue.svg)](/radiuss/policies/build/) &emsp;Package installation and provide automated builds of dependencies ([Spack](https://spack.io/)).
 
 [![Generic badge](https://img.shields.io/badge/R.bui-2-9cf.svg)](/radiuss/policies/build/) &emsp;Have C/C++ and FORTRAN projects buildable with [CMake](https://cmake.org). 
 
@@ -72,7 +72,7 @@ IM #975025
 
 #### Version Control
 
-[![Generic badge](https://img.shields.io/badge/M.ver-1-blue.svg)](/radiuss/policies/version-control/) &emsp;The source code has to be version controlled (Git).
+[![Generic badge](https://img.shields.io/badge/M.ver-1-blue.svg)](/radiuss/policies/version-control/) &emsp;The source code has to be version controlled ([Git](https://git-scm.com)).
 
 [![Generic badge](https://img.shields.io/badge/M.ver-2-blue.svg)](/radiuss/policies/version-control/) &emsp;Provide a transparent, online contribution process based on pull requests and issues collection.
 
