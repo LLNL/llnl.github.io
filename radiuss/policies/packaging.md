@@ -7,9 +7,17 @@ layout: info
 {: .page-header}
 [Back to Policies and Guidelines home](/radiuss/policies/)
 
-M → Mandatory
+---
 
-R → Recommended
+#### legend
+
+[![generic badge](https://img.shields.io/badge/M.section-N-blue.svg)]() Designates a __mandatory__ point (policy).
+
+[![generic badge](https://img.shields.io/badge/R.section-N-9cf.svg)]() Designates a __recommended__ point (guideline).
+
+&nbsp;
+
+---
 
 [![Generic badge](https://img.shields.io/badge/M.pac-1-blue.svg)]() **Version and build characteristics must be easily accessible.**
 
@@ -21,17 +29,15 @@ Ref: Smart Libraries Practice 10 / xSDK M8
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.pac-2-blue.svg)]() **Usage of a limited and well-defined symbol, macro, library, and include file namespace is considered a mandatory practice.**
+[![Generic badge](https://img.shields.io/badge/M.pac-2-blue.svg)]() **Use a limited and well-defined symbol, macro, library, and include file namespace.**
 
 Details: For example, there should be no publicly visible include files such as `utils.h`, package named `libutil.a`, or macros named YES or TRUE. Namespacing of include files can be handled either by prepending installed include files with a package name (e.g.,`<XXXutils.h>`) or by placing and referencing all installed include files in a subdirectory with a package name (e.g.,`<XXX/utils.h>`). 
-
-> Rationale: This allows users to unambiguously identify the components within their installed configuration. 
 
 Ref: Smart Libraries Practice 18 / Less restrictive than xSDK M9
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.pac-3-blue.svg)]() **Attention must be paid to using MPI in a way that is compatible with other products.**
+[![Generic badge](https://img.shields.io/badge/M.pac-3-blue.svg)]() **Use MPI in a way that is compatible with other products.**
 
 Details: Each RADIUSS product that utilizes MPI must restrict its MPI operations to MPI communicators that are provided to it and not use directly `MPI_COMM_WORLD`. Products must use configure tests or version tests to detect MPI 2 or MPI 3 features that may not be available; it should not be assumed that a full MPI 2 or MPI 3 implementation is available. Products can change the MPI error-handling mode by default but should have an option to prevent them from changing the MPI error handling (which may have been set by another package or the application). The product should also behave appropriately regardless of the MPI error handling being used.
 
