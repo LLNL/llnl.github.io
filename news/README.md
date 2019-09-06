@@ -6,7 +6,6 @@ News posts appear on the [News](https://software.llnl.gov/news/) and [Archive](h
 - `multimedia` - synopsis of a video or podcast published on another platform (e.g., YouTube)
 - `new-release` - announcement of substantial software release (i.e., more than bug fixes)
 - `new-repo` - announcement of new repo added to LLNL's software catalog
-- `podcast` - synopsis of a podcast published on another platform
 - `profile` - profile of a developer
 - `story` - synopsis of a relevant news or research-focused article
 - `this-website` - announcement of feature enhancement or other changes to this site
