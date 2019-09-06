@@ -1,5 +1,6 @@
 ---
 title: "ZFS on Linux 0.8.0 Released"
+tags: new-release
 ---
 
 The Livermore Big Artificial Neural Network toolkit (LBANN) is an open-source, HPC-centric, deep learning training framework that is optimized to compose multiple levels of parallelism. 
