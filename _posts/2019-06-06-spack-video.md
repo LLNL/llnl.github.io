@@ -1,5 +1,6 @@
 ---
 title: "Video: Spack, a Flexible Package Manager for HPC Software"
+tags: multimedia
 ---
 
 [Spack](https://github.com/spack) is a flexible, configurable, Python-based, and open-source HPC package manager. Spack automates the installation and fine-tuning of simulations and libraries, operating on a wide variety of HPC platforms and enabling users to build many code configurations.
