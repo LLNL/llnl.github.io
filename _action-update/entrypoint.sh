@@ -38,7 +38,7 @@ git add -A .
 git commit -m "${DATA_TIMESTAMP} Data Update by ${BOT_USER}"
 
 # Push update
-git push --set-upstream origin $BRANCH_NAME
+git -c http.extraheader="AUTHORIZATION: basic ${GITHUB_TOKEN}" push --set-upstream origin $BRANCH_NAME
 
 # Create pull request, or list existing
 hub pull-request --no-edit --message "Data Update by ${BOT_USER}" || hub pr list --state open --head $BRANCH_NAME
