@@ -13,6 +13,7 @@ DATA_TIMESTAMP=$(date "+%Y-%m-%d-%H")
 CLONE_CUTOFF=$(date "+%Y-%m-%d" -d "7 days ago")
 
 # Configure git + hub
+export GITHUB_USER=$BOT_USER
 git config --global user.name "${BOT_USER}"
 git config --global user.email "${BOT_USER}@users.noreply.github.com"
 git config --global hub.protocol https
