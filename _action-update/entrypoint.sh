@@ -13,13 +13,12 @@ DATA_TIMESTAMP=$(date "+%Y-%m-%d-%H")
 CLONE_CUTOFF=$(date "+%Y-%m-%d" -d "7 days ago")
 
 # Configure git + hub
-export GITHUB_USER=$BOT_USER
 git config --global user.name "${BOT_USER}"
 git config --global user.email "${BOT_USER}@users.noreply.github.com"
 git config --global hub.protocol https
 
 # Get latest copy of repository
-git clone --shallow-since=$CLONE_CUTOFF --no-single-branch "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/LLNL/llnl.github.io.git"
+git clone --shallow-since=$CLONE_CUTOFF --no-single-branch "https://${BOT_USER}:${GITHUB_TOKEN}@github.com/LLNL/llnl.github.io.git"
 cd llnl.github.io
 REPO_ROOT=$(pwd)
 
