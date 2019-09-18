@@ -2667,6 +2667,13 @@
         "decription": "Wrapper library for model-specific registers.  APIs cover RAPL, performance counters, clocks and turbo.",
         "name": "LLNL/libmsr",
         "topics": [
+            "hpc",
+            "intel",
+            "c",
+            "power",
+            "thermal",
+            "counters",
+            "performance-analysis",
             "performance"
         ],
         "website": "http://llnl.github.io/libmsr/"
@@ -2837,6 +2844,12 @@
         ],
         "website": null
     },
+    "LLNL/mpy1": {
+        "decription": "Obsolete mpy version 1, use yorick/mpy",
+        "name": "LLNL/mpy1",
+        "topics": null,
+        "website": ""
+    },
     "LLNL/msr-safe": {
         "decription": "Allows safer access to model specific registers (MSRs)",
         "name": "LLNL/msr-safe",
@@ -2980,6 +2993,12 @@
             "python"
         ],
         "website": null
+    },
+    "LLNL/pyorick": {
+        "decription": "Run yorick from python",
+        "name": "LLNL/pyorick",
+        "topics": null,
+        "website": ""
     },
     "LLNL/pyranda": {
         "decription": "A Python driven, Fortran powered Finite Difference solver for arbitrary hyperbolic PDE systems.  This is the mini-app for the Miranda code.",
@@ -3304,6 +3323,42 @@
             "wrapper",
             "generator"
         ],
+        "website": ""
+    },
+    "LLNL/yorick": {
+        "decription": "yorick interpreted language",
+        "name": "LLNL/yorick",
+        "topics": null,
+        "website": "http://yorick.github.com"
+    },
+    "LLNL/yorick-doc": {
+        "decription": "automatic documentation generator for yorick",
+        "name": "LLNL/yorick-doc",
+        "topics": null,
+        "website": ""
+    },
+    "LLNL/yorick-gl": {
+        "decription": "OpenGL 3D graphics plugin for yorick",
+        "name": "LLNL/yorick-gl",
+        "topics": null,
+        "website": ""
+    },
+    "LLNL/yorick-ml4": {
+        "decription": "Matlab4 I/O plugin for yorick",
+        "name": "LLNL/yorick-ml4",
+        "topics": null,
+        "website": ""
+    },
+    "LLNL/yorick-mpeg": {
+        "decription": "mpeg1 writer plugin for yorick",
+        "name": "LLNL/yorick-mpeg",
+        "topics": null,
+        "website": ""
+    },
+    "LLNL/yorick-z": {
+        "decription": "zlib, jpeg, and png plugin for yorick",
+        "name": "LLNL/yorick-z",
+        "topics": null,
         "website": ""
     },
     "LLNL/zero-rk": {
@@ -3797,7 +3852,7 @@
         "website": "https://www.llnl.gov/casc/hypre/"
     },
     "mfem/PyMFEM": {
-        "decription": "Python wrapper for MFEM (generated from mfem 3.4 release)",
+        "decription": "Python wrapper for MFEM (generated from mfem 4.0 release)",
         "name": "mfem/PyMFEM",
         "topics": [
             "fem",
@@ -3951,6 +4006,12 @@
         "name": "spack/spack-infrastructure",
         "topics": null,
         "website": ""
+    },
+    "spack/spack-tutorial": {
+        "decription": "Standalone Spack Tutorial Repository",
+        "name": "spack/spack-tutorial",
+        "topics": null,
+        "website": null
     },
     "spack/spack-tutorial-container": {
         "decription": "Dockerfile and artifacts (minus build cache) to create Spack tutorial container.",
