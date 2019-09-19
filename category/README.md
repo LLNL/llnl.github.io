@@ -1,4 +1,4 @@
-# Website Categories 
+# Website Categories
 
 This folder is the home of the JSON file containing the info for the categories that are displayed on the website's home page. If any edits need to be made to these categories, just edit the data in the JSON and the home page will reflect your changes automatically.
 

@@ -14,11 +14,11 @@ layout: default
 <!-- Preset vis display areas -->
 <center>
     <svg class="repoCreationHistory"></svg>
-    <br><svg class="pieMembers"></svg><svg class="pieRepos"></svg>
-    <br><svg class="repoActivityChart"></svg>
-    <br><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
-    <br><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
-    <br><svg class="licenseCloud"></svg>
+    <br /><svg class="pieMembers"></svg><svg class="pieRepos"></svg>
+    <br /><svg class="repoActivityChart"></svg>
+    <br /><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
+    <br /><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
+    <br /><svg class="licenseCloud"></svg>
 </center>
 
 <!-- Load basic D3 and helper scripts -->
@@ -40,11 +40,11 @@ layout: default
 
 <script>
     // GiHub Data Directory
-    var ghDataDir = "./github-data";
+    var ghDataDir = './github-data';
     // Global chart standards
     var stdTotalWidth = 500,
         stdTotalHeight = 400;
-    var stdMargin = {top: 40, right: 40, bottom: 40, left: 40},
+    var stdMargin = { top: 40, right: 40, bottom: 40, left: 40 },
         stdWidth = stdTotalWidth - stdMargin.left - stdMargin.right,
         stdHeight = stdTotalHeight - stdMargin.top - stdMargin.bottom,
         stdMaxBuffer = 1.07;
@@ -52,15 +52,15 @@ layout: default
         stdLgndDotRadius = 5,
         stdLgndSpacing = 20;
     // Call draw functions
-    draw_line_repoCreationHistory("repoCreationHistory");
-    draw_pie_members("pieMembers");
-    draw_pie_repos("pieRepos");
-    draw_line_repoActivity("repoActivityChart");
-    draw_scatter_repoPulls("repoPulls");
-    draw_scatter_repoIssues("repoIssues");
-    draw_cloud_languages("languageCloud");
-    draw_cloud_topics("topicCloud");
-    draw_cloud_licenses("licenseCloud");
+    draw_line_repoCreationHistory('repoCreationHistory');
+    draw_pie_members('pieMembers');
+    draw_pie_repos('pieRepos');
+    draw_line_repoActivity('repoActivityChart');
+    draw_scatter_repoPulls('repoPulls');
+    draw_scatter_repoIssues('repoIssues');
+    draw_cloud_languages('languageCloud');
+    draw_cloud_topics('topicCloud');
+    draw_cloud_licenses('licenseCloud');
 </script>
 
 {% endraw %}

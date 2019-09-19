@@ -1,4 +1,4 @@
-## How to Generate New Data
+# How to Generate New Data
 
 ```bash
 cd _explore/scripts/
@@ -10,15 +10,18 @@ _(Additional script functionality detailed in the [`./scripts` section below][ju
 **IMPORTANT!**  
 Data fetching scripts require an environment variable `GITHUB_API_TOKEN` containing a valid GitHub [OAuth token][oauth] or [personal access token][personaltoken].
 
-## About the Contents of this Directory...
+# About the Contents of this Directory
 
-#### [./input_lists.json][inputs file]
+## [./input_lists.json][inputs file]
+
 Simple text files containing input lists. (e.g. list of organizations, list of independent repositories)
 
-#### [./queries][queries dir]
+## [./queries][queries dir]
+
 The actual queries sent to [GitHub's GraphQL API][gitgraphql] when the data fetching scripts are run. This makes writing/editing queries easier, as it allows them to remain in individual, human-readable text files.
 
-#### [./scripts][scripts dir]
+## [./scripts][scripts dir]
+
 Scripts for data fetching and manipulation. Data is written to [`explore/github-data`][data dir] in appropriate json formats.
 
 New files are created for each type of data structure.  

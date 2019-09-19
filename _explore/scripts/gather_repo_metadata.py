@@ -24,7 +24,7 @@ for repo in genDataCollector.data["data"]:
     repoObj = genDataCollector.data["data"][repo]
 
     repoData["name"] = repo
-    repoData["decription"] = repoObj["description"]
+    repoData["description"] = repoObj["description"]
     repoData["website"] = repoObj["homepageUrl"]
 
     # gather any repo topics
