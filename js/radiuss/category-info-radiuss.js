@@ -70,6 +70,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                                     if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
                                         //save only necessary data fields
                                         category[count]["name"]= reposInfoObj[repo].name;
+                                        category[count]["description"] = reposInfoObj[repo].description;
                                         //call service function to get repo logo uniqueLogo(logos, filename, ownerAvatar)
                                         category[count]['ownerAvatar'] = Category.uniqueLogo(logos, category[count].nameWithOwner.toLowerCase()+".png", reposInfoObj[repo].owner.avatarUrl);
                                         category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;
