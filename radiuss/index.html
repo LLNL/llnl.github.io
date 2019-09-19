@@ -18,13 +18,13 @@ layout: portal
             <p class="links">
 
                 <span>
-                    <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
+                    <a  href="https://github.com/{{repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
                         <img class ="orgAvatar" ng-src="{{repo.ownerAvatar}}">
                     </a>
                 </span>
 
                 <span>
-                    <a href="{{repo.gitUrl}}" alt="Name" title="Name">
+                    <a href="{{repo.gitUrl}}" alt="{{repo.description || '[No Description]'}}" title="{{repo.description || '[No Description]'}}">
                         {{repo.name}}
                     </a>
                 </span>
@@ -37,7 +37,7 @@ layout: portal
 
                 <span>
                     <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Rpo Info" title="Repo Info">
-                        <span class="fa fa-info-circle"/>
+                        <span class="fa fa-info-circle"></span>
                     </a>
                 </span>
             </p>
