@@ -24,7 +24,7 @@ REPO_ROOT=$(pwd)
 
 # Checkout data update branch, creating new if necessary
 git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
-git merge --ff-only master
+git merge --no-edit master
 
 # Run MASTER script
 cd $REPO_ROOT/_explore/scripts
