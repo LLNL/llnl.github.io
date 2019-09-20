@@ -123,27 +123,27 @@ angular.module('app', [])
                     for (var repo in reposInfoObj){
                         //reposInfoObj[repo] is the actual repo object
                         for (var j in $scope.topicRepos){
-                            //var category is arrary of objects
+                            //var category is array of objects
                             var category = $scope.topicRepos[j];
                             for (var count in category){
                                 // category[count] is a specific repo within a category
                                 //if we find a repo that is included in the category repos, we save more info on it
                                 if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
                                     //save only necessary data fields
-                                    category[count]["name"]= reposInfoObj[repo].name;
+                                    category[count]["name"] = reposInfoObj[repo].name;
+                                    category[count]["description"] = reposInfoObj[repo].description;
                                     category[count]['ownerAvatar'] = reposInfoObj[repo].owner.avatarUrl;
                                     category[count]['owner'] = reposInfoObj[repo].owner.login;
                                     category[count]['stars'] = reposInfoObj[repo].stargazers.totalCount;
-                                    category[count]["gitUrl"]= reposInfoObj[repo].url;
-                                    category[count]["homepageUrl"]= reposInfoObj[repo].homepageUrl;
+                                    category[count]["gitUrl"] = reposInfoObj[repo].url;
+                                    category[count]["homepageUrl"] = reposInfoObj[repo].homepageUrl;
                                     if (reposInfoObj[repo].primaryLanguage){
-                                        category[count]["language"]= reposInfoObj[repo].primaryLanguage.name;
+                                        category[count]["language"] = reposInfoObj[repo].primaryLanguage.name;
                                     }
                                     else{
-                                        category[count]["language"]= "";
+                                        category[count]["language"] = "";
                                     }
-                                    category[count]["forks"]= reposInfoObj[repo].forks.totalCount;
-                                    category[count]["description"]= reposInfoObj[repo].description;
+                                    category[count]["forks"] = reposInfoObj[repo].forks.totalCount;
                                 }
                             }
                         }

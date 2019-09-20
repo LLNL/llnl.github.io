@@ -69,6 +69,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                                     //if we find a repo that is included in the category repos, we save more info on it
                                     if(category[count].nameWithOwner == reposInfoObj[repo].nameWithOwner){
                                         category[count]["name"]= reposInfoObj[repo].name;
+                                        category[count]["description"] = reposInfoObj[repo].description;
                                         //call unique logo function to get repo logo uniqueLogo(logos, filename, ownerAvatar)
                                         category[count]['ownerAvatar'] =  Category.uniqueLogo(logos, category[count].nameWithOwner.toLowerCase()+".png", reposInfoObj[repo].owner.avatarUrl);
                                         category[count]['ownerLogin'] = reposInfoObj[repo].owner.login;

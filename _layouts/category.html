@@ -60,7 +60,7 @@
                                     <h4 class="text-center">
                                         <span alt="Name" title="Name"> {{ repo.name }} </span>
                                         <small><span alt="Owner" title="Owner"> {{ repo.owner }} </span></small>
-                                        <small><span alt="Primary Language" title="Primary Language"> {{ repo.language }} </span></small>
+                                        <small><span alt="Primary Language" title="Primary Language"> {{ repo.language || '-' }} </span></small>
                                     </h4>
 
                                     <p class="text-justify"> {{ repo.description }} </p>
