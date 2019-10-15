@@ -1146,7 +1146,11 @@
     "GMLC-TDC/HELICS-FMI": {
         "decription": "Executable to allow Functional Mockup units to interact with HELICS",
         "name": "GMLC-TDC/HELICS-FMI",
-        "topics": null,
+        "topics": [
+            "modelics",
+            "fmi",
+            "co-simulation"
+        ],
         "website": null
     },
     "GMLC-TDC/HELICS-HLA": {
@@ -1176,7 +1180,9 @@
     "GMLC-TDC/HELICS.jl": {
         "decription": null,
         "name": "GMLC-TDC/HELICS.jl",
-        "topics": null,
+        "topics": [
+            "julia"
+        ],
         "website": "https://gmlc-tdc.github.io/HELICS.jl/latest/"
     },
     "GMLC-TDC/HELICSBuilder": {
@@ -1206,12 +1212,25 @@
     "GMLC-TDC/concurrency": {
         "decription": "repository for concurrent data structures used in HELICS and other repositories",
         "name": "GMLC-TDC/concurrency",
-        "topics": null,
+        "topics": [
+            "concurrency",
+            "helics",
+            "thread"
+        ],
         "website": null
     },
     "GMLC-TDC/containers": {
         "decription": "Collection of containers used inside HELICS and supporting repos",
         "name": "GMLC-TDC/containers",
+        "topics": [
+            "containers",
+            "helics"
+        ],
+        "website": null
+    },
+    "GMLC-TDC/helics-buildenv": {
+        "decription": "Files related to the build environment for HELICS on CI services",
+        "name": "GMLC-TDC/helics-buildenv",
         "topics": null,
         "website": null
     },
@@ -1245,10 +1264,10 @@
         "website": null
     },
     "GMLC-TDC/homebrew-helics": {
-        "decription": null,
+        "decription": "*deprecated*",
         "name": "GMLC-TDC/homebrew-helics",
         "topics": null,
-        "website": null
+        "website": ""
     },
     "GMLC-TDC/netif": {
         "decription": null,
@@ -1313,6 +1332,14 @@
         "decription": "A power aware runtime",
         "name": "LLNL/Adagio",
         "topics": null,
+        "website": null
+    },
+    "LLNL/Adiak": {
+        "decription": "Standard interface for collecting HPC run metadata",
+        "name": "LLNL/Adiak",
+        "topics": [
+            "hpc"
+        ],
         "website": null
     },
     "LLNL/Aluminum": {
@@ -1478,6 +1505,16 @@
         "topics": [
             "gpu",
             "math-physics"
+        ],
+        "website": null
+    },
+    "LLNL/ExaConstit": {
+        "decription": "A crystal plasticity FEM code used to determine bulk constitutive properties of metals",
+        "name": "LLNL/ExaConstit",
+        "topics": [
+            "math-physics",
+            "finite-elements",
+            "application"
         ],
         "website": null
     },
@@ -1815,7 +1852,7 @@
         "name": "LLNL/PENNANT",
         "topics": [
             "amr",
-            "math-physics"
+            "proxy-application"
         ],
         "website": null
     },
@@ -2461,7 +2498,7 @@
         "decription": "For Updating Data and Generating Evaluations (FUDGE): LLNL code for managing nuclear data",
         "name": "LLNL/fudge",
         "topics": [
-            "data-management"
+            "application"
         ],
         "website": null
     },
@@ -2476,7 +2513,7 @@
         "name": "LLNL/gidiplus",
         "topics": [
             "cpp",
-            "data-management"
+            "application"
         ],
         "website": null
     },
@@ -2495,7 +2532,10 @@
     "LLNL/graph-embed": {
         "decription": "A small library for graph embedding",
         "name": "LLNL/graph-embed",
-        "topics": null,
+        "topics": [
+            "cpp",
+            "graph"
+        ],
         "website": ""
     },
     "LLNL/graphator": {
@@ -2809,7 +2849,8 @@
             "ecp",
             "exascale-computing",
             "allocator",
-            "cpp"
+            "cpp",
+            "memory-management"
         ],
         "website": null
     },
@@ -2886,7 +2927,8 @@
             "performance-monitoring",
             "gov",
             "llnl",
-            "msr-safe"
+            "msr-safe",
+            "performance"
         ],
         "website": ""
     },
@@ -3037,7 +3079,7 @@
             "fortran",
             "finite-elements",
             "solver",
-            "math-physics"
+            "proxy-application"
         ],
         "website": null
     },
@@ -3779,6 +3821,12 @@
         "topics": null,
         "website": null
     },
+    "flux-framework/flux-dyad": {
+        "decription": "DYAD: DYnamic and Asynchronous Data Streamliner",
+        "name": "flux-framework/flux-dyad",
+        "topics": null,
+        "website": null
+    },
     "flux-framework/flux-framework.github.io": {
         "decription": "Flux-framework website",
         "name": "flux-framework/flux-framework.github.io",
@@ -4060,6 +4108,12 @@
         "topics": null,
         "website": null
     },
+    "spack/spack-github-action": {
+        "decription": "Github Action for Spack",
+        "name": "spack/spack-github-action",
+        "topics": null,
+        "website": ""
+    },
     "spack/spack-infrastructure": {
         "decription": "Spack Kubernetes instance and services running there (GitLab, CDash, spack.io)",
         "name": "spack/spack-infrastructure",
@@ -4127,6 +4181,12 @@
         "name": "visit-dav/visit-deps",
         "topics": null,
         "website": null
+    },
+    "visit-dav/visit-website": {
+        "decription": "Jekyll them for new VisIt web site (work in progress)",
+        "name": "visit-dav/visit-website",
+        "topics": null,
+        "website": "https://visit-dav.github.io/visit-website/"
     },
     "zfsonlinux/arcstat": {
         "decription": "uses Perl to extract, format, and display kstats from the ZFS ARC",
