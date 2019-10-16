@@ -182,9 +182,10 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
         // Formate data for graphing
         var data = [];
-        for (var timestamp in dataTotals) {
+        var sortedTimestamps = Object.keys(dataTotals).sort();
+        sortedTimestamps.forEach(function(timestamp) {
             data.push({date: timestamp, value: dataTotals[timestamp]});
-        };
+        });
 
         return data;
     };
