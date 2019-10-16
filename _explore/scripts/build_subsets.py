@@ -43,7 +43,7 @@ def matchRepo(repoName1, repoName2):
         return False
 
 
-# Iterate through sebset tags
+# Iterate through subset tags
 print("Building repo subset lists...")
 for tag in myTags:
     print("\n'%s'" % (tag))

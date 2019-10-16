@@ -1,4 +1,4 @@
-# News Posts 
+# News Posts
 
 News posts appear on the [News](https://software.llnl.gov/news/) and [Archive](https://software.llnl.gov/news/archive/) pages in reverse chronological order (i.e., newest first). The list is curated to promote LLNL's open source endeavors and community engagement. Posts should be tagged with at least one of the following topics, which are not associated with the [category tags](https://github.com/LLNL/llnl.github.io/tree/master/category) applied to repos:
 
