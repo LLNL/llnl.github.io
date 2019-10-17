@@ -10,7 +10,9 @@ print("Cleaning primary input lists...")
 
 for aList in inputLists.data.keys():
     print("\t%s" % aList)
-    listWIP = [x.lower() for x in inputLists.data[aList]]  # Standardize as all lowercase
+    listWIP = [
+        x.lower() for x in inputLists.data[aList]
+    ]  # Standardize as all lowercase
     listWIP = list(set(listWIP))  # Remove duplicates
     listWIP.sort()  # List in alphabetical order
     inputLists.data[aList] = listWIP
@@ -29,7 +31,9 @@ for aSet in subsetLists.data.keys():
     print("\t%s" % aSet)
     for aList in subsetLists.data[aSet].keys():
         print("\t\t%s" % aList)
-        listWIP = [x.lower() for x in subsetLists.data[aSet][aList]]  # Standardize as all lowercase
+        listWIP = [
+            x.lower() for x in subsetLists.data[aSet][aList]
+        ]  # Standardize as all lowercase
         listWIP = list(set(listWIP))  # Remove duplicates
         listWIP.sort()  # List in alphabetical order
         subsetLists.data[aSet][aList] = listWIP

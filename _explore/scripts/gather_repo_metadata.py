@@ -1,6 +1,6 @@
 from scraper.github import queryManager as qm
 
-ghDataDir = '../../explore/github-data'
+ghDataDir = "../../explore/github-data"
 genDatafile = "%s/labReposInfo.json" % ghDataDir
 topicsDatafile = "%s/labRepos_Topics.json" % ghDataDir
 writeFile = "%s/labRepo_Metadata.json" % ghDataDir
