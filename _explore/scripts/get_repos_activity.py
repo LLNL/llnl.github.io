@@ -39,8 +39,13 @@ for repo in repolist:
         print(error)
         continue
 
-    # Convert unix timestamps into standard dates
     for item in outObj:
+        # Remove per-day data, keep only weekly totals
+        try:
+            del item["days"]
+        except KeyError:
+            pass
+        # Convert unix timestamps into standard dates
         weekinfo = datetime.utcfromtimestamp(item["week"]).isocalendar()
         weekstring = str(weekinfo[0]) + "-W" + str(weekinfo[1]) + "-1"
         item["week"] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime("%Y-%m-%d")
