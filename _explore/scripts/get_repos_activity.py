@@ -3,7 +3,7 @@ from os import environ as env
 import re
 from datetime import datetime
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labRepos_Activity.json" % ghDataDir
 query_in = "/repos/OWNNAME/REPONAME/stats/commit_activity"
 
@@ -29,14 +29,11 @@ for repo in repolist:
 
     r = repo.split("/")
 
-    gitquery = re.sub('OWNNAME', r[0], query_in)
-    gitquery = re.sub('REPONAME', r[1], gitquery)
+    gitquery = re.sub("OWNNAME", r[0], query_in)
+    gitquery = re.sub("REPONAME", r[1], gitquery)
 
     try:
-        outObj = queryMan.queryGitHub(
-            gitquery,
-            rest=True
-        )
+        outObj = queryMan.queryGitHub(gitquery, rest=True)
     except Exception as error:
         print("Warning: Could not complete '%s'" % (repo))
         print(error)
@@ -46,7 +43,7 @@ for repo in repolist:
     for item in outObj:
         weekinfo = datetime.utcfromtimestamp(item["week"]).isocalendar()
         weekstring = str(weekinfo[0]) + "-W" + str(weekinfo[1]) + "-1"
-        item["week"] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime('%Y-%m-%d')
+        item["week"] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime("%Y-%m-%d")
 
     # Update collective data
     dataCollector.data["data"][repo] = outObj

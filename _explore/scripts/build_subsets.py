@@ -1,7 +1,7 @@
 from scraper.github import queryManager as qm
 from os import environ as env
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labReposSubsets.json" % ghDataDir
 
 # Read repo info data file (to use as repo list)
@@ -57,7 +57,7 @@ for tag in myTags:
     for org in sub_orglist:
         print("\t%s" % org)
         matched_orgs = list(filter(lambda x: matchOrg(org, x), repolist))
-        print("\t  > ", end='')
+        print("\t  > ", end="")
         print("match %s" % len(matched_orgs) if (len(matched_orgs) > 0) else "NO MATCH")
         subset.update(matched_orgs)
 
@@ -65,8 +65,10 @@ for tag in myTags:
     for repo in sub_repolist:
         print("\t%s" % repo)
         matched_repos = list(filter(lambda x: matchRepo(repo, x), repolist))
-        print("\t  > ", end='')
-        print("match %s" % len(matched_repos) if (len(matched_repos) > 0) else "NO MATCH")
+        print("\t  > ", end="")
+        print(
+            "match %s" % len(matched_repos) if (len(matched_repos) > 0) else "NO MATCH"
+        )
         subset.update(matched_repos)
 
     # Update collective data
