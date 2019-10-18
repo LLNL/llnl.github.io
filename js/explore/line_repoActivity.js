@@ -187,7 +187,9 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
     function reformatData(obj) {
         // Calculate combined values
         var dataTotals = {};
+        var repoCounts = {};
         var repos = repoNameWOwner == null ? Object.keys(obj['data']) : [repoNameWOwner];
+        var numReposExpected = repos.length;
         repos.forEach(function(repo) {
             if (obj['data'].hasOwnProperty(repo)) {
                 var weeklyNodes = obj['data'][repo];
@@ -196,25 +198,34 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     var weeklytotal = weeklyNodes[i]['total'];
                     if (!Object.keys(dataTotals).contains(weekstamp)) {
                         dataTotals[weekstamp] = 0;
+                        repoCounts[weekstamp] = 0;
                     }
                     dataTotals[weekstamp] += weeklytotal;
+                    repoCounts[weekstamp] += 1;
                 }
             } else {
                 console.log('No activity data recorded for ' + repo + ', using dummy data.');
                 // Today
                 var end = new Date();
                 dataTotals[formatTime(end)] = 0;
+                repoCounts[formatTime(end)] = 1;
                 // Tomorrow, 1 year ago
                 var start = new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate() + 1);
                 dataTotals[formatTime(start)] = 0;
+                repoCounts[formatTime(start)] = 1;
             }
         });
 
-        // Formate data for graphing
+        // Format data for graphing
         var data = [];
         var sortedTimestamps = Object.keys(dataTotals).sort();
         sortedTimestamps.forEach(function(timestamp) {
-            data.push({ date: timestamp, value: dataTotals[timestamp] });
+            var numReposFound = repoCounts[timestamp];
+            if (numReposFound == numReposExpected) {
+                data.push({ date: timestamp, value: dataTotals[timestamp] });
+            } else {
+                console.log('Repo count mismatch for activity on ' + timestamp + ': expected ' + numReposExpected + ', found ' + numReposFound);
+            }
         });
 
         return data;
