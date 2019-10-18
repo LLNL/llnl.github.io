@@ -6,7 +6,7 @@ set -eu
 # Check hub installation
 hub version
 
-# Requires BRANCH_NAME, BOT_USER, BOT_TOKEN, GITHUB_TOKEN to be included by workflow
+# Requires BRANCH_NAME, BOT_USER, BOT_TOKEN to be included by workflow
 export GITHUB_API_TOKEN=$BOT_TOKEN
 
 ACT_LOG_PATH=_explore/LAST_MASTER_UPDATE.txt
@@ -21,7 +21,7 @@ git config --global user.email "${BOT_USER}@users.noreply.github.com"
 git config --global hub.protocol https
 
 # Get latest copy of repository
-git clone --shallow-since=$CLONE_CUTOFF --no-single-branch "https://${BOT_USER}:${GITHUB_TOKEN}@github.com/LLNL/llnl.github.io.git"
+git clone --shallow-since=$CLONE_CUTOFF --no-single-branch "https://${BOT_USER}:${BOT_TOKEN}@github.com/LLNL/llnl.github.io.git"
 cd llnl.github.io
 REPO_ROOT=$(pwd)
 
