@@ -11,7 +11,7 @@ jobs:
     - name: Run Data Update
       uses: ./_action-update
       env:
-        BRANCH_NAME: bot-update
+        BRANCH_NAME: master
         BOT_USER: lc-bot
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

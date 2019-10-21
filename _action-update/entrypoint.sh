@@ -84,10 +84,11 @@ if [ "$CHANGE_COUNT" -ne "$VALID_COUNT" ]
 fi
 
 ### COMMIT UPDATE ###
+git pull
 git commit -m "${DATA_TIMESTAMP} Data Update by ${BOT_USER}"
 git push origin $BRANCH_NAME
 
 # Create pull request, or list existing
-hub pull-request --no-edit --message "Data Update by ${BOT_USER}" || hub pr list --state open --head $BRANCH_NAME
+# hub pull-request --no-edit --message "Data Update by ${BOT_USER}" || hub pr list --state open --head $BRANCH_NAME
 
 exit 0
