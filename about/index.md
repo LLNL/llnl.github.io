@@ -25,7 +25,7 @@ Case in point: The DOE’s [Advanced Simulation and Computing (ASC) Program](htt
 
 This portal abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You’ll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE). You can also browse our projects on [GitHub](https://github.com/LLNL), [GitLab](https://gitlab.com/llnl), and [Bitbucket](https://bitbucket.org/llnl).
 
-### Learn More
+### Learn More about OSS at LLNL
 
 - [Federal OSS policy guide](https://code.gov/policy-guide/introduction)
 - 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
