@@ -2,6 +2,12 @@
     pointer-events: none;
 }
 
+.static-text a,
+    a:visited {
+      color: #005dab;
+      text-decoration: underline;
+}
+
 /* FlexBox configuration */
 
 .flex-container {
@@ -130,9 +136,17 @@
 .navbar-header a.navbar-brand {
     color: #005dab;
     font-weight: bold;
+    text-decoration: none;
 }
+
+.navbar a.navbar-normal {
+    color: #005dab;
+    text-decoration: none;
+}
+
 .navbar {
     margin-bottom: 0;
+    text-decoration: none;
 }
 
 /* Dropdown */
@@ -143,11 +157,13 @@
     background-color: #f8f8f8;
     min-width: 160px;
     padding: 5px;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
     .dropdown-content {
         visibility: hidden;
+        text-decoration: none;
     }
 }
 
