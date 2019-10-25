@@ -1,6 +1,6 @@
 on:
   schedule:
-  - cron: "15 8/12 * * *"
+  - cron: "35 8/12 * * *"
 name: Scheduled Data Updates
 jobs:
   runDataUpdate:
@@ -14,4 +14,3 @@ jobs:
         BRANCH_NAME: master
         BOT_USER: lc-bot
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
