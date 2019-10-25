@@ -25,7 +25,7 @@
             <div class="nav-container">
                 <nav class="stickynav">
                     <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }" >
-                        <img ng-src="{{category.icon.path}}" style="width: 40px; height: 40px; margin-right: 10px;">
+                        <img ng-src="{{category.icon.path}}" style="width: 40px; height: 40px; margin-right: 10px;" alt="{{category.icon.alt}}">
                         <a class="tab">{{category.displayTitle}}</a>
                     </div>
                 </nav>
@@ -37,7 +37,7 @@
 
                         <div ng-if="category.title === currentLocation">
                             <div class="title-container page-header">
-                                <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
+                                <img ng-src="{{category.icon.path}}" style="width: 125px; height: 125px" alt="{{category.icon.alt}}">
                                 <div class="title-description">
                                     <h3>{{category.title}}</h3>
                                     <p>{{category.description}} </p>
