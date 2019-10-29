@@ -5,5 +5,7 @@ gem 'jekyll-sitemap'
 gem 'jekyll-redirect-from'
 gem 'jekyll-seo-tag'
 gem 'jekyll-coffeescript'
-gem 'github-pages', group: :jekyll_plugins
 gem "jekyll-remote-theme"
+gem 'github-pages', group: :jekyll_plugins
+gem 'html-proofer'
+gem 'mdl'
