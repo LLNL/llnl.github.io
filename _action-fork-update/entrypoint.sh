@@ -88,14 +88,11 @@ fi
 ### COMMIT UPDATE ###
 git pull
 git commit -m "${DATA_TIMESTAMP} Data Update by ${BOT_USER}"
-# git push origin master
+git push origin master
 
 ### SEND UPDATE UPSTREAM ###
 git checkout -b data-update-${DATA_TIMESTAMP} upstream/master
 git cherry-pick master
-git push upstream data-update-${DATA_TIMESTAMP}/master
-
-# Create pull request, or list existing
-# hub pull-request --no-edit --message "Data Update by ${BOT_USER}" || hub pr list --state open --head $BRANCH_NAME
+git push upstream data-update-${DATA_TIMESTAMP}:master
 
 exit 0
