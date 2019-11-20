@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-LABEL "com.github.actions.name"="Run Forked Data Update From"
+LABEL "com.github.actions.name"="Run Forked Data Update"
 LABEL "com.github.actions.description"="Run the complete MASTER data update from a forked repo."
 LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="blue"
