@@ -132,7 +132,7 @@ badge](https://img.shields.io/badge/M.lic-1-blue.svg)](/radiuss/policies/licensi
 
 &nbsp;
 
-#### [Testing and Continuous Integration](/radiuss/policies/testing-ci)
+#### [Testing and Continuous Integration](/radiuss/policies/tests-ci)
 
 [![Generic badge](https://img.shields.io/badge/M.tes-1-blue.svg)](/radiuss/policies/tests-ci/) &emsp;Use regression tests in the development process.
 
