@@ -21,49 +21,54 @@ layout: info
 
 [![Generic badge](https://img.shields.io/badge/M.doc-1-blue.svg)]() **Publish documentation in a web-based form.**
 
-> Rationale: Web-based documentation is accessible, searchable, and linkable. It allows users to easily point each other to relevant parts of the documentation in emails, the code, and other documents. 
+**Rationale:** Web-based documentation is accessible, searchable, and linkable. It allows users to easily point each other to relevant parts of the documentation in emails, the code, and other documents. It also makes it easier to manage under revision control (see M.doc.3 and R.doc.5)).
 
-Ref: WSC 4.1
+***Ref:** WSC 4.1*
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.doc-2-blue.svg)]() **Provide a concise description of the project.**
+[![Generic badge](https://img.shields.io/badge/M.doc-2-blue.svg)]() **Provide a concise description of the software functionality wherever your project is summarized**
 
+**Details:** The description should typically be answering "What is it for ?" and "Should I use it ?", and not simply an extension of an acronym or otherwise fully generic description that does not differentiate the software from other products. This description (1-3 sentences) should be consistently used in:
 
-Details: 
- - The description should typically be answering "What is it for ?" and "Should I use it ?".
- - One possible location for this description is at top of the root README.md. 
- - This description should also be used in the repository host web interface (ie GitHub most of the time here). This information is in fact automatically retrieved to generate https://software.llnl.gov/.
- - This description should also be placed in the corresponding Spack package.
+ - The GitHub host web interface (modified with the 'Edit' button)
+ - The top of the root README.md 
+ - The corresponding Spack package
  
-> Rationale: With increasing number of products and dependencies in simulation softwares, one has to be able to navigate them whatever his background. 
+**Rationale:** Developers who come across your project or repository should be able to determine almost immediately if your project is applicable to their needs. The GitHub repo description is also used as the basis to automatically describe each project at [https://software.llnl.gov/](https://software.llnl.gov/).
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.doc-3-blue.svg)]() **Version controlled documentation coherently with source code.**
+[![Generic badge](https://img.shields.io/badge/M.doc-3-blue.svg)]() **Version control documentation consistent with and alongside your source code.**
 
-> Rationale: When documentation is version controlled coherently with source code, developers and users can easily retrieve the documentation associated with any revision of the code. Versioning documentation along with source code (in the same repository) also allows any developer to easily contribute to the documentation. 
+**Rationale:** When documentation is version controlled coherently with source code, developers and users can easily retrieve the documentation associated with any revision of the code. Versioning documentation along with source code (in the same repository) also allows and encourages any developer to easily contribute to the documentation as part of their pull request.
 
-Ref: WSC 4.3
+***Ref:** WSC 4.3*
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.doc-4-blue.svg)]() **Provide a documented, reliable way to contact the development team, even for RADIUSS itself.**
+[![Generic badge](https://img.shields.io/badge/M.doc-4-blue.svg)]() **Provide a documented, reliable way to contact the development team.**
 
-Ref: xSDK M5
+**Details:** Contact can be through email address, a web-based submission form, or via GitHub (issues, pull requests). In the case of email, a generic name is preferred that can be reflected to alternate or multiple team members as needed. Joining a mailing list should not be required.
+
+**Rationale:** Users should be able to easily contact the development team in order to report bugs or request basic assistance. RADIUSS can provide support for those libraries included in the RADIUSS project for basic fixes and support.
+
+***Ref:** xSDK M5*
 
 ---
 
 [![Generic badge](https://img.shields.io/badge/R.doc-5-9cf.svg)]() **Produce Web and PDF documentation from a readable plain-text format.** 
 
-> Rationale: All of these tools allow developers to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format.
+**Rationale:** All of these tools allow developers to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format.
+
+<span style="color:red">QUESTION: Can we merge this with M.doc.1? </span>
 
 Examples :
  - [Sphinx](http://www.sphinx-doc.org/en/master/#)
  - [LaTeX](https://www.latex-project.org/)
  - [Doxygen](http://www.doxygen.nl/).
 
-Ref: WSC 4.4
+***Ref:** WSC 4.4*
 
 Tag: Tools
 
@@ -71,11 +76,19 @@ Tag: Tools
 
 [![Generic badge](https://img.shields.io/badge/R.doc-6-9cf.svg)]() **Provide and maintain example codes along with documentation.**
 
-Details:
+**Details:**
  - Examples should be compiled and tested as part of a release to make sure they are kept up to date with API changes.
  - New examples should be added when major new features are released, or existing examples should be extended to include those new features.
  - Existing proxy apps (e.g. https://software.llnl.gov/category/#/PROXYAPPLICATIONS) are a potential good starting place.
 
-> Rationale: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (cf [Testing and Continuous Integration](/radiuss/policies/tests-ci.md)) 
+**Rationale:** This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/radiuss/policies/tests-ci.md)) 
+ 
+---
+
+[![Generic badge](https://img.shields.io/badge/R.doc-7-9cf.svg)]() **Provide a documented policy for handling pull requests from external contributors**
+
+**Details:** Successful open source projects will attract bug fixes and feature development from the external community, preferably via pull requests on GitHub associated with a particular issue in the tracker. Teams should have a policy documenting expectations for when a pull request may be accepted, rejected, or returned for modifications.
+
+**Rationale:** Developers providing fixes will be discouraged from future contributions if they feel they are being ignored. Similarly, they are probably using a branched version of your software to workaround the fix they provided, which leads to additional inefficiencies. 
  
 ---
