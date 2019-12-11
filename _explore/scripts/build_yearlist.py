@@ -2,7 +2,7 @@ from scraper.github import queryManager as qm
 from os import environ as env
 import os.path
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 yearDict = {}
 
 # Gather all file name data

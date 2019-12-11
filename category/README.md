@@ -1,4 +1,4 @@
-# Website Categories 
+# Website Categories
 
 This folder is the home of the JSON file containing the info for the categories that are displayed on the website's home page. If any edits need to be made to these categories, just edit the data in the JSON and the home page will reflect your changes automatically.
 
@@ -12,6 +12,7 @@ For each category this file contains it's title, [icon][icon dir] filepath, and 
 - **Applications**: Browse scientific simulation codes and IT management tools - `application`
 - **Build Tools**: Automate and simplify complex dependencies and deployments - `build-tools`
 - **Data Management & Viz**: Manage visualizations with robust features and configurable analysis - `data-management`, `data-viz`
+- **File Systems**: Configure data storage and retrieval for more efficient workloads - `file-system`
 - **Full Catalog / All Software**: Browse all LLNL open source projects - no tags required
 - **Math & Physics Libraries**: Optimize solvers, higher order methods, and AMR frameworks - `math-physics`
 - **Performance & Workflow**: Manage and scale complex workflows, tracking, and data collection - `performance`, `workflows`
@@ -20,3 +21,9 @@ For each category this file contains it's title, [icon][icon dir] filepath, and 
 - **System Software**: Manage laptop and desktop computer systems, HPC clusters, and parallel environments - `system-software`
 
 In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `checkpoint`, `cmake`, `cpp` (C++), `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `hpc`, `javascript`, `machine-learning`, `matlab`, `monte-carlo`, `mpi`, `neural-network`, `parallel`, `python`, `shell`, `simulation`, `solver`, `uncertainty-quantification`.
+
+To add a new category to the catalog:
+1. Update this README with the category name (in alphabetical order), description, and tag.
+2. Add the new icon (.svg) to [Assets > Images](https://github.com/LLNL/llnl.github.io/tree/master/assets/images).
+3. Update [`category_info.json`](https://github.com/LLNL/llnl.github.io/blob/master/category/category_info.json) with category metadata such as image file path, descriptive blurb, and corresponding topic(s).
+4. Tag repos with the new topic as approriate.

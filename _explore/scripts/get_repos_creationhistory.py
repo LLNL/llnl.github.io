@@ -2,7 +2,7 @@ from scraper.github import queryManager as qm
 from os import environ as env
 import re
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labRepos_CreationHistory.json" % ghDataDir
 query_commits_in = "/repos/OWNNAME/REPONAME/commits?until=CREATETIME&per_page=100"
 query_commits_in2 = "/repos/OWNNAME/REPONAME/commits?per_page=100"
@@ -48,16 +48,12 @@ for repo in repolist:
     # Query
     print("Part 2)  Get pre-GitHub commit timestamps...")
 
-    gitquery2 = re.sub('OWNNAME', r[0], query_commits_in)
-    gitquery2 = re.sub('REPONAME', r[1], gitquery2)
-    gitquery2 = re.sub('CREATETIME', repoData["createdAt"], gitquery2)
+    gitquery2 = re.sub("OWNNAME", r[0], query_commits_in)
+    gitquery2 = re.sub("REPONAME", r[1], gitquery2)
+    gitquery2 = re.sub("CREATETIME", repoData["createdAt"], gitquery2)
 
     try:
-        outObj2 = queryMan.queryGitHub(
-            gitquery2,
-            rest=True,
-            paginate=True
-        )
+        outObj2 = queryMan.queryGitHub(gitquery2, rest=True, paginate=True)
     except Exception as error:
         print("Could not complete '%s'" % (repo))
         print(error)
@@ -79,15 +75,11 @@ for repo in repolist:
         # Query 3
         print("Part 3)  No pre-GitHub commits found, getting full history...")
 
-        gitquery3 = re.sub('OWNNAME', r[0], query_commits_in2)
-        gitquery3 = re.sub('REPONAME', r[1], gitquery3)
+        gitquery3 = re.sub("OWNNAME", r[0], query_commits_in2)
+        gitquery3 = re.sub("REPONAME", r[1], gitquery3)
 
         try:
-            outObj3 = queryMan.queryGitHub(
-                gitquery3,
-                rest=True,
-                paginate=True
-            )
+            outObj3 = queryMan.queryGitHub(gitquery3, rest=True, paginate=True)
         except Exception as error:
             print("Warning: Could not complete '%s'" % (repo))
             print(error)
@@ -95,7 +87,9 @@ for repo in repolist:
         # Update repo data
         try:
             for commit in outObj3:
-                repoData["commitTimestamps"].append(commit["commit"]["committer"]["date"])
+                repoData["commitTimestamps"].append(
+                    commit["commit"]["committer"]["date"]
+                )
         except NameError:
             print("Could not get any commits for '%s'." % (repo))
             continue

@@ -1,6 +1,6 @@
 from scraper.github import queryManager as qm
 
-ghDataDir = '../../explore/github-data'
+ghDataDir = "../../explore/github-data"
 genDatafile = "%s/labReposInfo.json" % ghDataDir
 topicsDatafile = "%s/labRepos_Topics.json" % ghDataDir
 writeFile = "%s/labRepo_Metadata.json" % ghDataDir
@@ -24,7 +24,7 @@ for repo in genDataCollector.data["data"]:
     repoObj = genDataCollector.data["data"][repo]
 
     repoData["name"] = repo
-    repoData["decription"] = repoObj["description"]
+    repoData["description"] = repoObj["description"]
     repoData["website"] = repoObj["homepageUrl"]
 
     # gather any repo topics

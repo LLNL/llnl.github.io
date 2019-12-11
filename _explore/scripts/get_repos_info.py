@@ -1,7 +1,7 @@
 from scraper.github import queryManager as qm
 from os import environ as env
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labReposInfo.json" % ghDataDir
 queryPath = "../queries/org-Repos-Info.gql"
 queryPathInd = "../queries/repo-Info.gql"
@@ -29,7 +29,7 @@ for org in orglist:
             {"orgName": org, "numRepos": 50, "pgCursor": None},
             paginate=True,
             cursorVar="pgCursor",
-            keysToList=["data", "organization", "repositories", "nodes"]
+            keysToList=["data", "organization", "repositories", "nodes"],
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (org))
@@ -54,8 +54,7 @@ for repo in repolist:
     r = repo.split("/")
     try:
         outObj = queryMan.queryGitHubFromFile(
-            queryPathInd,
-            {"ownName": r[0], "repoName": r[1]}
+            queryPathInd, {"ownName": r[0], "repoName": r[1]}
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (repo))
