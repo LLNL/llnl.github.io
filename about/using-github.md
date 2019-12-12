@@ -99,7 +99,7 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 Now that your project is on GitHub, make sure users and contributors can find it! There are several ways to do this. Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) for help with the following tasks:
 
 * Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
-    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/master/categories/README.md) of recommended, standardized topics.
+    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/master/category/README.md) of recommended, standardized topics.
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
     * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/), be sure to add the `radiuss` topic along with the appropriate [category tags](https://github.com/LLNL/llnl.github.io/blob/master/radiuss/README.md).
 * Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub.
