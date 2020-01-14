@@ -1,8 +1,6 @@
 ---
-title: "LLNL-Led Team Wins SC19 Best Paper Award"
-tags: story, trip-report
+title: "New Repo: Merlin"
+tags: new-repo
 ---
 
-On November 22, a panel of judges at the International Conference for High Performance Computing, Networking, Storage and Analysis (SC19) awarded a multi-institutional team led by LLNL computer scientists with the conference’s Best Paper award. The [paper](http://www.sci.utah.edu/~hbhatia/pubs/2019_SC_MUMMI.pdf), entitled “Massively Parallel Infrastructure for Adaptive Multiscale Simulations: Modeling RAS Initiation Pathway for Cancer,” describes the workflow driving a first-of-its-kind multiscale simulation on predictively modeling the dynamics of RAS proteins&mdash;a family of proteins whose mutations are linked to more than 30 percent of all human cancers&mdash;and their interactions with lipids, the organic compounds that help make up cell membranes.
-
-The team’s software, called MuMMI (Multiscale Machine-Learned Modeling Infrastructure), will soon be released as open source. Read more about the award on [LLNL news](https://www.llnl.gov/news/llnl-led-team-awarded-best-paper-sc19-modeling-cancer-causing-protein-interactions).
+[Merlin](https://github.com/LLNL/Merlin) s a tool for running machine learning based workflows. The goal of Merlin is to make it easy to build, run, and process the kinds of large scale HPC workflows needed for cognitive simulation. At its heart, Merlin is a distributed task queuing system, designed to allow complex HPC workflows to scale to large numbers of simulations. See the [documentation](https://merlin.readthedocs.io/en/latest/) for more information including configuration variables and FAQ.

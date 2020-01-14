@@ -3,4 +3,4 @@ title: "High-Order Finite Element Library Provides Scientists with Access to Cut
 tags: story
 ---
 
-[Learn more](https://computing.llnl.gov/newsroom/high-order-finite-element-library-provides-scientists-access-cutting-edge-algorithms) about the origins of [MFEM](http://mfem.org/), one of our flagship open-source projects.
+[Learn more](https://computing.llnl.gov/projects/mfem-scalable-finite-element-discretization-library) about the origins of [MFEM](http://mfem.org/), one of our flagship open-source projects.
