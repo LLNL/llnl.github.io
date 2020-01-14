@@ -17,3 +17,5 @@ Tags should appear in each post's front matter under the title and separated by 
 title: "Title of Post"
 tags: new-repo, story
 ```
+
+LLNL's [.github repo](https://github.com/LLNL/.github/tree/master/news-templates) contains .md templates for each of these types of posts. For posts that combine multiple tags (e.g., multimedia, event), a combination of templates may be used. File naming conventions are also provided.
