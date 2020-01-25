@@ -1419,7 +1419,9 @@
     "LLNL/AutoParBench": {
         "description": "AutoParBench is a benchmark framework to evaluate compilers and tools designed to automatically insert OpenMP directives. ",
         "name": "LLNL/AutoParBench",
-        "topics": null,
+        "topics": [
+            "openmp"
+        ],
         "website": null
     },
     "LLNL/AutomaDeD": {
@@ -1529,6 +1531,12 @@
         "topics": null,
         "website": null
     },
+    "LLNL/DFTT": {
+        "description": "Software for building and operating suites of correlation and subspace detectors",
+        "name": "LLNL/DFTT",
+        "topics": null,
+        "website": null
+    },
     "LLNL/DJINN": {
         "description": "Deep jointly-informed neural networks -- as easy-to-use algorithm for designing/initializing neural nets ",
         "name": "LLNL/DJINN",
@@ -1541,7 +1549,10 @@
     "LLNL/DiHydrogen": {
         "description": null,
         "name": "LLNL/DiHydrogen",
-        "topics": null,
+        "topics": [
+            "cpp",
+            "math-physics"
+        ],
         "website": null
     },
     "LLNL/DragonView": {
@@ -1660,7 +1671,10 @@
     "LLNL/GridKit": {
         "description": "Experimental code for prototyping interfaces betwen numerical libraries and network models.",
         "name": "LLNL/GridKit",
-        "topics": null,
+        "topics": [
+            "cpp",
+            "energy"
+        ],
         "website": ""
     },
     "LLNL/H2OI95": {
@@ -1773,7 +1787,8 @@
         "name": "LLNL/MPI-Stages",
         "topics": [
             "mpi",
-            "checkpoint"
+            "checkpoint",
+            "cpp"
         ],
         "website": null
     },
@@ -1792,7 +1807,8 @@
             "machine-learning",
             "classification-algorithm",
             "regression-models",
-            "multitask-learning"
+            "multitask-learning",
+            "python"
         ],
         "website": null
     },
@@ -1890,7 +1906,8 @@
             "visualization",
             "visual-analytics",
             "topological-data-analysis",
-            "data-viz"
+            "data-viz",
+            "data-analysis"
         ],
         "website": null
     },
@@ -1904,7 +1921,8 @@
         "description": "Open Facility Viewer (OFV) is an application for 3D interactive walk-throughs of facilities",
         "name": "LLNL/Open-Facility-Viewer",
         "topics": [
-            "application"
+            "application",
+            "cpp"
         ],
         "website": null
     },
@@ -1946,7 +1964,8 @@
         "name": "LLNL/Quicksilver",
         "topics": [
             "proxy-application",
-            "monte-carlo"
+            "monte-carlo",
+            "cpp"
         ],
         "website": null
     },
@@ -1977,7 +1996,9 @@
     "LLNL/RAJA-project-template": {
         "description": "A template project using CMake & BLT to build a RAJA application",
         "name": "LLNL/RAJA-project-template",
-        "topics": null,
+        "topics": [
+            "cpp"
+        ],
         "website": null
     },
     "LLNL/RAJA-tutorials": {
@@ -2071,7 +2092,8 @@
         "description": "Small Non-Linear Solver",
         "name": "LLNL/SNLS",
         "topics": [
-            "solver"
+            "solver",
+            "math-physics"
         ],
         "website": null
     },
@@ -2131,7 +2153,8 @@
         "description": "Using machine learning to score potential drug candidates may offer an advantage over traditional imprecise scoring functions because the parameters and model structure can be learned from the data. However, models may lack interpretability, are often overfit to the data, and are not generalizable to drug targets and chemotypes not in the training data. Benchmark datasets are prone to artificial enrichment and analogue bias due to the overrepresentation of certain scaffolds in experimentally determined active sets. Datasets can be evaluated using spatial statistics to quantify the dataset topology and better understand potential biases. Dataset clumping comprises a combination of self-similarity of actives and separation from decoys in chemical space and is associated with overoptimistic virtual screening results. This code explores methods of quantifying potential biases and examines some common benchmark datasets.",
         "name": "LLNL/SmallMolEval",
         "topics": [
-            "machine-learning"
+            "machine-learning",
+            "python"
         ],
         "website": null
     },
@@ -2197,7 +2220,9 @@
     "LLNL/TraceR-examples": {
         "description": null,
         "name": "LLNL/TraceR-examples",
-        "topics": null,
+        "topics": [
+            "cpp"
+        ],
         "website": null
     },
     "LLNL/TreeScope": {
@@ -2298,6 +2323,12 @@
         "name": "LLNL/adept-utils",
         "topics": null,
         "website": ""
+    },
+    "LLNL/al_nlp": {
+        "description": "Active Learning framework for Natural Language Processing of pathology reports.",
+        "name": "LLNL/al_nlp",
+        "topics": null,
+        "website": null
     },
     "LLNL/ap": {
         "description": "Absolute Path Command",
@@ -2558,7 +2589,9 @@
     "LLNL/devil_ray": {
         "description": null,
         "name": "LLNL/devil_ray",
-        "topics": null,
+        "topics": [
+            "cpp"
+        ],
         "website": null
     },
     "LLNL/dtcmp": {
@@ -2572,6 +2605,12 @@
     "LLNL/f-strings": {
         "description": "String interpolation for Lua",
         "name": "LLNL/f-strings",
+        "topics": null,
+        "website": null
+    },
+    "LLNL/fastcam": {
+        "description": "A toolkit for efficent computation of saliency maps for explainable AI attribution. ",
+        "name": "LLNL/fastcam",
         "topics": null,
         "website": null
     },
@@ -2592,20 +2631,26 @@
     "LLNL/fpp": {
         "description": "Function preserving projection (FPP), a linear projection technique for capturing interpretable patterns of high-dimensional functions ",
         "name": "LLNL/fpp",
-        "topics": null,
+        "topics": [
+            "high-dimensional-data",
+            "data-viz"
+        ],
         "website": ""
     },
     "LLNL/fpzip": {
         "description": "Lossless compressor of multidimensional floating-point arrays",
         "name": "LLNL/fpzip",
-        "topics": null,
+        "topics": [
+            "cpp"
+        ],
         "website": "http://computing.llnl.gov/projects/floating-point-compression"
     },
     "LLNL/fudge": {
         "description": "For Updating Data and Generating Evaluations (FUDGE): LLNL code for managing nuclear data",
         "name": "LLNL/fudge",
         "topics": [
-            "application"
+            "application",
+            "python"
         ],
         "website": null
     },
@@ -2613,7 +2658,8 @@
         "description": "C++ library for graph ordering",
         "name": "LLNL/gecko",
         "topics": [
-            "cpp"
+            "cpp",
+            "graph"
         ],
         "website": null
     },
@@ -2669,14 +2715,17 @@
         "description": "Communication Graph Generator for Parallel Programs",
         "name": "LLNL/graphator",
         "topics": [
-            "parallel"
+            "parallel",
+            "graph"
         ],
         "website": null
     },
     "LLNL/graphlib": {
         "description": "GraphLib",
         "name": "LLNL/graphlib",
-        "topics": null,
+        "topics": [
+            "graph"
+        ],
         "website": null
     },
     "LLNL/gtest-mpi-listener": {
@@ -2684,7 +2733,8 @@
         "name": "LLNL/gtest-mpi-listener",
         "topics": [
             "mpi",
-            "parallel"
+            "parallel",
+            "cpp"
         ],
         "website": null
     },
@@ -2708,7 +2758,10 @@
     "LLNL/havoqgt": {
         "description": null,
         "name": "LLNL/havoqgt",
-        "topics": null,
+        "topics": [
+            "cpp",
+            "graph"
+        ],
         "website": ""
     },
     "LLNL/hdtopology": {
@@ -2716,7 +2769,10 @@
         "name": "LLNL/hdtopology",
         "topics": [
             "high-dimensional-data",
-            "topological-data-analysis"
+            "topological-data-analysis",
+            "cpp",
+            "data-analysis",
+            "data-viz"
         ],
         "website": ""
     },
@@ -2825,7 +2881,9 @@
     "LLNL/ldapotp-java-api": {
         "description": "provides OTP authentication services for java applications",
         "name": "LLNL/ldapotp-java-api",
-        "topics": null,
+        "topics": [
+            "java"
+        ],
         "website": null
     },
     "LLNL/ldapotp-jni-lib": {
@@ -3009,7 +3067,8 @@
         "name": "LLNL/mgmol",
         "topics": [
             "simulation",
-            "cpp"
+            "cpp",
+            "molecular-dynamics"
         ],
         "website": null
     },
@@ -3094,7 +3153,11 @@
     "LLNL/muster": {
         "description": "Massively Scalable Clustering",
         "name": "LLNL/muster",
-        "topics": null,
+        "topics": [
+            "cpp",
+            "parallel",
+            "mpi"
+        ],
         "website": "http://github.com/LLNL/muster"
     },
     "LLNL/nami": {
@@ -3136,7 +3199,8 @@
         "name": "LLNL/parelag",
         "topics": [
             "parallel",
-            "solver"
+            "solver",
+            "math-physics"
         ],
         "website": null
     },
@@ -3256,7 +3320,8 @@
             "tddft",
             "mpi",
             "cpp",
-            "c-plus-plus"
+            "c-plus-plus",
+            "molecular-dynamics"
         ],
         "website": ""
     },
@@ -3280,13 +3345,20 @@
         "description": "Ravel MPI trace visualization tool",
         "name": "LLNL/ravel",
         "topics": [
-            "mpi"
+            "mpi",
+            "data-viz"
         ],
         "website": ""
     },
     "LLNL/refex-rolx": {
         "description": null,
         "name": "LLNL/refex-rolx",
+        "topics": null,
+        "website": null
+    },
+    "LLNL/remote-mirror-security": {
+        "description": null,
+        "name": "LLNL/remote-mirror-security",
         "topics": null,
         "website": null
     },
@@ -3299,7 +3371,9 @@
     "LLNL/ross-matrix-models": {
         "description": null,
         "name": "LLNL/ross-matrix-models",
-        "topics": null,
+        "topics": [
+            "cpp"
+        ],
         "website": null
     },
     "LLNL/rover": {
@@ -3333,7 +3407,8 @@
         "description": "Smoothed aggregation spectral element-based algebraic multigrid",
         "name": "LLNL/saamge",
         "topics": [
-            "math-physics"
+            "math-physics",
+            "cpp"
         ],
         "website": null
     },
@@ -3444,7 +3519,8 @@
         "topics": [
             "solver",
             "cpp",
-            "math-physics"
+            "math-physics",
+            "graph"
         ],
         "website": ""
     },
@@ -3527,7 +3603,9 @@
     "LLNL/trainGMM": {
         "description": null,
         "name": "LLNL/trainGMM",
-        "topics": null,
+        "topics": [
+            "python"
+        ],
         "website": null
     },
     "LLNL/uberenv": {
@@ -3590,8 +3668,8 @@
             "performance-analysis",
             "cmake",
             "hwloc",
-            "c",
-            "sampling"
+            "sampling",
+            "cpp"
         ],
         "website": "https://variorum.readthedocs.io"
     },
@@ -3648,7 +3726,8 @@
         "name": "LLNL/zero-rk",
         "topics": [
             "cpp",
-            "simulation"
+            "simulation",
+            "application"
         ],
         "website": null
     },
