@@ -20,7 +20,7 @@ For each category this file contains it's title, [icon][icon dir] filepath, and 
 - **Proxy Applications**: Prepare for testing and porting applications - `proxy-application`
 - **System Software**: Manage laptop and desktop computer systems, HPC clusters, and parallel environments - `system-software`
 
-In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `checkpoint`, `cmake`, `cpp` (C++), `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `hpc`, `javascript`, `machine-learning`, `matlab`, `monte-carlo`, `mpi`, `neural-network`, `parallel`, `python`, `shell`, `simulation`, `solver`, `uncertainty-quantification`.
+In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `checkpoint`, `cmake`, `cpp` (C++), `data-analysis`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `machine-learning`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `neural-network`, `openmp`, `parallel`, `python`, `shell`, `simulation`, `solver`, `uncertainty-quantification`.
 
 To add a new category to the catalog:
 1. Update this README with the category name (in alphabetical order), description, and tag.
