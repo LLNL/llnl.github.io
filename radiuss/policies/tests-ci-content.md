@@ -57,10 +57,15 @@
 
 [![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)]() **Ensure code quality/health in an automated manner.**
 
+>Details
+>: Example tools:
+>  - Asan (AddressSanitizer)
+>  - clang-tidy
+>  - cppcheck
+>  - cpplint
+>
 >Rationale
 >: Code quality checkers help to prevent code constructs that may result in errors in future environments where the code may run. They also reduce noise in build output that may obfuscate real errors. Code style checkers can also help enforce consistent style across a project.
->
-><span style="color:red">QUESTION: Can we provide some examples of recommended tooling here? </span>
 >
 >Ref
 >: *WSC 5.4*

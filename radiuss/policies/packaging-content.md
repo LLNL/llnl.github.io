@@ -3,8 +3,6 @@
 >Details
 >: Each product API must include functionality to return the current version number of the software and indicate which configure/CMake and compiler options were used to build the package. For development versions of the software, each package must provide the current commit ID (e.g. git hash) in the repository.
 >
-><span style="color:red">QUESTION: How easy is it to capture the compiler options dumped into the executable? Can this instead point to a specific Spack build? </span>
->
 >Rationale
 >: This allows users to make an inventory of what they have, which is critical for reproducability, and which can aid debugging and configuration management. 
 >

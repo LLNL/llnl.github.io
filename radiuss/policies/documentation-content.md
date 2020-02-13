@@ -1,10 +1,17 @@
-[![Generic badge](https://img.shields.io/badge/M.doc-1-red.svg)]() **Publish documentation in a web-based format.**
+[![Generic badge](https://img.shields.io/badge/M.doc-1-red.svg)]() **Develop documentation from a readable plain-text format that can be publish documentation in a web-based format or as a PDF**
 
 >Rationale
->: Web-based documentation is accessible, searchable, and linkable. It allows users to easily point each other to relevant parts of the documentation in emails, the code, and other documents. It also makes it easier to manage under revision control (see M.doc.3 and R.doc.5)).
+>: Web-based documentation is accessible, searchable, and linkable. It allows users to easily point each other to relevant parts of the documentation in emails, the code, and other documents. It also makes it easier to manage under revision control (see also M.doc.3)).
+>: All of these tools allow developers to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format.
+>
+>Examples 
+>: - [Sphinx](http://www.sphinx-doc.org/en/master/#)
+>  - [LaTeX](https://www.latex-project.org/)
+>  - [Doxygen](http://www.doxygen.nl/).
 >
 >Ref
 >: *WSC 4.1*
+>: *WSC 4.4*
 
 ---
 
@@ -45,39 +52,17 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)]() **Produce Web and PDF documentation from a readable plain-text format.** 
-
->Rationale
->: All of these tools allow developers to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format.
->
-><span style="color:red">QUESTION: Can we merge this with M.doc.1? </span>
->
->Examples 
->: - [Sphinx](http://www.sphinx-doc.org/en/master/#)
->  - [LaTeX](https://www.latex-project.org/)
->  - [Doxygen](http://www.doxygen.nl/).
->
->Ref
->: *WSC 4.4*
->
->Tag
->: Tools
-
----
-
-[![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)]() **Provide and maintain example codes along with documentation.**
+[![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)]() **Provide and maintain example source code along with documentation.**
 
 >Details
->: - Examples should be compiled and tested as part of a release to make sure they are kept up to date with API changes.
-> - New examples should be added when major new features are released, or existing examples should be extended to include those new features.
-> - Existing proxy apps (e.g. https://software.llnl.gov/category/#/PROXYAPPLICATIONS) are a potential good starting place.
+>: Examples should be compiled and tested as part of a release to make sure they are kept up to date with API changes. New examples should be added when major new features are released, or existing examples should be extended to include those new features. Existing [proxy apps](https://software.llnl.gov/category/#/PROXYAPPLICATIONS) are a potential good starting place.
 >
 >Rationale
 >: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/radiuss/policies/tests-ci.md)) 
  
 ---
 
-[![Generic badge](https://img.shields.io/badge/R.doc-7-yellow.svg)]() **Provide a documented policy for handling pull requests from external contributors**
+[![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)]() **Provide a documented policy for handling pull requests from external contributors**
 
 >Details
 >: Successful open source projects will attract bug fixes and feature development from the external community, preferably via pull requests on GitHub associated with a particular issue in the tracker. Teams should have a policy documenting expectations for when a pull request may be accepted, rejected, or returned for modifications.

@@ -81,21 +81,19 @@ issue or pull request to help us evolve these policies.
 
 ---
 
-#### Legend
-[![Generic badge](https://img.shields.io/badge/M.section-N-red.svg)]() Designates a __Mandatory__ point (Policy)
-
-[![Generic badge](https://img.shields.io/badge/R.section-N-yellow.svg)]() Designates a __Recommended__ point (Guideline)
-
+{% include_relative legend.md %}
 
 ---
 
-**Headline-only format follows. Click on any header or badge icon for more detailed description, or try the [printer-friendly flat version](/radiuss/policies/all)**
+***Headline-only format follows. Click on any header or badge icon for more detailed description***
+ 
+**Or try the [printer-friendly flat version](/radiuss/policies/all)**
 
 
 
 #### [Licensing](/radiuss/policies/licensing/)
 
-[![Generic badge](https://img.shields.io/badge/M.lic-1-red.svg)](/radiuss/policies/licensing/)&emsp;New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, MIT, or BSD 3-Clause)
+[![Generic badge](https://img.shields.io/badge/M.lic-1-red.svg)](/radiuss/policies/licensing/)&emsp;New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM exception, MIT, or BSD 3-Clause)
 
 [![Generic badge](https://img.shields.io/badge/M.lic-2-red.svg)](/radiuss/policies/licensing/) &emsp;Provide a list of dependencies and their associated licenses in SPDX format.
 
@@ -143,9 +141,9 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 
 [![Generic badge](https://img.shields.io/badge/M.doc-4-red.svg)](/radiuss/policies/documentation/) &emsp;Provide a documented, reliable way to contact the development team.
 
-[![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)](/radiuss/policies/documentation/) &emsp;Produce Web and PDF documentation from a readable plain-text format.
+[![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)](/radiuss/policies/documentation/) &emsp;Provide and maintain example source code along with documentation.
 
-[![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)](/radiuss/policies/documentation/) &emsp;Provide and maintain example codes along with documentation.
+[![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)](/radiuss/policies/documentation/) &emsp;Provide a documented policy for handling pull requests from external contributors.
 
 &nbsp;
 

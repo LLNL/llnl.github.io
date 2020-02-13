@@ -1,4 +1,4 @@
-[![M.lic.1](https://img.shields.io/badge/M.lic-1-red.svg)]()  **New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, MIT, or BSD 3-Clause).**  
+[![M.lic.1](https://img.shields.io/badge/M.lic-1-red.svg)]()  **New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM-exception, MIT, or BSD 3-Clause).**  
 
 >Details
 >: Similarly, any required dependencies must use an OSI-approved license that is considered compatible with the open-source permissive license for distribution purposes. Non-critical optional dependencies may use any OSI-approved license.
@@ -14,12 +14,10 @@
 [![M.lic.2](https://img.shields.io/badge/M.lic-2-red.svg)]()  **Provide a list of dependencies and their associated licenses in SPDX format.**
 
 >Details
->: The [SPDX License List](https://spdx.org/licenses/) is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. At the minimum, this should be done for all internaly bundled source code, and optionally for external dependencies as well.
+>: The [SPDX License List](https://spdx.org/licenses/) is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. At the minimum, this should be done for all internaly bundled source code, and optionally for external dependencies as well. It should preferably be placed in the NOTICE (or LICENSE) file in the root of the repository.
 >
 >Example
 >: See the Spack [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT) file.
->
-><span style="color:red">QUESTION: Should we try to standardize where this information is found? e.g. in the COPYRIGHT file, or README? Is the format in the Spack COPYRIGHT example one we're proposing to standardize on? What about optional vs. required dependencies? </span>
 >
 >Rationale
 >: This provides important information in a concise format to users and projects who are making decisions about whether to adopt RADIUSS products without forcing them to track down this information for each dependency.
