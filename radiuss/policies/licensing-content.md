@@ -14,16 +14,17 @@
 [![M.lic.2](https://img.shields.io/badge/M.lic-2-red.svg)]()  **Provide a list of dependencies and their associated licenses in SPDX format.**
 
 >Details
->: The [SPDX License List](https://spdx.org/licenses/) is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. At the minimum, this should be done for all internaly bundled source code, and optionally for external dependencies as well. It should preferably be placed in the NOTICE (or LICENSE) file in the root of the repository.
+>: The [SPDX License List](https://spdx.org/licenses/) is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. At the minimum, this should be done for all internaly bundled source code, and optionally for external dependencies as well. It should preferably be placed in the NOTICE (or LICENSE) file in the root of the repository or in the bottom of a README.md.
 >
->Example
->: See the Spack [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT) file.
+>Examples
+>: * See the Spack [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT) file.
+>: * See the Cardioid [README](https://github.com/LLNL/cardioid/blob/master/README.md) file.
 >
 >Rationale
 >: This provides important information in a concise format to users and projects who are making decisions about whether to adopt RADIUSS products without forcing them to track down this information for each dependency.
 >
->Tag
->: Tools 
+>Ref
+>: See [this link](/about/licenses) for LLNL Software Licensing Guidelines.
 
 ---
 
