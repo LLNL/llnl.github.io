@@ -1,4 +1,4 @@
-[![Generic badge](https://img.shields.io/badge/M.tst-1-red.svg)]() **Use regression tests in the development process.** 
+[![Generic badge](https://img.shields.io/badge/M.tst-1-red.svg)]() **Use regression tests in the development process.**
 
 >Rationale
 >: Regression tests prevent new features from affecting prior functionality, and they allow developers to have more confidence in their changes when modifying code.
@@ -14,7 +14,7 @@
 >: A series of tests (including unit tests) should be runnable by anyone after the package is built to verify a correct build. The installation should also provide tests -- which could derive from or be the same as example codes -- must be run and installed alongside the library for future verification.
 >
 >Rationale
->: An executable test suite gives users confidence that the product gives correct results. It is also recommended that at least a significant subset of the tests be can be run in batch-only environments. 
+>: An executable test suite gives users confidence that the product gives correct results. It is also recommended that at least a significant subset of the tests be can be run in batch-only environments.
 >
 >Ref
 >: *xSDK M2*
@@ -27,7 +27,7 @@
 >: The Git repository must contain test problems an easy way to run them and verify correctness for developers who are working on remote systems. External contributors must also have access to any results from continuous integration pipelines run against their changes before they make a pull request.
 >
 >Rationale
->: External contributors should be able to test there code to the same standard as the development team. This ensure easier integration of new contribution and transparency in the process. 
+>: External contributors should be able to test there code to the same standard as the development team. This ensure easier integration of new contribution and transparency in the process.
 
 ---
 
@@ -35,7 +35,7 @@
 
 >Details
 >: Example CI systems in use by RADIUSS products:
-> - RAJA with Travis CI on GitHub. See [.travis.yml](https://lc.llnl.gov/gitlab) 
+> - RAJA with Travis CI on GitHub. See [.travis.yml](https://lc.llnl.gov/gitlab)
 > - VisIT with Circle CI on GitHub. See [.circleci/config.yml](https://github.com/visit-dav/visit/blob/develop/.circleci/config.yml)
 > - MFEM with AppVeyor on GitHub. See [.appveyor.yml](https://github.com/mfem/mfem/blob/master/.appveyor.yml)
 > - Ascent with Azure Pipelines on GitHub. See [azure-pipelines.yml](https://github.com/Alpine-DAV/ascent/blob/develop/azure-pipelines.yml)
@@ -45,7 +45,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/R.tst-4-yellow.svg)]() **Continuously check compatibility with different compilers and versions.** 
+[![Generic badge](https://img.shields.io/badge/R.tst-4-yellow.svg)]() **Continuously check compatibility with different compilers and versions.**
 
 >Details
 >: During the development process, tests should include compilation across a matrix of compilers and compiler versions, including both open source and vendor-proprietary when available

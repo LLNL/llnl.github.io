@@ -7,7 +7,7 @@
 >: *WSC 2.1*
 >
 >Tag
->: Tools 
+>: Tools
 
 ---
 
@@ -20,6 +20,6 @@
 >: *Enforce WSC 2.3, 2.4, part of xSDK M10 and R1.*
 >
 >Tag
->: Tools 
+>: Tools
 
 ---

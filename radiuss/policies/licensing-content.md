@@ -1,4 +1,4 @@
-[![M.lic.1](https://img.shields.io/badge/M.lic-1-red.svg)]()  **New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM-exception, MIT, or BSD 3-Clause).**  
+[![M.lic.1](https://img.shields.io/badge/M.lic-1-red.svg)]()  **New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM-exception, MIT, or BSD 3-Clause).**
 
 >Details
 >: Similarly, any required dependencies must use an OSI-approved license that is considered compatible with the open-source permissive license for distribution purposes. Non-critical optional dependencies may use any OSI-approved license.
@@ -28,7 +28,7 @@
 
 ---
 
-[![R.lic.3](https://img.shields.io/badge/R.lic-3-yellow.svg)]()  **Existing projects should consider moving to an [OSI](https://opensource.org/licenses)-approved, permissive open-source license for existing projects (e.g., Apache, MIT, or BSD 3-Clause).** 
+[![R.lic.3](https://img.shields.io/badge/R.lic-3-yellow.svg)]()  **Existing projects should consider moving to an [OSI](https://opensource.org/licenses)-approved, permissive open-source license for existing projects (e.g., Apache, MIT, or BSD 3-Clause).**
 
 >Details
 >: Unlike M.lic.1, we recognize that projects that have existed for a long time may have adopted non-permissive licenses at their outset and it may be infeasible to convert. But the long-term benefits may make this worth considering.

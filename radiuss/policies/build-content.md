@@ -1,5 +1,5 @@
 [![Generic badge](https://img.shields.io/badge/M.bld-1-red.svg)]()
-**Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).** 
+**Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).**
 
 >Rationale
 >: Automating the build process prevents duplication of effort and allows others to build a copy of the code and to incorporate needed fixes in dependency tools and libraries. Spack is a package management tool that allows easy configuration with multiple dependency versions, configurations, platforms, and compilers.
@@ -8,7 +8,7 @@
 >: *Enforce WSC 1.1 and WSC 1.2*
 >
 >Tag
->: Tools 
+>: Tools
 
 ---
 
@@ -24,7 +24,7 @@
 > : *WSC 3.1*
 >
 >Tag
->: Tools 
+>: Tools
 
 ---
 

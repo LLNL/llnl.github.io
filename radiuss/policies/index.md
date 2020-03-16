@@ -38,10 +38,10 @@ project for broader use and external engagement.
 
 #### Policies and Guidelines
 
-As part of the RADIUSS project, these open source products 
+As part of the RADIUSS project, these open source products
 follow a set of policies and guidelines (listed below) based on best
 practices for open source development learned and adopted through
-years of research and 
+years of research and
 development supporting production software running on the
 worlds largest supercomputers. Some of these policies were derived
 directly or indirectly from other similar documents [^bss] [^xsdk] [^sl]
@@ -50,7 +50,7 @@ bottom of this page. By sharing these policies publicly, we
 hope to encourage others to adopt similar standards for the
 betterment of the open source software community, and welcome a
 [dialogue](mailto:radiuss-request@llnl.gov) on where we could
-improve. 
+improve.
 
 These policies and guidelines are not meant to be a comprehensive set
 of recommendations for good software quality assurance (SQA) practices
@@ -70,7 +70,7 @@ they could apply to the various types of projects RADIUSS supports,
 and likewise may serve to others. While we try not to interfere in project's
 management, with found it important and relevant to focus our support
 effort on a subset of fundamental tools, so that knowledge and
-practices can easily be shared, and for the sake of interoperability.  
+practices can easily be shared, and for the sake of interoperability.
 
 RADIUSS and the projects it covers are open-source and primarily (or
 by now, exclusively) use
@@ -87,7 +87,7 @@ issue or pull request to help us evolve these policies.
 ---
 
 ***Headline-only format follows. Click on any header or badge icon for more detailed description***
- 
+
 **Or try the [printer-friendly flat version](/radiuss/policies/all)**
 
 
@@ -108,7 +108,7 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 
 [![Generic badge](https://img.shields.io/badge/M.bui-1-red.svg)](/radiuss/policies/build/) &emsp;Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).
 
-[![Generic badge](https://img.shields.io/badge/R.bui-2-yellow.svg)](/radiuss/policies/build/) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org). 
+[![Generic badge](https://img.shields.io/badge/R.bui-2-yellow.svg)](/radiuss/policies/build/) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).
 
 [![Generic badge](https://img.shields.io/badge/R.bui-3-yellow.svg)](/radiuss/policies/logging-debugging/) &emsp;Provide build options for production (optimized) and debug deployments.
 

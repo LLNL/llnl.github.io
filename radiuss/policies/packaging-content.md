@@ -4,7 +4,7 @@
 >: Each product API must include the functionality to return the current version number of the software and indicate which configure/CMake and compiler options were used to build the package. For development versions of the software, a build or install should allow to trace back to the commit ID of the source used.
 >
 >Rationale
->: This allows users to make an inventory of what they have, which is critical for reproducibility, and which can aid debugging and configuration management. 
+>: This allows users to make an inventory of what they have, which is critical for reproducibility, and which can aid debugging and configuration management.
 >
 >Ref
 >: *Smart Libraries Practice 10 / xSDK M8*
