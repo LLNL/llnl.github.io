@@ -26,8 +26,11 @@
 
 [![Generic badge](https://img.shields.io/badge/M.pac-3-red.svg)]() **Use MPI in a way that is compatible with other products.**
 
->Details
->: Each library that utilizes MPI must restrict its MPI operations to MPI communicators that are provided to it and not directly use `MPI_COMM_WORLD`. Products must use configure tests or version tests to detect MPI 2 or MPI 3 features that may not be available; it should not be assumed that a full MPI 2 or MPI 3 implementation is available. Products can change the MPI error-handling mode by default but should have an option to revert to the original mode (which may have been redefined by another package or the application). Products should also behave appropriately regardless of the MPI error handling being used.
+>Details:
+> - Each RADIUSS product that utilizes MPI must restrict its MPI operations to MPI communicators that are provided to it and not use directly `MPI_COMM_WORLD`.
+> - Products must use configure tests or version tests to detect MPI 2 or MPI 3 features that may not be available; it should not be assumed that a full MPI 2 or MPI 3 implementation is available.
+> - Products can change the MPI error-handling mode by default but should have an option to prevent them from changing the MPI error handling (which may have been set by another package or the application). The product should also behave appropriately regardless of the MPI error handling being used.
+> - This rule also implies that you should not mock interfaces in a way that overrides the public API of other packages. For example, including a header file from your package should not cause other code in the same compilation unit to use a mocked MPI interface instead of the expected MPI.
 >
 >Ref
 >: *xSDK M3*
