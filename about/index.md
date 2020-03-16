@@ -21,18 +21,18 @@ We often work with other national labs, universities, and industry partners. Wor
 
 One of the great things about a large government organization is that we’re not motivated by profit. “The greater good” might sound like a cliché, but it’s true. LLNL’s national security mission governs our work, so our OSS portfolio of apps, libraries, compilers, and other tools support that mission. This includes everything from monitoring the performance of our supercomputers to making multiphysics codes run more smoothly.
 
-Case in point: The DOE’s [Advanced Simulation and Computing (ASC) Program](https://www.energy.gov/nnsa/missions/maintaining-stockpile) leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing supercomputing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and reliability of the nation’s nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. ASC leadership joined the DOE’s Office of Advanced Scientific Computing Research to [establish a policy](https://science.energy.gov/~/media/ascr/pdf/research/docs/Doe_lab_developed_software_policy.pdf) of using and distributing OSS to achieve the Program’s goals. With OSS, we can develop quickly and choose the best solutions.
+Case in point: The DOE’s [Advanced Simulation and Computing (ASC) Program](https://www.energy.gov/nnsa/missions/maintaining-stockpile) leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing supercomputing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and reliability of the nation’s nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. ASC leadership joined the DOE’s Office of Advanced Scientific Computing Research to establish a policy of using and distributing OSS to achieve the Program’s goals. With OSS, we can develop quickly and choose the best solutions.
 
 This portal abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You’ll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE). You can also browse our projects on [GitHub](https://github.com/LLNL), [GitLab](https://gitlab.com/llnl), and [Bitbucket](https://bitbucket.org/llnl).
 
-### Learn More
+### Learn More about OSS at LLNL
 
-- [Federal OSS policy guide](https://code.gov/policy-guide/introduction)
+- [Federal OSS policy guide](https://sourcecode.cio.gov/)
 - 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
 - *Science & Technology Review* coverage
-	- Cover story: [Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
+	- [Cover story: Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
 	- [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
-	- Video (3:04): [Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
+	- [Video (3:04): Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
 - LLNL news: [Spack, A Lab-Developed 'App Store for Supercomputers,' becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
 - Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
 

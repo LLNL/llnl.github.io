@@ -1,6 +1,7 @@
 ---
 title: RADIUSS Policies & Guidelines
 layout: info
+permalink: /radiuss/policies/
 ---
 
 ## {{ page.title }}

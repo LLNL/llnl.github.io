@@ -1,5 +1,6 @@
 ---
 title: "Redesign of Cardioid's Heartbeat Simulation Brings Code One Step Closer to Clinical Use"
+tags: multimedia story
 ---
 
 LLNL researchers have successfully optimized a code that models the human heartbeat for next-generation, GPU-based supercomputers, with an eye on developing it for virtual drug screening and modeling heart activity in clinical settings. Cardioid, a suite merging mathematical solvers for electrophysiology, fiber-generation, cardiac mechanics, torso-electrocardiograms (ECGs) and cardiac meshing tools, simulates the electrical current running through the heart tissue, triggering cells to contract like cascading dominoes and causing the heart to beat. It was originally developed by LLNL and IBM for Sequoia, at one time the world’s fastest supercomputer, and was a finalist for the 2012 Gordon Bell Prize, supercomputing’s top honor.

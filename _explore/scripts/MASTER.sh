@@ -9,7 +9,7 @@ DATELOG=../LAST_MASTER_UPDATE.txt
 # On exit
 function finish {
     # Log end time
-    echo -e "END\t$(date)" >> $DATELOG
+    echo -e "END\t$(date -u)" >> $DATELOG
 }
 trap finish EXIT
 
@@ -34,8 +34,8 @@ function runScript() {
 echo "RUNNING MASTER UPDATE SCRIPT"
 
 # Log start time
-echo -e "$(date '+%Y-%m-%d')" > $DATELOG
-echo -e "START\t$(date)" >> $DATELOG
+echo -e "$(date -u '+%F-%H')" > $DATELOG
+echo -e "START\t$(date -u)" >> $DATELOG
 
 
 # RUN THIS FIRST
@@ -55,10 +55,8 @@ runScript get_repos_users.py
 
 
 # --- ADDITIONAL REPO DETAILS ---
-runScript get_repos_licenses.py
 runScript get_repos_languages.py
 runScript get_repos_topics.py
-runScript get_repos_pullsissues.py
 runScript get_repos_activity.py
 
 

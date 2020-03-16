@@ -1,7 +1,7 @@
 from scraper.github import queryManager as qm
 from os import environ as env
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labUsers.json" % ghDataDir
 queryPath = "../queries/org-Members.gql"
 
@@ -26,7 +26,7 @@ for org in orglist:
             {"orgName": org, "numUsers": 50, "pgCursor": None},
             paginate=True,
             cursorVar="pgCursor",
-            keysToList=["data", "organization", "membersWithRole", "nodes"]
+            keysToList=["data", "organization", "membersWithRole", "nodes"],
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (org))

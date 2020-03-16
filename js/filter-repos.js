@@ -2,19 +2,24 @@
 
 $(function() {
     function tokenize(str) {
-        return str.replace(/\s+/g, ' ').split(' ').filter(function(s) {
-            return (s !== '');
-        });
-    };
+        return str
+            .replace(/\s+/g, ' ')
+            .split(' ')
+            .filter(function(s) {
+                return s !== '';
+            });
+    }
 
     function simple_text(str) {
-        return str.toLowerCase().replace(/\s+/g, ' ')
+        return str.toLowerCase().replace(/\s+/g, ' ');
     }
 
     $('#filterRepos').on('input', function() {
         var $allRepos = $('.flex-item');
 
-        var text = $(this).val().toLowerCase();
+        var text = $(this)
+            .val()
+            .toLowerCase();
 
         if (text === '') {
             $allRepos.show();
@@ -42,8 +47,6 @@ $(function() {
             if (num_matched === $matches.length) {
                 $repo.show();
             }
-
         });
-
     });
 });

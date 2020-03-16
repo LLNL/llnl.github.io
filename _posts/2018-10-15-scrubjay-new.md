@@ -1,5 +1,6 @@
 ---
 title: "New Repo: ScrubJay"
+tags: new-repo
 ---
 
 [ScrubJay](https://github.com/LLNL/ScrubJay) is a framework for automatic and scalable data integration. Describe your datasets (files, formats, database tables), then describe the integrated dataset(s) you desire, and let ScrubJay derive it for you in a consistent and reproducible way.

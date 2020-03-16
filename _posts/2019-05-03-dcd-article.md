@@ -1,5 +1,6 @@
 ---
 title: "How Machine Learning Could Change Science"
+tags: story
 ---
 
 Artificial intelligence tools are revolutionizing scientific research and changing the needs of high performance computing. In an [article](https://www.datacenterdynamics.com/analysis/how-machine-learning-could-change-science/) from Data Center Dynamics, LLNL's Fred Streitz and [Brian Van Essen](https://github.com/bvanessen) discuss the future of scientific computing, highlighting the Exascale Computing Project (ECP) and the Livermore Big Artificial Neural Network (LBANN).

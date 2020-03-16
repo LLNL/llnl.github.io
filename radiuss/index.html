@@ -5,51 +5,45 @@ layout: portal
 
 {% raw %}
 
-<p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash; <br/>aims to broaden usage across LLNL and the open source community of a set of libraries and tools <br/>used for HPC scientific application development.</p>
+<p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash; <br />aims to broaden usage across LLNL and the open source community of a set of libraries and tools <br />used for HPC scientific application development.</p>
 
 <section class="flex-container" id="categories">
     <div ng-repeat="category in catData" class="flex-category">
-        <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
-        <h4 class="text-center">{{category.title}}</h4>
-        <p class="text-center">{{category.description}}</p>
-
+        <img ng-src="{{ category.icon.path }}" alt="{{ category.icon.alt }}" title="{{ category.icon.alt }}" />
+        <h4 class="text-center">{{ category.title }}</h4>
+        <p class="text-center">{{ category.description }}</p>
 
         <div ng-repeat="repo in topicRepos[catData.indexOf(category)]">
             <p class="links">
-
                 <span>
-                    <a  href="https://github.com/{{ repo.ownerLogin}}" alt="View Owner on GitHub" title="Owner: {{repo.ownerLogin}}">
-                        <img class ="orgAvatar" ng-src="{{repo.ownerAvatar}}">
+                    <a href="https://github.com/{{ repo.ownerLogin }}" alt="View Owner on GitHub" title="Owner: {{ repo.ownerLogin }}">
+                        <img class="orgAvatar" ng-src="{{ repo.ownerAvatar }}" />
                     </a>
                 </span>
 
                 <span>
-                    <a href="{{repo.gitUrl}}" alt="Name" title="Name">
-                        {{repo.name}}
+                    <a href="{{ repo.gitUrl }}" alt="{{ repo.description || '[No Description]' }}" title="{{ repo.description || '[No Description]' }}">
+                        {{ repo.name }}
                     </a>
                 </span>
 
                 <span>
-                    <a href="{{repo.gitUrl}}/stargazers" alt="Stargazers" title="Stargazers">
-                        {{repo.stars}} <span class="fa fa-star"></span>
+                    <a href="{{ repo.gitUrl }}/stargazers" alt="Stargazers" title="Stargazers">
+                        {{ repo.stars }} <span class="fa fa-star"></span>
                     </a>
                 </span>
 
                 <span>
-                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Rpo Info" title="Repo Info">
-                        <span class="fa fa-info-circle"/>
+                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Repo Info" title="Repo Info">
+                        <span class="fa fa-info-circle"></span>
                     </a>
                 </span>
             </p>
         </div>
-
     </div>
-
 </section>
 
-
 {% endraw %}
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 <script src="/js/app.js"></script>

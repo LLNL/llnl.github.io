@@ -1,18 +1,15 @@
 /* Creates pie chart visualization for webpage */
 function draw_pie_repoPulls(areaID, repoNameWOwner) {
-
     // load data file, process data, and draw visualization
-    var url = ghDataDir+'/labRepos_PullsIssues.json';
+    var url = ghDataDir + '/labReposInfo.json';
     d3.json(url, function(obj) {
         var data = reformatData(obj);
         drawGraph(data, areaID);
     });
 
-
     // Draw graph from data
     function drawGraph(data, areaID) {
-
-        var graphHeader = "Pull Requests";
+        var graphHeader = 'Pull Requests';
 
         data.forEach(function(d) {
             d.count = +d.count;
@@ -20,48 +17,55 @@ function draw_pie_repoPulls(areaID, repoNameWOwner) {
 
         var dataTotalCount = data[0].count + data[1].count;
 
-        var margin = {top: 8, right: 8, bottom: 8, left: 8},
+        var margin = { top: 8, right: 8, bottom: 8, left: 8 },
             width = stdTotalWidth - margin.left - margin.right,
             height = stdTotalHeight - margin.top - margin.bottom,
-            radius = d3.min([width-margin.left-margin.right, height-margin.top-margin.bottom]) / 2,
+            radius = d3.min([width - margin.left - margin.right, height - margin.top - margin.bottom]) / 2,
             donutWidth = 70;
         var legendRectSize = 15,
             legendSpacing = 4;
 
         var color = d3.scaleOrdinal().range([d3.schemeCategory20c[12], d3.schemeCategory20c[13]]);
 
-        var tip = d3.tip()
+        var tip = d3
+            .tip()
             .attr('class', 'd3-tip')
             .offset(function() {
-                return [this.getBBox().height / 2, 0]
+                return [this.getBBox().height / 2, 0];
             })
             .html(function(d) {
-                var units = " Pull Requests";
+                var units = ' Pull Requests';
                 if (d.data.count == 1) {
-                    units = " Pull Request";
+                    units = ' Pull Request';
                 }
-                return d.data.count+units+" ("+d3.format(".0%")(d.data.count/dataTotalCount)+")"+"<br>"+d.data.label;
+                return d.data.count + units + ' (' + d3.format('.0%')(d.data.count / dataTotalCount) + ')' + '<br>' + d.data.label;
             });
 
-        var chart = d3.select("."+areaID)
+        var chart = d3
+            .select('.' + areaID)
             .attr('width', width)
             .attr('height', height)
-          .append('g')
-            .attr("transform", "translate(" + (width/2 + margin.left) + "," + (height/2 - margin.top) + ")");
+            .append('g')
+            .attr('transform', 'translate(' + (width / 2 + margin.left) + ',' + (height / 2 - margin.top) + ')');
 
         chart.call(tip);
 
-        var arc = d3.arc()
+        var arc = d3
+            .arc()
             .innerRadius(radius - donutWidth)
             .outerRadius(radius);
 
-        var pie = d3.pie()
-            .value(function(d) { return d.count; })
+        var pie = d3
+            .pie()
+            .value(function(d) {
+                return d.count;
+            })
             .sort(null);
 
-        var path = chart.selectAll('path')
+        var path = chart
+            .selectAll('path')
             .data(pie(data))
-          .enter()
+            .enter()
             .append('path')
             .attr('d', arc)
             .attr('fill', function(d, i) {
@@ -71,68 +75,73 @@ function draw_pie_repoPulls(areaID, repoNameWOwner) {
             .on('mouseout', tip.hide);
 
         // Add legend
-        var legend = chart.selectAll('.legend')
+        var legend = chart
+            .selectAll('.legend')
             .data(data)
-          .enter()
+            .enter()
             .append('g')
             .attr('class', 'legend')
             .attr('transform', function(d, i) {
                 var height = legendRectSize + legendSpacing;
-                var offset =  -height * color.domain().length / 2;
+                var offset = (-height * color.domain().length) / 2;
                 var horz = -3.2 * legendRectSize;
                 var vert = i * height - offset;
                 return 'translate(' + horz + ',' + vert + ')';
             });
         // Squares
-        legend.append('rect')
+        legend
+            .append('rect')
             .attr('width', legendRectSize)
             .attr('height', legendRectSize)
-            .style('fill', function(d) {return color(d.label)})
-            .style('stroke', function(d) {return color(d.label)});
+            .style('fill', function(d) {
+                return color(d.label);
+            })
+            .style('stroke', function(d) {
+                return color(d.label);
+            });
         // Text
-        legend.append('text')
+        legend
+            .append('text')
             .attr('x', legendRectSize + legendSpacing)
             .attr('y', legendRectSize - legendSpacing)
-            .text(function(d) { return d3.format(".0%")(d.count/dataTotalCount)+" "+d.label; })
-            .attr("text-anchor", "start");
+            .text(function(d) {
+                return d3.format('.0%')(d.count / dataTotalCount) + ' ' + d.label;
+            })
+            .attr('text-anchor', 'start');
 
         // Add title
-        chart.append("text")
-            .attr("class", "graphtitle")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("text-anchor", "middle")
+        chart
+            .append('text')
+            .attr('class', 'graphtitle')
+            .attr('x', 0)
+            .attr('y', 0)
+            .attr('text-anchor', 'middle')
             .text(graphHeader);
         // Add title
-        chart.append("text")
-            .attr("class", "graphtitle bignum")
-            .attr("x", 0)
-            .attr("y", -25)
-            .attr("text-anchor", "middle")
+        chart
+            .append('text')
+            .attr('class', 'graphtitle bignum')
+            .attr('x', 0)
+            .attr('y', -25)
+            .attr('text-anchor', 'middle')
             .text(dataTotalCount);
-
-    };
-
+    }
 
     // Turn json obj into desired working data
     function reformatData(obj) {
         var mergeTotal = 0,
             openTotal = 0;
-        var repos = (repoNameWOwner == null) ? Object.keys(obj["data"]) : [repoNameWOwner];
-        repos.forEach(function (repo) {
-            if (obj["data"].hasOwnProperty(repo)) {
-                var repoDict = obj["data"][repo],
-                    pullsMerged = repoDict["pullRequests_Merged"]["totalCount"],
-                    pullsOpen = repoDict["pullRequests_Open"]["totalCount"];
+        var repos = repoNameWOwner == null ? Object.keys(obj['data']) : [repoNameWOwner];
+        repos.forEach(function(repo) {
+            if (obj['data'].hasOwnProperty(repo)) {
+                var repoDict = obj['data'][repo],
+                    pullsMerged = repoDict['pullRequests_Merged']['totalCount'],
+                    pullsOpen = repoDict['pullRequests_Open']['totalCount'];
                 mergeTotal += pullsMerged;
                 openTotal += pullsOpen;
             }
         });
-        var data = [
-            { label: 'Merged', count: mergeTotal },
-            { label: 'Open', count: openTotal }
-        ];
+        var data = [{ label: 'Merged', count: mergeTotal }, { label: 'Open', count: openTotal }];
         return data;
-    };
-
+    }
 }

@@ -1,7 +1,7 @@
 from scraper.github import queryManager as qm
 from os import environ as env
 
-ghDataDir = env.get('GITHUB_DATA', '../github-data')
+ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labRepos_Languages.json" % ghDataDir
 queryPath = "../queries/repo-Languages.gql"
 
@@ -32,7 +32,7 @@ for repo in repolist:
             {"ownName": r[0], "repoName": r[1], "numLangs": 25, "pgCursor": None},
             paginate=True,
             cursorVar="pgCursor",
-            keysToList=["data", "repository", "languages", "nodes"]
+            keysToList=["data", "repository", "languages", "nodes"],
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (repo))
