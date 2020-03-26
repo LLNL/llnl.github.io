@@ -9,6 +9,7 @@ For each category this file contains it's title, [icon][icon dir] filepath, and 
 [icon dir]: ../assets/images/
 [js dir]: ../js/category-info.js
 
+- **App Infrastructure**: Browse tools for basic functionality common in HPC codes - `app-infrastructure`
 - **Applications**: Browse scientific simulation codes and IT management tools - `application`
 - **Build Tools**: Automate and simplify complex dependencies and deployments - `build-tools`
 - **Data Management & Viz**: Manage visualizations with robust features and configurable analysis - `data-management`, `data-viz`
