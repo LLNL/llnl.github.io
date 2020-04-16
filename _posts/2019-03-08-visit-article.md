@@ -1,6 +1,6 @@
 ---
 title: "The Great Migration: VisIt Moves from SVN to GitHub"
-tags: story
+categories: story
 ---
 
 Software development is often a story of teamwork and determination. It’s a tale of persistence through failure toward, ideally, success. At LLNL, this story plays out in countless daily iterations as software teams strive to advance the Lab’s national security mission. When it comes to supporting both stockpile stewardship and foundational science, the VisIt visualization tool is the backbone of LLNL’s computer simulation analysis and visualization capabilities.
