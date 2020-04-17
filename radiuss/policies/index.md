@@ -179,4 +179,4 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 [^bss]: [Better Scientific Software](https://bssw.io)
 [^xsdk]: [xSDK Community Policies](https://xsdk.info/policies)
 [^sl]: [Smart Libraries: Best SQE Practices for Libraries with Emphasis on Scientific Computing](https://www.osti.gov/biblio/936460)
-[^wsc]: [Weapons Simulation and Computing (WSC) Software Guildelines](https://lc.llnl.gov/confluence/display/WSCSOFT/WSC+Software+Guidelines) (internal LLNL access only)
+[^wsc]: [Weapons Simulation and Computing (WSC) Software Guidelines](https://lc.llnl.gov/confluence/display/WSCSOFT/WSC+Software+Guidelines) (internal LLNL access only)

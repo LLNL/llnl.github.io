@@ -14,7 +14,7 @@
 [![M.lic.2](https://img.shields.io/badge/M.lic-2-red.svg)]()  **Provide a list of dependencies and their associated licenses in SPDX format.**
 
 >Details
->: The [SPDX License List](https://spdx.org/licenses/) is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. At the minimum, this should be done for all internaly bundled source code, and optionally for external dependencies as well. It should preferably be placed in the NOTICE (or LICENSE) file in the root of the repository or in the bottom of a README.md.
+>: The [SPDX License List](https://spdx.org/licenses/) is a list of commonly found licenses and exceptions used in open-source software that enables easy and efficient identification of such licenses. At the minimum, this should be done for all internally bundled source code, and optionally for external dependencies as well. It should preferably be placed in the NOTICE (or LICENSE) file in the root of the repository or in the bottom of a README.md.
 >
 >Examples
 >: * See the Spack [COPYRIGHT](https://github.com/spack/spack/blob/develop/COPYRIGHT) file.

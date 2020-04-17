@@ -31,7 +31,7 @@
 [![Generic badge](https://img.shields.io/badge/R.bld-3-yellow.svg)]()  **Provide build options for production (optimized) and debug deployments.**
 
 >Rationale
->: Production versions should not be compiled with debug symbols and should include platform-specific optimizations so long as they pass all tests. Debug versions should be avialable for users who can self-assess bugs and thus provide more specific bug reports or fixes.
+>: Production versions should not be compiled with debug symbols and should include platform-specific optimizations so long as they pass all tests. Debug versions should be available for users who can self-assess bugs and thus provide more specific bug reports or fixes.
 >
 >Ref
 >: *Smart Libraries practice 19*
