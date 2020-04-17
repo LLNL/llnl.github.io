@@ -15,7 +15,7 @@ permalink: /news/archive/
                     <article class="news">
                         <h3>
                             {{post.title}}
-                            <small class="pull-right">{{ post.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+                            <small class="pull-right">{{ post.date | date: '%B %d, %Y' }} {% for categories in post.categories %} ({{ categories }}) {% endfor %}</small>
                         </h3>
 
                         {{ post.content }}
