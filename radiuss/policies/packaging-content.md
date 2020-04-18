@@ -1,4 +1,4 @@
-[![Generic badge](https://img.shields.io/badge/M.pac-1-red.svg)]() **Version number and build characteristics must be easily accessible**
+[![Generic badge](https://img.shields.io/badge/M.pkg-1-red.svg)]() **Version number and build characteristics must be easily accessible**
 
 >Details
 >: Each product API must include the functionality to return the current version number of the software and indicate which configure/CMake and compiler options were used to build the package. For development versions of the software, a build or install should allow to trace back to the commit ID of the source used.
@@ -11,7 +11,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.pac-2-red.svg)]() **Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.**
+[![Generic badge](https://img.shields.io/badge/M.pkg-2-red.svg)]() **Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.**
 
 >Details
 >: i.e. "Don't pollute the global namespace". For example, there should be no publicly visible include files with generic names such as `utils.h`, a package named `libutil.a`, or macros named YES or TRUE. Namespacing of include files can be handled either by prepending installed include files with a package name (e.g.,`<XXXutils.h>`) or by placing and referencing all of them in a subdirectory with the package name (e.g.,`<XXX/utils.h>`).
@@ -24,7 +24,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.pac-3-red.svg)]() **Use MPI in a way that is compatible with other products.**
+[![Generic badge](https://img.shields.io/badge/M.pkg-3-red.svg)]() **Use MPI in a way that is compatible with other products.**
 
 >Details:
 > - Each RADIUSS product that utilizes MPI must restrict its MPI operations to MPI communicators that are provided to it and not use directly `MPI_COMM_WORLD`.

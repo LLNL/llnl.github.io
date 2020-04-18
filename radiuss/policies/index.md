@@ -106,21 +106,21 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 
 #### [Build](/radiuss/policies/build)
 
-[![Generic badge](https://img.shields.io/badge/M.bui-1-red.svg)](/radiuss/policies/build/) &emsp;Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).
+[![Generic badge](https://img.shields.io/badge/M.bld-1-red.svg)](/radiuss/policies/build/) &emsp;Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).
 
-[![Generic badge](https://img.shields.io/badge/R.bui-2-yellow.svg)](/radiuss/policies/build/) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).
+[![Generic badge](https://img.shields.io/badge/R.bld-2-yellow.svg)](/radiuss/policies/build/) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).
 
-[![Generic badge](https://img.shields.io/badge/R.bui-3-yellow.svg)](/radiuss/policies/logging-debugging/) &emsp;Provide build options for production (optimized) and debug deployments.
+[![Generic badge](https://img.shields.io/badge/R.bld-3-yellow.svg)](/radiuss/policies/logging-debugging/) &emsp;Provide build options for production (optimized) and debug deployments.
 
 &nbsp;
 
 #### [Packaging](/radiuss/policies/packaging)
 
-[![Generic badge](https://img.shields.io/badge/M.pac-1-red.svg)](/radiuss/policies/packaging/) &emsp;Version number and build characteristics must be easily accessible.
+[![Generic badge](https://img.shields.io/badge/M.pkg-1-red.svg)](/radiuss/policies/packaging/) &emsp;Version number and build characteristics must be easily accessible.
 
-[![Generic badge](https://img.shields.io/badge/M.pac-2-red.svg)](/radiuss/policies/packaging/) &emsp;Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.
+[![Generic badge](https://img.shields.io/badge/M.pkg-2-red.svg)](/radiuss/policies/packaging/) &emsp;Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.
 
-[![Generic badge](https://img.shields.io/badge/M.pac-3-red.svg)](/radiuss/policies/packaging/) &emsp;Use MPI in a way that is compatible with other products.
+[![Generic badge](https://img.shields.io/badge/M.pkg-3-red.svg)](/radiuss/policies/packaging/) &emsp;Use MPI in a way that is compatible with other products.
 
 &nbsp;
 
@@ -150,17 +150,17 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 
 #### [Testing and Continuous Integration](/radiuss/policies/tests-ci)
 
-[![Generic badge](https://img.shields.io/badge/M.tes-1-red.svg)](/radiuss/policies/tests-ci/) &emsp;Use regression tests in the development process.
+[![Generic badge](https://img.shields.io/badge/M.tst-1-red.svg)](/radiuss/policies/tests-ci/) &emsp;Use regression tests in the development process.
 
-[![Generic badge](https://img.shields.io/badge/M.tes-2-red.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a test suite for verifying correctness of build and installation.
+[![Generic badge](https://img.shields.io/badge/M.tst-2-red.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a test suite for verifying correctness of build and installation.
 
-[![Generic badge](https://img.shields.io/badge/M.tes-3-red.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a development test suite along with the source code for external contributors.
+[![Generic badge](https://img.shields.io/badge/M.tst-3-red.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a development test suite along with the source code for external contributors.
 
-[![Generic badge](https://img.shields.io/badge/M.tes-4-red.svg)](/radiuss/policies/tests-ci/) &emsp;Use continuous integration (CI).
+[![Generic badge](https://img.shields.io/badge/M.tst-4-red.svg)](/radiuss/policies/tests-ci/) &emsp;Use continuous integration (CI).
 
-[![Generic badge](https://img.shields.io/badge/R.tes-5-yellow.svg)](/radiuss/policies/tests-ci/) &emsp;Continuously check compatibility with different compilers and versions.
+[![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)](/radiuss/policies/tests-ci/) &emsp;Continuously check compatibility with different compilers and versions.
 
-[![Generic badge](https://img.shields.io/badge/R.tes-6-yellow.svg)](/radiuss/policies/tests-ci/) &emsp;Ensure code quality/health in an automated manner.
+[![Generic badge](https://img.shields.io/badge/R.tst-6-yellow.svg)](/radiuss/policies/tests-ci/) &emsp;Ensure code quality/health in an automated manner.
 
 &nbsp;
 
