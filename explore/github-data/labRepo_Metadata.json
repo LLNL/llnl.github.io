@@ -3494,6 +3494,18 @@
         ],
         "website": null
     },
+    "LLNL/radiuss-stack": {
+        "description": "A spack stack with radiuss (some) radiuss packages",
+        "name": "LLNL/radiuss-stack",
+        "topics": null,
+        "website": null
+    },
+    "LLNL/radiuss-uberenv": {
+        "description": "Using uberenv to setup a radiuss package",
+        "name": "LLNL/radiuss-uberenv",
+        "topics": null,
+        "website": null
+    },
     "LLNL/ravel": {
         "description": "Ravel MPI trace visualization tool",
         "name": "LLNL/ravel",
@@ -4500,6 +4512,55 @@
         "topics": null,
         "website": "http://mfem.org/"
     },
+    "openzfs/openzfs": {
+        "description": "OpenZFS is a storage platform that encompasses the functionality of traditional filesystems and volume managers, delivering enterprise reliability, modern functionality, and consistent performance in an easy to administer package on several operating system platforms.",
+        "name": "openzfs/openzfs",
+        "topics": null,
+        "website": "http://open-zfs.org"
+    },
+    "openzfs/openzfs-build": {
+        "description": "EOL: This is not being maintained, please see: https://github.com/openzfs/openzfs-ci",
+        "name": "openzfs/openzfs-build",
+        "topics": null,
+        "website": ""
+    },
+    "openzfs/openzfs-ci": {
+        "description": "OpenZFS Continuous Integration Repository",
+        "name": "openzfs/openzfs-ci",
+        "topics": null,
+        "website": "http://openzfs.org"
+    },
+    "openzfs/spl": {
+        "description": "A shim layer which adds the core interfaces required for OpenZFS.",
+        "name": "openzfs/spl",
+        "topics": null,
+        "website": "https://zfsonlinux.org/"
+    },
+    "openzfs/zfs": {
+        "description": "OpenZFS on Linux and FreeBSD",
+        "name": "openzfs/zfs",
+        "topics": [
+            "openzfs",
+            "system-software",
+            "file-system"
+        ],
+        "website": "https://github.com/openzfs/zfs/wiki"
+    },
+    "openzfs/zfs-buildbot": {
+        "description": "The OpenZFS Buildbot Configuration ",
+        "name": "openzfs/zfs-buildbot",
+        "topics": null,
+        "website": "http://build.zfsonlinux.org"
+    },
+    "openzfs/zfs-images": {
+        "description": "Reference zpool images",
+        "name": "openzfs/zfs-images",
+        "topics": [
+            "openzfs",
+            "file-system"
+        ],
+        "website": null
+    },
     "rose-compiler/build-blocker-plugin": {
         "description": "Jenkins build blocker plugin",
         "name": "rose-compiler/build-blocker-plugin",
@@ -4720,95 +4781,5 @@
         "name": "visit-dav/visit-website",
         "topics": null,
         "website": "https://visit-dav.github.io/visit-website/"
-    },
-    "zfsonlinux/arcstat": {
-        "description": "uses Perl to extract, format, and display kstats from the ZFS ARC",
-        "name": "zfsonlinux/arcstat",
-        "topics": null,
-        "website": ""
-    },
-    "zfsonlinux/debian-installers": {
-        "description": "Debian GNU/Linux installer components with ZoL support",
-        "name": "zfsonlinux/debian-installers",
-        "topics": null,
-        "website": null
-    },
-    "zfsonlinux/dkms": {
-        "description": "DKMS enhancements for ZFS on Linux",
-        "name": "zfsonlinux/dkms",
-        "topics": null,
-        "website": ""
-    },
-    "zfsonlinux/dracut": {
-        "description": "Dracut is a new initramfs infrastructure",
-        "name": "zfsonlinux/dracut",
-        "topics": null,
-        "website": "https://dracut.wiki.kernel.org/"
-    },
-    "zfsonlinux/filebench": {
-        "description": "Filebench is a file system and storage benchmark that allows to generate a high variety of workloads. It employs extensive Workload Model Language (WML) for detailed workload specification. http://sourceforge.net/projects/filebench/",
-        "name": "zfsonlinux/filebench",
-        "topics": null,
-        "website": null
-    },
-    "zfsonlinux/fstest": {
-        "description": "POSIX Filesystem Test Suite",
-        "name": "zfsonlinux/fstest",
-        "topics": null,
-        "website": "http://www.tuxera.com/community/posix-test-suite/"
-    },
-    "zfsonlinux/grub": {
-        "description": "GRUB enhancements for ZFS on Linux",
-        "name": "zfsonlinux/grub",
-        "topics": null,
-        "website": null
-    },
-    "zfsonlinux/linux-kstat": {
-        "description": "Sun::Solaris::Kstat perl module for linux-zfs",
-        "name": "zfsonlinux/linux-kstat",
-        "topics": null,
-        "website": ""
-    },
-    "zfsonlinux/mountall": {
-        "description": "Mountall enhancements for ZFS on Linux",
-        "name": "zfsonlinux/mountall",
-        "topics": null,
-        "website": ""
-    },
-    "zfsonlinux/pkg-spl": {
-        "description": "Solaris Porting Layer packaging for Debian and Ubuntu",
-        "name": "zfsonlinux/pkg-spl",
-        "topics": null,
-        "website": "https://launchpad.net/~dajhorn/+archive/zfs"
-    },
-    "zfsonlinux/pkg-zfs": {
-        "description": "Native ZFS packaging for Debian and Ubuntu",
-        "name": "zfsonlinux/pkg-zfs",
-        "topics": null,
-        "website": "https://launchpad.net/~zfs-native/+archive/daily"
-    },
-    "zfsonlinux/xfstests": {
-        "description": "Regression test suite for xfs and other filesystems.  The zfs branch has been updated to be compatible with ZFS.  ",
-        "name": "zfsonlinux/xfstests",
-        "topics": null,
-        "website": "http://xfs.org/index.php/Getting_the_latest_source_code#XFS_Released.2FStable_source"
-    },
-    "zfsonlinux/zfs-auto-snapshot": {
-        "description": "ZFS Automatic Snapshot Service for Linux",
-        "name": "zfsonlinux/zfs-auto-snapshot",
-        "topics": null,
-        "website": ""
-    },
-    "zfsonlinux/zfsonlinux.github.com": {
-        "description": "The Official ZFS on Linux Website",
-        "name": "zfsonlinux/zfsonlinux.github.com",
-        "topics": null,
-        "website": "https://zfsonlinux.org"
-    },
-    "zfsonlinux/zfsstress": {
-        "description": null,
-        "name": "zfsonlinux/zfsstress",
-        "topics": null,
-        "website": null
     }
 }
