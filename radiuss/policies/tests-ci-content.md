@@ -17,7 +17,7 @@
 >: An executable test suite gives users confidence that the product gives correct results. It is also recommended that at least a significant subset of the tests be can be run in batch-only environments.
 >
 >Ref
->: *xSDK M2*
+>: [*xSDK M2*](https://xsdk.info/policies)
 
 ---
 

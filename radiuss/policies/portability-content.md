@@ -7,7 +7,7 @@
 >: Better portability ensures a broad base of users. This includes, but is not limited to, standard Linux distributions, GNU, Clang, and vendors' compilers.
 >
 >Ref
->: *xSDK M4*
+>: [*xSDK M4*](https://xsdk.info/policies)
 
 ---
 
@@ -17,6 +17,6 @@
 >: This allows code development on common desktop and laptop machines.
 >
 >Ref
->: *xSDK M4*
+>: [*xSDK M4*](https://xsdk.info/policies)
 
 ---

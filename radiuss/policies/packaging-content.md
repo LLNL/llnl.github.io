@@ -7,7 +7,7 @@
 >: This allows users to make an inventory of what they have, which is critical for reproducibility, and which can aid debugging and configuration management.
 >
 >Ref
->: *Smart Libraries Practice 10 / xSDK M8*
+>: *Smart Libraries Practice 10 / [xSDK M8](https://xsdk.info/policies)*
 
 ---
 
@@ -20,7 +20,7 @@
 >: Library developers must acknowledge that their software will be built as part of much larger packages. In that context, the use of generic names in the global namespace increases the chance that users of their library will run into build- and link-time errors that must be worked around.
 >
 >Ref
->: *Smart Libraries Practice 18 / Less restrictive than xSDK M9*
+>: *Smart Libraries Practice 18 / Less restrictive than [xSDK M9](https://xsdk.info/policies)*
 
 ---
 
@@ -33,6 +33,6 @@
 > - This rule also implies that you should not mock interfaces in a way that overrides the public API of other packages. For example, including a header file from your package should not cause other code in the same compilation unit to use a mocked MPI interface instead of the expected MPI.
 >
 >Ref
->: *xSDK M3*
+>: *[xSDK M3](https://xsdk.info/policies)*
 
 ___

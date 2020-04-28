@@ -17,7 +17,7 @@
 >: GitHub is one of the most-used repositories of open-source software that includes collaboration tools such as issue tracking, pull requests, and wikis. Pull requests allow project maintainers to review changes, comment, and iterate with developers before new features are committed to a code base. Pull requests and branching simplify management of large numbers of contributions (particularly contributions across teams), and they enable many features to be developed concurrently. The product maintainer can review code and associated test results before merging it into a public branch. Pull requests can also be linked to GitHub issues, which can be created by anyone.
 >
 >Ref
->: *Enforce WSC 2.3, 2.4, part of xSDK M10 and R1.*
+>: *Enforce WSC 2.3, 2.4, part of [xSDK M10](https://xsdk.info/policies) and R1.*
 >
 >Tag
 >: Tools

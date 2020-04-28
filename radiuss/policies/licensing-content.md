@@ -7,7 +7,7 @@
 >: A permissive open-source license is friendlier to use by commercial entities. Note that strong copyleft licenses (e.g., GPL) are not considered compatible with permissive licenses. Weaker copyleft licenses (e.g., LGPL or GPL v2 with runtime exception) can be considered compatible for distribution purposes.
 >
 >Ref
->: *xSDK M7*
+>: [*xSDK M7*](https://xsdk.info/policies)
 
 ---
 
