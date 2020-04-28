@@ -110,17 +110,17 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 
 [![Generic badge](https://img.shields.io/badge/R.bld-2-yellow.svg)](/radiuss/policies/build/#rbld2) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).
 
-[![Generic badge](https://img.shields.io/badge/R.bld-3-yellow.svg)](/radiuss/policies/logging-debugging/rbld3) &emsp;Provide build options for production (optimized) and debug deployments.
+[![Generic badge](https://img.shields.io/badge/R.bld-3-yellow.svg)](/radiuss/policies/build/#rbld3) &emsp;Provide build options for production (optimized) and debug deployments.
 
 &nbsp;
 
 #### [Packaging](/radiuss/policies/packaging)
 
-[![Generic badge](https://img.shields.io/badge/M.pkg-1-red.svg)](/radiuss/policies/packaging/) &emsp;Version number and build characteristics must be easily accessible.
+[![Generic badge](https://img.shields.io/badge/M.pkg-1-red.svg)](/radiuss/policies/packaging/#mpkg1) &emsp;Version number and build characteristics must be easily accessible.
 
-[![Generic badge](https://img.shields.io/badge/M.pkg-2-red.svg)](/radiuss/policies/packaging/) &emsp;Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.
+[![Generic badge](https://img.shields.io/badge/M.pkg-2-red.svg)](/radiuss/policies/packaging/#mpkg2) &emsp;Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.
 
-[![Generic badge](https://img.shields.io/badge/M.pkg-3-red.svg)](/radiuss/policies/packaging/) &emsp;Use MPI in a way that is compatible with other products.
+[![Generic badge](https://img.shields.io/badge/M.pkg-3-red.svg)](/radiuss/policies/packaging/#mpkg3) &emsp;Use MPI in a way that is compatible with other products.
 
 &nbsp;
 
