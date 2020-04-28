@@ -49,7 +49,7 @@
 >: Users should be able to easily contact the development team in order to report bugs or request basic assistance. RADIUSS can provide support for those libraries included in the RADIUSS project for basic fixes and support.
 >
 >Ref
->: [*xSDK M5*](https://xsdk.info/policies)
+>: [*xSDK M5*](https://github.com/xsdk-project/xsdk-community-policies/blob/master/package_policies/M5.md)
 
 ---
 <a name=rdoc5"></a>

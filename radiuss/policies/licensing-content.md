@@ -8,7 +8,7 @@
 >: A permissive open-source license is friendlier to use by commercial entities. Note that strong copyleft licenses (e.g., GPL) are not considered compatible with permissive licenses. Weaker copyleft licenses (e.g., LGPL or GPL v2 with runtime exception) can be considered compatible for distribution purposes.
 >
 >Ref
->: [*xSDK M7*](https://xsdk.info/policies)
+>: [*xSDK M7*](https://github.com/xsdk-project/xsdk-community-policies/blob/master/package_policies/M7.md)
 
 ---
 <a name="mlic2"></a>
@@ -35,6 +35,6 @@
 >: Unlike M.lic.1, we recognize that projects that have existed for a long time may have adopted non-permissive licenses at their outset and it may be infeasible to convert. But the long-term benefits may make this worth considering.
 >
 >Rationale
->: *See M.lic.1*
+>: [*See M.lic.1*](#mlic1)
 
 ---
