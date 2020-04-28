@@ -21,7 +21,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.tst-2-red.svg)]() **Provide a development test suite along with the source code for external contributors.**
+[![Generic badge](https://img.shields.io/badge/M.tst-3-red.svg)]() **Provide a development test suite along with the source code for external contributors.**
 
 >Details
 >: The Git repository must contain test problems an easy way to run them and verify correctness for developers who are working on remote systems. External contributors must also have access to any results from continuous integration pipelines run against their changes before they make a pull request.
@@ -31,7 +31,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/M.tst-3-red.svg)]() **Use continuous integration (CI).**
+[![Generic badge](https://img.shields.io/badge/M.tst-4-red.svg)]() **Use continuous integration (CI).**
 
 >Details
 >: Example CI systems in use by RADIUSS products:
@@ -45,7 +45,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/R.tst-4-yellow.svg)]() **Continuously check compatibility with different compilers and versions.**
+[![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)]() **Continuously check compatibility with different compilers and versions.**
 
 >Details
 >: During the development process, tests should include compilation across a matrix of compilers and compiler versions, including both open source and vendor-proprietary when available
@@ -55,7 +55,7 @@
 
 ---
 
-[![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)]() **Ensure code quality/health in an automated manner.**
+[![Generic badge](https://img.shields.io/badge/R.tst-6-yellow.svg)]() **Ensure code quality/health in an automated manner.**
 
 >Details
 >: Example tools:
