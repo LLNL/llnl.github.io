@@ -1,3 +1,4 @@
+<a name="mtst1"></a>
 [![Generic badge](https://img.shields.io/badge/M.tst-1-red.svg)]() **Use regression tests in the development process.**
 
 >Rationale
@@ -7,7 +8,7 @@
 >: *WSC 5.1*
 
 ---
-
+<a name="mtst2"></a>
 [![Generic badge](https://img.shields.io/badge/M.tst-2-red.svg)]() **Provide a test suite for verifying correctness of build and installation.**
 
 >Details
@@ -20,7 +21,7 @@
 >: [*xSDK M2*](https://xsdk.info/policies)
 
 ---
-
+<a name="mtst3"></a>
 [![Generic badge](https://img.shields.io/badge/M.tst-3-red.svg)]() **Provide a development test suite along with the source code for external contributors.**
 
 >Details
@@ -30,7 +31,7 @@
 >: External contributors should be able to test there code to the same standard as the development team. This ensure easier integration of new contribution and transparency in the process.
 
 ---
-
+<a name="mtst4"></a>
 [![Generic badge](https://img.shields.io/badge/M.tst-4-red.svg)]() **Use continuous integration (CI).**
 
 >Details
@@ -44,7 +45,7 @@
 >: CI helps to prevent integration problems by identifying issues as they arise instead of allowing them to compound. This process helps reduce rework, cost, and time. Examples of CI tools include [Travis CI](https://travis-ci.org) for projects hosted on GitHub, or [GitLab CI](https://about.gitlab.com) for projects hosted on a GitLab instance such as [LC-GitLab](https://lc.llnl.gov/gitlab). Some products may use Azure Pipelines in the future.
 
 ---
-
+<a name="rtst5"></a>
 [![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)]() **Continuously check compatibility with different compilers and versions.**
 
 >Details
@@ -54,7 +55,7 @@
 >: This helps to guard against platform-specific or compiler-specific errors.
 
 ---
-
+<a name="rtst6"></a>
 [![Generic badge](https://img.shields.io/badge/R.tst-6-yellow.svg)]() **Ensure code quality/health in an automated manner.**
 
 >Details

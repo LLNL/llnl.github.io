@@ -1,3 +1,4 @@
+<a name="mver1"></a>
 [![Generic badge](https://img.shields.io/badge/M.ver-1-red.svg)]() **The source code must be version controlled using [Git](https://git-scm.com).**
 
 >Rationale
@@ -10,7 +11,7 @@
 >: Tools
 
 ---
-
+<a name="mver2"></a>
 [![Generic badge](https://img.shields.io/badge/M.ver-2-red.svg)]() **Provide a transparent, online contribution process based on pull requests and issues collection. The preferred platform is [GitHub](https://github.com).**
 
 >Rationale

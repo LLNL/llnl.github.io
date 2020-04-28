@@ -1,3 +1,4 @@
+<a name="mpkg1"></a>
 [![Generic badge](https://img.shields.io/badge/M.pkg-1-red.svg)]() **Version number and build characteristics must be easily accessible**
 
 >Details
@@ -10,7 +11,7 @@
 >: *Smart Libraries Practice 10 / [xSDK M8](https://xsdk.info/policies)*
 
 ---
-
+<a name="mpkg2"></a>
 [![Generic badge](https://img.shields.io/badge/M.pkg-2-red.svg)]() **Use a limited, unique, and well-defined symbol, macro, library, and include file namespace.**
 
 >Details
@@ -23,7 +24,7 @@
 >: *Smart Libraries Practice 18 / Less restrictive than [xSDK M9](https://xsdk.info/policies)*
 
 ---
-
+<a name="mpkg3"></a>
 [![Generic badge](https://img.shields.io/badge/M.pkg-3-red.svg)]() **Use MPI in a way that is compatible with other products.**
 
 >Details:

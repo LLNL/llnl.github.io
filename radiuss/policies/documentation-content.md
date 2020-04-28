@@ -1,3 +1,4 @@
+<a name=mdoc1"></a>
 [![Generic badge](https://img.shields.io/badge/M.doc-1-red.svg)]() **Develop documentation from a readable plain-text format that can be publish documentation in a web-based format or as a PDF**
 
 >Rationale
@@ -14,7 +15,7 @@
 >: *WSC 4.4*
 
 ---
-
+<a name=mdoc2"></a>
 [![Generic badge](https://img.shields.io/badge/M.doc-2-red.svg)]() **Provide a concise description of the software functionality wherever your project is summarized**
 
 >Details
@@ -28,7 +29,7 @@
 >: Developers who come across your project or repository should be able to determine almost immediately if your project is applicable to their needs. The GitHub repo description is also used as the basis to automatically describe each project at [https://software.llnl.gov/](https://software.llnl.gov/).
 
 ---
-
+<a name=mdoc3"></a>
 [![Generic badge](https://img.shields.io/badge/M.doc-3-red.svg)]() **Version control your documentation consistent with and alongside your source code.**
 
 >Rationale
@@ -38,7 +39,7 @@
 >: *WSC 4.3*
 
 ---
-
+<a name=mdoc4"></a>
 [![Generic badge](https://img.shields.io/badge/M.doc-4-red.svg)]() **Provide a documented, reliable way to contact the development team.**
 
 >Details
@@ -51,7 +52,7 @@
 >: [*xSDK M5*](https://xsdk.info/policies)
 
 ---
-
+<a name=rdoc5"></a>
 [![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)]() **Provide and maintain example source code along with documentation.**
 
 >Details
@@ -61,7 +62,7 @@
 >: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/radiuss/policies/tests-ci.md))
 
 ---
-
+<a name=rdoc6"></a>
 [![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)]() **Provide a documented policy for handling pull requests from external contributors**
 
 >Details

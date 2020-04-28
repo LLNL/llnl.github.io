@@ -1,3 +1,4 @@
+<a name="mlic1"></a>
 [![M.lic.1](https://img.shields.io/badge/M.lic-1-red.svg)]()  **New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM-exception, MIT, or BSD 3-Clause).**
 
 >Details
@@ -10,7 +11,7 @@
 >: [*xSDK M7*](https://xsdk.info/policies)
 
 ---
-
+<a name="mlic2"></a>
 [![M.lic.2](https://img.shields.io/badge/M.lic-2-red.svg)]()  **Provide a list of dependencies and their associated licenses in SPDX format.**
 
 >Details
@@ -27,7 +28,7 @@
 >: See [this link](/about/licenses) for LLNL Software Licensing Guidelines.
 
 ---
-
+<a name="rlic3"></a>
 [![R.lic.3](https://img.shields.io/badge/R.lic-3-yellow.svg)]()  **Existing projects should consider moving to an [OSI](https://opensource.org/licenses)-approved, permissive open-source license for existing projects (e.g., Apache, MIT, or BSD 3-Clause).**
 
 >Details

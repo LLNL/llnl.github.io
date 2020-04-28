@@ -94,23 +94,23 @@ issue or pull request to help us evolve these policies.
 
 #### [Licensing](/radiuss/policies/licensing/)
 
-[![Generic badge](https://img.shields.io/badge/M.lic-1-red.svg)](/radiuss/policies/licensing/)&emsp;New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM exception, MIT, or BSD 3-Clause)
+[![Generic badge](https://img.shields.io/badge/M.lic-1-red.svg)](/radiuss/policies/licensing/#mlic1)&emsp;New projects must use an [OSI](https://opensource.org/licenses)-approved, permissive open-source license (e.g., Apache, Apache-2.0 with LLVM exception, MIT, or BSD 3-Clause)
 
-[![Generic badge](https://img.shields.io/badge/M.lic-2-red.svg)](/radiuss/policies/licensing/) &emsp;Provide a list of dependencies and their associated licenses in SPDX format.
+[![Generic badge](https://img.shields.io/badge/M.lic-2-red.svg)](/radiuss/policies/licensing/#mlic2) &emsp;Provide a list of dependencies and their associated licenses in SPDX format.
 
 [![Generic
-badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licensing/)
+badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licensing/#rlic3)
 &emsp;Existing projects should consider moving to an [OSI](https://opensource.org/licenses)-approved, permissive open-source license for existing projects (e.g., Apache, MIT, or BSD 3-Clause).
 
 &nbsp;
 
 #### [Build](/radiuss/policies/build)
 
-[![Generic badge](https://img.shields.io/badge/M.bld-1-red.svg)](/radiuss/policies/build/) &emsp;Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).
+[![Generic badge](https://img.shields.io/badge/M.bld-1-red.svg)](/radiuss/policies/build/#mbld1) &emsp;Package your installation and provide automated builds of dependencies using [Spack](https://spack.io/).
 
-[![Generic badge](https://img.shields.io/badge/R.bld-2-yellow.svg)](/radiuss/policies/build/) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).
+[![Generic badge](https://img.shields.io/badge/R.bld-2-yellow.svg)](/radiuss/policies/build/#rbld2) &emsp;Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).
 
-[![Generic badge](https://img.shields.io/badge/R.bld-3-yellow.svg)](/radiuss/policies/logging-debugging/) &emsp;Provide build options for production (optimized) and debug deployments.
+[![Generic badge](https://img.shields.io/badge/R.bld-3-yellow.svg)](/radiuss/policies/logging-debugging/rbld3) &emsp;Provide build options for production (optimized) and debug deployments.
 
 &nbsp;
 
@@ -126,49 +126,49 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/radiuss/policies/licen
 
 #### [Version Control](/radiuss/policies/version-control)
 
-[![Generic badge](https://img.shields.io/badge/M.ver-1-red.svg)](/radiuss/policies/version-control/) &emsp;The source code must be version controlled using [Git](https://git-scm.com).
+[![Generic badge](https://img.shields.io/badge/M.ver-1-red.svg)](/radiuss/policies/version-control/#mver1) &emsp;The source code must be version controlled using [Git](https://git-scm.com).
 
-[![Generic badge](https://img.shields.io/badge/M.ver-2-red.svg)](/radiuss/policies/version-control/) &emsp;Provide a transparent, online contribution process based on pull requests and issues collection.
+[![Generic badge](https://img.shields.io/badge/M.ver-2-red.svg)](/radiuss/policies/version-control/#mver2) &emsp;Provide a transparent, online contribution process based on pull requests and issues collection.
 
 &nbsp;
 
 #### [Documentation](/radiuss/policies/documentation)
 
-[![Generic badge](https://img.shields.io/badge/M.doc-1-red.svg)](/radiuss/policies/documentation/) &emsp;Publish documentation in a web-based format.
+[![Generic badge](https://img.shields.io/badge/M.doc-1-red.svg)](/radiuss/policies/documentation/#mdoc1) &emsp;Publish documentation in a web-based format.
 
-[![Generic badge](https://img.shields.io/badge/M.doc-2-red.svg)](/radiuss/policies/documentation/) &emsp;Provide a concise description of the project.
+[![Generic badge](https://img.shields.io/badge/M.doc-2-red.svg)](/radiuss/policies/documentation/#mdoc2) &emsp;Provide a concise description of the project.
 
-[![Generic badge](https://img.shields.io/badge/M.doc-3-red.svg)](/radiuss/policies/documentation/) &emsp;Version control your documentation consistent with and alongside your source code.
+[![Generic badge](https://img.shields.io/badge/M.doc-3-red.svg)](/radiuss/policies/documentation/#mdoc3) &emsp;Version control your documentation consistent with and alongside your source code.
 
-[![Generic badge](https://img.shields.io/badge/M.doc-4-red.svg)](/radiuss/policies/documentation/) &emsp;Provide a documented, reliable way to contact the development team.
+[![Generic badge](https://img.shields.io/badge/M.doc-4-red.svg)](/radiuss/policies/documentation/#mdoc4) &emsp;Provide a documented, reliable way to contact the development team.
 
-[![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)](/radiuss/policies/documentation/) &emsp;Provide and maintain example source code along with documentation.
+[![Generic badge](https://img.shields.io/badge/R.doc-5-yellow.svg)](/radiuss/policies/documentation/#rdoc5) &emsp;Provide and maintain example source code along with documentation.
 
-[![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)](/radiuss/policies/documentation/) &emsp;Provide a documented policy for handling pull requests from external contributors.
+[![Generic badge](https://img.shields.io/badge/R.doc-6-yellow.svg)](/radiuss/policies/documentation/#rdoc6) &emsp;Provide a documented policy for handling pull requests from external contributors.
 
 &nbsp;
 
 #### [Testing and Continuous Integration](/radiuss/policies/tests-ci)
 
-[![Generic badge](https://img.shields.io/badge/M.tst-1-red.svg)](/radiuss/policies/tests-ci/) &emsp;Use regression tests in the development process.
+[![Generic badge](https://img.shields.io/badge/M.tst-1-red.svg)](/radiuss/policies/tests-ci/#mtst1) &emsp;Use regression tests in the development process.
 
-[![Generic badge](https://img.shields.io/badge/M.tst-2-red.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a test suite for verifying correctness of build and installation.
+[![Generic badge](https://img.shields.io/badge/M.tst-2-red.svg)](/radiuss/policies/tests-ci/#mtst2) &emsp;Provide a test suite for verifying correctness of build and installation.
 
-[![Generic badge](https://img.shields.io/badge/M.tst-3-red.svg)](/radiuss/policies/tests-ci/) &emsp;Provide a development test suite along with the source code for external contributors.
+[![Generic badge](https://img.shields.io/badge/M.tst-3-red.svg)](/radiuss/policies/tests-ci/#mtst3) &emsp;Provide a development test suite along with the source code for external contributors.
 
-[![Generic badge](https://img.shields.io/badge/M.tst-4-red.svg)](/radiuss/policies/tests-ci/) &emsp;Use continuous integration (CI).
+[![Generic badge](https://img.shields.io/badge/M.tst-4-red.svg)](/radiuss/policies/tests-ci/#mtst4) &emsp;Use continuous integration (CI).
 
-[![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)](/radiuss/policies/tests-ci/) &emsp;Continuously check compatibility with different compilers and versions.
+[![Generic badge](https://img.shields.io/badge/R.tst-5-yellow.svg)](/radiuss/policies/tests-ci/#rtst5) &emsp;Continuously check compatibility with different compilers and versions.
 
-[![Generic badge](https://img.shields.io/badge/R.tst-6-yellow.svg)](/radiuss/policies/tests-ci/) &emsp;Ensure code quality/health in an automated manner.
+[![Generic badge](https://img.shields.io/badge/R.tst-6-yellow.svg)](/radiuss/policies/tests-ci/#rtst6) &emsp;Ensure code quality/health in an automated manner.
 
 &nbsp;
 
 #### [Portability](/radiuss/policies/portability)
 
-[![Generic badge](https://img.shields.io/badge/M.por-1-red.svg)](/radiuss/policies/portability/) &emsp;Give best effort at portability to common HPC platforms and compiling toolchains.
+[![Generic badge](https://img.shields.io/badge/M.por-1-red.svg)](/radiuss/policies/portability/#mpor1) &emsp;Give best effort at portability to common HPC platforms and compiling toolchains.
 
-[![Generic badge](https://img.shields.io/badge/R.por-2-yellow.svg)](/radiuss/policies/portability/) &emsp;Support Apple MacOS (Xcode) and Microsoft Windows (Visual Studio).
+[![Generic badge](https://img.shields.io/badge/R.por-2-yellow.svg)](/radiuss/policies/portability/#rpor2) &emsp;Support Apple MacOS (Xcode) and Microsoft Windows (Visual Studio).
 
 &nbsp;
 
