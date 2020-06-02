@@ -128,7 +128,7 @@ encourage you to use SPDX identifiers in your code, as they significantly
 reduce the amount of license boilerplate included in each source file.
 
 SPDX provides a standard
-[list of license identifiers](https://spdx.org/licenses/) that can be
+[list of license identifiers](https://spdx.dev/ids/) that can be
 used to label code.  To use SPDX identifiers in your project, you should
 find your license's short identifier in the list, and add a special
 `SPDX-License-Identifier` line to your `README.md`. For example, if your
@@ -165,9 +165,7 @@ The Spack example mentions a
 because Spack is dual-licensed (see above). If you just have a single
 license, you can simply refer to the `LICENSE` file in your header.
 
-For more information on using SPDX in your code, you can refer to
-[this presentation](https://spdx.org/sites/cpstandard/files/pages/files/using_spdx_license_list_short_identifiers.pdf).
-
+For more information on using SPDX in your code, see the [SPDX website](https://spdx.org/licenses/).
 
 #### Developer Certificate of Origin
 
