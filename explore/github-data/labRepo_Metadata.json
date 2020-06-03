@@ -1285,7 +1285,10 @@
     "GMLC-TDC/helics-buildenv": {
         "description": "Files related to the build environment for HELICS on CI services",
         "name": "GMLC-TDC/helics-buildenv",
-        "topics": null,
+        "topics": [
+            "dockerfiles",
+            "docker"
+        ],
         "website": null
     },
     "GMLC-TDC/helics-cli": {
@@ -1488,7 +1491,8 @@
             "portable-class-library",
             "portable-object",
             "hpc",
-            "hpc-applications"
+            "hpc-applications",
+            "portability"
         ],
         "website": null
     },
@@ -2765,7 +2769,7 @@
         "website": null
     },
     "LLNL/fastcam": {
-        "description": "A toolkit for efficent computation of saliency maps for explainable AI attribution. ",
+        "description": "A toolkit for efficent computation of saliency maps for explainable AI attribution. This tool was developed at Lawrence Livermore National Laboratory.",
         "name": "LLNL/fastcam",
         "topics": [
             "saliency-maps",
@@ -2781,7 +2785,7 @@
             "pytorch",
             "cnn-visualization"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/fdtree": {
         "description": "Recursive generator of directory trees",
