@@ -5,7 +5,7 @@ permalink: /news/
 ---
 
 
-  {% for page in site.posts limit:20 %}
+  {% for page in site.posts limit:15 %}
   <article class="news">
     <h3>
       {{ page.title }}
