@@ -149,6 +149,13 @@ function draw_scatter_repoIssues(areaID) {
             })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
+
+        // Angle the axis text
+        chart
+            .select('.x.axis')
+            .selectAll('text')
+            .attr('transform', 'rotate(15)')
+            .attr('text-anchor', 'start');
     }
 
     // Sort array of dictionaries by names.length
