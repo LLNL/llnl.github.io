@@ -154,7 +154,7 @@ function draw_scatter_repoIssues(areaID) {
         chart
             .select('.x.axis')
             .selectAll('text')
-            .attr('transform', 'rotate(15)')
+            .attr('transform', 'rotate(19)')
             .attr('text-anchor', 'start');
     }
 
