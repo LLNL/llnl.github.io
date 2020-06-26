@@ -15,7 +15,7 @@ layout: default
 <center>
     <svg class="repoCreationHistory"></svg>
     <br /><svg class="pieMembers"></svg><svg class="pieRepos"></svg>
-    <br /><svg class="repoActivityChart"></svg>
+    <br /><div id="lineGraph"><label>Lab Repositories: <select id="lineGraphOptions"></select></label><br><svg class="repoActivityChart"></div></svg>
     <br /><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
     <br /><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
     <br /><svg class="licenseCloud"></svg>
@@ -37,6 +37,7 @@ layout: default
 <script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_licenses.js"></script>
+<script type="text/javascript" src="../js/explore/nodegraph_labUsers.js"></script>
 
 <script>
     // GiHub Data Directory
@@ -61,6 +62,7 @@ layout: default
     draw_cloud_languages('languageCloud');
     draw_cloud_topics('topicCloud');
     draw_cloud_licenses('licenseCloud');
+    draw_nodegraph_labUsers('userNodeGraph');
 </script>
 
 {% endraw %}

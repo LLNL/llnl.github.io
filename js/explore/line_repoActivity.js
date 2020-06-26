@@ -1,193 +1,236 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoActivity(areaID, repoNameWOwner) {
+function draw_line_repoActivity(areaID) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labRepos_Activity.json';
     d3.json(url, function(obj) {
-        var data = reformatData(obj);
-        drawGraph(data, areaID);
+        drawGraph(obj, areaID);
     });
 
     var parseTime = d3.timeParse('%Y-%m-%d');
     var formatTime = d3.timeFormat('%Y-%m-%d');
 
     // Draw graph from data
-    function drawGraph(data, areaID) {
-        var graphHeader;
-        if (repoNameWOwner == null) {
-            graphHeader = 'Activity Across All Repos [Default Branches, 1 Year]';
-        } else {
-            graphHeader = "Activity for '" + repoNameWOwner + "' [Default Branch, 1 Year]";
-        }
+    function drawGraph(obj, areaID) {
+        var repoOptions = Object.keys(obj['data']);
 
-        // Removes most recent week from graph to avoid apparent dip in activity
-        data.pop();
-
-        data.forEach(function(d) {
-            d.date = parseTime(d.date);
-            d.value = +d.value;
+        // Removes all repos without any commits
+        repoOptions = repoOptions.filter(function(repo) {
+            console.debug(obj['data'][repo]);
+            return computeTotalCommits(obj['data'][repo]) > 5;
         });
+
+        repoOptions.unshift('LLNL');
+
+        console.debug(repoOptions);
 
         var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight;
         var dotRadius = stdDotRadius;
 
-        var x = d3
-            .scaleTime()
-            .clamp(true)
-            .domain(
-                d3.extent(data, function(d) {
-                    return d.date;
+        var dropdown = d3
+            .select('#lineGraphOptions')
+            .selectAll('options')
+            .data(repoOptions)
+            .enter()
+            .append('option')
+            .text(d => d)
+            .attr('value', d => d);
+
+
+        d3.select('#lineGraphOptions')
+            .on('change', function() {
+                console.debug(d3.select(this).property('value'));
+                d3.select('.' + areaID).select('g').remove();
+                let repoNameWOwner = d3.select(this).property('value') == 'LLNL' ? null : d3.select(this).property('value');
+                let data = reformatData(obj, repoNameWOwner);
+                update(data, repoNameWOwner);
+            });
+
+        function update(data, repoNameWOwner) {
+            var chart = d3
+                .select('.' + areaID)
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+            var graphHeader;
+            if (repoNameWOwner == null) {
+                graphHeader = 'Activity Across All Repos [Default Branches, 1 Year]';
+            } else {
+                graphHeader = "Activity for '" + repoNameWOwner + "' [Default Branch, 1 Year]";
+            }
+
+            // Removes most recent week from graph to avoid apparent dip in activity
+            data.pop();
+
+            data.forEach(function(d) {
+                d.date = parseTime(d.date);
+                d.value = +d.value;
+            });
+
+            var x = d3
+                .scaleTime()
+                .clamp(true)
+                .domain(
+                    d3.extent(data, function(d) {
+                        return d.date;
+                    })
+                )
+                .range([0, width]);
+
+            var y = d3
+                .scaleLinear()
+                .domain([
+                    0,
+                    d3.max(data, function(d) {
+                        return d.value == 0 ? 10 : d.value;
+                    })
+                ]) // Force non 0 scale for line visibility
+                .range([height, 0])
+                .nice();
+
+            var dToday = x.domain()[1];
+            // Supercomputing
+            var dSupercomp = '11-18';
+            // Thanksgiving
+            var dThnxgiv = '11-25';
+            // Christmas
+            var dXmas = '12-25';
+
+            function addDateLine(dateString, label) {
+                var dateObj = getYearDate(dateString, dToday);
+                drawDateLine(dateObj, label, false, chart, x, y, height, valueline);
+            }
+
+            var xAxis = d3.axisBottom().scale(x);
+
+            var yAxis = d3.axisLeft().scale(y);
+
+            var area = d3
+                .area()
+                .x(function(d) {
+                    return x(d.date);
                 })
-            )
-            .range([0, width]);
+                .y0(height)
+                .y1(function(d) {
+                    return y(d.value);
+                });
 
-        var y = d3
-            .scaleLinear()
-            .domain([
-                0,
-                d3.max(data, function(d) {
-                    return d.value == 0 ? 10 : d.value;
+            var tip = d3
+                .tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function(d) {
+                    var repos = ' Commits';
+                    if (d.value == 1) {
+                        repos = ' Commit';
+                    }
+                    return '<sub>[Week of ' + formatTime(d.date) + ']</sub>' + '<br>' + d.value + repos;
+                });
+
+            var valueline = d3
+                .line()
+                .x(function(d) {
+                    return x(d.date);
                 })
-            ]) // Force non 0 scale for line visibility
-            .range([height, 0])
-            .nice();
+                .y(function(d) {
+                    return y(d.value);
+                });
 
-        var dToday = x.domain()[1];
-        // Supercomputing
-        var dSupercomp = '11-18';
-        // Thanksgiving
-        var dThnxgiv = '11-25';
-        // Christmas
-        var dXmas = '12-25';
+            chart.call(tip);
 
-        function addDateLine(dateString, label) {
-            var dateObj = getYearDate(dateString, dToday);
-            drawDateLine(dateObj, label, false, chart, x, y, height, valueline);
+            // Add the x axis
+            chart
+                .append('g')
+                .attr('class', 'x axis')
+                .attr('transform', 'translate(0,' + height + ')')
+                .call(xAxis);
+
+            // Add the y axis
+            chart
+                .append('g')
+                .attr('class', 'y axis')
+                .call(yAxis);
+
+            // Add title
+            chart
+                .append('text')
+                .attr('class', 'graphtitle')
+                .attr('x', width / 2)
+                .attr('y', 0 - margin.top / 3)
+                .attr('text-anchor', 'middle')
+                .text(graphHeader);
+
+            // Add y axis label
+            chart
+                .append('text')
+                .attr('class', 'axistitle')
+                .attr('transform', 'rotate(-90)')
+                .attr('y', 0 - margin.left + margin.left / 4)
+                .attr('x', 0 - height / 2)
+                .attr('text-anchor', 'middle')
+                .text('Commits');
+
+            // Draw fill
+            chart
+                .append('path')
+                .datum(data)
+                .attr('class', 'area')
+                .attr('d', area);
+
+            // Draw line
+            chart
+                .append('path')
+                .datum(data)
+                .attr('class', 'line')
+                .attr('d', valueline);
+
+            // Draw date-of-interest reference lines
+            addDateLine(dSupercomp, 'Supercomputing');
+            addDateLine(dThnxgiv, 'Thanksgiving');
+            addDateLine(dXmas, 'Christmas');
+
+            // Draw dots
+            chart
+                .selectAll('.circle')
+                .data(data)
+                .enter()
+                .append('circle')
+                .attr('class', 'circle')
+                .attr('cx', function(d) {
+                    return x(d.date);
+                })
+                .attr('cy', function(d) {
+                    return y(d.value);
+                })
+                .attr('r', dotRadius)
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
+
+            // Angle the axis text
+            chart
+                .select('.x.axis')
+                .selectAll('text')
+                .attr('transform', 'rotate(12)')
+                .attr('text-anchor', 'start');
         }
 
-        var xAxis = d3.axisBottom().scale(x);
+    update(reformatData(obj, null), null);
+    }
 
-        var yAxis = d3.axisLeft().scale(y);
-
-        var area = d3
-            .area()
-            .x(function(d) {
-                return x(d.date);
-            })
-            .y0(height)
-            .y1(function(d) {
-                return y(d.value);
-            });
-
-        var tip = d3
-            .tip()
-            .attr('class', 'd3-tip')
-            .offset([-10, 0])
-            .html(function(d) {
-                var repos = ' Commits';
-                if (d.value == 1) {
-                    repos = ' Commit';
-                }
-                return '<sub>[Week of ' + formatTime(d.date) + ']</sub>' + '<br>' + d.value + repos;
-            });
-
-        var valueline = d3
-            .line()
-            .x(function(d) {
-                return x(d.date);
-            })
-            .y(function(d) {
-                return y(d.value);
-            });
-
-        var chart = d3
-            .select('.' + areaID)
-            .attr('width', width + margin.left + margin.right)
-            .attr('height', height + margin.top + margin.bottom)
-            .append('g')
-            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-        chart.call(tip);
-
-        // Add the x axis
-        chart
-            .append('g')
-            .attr('class', 'x axis')
-            .attr('transform', 'translate(0,' + height + ')')
-            .call(xAxis);
-
-        // Add the y axis
-        chart
-            .append('g')
-            .attr('class', 'y axis')
-            .call(yAxis);
-
-        // Add title
-        chart
-            .append('text')
-            .attr('class', 'graphtitle')
-            .attr('x', width / 2)
-            .attr('y', 0 - margin.top / 3)
-            .attr('text-anchor', 'middle')
-            .text(graphHeader);
-
-        // Add y axis label
-        chart
-            .append('text')
-            .attr('class', 'axistitle')
-            .attr('transform', 'rotate(-90)')
-            .attr('y', 0 - margin.left + margin.left / 4)
-            .attr('x', 0 - height / 2)
-            .attr('text-anchor', 'middle')
-            .text('Commits');
-
-        // Draw fill
-        chart
-            .append('path')
-            .datum(data)
-            .attr('class', 'area')
-            .attr('d', area);
-
-        // Draw line
-        chart
-            .append('path')
-            .datum(data)
-            .attr('class', 'line')
-            .attr('d', valueline);
-
-        // Draw date-of-interest reference lines
-        addDateLine(dSupercomp, 'Supercomputing');
-        addDateLine(dThnxgiv, 'Thanksgiving');
-        addDateLine(dXmas, 'Christmas');
-
-        // Draw dots
-        chart
-            .selectAll('.circle')
-            .data(data)
-            .enter()
-            .append('circle')
-            .attr('class', 'circle')
-            .attr('cx', function(d) {
-                return x(d.date);
-            })
-            .attr('cy', function(d) {
-                return y(d.value);
-            })
-            .attr('r', dotRadius)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
-
-        // Angle the axis text
-        chart
-            .select('.x.axis')
-            .selectAll('text')
-            .attr('transform', 'rotate(12)')
-            .attr('text-anchor', 'start');
+    // Turns array of data info into total commits
+    function computeTotalCommits(array) {
+        var totalCommits = 0;
+        array.forEach(function(d) {
+            totalCommits += d['total'];
+        })
+        return totalCommits;
     }
 
     // Turn json obj into desired working data
-    function reformatData(obj) {
+    function reformatData(obj, repoNameWOwner) {
         // Calculate combined values
         var dataTotals = {};
         var repoCounts = {};
