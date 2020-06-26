@@ -15,13 +15,10 @@ function draw_line_repoActivity(areaID) {
 
         // Removes all repos without any commits
         repoOptions = repoOptions.filter(function(repo) {
-            console.debug(obj['data'][repo]);
             return computeTotalCommits(obj['data'][repo]) > 5;
         });
 
         repoOptions.unshift('LLNL');
-
-        console.debug(repoOptions);
 
         var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -40,7 +37,6 @@ function draw_line_repoActivity(areaID) {
 
         d3.select('#lineGraphOptions')
             .on('change', function() {
-                console.debug(d3.select(this).property('value'));
                 d3.select('.' + areaID).select('g').remove();
                 let repoNameWOwner = d3.select(this).property('value') == 'LLNL' ? null : d3.select(this).property('value');
                 let data = reformatData(obj, repoNameWOwner);
