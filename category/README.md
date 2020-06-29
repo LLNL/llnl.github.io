@@ -27,4 +27,4 @@ To add a new category to the catalog:
 1. Update this README with the category name (in alphabetical order), description, and tag.
 2. Add the new icon (.svg) to [Assets > Images](https://github.com/LLNL/llnl.github.io/tree/master/assets/images).
 3. Update [`category_info.json`](https://github.com/LLNL/llnl.github.io/blob/master/category/category_info.json) with category metadata such as image file path, descriptive blurb, and corresponding topic(s).
-4. Tag repos with the new topic as approriate.
+4. Tag repos with the new topic as appropriate.
