@@ -65,7 +65,6 @@ runScript get_repos_creationhistory.py
 
 
 # RUN THIS LAST
-runScript build_subsets.py   # List subsets of repos included in data
 runScript build_yearlist.py  # Used in case of long term cumulative data
 
 runScript gather_repo_metadata.py  # Generate simplified metadata file
