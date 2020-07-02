@@ -61,6 +61,7 @@ function draw_sunburst_licenses(areaID) {
             .append('g')
                 .attr('id', 'licenseNames')
                 .attr('transform', `translate(${margin.left + width / 2},${margin.top + height / 2})`)
+                .attr('pointer-events', 'none')
                 .selectAll('text')
                     .data(root.children)
                     .enter()
