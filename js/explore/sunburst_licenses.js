@@ -11,9 +11,9 @@ function draw_sunburst_licenses(areaID) {
 
         const graphHeader = 'Repo Licenses';
 
-        const margin = { top: stdMargin.top, right: stdMargin.right / 2, bottom: stdMargin.bottom / 2, left: stdMargin.left / 2 },
-            width = stdTotalWidth - margin.left - margin.right,
-            height = stdTotalHeight + 100 - margin.top - margin.bottom;
+        const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom / 2, left: stdMargin.left },
+            width = stdTotalWidth * 2 - margin.left - margin.right,
+            height = stdTotalHeight * 2 - margin.top - margin.bottom;
 
         const radius = Math.min(width, height) / 6;
         const partition = data =>  {
@@ -69,7 +69,7 @@ function draw_sunburst_licenses(areaID) {
                     .enter()
                     .append('text')
                         .attr('text-anchor', 'middle')
-                        .attr('font-size', '10px')
+                        .attr('font-size', '14px')
                         .attr('fill-opacity', 0)
                         .attr('dy', '0.35em')
                         .attr('id', d => `licenseName${d.data.name}`)
@@ -118,7 +118,7 @@ function draw_sunburst_licenses(areaID) {
             // Adds labels to wedges
             const label = centerGroup
                 .append('g')
-                    .style('font-size', '10px')
+                    .style('font-size', '11px')
                     .attr('pointer-events', 'none')
                     .attr('text-anchor', 'middle')
                     .style('user-select', 'none')
@@ -135,7 +135,7 @@ function draw_sunburst_licenses(areaID) {
                                     return name;
                                 } else {
                                     name = name.split('/')[1];
-                                    if(name.length > 12) {
+                                    if(name.length > 20) {
                                         return '...';
                                     } else {
                                         return name;
@@ -218,7 +218,7 @@ function draw_sunburst_licenses(areaID) {
     
         // Creates option slider
         chart.append('g')
-            .attr('transform', 'translate(20,15)')
+            .attr('transform', `translate(${margin.left},${margin.top / 2})`)
             .attr('id', 'licenseSlider')
             .call(slider);
 
