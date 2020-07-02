@@ -50,39 +50,57 @@ function draw_sunburst_licenses(areaID) {
         chart
             .append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-            .append('text')
-                .attr('class', 'graphtitle')
-                .attr('x', width / 2)
-                .attr('y', 0 - margin.top / 3)
-                .attr('text-anchor', 'middle')
-                .text(graphHeader);
+                .append('text')
+                    .attr('class', 'graphtitle')
+                    .attr('x', width / 2)
+                    .attr('y', 0 - margin.top / 3)
+                    .attr('text-anchor', 'middle')
+                    .text(graphHeader);
+
+        const licenseNames = chart
+            .append('g')
+                .attr('id', 'licenseNames')
+                .attr('transform', `translate(${margin.left + width / 2},${margin.top + height / 2})`)
+                .selectAll('text')
+                    .data(root.children)
+                    .enter()
+                    .append('text')
+                        .attr('text-anchor', 'middle')
+                        .attr('font-size', '10px')
+                        .attr('fill-opacity', 0)
+                        .attr('dy', '0.35em')
+                        .attr('id', d => `licenseName${d.data.name}`)
+                        .text(d => d.data.name);
+
         
         function update() { 
             root.each(d => d.current = d);
 
+            licenseNames.attr('fill-opacity', 0);
+
             const centerGroup = chart
                 .append('g')
-                .attr('transform', () => {
-                    let xcoord = width / 2 + margin.left;
-                    let ycoord = height / 2 + margin.top;
-                    return 'translate(' + xcoord + ',' + ycoord + ')';
-                })
-                .attr('id', 'licenseCenter');
+                    .attr('transform', () => {
+                        let xcoord = width / 2 + margin.left;
+                        let ycoord = height / 2 + margin.top;
+                        return 'translate(' + xcoord + ',' + ycoord + ')';
+                    })
+                    .attr('id', 'licenseCenter');
 
             const path = centerGroup
                 .append('g')
                 .selectAll('path')
-                .data(root.descendants().slice(1))
-                .enter()
-                .append('path')
-                    .attr('fill', d => {
-                        while (d.depth > 1) {
-                            d = d.parent;
-                        }
-                        return colors(d.parent.children.indexOf(d));
-                    })
-                    .attr('fill-opacity', 0.9)
-                    .attr('d', d => arc(d.current));
+                    .data(root.descendants().slice(1))
+                    .enter()
+                    .append('path')
+                        .attr('fill', d => {
+                            while (d.depth > 1) {
+                                d = d.parent;
+                            }
+                            return colors(d.parent.children.indexOf(d));
+                        })
+                        .attr('fill-opacity', 0.9)
+                        .attr('d', d => arc(d.current));
             
             path.append('title')
                 .text(d => d.data.name);
@@ -97,26 +115,26 @@ function draw_sunburst_licenses(areaID) {
                     .attr('pointer-events', 'none')
                     .attr('text-anchor', 'middle')
                     .style('user-select', 'none')
-                .selectAll('text')
-                    .data(root.descendants().slice(1))
-                    .enter()
-                    .append('text')
-                    .attr('dy', '0.35em')
-                    .attr('fill-opacity', d => +labelVisible(d.current))
-                    .attr('transform', d => labelTransform(d.current))
-                    .text(d => {
-                        let name = d.data.name;
-                        if (d.current.height > 0) {
-                            return name;
-                        } else {
-                            name = name.split('/')[1];
-                            if(name.length > 12) {
-                                return '...';
-                            } else {
-                                return name;
-                            }
-                        }
-                    });
+                    .selectAll('text')
+                        .data(root.descendants().slice(1))
+                        .enter()
+                        .append('text')
+                            .attr('dy', '0.35em')
+                            .attr('fill-opacity', d => +labelVisible(d.current))
+                            .attr('transform', d => labelTransform(d.current))
+                            .text(d => {
+                                let name = d.data.name;
+                                if (d.current.height > 0) {
+                                    return name;
+                                } else {
+                                    name = name.split('/')[1];
+                                    if(name.length > 12) {
+                                        return '...';
+                                    } else {
+                                        return name;
+                                    }
+                                }
+                            });
 
             const parent = centerGroup
                 .append('circle')
@@ -125,6 +143,8 @@ function draw_sunburst_licenses(areaID) {
                 .attr('fill', 'none')
                 .attr('pointer-events', 'all')
                 .on('click', clicked);
+
+            d3.select('#licenseNames').raise();
 
             function clicked(o) {
                 parent.datum(o.parent || root)
@@ -136,7 +156,9 @@ function draw_sunburst_licenses(areaID) {
                     y1: Math.max(0, d.y1 - o.depth)
                 });
 
-                const t = centerGroup.transition().duration(1000);
+                const dur = 1000;
+
+                const t = centerGroup.transition().duration(dur);
 
                 path.transition(t)
                     .tween('data', d => {
@@ -146,8 +168,12 @@ function draw_sunburst_licenses(areaID) {
                     .attrTween("d", d => () => arc(d.current));
 
                 label.transition(t)
-                    .attr("fill-opacity", d => +labelVisible(d.target))
-                    .attrTween("transform", d => () => labelTransform(d.current));
+                    .attr('fill-opacity', d => +labelVisible(d.target))
+                    .attrTween('transform', d => () => labelTransform(d.current));
+
+                licenseNames.transition()
+                    .duration(dur)
+                    .attr('fill-opacity', d => +(d.data.name == o.data.name));
 
             }
         }
