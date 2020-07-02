@@ -67,6 +67,7 @@ is the copyright year.
 - [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
 - [GPL-3.0 License](/about/licenses/gpl-3.0.txt)
 - [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
+- [Apache 2.0 License with LLVM Exception](/about/licenses/apache-2.0-llvm-exception.txt)
 
 If your repository was approved for release under a different open source
 license, the text of that license will be provided by the Innovation and
