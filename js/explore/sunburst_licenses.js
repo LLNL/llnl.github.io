@@ -47,6 +47,7 @@ function draw_sunburst_licenses(areaID) {
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
 
+        // Adds title
         chart
             .append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
@@ -57,6 +58,7 @@ function draw_sunburst_licenses(areaID) {
                     .attr('text-anchor', 'middle')
                     .text(graphHeader);
 
+        // Adds labels in center
         const licenseNames = chart
             .append('g')
                 .attr('id', 'licenseNames')
@@ -88,6 +90,7 @@ function draw_sunburst_licenses(areaID) {
                     })
                     .attr('id', 'licenseCenter');
 
+            // Creates wedges of sunburst
             const path = centerGroup
                 .append('g')
                 .selectAll('path')
@@ -103,13 +106,16 @@ function draw_sunburst_licenses(areaID) {
                         .attr('fill-opacity', 0.9)
                         .attr('d', d => arc(d.current));
             
+            // Adds title for accessability. Does not affect name label below
             path.append('title')
                 .text(d => d.data.name);
             
+            // Makes license wedges appear clickable
             path.filter(d => d.children)
                 .style('cursor', 'pointer')
                 .on('click', clicked);
 
+            // Adds labels to wedges
             const label = centerGroup
                 .append('g')
                     .style('font-size', '10px')
@@ -136,7 +142,8 @@ function draw_sunburst_licenses(areaID) {
                                     }
                                 }
                             });
-
+            
+            // Creates blank circle in center with click event to go up one level
             const parent = centerGroup
                 .append('circle')
                 .datum(root)
@@ -145,6 +152,7 @@ function draw_sunburst_licenses(areaID) {
                 .attr('pointer-events', 'all')
                 .on('click', clicked);
 
+            // Makes center label fully visible
             d3.select('#licenseNames').raise();
 
             function clicked(o) {
@@ -208,15 +216,19 @@ function draw_sunburst_licenses(areaID) {
                 update();
             });
     
-
+        // Creates option slider
         chart.append('g')
             .attr('transform', 'translate(20,15)')
             .attr('id', 'licenseSlider')
             .call(slider);
+
+        // Calls update to draw graph for the first time
         update();
     }
 
+    // Turns json into useable data. Output MUST use arrays in accordance with the d3.hierarchy requirements
     function reformatData(obj, type) {
+        // Converts json file to object with necessary information for later processing
         const objTree = {};
         const keys = Object.keys(obj['data']);
         for (var repo of keys) {
@@ -239,12 +251,14 @@ function draw_sunburst_licenses(areaID) {
             }
         }
 
+        // Converts object tree into d3.hierarchy complient form
         const licenseArray = [];
         const licenses = Object.keys(objTree);
         licenses.forEach(function(license) {
             const repoArray = [];
             const repos = Object.keys(objTree[license]);
             repos.forEach(function(repo) {
+                // Chooses what value to use for weights
                 let value = 1;
                 if (type == null || type == 'Stars') {
                     value = obj['data'][repo]['stargazers']['totalCount'];
