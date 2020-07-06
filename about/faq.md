@@ -39,7 +39,7 @@ If you’re new to GitHub and open source in general, figuring out how to get se
 * [YubiKey](https://yubico.com) hardware security keys
     * Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
         * YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
-    * [Learn more about setting up your Yubikey with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
+    * [Learn more about setting up your YubiKey with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
 
 * [Google Authenticator](https://support.google.com/accounts/answer/1066447)
     * Google Authenticator is a mobile application which you can install on your personal or government issued phone.
@@ -73,11 +73,9 @@ If you are an employee at LLNL and have 2FA enabled, you are eligible to join th
 
 ### How do I get my repo reviewed and released for GitHub?
 
-All information produced by LLNL must follow the guidance set forth by the LLNL Information Management (IM) Policy for both [initial release {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/contributing/).
+Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/contributing/).
 
 ### What is/isn’t allowed to be included in my repo?
-
-Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via the IM process. Once released, an appropriate open source license and `LLNL-CODE-` release number should be provided and included in the repository.
 
 Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL servers*, and content placed in them should be limited to "email like" communications. That means:
 
@@ -92,11 +90,17 @@ Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL serve
 
 When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidance.
 
-In addition, your repo must include README, Notice, and License files. See the [LLNL Software Licensing](licenses) page for details and examples.
+### My project is approved for release. Now what?
 
-### Which license should my repo have?
+Make sure your repo contains:
 
-See the [LLNL Software Licensing](licenses) page for details and examples.
+* An appropriate open source license and `LLNL-CODE-xxxxxx` release number. See the [LLNL Software Licensing](licenses) page for details and examples.
+
+* A [README](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
+
+* A [Notice](https://github.com/LLNL/llnl.github.io/blob/master/NOTICE) file that includes LLNL auspice and disclaimer statements.
+
+After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/master/release-template.md).
 
 ### How do I include my repo in the LLNL organization and/or this website’s catalog?
 
@@ -126,8 +130,6 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
 3. Publicize any outreach activities or major milestones related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
 
-3. Publicize any outreach activities or major milestones related to your project. Examples: You have a paper/poster/presentation accepted at a conference; you're hosting a workshop or webinar; your project is nominated for an award; or you're speaking on a podcast or guest blogging.
-
 4. Include a summary of your project with GitHub and documentation links on LLNL's [Computing website](https://computing.llnl.gov/projects). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
 
 ### How do I contribute news or other content to this website?
@@ -136,15 +138,23 @@ Submit a pull request! This website is a GitHub repo just like any other LLNL op
 
 Before contributing, please contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with your idea or if you have questions about whether your proposed content requires the LLNL review and release process.
 
-### How do I remove my repo from the LLNL organization and this website?
-
-A project may no longer actively be developed, or it may outgrow a single repo and require its own organization. A repo’s status (e.g., Public Private, Archived) is managed in GitHub (`settings#danger-zone`) via Settings > Manage Access > Who has access / manage > Danger Zone.
+### What should I do if my repo is no longer actively developed/maintained?
 
 1. Remove your repo’s topic tags (e.g., `math-physics`), which connect it to this website’s browsable categories. Also remove the `radiuss` tag, if applicable.
 
 2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to remove your repo’s name.
 
-3. To replace your repo with a new one (e.g., new name, new organization), follow the steps above for adding the repo to the LLNL organization.
+3. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
+
+### My repo has grown. How do I move it out of the LLNL organization?
+
+The process to transfer organizational ownership is straightforward. Please be sure to follow the two additional steps so the repo can still be cataloged on this website.
+
+1. Transfer your repo's ownership via Settings > Manage Access > Who has access > Manage > Danger Zone > Transfer (`settings#danger-zone`).
+
+2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to add the new organization/repo’s name.
+
+3. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories, including the `radiuss` tag, if applicable.
 
 ### How do I contribute to an LLNL repo?
 
