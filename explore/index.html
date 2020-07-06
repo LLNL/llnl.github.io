@@ -18,7 +18,7 @@ layout: default
     <br /><svg class="repoActivityChart"></svg>
     <br /><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
     <br /><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
-    <br /><svg class="licenseCloud"></svg>
+    <br /><svg class="licenseSunburst"></svg>
 </center>
 
 <!-- Load basic D3 and helper scripts -->
@@ -26,6 +26,7 @@ layout: default
 <script type="text/javascript" src="https://cdn.llnl.gov/d3-tip/1.0/d3-tip.js"></script>
 <script type="text/javascript" src="https://cdn.llnl.gov/d3-v4-cloud/1.2.2/build/d3.layout.cloud.js"></script>
 <script type="text/javascript" src="../js/explore/helpers.js"></script>
+<script src="https://unpkg.com/d3-simple-slider"></script>
 
 <!-- Load drawing JS -->
 <script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
@@ -36,7 +37,7 @@ layout: default
 <script type="text/javascript" src="../js/explore/scatter_repoIssues.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
-<script type="text/javascript" src="../js/explore/cloud_licenses.js"></script>
+<script type="text/javascript" src="../js/explore/sunburst_licenses.js"></script>
 
 <script>
     // GiHub Data Directory
@@ -60,7 +61,7 @@ layout: default
     draw_scatter_repoIssues('repoIssues');
     draw_cloud_languages('languageCloud');
     draw_cloud_topics('topicCloud');
-    draw_cloud_licenses('licenseCloud');
+    draw_sunburst_licenses('licenseSunburst');
 </script>
 
 {% endraw %}
