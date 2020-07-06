@@ -1,9 +1,10 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoActivity(areaID) {
+function draw_pack_hierarchy(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + 'location'; // TODO: Replace 'location' with name of json file containing data
+    var url = ghDataDir + '/labUsers.json';
     d3.json(url, function(obj) {
         var data = reformatData(obj);
+        console.debug(data);
         drawGraph(data, areaID);
     });
 
@@ -23,11 +24,25 @@ function draw_line_repoActivity(areaID) {
 
     // Turn json obj into desired working data
     function reformatData(obj) {
-        // TODO: Turn obj into usable data. For many d3 visualizations, you will need to make sure that the output is d3.hierarchy complient
         var data = { name: 'LLNL', children: [] };
-        let depthOneArray = [];
-        let depthTwoArray = [];
-        let depthThreeArray = [];
+        for (var user in obj['data']) {
+            if (obj['data'][user]['contributedLabRepositories'] === undefined) {
+                continue;
+            }
+            for (var ownerRepo of obj['data'][user]['contributedLabRepositories']['nodes']) {
+                let owner = ownerRepo.split('/')[0];
+                let repo = ownerRepo.split('/')[1];
+                if (!data.children.some(d => d.name == owner)) {
+                    data.children.push({ name: owner, children: [] });
+                }
+                let indexOfOwner = data.children.findIndex(d => d.name == owner);
+                if (!data.children[indexOfOwner].children.some(d => d.name == repo)) {
+                    data.children[indexOfOwner].children.push({ name: repo, children: [] });
+                }
+                let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1 });
+            }
+        }
         
         return data;
     }
