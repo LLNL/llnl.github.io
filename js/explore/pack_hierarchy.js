@@ -4,7 +4,6 @@ function draw_pack_hierarchy(areaID) {
     var url = ghDataDir + '/labUsers.json';
     d3.json(url, function(obj) {
         var data = reformatData(obj);
-        console.debug(data);
         drawGraph(data, areaID);
     });
 
@@ -31,6 +30,8 @@ function draw_pack_hierarchy(areaID) {
                 .sort((a, b) => b.value - a.value));
 
         const root = pack(data);
+        console.debug(root);
+        const center = [root.x,root.y];
 
         const node = chart.selectAll('g')
             .data(d3.nest().key(d => d.height).entries(root.descendants()))
@@ -42,14 +43,23 @@ function draw_pack_hierarchy(areaID) {
                         .append('g')
                             .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
         
-        node.append('circle')
+        const circles = node.append('circle')
             .attr('fill', d => colors[d.height + 1])
             .attr('r', d => d.r);
+        
+        circles.on('click', clicked);
 
-        node.append('text')
+        circles.append('title')
+            .text(d => d.data.name);
+
+        /*node.append('text')
             .attr('font-size', '10px')
             .attr('fill-opacity', d => d.r > 20 ? 1 : 0)
-            .text(d => d.data.name.length > 10 ? '' : d.data.name);
+            .text(d => d.data.name.length > 10 ? '' : d.data.name);*/
+
+        function clicked(o) {
+            
+        }
 
     }
 
