@@ -10,16 +10,47 @@ function draw_pack_hierarchy(areaID) {
 
     function drawGraph(data, areaID) {
         // TODO: drawGraph function should be the main function responsible for the creation of the svg
-        var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
-            width = stdTotalWidth - margin.left - margin.right,
-            height = stdHeight;
+        const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
+            width = stdTotalWidth * 2 - margin.left - margin.right,
+            height = stdHeight * 2 - margin.top - margin.bottom;
 
-        var chart = d3
+        const colors = ["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"];
+
+        const chart = d3
             .select('.' + areaID)
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
                 .append('g')
                     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+        const pack = data => d3.pack()
+            .size([width, height])
+            .padding(2)
+            (d3.hierarchy(data)
+                .sum(d => d.value)
+                .sort((a, b) => b.value - a.value));
+
+        const root = pack(data);
+
+        const node = chart.selectAll('g')
+            .data(d3.nest().key(d => d.height).entries(root.descendants()))
+            .enter()
+                .append('g')
+                    .selectAll('g')
+                    .data(d => d.values)
+                    .enter()
+                        .append('g')
+                            .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+        
+        node.append('circle')
+            .attr('fill', d => colors[d.height + 1])
+            .attr('r', d => d.r);
+
+        node.append('text')
+            .attr('font-size', '10px')
+            .attr('fill-opacity', d => d.r > 20 ? 1 : 0)
+            .text(d => d.data.name.length > 10 ? '' : d.data.name);
+
     }
 
     // Turn json obj into desired working data
