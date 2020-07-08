@@ -36,17 +36,15 @@ This portal abounds with examples of projects that have found a home in the open
 - LLNL news: [Spack, A Lab-Developed 'App Store for Supercomputers,' becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
 - Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
 
-### Information for LLNL Developers
-
-- [GitHub Accounts and Organization](using-github)
-- [Contributing Guidelines](contributing)
-- [LLNL Licensing Guidelines](licenses)
+### Other References
+* [18F Handbook: GitHub](https://handbook.18f.gov/github/)
+* [fisma-ready/github: Controls necessary for Federal use of GitHub](https://github.com/fisma-ready/github)
+* [Guidance for Agency Use of Third-Party Websites and Applications](https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/memoranda_2010/m10-23.pdf)
+* [18F Blog: Facts about Publishing Open Source Code](https://18f.gsa.gov/2016/08/08/facts-about-publishing-open-source-code-in-government/)
 
 ### Contact
 
-If you have any questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or one of our [GitHub organization admins](mailto:github-admin@llnl.gov).
-
-You can also find us on our mailing list: <open-source@llnl.gov>.
+Check out our [FAQ](faq). If you have other questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or our [LLNL GitHub admins](mailto:github-admin@llnl.gov). You can also find us on our mailing list: [open-source@llnl.gov](mailto:open-source@llnl.gov).
 
 Follow us on Twitter for up-to-date information about the latest developments!
 
