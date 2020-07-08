@@ -98,7 +98,7 @@ Make sure your repo contains:
 
 * A [README](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
 
-* A [Notice](https://github.com/LLNL/llnl.github.io/blob/master/NOTICE) file that includes LLNL auspice and disclaimer statements.
+* A [NOTICE](https://github.com/LLNL/llnl.github.io/blob/master/NOTICE) file that includes LLNL auspice and disclaimer statements.
 
 After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/master/release-template.md).
 
@@ -148,13 +148,15 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 
 ### My repo has grown. How do I move it out of the LLNL organization?
 
-The process to transfer organizational ownership is straightforward. Please be sure to follow the two additional steps so the repo can still be cataloged on this website.
+The process to transfer organizational ownership is straightforward, but generally discouraged. This should really only be done for projects that are starting to build a "bigger than LLNL" community, and the decision should not be made lightly. 
 
-1. Transfer your repo's ownership via Settings > Manage Access > Who has access > Manage > Danger Zone > Transfer (`settings#danger-zone`).
+Migrating the repo outside of the LLNL organization requires an organization admin. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to coordinate the move.
 
-2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to add the new organization/repo’s name.
+One the repository has moved to the new orgnanization:
 
-3. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories, including the `radiuss` tag, if applicable.
+1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
+
+2. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories, including the `radiuss` tag, if applicable.
 
 ### How do I contribute to an LLNL repo?
 
