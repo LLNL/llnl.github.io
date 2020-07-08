@@ -143,6 +143,7 @@ function draw_sunburst_licenses(areaID) {
                                 }
                             });
             
+            // Removes labels that will never be visible. This helps in lag reduction.
             label = label.filter(d => labelEverVisible(d));
             
             // Creates blank circle in center with click event to go up one level
@@ -244,7 +245,7 @@ function draw_sunburst_licenses(areaID) {
             }
             // Use long name if no short name
             let licenseName = licenseInfo['spdxId'] == null || licenseInfo['spdxId'] == 'NOASSERTION' ? licenseInfo['name'] : licenseInfo['spdxId'];
-            // Skip if no license name or name is 'Other'
+            // Skip if no license name
             if (licenseName == null) {
                 continue;
             }
