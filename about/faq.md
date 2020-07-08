@@ -152,7 +152,7 @@ The process to transfer organizational ownership is straightforward, but general
 
 Migrating the repo outside of the LLNL organization requires an organization admin. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to coordinate the move.
 
-One the repository has moved to the new orgnanization:
+One the repository has moved to the new organization:
 
 1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
 
