@@ -8,7 +8,6 @@ function draw_pack_hierarchy(areaID) {
     });
 
     function drawGraph(data, areaID) {
-        // TODO: drawGraph function should be the main function responsible for the creation of the svg
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight * 2 - margin.top - margin.bottom;
@@ -20,7 +19,8 @@ function draw_pack_hierarchy(areaID) {
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
                 .append('g')
-                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+                    .attr('viewBox', `0 0 ${Math.min(width, height)} ${Math.min(width, height)}`);
 
         const pack = data => d3.pack()
             .size([width, height])
@@ -49,24 +49,38 @@ function draw_pack_hierarchy(areaID) {
                         .append('g')
                             .attr("transform", d => `translate(${d.x},${d.y})`);
         
-        const circles = node.append('circle')
+        const parentNodes = node.filter(d => d.children != undefined); 
+        const childNodes = node.filter(d => d.children == undefined);
+
+        let label = chart.selectAll('text')
+            .data(focus.children)
+            .enter()
+                .append('text')
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '12px')
+                    .attr('dy', '0.35em')
+                    .style('cursor', 'pointer')
+                    .text(d => d.data.name)
+                    .on('click', clicked);
+        
+        const parentCircles = parentNodes.append('circle')
+            .attr('fill', d => colors[d.height + 1])
+            .attr('r', d => d.r)
+            .style('cursor', 'pointer');
+
+        const childCircles = childNodes.append('circle')
             .attr('fill', d => colors[d.height + 1])
             .attr('r', d => d.r);
         
-        circles.on('click', clicked);
+        parentCircles.on('click', clicked);
 
-        circles.append('title')
+        parentCircles.append('title')
+            .text(d => d.data.name);
+        
+        childNodes.append('title')
             .text(d => d.data.name);
 
-        /*node.append('text')
-            .attr('font-size', '10px')
-            .attr('fill-opacity', d => d.r > 20 ? 1 : 0)
-            .text(d => d.data.name.length > 10 ? '' : d.data.name);*/
-
         function clicked(o) {
-            console.debug('Clicked:');
-            console.debug(o);
-            console.debug(this);
             if (focus !== o) {
                 zoom(o);
                 d3.event.stopPropagation();
@@ -76,7 +90,35 @@ function draw_pack_hierarchy(areaID) {
         getZoom([center[0], center[1], maxRadius * 2]);
 
         function zoom(d) {
+            const focus_0 = focus;
+
             focus = d;
+
+            label.remove();
+
+            label = chart.selectAll('text')
+            .data(focus.children)
+            .enter()
+                .append('text')
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '12px')
+                    .attr('dy', '0.35em')
+                    .attr('fill-opacity', 0)
+                    .style('cursor', d => {
+                        if (d.children == undefined) {
+                            return 'default';
+                        } else {
+                            return 'pointer';
+                        }
+                    })
+                    .text(d => d.data.name.length > 10 ? '' : d.data.name)
+                    .on('click', d => {
+                        if (d.children != undefined) {
+                            clicked(d);
+                        }
+                    });
+
+            childCircles.attr('fill-opacity', 0);
 
             const transition = chart.transition()
                 .duration(750)
@@ -84,6 +126,11 @@ function draw_pack_hierarchy(areaID) {
                     const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
                     return t => getZoom(i(t));
                 });
+
+            label.transition(transition).attr('fill-opacity', 1);
+
+            getChildZoom([focus.x, focus.y, focus.r * 2]);
+            setTimeout(() => childCircles.transition().duration(200).attr('fill-opacity', 1), 750);
         }
 
         function getZoom(v) {
@@ -91,8 +138,16 @@ function draw_pack_hierarchy(areaID) {
 
             view = v;
 
-            node.attr('transform', d => `translate(${(d.x - v[0]) * k + center[0]},${(d.y - v[1]) * k + center[1]})`);
-            circles.attr('r', d => d.r * k);
+            label.attr('transform', d => `translate(${(d.x - v[0]) * k + center[0]},${(d.y - v[1]) * k + center[1]})`);
+            parentNodes.attr('transform', d => `translate(${(d.x - v[0]) * k + center[0]},${(d.y - v[1]) * k + center[1]})`);
+            parentCircles.attr('r', d => d.r * k);
+        }
+
+        function getChildZoom(v) {
+            const k = Math.min(width / v[2] , height / v[2]);
+
+            childNodes.attr('transform', d => `translate(${(d.x - v[0]) * k + center[0]},${(d.y - v[1]) * k + center[1]})`);
+            childCircles.attr('r', d => d.r * k);
         }
 
     }
