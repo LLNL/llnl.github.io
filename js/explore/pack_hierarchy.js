@@ -32,8 +32,14 @@ function draw_pack_hierarchy(areaID) {
         const root = pack(data);
         console.debug(root);
         const center = [root.x,root.y];
+        const maxRadius = root.r;
+        let view;
+        let focus = root;
 
-        const node = chart.selectAll('g')
+        const nodeGroup = chart.append('g');
+
+        const node = nodeGroup
+            .selectAll('g')
             .data(d3.nest().key(d => d.height).entries(root.descendants()))
             .enter()
                 .append('g')
@@ -41,7 +47,7 @@ function draw_pack_hierarchy(areaID) {
                     .data(d => d.values)
                     .enter()
                         .append('g')
-                            .attr("transform", d => `translate(${d.x + 1},${d.y + 1})`);
+                            .attr("transform", d => `translate(${d.x},${d.y})`);
         
         const circles = node.append('circle')
             .attr('fill', d => colors[d.height + 1])
@@ -58,7 +64,35 @@ function draw_pack_hierarchy(areaID) {
             .text(d => d.data.name.length > 10 ? '' : d.data.name);*/
 
         function clicked(o) {
-            
+            console.debug('Clicked:');
+            console.debug(o);
+            console.debug(this);
+            if (focus !== o) {
+                zoom(o);
+                d3.event.stopPropagation();
+            }
+        }
+
+        getZoom([center[0], center[1], maxRadius * 2]);
+
+        function zoom(d) {
+            focus = d;
+
+            const transition = chart.transition()
+                .duration(750)
+                .tween('zoom', d => {
+                    const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+                    return t => getZoom(i(t));
+                });
+        }
+
+        function getZoom(v) {
+            const k = Math.min(width / v[2] , height / v[2]);
+
+            view = v;
+
+            node.attr('transform', d => `translate(${(d.x - v[0]) * k + center[0]},${(d.y - v[1]) * k + center[1]})`);
+            circles.attr('r', d => d.r * k);
         }
 
     }
