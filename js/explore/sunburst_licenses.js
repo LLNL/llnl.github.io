@@ -116,7 +116,7 @@ function draw_sunburst_licenses(areaID) {
                 .on('click', clicked);
 
             // Adds labels to wedges
-            const label = centerGroup
+            let label = centerGroup
                 .append('g')
                     .style('font-size', '11px')
                     .attr('pointer-events', 'none')
@@ -142,6 +142,8 @@ function draw_sunburst_licenses(areaID) {
                                     }
                                 }
                             });
+            
+            label = label.filter(d => labelEverVisible(d));
             
             // Creates blank circle in center with click event to go up one level
             const parent = centerGroup
@@ -188,7 +190,12 @@ function draw_sunburst_licenses(areaID) {
         }
 
         function labelVisible(d) {
-            return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.055
+            return d.y1 <= 3 && d.y0 >= 1 && (d.x1 - d.x0) > 0.07;
+        }
+
+        function labelEverVisible(d) {
+            const scale = 2 * Math.PI / (d.parent.x1 - d.parent.x0);
+            return (d.x1 - d.x0) * scale > 0.07;
         }
     
         function labelTransform(d) {
@@ -197,10 +204,10 @@ function draw_sunburst_licenses(areaID) {
             return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
         }
 
-        let options = ['Stars', 'Forks', 'Users', 'Repos'];
+        let options = ['# of Stars per Repo', '# of Forks per Repo', '# of Contributors per Repo', '# of Repos'];
 
         const slider = d3
-            .sliderBottom()
+            .sliderRight()
             .domain([0,3])
             .step(1)
             .tickFormat(d => {
@@ -208,11 +215,9 @@ function draw_sunburst_licenses(areaID) {
             })
             .ticks(3)
             .on('onchange', val => {
-                val = options[Math.round(val)];
                 data = reformatData(obj, val);
                 root = partition(data);
                 chart.select('#licenseCenter').remove();
-                chart.select('#licenseSlider').call(slider);
                 update();
             });
     
@@ -238,9 +243,9 @@ function draw_sunburst_licenses(areaID) {
                 continue;
             }
             // Use long name if no short name
-            let licenseName = licenseInfo['spdxId'] == null ? licenseInfo['name'] : licenseInfo['spdxId'];
+            let licenseName = licenseInfo['spdxId'] == null || licenseInfo['spdxId'] == 'NOASSERTION' ? licenseInfo['name'] : licenseInfo['spdxId'];
             // Skip if no license name or name is 'Other'
-            if (licenseName == null || licenseName == 'NOASSERTION') {
+            if (licenseName == null) {
                 continue;
             }
             if (objTree.hasOwnProperty(licenseName)) {
@@ -260,11 +265,11 @@ function draw_sunburst_licenses(areaID) {
             repos.forEach(function(repo) {
                 // Chooses what value to use for weights
                 let value = 1;
-                if (type == null || type == 'Stars') {
+                if (type == null || type == 0) {
                     value = obj['data'][repo]['stargazers']['totalCount'];
-                } else if (type == 'Forks') {
+                } else if (type == 1) {
                     value = obj['data'][repo]['forks']['totalCount'];
-                } else if (type == 'Users') {
+                } else if (type == 2) {
                     value = obj['data'][repo]['mentionableUsers']['totalCount'];
                 }
                 repoArray.push({ name: repo, value: value });
