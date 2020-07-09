@@ -1,7 +1,6 @@
 /* Creates line graph visualization for webpage */
 function draw_line_repoCreationHistory(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    console.debug(ghDataDir);
     var url = ghDataDir + '/labRepos_CreationHistory.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(values => {
