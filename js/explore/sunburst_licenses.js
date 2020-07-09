@@ -111,7 +111,7 @@ function draw_sunburst_licenses(areaID) {
             .on('click', clicked);
 
         // Adds labels to wedges
-        /*let label = centerGroup
+        let label = centerGroup
             .append('g')
                 .style('font-size', '11px')
                 .attr('pointer-events', 'none')
@@ -137,9 +137,6 @@ function draw_sunburst_licenses(areaID) {
                             }
                         });
         
-        // Removes labels that will never be visible. This helps in lag reduction.
-        label = label.filter(d => labelEverVisible(d));*/
-        
         // Creates blank circle in center with click event to go up one level
         const parent = centerGroup
             .append('circle')
@@ -152,9 +149,12 @@ function draw_sunburst_licenses(areaID) {
         // Makes center label fully visible
         d3.select('#licenseNames').raise();
 
-        root.each(d => d.target = null);
+        let lastClickedObject = root;
 
         function clicked(o) {
+            lastClickedObject = o;
+
+            let newLabel = label.filter(d => labelEverVisible(d));
 
             parent.datum(o.parent || root)
 
@@ -164,8 +164,6 @@ function draw_sunburst_licenses(areaID) {
                 y0: Math.max(0, d.y0 - o.depth),
                 y1: Math.max(0, d.y1 - o.depth)
             });
-
-            console.debug(root.children[0].target);
 
             const dur = 1000;
 
@@ -178,9 +176,9 @@ function draw_sunburst_licenses(areaID) {
                 })
                 .attrTween("d", d => () => arc(d.current));
 
-            /*label.transition(t)
+            newLabel.transition(t)
                 .attr('fill-opacity', d => +labelVisible(d.target))
-                .attrTween('transform', d => () => labelTransform(d.current));*/
+                .attrTween('transform', d => () => labelTransform(d.current));
 
             licenseNames.transition()
                 .duration(dur)
@@ -226,15 +224,41 @@ function draw_sunburst_licenses(areaID) {
                             })
                             .attr('fill-opacity', 0.9)
                             .attr('d', d => {
-                                console.debug(d.target);
-                                if (d.target != undefined) {
-                                    return arc(d.target);
+                                if (lastClickedObject.depth == 0) {
+                                    return arc(d.current);
                                 } else {
+                                    let o = root.children.filter(d => d.data.name == lastClickedObject.data.name)[0];
+                                    root.each(d => d.current = {
+                                        x0: Math.max(0, Math.min(1, (d.x0 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
+                                        x1: Math.max(0, Math.min(1, (d.x1 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
+                                        y0: Math.max(0, d.y0 - o.depth),
+                                        y1: Math.max(0, d.y1 - o.depth)
+                                    });
                                     return arc(d.current);
                                 }
                             });
                     return update;
                 }, exit => exit);
+                label.data(root.descendants().slice(1))
+                    .join('text')
+                        .attr('dy', '0.35em')
+                        .attr('fill-opacity', d => +labelVisible(d.current))
+                        .attr('transform', d => labelTransform(d.current))
+                        .text(d => {
+                            let name = d.data.name;
+                            if (d.height > 0) {
+                                return name;
+                            } else {
+                                name = name.split('/')[1];
+                                if(name.length > 20) {
+                                    return '...';
+                                } else {
+                                    return name;
+                                }
+                            }
+                        });
+                path.selectAll('title').remove();
+                path.append('title').text(d => d.data.name);
             });
     
         // Creates option slider
