@@ -2,8 +2,9 @@
 function draw_line_repoCreationHistory(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labRepos_CreationHistory.json';
-    d3.json(url, function(obj) {
-        var data = reformatData(obj);
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => {
+        var data = reformatData(values[0]);
         drawGraph(data['data'], data['data2'], data['dataR'], data['dataR2'], areaID);
     });
 

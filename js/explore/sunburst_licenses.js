@@ -2,9 +2,8 @@
 function draw_sunburst_licenses(areaID) {
     // Load data file, process data, and draw visualization
     var url = ghDataDir + '/labReposInfo.json';
-    d3.json(url, function(obj) {
-        drawSunburst(obj, areaID);
-    })
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => drawSunburst(values[0], areaID));
 
     function drawSunburst(obj, areaID) {
         let data = reformatData(obj, null);
@@ -66,8 +65,7 @@ function draw_sunburst_licenses(areaID) {
                 .attr('pointer-events', 'none')
                 .selectAll('text')
                     .data(root.children)
-                    .enter()
-                    .append('text')
+                    .join('text')
                         .attr('text-anchor', 'middle')
                         .attr('font-size', '14px')
                         .attr('fill-opacity', 0)
@@ -95,8 +93,7 @@ function draw_sunburst_licenses(areaID) {
                 .append('g')
                 .selectAll('path')
                     .data(root.descendants().slice(1))
-                    .enter()
-                    .append('path')
+                    .join('path')
                         .attr('fill', d => {
                             while (d.depth > 1) {
                                 d = d.parent;
@@ -218,8 +215,7 @@ function draw_sunburst_licenses(areaID) {
             .on('onchange', val => {
                 data = reformatData(obj, val);
                 root = partition(data);
-                chart.select('#licenseCenter').remove();
-                update();
+
             });
     
         // Creates option slider
