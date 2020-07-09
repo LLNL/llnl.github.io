@@ -215,7 +215,8 @@ function draw_sunburst_licenses(areaID) {
             .on('onchange', val => {
                 data = reformatData(obj, val);
                 root = partition(data);
-
+                chart.select('#licenseCenter').remove();
+                update();
             });
     
         // Creates option slider
