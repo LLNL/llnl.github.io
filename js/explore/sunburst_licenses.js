@@ -2,9 +2,8 @@
 function draw_sunburst_licenses(areaID) {
     // Load data file, process data, and draw visualization
     var url = ghDataDir + '/labReposInfo.json';
-    d3.json(url, function(obj) {
-        drawSunburst(obj, areaID);
-    })
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => drawSunburst(values[0], areaID));
 
     function drawSunburst(obj, areaID) {
         let data = reformatData(obj, null);
@@ -66,8 +65,7 @@ function draw_sunburst_licenses(areaID) {
                 .attr('pointer-events', 'none')
                 .selectAll('text')
                     .data(root.children)
-                    .enter()
-                    .append('text')
+                    .join('text')
                         .attr('text-anchor', 'middle')
                         .attr('font-size', '14px')
                         .attr('fill-opacity', 0)
@@ -75,119 +73,117 @@ function draw_sunburst_licenses(areaID) {
                         .attr('id', d => `licenseName${d.data.name}`)
                         .text(d => d.data.name);
 
+        root.each(d => d.current = d);
+
+        licenseNames.attr('fill-opacity', 0);
+
+        const centerGroup = chart
+            .append('g')
+                .attr('transform', () => {
+                    let xcoord = width / 2 + margin.left;
+                    let ycoord = height / 2 + margin.top;
+                    return 'translate(' + xcoord + ',' + ycoord + ')';
+                })
+                .attr('id', 'licenseCenter');
+
+        // Creates wedges of sunburst
+        const path = centerGroup
+            .append('g')
+            .selectAll('path')
+                .data(root.descendants().slice(1))
+                .join('path')
+                    .attr('fill', d => {
+                        while (d.depth > 1) {
+                            d = d.parent;
+                        }
+                        return colors(d.parent.children.indexOf(d));
+                    })
+                    .attr('fill-opacity', 0.9)
+                    .attr('d', d => arc(d.current));
         
-        function update() { 
-            root.each(d => d.current = d);
+        // Adds title for accessability. Does not affect name label below
+        path.append('title')
+            .text(d => d.data.name);
+        
+        // Makes license wedges appear clickable
+        path.filter(d => d.children)
+            .style('cursor', 'pointer')
+            .on('click', clicked);
 
-            licenseNames.attr('fill-opacity', 0);
-
-            const centerGroup = chart
-                .append('g')
-                    .attr('transform', () => {
-                        let xcoord = width / 2 + margin.left;
-                        let ycoord = height / 2 + margin.top;
-                        return 'translate(' + xcoord + ',' + ycoord + ')';
-                    })
-                    .attr('id', 'licenseCenter');
-
-            // Creates wedges of sunburst
-            const path = centerGroup
-                .append('g')
-                .selectAll('path')
+        // Adds labels to wedges
+        let label = centerGroup
+            .append('g')
+                .style('font-size', '11px')
+                .attr('pointer-events', 'none')
+                .attr('text-anchor', 'middle')
+                .style('user-select', 'none')
+                .selectAll('text')
                     .data(root.descendants().slice(1))
-                    .enter()
-                    .append('path')
-                        .attr('fill', d => {
-                            while (d.depth > 1) {
-                                d = d.parent;
-                            }
-                            return colors(d.parent.children.indexOf(d));
-                        })
-                        .attr('fill-opacity', 0.9)
-                        .attr('d', d => arc(d.current));
-            
-            // Adds title for accessability. Does not affect name label below
-            path.append('title')
-                .text(d => d.data.name);
-            
-            // Makes license wedges appear clickable
-            path.filter(d => d.children)
-                .style('cursor', 'pointer')
-                .on('click', clicked);
-
-            // Adds labels to wedges
-            let label = centerGroup
-                .append('g')
-                    .style('font-size', '11px')
-                    .attr('pointer-events', 'none')
-                    .attr('text-anchor', 'middle')
-                    .style('user-select', 'none')
-                    .selectAll('text')
-                        .data(root.descendants().slice(1))
-                        .enter()
-                        .append('text')
-                            .attr('dy', '0.35em')
-                            .attr('fill-opacity', d => +labelVisible(d.current))
-                            .attr('transform', d => labelTransform(d.current))
-                            .text(d => {
-                                let name = d.data.name;
-                                if (d.current.height > 0) {
-                                    return name;
+                    .join('text')
+                        .attr('dy', '0.35em')
+                        .attr('fill-opacity', d => +labelVisible(d.current))
+                        .attr('transform', d => labelTransform(d.current))
+                        .text(d => {
+                            let name = d.data.name;
+                            if (d.current.height > 0) {
+                                return name;
+                            } else {
+                                name = name.split('/')[1];
+                                if(name.length > 20) {
+                                    return '...';
                                 } else {
-                                    name = name.split('/')[1];
-                                    if(name.length > 20) {
-                                        return '...';
-                                    } else {
-                                        return name;
-                                    }
+                                    return name;
                                 }
-                            });
-            
-            // Removes labels that will never be visible. This helps in lag reduction.
-            label = label.filter(d => labelEverVisible(d));
-            
-            // Creates blank circle in center with click event to go up one level
-            const parent = centerGroup
-                .append('circle')
-                .datum(root)
-                .attr('r', radius)
-                .attr('fill', 'none')
-                .attr('pointer-events', 'all')
-                .on('click', clicked);
+                            }
+                        });
+        
+        // Creates blank circle in center with click event to go up one level
+        const parent = centerGroup
+            .append('circle')
+            .datum(root)
+            .attr('r', radius)
+            .attr('fill', 'none')
+            .attr('pointer-events', 'all')
+            .on('click', clicked);
 
-            // Makes center label fully visible
-            d3.select('#licenseNames').raise();
+        // Makes center label fully visible
+        d3.select('#licenseNames').raise();
 
-            function clicked(o) {
-                parent.datum(o.parent || root)
+        let lastClickedObject = root;
 
-                root.each(d => d.target = {
-                    x0: Math.max(0, Math.min(1, (d.x0 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
-                    x1: Math.max(0, Math.min(1, (d.x1 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
-                    y0: Math.max(0, d.y0 - o.depth),
-                    y1: Math.max(0, d.y1 - o.depth)
-                });
+        function clicked(o) {
+            lastClickedObject = o;
 
-                const dur = 1000;
+            let newLabel = label.filter(d => labelEverVisible(d));
 
-                const t = centerGroup.transition().duration(dur);
+            parent.datum(o.parent || root)
 
-                path.transition(t)
-                    .tween('data', d => {
-                        const i = d3.interpolate(d.current, d.target);
-                        return t => d.current = i(t);
-                    })
-                    .attrTween("d", d => () => arc(d.current));
+            root.each(d => d.target = {
+                x0: Math.max(0, Math.min(1, (d.x0 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
+                x1: Math.max(0, Math.min(1, (d.x1 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
+                y0: Math.max(0, d.y0 - o.depth),
+                y1: Math.max(0, d.y1 - o.depth)
+            });
 
-                label.transition(t)
-                    .attr('fill-opacity', d => +labelVisible(d.target))
-                    .attrTween('transform', d => () => labelTransform(d.current));
+            const dur = 1000;
 
-                licenseNames.transition()
-                    .duration(dur)
-                    .attr('fill-opacity', d => +(d.data.name == o.data.name));
+            const t = centerGroup.transition().duration(dur);
 
-            }
+            path.transition(t)
+                .tween('data', d => {
+                    const i = d3.interpolate(d.current, d.target);
+                    return t => d.current = i(t);
+                })
+                .attrTween("d", d => () => arc(d.current));
+
+            newLabel.transition(t)
+                .attr('fill-opacity', d => +labelVisible(d.target))
+                .attrTween('transform', d => () => labelTransform(d.current));
+
+            licenseNames.transition()
+                .duration(dur)
+                .attr('fill-opacity', d => +(d.data.name == o.data.name));
+
         }
 
         function labelVisible(d) {
@@ -218,8 +214,51 @@ function draw_sunburst_licenses(areaID) {
             .on('onchange', val => {
                 data = reformatData(obj, val);
                 root = partition(data);
-                chart.select('#licenseCenter').remove();
-                update();
+                root.each(d => d.current = d);
+                path.data(root.descendants().slice(1)).join(enter => enter, update => {
+                    update.attr('fill', d => {
+                                while (d.depth > 1) {
+                                    d = d.parent;
+                                }
+                                return colors(d.parent.children.indexOf(d));
+                            })
+                            .attr('fill-opacity', 0.9)
+                            .attr('d', d => {
+                                if (lastClickedObject.depth == 0) {
+                                    return arc(d.current);
+                                } else {
+                                    let o = root.children.filter(d => d.data.name == lastClickedObject.data.name)[0];
+                                    root.each(d => d.current = {
+                                        x0: Math.max(0, Math.min(1, (d.x0 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
+                                        x1: Math.max(0, Math.min(1, (d.x1 - o.x0) / (o.x1 - o.x0))) * 2 * Math.PI,
+                                        y0: Math.max(0, d.y0 - o.depth),
+                                        y1: Math.max(0, d.y1 - o.depth)
+                                    });
+                                    return arc(d.current);
+                                }
+                            });
+                    return update;
+                }, exit => exit);
+                label.data(root.descendants().slice(1))
+                    .join('text')
+                        .attr('dy', '0.35em')
+                        .attr('fill-opacity', d => +labelVisible(d.current))
+                        .attr('transform', d => labelTransform(d.current))
+                        .text(d => {
+                            let name = d.data.name;
+                            if (d.height > 0) {
+                                return name;
+                            } else {
+                                name = name.split('/')[1];
+                                if(name.length > 20) {
+                                    return '...';
+                                } else {
+                                    return name;
+                                }
+                            }
+                        });
+                path.selectAll('title').remove();
+                path.append('title').text(d => d.data.name);
             });
     
         // Creates option slider
@@ -228,8 +267,6 @@ function draw_sunburst_licenses(areaID) {
             .attr('id', 'licenseSlider')
             .call(slider);
 
-        // Calls update to draw graph for the first time
-        update();
     }
 
     // Turns json into useable data. Output MUST use arrays in accordance with the d3.hierarchy requirements

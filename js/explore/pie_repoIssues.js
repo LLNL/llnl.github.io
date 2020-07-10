@@ -2,8 +2,9 @@
 function draw_pie_repoIssues(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labReposInfo.json';
-    d3.json(url, function(obj) {
-        var data = reformatData(obj);
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => {
+        var data = reformatData(values[0]);
         drawGraph(data, areaID);
     });
 
@@ -25,7 +26,7 @@ function draw_pie_repoIssues(areaID, repoNameWOwner) {
         var legendRectSize = 15,
             legendSpacing = 4;
 
-        var color = d3.scaleOrdinal().range([d3.schemeCategory20c[8], d3.schemeCategory20c[9]]);
+        var color = d3.scaleOrdinal().range(['#31a354', '#74c476']);
 
         var tip = d3
             .tip()

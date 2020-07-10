@@ -2,8 +2,9 @@
 function draw_scatter_repoIssues(areaID) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labReposInfo.json';
-    d3.json(url, function(obj) {
-        var data = reformatData(obj);
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => {
+        var data = reformatData(values[0]);
         drawScatter(data, areaID);
     });
 
