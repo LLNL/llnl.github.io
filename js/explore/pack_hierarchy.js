@@ -55,15 +55,59 @@ function draw_pack_hierarchy(areaID) {
         const parentNodes = node.filter(d => d.children != undefined); 
         const childNodes = node.filter(d => d.children == undefined);
 
-        let label = chart.selectAll('text')
-            .data(focus.children)
-            .join('text')
-                .attr('text-anchor', 'middle')
-                .attr('font-size', '12px')
-                .attr('dy', '0.35em')
-                .style('cursor', 'pointer')
-                .text(d => d.data.name.length > 10 ? '' : d.data.name)
-                .on('click', clicked);
+        let label = chart.append('g')
+            .selectAll('text')
+                .data(data)
+                .join('text')
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '12px')
+                    .attr('dy', '0.35em')
+                    .attr('fill-opacity', 1)
+                    .style('cursor', d => {
+                        if (d.children == undefined) {
+                            return 'default';
+                        } else {
+                            return 'pointer';
+                        }
+                    })
+                    .text(d => d.data.name.length > 10)
+                    .on('click', d => {
+                        if (d.children != undefined) {
+                            clicked(d);
+                        }
+                    });
+
+        function updateLabel(data) {
+            label = label
+                .data(data)
+                .join('text')
+                    .attr('text-anchor', 'middle')
+                    .attr('font-size', '10px')
+                    .attr('dy', '0.35em')
+                    .attr('fill-opacity', 0)
+                    .attr('radius', d => d.r * (maxRadius / d.parent.r))
+                    .style('cursor', d => {
+                        if (d.children == undefined) {
+                            return 'default';
+                        } else {
+                            return 'pointer';
+                        }
+                    })
+                    .text(d => {return d.data.name})
+                    .on('click', d => {
+                        if (d.children != undefined) {
+                            clicked(d);
+                        }
+                    });
+            
+            label.nodes().forEach(node => {
+                node.setAttribute('font-size', Math.floor(10 * node.getAttribute('radius') * 2 / (node.getComputedTextLength() + 5)) + 'px')
+            });
+        }
+
+        updateLabel(focus.children);
+        label.attr('fill-opacity', 1);
+        
 
         // Adds title
         chart
@@ -105,30 +149,6 @@ function draw_pack_hierarchy(areaID) {
 
             focus = d;
 
-            label.remove();
-
-            label = chart.append('g')
-            .selectAll('text')
-            .data(focus.children)
-            .join('text')
-                .attr('text-anchor', 'middle')
-                .attr('font-size', '12px')
-                .attr('dy', '0.35em')
-                .attr('fill-opacity', 0)
-                .style('cursor', d => {
-                    if (d.children == undefined) {
-                        return 'default';
-                    } else {
-                        return 'pointer';
-                    }
-                })
-                .text(d => d.data.name.length > 16 ? '' : d.data.name)
-                .on('click', d => {
-                    if (d.children != undefined) {
-                        clicked(d);
-                    }
-                });
-
             childCircles.attr('fill-opacity', 0);
 
             const transition = chart.transition()
@@ -137,6 +157,8 @@ function draw_pack_hierarchy(areaID) {
                     const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
                     return t => getZoom(i(t));
                 });
+
+            updateLabel(focus.children);
 
             label.transition(transition).attr('fill-opacity', 1);
 
