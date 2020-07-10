@@ -3,11 +3,12 @@ function draw_pie_repoUsers(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
     var url0 = ghDataDir + '/labUsers.json';
     var url1 = ghDataDir + '/extUsers.json';
-    d3.queue()
-        .defer(d3.json, url0)
-        .defer(d3.json, url1)
-        .awaitAll(function(error, response) {
-            if (error) throw error;
+    var files = [url0,url1];
+    var promises = [];
+    files.forEach(function(url) {
+        promises.push(d3.json(url));
+    });
+    Promise.all(promises).then(response => {
             var data = reformatData(response[0], response[1]);
             drawGraph(data, areaID);
         });
@@ -30,7 +31,7 @@ function draw_pie_repoUsers(areaID, repoNameWOwner) {
         var legendRectSize = 15,
             legendSpacing = 4;
 
-        var color = d3.scaleOrdinal().range([d3.schemeCategory20c[0], d3.schemeCategory20c[1]]);
+        var color = d3.scaleOrdinal().range(['#3182bd', '#6baed6']);
 
         var tip = d3
             .tip()

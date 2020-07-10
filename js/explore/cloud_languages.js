@@ -2,8 +2,9 @@
 function draw_cloud_languages(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labRepos_Languages.json';
-    d3.json(url, function(obj) {
-        var data = reformatData(obj);
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => {
+        var data = reformatData(values[0]);
         drawCloud(data, areaID);
     });
 
@@ -20,7 +21,7 @@ function draw_cloud_languages(areaID, repoNameWOwner) {
                 })
             ])
             .range([12, 60]);
-        var fill = d3.scaleOrdinal(d3.schemeCategory20);
+        var fill = d3.scaleOrdinal(["#1f77b4","#ff7f0e","#2ca02c","#d62728","#9467bd","#8c564b","#e377c2","#7f7f7f","#bcbd22","#17becf"]);
 
         var margin = { top: stdMargin.top, right: stdMargin.right / 2, bottom: stdMargin.bottom / 2, left: stdMargin.left / 2 },
             width = stdTotalWidth - margin.left - margin.right,
