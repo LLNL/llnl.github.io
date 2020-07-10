@@ -33,7 +33,6 @@ function draw_pack_hierarchy(areaID) {
                 .sort((a, b) => b.value - a.value));
 
         const root = pack(data);
-        console.debug(root);
         const center = [root.x,root.y];
         const maxRadius = root.r;
         let view;
