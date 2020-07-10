@@ -2,12 +2,15 @@
 function draw_pack_hierarchy(areaID) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labUsers.json';
-    d3.json(url, function(obj) {
-        var data = reformatData(obj);
+    var files = [url];
+    Promise.all(files.map(url => d3.json(url))).then(values => {
+        var data = reformatData(values[0]);
         drawGraph(data, areaID);
     });
 
     function drawGraph(data, areaID) {
+        const graphHeader = 'LLNL Repositories';
+
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight * 2 - margin.top - margin.bottom;
@@ -36,7 +39,7 @@ function draw_pack_hierarchy(areaID) {
         let view;
         let focus = root;
 
-        const nodeGroup = chart.append('g');
+        const nodeGroup = chart.append('g').attr('id', '#NodeGraph');
 
         const node = nodeGroup
             .selectAll('g')
@@ -54,15 +57,23 @@ function draw_pack_hierarchy(areaID) {
 
         let label = chart.selectAll('text')
             .data(focus.children)
-            .enter()
-                .append('text')
-                    .attr('text-anchor', 'middle')
-                    .attr('font-size', '12px')
-                    .attr('dy', '0.35em')
-                    .style('cursor', 'pointer')
-                    .text(d => d.data.name)
-                    .on('click', clicked);
-        
+            .join('text')
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '12px')
+                .attr('dy', '0.35em')
+                .style('cursor', 'pointer')
+                .text(d => d.data.name.length > 10 ? '' : d.data.name)
+                .on('click', clicked);
+
+        // Adds title
+        chart
+            .append('g')
+            .attr('transform', `translate(${width / 2},${0 - margin.top / 3})`)
+            .append('text')
+            .attr('class', 'graphtitle')
+            .attr('text-anchor', 'middle')
+            .text(graphHeader);
+
         const parentCircles = parentNodes.append('circle')
             .attr('fill', d => colors[d.height + 1])
             .attr('r', d => d.r)
@@ -96,27 +107,27 @@ function draw_pack_hierarchy(areaID) {
 
             label.remove();
 
-            label = chart.selectAll('text')
+            label = chart.append('g')
+            .selectAll('text')
             .data(focus.children)
-            .enter()
-                .append('text')
-                    .attr('text-anchor', 'middle')
-                    .attr('font-size', '12px')
-                    .attr('dy', '0.35em')
-                    .attr('fill-opacity', 0)
-                    .style('cursor', d => {
-                        if (d.children == undefined) {
-                            return 'default';
-                        } else {
-                            return 'pointer';
-                        }
-                    })
-                    .text(d => d.data.name.length > 10 ? '' : d.data.name)
-                    .on('click', d => {
-                        if (d.children != undefined) {
-                            clicked(d);
-                        }
-                    });
+            .join('text')
+                .attr('text-anchor', 'middle')
+                .attr('font-size', '12px')
+                .attr('dy', '0.35em')
+                .attr('fill-opacity', 0)
+                .style('cursor', d => {
+                    if (d.children == undefined) {
+                        return 'default';
+                    } else {
+                        return 'pointer';
+                    }
+                })
+                .text(d => d.data.name.length > 16 ? '' : d.data.name)
+                .on('click', d => {
+                    if (d.children != undefined) {
+                        clicked(d);
+                    }
+                });
 
             childCircles.attr('fill-opacity', 0);
 
@@ -170,7 +181,8 @@ function draw_pack_hierarchy(areaID) {
                     data.children[indexOfOwner].children.push({ name: repo, children: [] });
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1 });
+                let username = obj['data'][user]['name'] == null ? user : obj['data'][user]['name'];
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1 });
             }
         }
         
