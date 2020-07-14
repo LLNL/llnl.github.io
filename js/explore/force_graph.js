@@ -23,8 +23,6 @@ function draw_force_graph(areaID) {
 
         const nodes = data.nodes;
         const links = data.links;
-        console.debug(nodes);
-        console.debug(links);
 
         function weight(x) {
             const b = 0.15;
@@ -89,8 +87,6 @@ function draw_force_graph(areaID) {
             legendMap.push({ text: labels[i], color: d });
         });
 
-        console.debug(legendMap);
-
         const legend = chart
             .append('g')
             .attr('id', 'foo')
@@ -99,7 +95,6 @@ function draw_force_graph(areaID) {
                 .join('g')
                 .attr('class', 'legend')
                 .attr('transform', (d, i) => {
-                    console.debug(d);
                     const legendHeight = legendRectSize + legendSpacing;
                     const offset = (legendHeight * colors.length) / 2;
                     const horizontal = 0 - width / 2;
