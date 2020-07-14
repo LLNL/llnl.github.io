@@ -1,0 +1,23 @@
+query ($ownName: String!, $repoName: String!, $numManifests: Int!, $numDependents: Int!, $pgCursor: String) {
+  repository(owner: $ownName, name: $repoName) {
+    dependencyGraphManifests(first: $numManifests, after: $pgCursor, dependenciesFirst: $numDependents) {
+      nodes {
+        dependencies(first: $numDependents) {
+          nodes {
+            packageName
+            packageManager
+            repository {
+              name
+              nameWithOwner
+            }
+          }
+        }
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+# {"ownName": "LLNL", "repoName": "llnl.github.io", "numManifests": 50, "numDependents": 50, "pgCursor": null}
