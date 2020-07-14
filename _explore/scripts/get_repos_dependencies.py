@@ -29,7 +29,13 @@ for repo in repolist:
     try:
         outObj = queryMan.queryGitHubFromFile(
             queryPath,
-            {"ownName": r[0], "repoName": r[1], "numManifests": 50, "numDependents": 25, "pgCursor": None},
+            {
+                "ownName": r[0],
+                "repoName": r[1],
+                "numManifests": 50,
+                "numDependents": 25,
+                "pgCursor": None,
+            },
             paginate=True,
             cursorVar="pgCursor",
             keysToList=["data", "repository", "dependencyGraphManifests", "nodes"],
