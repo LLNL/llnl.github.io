@@ -61,12 +61,13 @@ One of the following files must be included at the top level of your repository
 with the file name `LICENSE`. The only content which may be changed in the file
 is the copyright year.
 
-- [MIT License](/about/licenses/mit.txt)
-- [BSD-3 License](/about/licenses/bsd-3-clause.txt)
+- [Apache 2.0 License with LLVM Exception](/about/licenses/apache-2.0-llvm-exception.txt)
 - [Apache 2.0 License](/about/licenses/apache-2.0.txt)
+- [BSD-3 License](/about/licenses/bsd-3-clause.txt)
 - [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
 - [GPL-3.0 License](/about/licenses/gpl-3.0.txt)
 - [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
+- [MIT License](/about/licenses/mit.txt)
 
 If your repository was approved for release under a different open source
 license, the text of that license will be provided by the Innovation and
