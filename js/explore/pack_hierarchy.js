@@ -1,10 +1,11 @@
 /* Creates line graph visualization for webpage */
 function draw_pack_hierarchy(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labUsers.json';
-    var files = [url];
+    var url1 = ghDataDir + '/labUsers.json';
+    var url2 = ghDataDir + '/extUsers.json';
+    var files = [url1, url2];
     Promise.all(files.map(url => d3.json(url))).then(values => {
-        var data = reformatData(values[0]);
+        var data = reformatData(values[0], values[1]);
         drawGraph(data, areaID);
     });
 
@@ -15,7 +16,7 @@ function draw_pack_hierarchy(areaID) {
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight * 2 - margin.top - margin.bottom;
 
-        const colors = ["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#bc80bd","#ccebc5","#ffed6f"];
+        const colors = ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f'];
 
         const chart = d3
             .select('.' + areaID)
@@ -49,7 +50,7 @@ function draw_pack_hierarchy(areaID) {
                     .data(d => d.values)
                     .enter()
                         .append('g')
-                            .attr("transform", d => `translate(${d.x},${d.y})`);
+                            .attr('transform', d => `translate(${d.x},${d.y})`);
         
         const parentNodes = node.filter(d => d.children != undefined); 
         const childNodes = node.filter(d => d.children == undefined);
@@ -123,7 +124,7 @@ function draw_pack_hierarchy(areaID) {
             .style('cursor', 'pointer');
 
         const childCircles = childNodes.append('circle')
-            .attr('fill', d => colors[d.height + 1])
+            .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.depth + 3])
             .attr('r', d => d.r);
         
         parentCircles.on('click', clicked);
@@ -132,7 +133,9 @@ function draw_pack_hierarchy(areaID) {
             .text(d => d.data.name);
         
         childNodes.append('title')
-            .text(d => d.data.name);
+            .text(d => {
+                return `${d.data.name} : ${d.data.internal ? 'Internal' : 'External'}`;
+            });
 
         function clicked(o) {
             if (focus !== o) {
@@ -185,13 +188,13 @@ function draw_pack_hierarchy(areaID) {
     }
 
     // Turn json obj into desired working data
-    function reformatData(obj) {
+    function reformatData(obj1, obj2) {
         var data = { name: 'LLNL', children: [] };
-        for (var user in obj['data']) {
-            if (obj['data'][user]['contributedLabRepositories'] === undefined) {
+        for (var user in obj1['data']) {
+            if (obj1['data'][user]['contributedLabRepositories'] === undefined) {
                 continue;
             }
-            for (var ownerRepo of obj['data'][user]['contributedLabRepositories']['nodes']) {
+            for (var ownerRepo of obj1['data'][user]['contributedLabRepositories']['nodes']) {
                 let owner = ownerRepo.split('/')[0];
                 let repo = ownerRepo.split('/')[1];
                 if (!data.children.some(d => d.name == owner)) {
@@ -202,8 +205,27 @@ function draw_pack_hierarchy(areaID) {
                     data.children[indexOfOwner].children.push({ name: repo, children: [] });
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
-                let username = obj['data'][user]['name'] == null ? user : obj['data'][user]['name'];
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1 });
+                let username = obj1['data'][user]['name'] == null ? user : obj1['data'][user]['name'];
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: true });
+            }
+        }
+        for (var user in obj2['data']) {
+            if (obj2['data'][user]['contributedLabRepositories'] === undefined) {
+                continue;
+            }
+            for (var ownerRepo of obj2['data'][user]['contributedLabRepositories']['nodes']) {
+                let owner = ownerRepo.split('/')[0];
+                let repo = ownerRepo.split('/')[1];
+                if (!data.children.some(d => d.name == owner)) {
+                    data.children.push({ name: owner, children: [] });
+                }
+                let indexOfOwner = data.children.findIndex(d => d.name == owner);
+                if (!data.children[indexOfOwner].children.some(d => d.name == repo)) {
+                    data.children[indexOfOwner].children.push({ name: repo, children: [] });
+                }
+                let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
+                let username = obj2['data'][user]['name'] == null ? user : obj2['data'][user]['name'];
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: false });
             }
         }
         
