@@ -114,6 +114,7 @@ function draw_pack_hierarchy(areaID) {
             .append('g')
             .attr('transform', `translate(${width / 2},${0 - margin.top / 3})`)
             .append('text')
+            .attr('id', 'zoomTitle')
             .attr('class', 'graphtitle')
             .attr('text-anchor', 'middle')
             .text(graphHeader);
@@ -138,6 +139,7 @@ function draw_pack_hierarchy(areaID) {
             });
 
         function clicked(o) {
+            d3.select('#zoomTitle').text(o.data.name);
             if (focus !== o) {
                 zoom(o);
                 d3.event.stopPropagation();
@@ -189,7 +191,7 @@ function draw_pack_hierarchy(areaID) {
 
     // Turn json obj into desired working data
     function reformatData(obj1, obj2) {
-        var data = { name: 'LLNL', children: [] };
+        var data = { name: 'LLNL Repositories', children: [] };
         for (var user in obj1['data']) {
             if (obj1['data'][user]['contributedLabRepositories'] === undefined) {
                 continue;
