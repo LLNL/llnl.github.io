@@ -209,7 +209,7 @@ function draw_force_graph(areaID) {
                     } else {
                         nodes[nodes.findIndex(d => d.id == node['repository']['nameWithOwner'])].package = true;
                     }
-                    if (!links.some(d => (d.source.id == repo && d.target.id == node['repository']['nameWithOwner']) || (d.source.id == node['repository']['nameWithOwner'] && d.target.id == repo))) {
+                    if (!links.some(d => (d.source == repo && d.target == node['repository']['nameWithOwner']) || (d.source == node['repository']['nameWithOwner'] && d.target == repo))) {
                         links.push({ source: repo, target: node['repository']['nameWithOwner'], value: 1 });
                     }
                 }
