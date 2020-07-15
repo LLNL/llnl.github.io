@@ -94,7 +94,7 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 
 Make sure your repo contains:
 
-* An appropriate open source license and `LLNL-CODE-xxxxxx` release number. See the [LLNL Software Licensing](licenses) page for details and examples.
+* An appropriate open source license and `LLNL-CODE-xxxxxx` release number. See the [LLNL Software Licensing](https://software.llnl.gov/about/licenses) page for details and examples.
 
 * A [README](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
 
@@ -152,7 +152,7 @@ The process to transfer organizational ownership is straightforward, but general
 
 Migrating the repo outside of the LLNL organization requires an organization admin. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to coordinate the move.
 
-One the repository has moved to the new organization:
+Once the repository has moved to the new organization:
 
 1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
 
