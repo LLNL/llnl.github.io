@@ -1,6 +1,6 @@
 query ($ownName: String!, $repoName: String!, $numManifests: Int!, $numDependents: Int!, $pgCursor: String) {
   repository(owner: $ownName, name: $repoName) {
-    dependencyGraphManifests(first: $numManifests, after: $pgCursor, dependenciesFirst: $numDependents) {
+    dependencyGraphManifests(first: $numManifests, after: $pgCursor, dependenciesFirst: $numDependents, withDependencies: true) {
       nodes {
         dependencies(first: $numDependents) {
           nodes {
