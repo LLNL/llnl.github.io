@@ -9,6 +9,12 @@ query ($ownName: String!, $repoName: String!, $numManifests: Int!, $numDependent
             repository {
               name
               nameWithOwner
+              owner {
+                login
+                ... on Organization {
+                  isVerified
+                }
+              }
             }
           }
         }
