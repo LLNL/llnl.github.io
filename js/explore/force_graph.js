@@ -267,6 +267,9 @@ function draw_force_graph(areaID) {
             simulation.force('link').links(newLinks).distance(30);
             simulation.force('charge').strength(-120);
 
+            node.selectAll('circle').selectAll('title').remove();
+            link.selectAll('line').selectAll('title').remove();
+
             node.selectAll('circle')
                 .data(newNodes)
                 .join('circle')
@@ -308,7 +311,7 @@ function draw_force_graph(areaID) {
 
             link.selectAll('line').attr('stroke-opacity', 0.2)
 
-            node.selectAll('circle').select('title').text(d => d.id);
+            node.selectAll('circle').append('title').text(d => d.id);
             link.selectAll('line').append('title').text(d => `${d.source.name} : ${d.target.name}`);
 
             nodes = newNodes;
@@ -325,6 +328,9 @@ function draw_force_graph(areaID) {
             simulation.nodes(newNodes);
             simulation.force('link').links(newLinks).distance(5);
             simulation.force('charge').strength(-20);
+
+            node.selectAll('circle').selectAll('title').remove();
+            link.selectAll('line').selectAll('title').remove();
 
             node.selectAll('circle')
                 .data(newNodes)
@@ -361,12 +367,12 @@ function draw_force_graph(areaID) {
 
             link.selectAll('line')
                 .data(newLinks)
-                .join(enter => enter.append('line').append('title').text(d => `${d.source.name} : ${d.target.name}`),
+                .join(enter => enter.append('line'),
                     update => update,
                     exit => exit.remove())
                     .attr('stroke-width', d => (100 - d.value) / 50);
 
-            link.selectAll('line').attr('stroke-opacity', 0.6);
+            link.selectAll('line').attr('stroke-opacity', 0.6).append('title').text(d => `${d.source.name} : ${d.target.name}`);
 
             nodes = newNodes;
             links = newLinks;
