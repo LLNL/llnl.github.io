@@ -169,7 +169,7 @@ function draw_force_graph(areaID) {
         // Options for graph view
         options.normalView = { name: 'normalView', text: 'Repos connected to dependencies', function: redraw };
         options.simplifiedView = { name: 'simplifiedView', text: 'Repos connected by shared dependencies', function: simplify };
-        options.orgView = { name: 'orgView', text: 'Organizations connected to dependecy organizations', function: organize };
+        options.orgView = { name: 'orgView', text: 'Organizations connected to dependency organizations', function: organize };
         options.simplifiedOrgView = { name: 'simplifiedOrgView', text: 'Organizations connected by shared dependencies', function: simplifyOrganize };
         const optionsArray = Object.values(options);
 

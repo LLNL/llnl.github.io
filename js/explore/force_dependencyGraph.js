@@ -179,7 +179,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
         // Options for graph view
         options.normalView = { name: 'normalView', text: 'Repos connected to dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], function: redraw };
         options.simplifiedView = { name: 'simplifiedView', text: 'Repos connected by shared dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], function: simplify };
-        options.orgView = { name: 'orgView', text: 'Organizations connected to verified dependecy organizations', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: organize };
+        options.orgView = { name: 'orgView', text: 'Organizations connected to dependency organizations', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: organize };
         options.simplifiedOrgView = { name: 'simplifiedOrgView', text: 'Organizations connected by shared dependencies', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: simplifyOrganize };
         const optionsArray = Object.values(options);
 
