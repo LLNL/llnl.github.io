@@ -1,16 +1,16 @@
-function draw_force_graph(areaID) {
+function draw_force_graph(areaID, adjacentAreaID) {
     // URL for data
     var url = ghDataDir + '/labRepos_Dependencies.json';
     var files = [url];
     // Converts json file into object, reformats data, and then draws graph.
-    Promise.all(files.map(url => d3.json(url))).then(values => drawGraph(reformatData(values[0]), areaID));
+    Promise.all(files.map(url => d3.json(url))).then(values => drawGraph(reformatData(values[0]), areaID, adjacentAreaID));
 
     // Draws graph
-    function drawGraph(data, areaID) {
+    function drawGraph(data, areaID, adjacentAreaID) {
         const graphHeader = 'LLNL Dependencies';
 
         const margin = { top: stdMargin.top, right: stdMargin.right / 2, bottom: stdMargin.bottom / 2, left: stdMargin.left / 2 },
-            width = stdTotalWidth * 2 - margin.left - margin.right,
+            width = stdTotalWidth * 2 - 50 - margin.left - margin.right,
             height = stdTotalHeight * 2 - margin.top - margin.bottom;
         const legendRectSize = 15,
             legendSpacing = 4;
@@ -29,10 +29,10 @@ function draw_force_graph(areaID) {
 
         // Adds static, directional, and link forces to nodes
         const simulation = d3.forceSimulation(nodes)
-            .force('link', d3.forceLink(links).id(d => d.id).distance(d => 5))
+            .force('link', d3.forceLink(links).id(d => d.id).distance(d => 10))
             .force('charge', d3.forceManyBody().strength(() => -20))
-            .force('x', d3.forceX().strength(() => 0.14))
-            .force('y', d3.forceY().strength(() => 0.14));
+            .force('x', d3.forceX().strength(() => 0.09))
+            .force('y', d3.forceY().strength(() => 0.09));
 
         // Adds title
         chart
@@ -73,6 +73,7 @@ function draw_force_graph(areaID) {
         node.selectAll('circle')
             .data(nodes)
             .join('circle')
+                .style('cursor', 'pointer')
                 .attr('r', 5)
                 .attr('fill', d => {
                     if (d.notPackage && !d.package) {
@@ -100,7 +101,8 @@ function draw_force_graph(areaID) {
                     .attr('stroke-opacity', 1);
                 link.selectAll('line').transition(t)
                     .attr('stroke-opacity', 0.6);
-            });
+            })
+            .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
         // Adds titles
         node.selectAll('circle').append('title').text(d => d.id);
@@ -121,56 +123,64 @@ function draw_force_graph(areaID) {
 
         // Data for legend
         const labels = ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'];
-        const legendMap = [];
-        colors.forEach((d, i) => {
-            legendMap.push({ text: labels[i], color: d });
-        });
-
+    
         // Creates legend
         const legend = chart
-            .append('g')
-            .attr('id', 'foo')
-            .selectAll('g')
-            .data(legendMap)
-                .join('g')
-                .attr('class', 'legend')
-                .attr('transform', (d, i) => {
-                    const legendHeight = legendRectSize + legendSpacing;
-                    const offset = (legendHeight * colors.length) / 2;
-                    const horizontal = 0 - width / 2;
-                    const vertical = i * legendHeight - height / 2;
-                    return `translate(${horizontal}, ${vertical})`;
-                });
-        
-        // Adds rectangle for color reference
-        legend
-            .append('rect')
-            .attr('width', legendRectSize)
-            .attr('height', legendRectSize)
-            .style('fill', d => {
-                return d.color;
-            })
-            .style('stroke', d => {
-                return d.color;
-            });
+            .append('g');
 
-        // Adds legend text
-        legend
-            .append('text')
-            .attr('x', legendRectSize + legendSpacing)
-            .attr('y', legendRectSize - legendSpacing)
-            .text(d => {
-                return d.text;
-            })
-            .attr('text-anchor', 'start');
+        function updateLegend(labels, color = colors) {
+            legend.selectAll('g').remove();
+
+            const legendMap = [];
+            color.forEach((d, i) => {
+                legendMap.push({ text: labels[i], color: d });
+            });
+    
+            const legendEntries = legend
+                .selectAll('g')
+                .data(legendMap)
+                    .join('g')
+                    .attr('class', 'legend')
+                    .attr('transform', (d, i) => {
+                        const legendHeight = legendRectSize + legendSpacing;
+                        const offset = (legendHeight * colors.length) / 2;
+                        const horizontal = 0 - width / 2;
+                        const vertical = i * legendHeight - height / 2;
+                        return `translate(${horizontal}, ${vertical})`;
+                    });
+            
+            // Adds rectangle for color reference
+            legendEntries
+                .append('rect')
+                    .attr('width', legendRectSize)
+                    .attr('height', legendRectSize)
+                    .style('fill', d => {
+                        return d.color;
+                    })
+                    .style('stroke', d => {
+                        return d.color;
+                    });
+    
+            // Adds legend text
+            legendEntries
+                .append('text')
+                    .attr('x', legendRectSize + legendSpacing)
+                    .attr('y', legendRectSize - legendSpacing)
+                    .text(d => {
+                        return d.text;
+                    })
+                    .attr('text-anchor', 'start');
+        }
+
+        updateLegend(labels);
 
         const options = {};
 
         // Options for graph view
-        options.normalView = { name: 'normalView', text: 'Repos connected to dependencies', function: redraw };
-        options.simplifiedView = { name: 'simplifiedView', text: 'Repos connected by shared dependencies', function: simplify };
-        options.orgView = { name: 'orgView', text: 'Organizations connected to dependecy organizations', function: organize };
-        options.simplifiedOrgView = { name: 'simplifiedOrgView', text: 'Organizations connected by shared dependencies', function: simplifyOrganize };
+        options.normalView = { name: 'normalView', text: 'Repos connected to dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], function: redraw };
+        options.simplifiedView = { name: 'simplifiedView', text: 'Repos connected by shared dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], function: simplify };
+        options.orgView = { name: 'orgView', text: 'Organizations connected to verified dependecy organizations', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: organize };
+        options.simplifiedOrgView = { name: 'simplifiedOrgView', text: 'Organizations connected by shared dependencies', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: simplifyOrganize };
         const optionsArray = Object.values(options);
 
         // Options slider
@@ -193,6 +203,7 @@ function draw_force_graph(areaID) {
         // What to do when the option slider is changed
         function optionChanged(o) {
             options[o.name].function();
+            updateLegend(options[o.name].labels);
         }
 
         // Finds all nodes and links in a certain depth and marks nodes by distance from node (not technically a tree)
@@ -204,7 +215,7 @@ function draw_force_graph(areaID) {
                 linkArray = currentAdjacentEdges(nodeArray);
                 nodeArray = linksToNodes(linkArray);
                 nodeArray.forEach(d => {
-                    d.depth = d.depth ? d.depth : i + 1;
+                    d.depth = d.depth != null ? d.depth : i + 1;
                 });
             }
             return { nodes: nodeArray, links: linkArray };
@@ -277,7 +288,7 @@ function draw_force_graph(areaID) {
 
             simulation.nodes(newNodes);
             simulation.force('link').links(newLinks).distance(30);
-            simulation.force('charge').strength(-120);
+            simulation.force('charge').strength(-110);
 
             node.selectAll('circle').selectAll('title').remove();
             link.selectAll('line').selectAll('title').remove();
@@ -285,7 +296,8 @@ function draw_force_graph(areaID) {
             node.selectAll('circle')
                 .data(newNodes)
                 .join('circle')
-                    .attr('r', 5)
+                    .style('cursor', 'pointer')
+                    .attr('r', 8)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -312,14 +324,15 @@ function draw_force_graph(areaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
-                });
+                })
+                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(newLinks)
                 .join(enter => enter.append('line'),
                     update => update,
                     exit => exit.remove())
-                    .attr('stroke-width', d => (100 - d.value) / 50);
+                    .attr('stroke-width', 2);
 
             link.selectAll('line').attr('stroke-opacity', 0.2)
 
@@ -338,7 +351,7 @@ function draw_force_graph(areaID) {
             const newLinks = data.links;
 
             simulation.nodes(newNodes);
-            simulation.force('link').links(newLinks).distance(5);
+            simulation.force('link').links(newLinks).distance(10);
             simulation.force('charge').strength(-20);
 
             node.selectAll('circle').selectAll('title').remove();
@@ -347,6 +360,7 @@ function draw_force_graph(areaID) {
             node.selectAll('circle')
                 .data(newNodes)
                 .join('circle')
+                    .style('cursor', 'pointer')
                     .attr('r', 5)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
@@ -375,6 +389,7 @@ function draw_force_graph(areaID) {
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.6);
                 })
+                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID))
                 .append('title').text(d => d.id);
 
             link.selectAll('line')
@@ -410,14 +425,11 @@ function draw_force_graph(areaID) {
 
             nodes = Object.values(orgs).filter(d => {
                 if (d.package && !d.notPackage) {
-                    return d.verified == true;
+                    return d.verified === true || d.verified === false;
                 } else {
                     return true;
                 }
             });
-
-            console.debug(nodes);
-            console.debug(data.links);
 
             const newLinks = [];
 
@@ -430,12 +442,9 @@ function draw_force_graph(areaID) {
 
             links = newLinks;
 
-            console.debug(links);
-            console.debug(newLinks);
-
             simulation.nodes(nodes);
-            simulation.force('link').links(links).distance(10);
-            simulation.force('charge').strength(-30);
+            simulation.force('link').links(links).distance(40);
+            simulation.force('charge').strength(-40);
 
             node.selectAll('circle').selectAll('title').remove();
             link.selectAll('line').selectAll('title').remove();
@@ -443,7 +452,8 @@ function draw_force_graph(areaID) {
             node.selectAll('circle')
                 .data(nodes)
                 .join('circle')
-                    .attr('r', 7)
+                    .style('cursor', 'pointer')
+                    .attr('r', 10)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -470,7 +480,8 @@ function draw_force_graph(areaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
-                });
+                })
+                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(links)
@@ -532,8 +543,8 @@ function draw_force_graph(areaID) {
             links = finalLinks;
 
             simulation.nodes(nodes);
-            simulation.force('link').links(links).distance(100);
-            simulation.force('charge').strength(-100);
+            simulation.force('link').links(links).distance(200);
+            simulation.force('charge').strength(-400);
 
             node.selectAll('circle').selectAll('title').remove();
             link.selectAll('line').selectAll('title').remove();
@@ -541,7 +552,8 @@ function draw_force_graph(areaID) {
             node.selectAll('circle')
                 .data(nodes)
                 .join('circle')
-                    .attr('r', 7)
+                    .style('cursor', 'pointer')
+                    .attr('r', 12)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -568,7 +580,8 @@ function draw_force_graph(areaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
-                });
+                })
+                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage , children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(links)
@@ -583,6 +596,126 @@ function draw_force_graph(areaID) {
             link.selectAll('line').append('title').text(d => `${d.source.name} : ${d.target.name}`);
 
             simulation.restart().alpha(1);
+        }
+
+        const treeWidth = stdTotalWidth * 0.9 + 50 - margin.left - margin.right,
+            treeHeight = stdTotalHeight * 2 - margin.top - margin.bottom;
+
+        const svg = d3.select('.' + adjacentAreaID)
+            .attr('width', treeWidth)
+            .attr('height', treeHeight);
+
+        svg.append('polyline')
+            .attr('points', `${margin.left / 2},${margin.top / 2} ${treeWidth - margin.right / 2},${margin.top / 2} ${treeWidth - margin.right / 2},${treeHeight - margin.bottom / 2} ${margin.left / 2},${treeHeight - margin.bottom / 2} ${margin.left / 2},${margin.top / 2}`)
+            .attr('fill', 'none')
+            .attr('stroke', 'black');
+
+        function draw_connection_tree(data, adjacentAreaID) {
+            d3.select('.' + adjacentAreaID).select('g').remove();
+
+            function compare(a,b) {
+                a = a.name.toUpperCase();
+                b = b.name.toUpperCase();
+                if (a > b) {
+                    return 1;
+                } else if (a < b) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+
+            data.children.sort((a,b) => compare(a,b));
+            
+            const root = d3.tree().size([Math.min(Math.max(data.children.length * 15, treeWidth), treeHeight - margin.top), treeWidth * 0.3])(d3.hierarchy(data));
+            
+            const treeChart = svg
+                .append('g');
+
+            const treeLink = treeChart.append('g')
+                .attr('fill', 'none')
+                .attr('stroke', '#555')
+                .attr('stroke-opacity', 0.4)
+                .attr('stroke-width', 1.5)
+                .selectAll('path')
+                .data(root.links())
+                    .join('path')
+                        .attr('d', d3.linkHorizontal()
+                            .x(d => d.y)
+                            .y(d => d.x));
+
+            const treeNode = treeChart.append('g')
+                .selectAll('g')
+                .data(root.descendants())
+                    .join('g')
+                        .attr('transform', d => `translate(${d.y},${d.x})`);
+
+            treeNode.append('circle')
+                .attr('fill', d => {
+                    if (d.data.notPackage && !d.data.package) {
+                        return colors[0];
+                    } else if (!d.data.notPackage && d.data.package) {
+                        return colors[1];
+                    } else {
+                        return colors[2];
+                    }
+                })
+                .attr('r', 5)
+                .style('cursor', d => d.depth == 0 ? 'default' : 'pointer')
+                .on('mouseover', d => {
+                    d = nodes[nodes.findIndex(o => o.name == d.data.name)];
+                    const bfsTree = getBFSTree(d, 11);
+                    const t = chart.transition().duration(300);
+                    node.selectAll('circle').transition(t)
+                        .attr('fill-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth + 1, 4), 0) : 0)
+                        .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth + 1, 4), 0) : 0);
+                    link.selectAll('line').transition(t)
+                        .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12) * 0.2, 0) : 0.05);
+                })
+                .on('mouseout', () => {
+                    node.selectAll('circle').each(d => d.depth = null);
+                    const t = chart.transition().duration(300);
+                    node.selectAll('circle').transition(t)
+                        .attr('fill-opacity', 1)
+                        .attr('stroke-opacity', 1);
+                    link.selectAll('line').transition(t)
+                        .attr('stroke-opacity', 0.2);
+                })
+                .on('click', d => {
+                    d = nodes[nodes.findIndex(o => o.name == d.data.name)];
+                    const data = { name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) };
+                    draw_connection_tree(data, adjacentAreaID);
+                    node.selectAll('circle').each(d => d.depth = null);
+                    const t = chart.transition().duration(300);
+                    node.selectAll('circle').transition(t)
+                        .attr('fill-opacity', 1)
+                        .attr('stroke-opacity', 1);
+                    link.selectAll('line').transition(t)
+                        .attr('stroke-opacity', 0.2);
+                });
+            
+            treeNode.append('text')
+                .attr('dy', '0.31em')
+                .attr('x', d => d.children ? -6 : 6)
+                .attr('text-anchor', d => d.children ? 'end' : 'start')
+                .text(d => d.data.name);
+
+            let labelLeft = 0;
+
+            treeNode.selectAll('text').nodes().forEach(label => {
+                if (label.textContent == data.name) {
+                    labelLeft = label.getComputedTextLength();
+                }
+            });
+
+            treeNode.selectAll('text').nodes().forEach(label => {
+                if (label.getComputedTextLength() > treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right) && label.textContent != data.name) {
+                    label.setAttribute('font-size', 14 * (treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right)) / label.getComputedTextLength() + 'px');
+                }
+            });
+
+            treeChart
+                .attr('transform', `translate(${margin.left + labelLeft},${(treeHeight / 2) - root.x + 5})`);
         }
     }
 
