@@ -215,7 +215,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         update(x,y);
 
         function drawPie(weekData) {
-            const radius = 75;
+            const radius = 85;
 
             const partition = data => {
                 const root = d3
@@ -284,7 +284,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                             });
 
             label.nodes().forEach(node => {
-                node.setAttribute('font-size', Math.min(Math.floor(11 * radius / node.getComputedTextLength()), Math.floor(Math.PI * radius * node.getAttribute('h') / 2)) + 'px')
+                node.setAttribute('font-size', Math.min(11, Math.floor(11 * radius / node.getComputedTextLength()), Math.floor(Math.PI * radius * node.getAttribute('h') / 2)) + 'px')
             });
 
             function labelTransform(d) {
@@ -292,6 +292,13 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 const y = (d.y0 + d.y1) / 2 * radius;
                 return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
             }
+
+            const title = pieGroup
+                .append('text')
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'middle')
+                .attr('class', 'graphtitle')
+                .text('Commit Breakdown');
         }
     }
 
