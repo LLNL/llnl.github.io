@@ -265,7 +265,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
             // Adds title for accessability. Does not affect name label below
             path.append('title')
-                .text(d => d.data.name);
+                .text(d => `${d.data.name} : ${d.data.value} Commits`);
 
             const label = pieGroup
                 .append('g')
