@@ -205,7 +205,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                         const y = d3.select('#Thanksgiving').attr('y');
                         return +y + 20;
                     });
-                    drawPie({ name: d.date, children: d.breakdown });
+                    drawPie({ name: String(d.date), children: d.breakdown });
                 });
 
             // Angle the axis text
@@ -301,6 +301,13 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .attr('text-anchor', 'middle')
                 .attr('class', 'graphtitle')
                 .text('Commit Breakdown');
+
+            const subtitle = pieGroup
+                .append('text')
+                .attr('dy', '1.35em')
+                .attr('text-anchor', 'middle')
+                .attr('class', 'graphtitle')
+                .text(`Week of ${weekData.name.split(' ')[1]} ${weekData.name.split(' ')[2]}`);
         }
     }
 
