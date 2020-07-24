@@ -28,6 +28,7 @@ function drawDateLine(dateObj, label, includeDate, chart, x, y, height, valuelin
         .attr('y', x(dateObj) - 6)
         .attr('x', 0 - height / 50)
         .attr('text-anchor', 'end')
+        .attr('id', label)
         .text(label);
     if (includeDate) {
         var formatTime = d3.timeFormat('[ %Y - %m - %d ]');

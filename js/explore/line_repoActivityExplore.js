@@ -13,7 +13,6 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
     // Draw graph from data
     function drawGraph(data, areaID) {
-        console.debug(data);
 
         var graphHeader;
         if (repoNameWOwner == null) {
@@ -53,7 +52,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     return d.date;
                 })
             )
-            .range([0, 5 * width / 9]);
+            .range([0, 12 * width / 19]);
 
         var y = d3
             .scaleLinear()
@@ -196,11 +195,16 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     return y(d.value);
                 })
                 .attr('r', dotRadius)
+                .style('cursor', 'pointer')
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide)
                 .on('click', d => {
                     tip.hide;
                     update(smallX,y);
+                    d3.select('#Thanksgiving').attr('y', d => {
+                        const y = d3.select('#Thanksgiving').attr('y');
+                        return +y + 20;
+                    });
                     drawPie({ name: d.date, children: d.breakdown });
                 });
 
@@ -229,8 +233,6 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             }
 
             const root = partition(weekData);
-
-            console.debug(root);
 
             const arc = d3
                 .arc()
