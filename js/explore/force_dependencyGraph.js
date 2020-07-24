@@ -663,7 +663,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .attr('r', 5)
                 .style('cursor', d => d.depth == 0 ? 'default' : 'pointer')
                 .on('mouseover', d => {
-                    d = nodes[nodes.findIndex(o => o.name == d.data.name)];
+                    d = nodes[nodes.findIndex(o => o.id == d.data.id)];
                     const bfsTree = getBFSTree(d, 11);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
