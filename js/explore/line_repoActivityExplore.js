@@ -302,8 +302,6 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .attr('class', 'graphtitle')
                 .text('Commit Breakdown');
 
-            console.debug(weekData);
-
             const subtitle = pieGroup
                 .append('text')
                 .attr('dy', '1.45em')
