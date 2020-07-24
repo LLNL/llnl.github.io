@@ -199,7 +199,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide)
                 .on('click', d => {
-                    tip.hide;
+                    tip.hide(d);
                     update(smallX,y);
                     d3.select('#Thanksgiving').attr('y', d => {
                         const y = d3.select('#Thanksgiving').attr('y');
