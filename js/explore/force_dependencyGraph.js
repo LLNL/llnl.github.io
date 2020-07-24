@@ -102,7 +102,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 link.selectAll('line').transition(t)
                     .attr('stroke-opacity', 0.6);
             })
-            .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+            .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
         // Adds titles
         node.selectAll('circle').append('title').text(d => d.id);
@@ -325,7 +325,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(newLinks)
@@ -389,7 +389,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.6);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID))
+                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID))
                 .append('title').text(d => d.id);
 
             link.selectAll('line')
@@ -481,7 +481,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(links)
@@ -581,7 +581,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, package: d.package, notPackage: d.notPackage , children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage , children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(links)
@@ -663,7 +663,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .attr('r', 5)
                 .style('cursor', d => d.depth == 0 ? 'default' : 'pointer')
                 .on('mouseover', d => {
-                    d = nodes[nodes.findIndex(o => o.name == d.data.name)];
+                    d = nodes[nodes.findIndex(o => o.id == d.data.id)];
                     const bfsTree = getBFSTree(d, 11);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
@@ -682,8 +682,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                 })
                 .on('click', d => {
-                    d = nodes[nodes.findIndex(o => o.name == d.data.name)];
-                    const data = { name: d.name, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) };
+                    d = nodes[nodes.findIndex(o => o.id == d.data.id)];
+                    const data = { name: d.name, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) };
                     draw_connection_tree(data, adjacentAreaID);
                     node.selectAll('circle').each(d => d.depth = null);
                     const t = chart.transition().duration(300);
