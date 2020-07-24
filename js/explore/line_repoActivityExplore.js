@@ -302,12 +302,14 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .attr('class', 'graphtitle')
                 .text('Commit Breakdown');
 
+            console.debug(weekData);
+
             const subtitle = pieGroup
                 .append('text')
-                .attr('dy', '1.35em')
+                .attr('dy', '1.45em')
                 .attr('text-anchor', 'middle')
-                .attr('class', 'graphtitle')
-                .text(`Week of ${weekData.name.split(' ')[1]} ${weekData.name.split(' ')[2]}`);
+                .attr('font-size', '12pt')
+                .text(`Week of ${weekData.name.split(' ')[1]} ${weekData.name.split(' ')[2]} ${weekData.name.split(' ')[3]}`);
         }
     }
 
