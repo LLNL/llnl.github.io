@@ -218,9 +218,12 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
         update(x,y);
 
+        // Creates pie chart based on a weeks commits
         function drawPie(weekData) {
+            // Width of the ring and size of the center circle
             const radius = 85;
 
+            // Computes the necessary data for the wedges of the pie chart
             const partition = data => {
                 const root = d3
                     .hierarchy(data)
@@ -234,6 +237,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
             const root = partition(weekData);
 
+            // Generates the shapes of the wedges
             const arc = d3
                 .arc()
                     .startAngle(d => d.x0)
@@ -243,14 +247,17 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     .innerRadius(d => d.y0 * radius)
                     .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius));
 
+            // Colors used for coloring the pie chart
             const colors = d3.scaleOrdinal()
                 .domain([0, weekData.length - 1])
                 .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#ccebc5","#ffed6f"]);
             
+            // Equivalent of chart but for the pie chart
             const pieGroup = chart
                 .append('g')
                     .attr('transform', `translate(${5 * width / 6},${height / 2})`)
 
+            // Draws the pie chart
             const path = pieGroup
                 .append('g')
                 .selectAll('path')
@@ -269,6 +276,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             path.append('title')
                 .text(d => `${d.data.name} : ${d.data.value} Commits`);
 
+            // Creates and formats the label of each slice
             const label = pieGroup
                 .append('g')
                     .style('font-size', '11px')
@@ -285,16 +293,19 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                                 return d.data.name.split('/')[1]
                             });
 
+            // Changes the size of the text to fit within the wedge
             label.nodes().forEach(node => {
                 node.setAttribute('font-size', Math.min(11, Math.floor(11 * radius / node.getComputedTextLength()), Math.floor(Math.PI * radius * node.getAttribute('h') / 2)) + 'px')
             });
 
+            // Function for rotating and aligning the labels
             function labelTransform(d) {
                 const x = (d.x0 + d.x1) / 2 * 180 / Math.PI;
                 const y = (d.y0 + d.y1) / 2 * radius;
                 return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
             }
 
+            // Adds center text
             const title = pieGroup
                 .append('text')
                 .attr('dy', '0.35em')
@@ -302,6 +313,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .attr('class', 'graphtitle')
                 .text('Commit Breakdown');
 
+            // Adds center sub-text
             const subtitle = pieGroup
                 .append('text')
                 .attr('dy', '1.45em')
