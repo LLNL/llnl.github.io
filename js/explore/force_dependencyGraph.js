@@ -40,7 +40,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-                return `${d.source.id} depends on ${d.target.id}`;
+                return `${d.source.id} is linked to ${d.target.id}`;
             });
 
         chart.call(nodeTip);
