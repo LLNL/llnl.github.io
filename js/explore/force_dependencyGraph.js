@@ -213,6 +213,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .height(10 * optionsArray.length - 1)
             .on('onchange', val => {
                 optionChanged(optionsArray[Math.round(val)]);
+                d3.select('.' + adjacentAreaID).select('g').remove();
             });
 
         chart.append('g')
