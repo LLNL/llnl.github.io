@@ -6124,11 +6124,6 @@
                 "nodes": []
             }
         },
-        "ESGF/config": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "ESGF/data_node_assets": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -7863,11 +7858,6 @@
                         }
                     }
                 ]
-            }
-        },
-        "ESGF/esgf.github.io": {
-            "dependencyGraphManifests": {
-                "nodes": []
             }
         },
         "ESGF/esgfpy-solr": {
@@ -17925,11 +17915,6 @@
                 "nodes": []
             }
         },
-        "LLNL/metall": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "LLNL/mgmol": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -20184,10 +20169,58 @@
         },
         "flux-framework/flux-core": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "name": "sphinx",
+                                        "nameWithOwner": "sphinx-doc/sphinx",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-doc"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "name": "sphinx_rtd_theme",
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "readthedocs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-spelling",
+                                    "repository": {
+                                        "name": "spelling",
+                                        "nameWithOwner": "sphinx-contrib/spelling",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-contrib"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "flux-framework/flux-core-v0.11": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "flux-framework/flux-depend": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -20802,11 +20835,10 @@
                                     "packageManager": "PIP",
                                     "packageName": "google-cloud",
                                     "repository": {
-                                        "name": "google-cloud-python",
-                                        "nameWithOwner": "googleapis/google-cloud-python",
+                                        "name": "googlecloudpython",
+                                        "nameWithOwner": "ammayathrajeshnair/googlecloudpython",
                                         "owner": {
-                                            "isVerified": false,
-                                            "login": "googleapis"
+                                            "login": "ammayathrajeshnair"
                                         }
                                     }
                                 },
