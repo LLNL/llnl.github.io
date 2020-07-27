@@ -83,6 +83,14 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 }
                 return '<sub>[Week of ' + formatTime(d.date) + ']</sub>' + '<br>' + d.value + repos;
             });
+        
+        var pieTip = d3
+            .tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                return `${d.data.name} : ${d.data.value} Commits`;
+            });
 
         var dToday = x.domain()[1];
         // Supercomputing
@@ -206,6 +214,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                         return +y + 20;
                     });
                     drawPie({ name: String(d.date), children: d.breakdown });
+                    chart.call(pieTip);
                 });
 
             // Angle the axis text
@@ -270,11 +279,9 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                             return colors(d.parent.children.indexOf(d));
                         })
                         .attr('fill-opacity', 1)
-                        .attr('d', d => arc(d));
-
-            // Adds title for accessability. Does not affect name label below
-            path.append('title')
-                .text(d => `${d.data.name} : ${d.data.value} Commits`);
+                        .attr('d', d => arc(d))
+                        .on('mouseover', pieTip.show)
+                        .on('mouseout', pieTip.hide);
 
             // Creates and formats the label of each slice
             const label = pieGroup
