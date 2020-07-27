@@ -28,6 +28,14 @@ function draw_sunburst_licenses(areaID) {
 
         let root = partition(data);
 
+        const tip = d3
+            .tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                return `${d.data.name}`;
+            });
+
         const arc = d3
             .arc()
                 .startAngle(d => d.x0)
@@ -45,6 +53,8 @@ function draw_sunburst_licenses(areaID) {
             .select('.' + areaID)
                 .attr('width', width + margin.left + margin.right)
                 .attr('height', height + margin.top + margin.bottom)
+
+        chart.call(tip);
 
         // Adds title
         chart
@@ -99,11 +109,9 @@ function draw_sunburst_licenses(areaID) {
                         return colors(d.parent.children.indexOf(d));
                     })
                     .attr('fill-opacity', 0.9)
-                    .attr('d', d => arc(d.current));
-        
-        // Adds title for accessability. Does not affect name label below
-        path.append('title')
-            .text(d => d.data.name);
+                    .attr('d', d => arc(d.current))
+                    .on('mouseover', tip.show)
+                    .on('mouseout', tip.hide);
         
         // Makes license wedges appear clickable
         path.filter(d => d.children)

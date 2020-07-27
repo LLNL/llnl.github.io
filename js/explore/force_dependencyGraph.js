@@ -27,6 +27,26 @@ function draw_force_graph(areaID, adjacentAreaID) {
         let nodes = data.nodes;
         let links = data.links;
 
+        const nodeTip = d3
+            .tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                console.debug(d);
+                return `${d.id}`;
+            });
+            
+        const linkTip = d3
+            .tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                return `${d.source.id} depends on ${d.target.id}`;
+            });
+
+        chart.call(nodeTip);
+        chart.call(linkTip);
+
         // Adds static, directional, and link forces to nodes
         const simulation = d3.forceSimulation(nodes)
             .force('link', d3.forceLink(links).id(d => d.id).distance(d => 10))
@@ -61,7 +81,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
         link.selectAll('line')
             .data(links)
             .join('line')
-                .attr('stroke-width', d => (100 - d.value) / 50);
+                .attr('stroke-width', d => (100 - d.value) / 50)
+                .on('mouseover', linkTip.show)
+                .on('mouseout', linkTip.hide);
 
         // Group for nodes
         const node = chart
@@ -92,6 +114,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth, 12), 0) : 0);
                 link.selectAll('line').transition(t)
                     .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12), 0) : 0.1);
+                nodeTip.show(d)
             })
             .on('mouseout', d => {
                 node.selectAll('circle').each(d => d.depth = null);
@@ -101,12 +124,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('stroke-opacity', 1);
                 link.selectAll('line').transition(t)
                     .attr('stroke-opacity', 0.6);
+                nodeTip.hide(d)
             })
             .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
-
-        // Adds titles
-        node.selectAll('circle').append('title').text(d => d.id);
-        link.selectAll('line').append('title').text(d => `${d.source.name} : ${d.target.name}`);
 
         // Matches node and link location to where the simulation says the points should be
         simulation.on('tick', () => {
@@ -290,9 +310,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
             simulation.force('link').links(newLinks).distance(30);
             simulation.force('charge').strength(-110);
 
-            node.selectAll('circle').selectAll('title').remove();
-            link.selectAll('line').selectAll('title').remove();
-
             node.selectAll('circle')
                 .data(newNodes)
                 .join('circle')
@@ -315,6 +332,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth, 12), 0) : 0);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12) * 0.2, 0) : 0.05);
+                    nodeTip.show(d);
                 })
                 .on('mouseout', d => {
                     node.selectAll('circle').each(d => d.depth = null);
@@ -324,6 +342,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
+                    nodeTip.hide(d);
                 })
                 .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
@@ -332,12 +351,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join(enter => enter.append('line'),
                     update => update,
                     exit => exit.remove())
-                    .attr('stroke-width', 2);
+                    .attr('stroke-width', 2)
+                    .on('mouseover', linkTip.show)
+                    .on('mouseout', linkTip.hide);
 
             link.selectAll('line').attr('stroke-opacity', 0.2)
-
-            node.selectAll('circle').append('title').text(d => d.id);
-            link.selectAll('line').append('title').text(d => `${d.source.name} : ${d.target.name}`);
 
             nodes = newNodes;
             links = newLinks;
@@ -353,9 +371,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
             simulation.nodes(newNodes);
             simulation.force('link').links(newLinks).distance(10);
             simulation.force('charge').strength(-20);
-
-            node.selectAll('circle').selectAll('title').remove();
-            link.selectAll('line').selectAll('title').remove();
 
             node.selectAll('circle')
                 .data(newNodes)
@@ -379,6 +394,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth, 12), 0) : 0);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12), 0) : 0.1);
+                    nodeTip.show(d);
                 })
                 .on('mouseout', d => {
                     node.selectAll('circle').each(d => d.depth = null);
@@ -388,18 +404,18 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.6);
+                    nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID))
-                .append('title').text(d => d.id);
+                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
             link.selectAll('line')
                 .data(newLinks)
                 .join(enter => enter.append('line'),
                     update => update,
                     exit => exit.remove())
-                    .attr('stroke-width', d => (100 - d.value) / 50);
-
-            link.selectAll('line').attr('stroke-opacity', 0.6).append('title').text(d => `${d.source.name} : ${d.target.name}`);
+                    .attr('stroke-width', d => (100 - d.value) / 50)
+                    .on('mouseover', linkTip.show)
+                    .on('mouseout', linkTip.hide);
 
             nodes = newNodes;
             links = newLinks;
@@ -446,9 +462,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
             simulation.force('link').links(links).distance(40);
             simulation.force('charge').strength(-40);
 
-            node.selectAll('circle').selectAll('title').remove();
-            link.selectAll('line').selectAll('title').remove();
-
             node.selectAll('circle')
                 .data(nodes)
                 .join('circle')
@@ -471,6 +484,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth, 12), 0) : 0);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12) * 0.2, 0) : 0.05);
+                    nodeTip.show(d);
                 })
                 .on('mouseout', d => {
                     node.selectAll('circle').each(d => d.depth = null);
@@ -480,6 +494,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
+                    nodeTip.hide(d);
                 })
                 .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
 
@@ -488,12 +503,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join(enter => enter.append('line'),
                     update => update,
                     exit => exit.remove())
-                    .attr('stroke-width', d => (100 - d.value) / 50);
+                    .attr('stroke-width', d => (100 - d.value) / 50)
+                    .on('mouseover', linkTip.show)
+                    .on('mouseout', linkTip.hide);
 
-            link.selectAll('line').attr('stroke-opacity', 0.2)
-
-            node.selectAll('circle').append('title').text(d => d.id);
-            link.selectAll('line').append('title').text(d => `${d.source.name} : ${d.target.name}`);
+            link.selectAll('line').attr('stroke-opacity', 0.2);
 
             simulation.restart().alpha(1);
         }
@@ -546,9 +560,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
             simulation.force('link').links(links).distance(200);
             simulation.force('charge').strength(-400);
 
-            node.selectAll('circle').selectAll('title').remove();
-            link.selectAll('line').selectAll('title').remove();
-
             node.selectAll('circle')
                 .data(nodes)
                 .join('circle')
@@ -571,6 +582,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth, 12), 0) : 0);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12) * 0.2, 0) : 0.05);
+                    nodeTip.show(d);
                 })
                 .on('mouseout', d => {
                     node.selectAll('circle').each(d => d.depth = null);
@@ -580,6 +592,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
+                    nodeTip.hide(d);
                 })
                 .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage , children: getCurrentNeighbors(d) }, adjacentAreaID));
 
@@ -588,12 +601,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join(enter => enter.append('line'),
                     update => update,
                     exit => exit.remove())
-                    .attr('stroke-width', d => (100 - d.value) / 50);
+                    .attr('stroke-width', d => (100 - d.value) / 50)
+                    .on('mouseover', linkTip.show)
+                    .on('mouseout', linkTip.hide);
 
-            link.selectAll('line').attr('stroke-opacity', 0.2)
-
-            node.selectAll('circle').append('title').text(d => d.id);
-            link.selectAll('line').append('title').text(d => `${d.source.name} : ${d.target.name}`);
+            link.selectAll('line').attr('stroke-opacity', 0.2);
 
             simulation.restart().alpha(1);
         }
@@ -671,8 +683,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', n => n.depth != null ? Math.max(weightCurve(n.depth + 1, 4), 0) : 0);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', n => n.source.depth != null && n.target.depth != null ? Math.max(weightCurve(Math.max(n.source.depth, n.target.depth), 12) * 0.2, 0) : 0.05);
+                    nodeTip.show(d);
                 })
-                .on('mouseout', () => {
+                .on('mouseout', d => {
                     node.selectAll('circle').each(d => d.depth = null);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
@@ -680,6 +693,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
+                    nodeTip.hide(d)
                 })
                 .on('click', d => {
                     d = nodes[nodes.findIndex(o => o.id == d.data.id)];
