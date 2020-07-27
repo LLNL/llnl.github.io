@@ -32,7 +32,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-                console.debug(d);
                 return `${d.id}`;
             });
             
