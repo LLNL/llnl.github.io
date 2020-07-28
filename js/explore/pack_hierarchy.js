@@ -39,7 +39,7 @@ function draw_pack_hierarchy(areaID) {
             .offset([-10, 0])
             .html(function(d) {
                 if (d.data.internal != undefined) {
-                    return `${d.data.name} : ${d.data.internal ? 'Internal' : 'External'}`;
+                    return `${d.data.username} : ${d.data.internal ? 'Internal' : 'External'}`;
                 } else {
                     return `${d.data.name}`
                 }
@@ -223,9 +223,8 @@ function draw_pack_hierarchy(areaID) {
                     data.children[indexOfOwner].children.push({ name: repo, children: [] });
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
-                // let username = obj1['data'][user]['name'] == null ? user : obj1['data'][user]['name']; Changes default name to full name
-                let username = user;
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: true });
+                let username = obj1['data'][user]['name'] == null ? user : obj1['data'][user]['name'];
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1, internal: true, username: username });
             }
         }
         for (var user in obj2['data']) {
@@ -244,7 +243,7 @@ function draw_pack_hierarchy(areaID) {
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
                 let username = obj2['data'][user]['name'] == null ? user : obj2['data'][user]['name'];
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: false });
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1, internal: false, username: username });
             }
         }
         
