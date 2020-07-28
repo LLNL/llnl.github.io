@@ -39,7 +39,7 @@ function draw_pack_hierarchy(areaID) {
             .offset([-10, 0])
             .html(function(d) {
                 if (d.data.internal != undefined) {
-                    return `${d.data.name} : ${d.data.internal ? 'Internal' : 'External'}`;
+                    return `${d.data.username} : ${d.data.internal ? 'Internal' : 'External'}`;
                 } else {
                     return `${d.data.name}`
                 }
@@ -100,19 +100,8 @@ function draw_pack_hierarchy(areaID) {
                     .attr('dy', '0.35em')
                     .attr('fill-opacity', 0)
                     .attr('radius', d => d.r * (maxRadius / d.parent.r))
-                    .style('cursor', d => {
-                        if (d.children == undefined) {
-                            return 'default';
-                        } else {
-                            return 'pointer';
-                        }
-                    })
-                    .text(d => {return d.data.name})
-                    .on('click', d => {
-                        if (d.children != undefined) {
-                            clicked(d);
-                        }
-                    });
+                    .attr('pointer-events', 'none')
+                    .text(d => {return d.data.name});
             
             label.nodes().forEach(node => {
                 node.setAttribute('font-size', Math.floor(10 * node.getAttribute('radius') * 2 / (node.getComputedTextLength() + 5)) + 'px')
@@ -137,14 +126,19 @@ function draw_pack_hierarchy(areaID) {
             .attr('fill', d => colors[d.height + 1])
             .attr('r', d => d.r)
             .style('cursor', 'pointer')
-            .on('mouseover', tip.show)
+            .on('mouseover', d => {
+                if (d.depth >= focus.depth + 1) {
+                    tip.show(d);
+                }
+            })
             .on('mouseout', tip.hide);
 
         const childCircles = childNodes.append('circle')
             .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.depth + 3])
             .attr('r', d => d.r)
             .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('mouseout', tip.hide)
+            .on('click', d => clicked(d.parent));
         
         parentCircles.on('click', clicked);
 
@@ -160,6 +154,10 @@ function draw_pack_hierarchy(areaID) {
 
         function zoom(d) {
             const focus_0 = focus;
+
+            while (d.depth > focus.depth + 1) {
+                d = d.parent
+            }
 
             focus = d;
 
@@ -218,7 +216,7 @@ function draw_pack_hierarchy(areaID) {
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
                 let username = obj1['data'][user]['name'] == null ? user : obj1['data'][user]['name'];
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: true });
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1, internal: true, username: username });
             }
         }
         for (var user in obj2['data']) {
@@ -237,7 +235,7 @@ function draw_pack_hierarchy(areaID) {
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
                 let username = obj2['data'][user]['name'] == null ? user : obj2['data'][user]['name'];
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: false });
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1, internal: false, username: username });
             }
         }
         
