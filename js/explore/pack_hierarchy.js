@@ -108,14 +108,6 @@ function draw_pack_hierarchy(areaID) {
             });
         }
 
-        /*.style('cursor', d => {
-                        if (d.children == undefined) {
-                            return 'default';
-                        } else {
-                            return 'pointer';
-                        }
-                    })*/
-
         updateLabel(focus.children);
         label.attr('fill-opacity', 1);
         
