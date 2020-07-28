@@ -33,6 +33,20 @@ function draw_pack_hierarchy(areaID) {
                 .sum(d => d.value)
                 .sort((a, b) => b.value - a.value));
 
+        const tip = d3
+            .tip()
+            .attr('class', 'd3-tip')
+            .offset([-10, 0])
+            .html(function(d) {
+                if (d.data.internal != undefined) {
+                    return `${d.data.name} : ${d.data.internal ? 'Internal' : 'External'}`;
+                } else {
+                    return `${d.data.name}`
+                }
+            });
+
+        chart.call(tip);
+
         const root = pack(data);
         const center = [root.x,root.y];
         const maxRadius = root.r;
@@ -122,21 +136,17 @@ function draw_pack_hierarchy(areaID) {
         const parentCircles = parentNodes.append('circle')
             .attr('fill', d => colors[d.height + 1])
             .attr('r', d => d.r)
-            .style('cursor', 'pointer');
+            .style('cursor', 'pointer')
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
 
         const childCircles = childNodes.append('circle')
             .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.depth + 3])
-            .attr('r', d => d.r);
+            .attr('r', d => d.r)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
         
         parentCircles.on('click', clicked);
-
-        parentCircles.append('title')
-            .text(d => d.data.name);
-        
-        childNodes.append('title')
-            .text(d => {
-                return `${d.data.name} : ${d.data.internal ? 'Internal' : 'External'}`;
-            });
 
         function clicked(o) {
             d3.select('#zoomTitle').text(o.data.name);
