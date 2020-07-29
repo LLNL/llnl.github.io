@@ -36,13 +36,22 @@ function draw_pack_hierarchy(areaID) {
         const tip = d3
             .tip()
             .attr('class', 'd3-tip')
-            .offset([-10, 0])
+            .offset(d => {
+                return [-10, 0];
+            })
             .html(function(d) {
+                let returnString = '';
                 if (d.data.internal != undefined) {
-                    return `${d.data.username} : ${d.data.internal ? 'Internal' : 'External'}`;
+                    returnString += `${d.data.username} : ${d.data.internal ? 'Internal' : 'External'}`;
                 } else {
-                    return `${d.data.name}`
+                    returnString += `${d.data.name}`
                 }
+                d = d.parent;
+                while (d.depth > focus.depth) {
+                    returnString = `${d.data.name}/${returnString}`
+                    d = d.parent;
+                }
+                return returnString;
             });
 
         chart.call(tip);
@@ -136,7 +145,13 @@ function draw_pack_hierarchy(areaID) {
         const childCircles = childNodes.append('circle')
             .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.depth + 3])
             .attr('r', d => d.r)
-            .on('mouseover', tip.show)
+            .on('mouseover', d => {
+                if (d.parent == focus) {
+                    tip.show(d);
+                } else {
+                    tip.show(d.parent);
+                }
+            })
             .on('mouseout', tip.hide)
             .on('click', d => clicked(d.parent));
         
