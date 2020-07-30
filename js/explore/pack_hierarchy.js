@@ -230,9 +230,9 @@ function draw_pack_hierarchy(areaID) {
 
             legend.append('rect')
                 .attr('fill', '#FFFFFF')
-                .attr('fill-opacity', 0.7)
+                .attr('fill-opacity', 0.9)
                 .attr('height', labels.length * (legendRectSize + legendSpacing) + legendSpacing)
-                .attr('width', 160)
+                .attr('width', 150)
                 .attr('y', 0 - legendSpacing)
                 .attr('x', -5)
                 .attr('rx', 10);
