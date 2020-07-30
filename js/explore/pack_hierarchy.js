@@ -227,6 +227,15 @@ function draw_pack_hierarchy(areaID) {
             color.forEach((d, i) => {
                 legendMap.push({ text: labels[i], color: d });
             });
+
+            legend.append('rect')
+                .attr('fill', '#FFFFFF')
+                .attr('fill-opacity', 0.7)
+                .attr('height', labels.length * (legendRectSize + legendSpacing) + legendSpacing)
+                .attr('width', 160)
+                .attr('y', 0 - legendSpacing)
+                .attr('x', -5)
+                .attr('rx', 10);
     
             const legendEntries = legend
                 .selectAll('g')
