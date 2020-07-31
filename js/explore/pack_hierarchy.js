@@ -10,13 +10,16 @@ function draw_pack_hierarchy(areaID) {
     });
 
     function drawGraph(data, areaID) {
-        const graphHeader = 'LLNL Repositories';
+        const graphHeader = 'Organizations and Contributions';
 
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight * 2 - margin.top - margin.bottom;
+        const legendRectSize = 15,
+            legendSpacing = 4;
 
-        const colors = ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f'];
+
+        const colors = ['#b3de69','#ffffb3','#bebada','#fb8072','#80b1d3'];
 
         const chart = d3
             .select('.' + areaID)
@@ -143,7 +146,7 @@ function draw_pack_hierarchy(areaID) {
             .on('mouseout', tip.hide);
 
         const childCircles = childNodes.append('circle')
-            .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.depth + 3])
+            .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.height])
             .attr('r', d => d.r)
             .on('mouseover', d => {
                 if (d.parent == focus) {
@@ -210,11 +213,73 @@ function draw_pack_hierarchy(areaID) {
             childCircles.attr('r', d => d.r * k);
         }
 
+        // Data for legend
+        const labels = ['External Contributors', 'Internal Contributors', 'Repositories', 'GitHub Organizations', 'LLNL'];
+    
+        // Creates legend
+        const legend = chart
+            .append('g');
+
+        function updateLegend(labels, color = colors) {
+            legend.selectAll('g').remove();
+
+            const legendMap = [];
+            color.forEach((d, i) => {
+                legendMap.push({ text: labels[i], color: d });
+            });
+
+            legend.append('rect')
+                .attr('fill', '#FFFFFF')
+                .attr('fill-opacity', 0.9)
+                .attr('height', labels.length * (legendRectSize + legendSpacing) + legendSpacing)
+                .attr('width', 150)
+                .attr('y', 0 - legendSpacing)
+                .attr('x', -5)
+                .attr('rx', 10);
+    
+            const legendEntries = legend
+                .selectAll('g')
+                .data(legendMap)
+                    .join('g')
+                    .attr('class', 'legend')
+                    .attr('transform', (d, i) => {
+                        const legendHeight = legendRectSize + legendSpacing;
+                        const offset = (legendHeight * color.length) / 2;
+                        const horizontal = 0;
+                        const vertical = i * legendHeight;
+                        return `translate(${horizontal}, ${vertical})`;
+                    });
+            
+            // Adds rectangle for color reference
+            legendEntries
+                .append('rect')
+                    .attr('width', legendRectSize)
+                    .attr('height', legendRectSize)
+                    .style('fill', d => {
+                        return d.color;
+                    })
+                    .style('stroke', d => {
+                        return '#FFFFFF';
+                    });
+    
+            // Adds legend text
+            legendEntries
+                .append('text')
+                    .attr('x', legendRectSize + legendSpacing)
+                    .attr('y', legendRectSize - legendSpacing)
+                    .text(d => {
+                        return d.text;
+                    })
+                    .attr('text-anchor', 'start');
+        }
+
+        updateLegend(labels);
+
     }
 
     // Turn json obj into desired working data
     function reformatData(obj1, obj2) {
-        var data = { name: 'LLNL Repositories', children: [] };
+        var data = { name: 'LLNL Organizations', children: [] };
         for (var user in obj1['data']) {
             if (obj1['data'][user]['contributedLabRepositories'] === undefined) {
                 continue;
