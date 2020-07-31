@@ -2266,11 +2266,6 @@
                 "nodes": []
             }
         },
-        "CDAT/conda-recipes": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "CDAT/dask-cdms": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -5463,11 +5458,6 @@
                 ]
             }
         },
-        "ECP-VeloC/AXL": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "ECP-VeloC/ECP-ST-CAR-PUBLIC": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -7920,30 +7910,6 @@
                 "nodes": []
             }
         },
-        "ESGF/output_viewer": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "name": "requests",
-                                        "nameWithOwner": "psf/requests",
-                                        "owner": {
-                                            "isVerified": true,
-                                            "login": "psf"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
         "ESGF/sproket": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9359,6 +9325,11 @@
             }
         },
         "GMLC-TDC/utilities": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/.github": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -12788,6 +12759,52 @@
         "LLNL/callpath": {
             "dependencyGraphManifests": {
                 "nodes": []
+            }
+        },
+        "LLNL/camp": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "breathe",
+                                    "repository": {
+                                        "name": "breathe",
+                                        "nameWithOwner": "michaeljones/breathe",
+                                        "owner": {
+                                            "login": "michaeljones"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "exhale",
+                                    "repository": {
+                                        "name": "exhale",
+                                        "nameWithOwner": "svenevs/exhale",
+                                        "owner": {
+                                            "login": "svenevs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "name": "sphinx",
+                                        "nameWithOwner": "sphinx-doc/sphinx",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-doc"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "LLNL/cardioid": {
@@ -18735,45 +18752,19 @@
                 "nodes": []
             }
         },
+        "LLNL/radiuss-automation": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "LLNL/radiuss-ci": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
         },
-        "LLNL/radiuss-ci-info-action": {
+        "LLNL/radiuss-ci-info-action-go": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@actions/core",
-                                    "repository": {
-                                        "name": "toolkit",
-                                        "nameWithOwner": "actions/toolkit",
-                                        "owner": {
-                                            "isVerified": true,
-                                            "login": "actions"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@actions/github",
-                                    "repository": {
-                                        "name": "toolkit",
-                                        "nameWithOwner": "actions/toolkit",
-                                        "owner": {
-                                            "isVerified": true,
-                                            "login": "actions"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             }
         },
         "LLNL/radiuss-stack": {
@@ -19515,6 +19506,11 @@
             }
         },
         "LLNL/spawnnet": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/spify": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
