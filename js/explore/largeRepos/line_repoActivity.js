@@ -23,10 +23,19 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         // Removes most recent week from graph to avoid apparent dip in activity
         data.pop();
 
-        data.forEach(function(d) {
+        const repoKeys = mostPopularRepositories.map(d => `${d.owner}/${d.name}`);
+
+        data.forEach(d => {
             d.date = parseTime(d.date);
-            d.value = +d.value;
-        });
+        })
+
+        console.debug(data);
+        
+        data = d3.stack()
+            .keys(repoKeys)
+            .order(d3.stackOrderAscending())(data);
+
+        console.debug(data);
 
         var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -36,23 +45,29 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         var x = d3
             .scaleTime()
             .clamp(true)
-            .domain(
-                d3.extent(data, function(d) {
-                    return d.date;
-                })
-            )
+            .domain(d3.extent(data[0], d => d.data.date))
             .range([0, width]);
+
+        console.debug(d3.extent(data[0], d => d.data.date));
 
         var y = d3
             .scaleLinear()
-            .domain([
-                0,
-                d3.max(data, function(d) {
-                    return d.value == 0 ? 10 : d.value;
-                })
-            ]) // Force non 0 scale for line visibility
+            .domain([0, d3.max(data, d => {
+                var max = 0;
+                for (var entry of d) {
+                    if (entry[1] > max) {
+                        max = entry[1];
+                    }
+                }
+                return max;
+            })]) // Force non 0 scale for line visibility
             .range([height, 0])
             .nice();
+
+        var colors = d3
+            .scaleOrdinal()
+            .domain(mostPopularRepositories)
+            .range(d3.quantize(d3.interpolateInferno, mostPopularRepositories.length + 1));
 
         var dToday = x.domain()[1];
         // Supercomputing
@@ -74,11 +89,13 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         var area = d3
             .area()
             .x(function(d) {
-                return x(d.date);
+                return x(d.data.date);
             })
-            .y0(height)
+            .y0(function(d) {
+                return y(d[0]);
+            })
             .y1(function(d) {
-                return y(d.value);
+                return y(d[1]);
             });
 
         var tip = d3
@@ -143,19 +160,24 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .attr('text-anchor', 'middle')
             .text('Commits');
 
-        // Draw fill
-        chart
-            .append('path')
-            .datum(data)
-            .attr('class', 'area')
-            .attr('d', area);
+        var areas = chart.append('g')
+            .attr('id', 'areas');
 
-        // Draw line
+        // Draw fill
+        areas
+            .selectAll('path')
+            .data(data)
+                .join('path')
+                .attr('fill', d => colors(d.key))
+                .attr('stroke', 'black')
+                .attr('d', area);
+
+        /*// Draw line
         chart
             .append('path')
             .datum(data)
             .attr('class', 'line')
-            .attr('d', valueline);
+            .attr('d', valueline);*/
 
         // Draw date-of-interest reference lines
         addDateLine(dSupercomp, 'Supercomputing');
@@ -185,6 +207,14 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .selectAll('text')
             .attr('transform', 'rotate(12)')
             .attr('text-anchor', 'start');
+    }
+
+    function totalCommits(key, repoData) {
+        var total = 0;
+        for (var entry of repoData) {
+            total += repoData[key];
+        }
+        return total;
     }
 
     // Turn json obj into desired working data
@@ -220,13 +250,32 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             }
         });
 
+        // Formats data to allow for timestap look up of value data
+        var repoData = {};
+        repos.forEach(function(repo) {
+            for (var entry of obj['data'][repo]) {
+                if (repoData[entry['week']] == undefined) {
+                    repoData[entry['week']] = {};
+                }
+                if (entry['total']) {
+                    repoData[entry['week']][repo] = entry['total'];
+                } else {
+                    repoData[entry['week']][repo] = 0;
+                }
+            }
+        });
+
         // Format data for graphing
         var data = [];
         var sortedTimestamps = Object.keys(dataTotals).sort();
         sortedTimestamps.forEach(function(timestamp) {
             var numReposFound = repoCounts[timestamp];
             if (numReposFound == numReposExpected) {
-                data.push({ date: timestamp, value: dataTotals[timestamp] });
+                var dateData = { date: timestamp };
+                for (var repos of mostPopularRepositories) {
+                    dateData[`${repos['owner']}/${repos['name']}`] = repoData[timestamp][`${repos['owner']}/${repos['name']}`];
+                }
+                data.push(dateData);
             } else {
                 console.log('Repo count mismatch for activity on ' + timestamp + ': expected ' + numReposExpected + ', found ' + numReposFound);
             }

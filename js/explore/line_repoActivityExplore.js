@@ -13,6 +13,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
     // Draw graph from data
     function drawGraph(data, areaID) {
+        console.debug(data);
 
         var graphHeader;
         if (repoNameWOwner == null) {
@@ -378,6 +379,8 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 }
             }
         });
+
+        console.debug(repoData);
 
         // Format data for graphing
         var data = [];
