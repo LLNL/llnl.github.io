@@ -13,12 +13,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
     // Draw graph from data
     function drawGraph(data, areaID) {
-        var graphHeader;
-        if (repoNameWOwner == null) {
-            graphHeader = 'Activity Across All Repos [Default Branches, 1 Year]';
-        } else {
-            graphHeader = "Activity for '" + repoNameWOwner + "' [Default Branch, 1 Year]";
-        }
+        var graphHeader = 'Activity Across Most Popular Repos by Stars [Default Branches, 1 Year]';
 
         // Removes most recent week from graph to avoid apparent dip in activity
         data.pop();
@@ -33,9 +28,10 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         
         data = d3.stack()
             .keys(repoKeys)
-            .order(d3.stackOrderAscending())(data);
+            .order(d3.stackOrderAscending)(data);
 
         console.debug(data);
+        console.debug(data.order);
 
         var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -66,8 +62,8 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
         var colors = d3
             .scaleOrdinal()
-            .domain(mostPopularRepositories)
-            .range(d3.quantize(d3.interpolateInferno, mostPopularRepositories.length + 1));
+            .domain(data.map(d => d.key))
+            .range(d3.quantize(d3.interpolateInferno, data.length + 1));
 
         var dToday = x.domain()[1];
         // Supercomputing
@@ -207,14 +203,6 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .selectAll('text')
             .attr('transform', 'rotate(12)')
             .attr('text-anchor', 'start');
-    }
-
-    function totalCommits(key, repoData) {
-        var total = 0;
-        for (var entry of repoData) {
-            total += repoData[key];
-        }
-        return total;
     }
 
     // Turn json obj into desired working data
