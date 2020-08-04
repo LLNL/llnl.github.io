@@ -23,28 +23,23 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         data.forEach(d => {
             d.date = parseTime(d.date);
         })
-
-        console.debug(data);
         
         data = d3.stack()
             .keys(repoKeys)
             .order(d3.stackOrderAscending)(data);
 
         console.debug(data);
-        console.debug(data.order);
 
         var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight;
-        var dotRadius = stdDotRadius;
+        var dotRadius = 4 * stdDotRadius / 5;
 
         var x = d3
             .scaleTime()
             .clamp(true)
             .domain(d3.extent(data[0], d => d.data.date))
             .range([0, width]);
-
-        console.debug(d3.extent(data[0], d => d.data.date));
 
         var y = d3
             .scaleLinear()
@@ -62,7 +57,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
         var colors = d3
             .scaleOrdinal()
-            .domain(data.map(d => d.key))
+            .domain([0, mostPopularRepositories.length - 1])
             .range(d3.quantize(d3.interpolateInferno, data.length + 1));
 
         var dToday = x.domain()[1];
@@ -99,11 +94,12 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-                var repos = ' Commits';
-                if (d.value == 1) {
-                    repos = ' Commit';
+                var value = d[1] - d[0];
+                var repos = ' Commits ';
+                if (value == 1) {
+                    repos = ' Commit ';
                 }
-                return '<sub>[Week of ' + formatTime(d.date) + ']</sub>' + '<br>' + d.value + repos;
+                return `<sub>[Week of ${formatTime(d[3])}]</sub>` + '<br>' + value + repos + `to ${d[2]}`;
             });
 
         var valueline = d3
@@ -164,38 +160,46 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .selectAll('path')
             .data(data)
                 .join('path')
-                .attr('fill', d => colors(d.key))
+                .attr('fill', d => colors(d.index))
                 .attr('stroke', 'black')
                 .attr('d', area);
-
-        /*// Draw line
-        chart
-            .append('path')
-            .datum(data)
-            .attr('class', 'line')
-            .attr('d', valueline);*/
 
         // Draw date-of-interest reference lines
         addDateLine(dSupercomp, 'Supercomputing');
         addDateLine(dThnxgiv, 'Thanksgiving');
         addDateLine(dXmas, 'Christmas');
 
+        var pointData = [];
+
+        for (var d of data) {
+            for (var o of d) {
+                var copy = JSON.parse(JSON.stringify(o));
+                if (copy[1] && (copy[1] - copy[0])) {
+                    copy.push(d.key);
+                    copy.push(o.data.date);
+                    pointData.push(copy);
+                }
+            }
+        }
+
         // Draw dots
         chart
-            .selectAll('.circle')
-            .data(data)
-            .enter()
-            .append('circle')
-            .attr('class', 'circle')
-            .attr('cx', function(d) {
-                return x(d.date);
-            })
-            .attr('cy', function(d) {
-                return y(d.value);
-            })
-            .attr('r', dotRadius)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .selectAll('circle')
+            .data(pointData)
+            .join('circle')
+                .attr('cx', function(d) {
+                    return x(d[3]);
+                })
+                .attr('cy', function(d) {
+                    if (d[1]) {
+                        return y(d[1]);
+                    }
+                })
+                .attr('r', dotRadius)
+                .attr('fill', '#888')
+                .attr('stroke', 'white')
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
 
         // Angle the axis text
         chart
