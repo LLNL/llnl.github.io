@@ -58,7 +58,9 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         var colors = d3
             .scaleOrdinal()
             .domain([0, mostPopularRepositories.length - 1])
-            .range(d3.quantize(d3.interpolateInferno, data.length + 1));
+            .range(d3.quantize(d3.interpolate('#3182bd', '#FFFFFF'), mostPopularRepositories.length));
+
+        // d3.quantize(d3.interpolateInferno, data.length + 1)
 
         var dToday = x.domain()[1];
         // Supercomputing
@@ -196,8 +198,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     }
                 })
                 .attr('r', dotRadius)
-                .attr('fill', '#888')
-                .attr('stroke', 'white')
+                .attr('class', 'circle')
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide);
 
