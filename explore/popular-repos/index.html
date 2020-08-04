@@ -14,6 +14,7 @@ layout: default
 <!-- Preset vis display areas -->
 <center>
     <svg class="cluster"></svg>
+    <br /> <svg class="repoCreationHistory"></svg>
     <br /> <svg class="repoActivityChart"></svg>
 </center>
 
@@ -28,6 +29,7 @@ layout: default
 <script type="text/javascript" src="../../js/explore/largeRepos/cluster_repoSize.js"></script>
 <script type="text/javascript" src="../../js/explore/largeRepos/line_repoActivity.js"></script>
 <script type="text/javascript" src="../../js/explore/largeRepos/generate_popularRepos.js"></script>
+<script type="text/javascript" src="../../js/explore/largeRepos/line_repoCreationHistory.js"></script>
 
 <script>
     // GiHub Data Directory
@@ -52,6 +54,7 @@ layout: default
         console.debug(mostPopularRepositories);
     }).then(() => {
         draw_cluster('cluster');
+        draw_line_repoCreationHistory('repoCreationHistory', mostPopularRepositories);
         draw_line_repoActivity('repoActivityChart');
     });
     

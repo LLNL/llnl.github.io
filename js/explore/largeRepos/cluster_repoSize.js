@@ -36,7 +36,7 @@ function draw_cluster(areaID) {
             .attr('class', 'd3-tip')
             .offset([-10, 0])
             .html(function(d) {
-                return `${d.data.name}`
+                return `${d.data.owner}/${d.data.name}`
             });
 
         chart.call(tip);
