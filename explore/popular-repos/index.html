@@ -48,7 +48,7 @@ layout: default
     var popularityURL = ghDataDir + '/labReposInfo.json';
     var popularityFiles = [popularityURL];
     var mostPopularRepositories = [];
-    var cutOffSize = 8;
+    var cutOffSize = 10;
     Promise.all(popularityFiles.map(url => d3.json(url))).then(values => {
         mostPopularRepositories = generate_popularRepos(values[0], cutOffSize);
         console.debug(mostPopularRepositories);

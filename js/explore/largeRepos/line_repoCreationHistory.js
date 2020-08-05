@@ -105,7 +105,11 @@ function draw_line_repoCreationHistory(areaID, repoNamesWOwner) {
                 if (d.value == 1) {
                     repos = ' Repo';
                 }
-                return '<sub>[' + formatTime(d.date) + ']</sub>' + '<br>' + d.name.toString();
+                var names = '';
+                for (var name of d.name) {
+                    names += `<br> ${name}`;
+                }
+                return '<sub>[' + formatTime(d.date) + ']</sub>' + names;
             });
 
         var valueline = d3

@@ -13,7 +13,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
     // Draw graph from data
     function drawGraph(data, areaID) {
-        var graphHeader = 'Activity Across Most Popular Repos by Stars [Default Branches, 1 Year]';
+        var graphHeader =`Activity Across Top ${cutOffSize} Repos by Stars [Default Branches, 1 Year]`;
 
         // Removes most recent week from graph to avoid apparent dip in activity
         data.pop();
@@ -58,7 +58,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
         var colors = d3
             .scaleOrdinal()
             .domain([0, mostPopularRepositories.length - 1])
-            .range(d3.quantize(d3.interpolate('#3182bd', '#FFFFFF'), mostPopularRepositories.length));
+            .range(d3.quantize(d3.interpolate('#3182bd', '#d1e3f0'), mostPopularRepositories.length));
 
         // d3.quantize(d3.interpolateInferno, data.length + 1)
 
