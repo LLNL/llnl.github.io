@@ -10,13 +10,16 @@ function draw_pack_hierarchy(areaID) {
     });
 
     function drawGraph(data, areaID) {
-        const graphHeader = 'LLNL Repositories';
+        const graphHeader = 'Organizations and Contributions';
 
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight * 2 - margin.top - margin.bottom;
+        const legendRectSize = 15,
+            legendSpacing = 4;
 
-        const colors = ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f'];
+
+        const colors = ['#b3de69','#ffffb3','#bebada','#fb8072','#80b1d3'];
 
         const chart = d3
             .select('.' + areaID)
@@ -36,13 +39,22 @@ function draw_pack_hierarchy(areaID) {
         const tip = d3
             .tip()
             .attr('class', 'd3-tip')
-            .offset([-10, 0])
+            .offset(d => {
+                return [-10, 0];
+            })
             .html(function(d) {
+                let returnString = '';
                 if (d.data.internal != undefined) {
-                    return `${d.data.name} : ${d.data.internal ? 'Internal' : 'External'}`;
+                    returnString += `${d.data.username} : ${d.data.internal ? 'Internal' : 'External'}`;
                 } else {
-                    return `${d.data.name}`
+                    returnString += `${d.data.name}`
                 }
+                d = d.parent;
+                while (d.depth > focus.depth) {
+                    returnString = `${d.data.name}/${returnString}`
+                    d = d.parent;
+                }
+                return returnString;
             });
 
         chart.call(tip);
@@ -100,19 +112,8 @@ function draw_pack_hierarchy(areaID) {
                     .attr('dy', '0.35em')
                     .attr('fill-opacity', 0)
                     .attr('radius', d => d.r * (maxRadius / d.parent.r))
-                    .style('cursor', d => {
-                        if (d.children == undefined) {
-                            return 'default';
-                        } else {
-                            return 'pointer';
-                        }
-                    })
-                    .text(d => {return d.data.name})
-                    .on('click', d => {
-                        if (d.children != undefined) {
-                            clicked(d);
-                        }
-                    });
+                    .attr('pointer-events', 'none')
+                    .text(d => {return d.data.name});
             
             label.nodes().forEach(node => {
                 node.setAttribute('font-size', Math.floor(10 * node.getAttribute('radius') * 2 / (node.getComputedTextLength() + 5)) + 'px')
@@ -137,14 +138,25 @@ function draw_pack_hierarchy(areaID) {
             .attr('fill', d => colors[d.height + 1])
             .attr('r', d => d.r)
             .style('cursor', 'pointer')
-            .on('mouseover', tip.show)
+            .on('mouseover', d => {
+                if (d.depth >= focus.depth + 1) {
+                    tip.show(d);
+                }
+            })
             .on('mouseout', tip.hide);
 
         const childCircles = childNodes.append('circle')
-            .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.depth + 3])
+            .attr('fill', d => d.data.internal ? colors[d.height + 1] : colors[d.height])
             .attr('r', d => d.r)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('mouseover', d => {
+                if (d.parent == focus) {
+                    tip.show(d);
+                } else {
+                    tip.show(d.parent);
+                }
+            })
+            .on('mouseout', tip.hide)
+            .on('click', d => clicked(d.parent));
         
         parentCircles.on('click', clicked);
 
@@ -160,6 +172,10 @@ function draw_pack_hierarchy(areaID) {
 
         function zoom(d) {
             const focus_0 = focus;
+
+            while (d.depth > focus.depth + 1) {
+                d = d.parent
+            }
 
             focus = d;
 
@@ -197,11 +213,73 @@ function draw_pack_hierarchy(areaID) {
             childCircles.attr('r', d => d.r * k);
         }
 
+        // Data for legend
+        const labels = ['External Contributors', 'Internal Contributors', 'Repositories', 'GitHub Organizations', 'LLNL'];
+    
+        // Creates legend
+        const legend = chart
+            .append('g');
+
+        function updateLegend(labels, color = colors) {
+            legend.selectAll('g').remove();
+
+            const legendMap = [];
+            color.forEach((d, i) => {
+                legendMap.push({ text: labels[i], color: d });
+            });
+
+            legend.append('rect')
+                .attr('fill', '#FFFFFF')
+                .attr('fill-opacity', 0.9)
+                .attr('height', labels.length * (legendRectSize + legendSpacing) + legendSpacing)
+                .attr('width', 150)
+                .attr('y', 0 - legendSpacing)
+                .attr('x', -5)
+                .attr('rx', 10);
+    
+            const legendEntries = legend
+                .selectAll('g')
+                .data(legendMap)
+                    .join('g')
+                    .attr('class', 'legend')
+                    .attr('transform', (d, i) => {
+                        const legendHeight = legendRectSize + legendSpacing;
+                        const offset = (legendHeight * color.length) / 2;
+                        const horizontal = 0;
+                        const vertical = i * legendHeight;
+                        return `translate(${horizontal}, ${vertical})`;
+                    });
+            
+            // Adds rectangle for color reference
+            legendEntries
+                .append('rect')
+                    .attr('width', legendRectSize)
+                    .attr('height', legendRectSize)
+                    .style('fill', d => {
+                        return d.color;
+                    })
+                    .style('stroke', d => {
+                        return '#FFFFFF';
+                    });
+    
+            // Adds legend text
+            legendEntries
+                .append('text')
+                    .attr('x', legendRectSize + legendSpacing)
+                    .attr('y', legendRectSize - legendSpacing)
+                    .text(d => {
+                        return d.text;
+                    })
+                    .attr('text-anchor', 'start');
+        }
+
+        updateLegend(labels);
+
     }
 
     // Turn json obj into desired working data
     function reformatData(obj1, obj2) {
-        var data = { name: 'LLNL Repositories', children: [] };
+        var data = { name: 'LLNL Organizations', children: [] };
         for (var user in obj1['data']) {
             if (obj1['data'][user]['contributedLabRepositories'] === undefined) {
                 continue;
@@ -218,7 +296,7 @@ function draw_pack_hierarchy(areaID) {
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
                 let username = obj1['data'][user]['name'] == null ? user : obj1['data'][user]['name'];
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: true });
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1, internal: true, username: username });
             }
         }
         for (var user in obj2['data']) {
@@ -237,7 +315,7 @@ function draw_pack_hierarchy(areaID) {
                 }
                 let indexOfRepo = data.children[indexOfOwner].children.findIndex(d => d.name == repo);
                 let username = obj2['data'][user]['name'] == null ? user : obj2['data'][user]['name'];
-                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: username, value: 1, internal: false });
+                data.children[indexOfOwner].children[indexOfRepo].children.push({ name: user, value: 1, internal: false, username: username });
             }
         }
         
