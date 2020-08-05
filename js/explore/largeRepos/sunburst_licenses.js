@@ -8,7 +8,7 @@ function draw_sunburst_licenses(areaID) {
     function drawSunburst(obj, areaID) {
         let data = reformatData(obj, null);
 
-        const graphHeader = `Repo Licenses, Top ${cutOffSize} Repos`;
+        const graphHeader = `Repo Licenses, Top ${cutOffSize} Repos by Stars`;
 
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom / 2, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -270,10 +270,10 @@ function draw_sunburst_licenses(areaID) {
             });
     
         // Creates option slider
-        chart.append('g')
+        /*chart.append('g')
             .attr('transform', `translate(${margin.left},${margin.top / 2})`)
             .attr('id', 'licenseSlider')
-            .call(slider);
+            .call(slider);*/
 
     }
 

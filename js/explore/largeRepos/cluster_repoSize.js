@@ -23,7 +23,7 @@ function draw_cluster(areaID) {
                     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
         
         const pack = (data, starWeight=1, forkWeight=0, contributorWeight=0) => d3.pack()
-            .size([width - margin.left - margin.right, height - margin.top - margin.bottom])
+            .size([width, height])
             .padding(2)
             (d3.hierarchy(data)
                 .sum(d => (d.stars * starWeight + d.forks * forkWeight + d.contributors * contributorWeight) / (starWeight + forkWeight + contributorWeight))
