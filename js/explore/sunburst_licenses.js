@@ -302,7 +302,7 @@ function draw_sunburst_licenses(areaID) {
             }
         }
 
-        // Converts object tree into d3.hierarchy complient form
+        // Converts object tree into d3.hierarchy compliant form
         const licenseArray = [];
         const licenses = Object.keys(objTree);
         licenses.forEach(function(license) {
