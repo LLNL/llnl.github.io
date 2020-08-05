@@ -8,7 +8,7 @@ function draw_sunburst_licenses(areaID) {
     function drawSunburst(obj, areaID) {
         let data = reformatData(obj, null);
 
-        const graphHeader = 'Repo Licenses';
+        const graphHeader = `Repo Licenses, Top ${cutOffSize} Repos by Stars`;
 
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom / 2, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -286,6 +286,9 @@ function draw_sunburst_licenses(areaID) {
             let licenseInfo = obj['data'][repo]['licenseInfo'];
             // Skip if no license info
             if (licenseInfo == null) {
+                continue;
+            }
+            if (!mostPopularRepositories.some(d => repo == `${d.owner}/${d.name}`)) {
                 continue;
             }
             // Use long name if no short name
