@@ -28,8 +28,6 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .keys(repoKeys)
             .order(d3.stackOrderAscending)(data);
 
-        console.debug(data);
-
         var margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
             height = stdHeight;

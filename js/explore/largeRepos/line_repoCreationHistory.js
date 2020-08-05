@@ -10,7 +10,7 @@ function draw_line_repoCreationHistory(areaID, repoNamesWOwner) {
 
     // Draw graph from data
     function drawGraph(data, data2, dataR, dataR2, areaID) {
-        var graphHeader = 'Repo Creation History';
+        var graphHeader = `Repo Creation History, Top ${cutOffSize} Repos`;
         var seriesData = [{ label: 'First Commit' }, { label: 'Added to GitHub' }];
         var showSingle = dataR2.length ? true : false;
 
@@ -294,8 +294,6 @@ function draw_line_repoCreationHistory(areaID, repoNamesWOwner) {
             commitCounts[commitDates[i]] = i + 1;
         }
 
-        console.debug(repoPts);
-
         // Format data for graphing
         var data = [];
         var data2 = [];
@@ -310,7 +308,6 @@ function draw_line_repoCreationHistory(areaID, repoNamesWOwner) {
                         numArray.push(i);
                     }
                 });
-                console.debug(numArray);
                 var nameArray = numArray.map(d => repoPts['name'][d]);
                 dataR.push({ date: timestamp, value: commitCounts[timestamp], name: nameArray });
             }
@@ -324,14 +321,12 @@ function draw_line_repoCreationHistory(areaID, repoNamesWOwner) {
                         numArray.push(i);
                     }
                 });
-                console.debug(numArray);
                 var nameArray = numArray.map(d => repoPts['name'][d]);
                 dataR2.push({ date: timestamp, value: ghCreatedCounts[timestamp], name: nameArray });
             }
         }
 
         var allData = { data: data, data2: data2, dataR: dataR, dataR2: dataR2 };
-        console.debug(allData);
         return allData;
     }
 }
