@@ -102,6 +102,8 @@ Make sure your repo contains:
 
 After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/master/release-template.md).
 
+Another good practice is to provide user documentation. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
+
 ### How do I include my repo in the LLNL organization and/or this website’s catalog?
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
