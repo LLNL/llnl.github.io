@@ -586,6 +586,11 @@
                 ]
             }
         },
+        "CDAT/.github": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "CDAT/EzGet": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -1099,10 +1104,10 @@
                                     "packageManager": "NPM",
                                     "packageName": "user",
                                     "repository": {
-                                        "name": "ES-uapp",
-                                        "nameWithOwner": "jaylab1/ES-uapp",
+                                        "name": "User",
+                                        "nameWithOwner": "jianjiayi/User",
                                         "owner": {
-                                            "login": "jaylab1"
+                                            "login": "jianjiayi"
                                         }
                                     }
                                 },
@@ -6232,6 +6237,82 @@
                 "nodes": []
             }
         },
+        "ESGF/esgf-compute-api": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mock",
+                                    "repository": {
+                                        "name": "python-mock",
+                                        "nameWithOwner": "calvinchengx/python-mock",
+                                        "owner": {
+                                            "login": "calvinchengx"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "owslib",
+                                    "repository": {
+                                        "name": "OWSLib",
+                                        "nameWithOwner": "geopython/OWSLib",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "geopython"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "name": "pytest",
+                                        "nameWithOwner": "pytest-dev/pytest",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "pytest-dev"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mock",
+                                    "repository": {
+                                        "name": "python-mock",
+                                        "nameWithOwner": "calvinchengx/python-mock",
+                                        "owner": {
+                                            "login": "calvinchengx"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nose2",
+                                    "repository": {
+                                        "name": "nose2",
+                                        "nameWithOwner": "nose-devs/nose2",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "nose-devs"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-compute-wps": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -8280,6 +8361,65 @@
         "GMLC-TDC/helics-buildenv": {
             "dependencyGraphManifests": {
                 "nodes": []
+            }
+        },
+        "GMLC-TDC/helics-cli": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "name": "click",
+                                        "nameWithOwner": "pallets/click",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "pallets"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "future",
+                                    "repository": {
+                                        "name": "python-future",
+                                        "nameWithOwner": "PythonCharmers/python-future",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "PythonCharmers"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "name": "jinja",
+                                        "nameWithOwner": "pallets/jinja",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "pallets"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "name": "six",
+                                        "nameWithOwner": "benjaminp/six",
+                                        "owner": {
+                                            "login": "benjaminp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "GMLC-TDC/helics-conda": {
@@ -11971,11 +12111,6 @@
             }
         },
         "LLNL/WVL": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "LLNL/ac-mpibind": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -17919,6 +18054,82 @@
                 "nodes": []
             }
         },
+        "LLNL/pyranda": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "name": "matplotlib",
+                                        "nameWithOwner": "matplotlib/matplotlib",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "matplotlib"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mpi4py",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "name": "numpy",
+                                        "nameWithOwner": "numpy/numpy",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "numpy"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "name": "scipy",
+                                        "nameWithOwner": "scipy/scipy",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "scipy"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "name": "matplotlib",
+                                        "nameWithOwner": "matplotlib/matplotlib",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "matplotlib"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": []
+                        }
+                    }
+                ]
+            }
+        },
         "LLNL/pysaber": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -18248,6 +18459,11 @@
             }
         },
         "LLNL/ravel": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/recbis": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -19142,11 +19358,6 @@
                 "nodes": []
             }
         },
-        "LLNL/wcs": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "LLNL/wrap": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -19773,6 +19984,77 @@
         "flux-framework/pr-validator": {
             "dependencyGraphManifests": {
                 "nodes": []
+            }
+        },
+        "flux-framework/rfc": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "name": "jsonschema",
+                                        "nameWithOwner": "Julian/jsonschema",
+                                        "owner": {
+                                            "login": "Julian"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "name": "pyyaml",
+                                        "nameWithOwner": "yaml/pyyaml",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "yaml"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "name": "sphinx",
+                                        "nameWithOwner": "sphinx-doc/sphinx",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-doc"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "name": "sphinx_rtd_theme",
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "readthedocs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-spelling",
+                                    "repository": {
+                                        "name": "spelling",
+                                        "nameWithOwner": "sphinx-contrib/spelling",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-contrib"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "hpc/OpenLorenz": {
