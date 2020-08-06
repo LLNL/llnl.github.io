@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labRepos_Activity.json" % ghDataDir
+datfilepath = "%s/labRepos_ActivityCommits.json" % ghDataDir
 query_in = "/repos/OWNNAME/REPONAME/stats/commit_activity"
 
 # Read repo info data file (to use as repo list)
