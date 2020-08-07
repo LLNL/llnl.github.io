@@ -9,7 +9,7 @@ function draw_cluster(areaID) {
     });
 
     function drawGraph(data, areaID) {
-        const graphHeader = 'Repos Popularity by Stars';
+        const graphHeader = 'Repo\'s Popularity by Stars';
 
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
