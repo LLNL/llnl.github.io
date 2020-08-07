@@ -24,10 +24,6 @@ function draw_popularRepos(areaID, columns=2) {
             n++;
             return { entry: o, number: d.number, position: n };
         }));
-        
-        console.debug(data);
-        console.debug(textData);
-        console.debug(columnSizeTotal);
 
         const chart = d3
             .select('.' + areaID)
@@ -67,8 +63,6 @@ function draw_popularRepos(areaID, columns=2) {
         const minColumnSize = Math.floor(obj.length/columns);
         const numLargerColumns = obj.length - columns * minColumnSize;
 
-        console.debug('Here!');
-
         var n = 0;
         for (var i = 0; i < columns; i++) {
             data[i] = { entries: [], number: i };
@@ -76,10 +70,8 @@ function draw_popularRepos(areaID, columns=2) {
             for (var j = 0; j < cap; j++) {
                 data[i]['entries'].push(obj[n]);
                 n++;
-                console.debug(n);
             }
         }
-        console.debug(data);
 
         return data;
     }
