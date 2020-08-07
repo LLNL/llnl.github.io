@@ -11,7 +11,7 @@ function draw_popularRepos(areaID, columns=2) {
             fontSize = 14;
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth,
-            height = (fontSize + rowSpacing) * data[0].entries.length;
+            height = (fontSize + rowSpacing) * (data[0].entries.length + 1);
 
         const columnSize = width / data.length - columnSpacing * (data.length - 1);
 
@@ -40,7 +40,7 @@ function draw_popularRepos(areaID, columns=2) {
             .selectAll('g')
             .data(data)
             .join('g')
-                .attr('transform', d => `translate(${columnSize * d.number + columnSpacing * d.number},0)`);
+                .attr('transform', d => `translate(${columnSize * d.number + columnSpacing * d.number},${fontSize + rowSpacing})`);
 
         columns.selectAll('text')
             .data(d => textData.filter(o => o.number == d.number))
