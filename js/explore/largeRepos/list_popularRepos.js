@@ -52,7 +52,7 @@ function draw_popularRepos(areaID, columns=2, orthogonalOrdering=false) {
             .join('text')
                 .attr('font-size', fontSize)
                 .attr('y', (d, i) => (fontSize + rowSpacing) * i)
-                .text(d => `#${d.position} ${d.entry.owner}/${d.entry.name}`);
+                .html(d => `<tspan style="font-weight: bold">${d.position}.</tspan> ${d.entry.owner}/${d.entry.name}`);
 
         chart
             .append('g')
