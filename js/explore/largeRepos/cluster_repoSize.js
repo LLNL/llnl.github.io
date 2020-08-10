@@ -9,18 +9,15 @@ function draw_cluster(areaID) {
     });
 
     function drawGraph(data, areaID) {
-        const graphHeader = 'Repos Popularity by Stars';
-
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
-            width = stdTotalWidth * 2 - margin.left - margin.right,
-            height = stdHeight * 2;
+            width = 500,
+            height = 500;
         
         const chart = d3
             .select('.' + areaID)
-                .attr('width', width + margin.left + margin.right)
-                .attr('height', height + margin.top + margin.bottom)
-                .append('g')
-                    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+                .attr('width', width)
+                .attr('height', height)
+                .append('g');
         
         const pack = (data, starWeight=1, forkWeight=0, contributorWeight=0) => d3.pack()
             .size([width, height])
@@ -40,15 +37,6 @@ function draw_cluster(areaID) {
             });
 
         chart.call(tip);
-
-        chart
-            .append('g')
-                .append('text')
-                    .attr('class', 'graphtitle')
-                    .attr('x', width / 2)
-                    .attr('y', 0 - margin.top / 3)
-                    .attr('text-anchor', 'middle')
-                    .text(graphHeader);
 
         let root = pack({ children: data }, 1, 0, 0);
 
