@@ -13,7 +13,8 @@ layout: default
 
 <!-- Preset vis display areas -->
 <center>
-    <svg class="cluster"></svg>
+    <svg class="listPopularRepos"></svg>
+    <br /> <svg class="cluster"></svg>
     <br /> <svg class="repoCreationHistory"></svg>
     <br /> <svg class="repoActivityChart"></svg>
     <br /> <svg class="popularLicenses"></svg>
@@ -32,6 +33,7 @@ layout: default
 <script type="text/javascript" src="../../js/explore/largeRepos/generate_popularRepos.js"></script>
 <script type="text/javascript" src="../../js/explore/largeRepos/line_repoCreationHistory.js"></script>
 <script type="text/javascript" src="../../js/explore/largeRepos/sunburst_licenses.js"></script>
+<script type="text/javascript" src="../../js/explore/largeRepos/list_popularRepos.js"></script>
 
 <script>
     // GiHub Data Directory
@@ -58,6 +60,7 @@ layout: default
         draw_line_repoCreationHistory('repoCreationHistory', mostPopularRepositories);
         draw_line_repoActivity('repoActivityChart');
         draw_sunburst_licenses('popularLicenses');
+        draw_popularRepos('listPopularRepos', 5, true);
     });
     
 </script>
