@@ -45,7 +45,7 @@ for repo in repolist:
             del item["days"]
         except KeyError:
             pass
-        # Convert unix timestamps into standard dates
+        # Convert unix timestamps into standard dates (rounded to nearest week to improve aggregate data)
         weekinfo = datetime.utcfromtimestamp(item["week"]).isocalendar()
         weekstring = str(weekinfo[0]) + "-W" + str(weekinfo[1]) + "-1"
         item["week"] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime("%Y-%m-%d")
