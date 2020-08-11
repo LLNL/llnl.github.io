@@ -2,6 +2,7 @@ from scraper.github import queryManager as qm
 from os import environ as env
 import re
 from datetime import datetime
+from dateutil.relativedelta import relativedelta
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labRepos_ActivityLines.json" % ghDataDir
@@ -22,6 +23,9 @@ dataCollector.data = {"data": {}}
 # Initialize query manager
 queryMan = qm.GitHubQueryManager()
 
+# Set cutoff timestamp
+cutoffStamp = int((datetime.now() - relativedelta(years=1)).timestamp())
+
 # Iterate through internal repos
 print("Gathering data across multiple queries...")
 for repo in repolist:
@@ -39,8 +43,11 @@ for repo in repolist:
         print(error)
         continue
 
+    # Limit data to the past year
+    outObj = list(filter(lambda x: x[0] > cutoffStamp, outObj))
+
     for item in outObj:
-        # Convert unix timestamps into standard dates
+        # Convert unix timestamps into standard dates (rounded to nearest week to improve aggregate data)
         weekinfo = datetime.utcfromtimestamp(item[0]).isocalendar()
         weekstring = str(weekinfo[0]) + "-W" + str(weekinfo[1]) + "-1"
         item[0] = datetime.strptime(weekstring, "%Y-W%W-%w").strftime("%Y-%m-%d")
