@@ -1,10 +1,32 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoActivity(areaID, repoNameWOwner) {
+function draw_line_repoActivity(areaID, byCommits=true, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_ActivityCommits.json';
-    var files = [url];
+    var url0 = ghDataDir + '/labRepos_ActivityCommits.json';
+    var url1 = ghDataDir + '/labRepos_ActivityLines.json';
+    var files = [url0, url1];
     Promise.all(files.map(url => d3.json(url))).then(values => {
-        var data = reformatData(values[0]);
+        let options = ['Show Activity by Commits', 'Show Activity by Line Additions'];
+
+        const slider = d3
+            .sliderLeft()
+            .domain([0, 1])
+            .step(1)
+            .tickFormat(d => {
+                return options[Math.round(d)];
+            })
+            .ticks(1)
+            .value(0)
+            .height(50)
+            .on('onchange', val => {
+                byCommits = val == 0;
+                d3.select('.' + areaID).select('.chart').remove();
+                data = reformatData(values[0], values[1]);
+                drawGraph(data, areaID);
+            });
+        
+        d3.select('.' + areaID).append('g').attr('transform', `translate(${980},${20})`).call(slider);
+
+        var data = reformatData(values[0], values[1]);
         drawGraph(data, areaID);
     });
 
@@ -13,7 +35,9 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
     // Draw graph from data
     function drawGraph(data, areaID) {
-        var graphHeader =`Activity Across Top ${cutOffSize} Repos by Stars [Default Branches, 1 Year]`;
+        var graphHeader =`${byCommits ? 'Activity' : 'Line Additions'} Across Top ${cutOffSize} Repos by Stars [Default Branches, 1 Year]`;
+
+        data = data.slice(data.length - 52);
 
         // Removes most recent week from graph to avoid apparent dip in activity
         data.pop();
@@ -95,11 +119,11 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .offset([-10, 0])
             .html(function(d) {
                 var value = d[1] - d[0];
-                var repos = ' Commits ';
+                var repos = byCommits ? ' Commits ' : ' Line Additions ';
                 if (value == 1) {
-                    repos = ' Commit ';
+                    repos = byCommits ? ' Commit ' : ' Line Addition ';
                 }
-                return `<sub>[Week of ${formatTime(d[3])}]</sub>` + '<br>' + value + repos + `to ${d[2]}`;
+                return `<sub>[Week of ${formatTime(d[3])}]</sub>` + '<br>' + d3.format(',')(value) + repos + `to ${d[2]}`;
             });
 
         var valueline = d3
@@ -116,6 +140,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .attr('width', width + margin.left + margin.right)
             .attr('height', height + margin.top + margin.bottom)
             .append('g')
+            .attr('class', 'chart')
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
         chart.call(tip);
@@ -206,71 +231,155 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .selectAll('text')
             .attr('transform', 'rotate(12)')
             .attr('text-anchor', 'start');
+
+        // Angle the axis text
+        chart
+            .select('.y.axis')
+            .selectAll('text')
+            .text(d => {
+                if (+d >= 1000) {
+                    return d3.format('~e')(+d);
+                } else {
+                    return d;
+                }
+            });
     }
 
     // Turn json obj into desired working data
-    function reformatData(obj) {
-        // Calculate combined values
-        var dataTotals = {};
-        var repoCounts = {};
-        var repos = repoNameWOwner == null ? Object.keys(obj['data']) : [repoNameWOwner];
-        var numReposExpected = repos.length;
-        repos.forEach(function(repo) {
-            if (obj['data'].hasOwnProperty(repo)) {
-                var weeklyNodes = obj['data'][repo];
-                for (var i = 0; i < weeklyNodes.length; i++) {
-                    var weekstamp = weeklyNodes[i]['week'];
-                    var weeklytotal = weeklyNodes[i]['total'];
-                    if (!Object.keys(dataTotals).contains(weekstamp)) {
-                        dataTotals[weekstamp] = 0;
-                        repoCounts[weekstamp] = 0;
+    function reformatData(obj0, obj1) {
+        if (byCommits) {
+            var obj = obj0;
+            // Calculate combined values
+            var dataTotals = {};
+            var repoCounts = {};
+            var repos = repoNameWOwner == null ? Object.keys(obj['data']) : [repoNameWOwner];
+            var numReposExpected = repos.length;
+            repos.forEach(function(repo) {
+                if (obj['data'].hasOwnProperty(repo)) {
+                    var weeklyNodes = obj['data'][repo];
+                    for (var i = 0; i < weeklyNodes.length; i++) {
+                        var weekstamp = weeklyNodes[i]['week'];
+                        var weeklytotal = weeklyNodes[i]['total'];
+                        if (!Object.keys(dataTotals).contains(weekstamp)) {
+                            dataTotals[weekstamp] = 0;
+                            repoCounts[weekstamp] = 0;
+                        }
+                        dataTotals[weekstamp] += weeklytotal;
+                        repoCounts[weekstamp] += 1;
                     }
-                    dataTotals[weekstamp] += weeklytotal;
-                    repoCounts[weekstamp] += 1;
-                }
-            } else {
-                console.log('No activity data recorded for ' + repo + ', using dummy data.');
-                // Today
-                var end = new Date();
-                dataTotals[formatTime(end)] = 0;
-                repoCounts[formatTime(end)] = 1;
-                // Tomorrow, 1 year ago
-                var start = new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate() + 1);
-                dataTotals[formatTime(start)] = 0;
-                repoCounts[formatTime(start)] = 1;
-            }
-        });
-
-        // Formats data to allow for timestap look up of value data
-        var repoData = {};
-        repos.forEach(function(repo) {
-            for (var entry of obj['data'][repo]) {
-                if (repoData[entry['week']] == undefined) {
-                    repoData[entry['week']] = {};
-                }
-                if (entry['total']) {
-                    repoData[entry['week']][repo] = entry['total'];
                 } else {
-                    repoData[entry['week']][repo] = 0;
+                    console.log('No activity data recorded for ' + repo + ', using dummy data.');
+                    // Today
+                    var end = new Date();
+                    dataTotals[formatTime(end)] = 0;
+                    repoCounts[formatTime(end)] = 1;
+                    // Tomorrow, 1 year ago
+                    var start = new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate() + 1);
+                    dataTotals[formatTime(start)] = 0;
+                    repoCounts[formatTime(start)] = 1;
                 }
-            }
-        });
+            });
 
-        // Format data for graphing
-        var data = [];
-        var sortedTimestamps = Object.keys(dataTotals).sort();
-        sortedTimestamps.forEach(function(timestamp) {
-            var numReposFound = repoCounts[timestamp];
-            if (numReposFound == numReposExpected) {
+            // Formats data to allow for timestap look up of value data
+            var repoData = {};
+            repos.forEach(function(repo) {
+                for (var entry of obj['data'][repo]) {
+                    if (repoData[entry['week']] == undefined) {
+                        repoData[entry['week']] = {};
+                    }
+                    if (entry['total']) {
+                        repoData[entry['week']][repo] = entry['total'];
+                    } else {
+                        repoData[entry['week']][repo] = 0;
+                    }
+                }
+            });
+
+            // Format data for graphing
+            var data = [];
+            var sortedTimestamps = Object.keys(dataTotals).sort();
+            sortedTimestamps.forEach(function(timestamp) {
+                var numReposFound = repoCounts[timestamp];
+                if (numReposFound == numReposExpected) {
+                    var dateData = { date: timestamp };
+                    for (var repos of mostPopularRepositories) {
+                        dateData[`${repos['owner']}/${repos['name']}`] = repoData[timestamp][`${repos['owner']}/${repos['name']}`];
+                    }
+                    data.push(dateData);
+                } else {
+                    console.log('Repo count mismatch for activity on ' + timestamp + ': expected ' + numReposExpected + ', found ' + numReposFound);
+                }
+            });
+        } else {
+            // Formats line data
+            var obj = { data: {} };
+
+            var repos = Object.keys(obj1['data']);
+
+            repos.forEach(function(repo) {
+                obj['data'][repo] = [];
+                for (var entry of obj1['data'][repo]) {
+                    obj['data'][repo].push({ total: entry[1], week: entry[0] });
+                }
+            });
+
+            // Calculate combined values
+            var dataTotals = {};
+            var repoCounts = {};
+            var repos = mostPopularRepositories.map(d => `${d.owner}/${d.name}`);
+            var numReposExpected = repos.length;
+            repos.forEach(function(repo) {
+                if (obj['data'].hasOwnProperty(repo)) {
+                    var weeklyNodes = obj['data'][repo];
+                    for (var i = 0; i < weeklyNodes.length; i++) {
+                        var weekstamp = weeklyNodes[i]['week'];
+                        var weeklytotal = weeklyNodes[i]['total'];
+                        if (!Object.keys(dataTotals).contains(weekstamp)) {
+                            dataTotals[weekstamp] = 0;
+                            repoCounts[weekstamp] = 0;
+                        }
+                        dataTotals[weekstamp] += weeklytotal;
+                        repoCounts[weekstamp] += 1;
+                    }
+                } else {
+                    console.log('No activity data recorded for ' + repo + ', using dummy data.');
+                    // Today
+                    var end = new Date();
+                    dataTotals[formatTime(end)] = 0;
+                    repoCounts[formatTime(end)] = 1;
+                    // Tomorrow, 1 year ago
+                    var start = new Date(new Date().getFullYear() - 1, new Date().getMonth(), new Date().getDate() + 1);
+                    dataTotals[formatTime(start)] = 0;
+                    repoCounts[formatTime(start)] = 1;
+                }
+            });
+
+            // Formats data to allow for timestap look up of value data
+            var repoData = {};
+            repos.forEach(function(repo) {
+                for (var entry of obj['data'][repo]) {
+                    if (repoData[entry['week']] == undefined) {
+                        repoData[entry['week']] = {};
+                    }
+                    if (entry['total']) {
+                        repoData[entry['week']][repo] = entry['total'];
+                    } else {
+                        repoData[entry['week']][repo] = 0;
+                    }
+                }
+            });
+
+            // Format data for graphing
+            var data = [];
+            var sortedTimestamps = Object.keys(dataTotals).sort();
+            sortedTimestamps.forEach(function(timestamp) {
                 var dateData = { date: timestamp };
                 for (var repos of mostPopularRepositories) {
-                    dateData[`${repos['owner']}/${repos['name']}`] = repoData[timestamp][`${repos['owner']}/${repos['name']}`];
+                    dateData[`${repos['owner']}/${repos['name']}`] = repoData[timestamp][`${repos['owner']}/${repos['name']}`] == undefined ? 0 : repoData[timestamp][`${repos['owner']}/${repos['name']}`];
                 }
                 data.push(dateData);
-            } else {
-                console.log('Repo count mismatch for activity on ' + timestamp + ': expected ' + numReposExpected + ', found ' + numReposFound);
-            }
-        });
+            });
+        }
 
         return data;
     }
