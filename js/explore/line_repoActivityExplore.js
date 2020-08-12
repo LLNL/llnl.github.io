@@ -1,10 +1,11 @@
 /* Creates line graph visualization for webpage */
 function draw_line_repoActivity(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_ActivityCommits.json';
-    var files = [url];
+    var url0 = ghDataDir + '/labRepos_ActivityCommits.json';
+    var url1 = ghDataDir + '/labReposInfo.json';
+    var files = [url0, url1];
     Promise.all(files.map(url => d3.json(url))).then(values => {
-        var data = reformatData(values[0]);
+        var data = reformatData(values[0], values[1]);
         drawGraph(data, areaID);
     });
 
@@ -331,11 +332,26 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
     }
 
     // Turn json obj into desired working data
-    function reformatData(obj) {
+    function reformatData(obj, infoObj) {
+        // Filter out any repos that are internal forks
+        var infoRepos = Object.keys(infoObj['data']);
+        var copy = { data: {} };
+
+        infoRepos.forEach(repo => {
+            var parent = infoObj['data'][repo]['parent'];
+            if (parent == null) {
+                copy['data'][repo] = infoObj['data'][repo];
+            } else if (!infoRepos.some(d => d == parent['nameWithOwner'])) {
+                copy['data'][repo] = infoObj['data'][repo];
+            }
+        });
+
+        infoObj = copy;
+
         // Calculate combined values
         var dataTotals = {};
         var repoCounts = {};
-        var repos = repoNameWOwner == null ? Object.keys(obj['data']) : [repoNameWOwner];
+        var repos = repoNameWOwner == null ? Object.keys(obj['data']).filter(d => Object.keys(infoObj['data']).some(o => o == d)) : [repoNameWOwner];
         var numReposExpected = repos.length;
         repos.forEach(function(repo) {
             if (obj['data'].hasOwnProperty(repo)) {

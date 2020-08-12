@@ -37,6 +37,14 @@ query ($ownName: String!, $repoName: String!) {
     repositoryTopics {
       totalCount
     }
+    parent {
+      nameWithOwner
+      name
+      owner {
+        login
+        avatarUrl
+      }
+    }
     pullRequests_Open: pullRequests(states: OPEN) {
       totalCount
     }
