@@ -5478,11 +5478,6 @@
                 "nodes": []
             }
         },
-        "ECP-VeloC/KVTree": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "ECP-VeloC/VELOC": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -5503,17 +5498,7 @@
                 "nodes": []
             }
         },
-        "ECP-VeloC/er": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "ECP-VeloC/filo": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "ECP-VeloC/rankstr": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -7457,30 +7442,6 @@
                 "nodes": []
             }
         },
-        "ESGF/esgf-wget": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "django",
-                                    "repository": {
-                                        "name": "django",
-                                        "nameWithOwner": "django/django",
-                                        "owner": {
-                                            "isVerified": true,
-                                            "login": "django"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
         "ESGF/esgf.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9405,11 +9366,6 @@
             }
         },
         "LLNL/CDash": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "LLNL/CHAI": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -12817,9 +12773,27 @@
                 ]
             }
         },
-        "LLNL/cardioid": {
+        "LLNL/certipy": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyopenssl",
+                                    "repository": {
+                                        "name": "pyOpenSSL",
+                                        "nameWithOwner": "msabramo/pyOpenSSL",
+                                        "owner": {
+                                            "login": "msabramo"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "LLNL/coda-calibration-tool": {
@@ -18021,6 +17995,42 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "name": "pandas",
+                                        "nameWithOwner": "pandas-dev/pandas",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "pandas-dev"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "name": "pytest",
+                                        "nameWithOwner": "pytest-dev/pytest",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "pytest-dev"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "name": "pyyaml",
+                                        "nameWithOwner": "yaml/pyyaml",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "yaml"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "scipy",
                                     "repository": {
                                         "name": "scipy",
@@ -19588,40 +19598,6 @@
                 "nodes": []
             }
         },
-        "LLNL/umap": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "breathe",
-                                    "repository": {
-                                        "name": "breathe",
-                                        "nameWithOwner": "michaeljones/breathe",
-                                        "owner": {
-                                            "login": "michaeljones"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "exhale",
-                                    "repository": {
-                                        "name": "exhale",
-                                        "nameWithOwner": "svenevs/exhale",
-                                        "owner": {
-                                            "login": "svenevs"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
         "LLNL/umap-apps": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -20259,11 +20235,6 @@
             }
         },
         "flux-framework/flux-dyad": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "flux-framework/flux-framework.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
