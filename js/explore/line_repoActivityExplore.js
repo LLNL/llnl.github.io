@@ -284,7 +284,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                         .on('mouseover', pieTip.show)
                         .on('mouseout', pieTip.hide)
                         .on('click', d => {
-                            const win = window.open(`https://software.llnl.gov/repo/#/${d.data.name.split('/')[0]}/${d.data.name.split('/')[1]}`);
+                            const win = window.open(`${window.location['origin']}/repo/#/${d.data.name.split('/')[0]}/${d.data.name.split('/')[1]}`);
                             win.focus();
                         });
 
