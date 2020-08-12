@@ -52,7 +52,7 @@ function draw_popularRepos(areaID, columns=2, orthogonalOrdering=false) {
             .join('text')
                 .attr('font-size', fontSize)
                 .attr('y', (d, i) => (fontSize + rowSpacing) * i)
-                .html(d => `<tspan style="font-weight: bold">${d.position}.</tspan> <a xlink:href=https://software.llnl.gov/repo/#/${d.entry.owner}/${d.entry.name}>${d.entry.owner}/${d.entry.name}</a>`);
+                .html(d => `<tspan style="font-weight: bold">${d.position}.</tspan> <a xlink:href=${window.location['origin']}/repo/#/${d.entry.owner}/${d.entry.name}>${d.entry.owner}/${d.entry.name}</a>`);
 
         chart
             .append('g')
