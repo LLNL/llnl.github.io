@@ -280,8 +280,13 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                         })
                         .attr('fill-opacity', 1)
                         .attr('d', d => arc(d))
+                        .style('cursor', 'pointer')
                         .on('mouseover', pieTip.show)
-                        .on('mouseout', pieTip.hide);
+                        .on('mouseout', pieTip.hide)
+                        .on('click', d => {
+                            const win = window.open(`https://software.llnl.gov/repo/#/${d.data.name.split('/')[0]}/${d.data.name.split('/')[1]}`);
+                            win.focus();
+                        });
 
             // Creates and formats the label of each slice
             const label = pieGroup
