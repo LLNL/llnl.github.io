@@ -118,6 +118,13 @@ function draw_sunburst_licenses(areaID) {
             .style('cursor', 'pointer')
             .on('click', clicked);
 
+        path.filter(d => !d.children)
+            .style('cursor', 'pointer')
+            .on('click', d => {
+                const win = window.open(`${window.location['origin']}/repo/#/${d.data.name.split('/')[0]}/${d.data.name.split('/')[1]}`);
+                win.focus();
+            });
+
         // Adds labels to wedges
         let label = centerGroup
             .append('g')
