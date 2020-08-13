@@ -37,9 +37,9 @@ function draw_pie_commits(areaID) {
                 return [this.getBBox().height / 2, 0];
             })
             .html(function(d) {
-                var units = ' Repos';
+                var units = ' Commits';
                 if (d.data.count == 1) {
-                    units = ' Repo';
+                    units = ' Commit';
                 }
                 return d.data.count + units + ' (' + d3.format('.0%')(d.data.count / dataTotalCount) + ')' + '<br>' + d.data.label;
             });
@@ -132,7 +132,7 @@ function draw_pie_commits(areaID) {
 
     // Turn json obj into desired working data
     function reformatData(obj) {
-        var data = [{ label: 'Commits by Top Ten Repos', count: totalCommits(obj, mostPopularRepositories.map(d => `${d.owner}/${d.name}`)) }, { label: 'Commits by Other Repos', count: totalCommits(obj) }];
+        var data = [{ label: 'In Top Ten LLNL Repos', count: totalCommits(obj, mostPopularRepositories.map(d => `${d.owner}/${d.name}`)) }, { label: 'In Other LLNL Repos', count: totalCommits(obj) }];
         return data;
     }
 
