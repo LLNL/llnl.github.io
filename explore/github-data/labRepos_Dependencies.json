@@ -1387,9 +1387,10 @@
                                     "packageName": "docker-py",
                                     "repository": {
                                         "name": "docker-py",
-                                        "nameWithOwner": "mss/docker-py",
+                                        "nameWithOwner": "wehkamp/docker-py",
                                         "owner": {
-                                            "login": "mss"
+                                            "isVerified": false,
+                                            "login": "wehkamp"
                                         }
                                     }
                                 },
@@ -5170,10 +5171,9 @@
                                     "packageName": "karma-webpack",
                                     "repository": {
                                         "name": "karma-webpack",
-                                        "nameWithOwner": "webpack-contrib/karma-webpack",
+                                        "nameWithOwner": "ryanclark/karma-webpack",
                                         "owner": {
-                                            "isVerified": false,
-                                            "login": "webpack-contrib"
+                                            "login": "ryanclark"
                                         }
                                     }
                                 },
@@ -5478,6 +5478,11 @@
                 "nodes": []
             }
         },
+        "ECP-VeloC/KVTree": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "ECP-VeloC/VELOC": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -5498,7 +5503,17 @@
                 "nodes": []
             }
         },
+        "ECP-VeloC/er": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "ECP-VeloC/filo": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "ECP-VeloC/rankstr": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -7442,6 +7457,30 @@
                 "nodes": []
             }
         },
+        "ESGF/esgf-wget": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "django",
+                                    "repository": {
+                                        "name": "django",
+                                        "nameWithOwner": "django/django",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "django"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
         "ESGF/esgf.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9366,6 +9405,11 @@
             }
         },
         "LLNL/CDash": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/CHAI": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -12771,6 +12815,11 @@
                         }
                     }
                 ]
+            }
+        },
+        "LLNL/cardioid": {
+            "dependencyGraphManifests": {
+                "nodes": []
             }
         },
         "LLNL/certipy": {
@@ -19598,6 +19647,40 @@
                 "nodes": []
             }
         },
+        "LLNL/umap": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "breathe",
+                                    "repository": {
+                                        "name": "breathe",
+                                        "nameWithOwner": "michaeljones/breathe",
+                                        "owner": {
+                                            "login": "michaeljones"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "exhale",
+                                    "repository": {
+                                        "name": "exhale",
+                                        "nameWithOwner": "svenevs/exhale",
+                                        "owner": {
+                                            "login": "svenevs"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
         "LLNL/umap-apps": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -20235,6 +20318,11 @@
             }
         },
         "flux-framework/flux-dyad": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "flux-framework/flux-framework.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
