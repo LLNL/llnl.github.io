@@ -16,7 +16,9 @@ function draw_pie_lines(areaID) {
             d.count = +d.count;
         });
 
-        var dataTotalCount = data[0].count + data[1].count;
+        var dataTotalCount = data[1].count;
+
+        data[1].count -= data[0].count;
 
         var margin = { top: 8, right: 8, bottom: 8, left: 8 },
             width = stdTotalWidth - margin.left - margin.right,
