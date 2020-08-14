@@ -67,20 +67,48 @@ function draw_pie_commits(areaID) {
 
         var path = chart
             .selectAll('path')
-            .data(pie(data))
-            .enter()
-            .append('path')
+            .data(pie(data.slice(0,2)))
+            .join('path')
             .attr('d', arc)
             .attr('fill', function(d, i) {
                 return color(d.data.label);
             })
             .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('mouseout', tip.hide)
+            .on('click', clicked);
+
+        function clicked(d) {
+            chart
+                .selectAll('path')
+                .data(pie(decompress(data)))
+                .join('path')
+                .attr('d', arc)
+                .attr('fill', function(d, i) {
+                    return color(d.data.label);
+                })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+                .on('click', unclicked);
+        }
+
+        function unclicked(d) {
+            chart
+                .selectAll('path')
+                .data(pie(data.slice(0,2)))
+                .join('path')
+                .attr('d', arc)
+                .attr('fill', function(d, i) {
+                    return color(d.data.label);
+                })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+                .on('click', clicked);
+        }
 
         // Add legend
         var legend = chart
             .selectAll('.legend')
-            .data(data)
+            .data(data.slice(0,2))
             .enter()
             .append('g')
             .attr('class', 'legend')
@@ -132,7 +160,8 @@ function draw_pie_commits(areaID) {
 
     // Turn json obj into desired working data
     function reformatData(obj) {
-        var data = [{ label: 'In Top Ten LLNL Repos', count: totalCommits(obj, mostPopularRepositories.map(d => `${d.owner}/${d.name}`)) }, { label: 'In Other LLNL Repos', count: totalCommits(obj) }];
+        var data = [{ label: 'In Top Ten LLNL Repos', count: totalCommits(obj, mostPopularRepositories.map(d => `${d.owner}/${d.name}`)) }, { label: 'In Other LLNL Repos', count: totalCommits(obj) }, { labels: mostPopularRepositories.map(d => `${d.owner}/${d.name}`), counts: mostPopularRepositories.map(d => totalCommits(obj, [`${d.owner}/${d.name}`])) }];
+        console.debug(data);
         return data;
     }
 
@@ -154,5 +183,17 @@ function draw_pie_commits(areaID) {
         }
 
         return total;
+    }
+
+    function decompress(input) {
+        const data = [];
+
+        for (var i = 0; i < input[2]['labels'].length; i++) {
+            data.push({ label: input[2]['labels'][i], count: input[2]['counts'][i] });
+        }
+
+        data.push(input[1]);
+
+        return data;
     }
 }
