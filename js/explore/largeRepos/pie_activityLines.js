@@ -30,11 +30,15 @@ function draw_pie_lines(areaID) {
 
         var color = d3.scaleOrdinal().range(['#756bb1', '#9e9ac8']);
 
+        var repoColor = d3.scaleOrdinal()
+            .domain(data[2].labels)
+            .range(d3.quantize(d3.interpolate('#756bb1', '#9e9ac8'), data[2].labels.length + 1));
+
         var tip = d3
             .tip()
             .attr('class', 'd3-tip')
             .offset(function() {
-                return [this.getBBox().height / 2, 0];
+                return [-10, 0];
             })
             .html(function(d) {
                 var units = ' Lines This Year';
@@ -74,13 +78,93 @@ function draw_pie_lines(areaID) {
             .attr('fill', function(d, i) {
                 return color(d.data.label);
             })
+            .style('cursor', 'pointer')
             .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            .on('mouseout', tip.hide)
+            .on('click', clicked);
+
+        function clicked(d) {
+            const pieData = pie(decompress(data));
+            const scaleCoeff = 2 * Math.PI / (2 * Math.PI - (pieData[pieData.length - 1].endAngle - pieData[pieData.length - 1].startAngle));
+            let shift = 0;
+            let delta = 0;
+            pieData.forEach(d => {
+                if (d.index < pieData.length - 1) {
+                    delta = d.endAngle - d.startAngle;
+                    d.target = { startAngle: shift, endAngle: shift + scaleCoeff * delta };
+                    d.current = { startAngle: d.startAngle, endAngle: d.endAngle };
+                    d.past = { startAngle: d.startAngle, endAngle: d.endAngle };
+                    shift += scaleCoeff * delta;
+                } else {
+                    d.target = { startAngle: 2 * Math.PI, endAngle: 2 * Math.PI };
+                    d.current = { startAngle: d.startAngle, endAngle: d.endAngle };
+                    d.past = { startAngle: d.startAngle, endAngle: d.endAngle };
+                }
+            });
+
+            path = chart
+                .selectAll('path')
+                .data(pieData)
+                .join('path')
+                .attr('d', arc)
+                .attr('fill', function(d, i) {
+                    return repoColor(d.data.label);
+                })
+                .style('cursor', 'pointer')
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+                .on('click', unclicked);
+
+            const dur = 1000;
+
+            const t = chart.transition().duration(dur);
+
+            path.transition(t)
+                .tween('data', d => {
+                    const i = d3.interpolate(d.current, d.target);
+                    return t => d.current = i(t);
+                })
+                .attrTween("d", d => () => arc(d.current));
+        }
+
+        function unclicked(d) {
+            const dur = 1000;
+
+            const t = chart.transition().duration(dur);
+
+            path.transition(t)
+                .tween('data', d => {
+                    const i = d3.interpolate(d.current, d.past);
+                    return t => d.current = i(t);
+                })
+                .attrTween('d', d => () => arc(d.current))
+                .attr('fill', d => {
+                    if (d.target.startAngle != d.target.endAngle) {
+                        return '#756bb1';
+                    } else {
+                        return '#9e9ac8';
+                    }
+                })
+                .on('end', () => {
+                    chart
+                        .selectAll('path')
+                        .data(pie(data.slice(0,2)))
+                        .join('path')
+                        .attr('d', arc)
+                        .attr('fill', function(d, i) {
+                            return color(d.data.label);
+                        })
+                        .style('cursor', 'pointer')
+                        .on('mouseover', tip.show)
+                        .on('mouseout', tip.hide)
+                        .on('click', clicked)
+                });
+        }
 
         // Add legend
         var legend = chart
             .selectAll('.legend')
-            .data(data)
+            .data(data.slice(0,2))
             .enter()
             .append('g')
             .attr('class', 'legend')
@@ -132,11 +216,11 @@ function draw_pie_lines(areaID) {
 
     // Turn json obj into desired working data
     function reformatData(obj) {
-        var data = [{ label: 'In Top Ten LLNL Repos', count: totalCommits(obj, mostPopularRepositories.map(d => `${d.owner}/${d.name}`)) }, { label: 'In Other LLNL Repos', count: totalCommits(obj) }];
+        var data = [{ label: 'In Top Ten LLNL Repos', count: totalLines(obj, mostPopularRepositories.map(d => `${d.owner}/${d.name}`)) }, { label: 'In Other LLNL Repos', count: totalLines(obj) }, { labels: mostPopularRepositories.map(d => `${d.owner}/${d.name}`), counts: mostPopularRepositories.map(d => totalLines(obj, [`${d.owner}/${d.name}`])) }];
         return data;
     }
 
-    function totalCommits(obj, repoList=null) {
+    function totalLines(obj, repoList=null) {
         let total = 0;
 
         if (repoList === null) {
@@ -154,5 +238,17 @@ function draw_pie_lines(areaID) {
         }
 
         return total;
+    }
+
+    function decompress(input) {
+        const data = [];
+
+        for (var i = 0; i < input[2]['labels'].length; i++) {
+            data.push({ label: input[2]['labels'][i], count: input[2]['counts'][i] });
+        }
+
+        data.push(input[1]);
+
+        return data;
     }
 }
