@@ -45,7 +45,7 @@ function draw_pie_lines(areaID) {
                 if (d.data.count == 1) {
                     units = ' Line This Year';
                 }
-                return d.data.count + units + ' (' + d3.format('.0%')(d.data.count / dataTotalCount) + ')' + '<br>' + d.data.label;
+                return d.data.count + units + '<br>' + d.data.label;
             });
 
         var chart = d3

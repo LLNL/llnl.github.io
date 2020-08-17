@@ -45,7 +45,7 @@ function draw_pie_commits(areaID) {
                 if (d.data.count == 1) {
                     units = ' Commit';
                 }
-                return d.data.count + units + ' (' + d3.format('.0%')(d.data.count / dataTotalCount) + ')' + '<br>' + d.data.label;
+                return d.data.count + units + '<br>' + d.data.label;
             });
 
         var chart = d3
