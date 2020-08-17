@@ -69,7 +69,9 @@ function draw_pie_commits(areaID) {
             })
             .sort(null);
 
-        var path = chart
+            const pathGroup = chart.append('g');
+    
+        var path = pathGroup
             .selectAll('path')
             .data(pie(data.slice(0,2)))
             .join('path')
@@ -101,18 +103,30 @@ function draw_pie_commits(areaID) {
                 }
             });
 
-            path = chart
+            path = pathGroup
                 .selectAll('path')
                 .data(pieData)
                 .join('path')
                 .attr('d', arc)
-                .attr('fill', function(d, i) {
-                    return repoColor(d.data.label);
+                .attr('fill', (d, i) => {
+                    if (i < mostPopularRepositories.length) {
+                        return '#3182bd'; 
+                    } else {
+                        return '#6baed6';
+                    }
                 })
                 .style('cursor', 'pointer')
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide)
                 .on('click', unclicked);
+            
+            label
+                .selectAll('text')
+                    .data(pieData)
+                    .join('text')
+                        .attr('dy', '0.35em')
+                        .attr('fill-opacity', 0)
+                        .text(o => o.data.label.split('/')[1]);
 
             const dur = 1000;
 
@@ -123,7 +137,21 @@ function draw_pie_commits(areaID) {
                     const i = d3.interpolate(d.current, d.target);
                     return t => d.current = i(t);
                 })
+                .attr('fill', function(d, i) {
+                    return repoColor(d.data.label);
+                })
                 .attrTween("d", d => () => arc(d.current));
+
+            legend.transition(t)
+                .attr('fill-opacity', 0)
+                .attr('stroke-opacity', 0);
+
+            titles.transition(t)
+                .attr('y', d => d.y + 30);
+
+            label.selectAll('text').transition(t)
+                .attr('fill-opacity', d => +labelVisible(d.target))
+                .attrTween('transform', d => () => labelTransform(d.current));
         }
 
         function unclicked(d) {
@@ -145,7 +173,7 @@ function draw_pie_commits(areaID) {
                     }
                 })
                 .on('end', () => {
-                    chart
+                    pathGroup
                         .selectAll('path')
                         .data(pie(data.slice(0,2)))
                         .join('path')
@@ -158,6 +186,17 @@ function draw_pie_commits(areaID) {
                         .on('mouseout', tip.hide)
                         .on('click', clicked)
                 });
+
+            legend.transition(t)
+                .attr('fill-opacity', 1)
+                .attr('stroke-opacity', 1);
+
+            titles.transition(t)
+                .attr('y', d => d.y);
+
+            label.selectAll('text').transition(t)
+                .attr('fill-opacity', 0)
+                .attrTween('transform', d => () => labelTransform(d.current));
         }
 
         // Add legend
@@ -173,7 +212,9 @@ function draw_pie_commits(areaID) {
                 var horz = -6 * legendRectSize;
                 var vert = i * height - offset;
                 return 'translate(' + horz + ',' + vert + ')';
-            });
+            })
+            .attr('fill-opacity', 1)
+            .attr('stroke-opacity', 1);
         // Squares
         legend
             .append('rect')
@@ -195,22 +236,37 @@ function draw_pie_commits(areaID) {
             })
             .attr('text-anchor', 'start');
 
+        const textArray = [{ text: graphHeader, class: 'graphtitle', x: 0, y: 0 }, { text: dataTotalCount, class: 'graphtitle bignum', x: 0, y: -25 }];
+        
         // Add title
-        chart
-            .append('text')
-            .attr('class', 'graphtitle')
-            .attr('x', 0)
-            .attr('y', 0)
-            .attr('text-anchor', 'middle')
-            .text(graphHeader);
-        // Add title
-        chart
-            .append('text')
-            .attr('class', 'graphtitle bignum')
-            .attr('x', 0)
-            .attr('y', -25)
-            .attr('text-anchor', 'middle')
-            .text(dataTotalCount);
+        const titles = chart
+            .append('g')
+            .selectAll('text')
+                .data(textArray)
+                .join('text')
+                    .attr('class', d => d.class)
+                    .attr('x', d => d.x)
+                    .attr('y', d => d.y)
+                    .attr('text-anchor', 'middle')
+                    .text(d => d.text);
+
+        // Adds labels to wedges
+        const label = chart
+            .append('g')
+                .style('font-size', '11px')
+                .attr('pointer-events', 'none')
+                .attr('text-anchor', 'middle')
+                .style('user-select', 'none');
+
+        function labelVisible(d) {
+            return (d.endAngle - d.startAngle) > 0.07;
+        }
+    
+        function labelTransform(d) {
+            const x = (d.endAngle + d.startAngle) / 2 * 180 / Math.PI;
+            const y = radius - donutWidth / 2;
+            return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
+        }
     }
 
     // Turn json obj into desired working data
