@@ -194,8 +194,8 @@ simply rely on the default inbound = outbound assumption.
 #### Digital Object Identifier (DOI)
 
 A digital object identifier (DOI) is a unique persistent identifier that 
-references a digital object and provides long-term access. You may have 
-noticed that journal articles carry DOIs. So, too, can open source software repositories.
+references a digital object and provides long-term access. Just as journal 
+articles carry DOIs, so too can open source software repositories.
 
 The U.S. Office of Scientific and Technical Information (OSTI) assigns DOIs 
 to software *after* your code has been submitted to [DOE CODE](https://www.osti.gov/doecode/faq#what-is). 
