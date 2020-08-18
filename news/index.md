@@ -9,8 +9,10 @@ permalink: /news/
   <article class="news">
     <h3>
       {{ page.title }}
-      <small class="pull-right">{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
     </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
 
     {{ page.content }}
 
