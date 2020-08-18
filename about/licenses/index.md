@@ -85,7 +85,7 @@ top-level `COPYRIGHT` file with a summary of license details. GitHub's
 and `LICENSE-*` files for an example of how to organize a project with
 two licenses.
 
-### Other considerations
+### Other Considerations
 
 In addition to the required files above, you should read the following
 sections and determine whether they apply to your code.
@@ -191,6 +191,27 @@ process that deters potential contributors.  Unless you feel that you
 need this level of assurance for your project, we recommend that you
 simply rely on the default inbound = outbound assumption.
 
+#### Digital Object Identifier (DOI)
+
+A digital object identifier (DOI) is a unique persistent identifier that 
+references a digital object and provides long-term access. Just as journal 
+articles carry DOIs, so too can open source software repositories.
+
+The U.S. Office of Scientific and Technical Information (OSTI) assigns DOIs 
+to software *after* your code has been submitted to [DOE CODE](https://www.osti.gov/doecode/faq#what-is). 
+See OSTI's [FAQ on DOIs](https://www.osti.gov/doecode/faq#what-is-a-doi) for 
+details about how DOIs work and why they are beneficial.
+
+OSTI is evaluating a notification workflow that would let a developer know 
+when a DOI has been assigned. Until then, you can find your repos's DOI *and* 
+add it to the repo by following these steps:
+
+1. Type in the name of your repo at [DOE CODE](https://www.osti.gov/doecode/), then select it.
+2. Look in the RESOURCE section for the DOI number.
+3. In the SAVE/SHARE section, click Export Metadata and download the YAML file.
+4. Include that file in your repo in one of two ways:
+- Create a [CITATION file](https://citation-file-format.github.io/)
+- Add it to the [README file](https://guides.github.com/activities/citable-code/)
 
 ### Have Questions?
 

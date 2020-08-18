@@ -104,6 +104,8 @@ After your project has been initially released on GitHub and you are ready to pr
 
 Another good practice is to provide user documentation. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
 
+Submit your repo to [DOE CODE](https://www.osti.gov/doecode/faq#what-is) so others can find it when searching through DOE-funded projects. After your repo is included in DOE CODE, you may also want to add the digital object identifier (DOI) to the repo. See the [relevant section](https://software.llnl.gov/about/licenses/#digital-object-identifier-doi) of our LLNL Software Licensing page for more information.
+
 ### How do I include my repo in the LLNL organization and/or this website’s catalog?
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
