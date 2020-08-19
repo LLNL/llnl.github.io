@@ -258,9 +258,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                     .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius));
 
             // Colors used for coloring the pie chart
-            const colors = d3.scaleOrdinal()
-                .domain([0, weekData.length - 1])
-                .range(["#8dd3c7","#ffffb3","#bebada","#fb8072","#80b1d3","#fdb462","#b3de69","#fccde5","#d9d9d9","#ccebc5","#ffed6f"]);
+            const colors = d3.scaleSequential(d3.interpolate('lightblue', 'white')).domain([0, root.descendants().length]);
             
             // Equivalent of chart but for the pie chart
             const pieGroup = chart
