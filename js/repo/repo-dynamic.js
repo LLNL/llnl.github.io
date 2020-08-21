@@ -15,6 +15,9 @@ angular.module('app', []).controller('repoDataController', [
                 var data = reposObj[hash];
                 $scope.repo = data;
                 draw_graphs(hash);
+                if ($scope.repo.stargazers.totalCount) {
+                    draw_line_repoStarHistory('repoStarHistory', hash);
+                }
                 var sumP = 0;
                 var sumI = 0;
                 var pullCounters = ['pullRequests_Merged', 'pullRequests_Open'];
@@ -53,7 +56,6 @@ angular.module('app', []).controller('repoDataController', [
             draw_line_repoCreationHistory('repoCreationHistory', nametag);
             draw_cloud_languages('languageCloud', nametag);
             draw_cloud_topics('topicCloud', nametag);
-            draw_line_repoStarHistory('repoStarHistory', nametag)
         };
     }
 ]);

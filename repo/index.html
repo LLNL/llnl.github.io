@@ -43,7 +43,7 @@ layout: repo
         <br /><svg class="pieUsers"></svg>
         <br /><svg ng-if="count.pulls" class="piePulls"></svg><svg ng-if="count.issues" class="pieIssues"></svg>
         <br /><svg class="repoCreationHistory"></svg>
-        <br /><svg class="repoStarHistory"></svg>
+        <br /><svg ng-if="repo.stargazers.totalCount" class="repoStarHistory"></svg>
         <span ng-if="repo.languages.totalCount || repo.repositoryTopics.totalCount">
             <br /><svg ng-if="repo.languages.totalCount" class="languageCloud"></svg><svg ng-if="repo.repositoryTopics.totalCount" class="topicCloud"></svg>
         </span>

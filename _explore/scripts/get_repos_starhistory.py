@@ -4,7 +4,7 @@ from datetime import date, timedelta
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labRepos_StarHistory.json" % ghDataDir
-queryPath = "../queries/repo-StarHistory.gql"
+queryPath = "../queries/repo-Stargazers.gql"
 
 # Read repo info data file (to use as repo list)
 inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
