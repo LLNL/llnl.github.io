@@ -186,9 +186,11 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner, compress) {
 
     // Turn json obj into desired working data
     function reformatData(obj) {
+        var repoData = obj['data'][repoNameWOwner];
+
         // Build lists of timestamps
-        var starDates = obj['data'][repoNameWOwner]['stargazers']['edges'].map(d => {
-            return d['starredAt'].split('T')[0];
+        var starDates = repoData.map(d => {
+            return d['date'];
         });
 
         console.debug(starDates);
@@ -196,7 +198,7 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner, compress) {
         // Count accumulated timestamps over time
         var starCounts = {};
         for (var i = 0; i < starDates.length; i++) {
-            starCounts[starDates[i]] = i + 1;
+            starCounts[starDates[i]] = i == 0 ? repoData[i]['value'] : starCounts[starDates[i - 1]] + repoData[i]['value'];
         }
 
         console.debug(starCounts);
