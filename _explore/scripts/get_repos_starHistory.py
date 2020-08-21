@@ -47,19 +47,24 @@ for repo in repolist:
 
 print("\nCollective data gathering complete!")
 
+
 def next_weekday(d, weekday):
     days_ahead = weekday - d.weekday()
     if days_ahead <= 0:
         days_ahead += 7
     return d + timedelta(days_ahead)
 
+
 def toDate(isoStr):
     return next_weekday(date.fromisoformat(isoStr["starredAt"].split("T")[0]), 0)
 
+
 for repo in dataCollector.data["data"]:
-    dateRange = list(map(toDate, dataCollector.data["data"][repo]["stargazers"]["edges"]))
+    dateRange = list(
+        map(toDate, dataCollector.data["data"][repo]["stargazers"]["edges"])
+    )
     dateList = []
-    dateElement = { "date": None , "value": None }
+    dateElement = {"date": None, "value": None}
     for dateEntry in dateRange:
         if dateElement["date"] is None:
             dateElement["date"] = dateEntry.isoformat()
