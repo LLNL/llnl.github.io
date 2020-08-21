@@ -1,5 +1,5 @@
 /* Creates line graph visualization for webpage */
-function draw_line_repoStarHistory(areaID, repoNameWOwner, compress) {
+function draw_line_repoStarHistory(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
     var url = ghDataDir + '/labRepos_StarHistory.json';
     var files = [url];
@@ -45,27 +45,6 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner, compress) {
             .domain([0, d3.max(datrange)])
             .range([height, 0])
             .nice();
-
-        if (compress) {
-            const compressedData = compressRecursive(data, 1, 2);
-
-            console.debug(compressedData);
-
-            let newData = [compressedData[0]];
-            let savedEntry = {};
-            for (var entry of compressedData) {
-                if (entry == null) {
-                    newData.push(savedEntry);
-                } else {
-                    savedEntry = entry;
-                }
-            }
-            newData.push(compressedData[compressedData.length - 1]);
-
-            console.debug(newData);
-
-            data = newData;
-        }
 
         var xAxis = d3.axisBottom().scale(x);
 
@@ -193,15 +172,11 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner, compress) {
             return d['date'];
         });
 
-        console.debug(starDates);
-
         // Count accumulated timestamps over time
         var starCounts = {};
         for (var i = 0; i < starDates.length; i++) {
             starCounts[starDates[i]] = i == 0 ? repoData[i]['value'] : starCounts[starDates[i - 1]] + repoData[i]['value'];
         }
-
-        console.debug(starCounts);
 
         // Format data for graphing
         var data = [];
@@ -209,32 +184,6 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner, compress) {
             data.push({ date: timestamp, value: starCounts[timestamp] });
         }
 
-        console.debug(data);
-
         return data;
-    }
-
-    function compressRecursive(obj, tolerance = 2, power = 2) {
-        const deviation = deviationMetric(obj.map(d => d.date), obj.map(d => d.value), power);
-        
-        if(deviation < tolerance) {
-            return obj;
-        } else {
-            return compressRecursive(obj.slice(0, Math.floor(obj.length / 2) + 1)).concat([null].concat(compressRecursive(obj.slice(Math.floor(obj.length / 2)))));
-        }
-    }
-
-    function deviationMetric(dateArray, valueArray, power) {
-        const linearApproximation = d3.scaleLinear()
-            .domain([dateArray[0], dateArray[dateArray.length - 1]])
-            .range([valueArray[0], valueArray[valueArray.length - 1]]);
-
-        let deviation = 0;
-        
-        for (var i = 0; i < dateArray.length; i++) {
-            deviation += Math.pow(Math.abs(valueArray[i] - linearApproximation(dateArray[i])), power);
-        }
-
-        return deviation;
     }
 }
