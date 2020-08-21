@@ -6909,7 +6909,37 @@
         },
         "ESGF/esgf-keycloak-user-migration": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pg8000",
+                                    "repository": {
+                                        "name": "pg8000",
+                                        "nameWithOwner": "tlocke/pg8000",
+                                        "owner": {
+                                            "login": "tlocke"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy",
+                                    "repository": {
+                                        "name": "sqlalchemy",
+                                        "nameWithOwner": "sqlalchemy/sqlalchemy",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "sqlalchemy"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "ESGF/esgf-map": {
@@ -8358,11 +8388,6 @@
                 "nodes": []
             }
         },
-        "GMLC-TDC/create-pr-action": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "GMLC-TDC/gridlab-d": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -8438,11 +8463,6 @@
             }
         },
         "GMLC-TDC/helics-ns3": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "GMLC-TDC/helics-omnetpp": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -9405,11 +9425,6 @@
             }
         },
         "LLNL/Babel": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "LLNL/CARE": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -10571,11 +10586,10 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "name": "deb-ruby-bundler",
-                                        "nameWithOwner": "neutrico/deb-ruby-bundler",
+                                        "name": "bundler",
+                                        "nameWithOwner": "sunaku/bundler",
                                         "owner": {
-                                            "isVerified": false,
-                                            "login": "neutrico"
+                                            "login": "sunaku"
                                         }
                                     }
                                 },
@@ -12481,6 +12495,11 @@
             }
         },
         "LLNL/Varity": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/WRF-IBM": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -19010,11 +19029,10 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "name": "deb-ruby-bundler",
-                                        "nameWithOwner": "neutrico/deb-ruby-bundler",
+                                        "name": "bundler",
+                                        "nameWithOwner": "sunaku/bundler",
                                         "owner": {
-                                            "isVerified": false,
-                                            "login": "neutrico"
+                                            "login": "sunaku"
                                         }
                                     }
                                 },
@@ -20666,6 +20684,29 @@
         "hpcgroup/graphator": {
             "dependencyGraphManifests": {
                 "nodes": []
+            }
+        },
+        "hypre-space/hypre": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "breathe",
+                                    "repository": {
+                                        "name": "breathe",
+                                        "nameWithOwner": "michaeljones/breathe",
+                                        "owner": {
+                                            "login": "michaeljones"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "mfem/PyMFEM": {
