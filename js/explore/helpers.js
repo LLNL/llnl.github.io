@@ -29,7 +29,11 @@ function drawDateLine(dateObj, label, includeDate, chart, x, y, height, valuelin
         .attr('x', 0 - height / 50)
         .attr('text-anchor', 'end')
         .attr('id', label)
-        .text(label);
+        .text(label)
+        .clone(true).lower()
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-width", 3)
+        .attr("stroke", "white");
     if (includeDate) {
         var formatTime = d3.timeFormat('[ %Y - %m - %d ]');
         var dateString = formatTime(dateObj);
