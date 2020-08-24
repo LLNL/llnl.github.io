@@ -3,7 +3,7 @@ title: "ZFS on Linux 0.8.0 Released"
 categories: release
 ---
 
-The Livermore Big Artificial Neural Network toolkit (LBANN) is an open-source, HPC-centric, deep learning training framework that is optimized to compose multiple levels of parallelism. 
+ZFS on Linux (now OpenZFS) is an advanced file system and volume manager which was originally developed for Solaris and is now maintained by the OpenZFS community. This repository contains the code for running OpenZFS on Linux and FreeBSD.
 
 v0.8.0 includes many performance updates, new features, and improvements, such as:
 - Native encryption
