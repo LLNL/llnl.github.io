@@ -16,6 +16,7 @@ layout: default
     <svg class="listPopularRepos"></svg>
     <br /> <svg class="cluster"></svg>
     <br /> <svg class="repoCreationHistory"></svg>
+    <br /> <svg class="repoStarHistory"></svg>
     <br /> <svg class="repoActivityChart"></svg>
     <br /> <svg class="commitPie"></svg> <svg class="linePie"></svg>
     <br /> <svg class="popularLicenses"></svg>
@@ -37,6 +38,7 @@ layout: default
 <script type="text/javascript" src="../../js/explore/largeRepos/list_popularRepos.js"></script>
 <script type="text/javascript" src="../../js/explore/largeRepos/pie_activityCommits.js"></script>
 <script type="text/javascript" src="../../js/explore/largeRepos/pie_activityLines.js"></script>
+<script type="text/javascript" src="../../js/explore/largeRepos/line_repoStarHistory.js"></script>
 
 <script>
     // GiHub Data Directory
@@ -66,6 +68,7 @@ layout: default
         draw_pie_commits('commitPie');
         draw_pie_lines('linePie');
         draw_popularRepos('listPopularRepos', 5, true);
+        draw_line_repoStarHistory('repoStarHistory');
     });
     
 </script>

@@ -17,6 +17,7 @@ layout: default
     <br /><svg class="hierarchyPack"></svg>
     <br /><svg class="pieMembers"></svg><svg class="pieRepos"></svg>
     <br /><svg class="repoActivityChart"></svg>
+    <br /><svg class="repoStarHistoryChart"></svg>
     <br /><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
     <br /><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
     <br /><svg class="licenseSunburst"></svg>
@@ -40,6 +41,7 @@ layout: default
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
 <script type="text/javascript" src="../js/explore/sunburst_licenses.js"></script>
 <script type="text/javascript" src="../js/explore/pack_hierarchy.js"></script>
+<script type="text/javascript" src="../js/explore/line_repoStarHistoryExplore.js"></script>
 
 <script>
     // GiHub Data Directory
@@ -65,6 +67,7 @@ layout: default
     draw_cloud_topics('topicCloud');
     draw_sunburst_licenses('licenseSunburst');
     draw_pack_hierarchy('hierarchyPack');
+    draw_line_repoStarHistory('repoStarHistoryChart');
 </script>
 
 {% endraw %}
