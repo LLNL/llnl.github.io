@@ -30,8 +30,6 @@ function draw_line_repoStarHistory(areaID) {
 
         var flattenedData = flattenData(data);
 
-        console.debug(flattenedData);
-
         // Get min-max timestamps across both datasets
         var timerange = d3.extent(flattenedData, function(d) {
             return d.date;
@@ -163,13 +161,8 @@ function draw_line_repoStarHistory(areaID) {
     function reformatData(obj) {
         var data = {};
 
-        console.debug(mostPopularRepositories);
-
         for (var repoObj of mostPopularRepositories) {
             var repoData = obj['data'][`${repoObj.owner}/${repoObj.name}`];
-
-            console.debug(`${repoObj.owner}/${repoObj.name}`);
-            console.debug(repoData);
 
             // Build lists of timestamps
             var starDates = repoData.map(d => {
@@ -189,14 +182,10 @@ function draw_line_repoStarHistory(areaID) {
             }
         }
 
-        console.debug(data);
-
         return data;
     }
 
     function flattenData(obj) {
-        console.debug(obj);
-
         var outputArray = [];
 
         for (var repo in obj) {
