@@ -11,8 +11,6 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
 
     // Draw graph from data
     function drawGraph(data, releaseData, areaID) {
-        console.debug(releaseData);
-
         var graphHeader = 'Number of Stars Over Time';
 
         var parseTime = d3.timeParse('%Y-%m-%d');
@@ -185,7 +183,6 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
         for (var i = 0; i < releaseData[repoNameWOwner]['dates'].length; i++) {
             var date = parseTime(releaseData[repoNameWOwner]['dates'][i].slice(0, releaseData[repoNameWOwner]['dates'][i].indexOf('T')));
             current = x(date);
-            console.debug([start, current, releaseData[repoNameWOwner]['dates'][i].slice(0, releaseData[repoNameWOwner]['dates'][i].indexOf('T')), i]);
             if (start < 0) {
                 start = current;
                 past = i;
@@ -204,9 +201,6 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
         if (past > 0) {
             indexArray.push(past);
         }
-
-        console.debug(indexArray);
-
 
         var j = 0;
         var startString = '';
