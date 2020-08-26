@@ -1,0 +1,16 @@
+query ($ownName: String!, $repoName: String!, $numReleases: Int!, $pgCursor: String) {
+  repository(owner: $ownName, name: $repoName) {
+    releases(first: $numReleases, after: $pgCursor) {
+      nodes {
+        name
+        publishedAt
+        tagName
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+# {"ownName": "LLNL", "repoName": "llnl.github.io", "numReleases": 100, "pgCursor": null}

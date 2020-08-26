@@ -1,15 +1,18 @@
 /* Creates line graph visualization for webpage */
 function draw_line_repoStarHistory(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_StarHistory.json';
-    var files = [url];
+    var url0 = ghDataDir + '/labRepos_StarHistory.json';
+    var url1 = ghDataDir + '/labRepos_ReleaseHistory.json';
+    var files = [url0, url1];
     Promise.all(files.map(url => d3.json(url))).then(values => {
-        var data = reformatData(values[0]);
-        drawGraph(data, areaID);
+        var data = reformatData(values[0], values[1]);
+        drawGraph(data[0], data[1], areaID);
     });
 
     // Draw graph from data
-    function drawGraph(data, areaID) {
+    function drawGraph(data, releaseData, areaID) {
+        console.debug(releaseData);
+
         var graphHeader = 'Number of Stars Over Time';
 
         var parseTime = d3.timeParse('%Y-%m-%d');
@@ -92,6 +95,13 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
 
         chart.call(tip);
 
+        function addDateLine(dateString, label) {
+            var dateObj = parseTime(dateString.slice(0, dateString.indexOf('T')));
+            if (x(dateObj) < width && x(dateObj) > 0) {
+                drawDateLine(dateObj, label, false, chart.append('g'), x, y, height, valueline);
+            }
+        }
+
         // Add the x axis
         chart
             .append('g')
@@ -107,6 +117,7 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
 
         // Draw fill
         chart
+            .append('g')
             .append('path')
             .datum(data)
             .attr('class', 'area')
@@ -133,6 +144,7 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
 
         // Draw line
         chart
+            .append('g')
             .append('path')
             .datum(data)
             .attr('class', 'line')
@@ -140,6 +152,7 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
 
         // Draw dots
         var points = chart
+            .append('g')
             .selectAll('circle')
             .data(data)
             .enter()
@@ -161,10 +174,62 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
             .selectAll('text')
             .attr('transform', 'rotate(12)')
             .attr('text-anchor', 'start');
+        
+        var start = -1;
+        var current = -1;
+        var past = -1;
+        var tolerance = 20;
+        var indexArray = [];
+
+        // Process release data to prevent clumps
+        for (var i = 0; i < releaseData[repoNameWOwner]['dates'].length; i++) {
+            var date = parseTime(releaseData[repoNameWOwner]['dates'][i].slice(0, releaseData[repoNameWOwner]['dates'][i].indexOf('T')));
+            current = x(date);
+            console.debug([start, current, releaseData[repoNameWOwner]['dates'][i].slice(0, releaseData[repoNameWOwner]['dates'][i].indexOf('T')), i]);
+            if (start < 0) {
+                start = current;
+                past = i;
+                i--;
+            } else if (current - start < tolerance) {
+                past = i;
+            } else {
+                indexArray.push(past);
+                start = -1;
+                current = -1;
+                past = -1;
+                i--;
+            }
+        }
+
+        if (past > 0) {
+            indexArray.push(past);
+        }
+
+        console.debug(indexArray);
+
+
+        var j = 0;
+        var startString = '';
+        var endString = '';
+        var lookingForStartString = true;
+
+        for (var i = 0; i < releaseData[repoNameWOwner]['dates'].length; i++) {
+            if (lookingForStartString) {
+                startString = releaseData[repoNameWOwner]['names'][i];
+                lookingForStartString = false;
+            }
+            if (i >= indexArray[j]) {
+                endString = releaseData[repoNameWOwner]['names'][i];
+                var label = startString == endString ? startString : `${startString} - ${endString}`;
+                addDateLine(releaseData[repoNameWOwner]['dates'][i], label);
+                lookingForStartString = true;
+                j++;
+            }
+        }
     }
 
     // Turn json obj into desired working data
-    function reformatData(obj) {
+    function reformatData(obj, releaseObj) {
         var repoData = obj['data'][repoNameWOwner];
 
         // Build lists of timestamps
@@ -184,6 +249,14 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
             data.push({ date: timestamp, value: starCounts[timestamp] });
         }
 
-        return data;
+        // Format release data for date flags
+        var releaseData = {};
+        for (var repo in releaseObj['data']) {
+            var dateArray = releaseObj['data'][repo]['releases']['nodes'].map(d => d.publishedAt);
+            var tagArray = releaseObj['data'][repo]['releases']['nodes'].map(d => d.tagName);
+            releaseData[repo] = { dates: dateArray, names: tagArray };
+        }
+
+        return [data, releaseData];
     }
 }
