@@ -1,6 +1,5 @@
 from scraper.github import queryManager as qm
 from os import environ as env
-from datetime import date, timedelta
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/labRepos_ReleaseHistory.json" % ghDataDir
