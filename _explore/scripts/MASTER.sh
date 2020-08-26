@@ -64,6 +64,7 @@ runScript get_repos_dependencies.py
 
 # --- HISTORY FOR ALL TIME ---
 runScript get_repos_starhistory.py
+runScript get_repos_releases.py
 runScript get_repos_creationhistory.py
 
 
