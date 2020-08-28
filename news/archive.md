@@ -5,6 +5,17 @@ permalink: /news/archive/
 ---
 {% assign postsByYear = site.posts | group_by_exp:"page", "page.date | date: '%Y'" %}
 
+<div class="buttonGroup" style="margin-bottom: 30px;">
+    <button id="news">All</button>
+    <button id="event">Events</button>
+    <button id="event-report">Event Reports</button>
+    <button id="new-repo">New Repos</button>
+    <button id="profile">Profiles</button>
+    <button id="release">Releases</button>
+    <button id="story">Stories</button>
+    <button id="this-website">Meta</button>
+</div>
+
 <div>
    {% for year in postsByYear %}
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#{{year.name}}" aria-expanded="true" aria-controls="{{year.name}}"> {{year.name}} <i class= "fa fa-caret-down"></i></button>
@@ -12,7 +23,7 @@ permalink: /news/archive/
         <div>
             <div class="collapse in" id="{{year.name}}" >
                 {% for post in year.items %}
-                    <article class="news">
+                    <article class="news  {{post.categories | join: " " }}">
                         <h3>
                             {{post.title}}
                         </h3>
