@@ -5480,6 +5480,11 @@
                 "nodes": []
             }
         },
+        "ECP-VeloC/VELOC": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "ECP-VeloC/artifacts": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21624,6 +21629,17 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "name": "coveragepy",
+                                        "nameWithOwner": "nedbat/coveragepy",
+                                        "owner": {
+                                            "login": "nedbat"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "flake8",
                                     "repository": {
                                         "name": "flake8",
@@ -21764,6 +21780,18 @@
                                     "repository": {
                                         "name": "pytest",
                                         "nameWithOwner": "pytest-dev/pytest",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "pytest-dev"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "name": "pytest-cov",
+                                        "nameWithOwner": "pytest-dev/pytest-cov",
                                         "owner": {
                                             "isVerified": false,
                                             "login": "pytest-dev"
