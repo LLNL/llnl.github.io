@@ -31,6 +31,7 @@ function drawDateLine(dateObj, label, includeDate, chart, x, y, height, valuelin
         .attr('id', label)
         .text(label)
         .clone(true).lower()
+        .attr('id', `${label}-clone`)
         .attr("stroke-linejoin", "round")
         .attr("stroke-width", 3)
         .attr("stroke", "white");

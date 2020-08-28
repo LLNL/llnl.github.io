@@ -214,6 +214,10 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                         const y = d3.select('#Thanksgiving').attr('y');
                         return +y + 20;
                     });
+                    d3.select('#Thanksgiving-clone').attr('y', d => {
+                        const y = d3.select('#Thanksgiving-clone').attr('y');
+                        return +y + 20;
+                    });
                     drawPie({ name: String(d.date), children: d.breakdown });
                     chart.call(pieTip);
                 });
