@@ -19849,11 +19849,6 @@
                 "nodes": []
             }
         },
-        "LLNL/zero-rk": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "LLNL/zfp": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -20779,6 +20774,53 @@
         "openzfs/openzfs-ci": {
             "dependencyGraphManifests": {
                 "nodes": []
+            }
+        },
+        "openzfs/openzfs-docs": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "name": "sphinx",
+                                        "nameWithOwner": "sphinx-doc/sphinx",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-doc"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-issues",
+                                    "repository": {
+                                        "name": "sphinx-issues",
+                                        "nameWithOwner": "sloria/sphinx-issues",
+                                        "owner": {
+                                            "login": "sloria"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "name": "sphinx_rtd_theme",
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "readthedocs"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             }
         },
         "openzfs/spl": {
