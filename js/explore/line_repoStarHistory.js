@@ -220,6 +220,9 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
                 j++;
             }
         }
+
+        addDateLine('2013-07-02', 'GitHub adds releases');
+        addDateLine('2012-08-06', 'GitHub changes watching/stars');
     }
 
     // Turn json obj into desired working data
