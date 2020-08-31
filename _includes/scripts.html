@@ -10,4 +10,15 @@
     anchors.add()
 </script>
 
+<script type="text/javascript">
+$('.filterBtnGroup button').on('click', function(filterContent) {
+    $('.filterBtnGroup button').attr('disabled', false);
+    $(this).attr('disabled', true);
+    var tag = $(this).text();
+    $('.news').hide();
+    $('.' + $(this).attr('id')).fadeIn();
+    filterContent.preventDefault();
+})
+</script>
+
 {% include google_analytics.html %}
