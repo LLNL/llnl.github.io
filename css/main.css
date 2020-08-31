@@ -8,6 +8,11 @@
       text-decoration: underline;
 }
 
+.static-text a:hover{
+      color: #009bab;
+      text-decoration: underline;
+}
+
 /* FlexBox configuration */
 
 .flex-container {
@@ -145,6 +150,11 @@
     text-decoration: none;
 }
 
+.navbar a.navbar-normal:hover {
+    color: #009bab;
+    text-decoration: none;
+}
+
 .navbar {
     margin-bottom: 0;
     text-decoration: none;
@@ -226,6 +236,12 @@
 .flex-category a {
     /* Don't decorate links in repo items */
     color: inherit;
+    text-decoration: none;
+}
+
+.flex-category a:hover {
+    /* Don't decorate links in repo items */
+    color: #777;
     text-decoration: none;
 }
 
