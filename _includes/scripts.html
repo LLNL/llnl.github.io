@@ -11,8 +11,8 @@
 </script>
 
 <script type="text/javascript">
-$('.buttonGroup button').on('click', function(filterContent) {
-    $('.buttonGroup button').attr('disabled', false);
+$('.filterBtnGroup button').on('click', function(filterContent) {
+    $('.filterBtnGroup button').attr('disabled', false);
     $(this).attr('disabled', true);
     var tag = $(this).text();
     $('.news').hide();

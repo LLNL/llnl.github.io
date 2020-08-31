@@ -5,15 +5,15 @@ permalink: /news/archive/
 ---
 {% assign postsByYear = site.posts | group_by_exp:"page", "page.date | date: '%Y'" %}
 
-<div class="buttonGroup" style="margin-bottom: 30px;">
-    <button id="news">All</button>
-    <button id="event">Events</button>
-    <button id="event-report">Event Reports</button>
-    <button id="new-repo">New Repos</button>
-    <button id="profile">Profiles</button>
-    <button id="release">Releases</button>
-    <button id="story">Stories</button>
-    <button id="this-website">Meta</button>
+<div class="filterBtnGroup btn-group" role="group" style="margin-bottom: 30px;">
+    <button class="btn btn-default" id="news">All</button>
+    <button class="btn btn-default" id="event">Events</button>
+    <button class="btn btn-default" id="event-report">Event Reports</button>
+    <button class="btn btn-default" id="new-repo">New Repos</button>
+    <button class="btn btn-default" id="profile">Profiles</button>
+    <button class="btn btn-default" id="release">Releases</button>
+    <button class="btn btn-default" id="story">Stories</button>
+    <button class="btn btn-default" id="this-website">Meta</button>
 </div>
 
 <div>
