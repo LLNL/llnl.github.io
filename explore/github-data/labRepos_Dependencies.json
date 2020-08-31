@@ -2289,11 +2289,6 @@
                 "nodes": []
             }
         },
-        "CDAT/dv3d": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "CDAT/e3sm_nex": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -4890,11 +4885,6 @@
                 ]
             }
         },
-        "CDAT/vcs": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "CDAT/vcs-js": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -5526,11 +5516,6 @@
             }
         },
         "ECP-VeloC/shuffile": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
-        "ECP-VeloC/spath": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -9490,6 +9475,18 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "eventlet",
+                                    "repository": {
+                                        "name": "eventlet",
+                                        "nameWithOwner": "eventlet/eventlet",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "eventlet"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "flask",
                                     "repository": {
                                         "name": "flask",
@@ -9520,6 +9517,17 @@
                                         "owner": {
                                             "isVerified": true,
                                             "login": "LLNL"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "name": "jsonschema",
+                                        "nameWithOwner": "Julian/jsonschema",
+                                        "owner": {
+                                            "login": "Julian"
                                         }
                                     }
                                 },
@@ -19845,6 +19853,11 @@
             }
         },
         "LLNL/yorick-z": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/zero-rk": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
