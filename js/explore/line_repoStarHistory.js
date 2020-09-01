@@ -176,7 +176,7 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
         var start = -1;
         var current = -1;
         var past = -1;
-        var tolerance = 20;
+        var tolerance = 40;
         var indexArray = [];
 
         // Process release data to prevent clumps
@@ -220,6 +220,10 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
                 j++;
             }
         }
+
+        addDateLine('2013-07-02', 'GitHub adds releases');
+        addDateLine('2012-08-06', 'GitHub changes watching/stars');
+        addDateLine('2013-04-11', 'GitHub\'s 5th anniversary');
     }
 
     // Turn json obj into desired working data
