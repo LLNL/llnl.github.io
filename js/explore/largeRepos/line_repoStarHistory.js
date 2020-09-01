@@ -88,6 +88,13 @@ function draw_line_repoStarHistory(areaID) {
 
         chart.call(tip);
 
+        function addDateLine(dateString, label) {
+            var dateObj = parseTime(dateString.slice(0, dateString.indexOf('T')));
+            if (x(dateObj) < width && x(dateObj) > 0) {
+                drawDateLine(dateObj, label, false, chart.append('g'), x, y, height, valueline);
+            }
+        }
+
         // Add the x axis
         chart
             .append('g')
@@ -155,6 +162,9 @@ function draw_line_repoStarHistory(areaID) {
             .selectAll('text')
             .attr('transform', 'rotate(12)')
             .attr('text-anchor', 'start');
+
+        addDateLine('2012-08-06', 'GitHub changes watching/stars');
+        addDateLine('2013-04-11', 'GitHub\'s 5th anniversary');
     }
 
     // Turn json obj into desired working data
