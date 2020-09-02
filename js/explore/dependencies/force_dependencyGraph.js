@@ -417,6 +417,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     update => update,
                     exit => exit.remove())
                     .attr('stroke-width', d => (100 - d.value) / 50)
+                    .attr('stroke-opacity', 0.6)
                     .on('mouseover', linkTip.show)
                     .on('mouseout', linkTip.hide);
 
