@@ -32,7 +32,7 @@ for repo in repolist:
             {"ownName": r[0], "repoName": r[1], "numLangs": 25, "pgCursor": None},
             paginate=True,
             cursorVar="pgCursor",
-            keysToList=["data", "repository", "languages", "nodes"],
+            keysToList=["data", "repository", "languages", "nodes", "edges"],
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (repo))
