@@ -219,9 +219,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
         chart.append('g')
             .attr('transform', `translate(${width / 2 - margin.right / 2},${0 - height / 2 + margin.top / 2})`)
             .call(slider);
+
+        let currentOption = 'normalView';
         
         // What to do when the option slider is changed
         function optionChanged(o) {
+            currentOption = o.name;
             options[o.name].function();
             updateLegend(options[o.name].labels);
         }
@@ -692,7 +695,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('fill-opacity', 1)
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
-                        .attr('stroke-opacity', 0.2);
+                        .attr('stroke-opacity', () => currentOption == 'normalView' ? 0.6 : 0.2);
                     nodeTip.hide(d)
                 })
                 .on('click', d => {
