@@ -125,7 +125,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('stroke-opacity', 0.6);
                 nodeTip.hide(d)
             })
-            .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+            .on('click', d => {
+                node.selectAll('circle').each(d => d['focused'] = false);
+                d['focused'] = true;
+                node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID);
+            });
 
         // Matches node and link location to where the simulation says the points should be
         simulation.on('tick', () => {
@@ -317,7 +322,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .data(newNodes)
                 .join('circle')
                     .style('cursor', 'pointer')
-                    .attr('r', 8)
+                    .attr('r', 5)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -347,7 +352,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(newLinks)
@@ -409,7 +419,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.6);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(newLinks)
@@ -470,7 +485,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .data(nodes)
                 .join('circle')
                     .style('cursor', 'pointer')
-                    .attr('r', 10)
+                    .attr('r', 5)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -500,7 +515,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(links)
@@ -568,7 +588,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .data(nodes)
                 .join('circle')
                     .style('cursor', 'pointer')
-                    .attr('r', 12)
+                    .attr('r', 5)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -598,7 +618,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage , children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(links)
@@ -700,6 +725,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     nodeTip.hide(d)
                 })
                 .on('click', d => {
+                    nodeTip.hide(d);
                     d = nodes[nodes.findIndex(o => o.id == d.data.id)];
                     const data = { name: d.name, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) };
                     draw_connection_tree(data, adjacentAreaID);
@@ -709,25 +735,30 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('fill-opacity', 1)
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
-                        .attr('stroke-opacity', 0.2);
+                        .attr('stroke-opacity', () => currentOption == 'normalView' ? 0.6 : 0.2);
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                 });
             
             treeNode.append('text')
                 .attr('dy', '0.31em')
                 .attr('x', d => d.children ? -6 : 6)
                 .attr('text-anchor', d => d.children ? 'end' : 'start')
-                .text(d => d.data.name);
+                .text(d => d.data.id);
 
             let labelLeft = 0;
 
             treeNode.selectAll('text').nodes().forEach(label => {
-                if (label.textContent == data.name) {
+                if (label.textContent == data.id) {
                     labelLeft = label.getComputedTextLength();
                 }
             });
 
             treeNode.selectAll('text').nodes().forEach(label => {
-                if (label.getComputedTextLength() > treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right) && label.textContent != data.name) {
+                if (label.textContent == data.id) {
+                    label.setAttribute('font-size', '14px');
+                } else if (label.getComputedTextLength() > treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right) && label.textContent != data.name) {
                     label.setAttribute('font-size', 14 * (treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right)) / label.getComputedTextLength() + 'px');
                 }
             });
