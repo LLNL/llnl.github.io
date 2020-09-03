@@ -58,6 +58,8 @@ function draw_pie_languages(areaID, repoNameWOwner) {
             })
             .sort(null);
 
+        const colors = d3.scaleSequential(d3.interpolate('lightblue', 'white')).domain([0, data.length]);
+
         const pathGroup = chart.append('g');
 
         var path = pathGroup
@@ -67,9 +69,8 @@ function draw_pie_languages(areaID, repoNameWOwner) {
             .append('path')
             .attr('d', arc)
             .attr('fill', function(d) {
-                return d.data.color;
+                return colors(data.indexOf(d.data));
             })
-            .style('cursor', 'pointer')
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
 
@@ -93,10 +94,10 @@ function draw_pie_languages(areaID, repoNameWOwner) {
             .attr('width', legendRectSize)
             .attr('height', legendRectSize)
             .style('fill', function(d) {
-                return d.color;
+                return colors(data.indexOf(d));
             })
             .style('stroke', function(d) {
-                return d.color;
+                return colors(data.indexOf(d));
             });
         // Text
         legend
