@@ -2,8 +2,13 @@ query ($ownName: String!, $repoName: String!, $numLangs: Int!, $pgCursor: String
   repository(owner: $ownName, name: $repoName) {
     languages(first: $numLangs, after: $pgCursor, orderBy: {field: SIZE, direction: DESC}) {
       totalCount
+      totalSize
       nodes {
         name
+        color
+      }
+      edges {
+        size
       }
       pageInfo {
         endCursor
