@@ -203,7 +203,7 @@ See OSTI's [FAQ on DOIs](https://www.osti.gov/doecode/faq#what-is-a-doi) for
 details about how DOIs work and why they are beneficial.
 
 OSTI is evaluating a notification workflow that would let a developer know 
-when a DOI has been assigned. Until then, you can find your repos's DOI *and* 
+when a DOI has been assigned. Until then, you can find your repo's DOI *and* 
 add it to the repo by following these steps:
 
 1. Type in the name of your repo at [DOE CODE](https://www.osti.gov/doecode/), then select it.
