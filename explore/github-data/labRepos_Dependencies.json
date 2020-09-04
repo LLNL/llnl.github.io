@@ -9416,6 +9416,11 @@
                 "nodes": []
             }
         },
+        "LLNL/Adiak": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "LLNL/Aluminum": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -10313,6 +10318,107 @@
                                         "owner": {
                                             "isVerified": true,
                                             "login": "apache"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "LLNL/DJINN": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "name": "scikit-learn",
+                                        "nameWithOwner": "scikit-learn/scikit-learn",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "scikit-learn"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tensorflow",
+                                    "repository": {
+                                        "name": "tensorflow",
+                                        "nameWithOwner": "tensorflow/tensorflow",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "tensorflow"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nose",
+                                    "repository": {
+                                        "name": "nose",
+                                        "nameWithOwner": "nose-devs/nose",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "nose-devs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nose-cover3",
+                                    "repository": {
+                                        "name": "nosecover3",
+                                        "nameWithOwner": "ask/nosecover3",
+                                        "owner": {
+                                            "login": "ask"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "name": "scikit-learn",
+                                        "nameWithOwner": "scikit-learn/scikit-learn",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "scikit-learn"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "name": "scipy",
+                                        "nameWithOwner": "scipy/scipy",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "scipy"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tensorflow",
+                                    "repository": {
+                                        "name": "tensorflow",
+                                        "nameWithOwner": "tensorflow/tensorflow",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "tensorflow"
                                         }
                                     }
                                 }
@@ -12344,34 +12450,6 @@
                                             "login": "singuyen"
                                         }
                                     }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
-        "LLNL/UEDGE": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "forthon",
-                                    "repository": {
-                                        "name": "Forthon",
-                                        "nameWithOwner": "dpgrote/Forthon",
-                                        "owner": {
-                                            "login": "dpgrote"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mppl",
-                                    "repository": null
                                 }
                             ]
                         }
@@ -16087,11 +16165,6 @@
                 "nodes": []
             }
         },
-        "LLNL/fpzip": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "LLNL/fudge": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -16303,18 +16376,6 @@
                     {
                         "dependencies": {
                             "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "cython",
-                                    "repository": {
-                                        "name": "cython",
-                                        "nameWithOwner": "cython/cython",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "cython"
-                                        }
-                                    }
-                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "matplotlib",
@@ -16831,6 +16892,11 @@
             }
         },
         "LLNL/lwgrp": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/maestro_sheetmusic": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
