@@ -31,96 +31,33 @@ permalink: /news/
       {% capture quiet %}
         {% increment event %}
       {% endcapture %}
-  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
-    <h3>
-      {{ page.title }}
-    </h3>
-    <h4>
-      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
-    </h4>
-
-    {{ page.content }}
-
-  </article>
     {% elsif page.categories contains "event-report" and eventReport <= cap %}
       {% capture quiet %}
         {% increment eventReport %}
       {% endcapture %}
-  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
-    <h3>
-      {{ page.title }}
-    </h3>
-    <h4>
-      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
-    </h4>
-
-    {{ page.content }}
-
-  </article>
     {% elsif page.categories contains "new-repo" and newRepo <= cap %}
       {% capture quiet %}
         {% increment newRepo %}
       {% endcapture %}
-  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
-    <h3>
-      {{ page.title }}
-    </h3>
-    <h4>
-      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
-    </h4>
-
-    {{ page.content }}
-
-  </article>
     {% elsif page.categories contains "profile" and profile <= cap %}
       {% capture quiet %}
         {% increment profile %}
       {% endcapture %}
-  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
-    <h3>
-      {{ page.title }}
-    </h3>
-    <h4>
-      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
-    </h4>
-
-    {{ page.content }}
-
-  </article>
     {% elsif page.categories contains "release" and release <= cap %}
       {% capture quiet %}
         {% increment release %}
       {% endcapture %}
-  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
-    <h3>
-      {{ page.title }}
-    </h3>
-    <h4>
-      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
-    </h4>
-
-    {{ page.content }}
-
-  </article>
     {% elsif page.categories contains "story" and story <= cap %}
       {% capture quiet %}
         {% increment story %}
       {% endcapture %}
-  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
-    <h3>
-      {{ page.title }}
-    </h3>
-    <h4>
-      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
-    </h4>
-
-    {{ page.content }}
-
-  </article>
     {% elsif page.categories contains "this-website" and meta <= cap %}
       {% capture quiet %}
         {% increment meta %}
       {% endcapture %}
+    {% else %}
+      {% continue %}
+    {% endif %}
   <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
     <h3>
       {{ page.title }}
@@ -132,12 +69,7 @@ permalink: /news/
     {{ page.content }}
 
   </article>
-    {% endif %}
   {% endfor %}
   
-   <br />
-                <a class="btn btn-primary btn-block news" href="/news/archive/" role="button">See all news in the archive</a>
-
-
- 
-
+  <br />
+  <a class="btn btn-primary btn-block news" href="/news/archive/" role="button">See all news in the archive</a>
