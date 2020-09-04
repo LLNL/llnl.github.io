@@ -16,21 +16,10 @@ $('.filterBtnGroup button').on('click', function(filterContent) {
     $(this).attr('disabled', true);
     var tag = $(this).text();
     $('.all').hide();
-    var max = 0;
-    $('.all').each(d => {
-        max = d;
-    });
-    var j = 0;
-    for (var i = 0; i <= max; i++) {
-        var element = $(`.post${i}`);
-        if (element.attr('class').includes($(this).attr('id')) && j < 20) {
-            element.fadeIn();
-            j++;
-        }
-    }
+    $('.' + $(this).attr('id')).fadeIn();
     filterContent.preventDefault();
 });
-document.getElementById('all').click();
+document.getElementById('allB').click();
 </script>
 
 {% include google_analytics.html %}

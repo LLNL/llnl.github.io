@@ -6,7 +6,7 @@ permalink: /news/
 
 
   <div class="filterBtnGroup btn-group" role="group">
-    <button class="btn btn-default" id="all">All</button>
+    <button class="btn btn-default" id="allB">All</button>
     <button class="btn btn-default" id="event">Events</button>
     <button class="btn btn-default" id="event-report">Event Reports</button>
     <button class="btn btn-default" id="new-repo">New Repos</button>
@@ -16,8 +16,22 @@ permalink: /news/
     <button class="btn btn-default" id="this-website">Meta</button>
   </div>
 
+  {% assign cap = 20 %} {% comment %} maximum number of each type to store {% endcomment %}
+  {% capture shh %}
+    {% increment event %}
+    {% increment eventReport %}
+    {% increment newRepo %}
+    {% increment profile %}
+    {% increment release %}
+    {% increment story %}
+    {% increment meta %}
+  {% endcapture %}
   {% for page in site.posts %}
-  <article class="news all {{page.categories | join: " " }} post{% increment index %}">
+    {% if page.categories contains "event" and event <= cap %}
+      {% capture quiet %}
+        {% increment event %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
     <h3>
       {{ page.title }}
     </h3>
@@ -28,6 +42,97 @@ permalink: /news/
     {{ page.content }}
 
   </article>
+    {% elsif page.categories contains "event-report" and eventReport <= cap %}
+      {% capture quiet %}
+        {% increment eventReport %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
+    <h3>
+      {{ page.title }}
+    </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
+
+    {{ page.content }}
+
+  </article>
+    {% elsif page.categories contains "new-repo" and newRepo <= cap %}
+      {% capture quiet %}
+        {% increment newRepo %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
+    <h3>
+      {{ page.title }}
+    </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
+
+    {{ page.content }}
+
+  </article>
+    {% elsif page.categories contains "profile" and profile <= cap %}
+      {% capture quiet %}
+        {% increment profile %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
+    <h3>
+      {{ page.title }}
+    </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
+
+    {{ page.content }}
+
+  </article>
+    {% elsif page.categories contains "release" and release <= cap %}
+      {% capture quiet %}
+        {% increment release %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
+    <h3>
+      {{ page.title }}
+    </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
+
+    {{ page.content }}
+
+  </article>
+    {% elsif page.categories contains "story" and story <= cap %}
+      {% capture quiet %}
+        {% increment story %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
+    <h3>
+      {{ page.title }}
+    </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
+
+    {{ page.content }}
+
+  </article>
+    {% elsif page.categories contains "this-website" and meta <= cap %}
+      {% capture quiet %}
+        {% increment meta %}
+      {% endcapture %}
+  <article class="news all post{% increment index %} {% if index <= cap %}allB {% endif %}{{page.categories | join: " " }}">
+    <h3>
+      {{ page.title }}
+    </h3>
+    <h4>
+      <small>{{ page.date | date: '%B %d, %Y' }} {% for categories in page.categories %} ({{ categories }}) {% endfor %}</small>
+    </h4>
+
+    {{ page.content }}
+
+  </article>
+    {% endif %}
   {% endfor %}
   
    <br />
