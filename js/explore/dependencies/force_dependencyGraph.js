@@ -96,6 +96,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .join('circle')
                 .style('cursor', 'pointer')
                 .attr('r', 5)
+                .attr('class', 'inGraph')
+                .attr('name', d => d.id)
                 .attr('fill', d => {
                     if (d.notPackage && !d.package) {
                         return colors[0];
@@ -323,6 +325,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join('circle')
                     .style('cursor', 'pointer')
                     .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -390,6 +395,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join('circle')
                     .style('cursor', 'pointer')
                     .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -486,6 +494,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join('circle')
                     .style('cursor', 'pointer')
                     .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -589,6 +600,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join('circle')
                     .style('cursor', 'pointer')
                     .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -796,4 +810,19 @@ function draw_force_graph(areaID, adjacentAreaID) {
         }
         return { nodes: nodes.filter(d => links.some(o => d.id == o.source || d.id == o.target)), links: links };
     }
+}
+
+function foo(event) {
+    event.preventDefault();
+    console.debug(event);
+    $('.inGraph').attr('fill-opacity', function(i, d) {
+        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
+    });
+    $('.inGraph').attr('stroke-opacity', function(i, d) {
+        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
+    });
+    
+    $('.inGraph').attr('r', function(i, d) {
+        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 6.5 : 5;
+    });
 }
