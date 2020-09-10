@@ -25,11 +25,13 @@ function draw_pie_language(areaID) {
                 return [-10, 0];
             })
             .html(function(d) {
-                var units = ' bytes';
-                if (d.data.size == 1) {
-                    units = ' byte';
+                var units = ' MB';
+                var divisor = 1000000;
+                if (d.data.size > 1000000000) {
+                    divisor *= 1000;
+                    units = ' GB';
                 }
-                return d.data.size + units + '<br>' + d.data.name;
+                return d3.format('.2f')(d.data.size / divisor) + units + '<br>' + d.data.name;
             });
 
         var chart = d3
@@ -41,7 +43,7 @@ function draw_pie_language(areaID) {
 
         chart.call(tip);
 
-        var color = d3.scaleSequential(d3.interpolate('steelblue', 'white')).domain([0, 2 * Math.PI]);
+        var color = d3.scaleLinear([0, 2 * Math.PI], ['steelblue', 'white']);
 
         var arc = d3
             .arc()
@@ -113,7 +115,7 @@ function draw_pie_language(areaID) {
                 .attr('fill', d => color(d.startAngle))
                 .attrTween("d", d => () => arc(d.current));
 
-            titles.attr('font-size', '18px').text(d.data.name);
+            d3.select('#mainTitle').attr('font-size', '18px').text(d.data.name + ' breakdown');
 
             label.selectAll('text').filter(d => labelVisible(d.target)).transition(t)
                 .attr('fill-opacity', 1)
@@ -123,7 +125,35 @@ function draw_pie_language(areaID) {
             titleResizing();
         }
 
-        const textArray = [{ text: graphHeader, class: 'graphtitle', x: 0, y: 7 }];
+        function middleClicked() {
+            path = pathGroup
+                .selectAll('path')
+                .data(pie(data[2]))
+                .join('path')
+                .attr('d', arc)
+                .attr('fill', d => color(d.startAngle))
+                .style('cursor', 'pointer')
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide)
+                .on('click', clicked);
+
+            label
+            .selectAll('text')
+                .data(pie(data[2]))
+                .join('text')
+                    .attr('dy', '0.35em')
+                    .attr('font-size', '11px')
+                    .attr('fill-opacity', 0)
+                    .text(o => o.data.name);
+
+            label.selectAll('text').filter(d => labelVisible(d))
+                .attr('fill-opacity', 1)
+                .attr('transform', d => labelTransform(d));
+
+            d3.select('#mainTitle').attr('font-size', '18px').text(graphHeader);
+        }
+
+        const textArray = [{ text: graphHeader, size: 18, weight: 'bold', id: 'mainTitle', x: 0, y: 0 }, { text: 'by bytes', size: 18, weight: 'normal', id: 'subTitle', x: 0, y: '1em' }];
         
         // Add title
         const titles = chart
@@ -131,12 +161,14 @@ function draw_pie_language(areaID) {
             .selectAll('text')
                 .data(textArray)
                 .join('text')
-                    .attr('font-size', '18px')
-                    .attr('font-weight', 'bold')
+                    .attr('font-size', d => d.size + 'px')
+                    .attr('font-weight', d => d.weight)
+                    .attr('id', d => d.id)
                     .attr('x', d => d.x)
                     .attr('y', d => d.y)
                     .attr('text-anchor', 'middle')
-                    .text(d => d.text);
+                    .text(d => d.text)
+                    .on('click', middleClicked);
 
         // Adds labels to wedges
         const label = chart
@@ -157,6 +189,14 @@ function draw_pie_language(areaID) {
         label.selectAll('text').filter(d => labelVisible(d))
             .attr('fill-opacity', 1)
             .attr('transform', d => labelTransform(d));
+
+        const center = chart
+            .append('circle')
+            .attr('r', radius - donutWidth)
+            .attr('fill', 'none')
+            .attr('pointer-events', 'all')
+            .style('cursor', 'pointer')
+            .on('click', middleClicked);
 
         labelDynamicSizing();
 
@@ -179,12 +219,8 @@ function draw_pie_language(areaID) {
         }
 
         function titleResizing() {
-            console.debug('Yup');
-            console.debug(titles.nodes());
             titles.nodes().forEach(label => {
-                console.debug('Yup 2');
                 if (label.getComputedTextLength() > 2 * (radius - donutWidth)) {
-                    console.debug('Yup 3');
                     label.setAttribute('font-size', 36 * (radius - donutWidth) / (label.getComputedTextLength() + 4) + 'px');
                 }
             })
@@ -196,13 +232,14 @@ function draw_pie_language(areaID) {
         var languageData = {};
         var repoData = {};
 
-        // Processs repo breakdown by language
+        // Process repo breakdown by language
         Object.keys(obj['data']).forEach(repoName => {
             repoData[repoName] = [];
             var value = obj['data'][repoName]['languages']['edges'] != null ? obj['data'][repoName]['languages']['edges'].length : 0;
             for (var i = 0; i < value; i++) {
                 repoData[repoName].push({ name: obj['data'][repoName]['languages']['nodes'][i]['name'], size: obj['data'][repoName]['languages']['edges'][i]['size'], reference: { number: 1, key: obj['data'][repoName]['languages']['nodes'][i]['name'] } });
             }
+            repoData[repoName].sort((a, b) => b.size - a.size);
         });
         console.debug(repoData);
 
@@ -216,6 +253,9 @@ function draw_pie_language(areaID) {
                 }
             });
         });
+        Object.keys(languageData).forEach(key => {
+            languageData[key].sort((a, b) => b.size - a.size);
+        })
         console.debug(languageData);
 
         // Process total breakdown
@@ -223,6 +263,7 @@ function draw_pie_language(areaID) {
         Object.keys(languageData).forEach(key => {
             totalData.push({ name: key, size: sum(languageData[key]), reference: { number: 1, key: key } });
         });
+        totalData.sort((a, b) => b.size - a.size);
         console.debug(totalData);
 
         return [repoData, languageData, totalData];
