@@ -241,7 +241,6 @@ function draw_pie_language(areaID) {
             }
             repoData[repoName].sort((a, b) => b.size - a.size);
         });
-        console.debug(repoData);
 
         // Process language breakdown
         Object.keys(repoData).forEach(key => {
@@ -255,8 +254,7 @@ function draw_pie_language(areaID) {
         });
         Object.keys(languageData).forEach(key => {
             languageData[key].sort((a, b) => b.size - a.size);
-        })
-        console.debug(languageData);
+        });
 
         // Process total breakdown
         var totalData = [];
@@ -264,7 +262,6 @@ function draw_pie_language(areaID) {
             totalData.push({ name: key, size: sum(languageData[key]), reference: { number: 1, key: key } });
         });
         totalData.sort((a, b) => b.size - a.size);
-        console.debug(totalData);
 
         return [repoData, languageData, totalData];
     }
