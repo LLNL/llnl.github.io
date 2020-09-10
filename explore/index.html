@@ -19,7 +19,7 @@ layout: default
     <br /><svg class="repoActivityChart"></svg>
     <br /><svg class="repoStarHistoryChart"></svg>
     <br /><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
-    <br /><svg class="languageCloud"></svg><svg class="topicCloud"></svg>
+    <br /><svg class="languagePie"></svg><svg class="topicCloud"></svg>
     <br /><svg class="licenseSunburst"></svg>
 </center>
 
@@ -37,7 +37,7 @@ layout: default
 <script type="text/javascript" src="../js/explore/line_repoActivityExplore.js"></script>
 <script type="text/javascript" src="../js/explore/scatter_repoPulls.js"></script>
 <script type="text/javascript" src="../js/explore/scatter_repoIssues.js"></script>
-<script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
+<script type="text/javascript" src="../js/explore/pie_languageExplore.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
 <script type="text/javascript" src="../js/explore/sunburst_licenses.js"></script>
 <script type="text/javascript" src="../js/explore/pack_hierarchy.js"></script>
@@ -63,7 +63,7 @@ layout: default
     draw_line_repoActivity('repoActivityChart');
     draw_scatter_repoPulls('repoPulls');
     draw_scatter_repoIssues('repoIssues');
-    draw_cloud_languages('languageCloud');
+    draw_pie_language('languagePie');
     draw_cloud_topics('topicCloud');
     draw_sunburst_licenses('licenseSunburst');
     draw_pack_hierarchy('hierarchyPack');
