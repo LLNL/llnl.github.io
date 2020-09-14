@@ -19,7 +19,9 @@ $('.filterBtnGroup button').on('click', function(filterContent) {
     $('.' + $(this).attr('id')).fadeIn();
     filterContent.preventDefault();
 });
-document.getElementById('allB').click();
+if (document.getElementById('allB')){
+    document.getElementById('allB').click();
+}
 </script>
 
 {% include google_analytics.html %}
