@@ -9,8 +9,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
     function drawGraph(data, areaID, adjacentAreaID) {
         const graphHeader = 'LLNL Dependencies';
 
-        console.debug(data);
-
         const margin = { top: stdMargin.top, right: stdMargin.right / 2, bottom: stdMargin.bottom / 2, left: stdMargin.left / 2 },
             width = stdTotalWidth * 2 + 80 - margin.left - margin.right,
             height = stdTotalHeight * 2 - margin.top - margin.bottom;
@@ -770,7 +768,6 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
             treeNode.append('circle')
                 .attr('fill', d => {
-                    console.debug(d);
                     if (colorLanguage && !orgSelected) {
                         return d.data.language == 'CMake' ? '#777' : d.data.color;
                     } else {
@@ -917,9 +914,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
     }
 }
 
-function foo(event) {
+function search(event) {
     event.preventDefault();
-    console.debug(event);
     $('.inGraph').attr('fill-opacity', function(i, d) {
         return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
     });
