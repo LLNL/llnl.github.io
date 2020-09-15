@@ -15,10 +15,13 @@ $('.filterBtnGroup button').on('click', function(filterContent) {
     $('.filterBtnGroup button').attr('disabled', false);
     $(this).attr('disabled', true);
     var tag = $(this).text();
-    $('.news').hide();
+    $('.all').hide();
     $('.' + $(this).attr('id')).fadeIn();
     filterContent.preventDefault();
-})
+});
+if (document.getElementById('allB')){
+    document.getElementById('allB').click();
+}
 </script>
 
 {% include google_analytics.html %}

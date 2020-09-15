@@ -45,7 +45,7 @@ layout: repo
         <br /><svg class="repoCreationHistory"></svg>
         <br /><svg ng-if="repo.stargazers.totalCount" class="repoStarHistory"></svg>
         <span ng-if="repo.languages.totalCount || repo.repositoryTopics.totalCount">
-            <br /><svg ng-if="repo.languages.totalCount" class="languageCloud"></svg><svg ng-if="repo.repositoryTopics.totalCount" class="topicCloud"></svg>
+            <br /><svg ng-if="repo.languages.totalCount" class="languagePie"></svg><svg ng-if="repo.repositoryTopics.totalCount" class="topicCloud"></svg>
         </span>
     </center>
 </div>
@@ -64,7 +64,7 @@ layout: repo
 <script type="text/javascript" src="../js/explore/pie_repoPulls.js"></script>
 <script type="text/javascript" src="../js/explore/pie_repoIssues.js"></script>
 <script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
-<script type="text/javascript" src="../js/explore/cloud_languages.js"></script>
+<script type="text/javascript" src="../js/explore/pie_language.js"></script>
 <script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
 <script type="text/javascript" src="../js/explore/line_repoStarHistory.js"></script>
 
