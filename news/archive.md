@@ -6,7 +6,7 @@ permalink: /news/archive/
 {% assign postsByYear = site.posts | group_by_exp:"page", "page.date | date: '%Y'" %}
 
 <div class="filterBtnGroup btn-group" role="group" style="margin-bottom: 30px;">
-    <button class="btn btn-default" id="news">All</button>
+    <button class="btn btn-default" id="allB">All</button>
     <button class="btn btn-default" id="event">Events</button>
     <button class="btn btn-default" id="event-report">Event Reports</button>
     <button class="btn btn-default" id="new-repo">New Repos</button>
@@ -23,7 +23,7 @@ permalink: /news/archive/
         <div>
             <div class="collapse in" id="{{year.name}}" >
                 {% for post in year.items %}
-                    <article class="news  {{post.categories | join: " " }}">
+                    <article class="news allB all {{post.categories | join: " " }}">
                         <h3>
                             {{post.title}}
                         </h3>
