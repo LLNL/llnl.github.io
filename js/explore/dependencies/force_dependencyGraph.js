@@ -213,7 +213,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             updateLegend(labels);
         }
 
-        const colorButton = chart.append('g').attr('transform', `translate(${width/2 - margin.right - 150},${height/2 - margin.bottom - 40})`);
+        const colorButton = chart.append('g').attr('transform', `translate(${width/2 - margin.right - 150},${80 - (height/2 - margin.bottom)})`);
 
         const colorButtonCircle = colorButton.append('circle')
             .attr('r', legendRectSize / 2)
