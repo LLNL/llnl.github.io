@@ -10,13 +10,18 @@ function draw_force_graph(areaID, adjacentAreaID) {
         const graphHeader = 'LLNL Dependencies';
 
         const margin = { top: stdMargin.top, right: stdMargin.right / 2, bottom: stdMargin.bottom / 2, left: stdMargin.left / 2 },
-            width = stdTotalWidth * 2 - 50 - margin.left - margin.right,
+            width = stdTotalWidth * 2 + 80 - margin.left - margin.right,
             height = stdTotalHeight * 2 - margin.top - margin.bottom;
         const legendRectSize = 15,
             legendSpacing = 4;
         const ringSize = (Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom) + 4) / 2;
 
         const colors = ['#6baed6', 'seagreen', '#3182bd'];
+        let languageColors = [];
+        let languages = []
+
+        let colorLanguage = false;
+        let orgSelected = false;
 
         const chart = d3
             .select('.' + areaID)
@@ -64,7 +69,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
         // Adds ring
         chart.append('circle')
-            .attr('cx', 0)
+            .attr('cx', 40)
             .attr('cy', 0)
             .attr('r', ringSize)
             .attr('fill', '#FFFFFF')
@@ -73,6 +78,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
         // Group for links
         const link = chart
             .append('g')
+                .attr('transform', 'translate(40,0)')
                 .attr('stroke', '#999')
                 .attr('stroke-opacity', 0.6);
         
@@ -87,6 +93,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
         // Group for nodes
         const node = chart
             .append('g')
+                .attr('transform', 'translate(40,0)')
                 .attr('stroke', '#fff')
                 .attr('stroke-width', 1.5);
 
@@ -96,6 +103,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .join('circle')
                 .style('cursor', 'pointer')
                 .attr('r', 5)
+                .attr('class', 'inGraph')
+                .attr('name', d => d.id)
                 .attr('fill', d => {
                     if (d.notPackage && !d.package) {
                         return colors[0];
@@ -125,7 +134,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('stroke-opacity', 0.6);
                 nodeTip.hide(d)
             })
-            .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+            .on('click', d => {
+                node.selectAll('circle').each(d => d['focused'] = false);
+                d['focused'] = true;
+                node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color, language: d.language, color: d.color }, adjacentAreaID);
+            });
 
         // Matches node and link location to where the simulation says the points should be
         simulation.on('tick', () => {
@@ -191,15 +205,53 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('text-anchor', 'start');
         }
 
-        updateLegend(labels);
+        colorByLanguage(colorLanguage);
+
+        if (colorLanguage) {
+            updateLegend(languages, languageColors);
+        } else {
+            updateLegend(labels);
+        }
+
+        const colorButton = chart.append('g').attr('transform', `translate(${width/2 - margin.right - 150},${80 - (height/2 - margin.bottom)})`);
+
+        const colorButtonCircle = colorButton.append('circle')
+            .attr('r', legendRectSize / 2)
+            .attr('cx', legendRectSize / 2)
+            .attr('cy', 2 - legendRectSize / 2)
+            .attr('fill', colorLanguage ? 'lightblue' : 'white')
+            .attr('stroke', colorLanguage ? 'white' : 'black')
+            .style('cursor', 'pointer')
+            .on('click', () => {
+                if (!orgSelected) {
+                    if (colorLanguage) {
+                        colorLanguage = !colorLanguage;
+                        colorButtonCircle.attr('fill', 'white');
+                        colorButtonCircle.attr('stroke', 'black');
+                        colorByLanguage(colorLanguage);
+                        updateLegend(labels);
+                    } else {
+                        colorLanguage = !colorLanguage;
+                        colorButtonCircle.attr('fill', 'lightblue');
+                        colorButtonCircle.attr('stroke', 'white');
+                        colorByLanguage(colorLanguage);
+                        updateLegend(languages, languageColors);
+                    }
+                }
+            });
+
+        colorButton.append('text')
+            .attr('x', legendRectSize + legendSpacing)
+            .text('Color by Language')
+            .attr('text-anchor', 'start');
 
         const options = {};
 
         // Options for graph view
-        options.normalView = { name: 'normalView', text: 'Repos connected to dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], function: redraw };
-        options.simplifiedView = { name: 'simplifiedView', text: 'Repos connected by shared dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], function: simplify };
-        options.orgView = { name: 'orgView', text: 'Organizations connected to dependency organizations', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: organize };
-        options.simplifiedOrgView = { name: 'simplifiedOrgView', text: 'Organizations connected by shared dependencies', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], function: simplifyOrganize };
+        options.normalView = { name: 'normalView', text: 'Repos connected to dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], languages: true, function: redraw };
+        options.simplifiedView = { name: 'simplifiedView', text: 'Repos connected by shared dependencies', labels: ['LLNL Repositories with Dependencies', 'External Packages', 'Internal Packages'], languages: true, function: simplify };
+        options.orgView = { name: 'orgView', text: 'Organizations connected to dependency organizations', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], languages: false, function: organize };
+        options.simplifiedOrgView = { name: 'simplifiedOrgView', text: 'Organizations connected by shared dependencies', labels: ['LLNL Organizations', 'External Package Organizations', 'LLNL Package Organizations'], languages: false, function: simplifyOrganize };
         const optionsArray = Object.values(options);
 
         // Options slider
@@ -219,11 +271,18 @@ function draw_force_graph(areaID, adjacentAreaID) {
         chart.append('g')
             .attr('transform', `translate(${width / 2 - margin.right / 2},${0 - height / 2 + margin.top / 2})`)
             .call(slider);
+
+        let currentOption = 'normalView';
         
         // What to do when the option slider is changed
         function optionChanged(o) {
+            currentOption = o.name;
             options[o.name].function();
-            updateLegend(options[o.name].labels);
+            if (colorLanguage && o.languages) {
+                updateLegend(languages, languageColors);
+            } else {
+                updateLegend(options[o.name].labels);
+            }
         }
 
         // Finds all nodes and links in a certain depth and marks nodes by distance from node (not technically a tree)
@@ -314,7 +373,10 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .data(newNodes)
                 .join('circle')
                     .style('cursor', 'pointer')
-                    .attr('r', 8)
+                    .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -344,7 +406,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(newLinks)
@@ -361,6 +428,10 @@ function draw_force_graph(areaID, adjacentAreaID) {
             links = newLinks;
 
             simulation.restart().alpha(1);
+
+            colorByLanguage(colorLanguage);
+
+            orgSelected = false;
         }
 
         // Recomputes and draws the original view
@@ -377,6 +448,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .join('circle')
                     .style('cursor', 'pointer')
                     .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -406,7 +480,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.6);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(newLinks)
@@ -414,6 +493,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     update => update,
                     exit => exit.remove())
                     .attr('stroke-width', d => (100 - d.value) / 50)
+                    .attr('stroke-opacity', 0.6)
                     .on('mouseover', linkTip.show)
                     .on('mouseout', linkTip.hide);
 
@@ -421,6 +501,10 @@ function draw_force_graph(areaID, adjacentAreaID) {
             links = newLinks;
 
             simulation.restart().alpha(1);
+
+            colorByLanguage(colorLanguage);
+
+            orgSelected = false;
         }
 
         // Switches to view where orgs are connected by dependencies
@@ -466,7 +550,10 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .data(nodes)
                 .join('circle')
                     .style('cursor', 'pointer')
-                    .attr('r', 10)
+                    .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -496,7 +583,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage, children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(links)
@@ -510,6 +602,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
             link.selectAll('line').attr('stroke-opacity', 0.2);
 
             simulation.restart().alpha(1);
+
+            orgSelected = true;
         }
 
         function simplifyOrganize() {
@@ -564,7 +658,10 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .data(nodes)
                 .join('circle')
                     .style('cursor', 'pointer')
-                    .attr('r', 12)
+                    .attr('r', 5)
+                    .attr('class', 'inGraph')
+                    .attr('name', d => d.id)
+                    .attr('fill-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -594,7 +691,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
-                .on('click', d => draw_connection_tree({ name: d.name, id: d.id, package: d.package, notPackage: d.notPackage , children: getCurrentNeighbors(d) }, adjacentAreaID));
+                .on('click', d => {
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
+                    draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
+                });
 
             link.selectAll('line')
                 .data(links)
@@ -608,6 +710,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
             link.selectAll('line').attr('stroke-opacity', 0.2);
 
             simulation.restart().alpha(1);
+
+            orgSelected = true;
         }
 
         const treeWidth = stdTotalWidth * 0.9 + 50 - margin.left - margin.right,
@@ -664,12 +768,16 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
             treeNode.append('circle')
                 .attr('fill', d => {
-                    if (d.data.notPackage && !d.data.package) {
-                        return colors[0];
-                    } else if (!d.data.notPackage && d.data.package) {
-                        return colors[1];
+                    if (colorLanguage && !orgSelected) {
+                        return d.data.language == 'CMake' ? '#777' : d.data.color;
                     } else {
-                        return colors[2];
+                        if (d.data.notPackage && !d.data.package) {
+                            return colors[0];
+                        } else if (!d.data.notPackage && d.data.package) {
+                            return colors[1];
+                        } else {
+                            return colors[2];
+                        }
                     }
                 })
                 .attr('r', 5)
@@ -692,10 +800,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('fill-opacity', 1)
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
-                        .attr('stroke-opacity', 0.2);
+                        .attr('stroke-opacity', () => currentOption == 'normalView' ? 0.6 : 0.2);
                     nodeTip.hide(d)
                 })
                 .on('click', d => {
+                    nodeTip.hide(d);
                     d = nodes[nodes.findIndex(o => o.id == d.data.id)];
                     const data = { name: d.name, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) };
                     draw_connection_tree(data, adjacentAreaID);
@@ -705,31 +814,73 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         .attr('fill-opacity', 1)
                         .attr('stroke-opacity', 1);
                     link.selectAll('line').transition(t)
-                        .attr('stroke-opacity', 0.2);
+                        .attr('stroke-opacity', () => currentOption == 'normalView' ? 0.6 : 0.2);
+                    node.selectAll('circle').each(d => d['focused'] = false);
+                    d['focused'] = true;
+                    node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                 });
             
             treeNode.append('text')
                 .attr('dy', '0.31em')
                 .attr('x', d => d.children ? -6 : 6)
                 .attr('text-anchor', d => d.children ? 'end' : 'start')
-                .text(d => d.data.name);
+                .text(d => d.data.id);
 
             let labelLeft = 0;
 
             treeNode.selectAll('text').nodes().forEach(label => {
-                if (label.textContent == data.name) {
+                if (label.textContent == data.id) {
                     labelLeft = label.getComputedTextLength();
                 }
             });
 
             treeNode.selectAll('text').nodes().forEach(label => {
-                if (label.getComputedTextLength() > treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right) && label.textContent != data.name) {
+                if (label.textContent == data.id) {
+                    label.setAttribute('font-size', '14px');
+                } else if (label.getComputedTextLength() > treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right) && label.textContent != data.name) {
                     label.setAttribute('font-size', 14 * (treeWidth - (labelLeft + treeWidth * 0.3 + margin.left + margin.right)) / label.getComputedTextLength() + 'px');
                 }
             });
 
             treeChart
                 .attr('transform', `translate(${margin.left + labelLeft},${(treeHeight / 2) - root.x + 5})`);
+        }
+
+        function colorByLanguage(check) {
+            if (check) {
+                node.selectAll('circle')
+                    .attr('fill', d => {
+                        return d.language == 'CMake' ? '#777' : d.color;
+                    });
+
+                let languageEntries = {};
+
+                node.selectAll('circle').each(d => {
+                    if (d.language == 'CMake') {
+                        languageEntries[d.language] = '#777';
+                    } else if (d.language != null) {
+                        languageEntries[d.language] = d.color;
+                    }
+                });
+
+                languageColors = [];
+
+                languages = Object.keys(languageEntries);
+                languages.forEach(d => {
+                    languageColors.push(languageEntries[d]);
+                })
+            } else {
+                node.selectAll('circle')
+                    .attr('fill', d => {
+                        if (d.notPackage && !d.package) {
+                            return colors[0];
+                        } else if (!d.notPackage && d.package) {
+                            return colors[1];
+                        } else {
+                            return colors[2];
+                        }
+                    });
+            }
         }
     }
 
@@ -739,7 +890,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
         const links = [];
         for (var repo in obj['data']) {
             if (!nodes.some(d => d.id == repo)) {
-                nodes.push({ name: repo.split('/')[1], id: repo, package: false, notPackage: true, verified: undefined });
+                nodes.push({ name: repo.split('/')[1], id: repo, package: false, notPackage: true, verified: undefined, language: obj['data'][repo]['languages']['nodes'][0] ? obj['data'][repo]['languages']['nodes'][0]['name'] : null, color: obj['data'][repo]['languages']['nodes'][0] ? obj['data'][repo]['languages']['nodes'][0]['color'] : null });
             } else {
                 nodes[nodes.findIndex(d => d.id == repo)].notPackage = true;
             }
@@ -749,7 +900,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         continue;
                     }
                     if (!nodes.some(d => d.id == node['repository']['nameWithOwner'])) {
-                        nodes.push({ name: node['repository']['name'], id: node['repository']['nameWithOwner'], package: true, notPackage: false, verified: node['repository']['owner']['isVerified'] });
+                        nodes.push({ name: node['repository']['name'], id: node['repository']['nameWithOwner'], package: true, notPackage: false, verified: node['repository']['owner']['isVerified'], language: node['repository']['languages']['nodes'][0] ? node['repository']['languages']['nodes'][0]['name'] : null, color: node['repository']['languages']['nodes'][0] ? node['repository']['languages']['nodes'][0]['color'] : null });
                     } else {
                         nodes[nodes.findIndex(d => d.id == node['repository']['nameWithOwner'])].package = true;
                     }
@@ -761,4 +912,18 @@ function draw_force_graph(areaID, adjacentAreaID) {
         }
         return { nodes: nodes.filter(d => links.some(o => d.id == o.source || d.id == o.target)), links: links };
     }
+}
+
+function searchForm(event) {
+    event.preventDefault();
+    $('.inGraph').attr('fill-opacity', function(i, d) {
+        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
+    });
+    $('.inGraph').attr('stroke-opacity', function(i, d) {
+        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
+    });
+    
+    $('.inGraph').attr('r', function(i, d) {
+        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 6.5 : 5;
+    });
 }
