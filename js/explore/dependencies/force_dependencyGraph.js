@@ -914,7 +914,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
     }
 }
 
-function search(event) {
+function searchForm(event) {
     event.preventDefault();
     $('.inGraph').attr('fill-opacity', function(i, d) {
         return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
