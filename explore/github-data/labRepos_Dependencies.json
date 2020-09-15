@@ -1275,11 +1275,6 @@
                 "nodes": []
             }
         },
-        "CDAT/cdat_build_nightly": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "CDAT/cdat_build_release": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -10829,11 +10824,6 @@
                 "nodes": []
             }
         },
-        "LLNL/MaPPeRTrac": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "LLNL/MacPatch": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -11733,12 +11723,22 @@
                 "nodes": []
             }
         },
+        "LLNL/RAJA-project-template": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "LLNL/RAJA-tutorials": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
         },
         "LLNL/RAJAPerf": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "LLNL/RAJAProxies": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -13827,18 +13827,6 @@
                             "nodes": [
                                 {
                                     "packageManager": "MAVEN",
-                                    "packageName": "ch.qos.logback:logback-classic",
-                                    "repository": {
-                                        "name": "logback",
-                                        "nameWithOwner": "qos-ch/logback",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "qos-ch"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "MAVEN",
                                     "packageName": "com.google.guava:guava",
                                     "repository": {
                                         "name": "guava",
@@ -14064,6 +14052,18 @@
                                         "nameWithOwner": "spafka/spring",
                                         "owner": {
                                             "login": "spafka"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.springframework:spring-test",
+                                    "repository": {
+                                        "name": "spring-framework",
+                                        "nameWithOwner": "spring-projects/spring-framework",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "spring-projects"
                                         }
                                     }
                                 }
@@ -15857,6 +15857,23 @@
                                 },
                                 {
                                     "packageManager": "MAVEN",
+                                    "packageName": "org.locationtech.jts.io:jts-io-common",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.locationtech.jts:jts-core",
+                                    "repository": {
+                                        "name": "jts",
+                                        "nameWithOwner": "locationtech/jts",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "locationtech"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-core",
                                     "repository": {
                                         "name": "mockito",
@@ -16950,540 +16967,7 @@
         },
         "LLNL/maestrowf": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coverage",
-                                    "repository": {
-                                        "name": "coveragepy",
-                                        "nameWithOwner": "nedbat/coveragepy",
-                                        "owner": {
-                                            "login": "nedbat"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "dill",
-                                    "repository": {
-                                        "name": "dill-torch",
-                                        "nameWithOwner": "meissnereric/dill-torch",
-                                        "owner": {
-                                            "login": "meissnereric"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "fabric",
-                                    "repository": {
-                                        "name": "fabric",
-                                        "nameWithOwner": "mattrenquist/fabric",
-                                        "owner": {
-                                            "login": "mattrenquist"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "filelock",
-                                    "repository": {
-                                        "name": "py-filelock",
-                                        "nameWithOwner": "benediktschmitt/py-filelock",
-                                        "owner": {
-                                            "login": "benediktschmitt"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "name": "flake8",
-                                        "nameWithOwner": "PyCQA/flake8",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "PyCQA"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pre-commit",
-                                    "repository": {
-                                        "name": "pre-commit",
-                                        "nameWithOwner": "chriskuehl/pre-commit",
-                                        "owner": {
-                                            "login": "chriskuehl"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pydocstyle",
-                                    "repository": {
-                                        "name": "pydocstyle",
-                                        "nameWithOwner": "PyCQA/pydocstyle",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "PyCQA"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pylint",
-                                    "repository": {
-                                        "name": "pylint",
-                                        "nameWithOwner": "PyCQA/pylint",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "PyCQA"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "name": "pytest",
-                                        "nameWithOwner": "pytest-dev/pytest",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "pytest-dev"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest-cov",
-                                    "repository": {
-                                        "name": "pytest-cov",
-                                        "nameWithOwner": "pytest-dev/pytest-cov",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "pytest-dev"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "PyYAML",
-                                    "repository": {
-                                        "name": "pyyaml",
-                                        "nameWithOwner": "yaml/pyyaml",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "yaml"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "name": "six",
-                                        "nameWithOwner": "benjaminp/six",
-                                        "owner": {
-                                            "login": "benjaminp"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "Sphinx",
-                                    "repository": {
-                                        "name": "sphinx",
-                                        "nameWithOwner": "sphinx-doc/sphinx",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "sphinx-doc"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "name": "sphinx_rtd_theme",
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "readthedocs"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tabulate",
-                                    "repository": {
-                                        "name": "python-tabulate",
-                                        "nameWithOwner": "astanin/python-tabulate",
-                                        "owner": {
-                                            "login": "astanin"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tox",
-                                    "repository": {
-                                        "name": "tox",
-                                        "nameWithOwner": "tox-dev/tox",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "tox-dev"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "chainmap",
-                                    "repository": {
-                                        "name": "chainmap",
-                                        "nameWithOwner": "jonathaneunice/chainmap",
-                                        "owner": {
-                                            "login": "jonathaneunice"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coloredlogs",
-                                    "repository": {
-                                        "name": "python-coloredlogs",
-                                        "nameWithOwner": "xolox/python-coloredlogs",
-                                        "owner": {
-                                            "login": "xolox"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coverage",
-                                    "repository": {
-                                        "name": "coveragepy",
-                                        "nameWithOwner": "nedbat/coveragepy",
-                                        "owner": {
-                                            "login": "nedbat"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "dill",
-                                    "repository": {
-                                        "name": "dill-torch",
-                                        "nameWithOwner": "meissnereric/dill-torch",
-                                        "owner": {
-                                            "login": "meissnereric"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "enum34",
-                                    "repository": {
-                                        "name": "enum34",
-                                        "nameWithOwner": "certik/enum34",
-                                        "owner": {
-                                            "login": "certik"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "fabric",
-                                    "repository": {
-                                        "name": "fabric",
-                                        "nameWithOwner": "mattrenquist/fabric",
-                                        "owner": {
-                                            "login": "mattrenquist"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "filelock",
-                                    "repository": {
-                                        "name": "py-filelock",
-                                        "nameWithOwner": "benediktschmitt/py-filelock",
-                                        "owner": {
-                                            "login": "benediktschmitt"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "name": "flake8",
-                                        "nameWithOwner": "PyCQA/flake8",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "PyCQA"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jsonschema",
-                                    "repository": {
-                                        "name": "jsonschema",
-                                        "nameWithOwner": "Julian/jsonschema",
-                                        "owner": {
-                                            "login": "Julian"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pre-commit",
-                                    "repository": {
-                                        "name": "pre-commit",
-                                        "nameWithOwner": "chriskuehl/pre-commit",
-                                        "owner": {
-                                            "login": "chriskuehl"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pydocstyle",
-                                    "repository": {
-                                        "name": "pydocstyle",
-                                        "nameWithOwner": "PyCQA/pydocstyle",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "PyCQA"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pylint",
-                                    "repository": {
-                                        "name": "pylint",
-                                        "nameWithOwner": "PyCQA/pylint",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "PyCQA"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "name": "pytest",
-                                        "nameWithOwner": "pytest-dev/pytest",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "pytest-dev"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest-cov",
-                                    "repository": {
-                                        "name": "pytest-cov",
-                                        "nameWithOwner": "pytest-dev/pytest-cov",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "pytest-dev"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "name": "pyyaml",
-                                        "nameWithOwner": "yaml/pyyaml",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "yaml"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "name": "six",
-                                        "nameWithOwner": "benjaminp/six",
-                                        "owner": {
-                                            "login": "benjaminp"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "name": "sphinx",
-                                        "nameWithOwner": "sphinx-doc/sphinx",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "sphinx-doc"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "name": "sphinx_rtd_theme",
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "readthedocs"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tabulate",
-                                    "repository": {
-                                        "name": "python-tabulate",
-                                        "nameWithOwner": "astanin/python-tabulate",
-                                        "owner": {
-                                            "login": "astanin"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tox",
-                                    "repository": {
-                                        "name": "tox",
-                                        "nameWithOwner": "tox-dev/tox",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "tox-dev"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "chainmap",
-                                    "repository": {
-                                        "name": "chainmap",
-                                        "nameWithOwner": "jonathaneunice/chainmap",
-                                        "owner": {
-                                            "login": "jonathaneunice"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coloredlogs",
-                                    "repository": {
-                                        "name": "python-coloredlogs",
-                                        "nameWithOwner": "xolox/python-coloredlogs",
-                                        "owner": {
-                                            "login": "xolox"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "dill",
-                                    "repository": {
-                                        "name": "dill-torch",
-                                        "nameWithOwner": "meissnereric/dill-torch",
-                                        "owner": {
-                                            "login": "meissnereric"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "enum34",
-                                    "repository": {
-                                        "name": "enum34",
-                                        "nameWithOwner": "certik/enum34",
-                                        "owner": {
-                                            "login": "certik"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "filelock",
-                                    "repository": {
-                                        "name": "py-filelock",
-                                        "nameWithOwner": "benediktschmitt/py-filelock",
-                                        "owner": {
-                                            "login": "benediktschmitt"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jsonschema",
-                                    "repository": {
-                                        "name": "jsonschema",
-                                        "nameWithOwner": "Julian/jsonschema",
-                                        "owner": {
-                                            "login": "Julian"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "name": "pyyaml",
-                                        "nameWithOwner": "yaml/pyyaml",
-                                        "owner": {
-                                            "isVerified": false,
-                                            "login": "yaml"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "name": "six",
-                                        "nameWithOwner": "benjaminp/six",
-                                        "owner": {
-                                            "login": "benjaminp"
-                                        }
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tabulate",
-                                    "repository": {
-                                        "name": "python-tabulate",
-                                        "nameWithOwner": "astanin/python-tabulate",
-                                        "owner": {
-                                            "login": "astanin"
-                                        }
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             }
         },
         "LLNL/magpie": {
@@ -20412,11 +19896,6 @@
                 "nodes": []
             }
         },
-        "flux-framework/flux-research-artifacts": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            }
-        },
         "flux-framework/flux-rs": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21067,6 +20546,163 @@
                 ]
             }
         },
+        "spack/contrib": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "codecov",
+                                    "repository": {
+                                        "name": "codecov-python",
+                                        "nameWithOwner": "webknjaz/codecov-python",
+                                        "owner": {
+                                            "login": "webknjaz"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "name": "jsonschema",
+                                        "nameWithOwner": "Julian/jsonschema",
+                                        "owner": {
+                                            "login": "Julian"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "name": "matplotlib",
+                                        "nameWithOwner": "matplotlib/matplotlib",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "matplotlib"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "name": "pytest",
+                                        "nameWithOwner": "pytest-dev/pytest",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "pytest-dev"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "name": "python-dateutil",
+                                        "nameWithOwner": "paxan/python-dateutil",
+                                        "owner": {
+                                            "login": "paxan"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "name": "pyyaml",
+                                        "nameWithOwner": "yaml/pyyaml",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "yaml"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "setuptools",
+                                    "repository": {
+                                        "name": "setuptools",
+                                        "nameWithOwner": "pypa/setuptools",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "pypa"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "name": "jsonschema",
+                                        "nameWithOwner": "Julian/jsonschema",
+                                        "owner": {
+                                            "login": "Julian"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "name": "matplotlib",
+                                        "nameWithOwner": "matplotlib/matplotlib",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "matplotlib"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "name": "python-dateutil",
+                                        "nameWithOwner": "paxan/python-dateutil",
+                                        "owner": {
+                                            "login": "paxan"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "name": "pyyaml",
+                                        "nameWithOwner": "yaml/pyyaml",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "yaml"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "setuptools",
+                                    "repository": {
+                                        "name": "setuptools",
+                                        "nameWithOwner": "pypa/setuptools",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "pypa"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
         "spack/legacy-spack.io": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21195,7 +20831,17 @@
                 ]
             }
         },
+        "spack/spack-bibliography": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
         "spack/spack-ci-containers": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "spack/spack-configs": {
             "dependencyGraphManifests": {
                 "nodes": []
             }
@@ -21713,6 +21359,444 @@
                                         "nameWithOwner": "jaraco/zipp",
                                         "owner": {
                                             "login": "jaraco"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "spack/spack-tutorial": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-levenshtein",
+                                    "repository": {
+                                        "name": "python-Levenshtein",
+                                        "nameWithOwner": "ztane/python-Levenshtein",
+                                        "owner": {
+                                            "login": "ztane"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "name": "sphinx",
+                                        "nameWithOwner": "sphinx-doc/sphinx",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "sphinx-doc"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "name": "sphinx_rtd_theme",
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "readthedocs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-programoutput",
+                                    "repository": {
+                                        "name": "sphinxcontrib-programoutput",
+                                        "nameWithOwner": "NextThought/sphinxcontrib-programoutput",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "NextThought"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "spack/spack-tutorial-container": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            }
+        },
+        "spack/spack.io": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll",
+                                    "repository": {
+                                        "name": "jekyll",
+                                        "nameWithOwner": "jekyll/jekyll",
+                                        "owner": {
+                                            "isVerified": true,
+                                            "login": "jekyll"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-paginate-v2",
+                                    "repository": {
+                                        "name": "jekyll-paginate-v2",
+                                        "nameWithOwner": "sverrirs/jekyll-paginate-v2",
+                                        "owner": {
+                                            "login": "sverrirs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "minimal-mistakes-jekyll",
+                                    "repository": {
+                                        "name": "minimal-mistakes",
+                                        "nameWithOwner": "mmistakes/minimal-mistakes",
+                                        "owner": {
+                                            "login": "mmistakes"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@blakeembrey/deque",
+                                    "repository": {
+                                        "name": "deque",
+                                        "nameWithOwner": "blakeembrey/deque",
+                                        "owner": {
+                                            "login": "blakeembrey"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-styles",
+                                    "repository": {
+                                        "name": "ansi-styles",
+                                        "nameWithOwner": "chalk/ansi-styles",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "chalk"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "anymatch",
+                                    "repository": {
+                                        "name": "anymatch",
+                                        "nameWithOwner": "micromatch/anymatch",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "micromatch"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "arrify",
+                                    "repository": {
+                                        "name": "arrify",
+                                        "nameWithOwner": "sindresorhus/arrify",
+                                        "owner": {
+                                            "login": "sindresorhus"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "balanced-match",
+                                    "repository": {
+                                        "name": "balanced-match",
+                                        "nameWithOwner": "juliangruber/balanced-match",
+                                        "owner": {
+                                            "login": "juliangruber"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "binary-extensions",
+                                    "repository": {
+                                        "name": "binary-extensions",
+                                        "nameWithOwner": "sindresorhus/binary-extensions",
+                                        "owner": {
+                                            "login": "sindresorhus"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "brace-expansion",
+                                    "repository": {
+                                        "name": "brace-expansion",
+                                        "nameWithOwner": "juliangruber/brace-expansion",
+                                        "owner": {
+                                            "login": "juliangruber"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "braces",
+                                    "repository": {
+                                        "name": "braces",
+                                        "nameWithOwner": "micromatch/braces",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "micromatch"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chalk",
+                                    "repository": {
+                                        "name": "chalk",
+                                        "nameWithOwner": "chalk/chalk",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "chalk"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chokidar",
+                                    "repository": {
+                                        "name": "chokidar",
+                                        "nameWithOwner": "paulmillr/chokidar",
+                                        "owner": {
+                                            "login": "paulmillr"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "color-convert",
+                                    "repository": {
+                                        "name": "color-convert",
+                                        "nameWithOwner": "Qix-/color-convert",
+                                        "owner": {
+                                            "login": "Qix-"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "color-name",
+                                    "repository": {
+                                        "name": "color-name",
+                                        "nameWithOwner": "colorjs/color-name",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "colorjs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "commander",
+                                    "repository": {
+                                        "name": "commander.js",
+                                        "nameWithOwner": "tj/commander.js",
+                                        "owner": {
+                                            "login": "tj"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "concat-map",
+                                    "repository": {
+                                        "name": "node-concat-map",
+                                        "nameWithOwner": "substack/node-concat-map",
+                                        "owner": {
+                                            "login": "substack"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "cross-spawn",
+                                    "repository": {
+                                        "name": "node-cross-spawn",
+                                        "nameWithOwner": "moxystudio/node-cross-spawn",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "moxystudio"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "define-properties",
+                                    "repository": {
+                                        "name": "define-properties",
+                                        "nameWithOwner": "ljharb/define-properties",
+                                        "owner": {
+                                            "login": "ljharb"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "error-ex",
+                                    "repository": {
+                                        "name": "node-error-ex",
+                                        "nameWithOwner": "Qix-/node-error-ex",
+                                        "owner": {
+                                            "login": "Qix-"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "es-abstract",
+                                    "repository": {
+                                        "name": "es-abstract",
+                                        "nameWithOwner": "ljharb/es-abstract",
+                                        "owner": {
+                                            "login": "ljharb"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "es-to-primitive",
+                                    "repository": {
+                                        "name": "es-to-primitive",
+                                        "nameWithOwner": "ljharb/es-to-primitive",
+                                        "owner": {
+                                            "login": "ljharb"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "escape-string-regexp",
+                                    "repository": {
+                                        "name": "escape-string-regexp",
+                                        "nameWithOwner": "sindresorhus/escape-string-regexp",
+                                        "owner": {
+                                            "login": "sindresorhus"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fill-range",
+                                    "repository": {
+                                        "name": "fill-range",
+                                        "nameWithOwner": "jonschlinkert/fill-range",
+                                        "owner": {
+                                            "login": "jonschlinkert"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fsevents",
+                                    "repository": {
+                                        "name": "fsevents",
+                                        "nameWithOwner": "fsevents/fsevents",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "fsevents"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "function-bind",
+                                    "repository": {
+                                        "name": "function-bind",
+                                        "nameWithOwner": "Raynos/function-bind",
+                                        "owner": {
+                                            "login": "Raynos"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "glob-parent",
+                                    "repository": {
+                                        "name": "glob-parent",
+                                        "nameWithOwner": "gulpjs/glob-parent",
+                                        "owner": {
+                                            "isVerified": false,
+                                            "login": "gulpjs"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "graceful-fs",
+                                    "repository": {
+                                        "name": "node-graceful-fs",
+                                        "nameWithOwner": "isaacs/node-graceful-fs",
+                                        "owner": {
+                                            "login": "isaacs"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "npm-run-all",
+                                    "repository": {
+                                        "name": "npm-run-all",
+                                        "nameWithOwner": "mysticatea/npm-run-all",
+                                        "owner": {
+                                            "login": "mysticatea"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "onchange",
+                                    "repository": {
+                                        "name": "onchange",
+                                        "nameWithOwner": "Qard/onchange",
+                                        "owner": {
+                                            "login": "Qard"
+                                        }
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "uglify-js",
+                                    "repository": {
+                                        "name": "UglifyJS",
+                                        "nameWithOwner": "mishoo/UglifyJS",
+                                        "owner": {
+                                            "login": "mishoo"
                                         }
                                     }
                                 }
