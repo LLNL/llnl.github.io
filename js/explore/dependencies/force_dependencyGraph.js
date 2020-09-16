@@ -104,7 +104,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .style('cursor', 'pointer')
                 .attr('r', 5)
                 .attr('class', 'inGraph')
-                .attr('name', d => d.id)
+                .attr('language', d => d.language)
+                .attr('id', d => d.id)
                 .attr('fill', d => {
                     if (d.notPackage && !d.package) {
                         return colors[0];
@@ -128,14 +129,29 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 node.selectAll('circle').each(d => d.depth = null);
                 const t = chart.transition().duration(300);
                 node.selectAll('circle').transition(t)
-                    .attr('fill-opacity', 1)
-                    .attr('stroke-opacity', 1);
+                    .attr('fill-opacity', d => {
+                        if (document.getElementById(d['id']).getAttribute('searched')) {
+                            return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                        } else {
+                            return 1;
+                        }
+                    })
+                    .attr('stroke-opacity', d => {
+                        if (document.getElementById(d['id']).getAttribute('searched')) {
+                            return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                        } else {
+                            return 1;
+                        }
+                    });
                 link.selectAll('line').transition(t)
                     .attr('stroke-opacity', 0.6);
                 nodeTip.hide(d)
             })
             .on('click', d => {
-                node.selectAll('circle').each(d => d['focused'] = false);
+                node.selectAll('circle').each(d => {
+                    d['focused'] = false;
+                    document.getElementById(d['id']).removeAttribute('searched');
+                });
                 d['focused'] = true;
                 node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                 draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color, language: d.language, color: d.color }, adjacentAreaID);
@@ -375,8 +391,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .style('cursor', 'pointer')
                     .attr('r', 5)
                     .attr('class', 'inGraph')
-                    .attr('name', d => d.id)
+                    .attr('language', d => d.language)
+                    .attr('id', d => d.id)
+                    .attr('searched', undefined)
                     .attr('fill-opacity', 1)
+                    .attr('stroke-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -400,14 +419,29 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     node.selectAll('circle').each(d => d.depth = null);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
-                        .attr('fill-opacity', 1)
-                        .attr('stroke-opacity', 1);
+                        .attr('fill-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        })
+                        .attr('stroke-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        });
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
                 .on('click', d => {
-                    node.selectAll('circle').each(d => d['focused'] = false);
+                    node.selectAll('circle').each(d => {
+                        d['focused'] = false;
+                        document.getElementById(d['id']).removeAttribute('searched');
+                    });
                     d['focused'] = true;
                     node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                     draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
@@ -449,8 +483,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .style('cursor', 'pointer')
                     .attr('r', 5)
                     .attr('class', 'inGraph')
-                    .attr('name', d => d.id)
+                    .attr('language', d => d.language)
+                    .attr('id', d => d.id)
+                    .attr('searched', undefined)
                     .attr('fill-opacity', 1)
+                    .attr('stroke-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -474,14 +511,29 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     node.selectAll('circle').each(d => d.depth = null);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
-                        .attr('fill-opacity', 1)
-                        .attr('stroke-opacity', 1);
+                        .attr('fill-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        })
+                        .attr('stroke-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        });
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.6);
                     nodeTip.hide(d);
                 })
                 .on('click', d => {
-                    node.selectAll('circle').each(d => d['focused'] = false);
+                    node.selectAll('circle').each(d => {
+                        d['focused'] = false;
+                        document.getElementById(d['id']).removeAttribute('searched');
+                    });
                     d['focused'] = true;
                     node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                     draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
@@ -552,8 +604,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .style('cursor', 'pointer')
                     .attr('r', 5)
                     .attr('class', 'inGraph')
-                    .attr('name', d => d.id)
+                    .attr('language', '')
+                    .attr('id', d => d.id)
+                    .attr('searched', undefined)
                     .attr('fill-opacity', 1)
+                    .attr('stroke-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -577,14 +632,29 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     node.selectAll('circle').each(d => d.depth = null);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
-                        .attr('fill-opacity', 1)
-                        .attr('stroke-opacity', 1);
+                        .attr('fill-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        })
+                        .attr('stroke-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        });
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
                 .on('click', d => {
-                    node.selectAll('circle').each(d => d['focused'] = false);
+                    node.selectAll('circle').each(d => {
+                        d['focused'] = false;
+                        document.getElementById(d['id']).removeAttribute('searched');
+                    });
                     d['focused'] = true;
                     node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                     draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
@@ -660,8 +730,11 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .style('cursor', 'pointer')
                     .attr('r', 5)
                     .attr('class', 'inGraph')
-                    .attr('name', d => d.id)
+                    .attr('language', '')
+                    .attr('id', d => d.id)
+                    .attr('searched', undefined)
                     .attr('fill-opacity', 1)
+                    .attr('stroke-opacity', 1)
                     .attr('fill', d => {
                         if (d.notPackage && !d.package) {
                             return colors[0];
@@ -685,14 +758,29 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     node.selectAll('circle').each(d => d.depth = null);
                     const t = chart.transition().duration(300);
                     node.selectAll('circle').transition(t)
-                        .attr('fill-opacity', 1)
-                        .attr('stroke-opacity', 1);
+                        .attr('fill-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        })
+                        .attr('stroke-opacity', d => {
+                            if (document.getElementById(d['id']).getAttribute('searched')) {
+                                return document.getElementById(d['id']).getAttribute('searched') === 'true' ? 1 : 0.2;
+                            } else {
+                                return 1;
+                            }
+                        });
                     link.selectAll('line').transition(t)
                         .attr('stroke-opacity', 0.2);
                     nodeTip.hide(d);
                 })
                 .on('click', d => {
-                    node.selectAll('circle').each(d => d['focused'] = false);
+                    node.selectAll('circle').each(d => {
+                        d['focused'] = false;
+                        document.getElementById(d['id']).removeAttribute('searched');
+                    });
                     d['focused'] = true;
                     node.selectAll('circle').attr('r', d => d.focused ? 8 : 5);
                     draw_connection_tree({ name: d.name, id: d.id, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d), language: d.language, color: d.color }, adjacentAreaID);
@@ -917,13 +1005,20 @@ function draw_force_graph(areaID, adjacentAreaID) {
 function searchForm(event) {
     event.preventDefault();
     $('.inGraph').attr('fill-opacity', function(i, d) {
-        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
+        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 1 : 0.2;
     });
+
     $('.inGraph').attr('stroke-opacity', function(i, d) {
-        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 1 : 0.2;
+        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 1 : 0.2;
     });
     
     $('.inGraph').attr('r', function(i, d) {
-        return $(this).attr('name').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) ? 6.5 : 5;
+        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 6.5 : 5;
+    });
+
+    $('.inGraph').attr('searched', function(i, d) {
+        console.debug($(this).attr('id'));
+        console.debug($(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())));
+        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase()));
     });
 }
