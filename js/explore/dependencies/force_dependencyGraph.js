@@ -605,7 +605,14 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('r', 5)
                     .attr('class', 'inGraph')
                     .attr('language', '')
-                    .attr('id', d => d.id)
+                    .attr('id', d => {
+                        if (d.id === 'github') {
+                            d.id = 'GitHub';
+                            return 'GitHub';
+                        } else {
+                            return d.id;
+                        }
+                    })
                     .attr('searched', undefined)
                     .attr('fill-opacity', 1)
                     .attr('stroke-opacity', 1)
@@ -1017,8 +1024,6 @@ function searchForm(event) {
     });
 
     $('.inGraph').attr('searched', function(i, d) {
-        console.debug($(this).attr('id'));
-        console.debug($(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())));
         return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase()));
     });
 }
