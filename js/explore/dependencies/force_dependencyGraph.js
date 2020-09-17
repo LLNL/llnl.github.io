@@ -605,14 +605,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     .attr('r', 5)
                     .attr('class', 'inGraph')
                     .attr('language', '')
-                    .attr('id', d => {
-                        if (d.id === 'github') {
-                            d.id = 'GitHub';
-                            return 'GitHub';
-                        } else {
-                            return d.id;
-                        }
-                    })
+                    .attr('id', d => d.id)
                     .attr('searched', undefined)
                     .attr('fill-opacity', 1)
                     .attr('stroke-opacity', 1)
