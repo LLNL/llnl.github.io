@@ -1,9 +1,10 @@
 function draw_force_graph(areaID, adjacentAreaID) {
     // URL for data
-    var url = ghDataDir + '/labRepos_Dependencies.json';
-    var files = [url];
+    var url1 = ghDataDir + '/labRepos_Dependencies.json';
+    var url2 = ghDataDir + '/dependencyInfo.json';
+    var files = [url1, url2];
     // Converts json file into object, reformats data, and then draws graph.
-    Promise.all(files.map(url => d3.json(url))).then(values => drawGraph(reformatData(values[0]), areaID, adjacentAreaID));
+    Promise.all(files.map(url => d3.json(url))).then(values => drawGraph(reformatData(values[0], values[1]), areaID, adjacentAreaID));
 
     // Draws graph
     function drawGraph(data, areaID, adjacentAreaID) {
@@ -16,10 +17,15 @@ function draw_force_graph(areaID, adjacentAreaID) {
             legendSpacing = 4;
         const ringSize = (Math.min(width - margin.left - margin.right, height - margin.top - margin.bottom) + 4) / 2;
 
+        // Default colors picked and used to delineate Internal and External repositories
         const colors = ['#6baed6', 'seagreen', '#3182bd'];
+
+        // Used to color the graph based on GitHub language colors
         let languageColors = [];
+        // Needed for legend
         let languages = []
 
+        // Booleans used to track the states needed to implement color by language
         let colorLanguage = false;
         let orgSelected = false;
 
@@ -29,6 +35,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .attr('height', height)
                 .attr('viewBox', [-width / 2, -height / 2, width, height]);
 
+        // Should always represent the current set of nodes and links being displayed
         let nodes = data.nodes;
         let links = data.links;
 
@@ -55,8 +62,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
         const simulation = d3.forceSimulation(nodes)
             .force('link', d3.forceLink(links).id(d => d.id).distance(d => 10))
             .force('charge', d3.forceManyBody().strength(() => -20))
-            .force('x', d3.forceX().strength(() => 0.09))
-            .force('y', d3.forceY().strength(() => 0.09));
+            .force('x', d3.forceX().strength(() => 0.14))
+            .force('y', d3.forceY().strength(() => 0.14));
 
         // Adds title
         chart
@@ -177,6 +184,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
         const legend = chart
             .append('g');
 
+        // Updates legend to any array of labels and colors
+        // Arrays should be the same size
         function updateLegend(labels, color = colors) {
             legend.selectAll('g').remove();
 
@@ -239,7 +248,8 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .attr('stroke', colorLanguage ? 'white' : 'black')
             .style('cursor', 'pointer')
             .on('click', () => {
-                if (!orgSelected) {
+                // Since orgs do not have languages, we do not want colorByLanguage to be called
+                if (!orgSelected) { 
                     if (colorLanguage) {
                         colorLanguage = !colorLanguage;
                         colorButtonCircle.attr('fill', 'white');
@@ -284,6 +294,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 d3.select('.' + adjacentAreaID).select('g').remove();
             });
 
+        // Slider group
         chart.append('g')
             .attr('transform', `translate(${width / 2 - margin.right / 2},${0 - height / 2 + margin.top / 2})`)
             .call(slider);
@@ -344,11 +355,12 @@ function draw_force_graph(areaID, adjacentAreaID) {
             return a * Math.exp(0 - b * i);
         }
 
-        // Gets the neighbors of a node
+        // Gets the neighbors of a node using original data
         function getNeighbors(node) {
             return linksToNodes(adjacentEdges([node])).filter(d => d.id != node.id);
         }
 
+        // Gets the neighbors of a node in the current graph
         function getCurrentNeighbors(node) {
             return linksToNodes(currentAdjacentEdges([node])).filter(d => d.id != node.id);
         }
@@ -369,6 +381,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             const newLinks = [];
             const newNodes = [];
 
+            // Uses original data to create a list of internal repos connected by shared dependencies
             data.nodes.forEach(d => {
                 if (d.package) {
                     const neighbors = getNeighbors(d).filter(d => d.notPackage);
@@ -676,6 +689,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             orgSelected = true;
         }
 
+        // Runs the simplify algorithm on the organization view
         function simplifyOrganize() {
             const orgs = {};
             data.nodes.forEach(d => {
@@ -802,6 +816,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             orgSelected = true;
         }
 
+        // Constants that dictate the size of the tree generated on click
         const treeWidth = stdTotalWidth * 0.9 + 50 - margin.left - margin.right,
             treeHeight = stdTotalHeight * 2 - margin.top - margin.bottom;
 
@@ -814,6 +829,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .attr('fill', 'none')
             .attr('stroke', 'black');
 
+        // Generates and draws tree of neighbors to clicked node
         function draw_connection_tree(data, adjacentAreaID) {
             d3.select('.' + adjacentAreaID).select('g').remove();
 
@@ -934,6 +950,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                 .attr('transform', `translate(${margin.left + labelLeft},${(treeHeight / 2) - root.x + 5})`);
         }
 
+        // Colors the graph based on language colors if check is true
         function colorByLanguage(check) {
             if (check) {
                 node.selectAll('circle')
@@ -973,7 +990,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
     }
 
     // Converts json file to usable data
-    function reformatData(obj) {
+    function reformatData(obj, obj2) {
         const nodes = [];
         const links = [];
         for (var repo in obj['data']) {
@@ -988,7 +1005,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
                         continue;
                     }
                     if (!nodes.some(d => d.id == node['repository']['nameWithOwner'])) {
-                        nodes.push({ name: node['repository']['name'], id: node['repository']['nameWithOwner'], package: true, notPackage: false, verified: node['repository']['owner']['isVerified'], language: node['repository']['languages']['nodes'][0] ? node['repository']['languages']['nodes'][0]['name'] : null, color: node['repository']['languages']['nodes'][0] ? node['repository']['languages']['nodes'][0]['color'] : null });
+                        nodes.push({ name: node['repository']['nameWithOwner'].split('/')[0], id: node['repository']['nameWithOwner'], package: true, notPackage: false, verified: obj2['data'][node['repository']['nameWithOwner']]['owner']['isVerified'], language: obj2['data'][node['repository']['nameWithOwner']]['languages']['nodes'][0] ? obj2['data'][node['repository']['nameWithOwner']]['languages']['nodes'][0]['name'] : null, color: obj2['data'][node['repository']['nameWithOwner']]['languages']['nodes'][0] ? obj2['data'][node['repository']['nameWithOwner']]['languages']['nodes'][0]['color'] : null });
                     } else {
                         nodes[nodes.findIndex(d => d.id == node['repository']['nameWithOwner'])].package = true;
                     }
