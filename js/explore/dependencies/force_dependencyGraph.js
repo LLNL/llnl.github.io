@@ -1017,8 +1017,6 @@ function searchForm(event) {
     });
 
     $('.inGraph').attr('searched', function(i, d) {
-        console.debug($(this).attr('id'));
-        console.debug($(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())));
         return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase()));
     });
 }
