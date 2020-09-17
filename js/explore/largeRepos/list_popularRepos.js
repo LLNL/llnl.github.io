@@ -62,7 +62,6 @@ function draw_popularRepos(areaID, columns=2, orthogonalOrdering=false) {
                     .attr('y', 0 - margin.top / 2)
                     .attr('text-anchor', 'middle')
                     .text(graphHeader);
-
         
     }
 
