@@ -82,8 +82,6 @@ function draw_line_repoActivity(areaID, byCommits=true, repoNameWOwner) {
             .domain([0, mostPopularRepositories.length - 1])
             .range(d3.quantize(d3.interpolate('#3182bd', '#d1e3f0'), mostPopularRepositories.length));
 
-        // d3.quantize(d3.interpolateInferno, data.length + 1)
-
         var dToday = x.domain()[1];
         // Supercomputing
         var dSupercomp = '11-18';
