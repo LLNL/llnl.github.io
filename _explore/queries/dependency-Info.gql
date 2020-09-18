@@ -1,5 +1,7 @@
 query ($ownName: String!, $repoName: String!) {
   repository(owner: $ownName, name: $repoName) {
+    nameWithOwner
+    name
     languages(first: 1, orderBy: {field: SIZE, direction: DESC}) {
       nodes {
         name

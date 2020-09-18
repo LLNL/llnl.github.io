@@ -38,10 +38,10 @@ for repo in repolist:
     try:
         outObj = queryMan.queryGitHubFromFile(
             queryPath,
-            {"ownName": r[0], "repoName": r[1],},
-            paginate=False,
-            cursorVar="pgCursor",
-            keysToList=["data", "languages", "owner"],
+            {
+                "ownName": r[0],
+                "repoName": r[1],
+            },
             headers={"Accept": "application/vnd.github.hawkgirl-preview+json"},
         )
     except Exception as error:
