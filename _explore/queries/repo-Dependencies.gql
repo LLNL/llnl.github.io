@@ -13,20 +13,7 @@ query ($ownName: String!, $repoName: String!, $numManifests: Int!, $numDependent
             packageName
             packageManager
             repository {
-              languages(first: 1, orderBy: {field: SIZE, direction: DESC}) {
-                nodes {
-                  name
-                  color
-                }
-              }
-              name
               nameWithOwner
-              owner {
-                login
-                ... on Organization {
-                  isVerified
-                }
-              }
             }
           }
         }

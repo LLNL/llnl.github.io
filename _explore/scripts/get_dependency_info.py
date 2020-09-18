@@ -2,15 +2,24 @@ from scraper.github import queryManager as qm
 from os import environ as env
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labRepos_Dependencies.json" % ghDataDir
-queryPath = "../queries/repo-Dependencies.gql"
+datfilepath = "%s/dependencyInfo.json" % ghDataDir
+queryPath = "../queries/dependency-Info.gql"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
+inputLists = qm.DataManager("%s/labRepos_Dependencies.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
-print("Getting internal repos ...")
-repolist = sorted(inputLists.data["data"].keys())
+print("Getting dependency repos ...")
+for repoName in inputLists.data["data"]:
+    for node in inputLists.data["data"][repoName]["dependencyGraphManifests"]["nodes"]:
+        for repo in node["dependencies"]["nodes"]:
+            if (
+                repo["repository"] is not None
+                and repo["repository"]["nameWithOwner"] is not None
+            ):
+                repolist.append(repo["repository"]["nameWithOwner"])
+repolist = list(dict.fromkeys(repolist))
+repolist = sorted(repolist)
 print("Repo list complete. Found %d repos." % (len(repolist)))
 
 # Initialize data collector
@@ -20,8 +29,8 @@ dataCollector.data = {"data": {}}
 # Initialize query manager
 queryMan = qm.GitHubQueryManager()
 
-# Iterate through internal repos
-print("Gathering data across multiple paginated queries...")
+# Iterate through dependency repos
+print("Gathering data across multiple queries...")
 for repo in repolist:
     print("\n'%s'" % (repo))
 
@@ -32,13 +41,7 @@ for repo in repolist:
             {
                 "ownName": r[0],
                 "repoName": r[1],
-                "numManifests": 100,
-                "numDependents": 100,
-                "pgCursor": None,
             },
-            paginate=True,
-            cursorVar="pgCursor",
-            keysToList=["data", "repository", "dependencyGraphManifests", "nodes"],
             headers={"Accept": "application/vnd.github.hawkgirl-preview+json"},
         )
     except Exception as error:
