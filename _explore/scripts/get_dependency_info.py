@@ -9,7 +9,7 @@ queryPath = "../queries/dependency-Info.gql"
 inputLists = qm.DataManager("%s/labRepos_Dependencies.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
-print("Getting internal repos ...")
+print("Getting dependency repos ...")
 for repoName in inputLists.data["data"]:
     for node in inputLists.data["data"][repoName]["dependencyGraphManifests"]["nodes"]:
         for repo in node["dependencies"]["nodes"]:
@@ -29,8 +29,8 @@ dataCollector.data = {"data": {}}
 # Initialize query manager
 queryMan = qm.GitHubQueryManager()
 
-# Iterate through internal repos
-print("Gathering data across multiple paginated queries...")
+# Iterate through dependency repos
+print("Gathering data across multiple queries...")
 for repo in repolist:
     print("\n'%s'" % (repo))
 
