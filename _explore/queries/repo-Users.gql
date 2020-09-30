@@ -1,0 +1,16 @@
+query ($ownName: String!, $repoName: String!, $numUsers: Int!, $pgCursor: String) {
+  repository(owner: $ownName, name: $repoName) {
+    mentionableUsers(first: $numUsers, after: $pgCursor) {
+      nodes {
+        login
+        name
+        avatarUrl
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+# {"ownName": "LLNL", "repoName": "llnl.github.io", "numUsers": 50, "pgCursor": null}

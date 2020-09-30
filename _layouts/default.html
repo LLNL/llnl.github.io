@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
+    {% include head.html %}
 
-<body>
+    <body class="static-text">
+ 
+        {% include header.html %}
 
-{% include header.html %}
+        {{ content }}
 
-<div class="container">
-{{ content }}
-</div>
+        {% include footer.html %}
 
-{% include footer.html %}
+        {% include scripts.html %}
 
-{% include scripts.html %}
+        {% include piwik.html %}
 
-{% include piwik.html %}
-
-</body>
+    </body>
 </html>

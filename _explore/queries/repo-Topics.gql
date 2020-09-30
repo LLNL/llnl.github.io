@@ -1,0 +1,19 @@
+query ($ownName: String!, $repoName: String!, $numTopics: Int!, $pgCursor: String) {
+  repository(owner: $ownName, name: $repoName) {
+    repositoryTopics(first: $numTopics, after: $pgCursor) {
+      totalCount
+      nodes {
+        topic {
+          name
+        }
+        resourcePath
+        url
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+# {"ownName": "LLNL", "repoName": "llnl.github.io", "numTopics": 25, "pgCursor": null}

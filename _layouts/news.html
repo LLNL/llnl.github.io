@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+            <div class="container" style="margin-top: 30px;">
+                <div class="twitterFeed">
+                    <div class="tweet-border">
+                    <h4 class="twitter-title "> Latest from Twitter </h4>
+                    <a class="twitter-timeline " data-chrome="nofooter noheader noborders" href="https://twitter.com/{{site.twitter.username}}" data-tweet-limit="2"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <div >
+                        <a href="https://twitter.com/{{site.twitter.username}}" class="twitter-follow-button" data-show-count="false">Follow @LLNL_OpenSource</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+                    </div>
+                </div>
+
+            {{ content }}
+            
+            <div class="twitterFeed-mobile" >
+                    <h4 class="twitter-title"> Latest from Twitter </h4>
+                    <a class="twitter-timeline" data-chrome="nofooter noheader" href="https://twitter.com/{{site.twitter.username}}" data-tweet-limit="2"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a href="https://twitter.com/{{site.twitter.username}}" class="twitter-follow-button" data-show-count="false">Follow @{{site.twitter.username}}</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>

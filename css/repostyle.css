@@ -1,0 +1,44 @@
+/* For individual repository pages */
+
+.title {
+    font-size: 150%;
+}
+
+a.title {
+    color: inherit;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-size: 70%;
+    color: #777;
+}
+
+a.subtitle {
+    color: #777;
+    text-decoration: none;
+}
+
+.subtitle > span.fa {
+    margin-right: 8px;
+}
+
+.subtitle + .subtitle {
+    border-left: 1px solid #777;
+    padding-left: 10px;
+}
+
+p.stats {
+    font-size: 150%;
+}
+
+p.stats > a {
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 15px;
+}
+
+p.stats > a > span.fa {
+    margin-right: 8px;
+}

@@ -1,51 +1,52 @@
 ---
-title: LLNL Software Catalog
-layout: portal
+title: LLNL Software Portal
+layout: homepage
 ---
 
 {% raw %}
 
-<h2 class="page-header text-center">
-<span ng-show="repoData"> {{ repoData.length }} </span>
-Software Repositories
-</h2>
+<p class="page-title">Welcome to the LLNL software portal—a hub for our open source projects. <br />Our <a ng-click="categoryHref('ALL SOFTWARE')" style="cursor: pointer">full catalog</a> is updated regularly as repositories are added or modified.</p>
 
-<div class="container">
-    <div class="col-xs-6 col-xs-offset-3">
-        <input id="filterRepos" type="text" style="width: 100%" autofocus placeholder="Filter Repositories">
-    </div>
-</div>
+<section class="flex-container" id="categories">
+    <div ng-repeat="category in catData" class="flex-category dynamic" ng-click="categoryHref(category.title)">
+        <img ng-src="{{ category.icon.path }}" style="width: 150px; height: 150px" alt="{{ category.icon.alt }}" />
+        <h4>{{ category.title }}</h4>
+        <p class="text-center">{{ category.description }}</p>
 
-<section ng-show="repoData" id="repositories" class="flex-container">
-    <div ng-repeat="repo in repoData | filter:searchText  | orderBy:predicate:reverse" class="flex-item {{repo.name}} {{repo.language}}">
-        <h4 class="text-center">
-        <a href="{{ repo.html_url }}"> {{ repo.name }} </a>
-        <small>{{ repo.language }}</small>
-        </h4>
+        <div ng-repeat="repo in topicRepos[catData.indexOf(category)]">
+            <p class="links" ng-show="topicRepos[catData.indexOf(category)].indexOf(repo) < 4">
+                <span>
+                    <a href="https://github.com/{{ repo.ownerLogin }}" alt="View Owner on GitHub" title="Owner: {{ repo.ownerLogin }}">
+                        <img class="orgAvatar" ng-src="{{ repo.ownerAvatar }}" />
+                    </a>
+                </span>
 
-        <p class="text-justify">{{ repo.description }}</p>
+                <span>
+                    <a href="{{ repo.gitUrl }}" alt="{{ repo.description || '[No Description]' }}" title="{{ repo.description || '[No Description]' }}">
+                        {{ repo.name }}
+                    </a>
+                </span>
 
-        <p class="stats text-center">
-            <a href="{{ repo.html_url }}">
-                <span class="fa fa-github"></span>
-            </a>
+                <span>
+                    <a href="{{ repo.gitUrl }}/stargazers" alt="Stargazers" title="Stargazers">
+                        {{ repo.stars }} <span class="fa fa-star"></span>
+                    </a>
+                </span>
 
-            <a href="{{ repo.stargazers_url }}">
-                <span class="fa fa-star"></span> {{ repo.stargazers_count }}
-            </a>
-
-            <a href="{{ repo.html_url }}/network">
-                <span class="fa fa-code-fork"></span> {{ repo.forks_count }}
-            </a>
-
-            <a ng-if="repo.homepage" href="{{ repo.homepage }}/">
-                <span class="fa fa-globe"></span>
-            </a>
-        </p>
+                <span>
+                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Rpo Info" title="Repo Info">
+                        <span class="fa fa-info-circle"></span>
+                    </a>
+                </span>
+            </p>
+        </div>
+        <a class="more" ng-if="topicRepos[catData.indexOf(category)].length > 4">...MORE</a>
     </div>
 </section>
 
 {% endraw %}
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-<script src="js/github-dynamic.js"></script>
+<script src="https://cdn.llnl.gov/angularjs/1.5.8/angular.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/Category.service.js"></script>
+<script src="/js/category-info.js"></script>

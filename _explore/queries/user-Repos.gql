@@ -1,0 +1,14 @@
+query ($userName: String!, $numRepos: Int!, $pgCursor: String) {
+  user(login: $userName) {
+    repositoriesContributedTo(privacy: PUBLIC, first: $numRepos, after: $pgCursor) {
+      nodes {
+        nameWithOwner
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+# {"userName": "LRWeber", "numRepos": 50, "pgCursor": null}

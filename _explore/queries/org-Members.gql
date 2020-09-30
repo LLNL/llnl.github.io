@@ -1,0 +1,16 @@
+query ($orgName: String!, $numUsers: Int!, $pgCursor: String) {
+  organization(login: $orgName) {
+    membersWithRole(first: $numUsers, after: $pgCursor) {
+      nodes {
+        login
+        name
+        avatarUrl
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+# {"orgName": "LLNL", "numUsers": 50, "pgCursor": null}
