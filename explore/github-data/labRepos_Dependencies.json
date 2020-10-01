@@ -920,19 +920,6 @@
                 ]
             }
         },
-        "CDAT/Jupyter-notebooks": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#e34c26",
-                        "name": "HTML"
-                    }
-                ]
-            }
-        },
         "CDAT/ParaView": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -2010,19 +1997,6 @@
             }
         },
         "CDAT/cdat-old-site": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "CDAT/cdat.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -7157,19 +7131,6 @@
                 ]
             }
         },
-        "CDAT/vtk-cdat": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
-                    }
-                ]
-            }
-        },
         "CDAT/vtk-circleci": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -7825,6 +7786,173 @@
                     {
                         "color": "#b07219",
                         "name": "Java"
+                    }
+                ]
+            }
+        },
+        "ESGF/esg-publisher": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cdf2cim",
+                                    "repository": {
+                                        "nameWithOwner": "ES-DOC/esdoc-cdf2cim"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cdms2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cmor",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "esgf-pyclient",
+                                    "repository": {
+                                        "nameWithOwner": "stephenpascoe/esgf-pyclient"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "esgfpid",
+                                    "repository": {
+                                        "nameWithOwner": "IS-ENES-Data/esgf-pid"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "esmf",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myproxyclient",
+                                    "repository": {
+                                        "nameWithOwner": "philipkershaw/MyProxyClient"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psycopg2",
+                                    "repository": {
+                                        "nameWithOwner": "psycopg/psycopg2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy",
+                                    "repository": {
+                                        "nameWithOwner": "sqlalchemy/sqlalchemy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy-migrate",
+                                    "repository": {
+                                        "nameWithOwner": "alexjg/sqlalchemy-migrate"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cdf2cim",
+                                    "repository": {
+                                        "nameWithOwner": "ES-DOC/esdoc-cdf2cim"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "esgf-pyclient",
+                                    "repository": {
+                                        "nameWithOwner": "stephenpascoe/esgf-pyclient"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "esgfpid",
+                                    "repository": {
+                                        "nameWithOwner": "IS-ENES-Data/esgf-pid"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myproxyclient",
+                                    "repository": {
+                                        "nameWithOwner": "philipkershaw/MyProxyClient"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psycopg2",
+                                    "repository": {
+                                        "nameWithOwner": "psycopg/psycopg2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy",
+                                    "repository": {
+                                        "nameWithOwner": "sqlalchemy/sqlalchemy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy-migrate",
+                                    "repository": {
+                                        "nameWithOwner": "alexjg/sqlalchemy-migrate"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -15116,19 +15244,6 @@
             }
         },
         "LLNL/QRUS": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
-        "LLNL/Quicksilver": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
