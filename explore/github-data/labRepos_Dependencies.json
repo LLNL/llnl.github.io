@@ -7766,19 +7766,6 @@
                 ]
             }
         },
-        "ESGF/config": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "ESGF/data_node_assets": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9493,6 +9480,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "defusedxml",
+                                    "repository": {
+                                        "nameWithOwner": "tiran/defusedxml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
@@ -9503,6 +9497,20 @@
                                     "packageName": "ipykernel",
                                     "repository": {
                                         "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myproxyclient",
+                                    "repository": {
+                                        "nameWithOwner": "philipkershaw/MyProxyClient"
                                     }
                                 },
                                 {
@@ -9535,9 +9543,30 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests-cache",
+                                    "repository": {
+                                        "nameWithOwner": "reclosedev/requests-cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "sphinx",
                                     "repository": {
                                         "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "webob",
+                                    "repository": {
+                                        "nameWithOwner": "Pylons/webob"
                                     }
                                 }
                             ]
@@ -9831,19 +9860,6 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
-                    }
-                ]
-            }
-        },
-        "ESGF/esgf.github.io": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#563d7c",
-                        "name": "CSS"
                     }
                 ]
             }
@@ -21652,19 +21668,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/metall": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
                     }
                 ]
             }
