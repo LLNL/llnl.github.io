@@ -4760,14 +4760,6 @@
                 ]
             }
         },
-        "CDAT/uvcdat-testdata": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": []
-            }
-        },
         "CDAT/uvcdat-web-be": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -7766,6 +7758,19 @@
                 ]
             }
         },
+        "ESGF/config": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "ESGF/data_node_assets": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9860,6 +9865,19 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
+                    }
+                ]
+            }
+        },
+        "ESGF/esgf.github.io": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#563d7c",
+                        "name": "CSS"
                     }
                 ]
             }
@@ -21267,19 +21285,6 @@
                 ]
             }
         },
-        "LLNL/magpie": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
-                    }
-                ]
-            }
-        },
         "LLNL/mdtest": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21442,7 +21447,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "importlib-resources",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_resources"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -21668,6 +21675,19 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/metall": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
@@ -23849,19 +23869,6 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
-                    }
-                ]
-            }
-        },
-        "LLNL/zfpy-wheels": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
                     }
                 ]
             }
