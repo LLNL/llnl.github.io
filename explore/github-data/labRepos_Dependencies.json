@@ -3168,19 +3168,6 @@
                 ]
             }
         },
-        "CDAT/conda-recipes": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/dask-cdms": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -7406,19 +7393,6 @@
                 ]
             }
         },
-        "ECP-VeloC/AXL": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "ECP-VeloC/ECP-ST-CAR-PUBLIC": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9953,33 +9927,6 @@
                     {
                         "color": "#563d7c",
                         "name": "CSS"
-                    }
-                ]
-            }
-        },
-        "ESGF/output_viewer": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
                     }
                 ]
             }
@@ -14223,6 +14170,25 @@
                 ]
             }
         },
+        "LLNL/Curvallis": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": []
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/CxxPolyFit": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14823,6 +14789,14 @@
                         "name": "C++"
                     }
                 ]
+            }
+        },
+        "LLNL/H2OI95": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "LLNL/H5Z-ZFP": {
@@ -17396,6 +17370,47 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
+                    }
+                ]
+            }
+        },
+        "LLNL/camp": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "breathe",
+                                    "repository": {
+                                        "nameWithOwner": "michaeljones/breathe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "exhale",
+                                    "repository": {
+                                        "nameWithOwner": "svenevs/exhale"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
@@ -20106,6 +20121,75 @@
                 ]
             }
         },
+        "LLNL/fastcam": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyterlab",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "notebook",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/notebook"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "opencv-python-nonfree",
+                                    "repository": {
+                                        "nameWithOwner": "skvark/opencv-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytorch-gradcam",
+                                    "repository": {
+                                        "nameWithOwner": "vickyliin/gradcam_plus_plus-pytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torchvision",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/vision"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "LLNL/fdtree": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22527,6 +22611,14 @@
                 ]
             }
         },
+        "LLNL/radiuss-automation": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "LLNL/radiuss-ci": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22540,36 +22632,15 @@
                 ]
             }
         },
-        "LLNL/radiuss-ci-info-action": {
+        "LLNL/radiuss-ci-info-action-go": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@actions/core",
-                                    "repository": {
-                                        "nameWithOwner": "actions/toolkit"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@actions/github",
-                                    "repository": {
-                                        "nameWithOwner": "actions/toolkit"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             },
             "languages": {
                 "nodes": [
                     {
-                        "color": "#f1e05a",
-                        "name": "JavaScript"
+                        "color": "#384d54",
+                        "name": "Dockerfile"
                     }
                 ]
             }
@@ -23248,6 +23319,19 @@
                     {
                         "color": "#f0a9f0",
                         "name": "Gnuplot"
+                    }
+                ]
+            }
+        },
+        "LLNL/spify": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
