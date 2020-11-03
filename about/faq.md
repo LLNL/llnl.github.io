@@ -13,7 +13,7 @@ layout: info
 
 ### How do I set up a GitHub account?
 
-If you’re new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [Setting up and managing your GitHub profile](https://help.github.com/categories/setting-up-and-managing-your-github-profile/).
+If you’re new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [setting up and managing your GitHub profile](https://help.github.com/categories/setting-up-and-managing-your-github-profile/).
 
 1. [Create an account on GitHub](https://github.com/join).
 
@@ -92,13 +92,13 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 
 ### My project is approved for release. Now what?
 
-Make sure your repo contains:
+Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/master/community-health):
 
 * An appropriate open source license and `LLNL-CODE-xxxxxx` release number. See the [LLNL Software Licensing](https://software.llnl.gov/about/licenses) page for details and examples.
 
 * A [README](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
 
-* A [NOTICE](https://github.com/LLNL/llnl.github.io/blob/master/NOTICE) file that includes LLNL auspice and disclaimer statements.
+* A [NOTICE](https://github.com/LLNL/.github/blob/master/community-health/NOTICE.md) file that includes LLNL auspice and disclaimer statements.
 
 * A [CODE OF CONDUCT](https://github.com/LLNL/.github/blob/master/community-health/CODE_OF_CONDUCT.md) file that defines standards for how to engage in your project's community.
 
@@ -106,7 +106,7 @@ Make sure your repo contains:
 
 After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/master/community-health/release-template.md).
 
-Another good practice is to provide user documentation. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
+Another good practice is to provide user documentation. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [LLNL/.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
 
 Submit your repo to [DOE CODE](https://www.osti.gov/doecode/faq#what-is) so others can find it when searching through DOE-funded projects. After your repo is included in DOE CODE, you may also want to add the digital object identifier (DOI) to the repo. See the [relevant section](https://software.llnl.gov/about/licenses/#digital-object-identifier-doi) of our LLNL Software Licensing page for more information.
 
