@@ -9,6 +9,7 @@ permalink: /news/archive/
     <button class="btn btn-default" id="allB">All</button>
     <button class="btn btn-default" id="event">Events</button>
     <button class="btn btn-default" id="event-report">Event Reports</button>
+    <button class="btn btn-default" id="multimedia">Multimedia</button>
     <button class="btn btn-default" id="new-repo">New Repos</button>
     <button class="btn btn-default" id="profile">Profiles</button>
     <button class="btn btn-default" id="release">Releases</button>
