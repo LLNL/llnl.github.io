@@ -15326,19 +15326,6 @@
                 ]
             }
         },
-        "LLNL/HPCCEA": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/HyDAGS": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -20648,6 +20635,47 @@
                 ]
             }
         },
+        "LLNL/dynim": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "faiss",
+                                    "repository": {
+                                        "nameWithOwner": "facebookresearch/faiss"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/f-strings": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21327,9 +21355,21 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sina",
+                                    "packageName": "llnl-sina",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "networkx",
                                     "repository": {
-                                        "nameWithOwner": "dicaso/sina"
+                                        "nameWithOwner": "networkx/networkx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
                                     }
                                 }
                             ]
@@ -24984,19 +25024,6 @@
             }
         },
         "chaos/dpkg-scripts": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
-        "chaos/genders": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
