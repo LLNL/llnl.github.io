@@ -2985,6 +2985,47 @@
                 ]
             }
         },
+        "CDAT/cdms": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "easydev",
+                                    "repository": {
+                                        "nameWithOwner": "cokelaer/easydev"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "future",
+                                    "repository": {
+                                        "nameWithOwner": "PythonCharmers/python-future"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mock",
+                                    "repository": {
+                                        "nameWithOwner": "calvinchengx/python-mock"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/cdms_manual": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -11141,6 +11182,19 @@
                 ]
             }
         },
+        "GMLC-TDC/HELICS.jl": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#a270ba",
+                        "name": "Julia"
+                    }
+                ]
+            }
+        },
         "GMLC-TDC/HELICSBuilder": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -16043,6 +16097,19 @@
                 ]
             }
         },
+        "LLNL/NPB": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#4d41b1",
+                        "name": "Fortran"
+                    }
+                ]
+            }
+        },
         "LLNL/OMSClient": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -17462,19 +17529,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/WRF-IBM": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#4d41b1",
-                        "name": "Fortran"
                     }
                 ]
             }
@@ -26119,33 +26173,6 @@
         "hpcgroup/graphator": {
             "dependencyGraphManifests": {
                 "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
-        "hypre-space/hypre": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "breathe",
-                                    "repository": {
-                                        "nameWithOwner": "michaeljones/breathe"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
             },
             "languages": {
                 "nodes": [
