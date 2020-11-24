@@ -29,8 +29,8 @@ This portal abounds with examples of projects that have found a home in the open
 
 - [Federal OSS policy guide](https://sourcecode.cio.gov/)
 - 2020 LLNL Computing Virtual Expo materials
-	- Releasing Open Source Software at the Lab ([poster](/assets/files/COMP_Poster_OSS.pdf))
-	- Video: Open Source at LLNL (11:31) ([YouTube](https://youtu.be/kL4wIYhNVxE)) ([slides](/assets/files/2020CompExpo_Open_Source.pdf))
+	- Releasing Open Source Software at the Lab ([poster](https://computing.llnl.gov/sites/default/files/public/COMP_Poster_OSS.pdf))
+	- Video: Open Source at LLNL (11:31) ([YouTube](https://youtu.be/kL4wIYhNVxE)) ([slides](https://computing.llnl.gov/sites/default/files/public/2020CompExpo_Open_Source.pdf))
 - 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
 - *Science & Technology Review* coverage
 	- [Cover story: Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
