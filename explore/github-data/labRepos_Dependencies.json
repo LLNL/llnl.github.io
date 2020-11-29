@@ -24987,19 +24987,6 @@
                 ]
             }
         },
-        "LLNL/zero-rk": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/zfp": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -26787,6 +26774,47 @@
                     {
                         "color": "#e69f56",
                         "name": "Groovy"
+                    }
+                ]
+            }
+        },
+        "openzfs/openzfs-docs": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-issues",
+                                    "repository": {
+                                        "nameWithOwner": "sloria/sphinx-issues"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
