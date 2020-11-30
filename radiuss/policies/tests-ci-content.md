@@ -37,7 +37,6 @@
 >Details
 >: Example CI systems in use by RADIUSS products:
 > - RAJA with Travis CI on GitHub. See [.travis.yml](https://lc.llnl.gov/gitlab)
-> - VisIt with Circle CI on GitHub. See [.circleci/config.yml](https://github.com/visit-dav/visit/blob/develop/.circleci/config.yml)
 > - MFEM with AppVeyor on GitHub. See [.appveyor.yml](https://github.com/mfem/mfem/blob/master/.appveyor.yml)
 > - Ascent with Azure Pipelines on GitHub. See [azure-pipelines.yml](https://github.com/Alpine-DAV/ascent/blob/develop/azure-pipelines.yml)
 >
