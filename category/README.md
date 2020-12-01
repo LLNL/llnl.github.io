@@ -21,7 +21,9 @@ For each category, this file contains its title, [icon][icon dir] filepath, and 
 - **Proxy Applications**: Prepare for testing and porting applications - `proxy-application`
 - **System Software**: Manage laptop and desktop computer systems, HPC clusters, and parallel environments - `system-software`
 
-In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `checkpoint`, `cmake`, `cpp` (C++), `data-analysis`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `machine-learning`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `neural-network`, `openmp`, `parallel`, `python`, `shell`, `simulation`, `solver`, `uncertainty-quantification`.
+In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `benchmark`, `checkpoint`, `cmake`, `compiler`, `cpp` (C++), `data-analysis`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `library`, `machine-learning`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `neural-network`, `openmp`, `parallel-computing`, `python`, `shell`, `simulation`, `solver`, `templates`, `testing`, `uncertainty-quantification`.
+
+Repos that appear in the [RADIUSS catalog](https://software.llnl.gov/radiuss/) must also be tagged with `radiuss`. See the [RADIUSS README](https://github.com/LLNL/llnl.github.io/blob/main/radiuss/README.md) for more information.
 
 To add a new category to the catalog:
 1. Update this README with the category name (in alphabetical order), description, and tag.
