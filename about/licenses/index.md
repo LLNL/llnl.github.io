@@ -54,7 +54,7 @@ file named `NOTICE`:
 ```
 {% include_relative NOTICE %}
 ```
-[Additional information](https://github.com/LLNL/.github/tree/master/community-health/NOTICE.md) about the Notice can be found in our LLNL/.github repo.
+[Additional information](https://github.com/LLNL/.github/tree/main/community-health/NOTICE.md) about the Notice can be found in our LLNL/.github repo.
 
 #### 3. Open Source LICENSE file
 
@@ -96,7 +96,7 @@ sections and determine whether they apply to your code.
 If you host your code publicly, you may receive contributions from
 outside the lab.  You should consider documenting your contribution
 policies in your `README.md` or in a
-[`CONTRIBUTING.md` file](https://github.com/LLNL/.github/blob/master/community-health/CONTRIBUTING.md).
+[`CONTRIBUTING.md` file](https://github.com/LLNL/.github/blob/main/community-health/CONTRIBUTING.md).
 It is good practice to make the following details explicit:
 
 - The license under which contributions should be made

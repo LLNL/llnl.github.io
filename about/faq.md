@@ -92,19 +92,19 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 
 ### My project is approved for release. Now what?
 
-Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/master/community-health):
+Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/main/community-health):
 
 * An appropriate open source license and `LLNL-CODE-xxxxxx` release number. See the [LLNL Software Licensing](https://software.llnl.gov/about/licenses) page for details and examples.
 
 * A [README](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
 
-* A [NOTICE](https://github.com/LLNL/.github/blob/master/community-health/NOTICE.md) file that includes LLNL auspice and disclaimer statements.
+* A [NOTICE](https://github.com/LLNL/.github/blob/main/community-health/NOTICE.md) file that includes LLNL auspice and disclaimer statements.
 
-* A [CODE OF CONDUCT](https://github.com/LLNL/.github/blob/master/community-health/CODE_OF_CONDUCT.md) file that defines standards for how to engage in your project's community.
+* A [CODE OF CONDUCT](https://github.com/LLNL/.github/blob/main/community-health/CODE_OF_CONDUCT.md) file that defines standards for how to engage in your project's community.
 
-* A [CONTRIBUTING](https://github.com/LLNL/.github/blob/master/community-health/CONTRIBUTING.md) file that communicates how others should contribute to your repo.
+* A [CONTRIBUTING](https://github.com/LLNL/.github/blob/main/community-health/CONTRIBUTING.md) file that communicates how others should contribute to your repo.
 
-After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/master/community-health/release-template.md).
+After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/main/community-health/release-template.md).
 
 Another good practice is to provide user documentation. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [LLNL/.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
 
@@ -118,9 +118,9 @@ Make sure your repository is included on this website’s home page and [full ca
 
 * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
 
-* Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json), with your organization and/or repository names.
+* Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_explore/input_lists.json), with your organization and/or repository names.
 
-* If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/master/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
+* If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/main/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
 
 ### How do I let people know about my new repo?
 
@@ -128,11 +128,11 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
 1. Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
 
-    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/master/category/README.md) of recommended, standardized topics.
+    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/main/category/README.md) of recommended, standardized topics.
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
-    * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/), be sure to add the `radiuss` topic along with the appropriate [category tags](https://github.com/LLNL/llnl.github.io/blob/master/radiuss/README.md).
+    * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/), be sure to add the `radiuss` topic along with the appropriate [category tags](https://github.com/LLNL/llnl.github.io/blob/main/radiuss/README.md).
 
 2. Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can tweet on your behalf.
 
@@ -142,7 +142,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
 ### How do I contribute news or other content to this website?
 
-Submit a pull request! This website is a GitHub repo just like any other LLNL open source project. News is housed in the [`_posts` directory](https://github.com/LLNL/llnl.github.io/tree/master/_posts), and templates are found in the [LLNL/.github repo](https://github.com/LLNL/.github). See the guidelines below about contributing.
+Submit a pull request! This website is a GitHub repo just like any other LLNL open source project. News is housed in the [`_posts` directory](https://github.com/LLNL/llnl.github.io/tree/main/_posts), and templates are found in the [LLNL/.github repo](https://github.com/LLNL/.github). See the guidelines below about contributing.
 
 Before contributing, please contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with your idea or if you have questions about whether your proposed content requires the LLNL review and release process.
 
@@ -150,7 +150,7 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 
 1. Remove your repo’s topic tags (e.g., `math-physics`), which connect it to this website’s browsable categories. Also remove the `radiuss` tag, if applicable.
 
-2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to remove your repo’s name.
+2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_explore/input_lists.json) to remove your repo’s name.
 
 3. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
 
@@ -162,7 +162,7 @@ Migrating the repo outside of the LLNL organization requires an organization adm
 
 Once the repository has moved to the new organization:
 
-1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/master/_explore/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
+1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_explore/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
 
 2. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories, including the `radiuss` tag, if applicable.
 
