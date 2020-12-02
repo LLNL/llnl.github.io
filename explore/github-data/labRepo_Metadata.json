@@ -1424,8 +1424,16 @@
     "LLNL/.github": {
         "description": "Templates for community health files, software release notes, the portal\u2019s news posts, Read the Docs, and more",
         "name": "LLNL/.github",
-        "topics": null,
+        "topics": [
+            "templates"
+        ],
         "website": ""
+    },
+    "LLNL/2DHEVF": {
+        "description": null,
+        "name": "LLNL/2DHEVF",
+        "topics": null,
+        "website": null
     },
     "LLNL/ADAPT": {
         "description": "Adaptive Thresholds for Feature Extraction",
@@ -1492,9 +1500,10 @@
         "description": "AutoParBench is a benchmark framework to evaluate compilers and tools designed to automatically insert OpenMP directives. ",
         "name": "LLNL/AutoParBench",
         "topics": [
-            "openmp"
+            "openmp",
+            "benchmark"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/AutomaDeD": {
         "description": "Debugging Tool based on Statistical Analysis",
@@ -1599,7 +1608,8 @@
             "graph",
             "trees",
             "hpc",
-            "performance"
+            "performance",
+            "data-viz"
         ],
         "website": ""
     },
@@ -1724,7 +1734,8 @@
         "topics": [
             "benchmarking",
             "compiler-optimization",
-            "openmp"
+            "openmp",
+            "benchmark"
         ],
         "website": ""
     },
@@ -1929,9 +1940,10 @@
         "topics": [
             "parallel",
             "hpc",
-            "cpp"
+            "cpp",
+            "parallel-computing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/LibPowerMon": {
         "description": "Libpowermon: A lightweight profiling framework to profile program context and system-level metrics",
@@ -1999,11 +2011,20 @@
         ],
         "website": null
     },
+    "LLNL/MTLRecSys": {
+        "description": "multitask recommender systems intended for cancer drug response prediction, but now generalizable to a wide range of recommendation problems.",
+        "name": "LLNL/MTLRecSys",
+        "topics": null,
+        "website": null
+    },
     "LLNL/MaPPeRTrac": {
         "description": "Massively Parallel, Portable, and Reproducible Tractography",
         "name": "LLNL/MaPPeRTrac",
-        "topics": null,
-        "website": null
+        "topics": [
+            "parallel-computing",
+            "portability"
+        ],
+        "website": ""
     },
     "LLNL/MacPatch": {
         "description": "Software & Patch management for macOS",
@@ -2107,7 +2128,10 @@
     "LLNL/NPB": {
         "description": "Fork of the NASA Advanced Supercomputing Division's NAS Parallel Benchmarks",
         "name": "LLNL/NPB",
-        "topics": null,
+        "topics": [
+            "benchmark",
+            "parallel-computing"
+        ],
         "website": ""
     },
     "LLNL/OMSClient": {
@@ -2151,22 +2175,29 @@
     "LLNL/PF3DIO": {
         "description": "PF3DIO is an I/O benchmark that has I/O patterns similar to those in pF3D. pF3D is a laser-plasma simulation code developed at LLNL. The benchmark is written in the Yorick interpreted language and can be used to assess the performance of parallel file systems on HPC clusters.",
         "name": "LLNL/PF3DIO",
-        "topics": null,
-        "website": null
+        "topics": [
+            "benchmark"
+        ],
+        "website": ""
     },
     "LLNL/PF3DK": {
         "description": "PF3DK contains kernels derived from pF3D and is intended for use in testing compiler optimization. It contains CPU and GPU (OpenMP 4.5) versions of the kernels. ",
         "name": "LLNL/PF3DK",
-        "topics": null,
+        "topics": [
+            "testing",
+            "cpu",
+            "gpu"
+        ],
         "website": ""
     },
     "LLNL/PIPS-SBB": {
         "description": "Implementation of parallel branch-and-bound algorithm for stochastic (or block-angular) mixed-integer programs",
         "name": "LLNL/PIPS-SBB",
         "topics": [
-            "parallel"
+            "parallel",
+            "parallel-computing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/PYB11Generator": {
         "description": "PYB11Generator is a python based code generator that creates pybind11 code for binding C++ libraries as extensions in Python.",
@@ -2727,8 +2758,10 @@
     "LLNL/caliper-compiler": {
         "description": "Compiler tools for Caliper",
         "name": "LLNL/caliper-compiler",
-        "topics": null,
-        "website": null
+        "topics": [
+            "compiler"
+        ],
+        "website": ""
     },
     "LLNL/caliper-examples": {
         "description": "Example codes, configurations, and datasets collected using Caliper",
@@ -2840,9 +2873,11 @@
             "parallel",
             "exascale-computing",
             "system-software",
-            "file-system"
+            "file-system",
+            "parallel-computing",
+            "checkpoint"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/cryoH2vehicle": {
         "description": null,
@@ -3064,9 +3099,10 @@
         "topics": [
             "mpi",
             "parallel",
-            "cpp"
+            "cpp",
+            "parallel-computing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/hatchet": {
         "description": "Graph-indexed Pandas DataFrames for analyzing hierarchical performance data",
@@ -3238,9 +3274,16 @@
         "description": "The Legion Parallel Programming System",
         "name": "LLNL/legion",
         "topics": [
-            "parallel"
+            "parallel",
+            "parallel-computing"
         ],
         "website": "http://legion.stanford.edu/"
+    },
+    "LLNL/lestofire": {
+        "description": null,
+        "name": "LLNL/lestofire",
+        "topics": null,
+        "website": null
     },
     "LLNL/libROM": {
         "description": "Model reduction library with an emphasis on large scale parallelism and linear subspace methods",
@@ -3413,8 +3456,10 @@
     "LLNL/merlin-spellbook": {
         "description": "Useful scripts for merlin workflows!",
         "name": "LLNL/merlin-spellbook",
-        "topics": null,
-        "website": null
+        "topics": [
+            "workflows"
+        ],
+        "website": ""
     },
     "LLNL/metall": {
         "description": "Meta allocator for persistent memory",
@@ -3508,7 +3553,8 @@
             "mpibind",
             "scientific-computing",
             "linux",
-            "productivity"
+            "productivity",
+            "parallel-computing"
         ],
         "website": ""
     },
@@ -3558,7 +3604,8 @@
         "topics": [
             "cpp",
             "parallel",
-            "mpi"
+            "mpi",
+            "parallel-computing"
         ],
         "website": "http://github.com/LLNL/muster"
     },
@@ -3566,7 +3613,8 @@
         "description": "Parallel Wavelet Compression",
         "name": "LLNL/nami",
         "topics": [
-            "parallel"
+            "parallel",
+            "parallel-computing"
         ],
         "website": "http://github.com/tgamblin/nami"
     },
@@ -3620,9 +3668,10 @@
         "topics": [
             "parallel",
             "solver",
-            "math-physics"
+            "math-physics",
+            "parallel-computing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/parelagmc": {
         "description": "Parallel element agglomeration multilevel Monte Carlo library.",
@@ -3630,9 +3679,10 @@
         "topics": [
             "parallel",
             "monte-carlo",
-            "simulation"
+            "simulation",
+            "parallel-computing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/perf-dump": {
         "description": "Records per-process, per-timestep PAPI performance counter values.  Saves them in an HDF5 file.",
@@ -3688,6 +3738,12 @@
             "system-software",
             "python"
         ],
+        "website": null
+    },
+    "LLNL/pyMMAopt": {
+        "description": null,
+        "name": "LLNL/pyMMAopt",
+        "topics": null,
         "website": null
     },
     "LLNL/pyPICfusion": {
@@ -3881,9 +3937,10 @@
             "gpu",
             "threads",
             "parallel",
-            "simulation"
+            "simulation",
+            "parallel-computing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/rst2slides": {
         "description": "Rst2slides converts reStructuredText source into a reveal.js presentation.",
@@ -4001,9 +4058,12 @@
         "name": "LLNL/simul",
         "topics": [
             "mpi",
-            "parallel"
+            "parallel",
+            "parallel-computing",
+            "file-system",
+            "testing"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/simutil": {
         "description": "Simulation Utility Library for HPC codes",
@@ -4654,6 +4714,12 @@
         "topics": null,
         "website": ""
     },
+    "flux-framework/FluxRM.jl": {
+        "description": "Julia Bindings for the Flux Resource Manager (RM)",
+        "name": "flux-framework/FluxRM.jl",
+        "topics": null,
+        "website": null
+    },
     "flux-framework/Tutorials": {
         "description": "Tutorial slides and materials",
         "name": "flux-framework/Tutorials",
@@ -5154,6 +5220,12 @@
     "spack/spack-bibliography": {
         "description": "Citations for papers, tutorials, and presentations involving Spack",
         "name": "spack/spack-bibliography",
+        "topics": null,
+        "website": null
+    },
+    "spack/spack-bootstrap-installer": {
+        "description": "Code to generate installers for Spack and any required dependencies (ie python)",
+        "name": "spack/spack-bootstrap-installer",
         "topics": null,
         "website": null
     },

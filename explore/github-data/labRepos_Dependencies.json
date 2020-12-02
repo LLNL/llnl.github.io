@@ -6847,6 +6847,19 @@
                 ]
             }
         },
+        "CDAT/vcs": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "CDAT/vcs-js": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -7180,19 +7193,6 @@
                 ]
             }
         },
-        "CDAT/wk": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/xmgrace": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -7474,6 +7474,19 @@
             }
         },
         "ECP-VeloC/shuffile": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "ECP-VeloC/spath": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -13446,6 +13459,19 @@
                 "nodes": []
             }
         },
+        "LLNL/2DHEVF": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/ADAPT": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -13715,7 +13741,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "importlib-metadata",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_metadata"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -14098,19 +14126,6 @@
                     {
                         "color": "#555555",
                         "name": "C"
-                    }
-                ]
-            }
-        },
-        "LLNL/Babel": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#b07219",
-                        "name": "Java"
                     }
                 ]
             }
@@ -15862,6 +15877,19 @@
             }
         },
         "LLNL/MTL-suite": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/MTLRecSys": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -21775,6 +21803,47 @@
                 ]
             }
         },
+        "LLNL/lestofire": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cvxopt",
+                                    "repository": {
+                                        "nameWithOwner": "cvxopt/cvxopt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/libROM": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22145,7 +22214,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ply",
                                     "repository": {
-                                        "nameWithOwner": "inducer/ply-git"
+                                        "nameWithOwner": "Josiastech/ply"
                                     }
                                 },
                                 {
@@ -23230,6 +23299,19 @@
                 ]
             }
         },
+        "LLNL/pyMMAopt": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/pyPICfusion": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -24077,19 +24159,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/scr-top": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": null,
-                        "name": "CMake"
                     }
                 ]
             }
@@ -25730,6 +25799,14 @@
                 ]
             }
         },
+        "flux-framework/FluxRM.jl": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "flux-framework/Tutorials": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -27293,6 +27370,19 @@
                 ]
             }
         },
+        "spack/spack-bootstrap-installer": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": null,
+                        "name": "CMake"
+                    }
+                ]
+            }
+        },
         "spack/spack-ci-containers": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -27564,7 +27654,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "importlib-metadata",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_metadata"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
