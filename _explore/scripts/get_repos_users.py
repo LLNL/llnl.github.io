@@ -15,11 +15,11 @@ repolist = sorted(inputLists.data["data"].keys())
 print("Repo list complete. Found %d repos." % (len(repolist)))
 
 # Initialize internal user data collector
-# and Read lab user data file (to use as member list)
+# and Read internal user data file (to use as member list)
 dataCollectorInt = qm.DataManager(datfilepathInt, True)
 # Populate member list
 memberlist = []
-print("Getting LLNL members ...")
+print("Getting internal members ...")
 memberlist = sorted(dataCollectorInt.data["data"].keys())
 print("Member list complete. Found %d users." % (len(memberlist)))
 
@@ -84,7 +84,7 @@ for repo in repolist:
 print("\nCollective data gathering complete!")
 
 # Write output files
-dataCollectorExt.fileSave()
-dataCollectorInt.fileSave()
+dataCollectorExt.fileSave(newline="\n")
+dataCollectorInt.fileSave(newline="\n")
 
 print("\nDone!\n")

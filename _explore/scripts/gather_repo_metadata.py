@@ -41,6 +41,6 @@ for repo in genDataCollector.data["data"]:
     infoWriter.data[repo] = repoData
 
 # write data to file
-infoWriter.fileSave()
+infoWriter.fileSave(newline="\n")
 
 print("\nDone!\n")

@@ -78,6 +78,6 @@ for repo in dataCollector.data["data"]:
     dataCollector.data["data"][repo] = dateList
 
 # Write output files
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

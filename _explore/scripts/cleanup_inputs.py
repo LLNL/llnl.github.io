@@ -17,6 +17,6 @@ for aList in inputLists.data.keys():
     listWIP.sort()  # List in alphabetical order
     inputLists.data[aList] = listWIP
 
-inputLists.fileSave()
+inputLists.fileSave(newline="\n")
 
 print("Primary input lists cleaned!")

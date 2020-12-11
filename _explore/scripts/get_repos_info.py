@@ -70,6 +70,6 @@ for repo in repolist:
 print("\nCollective data gathering Part2of2 complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

@@ -119,6 +119,6 @@ for repo in list(dataCollector.data["data"].keys()):
         print("Removed '%s'" % (repo))
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

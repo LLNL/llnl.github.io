@@ -54,6 +54,6 @@ for repo in repolist:
 print("\nCollective data gathering complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

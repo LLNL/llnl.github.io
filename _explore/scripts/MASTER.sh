@@ -46,7 +46,7 @@ runScript cleanup_inputs.py
 # Required before any other repo scripts (output used as repo list)
 runScript get_repos_info.py
 # Required before any other member scripts (output used as member list)
-runScript get_llnl_members.py
+runScript get_internal_members.py
 
 
 # --- EXTERNAL V INTERNAL ---
