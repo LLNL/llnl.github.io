@@ -3,12 +3,12 @@ from os import environ as env
 import re
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labRepos_CreationHistory.json" % ghDataDir
+datfilepath = "%s/intRepos_CreationHistory.json" % ghDataDir
 query_commits_in = "/repos/OWNNAME/REPONAME/commits?until=CREATETIME&per_page=100"
 query_commits_in2 = "/repos/OWNNAME/REPONAME/commits?per_page=100"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
+inputLists = qm.DataManager("%s/intReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")

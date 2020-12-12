@@ -1,7 +1,7 @@
 /* Creates word cloud visualization for webpage */
 function draw_cloud_licenses(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labReposInfo.json';
+    var url = ghDataDir + '/intReposInfo.json';
     d3.json(url, function(obj) {
         var fullnameDict = {};
         var data = reformatData(obj, fullnameDict);

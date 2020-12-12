@@ -1,8 +1,8 @@
 /* Creates line graph visualization for webpage */
 function draw_line_repoActivity(areaID, byCommits=true, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url0 = ghDataDir + '/labRepos_ActivityCommits.json';
-    var url1 = ghDataDir + '/labRepos_ActivityLines.json';
+    var url0 = ghDataDir + '/intRepos_ActivityCommits.json';
+    var url1 = ghDataDir + '/intRepos_ActivityLines.json';
     var files = [url0, url1];
     Promise.all(files.map(url => d3.json(url))).then(values => {
         let options = ['Show Activity by Commits', 'Show Activity by Line Additions'];

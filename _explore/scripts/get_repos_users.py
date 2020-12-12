@@ -3,11 +3,11 @@ from os import environ as env
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepathExt = "%s/extUsers.json" % ghDataDir
-datfilepathInt = "%s/labUsers.json" % ghDataDir
+datfilepathInt = "%s/intUsers.json" % ghDataDir
 queryPath = "../queries/repo-Users.gql"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
+inputLists = qm.DataManager("%s/intReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")

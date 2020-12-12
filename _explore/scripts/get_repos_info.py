@@ -2,7 +2,7 @@ from scraper.github import queryManager as qm
 from os import environ as env
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labReposInfo.json" % ghDataDir
+datfilepath = "%s/intReposInfo.json" % ghDataDir
 queryPath = "../queries/org-Repos-Info.gql"
 queryPathInd = "../queries/repo-Info.gql"
 

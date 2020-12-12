@@ -1,7 +1,7 @@
 /* Creates pie chart visualization for webpage */
 function draw_pie_commits(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_ActivityCommits.json';
+    var url = ghDataDir + '/intRepos_ActivityCommits.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(response => {
             var data = reformatData(response[0]);

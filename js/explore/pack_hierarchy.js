@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
 function draw_pack_hierarchy(areaID) {
     // load data file, process data, and draw visualization
-    var url1 = ghDataDir + '/labUsers.json';
+    var url1 = ghDataDir + '/intUsers.json';
     var url2 = ghDataDir + '/extUsers.json';
     var files = [url1, url2];
     Promise.all(files.map(url => d3.json(url))).then(values => {

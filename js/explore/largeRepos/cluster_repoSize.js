@@ -1,7 +1,7 @@
 /* Creates cluster graph visualization for webpage */
 function draw_cluster(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labReposInfo.json';
+    var url = ghDataDir + '/intReposInfo.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(values => {
         var data = reformatData(values[0]);

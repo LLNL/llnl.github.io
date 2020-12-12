@@ -8,11 +8,11 @@ angular.module('app', []).controller('gitHubDataController', [
             cache: true
         });
 
-        var getReposTopics = $http.get('/explore/github-data/labRepos_Topics.json', {
+        var getReposTopics = $http.get('/explore/github-data/intRepos_Topics.json', {
             cache: true
         });
 
-        var getReposInfo = $http.get('/explore/github-data/labReposInfo.json', {
+        var getReposInfo = $http.get('/explore/github-data/intReposInfo.json', {
             cache: true
         });
 

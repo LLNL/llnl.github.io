@@ -1,7 +1,7 @@
 /* Creates pie chart visualization for webpage */
 function draw_pie_repoUsers(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url0 = ghDataDir + '/labUsers.json';
+    var url0 = ghDataDir + '/intUsers.json';
     var url1 = ghDataDir + '/extUsers.json';
     var files = [url0,url1];
     var promises = [];

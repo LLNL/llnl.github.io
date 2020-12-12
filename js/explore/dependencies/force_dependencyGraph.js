@@ -1,6 +1,6 @@
 function draw_force_graph(areaID, adjacentAreaID) {
     // URL for data
-    var url1 = ghDataDir + '/labRepos_Dependencies.json';
+    var url1 = ghDataDir + '/intRepos_Dependencies.json';
     var url2 = ghDataDir + '/dependencyInfo.json';
     var files = [url1, url2];
     // Converts json file into object, reformats data, and then draws graph.

@@ -2,7 +2,7 @@ from scraper.github import queryManager as qm
 from os import environ as env
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labUsers.json" % ghDataDir
+datfilepath = "%s/intUsers.json" % ghDataDir
 queryPath = "../queries/org-Members.gql"
 
 # Read input list of member organizations
