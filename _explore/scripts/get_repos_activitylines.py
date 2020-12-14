@@ -5,11 +5,11 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labRepos_ActivityLines.json" % ghDataDir
+datfilepath = "%s/intRepos_ActivityLines.json" % ghDataDir
 query_in = "/repos/OWNNAME/REPONAME/stats/code_frequency"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
+inputLists = qm.DataManager("%s/intReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
@@ -60,6 +60,6 @@ for repo in repolist:
 print("\nCollective data gathering complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

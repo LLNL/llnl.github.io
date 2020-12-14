@@ -1,7 +1,7 @@
 /* Creates a zoomable sunburst visualization for webpage */
 function draw_sunburst_licenses(areaID) {
     // Load data file, process data, and draw visualization
-    var url = ghDataDir + '/labReposInfo.json';
+    var url = ghDataDir + '/intReposInfo.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(values => drawSunburst(values[0], areaID));
 

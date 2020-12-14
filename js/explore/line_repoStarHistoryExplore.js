@@ -1,7 +1,7 @@
 /* Creates line graph visualization for webpage */
 function draw_line_repoStarHistory(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_StarHistory.json';
+    var url = ghDataDir + '/intRepos_StarHistory.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(values => {
         var data = reformatData(values[0]);

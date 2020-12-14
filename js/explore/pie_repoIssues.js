@@ -1,7 +1,7 @@
 /* Creates pie chart visualization for webpage */
 function draw_pie_repoIssues(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labReposInfo.json';
+    var url = ghDataDir + '/intReposInfo.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(values => {
         var data = reformatData(values[0]);

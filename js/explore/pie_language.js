@@ -1,7 +1,7 @@
 /* Creates pie chart visualization for webpage */
 function draw_pie_languages(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_Languages.json';
+    var url = ghDataDir + '/intRepos_Languages.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(response => {
             var data = reformatData(response[0]);

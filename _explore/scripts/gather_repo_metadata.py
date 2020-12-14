@@ -1,9 +1,9 @@
 from scraper.github import queryManager as qm
 
 ghDataDir = "../../explore/github-data"
-genDatafile = "%s/labReposInfo.json" % ghDataDir
-topicsDatafile = "%s/labRepos_Topics.json" % ghDataDir
-writeFile = "%s/labRepo_Metadata.json" % ghDataDir
+genDatafile = "%s/intReposInfo.json" % ghDataDir
+topicsDatafile = "%s/intRepos_Topics.json" % ghDataDir
+writeFile = "%s/intRepo_Metadata.json" % ghDataDir
 
 # initialize data manager and load repo info
 genDataCollector = qm.DataManager(genDatafile, True)
@@ -41,6 +41,6 @@ for repo in genDataCollector.data["data"]:
     infoWriter.data[repo] = repoData
 
 # write data to file
-infoWriter.fileSave()
+infoWriter.fileSave(newline="\n")
 
 print("\nDone!\n")

@@ -1,7 +1,7 @@
 /* Creates pie chart visualization for webpage */
 function draw_pie_lines(areaID) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_ActivityLines.json';
+    var url = ghDataDir + '/intRepos_ActivityLines.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(response => {
             var data = reformatData(response[0]);

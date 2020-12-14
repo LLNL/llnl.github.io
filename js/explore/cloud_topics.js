@@ -1,7 +1,7 @@
 /* Creates word cloud visualization for webpage */
 function draw_cloud_topics(areaID, repoNameWOwner) {
     // load data file, process data, and draw visualization
-    var url = ghDataDir + '/labRepos_Topics.json';
+    var url = ghDataDir + '/intRepos_Topics.json';
     var files = [url];
     Promise.all(files.map(url => d3.json(url))).then(values => {
         var data = reformatData(values[0]);

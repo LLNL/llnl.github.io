@@ -29,6 +29,6 @@ for prefix in yearDict.keys():
     yearDict[prefix] = yearList
 
 yearData = qm.DataManager("%s/YEARS.json" % ghDataDir, False)
-yearData.fileSave()
+yearData.fileSave(newline="\n")
 
 print("Done!\n")

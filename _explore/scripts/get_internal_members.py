@@ -2,11 +2,12 @@ from scraper.github import queryManager as qm
 from os import environ as env
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labUsers.json" % ghDataDir
+datfilepath = "%s/intUsers.json" % ghDataDir
 queryPath = "../queries/org-Members.gql"
 
-# Only looking at LLNL org members
-orglist = ["llnl"]
+# Read input list of member organizations
+inputLists = qm.DataManager("../input_lists.json", True)
+orglist = inputLists.data["memberOrgs"]
 
 # Initialize data collector
 dataCollector = qm.DataManager(datfilepath, False)
@@ -43,6 +44,6 @@ for org in orglist:
 print("\nCollective data gathering complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

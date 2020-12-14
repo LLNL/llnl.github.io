@@ -6,7 +6,7 @@ datfilepath = "%s/dependencyInfo.json" % ghDataDir
 queryPath = "../queries/dependency-Info.gql"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labRepos_Dependencies.json" % ghDataDir, True)
+inputLists = qm.DataManager("%s/intRepos_Dependencies.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting dependency repos ...")
@@ -57,6 +57,6 @@ for repo in repolist:
 print("\nCollective data gathering complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

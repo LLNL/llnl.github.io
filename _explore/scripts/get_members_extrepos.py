@@ -6,18 +6,18 @@ datfilepath = "%s/extRepos.json" % ghDataDir
 queryPath = "../queries/user-Repos.gql"
 
 # Read repo info data file (to use as repo list)
-inputLists = qm.DataManager("%s/labReposInfo.json" % ghDataDir, True)
+inputLists = qm.DataManager("%s/intReposInfo.json" % ghDataDir, True)
 # Populate repo list
 repolist = []
 print("Getting internal repos ...")
 repolist = sorted(inputLists.data["data"].keys())
 print("Repo list complete. Found %d repos." % (len(repolist)))
 
-# Read lab user data file (to use as member list)
-inputLists = qm.DataManager("%s/labUsers.json" % ghDataDir, True)
+# Read internal user data file (to use as member list)
+inputLists = qm.DataManager("%s/intUsers.json" % ghDataDir, True)
 # Populate member list
 memberlist = []
-print("Getting LLNL members ...")
+print("Getting internal members ...")
 memberlist = sorted(inputLists.data["data"].keys())
 print("Member list complete. Found %d users." % (len(memberlist)))
 
@@ -28,7 +28,7 @@ dataCollector.data = {"data": {}}
 # Initialize query manager
 queryMan = qm.GitHubQueryManager()
 
-# Iterate through lab members
+# Iterate through internal members
 print("Gathering data across multiple paginated queries...")
 for usr in memberlist:
     print("\n'%s'" % (usr))
@@ -62,6 +62,6 @@ for usr in memberlist:
 print("\nCollective data gathering complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")

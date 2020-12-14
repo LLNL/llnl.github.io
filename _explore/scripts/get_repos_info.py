@@ -2,7 +2,7 @@ from scraper.github import queryManager as qm
 from os import environ as env
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
-datfilepath = "%s/labReposInfo.json" % ghDataDir
+datfilepath = "%s/intReposInfo.json" % ghDataDir
 queryPath = "../queries/org-Repos-Info.gql"
 queryPathInd = "../queries/repo-Info.gql"
 
@@ -70,6 +70,6 @@ for repo in repolist:
 print("\nCollective data gathering Part2of2 complete!")
 
 # Write output file
-dataCollector.fileSave()
+dataCollector.fileSave(newline="\n")
 
 print("\nDone!\n")
