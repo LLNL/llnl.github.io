@@ -2035,6 +2035,14 @@
                 ]
             }
         },
+        "CDAT/cdat_build_nightly": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "CDAT/cdat_build_release": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -8229,8 +8237,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#555555",
-                        "name": "C"
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -8242,52 +8250,99 @@
                         "dependencies": {
                             "nodes": [
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "browser-sync",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.fasterxml.jackson.core:jackson-core",
                                     "repository": {
-                                        "nameWithOwner": "BrowserSync/browser-sync"
+                                        "nameWithOwner": "FasterXML/jackson-core"
                                     }
                                 },
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "gulp",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.fasterxml.jackson.core:jackson-databind",
                                     "repository": {
-                                        "nameWithOwner": "gulpjs/gulp"
+                                        "nameWithOwner": "FasterXML/jackson-databind"
                                     }
                                 },
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "gulp-clean-css",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.sun.xml.bind:jaxb-core",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.sun.xml.bind:jaxb-impl",
                                     "repository": {
-                                        "nameWithOwner": "scniro/gulp-clean-css"
+                                        "nameWithOwner": "javagems/jaxb-impl"
                                     }
                                 },
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "gulp-header",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.activation:activation",
                                     "repository": {
-                                        "nameWithOwner": "gulp-community/gulp-header"
+                                        "nameWithOwner": "gesellix/javamail-android-forked"
                                     }
                                 },
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "gulp-less",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.servlet:jstl",
                                     "repository": {
-                                        "nameWithOwner": "gulp-community/gulp-less"
+                                        "nameWithOwner": "eclipse-ee4j/jstl-api"
                                     }
                                 },
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "gulp-rename",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.xml.bind:jaxb-api",
                                     "repository": {
-                                        "nameWithOwner": "hparra/gulp-rename"
+                                        "nameWithOwner": "javaee/jaxb-spec"
                                     }
                                 },
                                 {
-                                    "packageManager": "NPM",
-                                    "packageName": "gulp-uglify",
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax:javaee-web-api",
                                     "repository": {
-                                        "nameWithOwner": "terinjokes/gulp-uglify"
+                                        "nameWithOwner": "s15851/test"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "junit:junit",
+                                    "repository": {
+                                        "nameWithOwner": "junit-team/junit4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "net.sf.supercsv:super-csv",
+                                    "repository": {
+                                        "nameWithOwner": "super-csv/super-csv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.json:json",
+                                    "repository": {
+                                        "nameWithOwner": "stleary/JSON-java"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.postgresql:postgresql",
+                                    "repository": {
+                                        "nameWithOwner": "opengauss-mirror/openGauss-connector-jdbc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.springframework.data:spring-data-jpa",
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-data-jpa"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.springframework:spring-webmvc",
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
                                     }
                                 }
                             ]
@@ -8298,8 +8353,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#e34c26",
-                        "name": "HTML"
+                        "color": "#b07219",
+                        "name": "Java"
                     }
                 ]
             }
@@ -15919,6 +15974,19 @@
             }
         },
         "LLNL/MTLRecSys": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/MaPPeRTrac": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -25942,7 +26010,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#a270ba",
+                        "name": "Julia"
+                    }
+                ]
             }
         },
         "flux-framework/Tutorials": {
@@ -26069,54 +26142,6 @@
                 "nodes": []
             }
         },
-        "flux-framework/flux-docs": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pygments",
-                                    "repository": {
-                                        "nameWithOwner": "pygments/pygments"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinxcontrib-spelling",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-contrib/spelling"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "flux-framework/flux-dyad": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -26147,6 +26172,19 @@
                     {
                         "color": "#555555",
                         "name": "C"
+                    }
+                ]
+            }
+        },
+        "flux-framework/flux-research-artifacts": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
