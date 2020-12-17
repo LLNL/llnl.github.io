@@ -14253,19 +14253,6 @@
                 ]
             }
         },
-        "LLNL/COGENT": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/CRADL": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14303,13 +14290,6 @@
                                     "packageName": "colorlog",
                                     "repository": {
                                         "nameWithOwner": "borntyping/python-colorlog"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flask-socketio",
-                                    "repository": {
-                                        "nameWithOwner": "miguelgrinberg/Flask-SocketIO"
                                     }
                                 },
                                 {
@@ -14393,13 +14373,6 @@
                                     "packageName": "colorlog",
                                     "repository": {
                                         "nameWithOwner": "borntyping/python-colorlog"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flask-socketio",
-                                    "repository": {
-                                        "nameWithOwner": "miguelgrinberg/Flask-SocketIO"
                                     }
                                 },
                                 {
@@ -15960,6 +15933,19 @@
                 ]
             }
         },
+        "LLNL/MPIDiff": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/MTL-suite": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -16600,19 +16586,6 @@
                 ]
             }
         },
-        "LLNL/PolyClipper": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/PyDV": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -17007,19 +16980,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "LLNL/RAJAPerf": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
             }
         },
         "LLNL/RAJAProxies": {
@@ -21185,19 +21145,6 @@
                 ]
             }
         },
-        "LLNL/fpp": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#DA5B0B",
-                        "name": "Jupyter Notebook"
-                    }
-                ]
-            }
-        },
         "LLNL/fpzip": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22179,89 +22126,6 @@
                 ]
             }
         },
-        "LLNL/maestrowf": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "chainmap",
-                                    "repository": {
-                                        "nameWithOwner": "jonathaneunice/chainmap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coloredlogs",
-                                    "repository": {
-                                        "nameWithOwner": "xolox/python-coloredlogs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "dill",
-                                    "repository": {
-                                        "nameWithOwner": "meissnereric/dill-torch"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "enum34",
-                                    "repository": {
-                                        "nameWithOwner": "certik/enum34"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "filelock",
-                                    "repository": {
-                                        "nameWithOwner": "benediktschmitt/py-filelock"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jsonschema",
-                                    "repository": {
-                                        "nameWithOwner": "Julian/jsonschema"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "nameWithOwner": "yaml/pyyaml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tabulate",
-                                    "repository": {
-                                        "nameWithOwner": "astanin/python-tabulate"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/magpie": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22384,6 +22248,13 @@
                                     "packageName": "isort",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/isort"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "johnnydep",
+                                    "repository": {
+                                        "nameWithOwner": "wimglenn/johnnydep"
                                     }
                                 },
                                 {
@@ -25533,19 +25404,6 @@
                 ]
             }
         },
-        "XBraid/xbraid": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "chaos/9nbd": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -26140,6 +25998,54 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "flux-framework/flux-docs": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pygments",
+                                    "repository": {
+                                        "nameWithOwner": "pygments/pygments"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-spelling",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-contrib/spelling"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "flux-framework/flux-dyad": {
@@ -28253,14 +28159,6 @@
                         "name": "Python"
                     }
                 ]
-            }
-        },
-        "visit-dav/third-party": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": []
             }
         },
         "visit-dav/visit": {
