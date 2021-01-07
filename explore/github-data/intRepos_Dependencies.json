@@ -4963,9 +4963,7 @@
                                 {
                                     "packageManager": "NPM",
                                     "packageName": "@sinonjs/formatio",
-                                    "repository": {
-                                        "nameWithOwner": "sinonjs/formatio"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "NPM",
@@ -8372,14 +8370,6 @@
                 ]
             }
         },
-        "ESGF/esgf-dist": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": []
-            }
-        },
         "ESGF/esgf-docker": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -10129,13 +10119,40 @@
         },
         "GLVis/glvis-js": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
                     {
-                        "color": "#427819",
-                        "name": "Makefile"
+                        "color": "#e34c26",
+                        "name": "HTML"
                     }
                 ]
             }
@@ -15717,7 +15734,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "nameWithOwner": "rubygems/bundler"
+                                        "nameWithOwner": "sunaku/bundler"
                                     }
                                 },
                                 {
@@ -17867,6 +17884,19 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/Wemul": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
@@ -23304,6 +23334,19 @@
                 ]
             }
         },
+        "LLNL/pLiner": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/paraDIS_lib": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -23762,19 +23805,6 @@
                 ]
             }
         },
-        "LLNL/qnd": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/quantkriging": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -24163,7 +24193,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "nameWithOwner": "rubygems/bundler"
+                                        "nameWithOwner": "sunaku/bundler"
                                     }
                                 },
                                 {
@@ -26265,19 +26295,6 @@
             }
         },
         "flux-framework/flux-sched-v0.7": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
-        "flux-framework/flux-security": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
