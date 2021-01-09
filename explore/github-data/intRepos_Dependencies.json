@@ -3248,6 +3248,19 @@
                 ]
             }
         },
+        "CDAT/genutil": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/genutil-feedstock": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -15698,6 +15711,26 @@
                                     "packageName": "sphinxcontrib-programoutput",
                                     "repository": {
                                         "nameWithOwner": "NextThought/sphinxcontrib-programoutput"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
