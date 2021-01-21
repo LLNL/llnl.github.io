@@ -817,6 +817,88 @@
                 ]
             }
         },
+        "Alpine-DAV/ascent": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipykernel",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "enum34",
+                                    "repository": {
+                                        "nameWithOwner": "certik/enum34"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipykernel",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipython",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipywidgets",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter-core",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter_core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "CDAT/.github": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -3802,6 +3884,249 @@
                                     "packageName": "typescript",
                                     "repository": {
                                         "nameWithOwner": "microsoft/TypeScript"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#2b7489",
+                        "name": "TypeScript"
+                    }
+                ]
+            }
+        },
+        "CDAT/jupyterlab-tutorial": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jupyterlab/application",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jupyterlab/mainmenu",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react",
+                                    "repository": {
+                                        "nameWithOwner": "Clever/minimal-react-typings"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react-dom",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react-joyride",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bufferutil",
+                                    "repository": {
+                                        "nameWithOwner": "websockets/bufferutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier-tslint",
+                                    "repository": {
+                                        "nameWithOwner": "azz/prettier-tslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prop-types",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/prop-types"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react-dom",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react-joyride",
+                                    "repository": {
+                                        "nameWithOwner": "gilbarbara/react-joyride"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "rimraf",
+                                    "repository": {
+                                        "nameWithOwner": "isaacs/rimraf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslint",
+                                    "repository": {
+                                        "nameWithOwner": "palantir/tslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslint-config-prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/tslint-config-prettier"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslint-react",
+                                    "repository": {
+                                        "nameWithOwner": "palantir/tslint-react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "typescript",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/TypeScript"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "utf-8-validate",
+                                    "repository": {
+                                        "nameWithOwner": "websockets/utf-8-validate"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#2b7489",
+                        "name": "TypeScript"
+                    }
+                ]
+            }
+        },
+        "CDAT/jupyterlab-tutorial-extension": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jupyterlab/application",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jupyterlab/mainmenu",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react",
+                                    "repository": {
+                                        "nameWithOwner": "Clever/minimal-react-typings"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react-dom",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bufferutil",
+                                    "repository": {
+                                        "nameWithOwner": "websockets/bufferutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "jupyterlab-tutorial",
+                                    "repository": {
+                                        "nameWithOwner": "CDAT/jupyterlab-tutorial"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react-dom",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "rimraf",
+                                    "repository": {
+                                        "nameWithOwner": "isaacs/rimraf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "typescript",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/TypeScript"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "utf-8-validate",
+                                    "repository": {
+                                        "nameWithOwner": "websockets/utf-8-validate"
                                     }
                                 }
                             ]
@@ -6817,6 +7142,19 @@
                 ]
             }
         },
+        "CDAT/vcsaddons": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/vtk-cdat": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -7714,6 +8052,61 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "ESGF/esgf-auth": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "django",
+                                    "repository": {
+                                        "nameWithOwner": "django/django"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "paste",
+                                    "repository": {
+                                        "nameWithOwner": "cdent/paste"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyopenssl",
+                                    "repository": {
+                                        "nameWithOwner": "msabramo/pyOpenSSL"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "social-auth-app-django",
+                                    "repository": {
+                                        "nameWithOwner": "python-social-auth/social-app-django"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "ESGF/esgf-build": {
@@ -9793,6 +10186,24 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "mfem",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
                                         "nameWithOwner": "jupyter-widgets/ipywidgets"
@@ -10941,6 +11352,19 @@
                     {
                         "color": null,
                         "name": "CMake"
+                    }
+                ]
+            }
+        },
+        "GMLC-TDC/concurrency": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
@@ -14830,6 +15254,19 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/FAROS": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -23038,7 +23475,28 @@
         },
         "LLNL/pyMMAopt": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numexpr",
+                                    "repository": {
+                                        "nameWithOwner": "eleddy/numexpr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -27938,14 +28396,6 @@
                 ]
             }
         },
-        "flux-framework/flux-depend": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": []
-            }
-        },
         "flux-framework/flux-docs": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -28959,6 +29409,19 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "mfem/web": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#1d365d",
+                        "name": "Less"
+                    }
+                ]
             }
         },
         "openzfs/openzfs": {
