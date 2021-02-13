@@ -8135,67 +8135,6 @@
                 ]
             }
         },
-        "ESGF/esgf-compute-api": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mock",
-                                    "repository": {
-                                        "nameWithOwner": "calvinchengx/python-mock"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "owslib",
-                                    "repository": {
-                                        "nameWithOwner": "geopython/OWSLib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mock",
-                                    "repository": {
-                                        "nameWithOwner": "calvinchengx/python-mock"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nose2",
-                                    "repository": {
-                                        "nameWithOwner": "nose-devs/nose2"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "ESGF/esgf-compute-wps": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -14624,7 +14563,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-eslint",
                                     "repository": {
-                                        "nameWithOwner": "Acidburn0zzz/babel-eslint"
+                                        "nameWithOwner": "babel/babel-eslint"
                                     }
                                 },
                                 {
@@ -30698,6 +30637,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pyaml",
+                                    "repository": {
+                                        "nameWithOwner": "mk-fg/pretty-yaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "sendgrid",
                                     "repository": {
                                         "nameWithOwner": "sendgrid/sendgrid-python"
@@ -30709,11 +30655,6 @@
                                     "repository": {
                                         "nameWithOwner": "python-social-auth/social-app-django"
                                     }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "yaml",
-                                    "repository": null
                                 }
                             ]
                         }
