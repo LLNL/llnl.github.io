@@ -6625,9 +6625,7 @@
                                 {
                                     "packageManager": "NPM",
                                     "packageName": "js-tokens",
-                                    "repository": {
-                                        "nameWithOwner": "Clemon1/Pricey-fix.io"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "NPM",
@@ -25708,6 +25706,19 @@
                 ]
             }
         },
+        "LLNL/spheral": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f0a9f0",
+                        "name": "Gnuplot"
+                    }
+                ]
+            }
+        },
         "LLNL/spify": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -31406,6 +31417,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "graphviz",
+                                    "repository": {
+                                        "nameWithOwner": "xflr6/graphviz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "ipython",
                                     "repository": {
                                         "nameWithOwner": "ipython/ipython"
@@ -31421,6 +31439,13 @@
                                     "packageName": "pyaml",
                                     "repository": {
                                         "nameWithOwner": "mk-fg/pretty-yaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pydotplus",
+                                    "repository": {
+                                        "nameWithOwner": "carlos-jenkins/pydotplus"
                                     }
                                 },
                                 {
@@ -31502,6 +31527,19 @@
                                     "packageName": "sphinxcontrib-napoleon",
                                     "repository": {
                                         "nameWithOwner": "sphinx-contrib/napoleon"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
