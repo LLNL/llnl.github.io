@@ -6859,6 +6859,19 @@
                 ]
             }
         },
+        "CDAT/vcs": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "CDAT/vcs-js": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -7486,6 +7499,19 @@
             }
         },
         "ECP-VeloC/shuffile": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "ECP-VeloC/spath": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -13600,19 +13626,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "LLNL/2DHEVF": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
             }
         },
         "LLNL/ADAPT": {
@@ -29188,19 +29201,6 @@
                 ]
             }
         },
-        "flux-framework/FluxRM.jl": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#a270ba",
-                        "name": "Julia"
-                    }
-                ]
-            }
-        },
         "flux-framework/PerfFlowAspect": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -30962,19 +30962,6 @@
                 ]
             }
         },
-        "spack/spack-bootstrap-installer": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": null,
-                        "name": "Rich Text Format"
-                    }
-                ]
-            }
-        },
         "spack/spack-ci-containers": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -31722,6 +31709,47 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
+                    }
+                ]
+            }
+        },
+        "spack/spack-user-survey": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandeyankit83/Pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
