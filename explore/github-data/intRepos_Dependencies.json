@@ -7205,19 +7205,6 @@
                 ]
             }
         },
-        "CDAT/wk": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/xmgrace": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -13628,6 +13615,19 @@
                 "nodes": []
             }
         },
+        "LLNL/2DHEVF": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/ADAPT": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14282,19 +14282,6 @@
                     {
                         "color": "#555555",
                         "name": "C"
-                    }
-                ]
-            }
-        },
-        "LLNL/Babel": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#b07219",
-                        "name": "Java"
                     }
                 ]
             }
@@ -16822,19 +16809,6 @@
                 ]
             }
         },
-        "LLNL/MTLRecSys": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/MaPPeRTrac": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -17419,7 +17393,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pybind11",
                                     "repository": {
-                                        "nameWithOwner": "dialkforkaushik/decagt"
+                                        "nameWithOwner": "dialkforkaushik/DECAGT"
                                     }
                                 }
                             ]
@@ -22917,7 +22891,49 @@
         },
         "LLNL/maestro_sheetmusic": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "maestrowf",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/maestrowf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandeyankit83/Pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scisample",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/scisample"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -25286,19 +25302,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/scr-top": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": null,
-                        "name": "CMake"
                     }
                 ]
             }
@@ -29201,6 +29204,19 @@
                 ]
             }
         },
+        "flux-framework/FluxRM.jl": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#a270ba",
+                        "name": "Julia"
+                    }
+                ]
+            }
+        },
         "flux-framework/PerfFlowAspect": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -30958,6 +30974,19 @@
                     {
                         "color": "#3D6117",
                         "name": "TeX"
+                    }
+                ]
+            }
+        },
+        "spack/spack-bootstrap-installer": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": null,
+                        "name": "Rich Text Format"
                     }
                 ]
             }
