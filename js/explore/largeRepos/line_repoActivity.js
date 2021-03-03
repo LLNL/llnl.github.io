@@ -37,7 +37,9 @@ function draw_line_repoActivity(areaID, byCommits=true, repoNameWOwner) {
     function drawGraph(data, areaID) {
         var graphHeader =`${byCommits ? 'Activity' : 'Line Additions'} Across Top ${cutOffSize} Repos by Stars [Default Branches, 1 Year]`;
 
-        data = data.slice(data.length - 52);
+        if (data.length > 52) {
+            data = data.slice(data.length - 52);
+        }
 
         // Removes most recent week from graph to avoid apparent dip in activity
         data.pop();
