@@ -8613,6 +8613,54 @@
                 ]
             }
         },
+        "ESGF/esgf-keycloak-user-migration": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click-config-file",
+                                    "repository": {
+                                        "nameWithOwner": "phha/click_config_file"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pg8000",
+                                    "repository": {
+                                        "nameWithOwner": "tlocke/pg8000"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy",
+                                    "repository": {
+                                        "nameWithOwner": "sqlalchemy/sqlalchemy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-map": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -10757,54 +10805,6 @@
                 ]
             }
         },
-        "GMLC-TDC/cymepy": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "click",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/click"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "helics",
-                                    "repository": {
-                                        "nameWithOwner": "GMLC-TDC/pyhelics"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandeyankit83/Pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "terminaltables",
-                                    "repository": {
-                                        "nameWithOwner": "Robpol86/terminaltables"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/helics-buildenv": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -11728,19 +11728,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "GMLC-TDC/helics-ns3": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
             }
         },
         "GMLC-TDC/helics-omnetpp": {
@@ -14729,19 +14716,6 @@
                 ]
             }
         },
-        "LLNL/Frescox": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#4d41b1",
-                        "name": "Fortran"
-                    }
-                ]
-            }
-        },
         "LLNL/GOTCHA": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14935,6 +14909,13 @@
                                     "packageName": "jekyll-sitemap",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll-sitemap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
                                     }
                                 }
                             ]
@@ -15574,6 +15555,13 @@
                                     "packageName": "unicode-display_width",
                                     "repository": {
                                         "nameWithOwner": "janlelis/unicode-display_width"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
                                     }
                                 },
                                 {
@@ -16241,6 +16229,194 @@
                 ]
             }
         },
+        "LLNL/MacPatch": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ace-editor-builds",
+                                    "repository": {
+                                        "nameWithOwner": "ajaxorg/ace-builds"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bootstrap",
+                                    "repository": {
+                                        "nameWithOwner": "twbs/bootstrap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bootstrap-chosen",
+                                    "repository": {
+                                        "nameWithOwner": "alxlit/bootstrap-chosen"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bootstrap-editable",
+                                    "repository": {
+                                        "nameWithOwner": "barisbora/bootstrap-editable"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bootstrap-table",
+                                    "repository": {
+                                        "nameWithOwner": "wenzhixin/bootstrap-table"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bootstrap-typeahead",
+                                    "repository": {
+                                        "nameWithOwner": "biggora/bootstrap-ajax-typeahead"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "brace",
+                                    "repository": {
+                                        "nameWithOwner": "thlorenz/brace"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chart.js",
+                                    "repository": {
+                                        "nameWithOwner": "chartjs/Chart.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chosen-js",
+                                    "repository": {
+                                        "nameWithOwner": "harvesthq/chosen-package"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "colresizable",
+                                    "repository": {
+                                        "nameWithOwner": "alvaro-prieto/colResizable"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "font-awesome",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "interactjs",
+                                    "repository": {
+                                        "nameWithOwner": "taye/interact.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "jquery",
+                                    "repository": {
+                                        "nameWithOwner": "jquery/jquery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "jQuery-QueryBuilder",
+                                    "repository": {
+                                        "nameWithOwner": "mistic100/jQuery-QueryBuilder"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "jquery-steps-tc",
+                                    "repository": {
+                                        "nameWithOwner": "Jorisslagter/jquery-steps"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "metismenu",
+                                    "repository": {
+                                        "nameWithOwner": "onokumus/metismenu"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "modernizr",
+                                    "repository": {
+                                        "nameWithOwner": "Modernizr/Modernizr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "moment",
+                                    "repository": {
+                                        "nameWithOwner": "moment/moment"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "morris.js",
+                                    "repository": {
+                                        "nameWithOwner": "morrisjs/morris.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "raphael",
+                                    "repository": {
+                                        "nameWithOwner": "DmitryBaranovskiy/raphael"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "sb-admin-2",
+                                    "repository": {
+                                        "nameWithOwner": "ethanhann/sb-admin-2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "selectize",
+                                    "repository": {
+                                        "nameWithOwner": "selectize/selectize.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "sql-parser-mistic",
+                                    "repository": {
+                                        "nameWithOwner": "gokulramesh71/sql-parser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tableexport.jquery.plugin",
+                                    "repository": {
+                                        "nameWithOwner": "hhurz/tableExport.jquery.plugin"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#438eff",
+                        "name": "Objective-C"
+                    }
+                ]
+            }
+        },
         "LLNL/MacPatch-AutoPKG": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -16289,6 +16465,19 @@
             }
         },
         "LLNL/MemAxes": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/MemSurfer": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -21113,19 +21302,6 @@
             }
         },
         "LLNL/direct-fuse": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
-        "LLNL/dtcmp": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -27412,19 +27588,6 @@
                 ]
             }
         },
-        "LLNL/tox": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#b07219",
-                        "name": "Java"
-                    }
-                ]
-            }
-        },
         "LLNL/trainGMM": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -28458,31 +28621,6 @@
         "chaos/whatsup": {
             "dependencyGraphManifests": {
                 "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
-        "chu11/freeipmi-mirror": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "or",
-                                    "repository": null
-                                }
-                            ]
-                        }
-                    }
-                ]
             },
             "languages": {
                 "nodes": [
@@ -30698,6 +30836,26 @@
                                     "packageName": "zipp",
                                     "repository": {
                                         "nameWithOwner": "jaraco/zipp"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
