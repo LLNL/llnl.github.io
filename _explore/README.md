@@ -8,7 +8,8 @@ cd _explore/scripts/
 _(Additional script functionality detailed in the [`./scripts` section below][jump2 scripts].)_
 
 **IMPORTANT!**  
-Data fetching scripts require an environment variable `GITHUB_API_TOKEN` containing a valid GitHub [OAuth token][oauth] or [personal access token][personaltoken].
+Data fetching scripts require an environment variable `GITHUB_API_TOKEN` containing a valid GitHub [OAuth token][oauth] or [personal access token][personaltoken].  
+You will also need to install the Python dependencies as listed in [`requirements.txt`][requires].
 
 # About the Contents of this Directory
 
@@ -37,6 +38,7 @@ The scripts are only for gathering new data. You do not need them to run in orde
 [data dir]: ../explore/github-data
 [queries dir]: queries
 [scripts dir]: scripts
+[requires]: scripts/requirements.txt
 [mastersh]: scripts/MASTER.sh
 [lastmasterup]: LAST_MASTER_UPDATE.txt
 [gitgraphql]: https://developer.github.com/v4/

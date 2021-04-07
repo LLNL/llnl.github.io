@@ -8395,14 +8395,6 @@
                 ]
             }
         },
-        "ESGF/esgf-dist": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": []
-            }
-        },
         "ESGF/esgf-docker": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -16985,6 +16977,19 @@
                 ]
             }
         },
+        "LLNL/PairScore": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/PnMPI": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -18279,6 +18284,19 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/Wemul": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
@@ -22298,6 +22316,19 @@
                 ]
             }
         },
+        "LLNL/metall": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/mgmol": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22768,6 +22799,19 @@
             }
         },
         "LLNL/ovis": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/pLiner": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -23268,19 +23312,6 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
-                    }
-                ]
-            }
-        },
-        "LLNL/qnd": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
                     }
                 ]
             }
@@ -28215,19 +28246,6 @@
                 ]
             }
         },
-        "flux-framework/flux-security": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "flux-framework/flux-spack": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -29708,6 +29726,151 @@
                     {
                         "color": null,
                         "name": "Rich Text Format"
+                    }
+                ]
+            }
+        },
+        "spack/spack-bot": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "bkeepers/dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jwt",
+                                    "repository": {
+                                        "nameWithOwner": "jwt/ruby-jwt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "octokit",
+                                    "repository": {
+                                        "nameWithOwner": "octokit/octokit.rb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "sinatra",
+                                    "repository": {
+                                        "nameWithOwner": "sinatra/sinatra"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "addressable",
+                                    "repository": {
+                                        "nameWithOwner": "sporkmonger/addressable"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "bkeepers/dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "faraday",
+                                    "repository": {
+                                        "nameWithOwner": "lostisland/faraday"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jwt",
+                                    "repository": {
+                                        "nameWithOwner": "jwt/ruby-jwt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "multipart-post",
+                                    "repository": {
+                                        "nameWithOwner": "socketry/multipart-post"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "mustermann",
+                                    "repository": {
+                                        "nameWithOwner": "sinatra/mustermann"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "octokit",
+                                    "repository": {
+                                        "nameWithOwner": "octokit/octokit.rb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "public_suffix",
+                                    "repository": {
+                                        "nameWithOwner": "weppos/publicsuffix-ruby"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "rack",
+                                    "repository": {
+                                        "nameWithOwner": "rack/rack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "rack-protection",
+                                    "repository": {
+                                        "nameWithOwner": "SaM-Solutions/ruby-rack-protection"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "sawyer",
+                                    "repository": {
+                                        "nameWithOwner": "lostisland/sawyer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "sinatra",
+                                    "repository": {
+                                        "nameWithOwner": "sinatra/sinatra"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "tilt",
+                                    "repository": {
+                                        "nameWithOwner": "rtomayko/tilt"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#701516",
+                        "name": "Ruby"
                     }
                 ]
             }
