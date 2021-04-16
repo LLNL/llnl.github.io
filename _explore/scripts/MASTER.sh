@@ -31,6 +31,10 @@ function runScript() {
 }
 
 
+# Check Python requirements
+runScript python_check.py
+
+
 echo "RUNNING MASTER UPDATE SCRIPT"
 
 # Log start time
