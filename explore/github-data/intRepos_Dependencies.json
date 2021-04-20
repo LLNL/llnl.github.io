@@ -9198,10 +9198,36 @@
         },
         "ESGF/esgf-user-support": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "ESGF/esgf-utils": {
@@ -16101,7 +16127,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "nameWithOwner": "rubygems/bundler"
+                                        "nameWithOwner": "byplayer/bundler"
                                     }
                                 },
                                 {
@@ -20738,9 +20764,23 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "httmock",
+                                    "repository": {
+                                        "nameWithOwner": "patrys/httmock"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "pytest",
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-gitlab",
+                                    "repository": {
+                                        "nameWithOwner": "python-gitlab/python-gitlab"
                                     }
                                 },
                                 {
@@ -20761,6 +20801,13 @@
                                     "packageName": "python-gitlab",
                                     "repository": {
                                         "nameWithOwner": "python-gitlab/python-gitlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toml",
+                                    "repository": {
+                                        "nameWithOwner": "uiri/toml"
                                     }
                                 }
                             ]
@@ -23785,7 +23832,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "nameWithOwner": "rubygems/bundler"
+                                        "nameWithOwner": "byplayer/bundler"
                                     }
                                 },
                                 {
@@ -23994,9 +24041,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "tbump",
-                                    "repository": {
-                                        "nameWithOwner": "dmerejkowsky/tbump"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -28038,6 +28083,14 @@
                 ]
             }
         },
+        "flux-framework/flux-coral2": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "flux-framework/flux-core": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -29105,14 +29158,6 @@
                         "name": "C++"
                     }
                 ]
-            }
-        },
-        "mfem/mfem-actions": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": []
             }
         },
         "mfem/mfem-uberenv": {
