@@ -28217,13 +28217,60 @@
         },
         "flux-framework/flux-framework.github.io": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "github-pages",
+                                    "repository": {
+                                        "nameWithOwner": "github/pages-gem"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-feed",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-feed"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-theme-cayman",
+                                    "repository": {
+                                        "nameWithOwner": "pages-themes/cayman"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "pygments.rb",
+                                    "repository": {
+                                        "nameWithOwner": "pygments/pygments.rb"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
                     {
-                        "color": "#c6538c",
-                        "name": "SCSS"
+                        "color": "#e34c26",
+                        "name": "HTML"
                     }
                 ]
             }
