@@ -94,21 +94,23 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 
 Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/main/community-health):
 
-* An appropriate open source license and `LLNL-CODE-xxxxxx` release number. See the [LLNL Software Licensing](https://software.llnl.gov/about/licenses) page for details and examples.
+* An appropriate open source **license** and `LLNL-CODE-xxxxxx` **release number**. See the [LLNL Software Licensing](https://software.llnl.gov/about/licenses) page for details and examples.
 
-* A [README](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
+* A [**README**](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
 
-* A [NOTICE](https://github.com/LLNL/.github/blob/main/community-health/NOTICE.md) file that includes LLNL auspice and disclaimer statements.
+* A [**NOTICE**](https://github.com/LLNL/.github/blob/main/community-health/NOTICE.md) file that includes LLNL auspice and disclaimer statements.
 
-* A [CODE OF CONDUCT](https://github.com/LLNL/.github/blob/main/community-health/CODE_OF_CONDUCT.md) file that defines standards for how to engage in your project's community.
+* A [**CODE OF CONDUCT**](https://github.com/LLNL/.github/blob/main/community-health/CODE_OF_CONDUCT.md) file that defines standards for how to engage in your project's community.
 
-* A [CONTRIBUTING](https://github.com/LLNL/.github/blob/main/community-health/CONTRIBUTING.md) file that communicates how others should contribute to your repo.
+* A [**CONTRIBUTING**](https://github.com/LLNL/.github/blob/main/community-health/CONTRIBUTING.md) file that communicates how others should contribute to your repo.
 
-After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [release notes](https://github.com/LLNL/.github/blob/main/community-health/release-template.md).
+After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [**release notes**](https://github.com/LLNL/.github/blob/main/community-health/release-template.md).
 
-Another good practice is to provide user documentation. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [LLNL/.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
+Another good practice is to provide **user documentation**. Read the Docs (RtD) is a common platform for user guides, tutorials, quick start instructions, and other forms of documentation. Our [LLNL/.github repo](https://github.com/LLNL/.github) contains step-by-step instructions for setting up a RtD instance, a [template](https://github-main.readthedocs.io/en/latest/) you can start with, and links to various resources for tips and additional details.
 
-Submit your repo to [DOE CODE](https://www.osti.gov/doecode/faq#what-is) so others can find it when searching through DOE-funded projects. After your repo is included in DOE CODE, you may also want to add the digital object identifier (DOI) to the repo. See the [relevant section](https://software.llnl.gov/about/licenses/#digital-object-identifier-doi) of our LLNL Software Licensing page for more information.
+Submit your repo to [**DOE CODE**](https://www.osti.gov/doecode/faq#what-is) so others can find it when searching through DOE-funded projects. After your repo is included in DOE CODE, you may also want to add the **digital object identifier** (DOI) to the repo. See the [relevant section](https://software.llnl.gov/about/licenses/#digital-object-identifier-doi) of our LLNL Software Licensing page for more information.
+
+If your repo is research software, consider submitting it to the *Journal of Open Source Software* ([JOSS](https://joss.theoj.org/about)). Submission will produce a **citation** to include in your README file, then users or other researchers can cite your software correctly. The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) describes the submission requirements. JOSS defines *research software* as "software that solves complex modeling problems in a scientific context (physics, mathematics, biology, medicine, social science, neuroscience, engineering); supports the functioning of research instruments or the execution of research experiments; extracts knowledge from large data sets; offers a mathematical library; or similar." (You can also [sign up](https://joss.theoj.org/reviewer-signup.html) to review JOSS papers, if you are so inclined.)
 
 ### How do I include my repo in the LLNL organization and/or this website’s catalog?
 
