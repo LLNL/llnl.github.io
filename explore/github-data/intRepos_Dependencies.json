@@ -12698,13 +12698,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "helics-apps",
-                                    "repository": {
-                                        "nameWithOwner": "GMLC-TDC/HELICS"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "strip-hints",
                                     "repository": {
                                         "nameWithOwner": "abarker/strip-hints"
@@ -29558,7 +29551,7 @@
                 ]
             }
         },
-        "spack/abi-tests": {
+        "spack/build-abi-tests": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -30776,6 +30769,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "pyaml",
                                     "repository": {
                                         "nameWithOwner": "mk-fg/pretty-yaml"
@@ -30786,6 +30786,13 @@
                                     "packageName": "pygithub",
                                     "repository": {
                                         "nameWithOwner": "PyGithub/PyGithub"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
                                     }
                                 }
                             ]
