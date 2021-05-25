@@ -16108,7 +16108,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "nameWithOwner": "stripe/bundler"
+                                        "nameWithOwner": "rubygems/rubygems"
                                     }
                                 },
                                 {
@@ -23827,7 +23827,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "bundler",
                                     "repository": {
-                                        "nameWithOwner": "stripe/bundler"
+                                        "nameWithOwner": "rubygems/rubygems"
                                     }
                                 },
                                 {
@@ -29560,10 +29560,43 @@
         },
         "spack/build-abi-containers": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "Julian/jsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyaml",
+                                    "repository": {
+                                        "nameWithOwner": "mk-fg/pretty-yaml"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "spack/build-abi-tests": {
