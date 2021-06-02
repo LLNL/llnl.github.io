@@ -1,4 +1,0 @@
----
-title: Category
-layout: category
----

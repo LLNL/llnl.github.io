@@ -1,5 +1,5 @@
 app.controller('gitHubDataController', function($scope, $http, $window, Category) {
-    var getCategoryInfo = $http.get('../category/category_info.json', {
+    var getCategoryInfo = $http.get('/category/category_info.json', {
         cache: true
     });
 

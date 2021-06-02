@@ -14,13 +14,10 @@
 
     <div id="siteNavbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right navbar-collapse">
-        <li id="radiuss"
-            {% if page.url == "/radiuss/" %} class="active dropdown"
+        <li id="explore"
+            {% if page.url == "/explore/" %} class="active dropdown"
             {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="/radiuss/">RADIUSS</a>
-          <div class="dropdown-content">
-            <p><a class="navbar-normal" href="/radiuss/policies/">Policies & Guidelines</a></p>
-          </div>
+            {% endif %}><a class="navbar-normal" href="/explore/#/ALLSOFTWARE">Browse projects</a>
         </li>
         <li id="news"
             {% if page.url == "/news/" %} class="active dropdown"
@@ -36,16 +33,17 @@
             {% endif %}><a class="navbar-normal" href="/about/">About</a>
           <div class="dropdown-content">
             <p><a class="navbar-normal" href="/about/faq/">FAQ</a></p>
+            <p><a class="navbar-normal" href="/about/project/">Policies & Guidelines</a>
             <p><a class="navbar-normal" href="/about/licenses/">Licenses Guide</a></p>
           </div>
         </li>
-        <li id="explore"
-            {% if page.url == "/explore/" %} class="active dropdown"
+        <li id="visualize"
+            {% if page.url == "/visualize/" %} class="active dropdown"
             {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="/explore/">Explore</a>
+            {% endif %}><a class="navbar-normal" href="/visualize/">Visualize</a>
           <div class="dropdown-content">
-            <p><a class="navbar-normal" href="/explore/dependencies/">Dependencies</a></p>
-            <p><a class="navbar-normal" href="/explore/popular-repos/">Popular Repositories</a></p>
+            <p><a class="navbar-normal" href="/visualize/dependencies/">Dependencies</a></p>
+            <p><a class="navbar-normal" href="/visualize/popular-repos/">Popular Repositories</a></p>
           </div>
         </li>
         <li id="github-button"><a href="https://github.com/llnl"><span class="fa fa-github fa-lg"></span></a></li>
