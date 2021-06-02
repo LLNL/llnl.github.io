@@ -7,7 +7,7 @@ permalink: /about/project/
 ## {{ page.title }}
 {: .page-header}
 
-<p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash; <br />aims to broaden usage across LLNL and the open source community of a set of libraries and tools <br />used for HPC scientific application development. Read more about our <a href="/radiuss/policies/">Policies & Guidelines</a>.</p>
+<p class="page-title">LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash; <br />aims to broaden usage across LLNL and the open source community of a set of libraries and tools <br />used for HPC scientific application development.</p>
 
 <!--
 Prepared by LLNL under Contract DE-AC52-07NA27344.
