@@ -21,6 +21,7 @@ permalink: /news/
   {% capture shh %}
     {% increment event %}
     {% increment eventReport %}
+    {% increment multimedia %}
     {% increment newRepo %}
     {% increment profile %}
     {% increment release %}
@@ -35,6 +36,10 @@ permalink: /news/
     {% elsif page.categories contains "event-report" and eventReport <= cap %}
       {% capture quiet %}
         {% increment eventReport %}
+      {% endcapture %}
+    {% elsif page.categories contains "multimedia" and multimedia <= cap %}
+      {% capture quiet %}
+        {% increment multimedia %}
       {% endcapture %}
     {% elsif page.categories contains "new-repo" and newRepo <= cap %}
       {% capture quiet %}
