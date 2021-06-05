@@ -7141,6 +7141,19 @@
                 ]
             }
         },
+        "CEED/Remhos": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "CEED/benchmarks": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -13716,6 +13729,26 @@
                                     "packageName": "zipp",
                                     "repository": {
                                         "nameWithOwner": "jaraco/zipp"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gym",
+                                    "repository": {
+                                        "nameWithOwner": "openai/gym"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ray",
+                                    "repository": {
+                                        "nameWithOwner": "ray-project/ray"
                                     }
                                 }
                             ]
@@ -28951,6 +28984,14 @@
                         "name": "Python"
                     }
                 ]
+            }
+        },
+        "flux-framework/fripp": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "flux-framework/planning": {
