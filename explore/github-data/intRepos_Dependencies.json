@@ -2636,7 +2636,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pytest-django",
                                     "repository": {
-                                        "nameWithOwner": "simpleenergy/pytest_django"
+                                        "nameWithOwner": "zekus/pytest-django"
                                     }
                                 }
                             ]
@@ -2808,7 +2808,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pytest-django",
                                     "repository": {
-                                        "nameWithOwner": "simpleenergy/pytest_django"
+                                        "nameWithOwner": "zekus/pytest-django"
                                     }
                                 },
                                 {
@@ -9353,6 +9353,127 @@
         "FrankD412/pyaestro": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coloredlogs",
+                                    "repository": {
+                                        "nameWithOwner": "xolox/python-coloredlogs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "nedbat/coveragepy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "fabric",
+                                    "repository": {
+                                        "nameWithOwner": "mattrenquist/fabric"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "flake8",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipython",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pre-commit",
+                                    "repository": {
+                                        "nameWithOwner": "Acidburn0zzz/pre-commit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psutil",
+                                    "repository": {
+                                        "nameWithOwner": "giampaolo/psutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pydocstyle",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/pydocstyle"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pylint",
+                                    "repository": {
+                                        "nameWithOwner": "s0undt3ch/pylint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx_rtd_theme",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tox",
+                                    "repository": {
+                                        "nameWithOwner": "tox-dev/tox"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tox-pyenv",
+                                    "repository": {
+                                        "nameWithOwner": "stavxyz/tox-pyenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tox-travis",
+                                    "repository": {
+                                        "nameWithOwner": "tox-dev/tox-travis"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
@@ -22778,6 +22899,40 @@
                     {
                         "color": "#384d54",
                         "name": "Dockerfile"
+                    }
+                ]
+            }
+        },
+        "LLNL/mttime": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "obspy",
+                                    "repository": {
+                                        "nameWithOwner": "obspy/obspy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
