@@ -1697,7 +1697,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "npm/cli"
+                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
                                     }
                                 },
                                 {
@@ -10461,7 +10461,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "npm/cli"
+                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
                                     }
                                 },
                                 {
@@ -21280,80 +21280,6 @@
                 ]
             }
         },
-        "LLNL/hdtopology": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "multiprocess",
-                                    "repository": {
-                                        "nameWithOwner": "uqfoundation/multiprocess"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "hdff",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/hdtopology"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ngl",
-                                    "repository": {
-                                        "nameWithOwner": "NCAR/pyngl"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/hiop": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21926,95 +21852,6 @@
                     {
                         "color": null,
                         "name": "CMake"
-                    }
-                ]
-            }
-        },
-        "LLNL/llnl.github.io": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "github-pages",
-                                    "repository": {
-                                        "nameWithOwner": "github/pages-gem"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-coffeescript",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-coffeescript"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-redirect-from",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-redirect-from"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-remote-theme",
-                                    "repository": {
-                                        "nameWithOwner": "benbalter/jekyll-remote-theme"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-seo-tag",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-seo-tag"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-sitemap",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-sitemap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "webrick",
-                                    "repository": {
-                                        "nameWithOwner": "ruby/webrick"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "llnl-scraper",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/scraper"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f1e05a",
-                        "name": "JavaScript"
                     }
                 ]
             }
@@ -30387,6 +30224,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "flake8",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "gidgethub",
                                     "repository": {
                                         "nameWithOwner": "brettcannon/gidgethub"
@@ -30394,16 +30238,23 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "python-dotenv",
+                                    "packageName": "isort",
                                     "repository": {
-                                        "nameWithOwner": "theskumar/python-dotenv"
+                                        "nameWithOwner": "PyCQA/isort"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "requests",
+                                    "packageName": "mypy",
                                     "repository": {
-                                        "nameWithOwner": "psf/requests"
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "theskumar/python-dotenv"
                                     }
                                 },
                                 {
