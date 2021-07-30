@@ -1697,7 +1697,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
+                                        "nameWithOwner": "npm/cli"
                                     }
                                 },
                                 {
@@ -10461,7 +10461,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
+                                        "nameWithOwner": "npm/cli"
                                     }
                                 },
                                 {
@@ -16985,6 +16985,100 @@
                 ]
             }
         },
+        "LLNL/MuyGPyS": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "absl-py",
+                                    "repository": {
+                                        "nameWithOwner": "abseil/abseil-py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hnswlib",
+                                    "repository": {
+                                        "nameWithOwner": "nmslib/hnswlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pybind11",
+                                    "repository": {
+                                        "nameWithOwner": "dialkforkaushik/DECAGT"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "-",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-autodoc-typehints",
+                                    "repository": {
+                                        "nameWithOwner": "agronholm/sphinx-autodoc-typehints"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/NDDAV": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -21280,6 +21374,80 @@
                 ]
             }
         },
+        "LLNL/hdtopology": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "multiprocess",
+                                    "repository": {
+                                        "nameWithOwner": "uqfoundation/multiprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hdff",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/hdtopology"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ngl",
+                                    "repository": {
+                                        "nameWithOwner": "NCAR/pyngl"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/hiop": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21852,6 +22020,95 @@
                     {
                         "color": null,
                         "name": "CMake"
+                    }
+                ]
+            }
+        },
+        "LLNL/llnl.github.io": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "github-pages",
+                                    "repository": {
+                                        "nameWithOwner": "github/pages-gem"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-coffeescript",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-coffeescript"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-redirect-from",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-redirect-from"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-remote-theme",
+                                    "repository": {
+                                        "nameWithOwner": "benbalter/jekyll-remote-theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-seo-tag",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-seo-tag"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-sitemap",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-sitemap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-scraper",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/scraper"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f1e05a",
+                        "name": "JavaScript"
                     }
                 ]
             }
