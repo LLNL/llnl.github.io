@@ -1205,6 +1205,12 @@
         "topics": null,
         "website": null
     },
+    "GLVis/xeus-glvis": {
+        "description": " C++ backend for the Jupyter GLVis widget ",
+        "name": "GLVis/xeus-glvis",
+        "topics": null,
+        "website": null
+    },
     "GMLC-TDC/HELICS": {
         "description": "Hierarchical Engine for Large-scale Infrastructure Co-Simulation (HELICS) ",
         "name": "GMLC-TDC/HELICS",
@@ -3300,7 +3306,6 @@
         "description": "HPC solver for nonlinear optimization problems",
         "name": "LLNL/hiop",
         "topics": [
-            "optimization-methods",
             "hpc",
             "nonlinear-optimization",
             "nonlinear-programming",
@@ -3313,13 +3318,12 @@
             "quasi-newton",
             "constrained-optimization",
             "solver",
-            "cpp",
             "optimization",
             "acopf",
             "gpu-support",
-            "hpc-solver",
-            "magma",
-            "cuda"
+            "cuda",
+            "math-physics",
+            "radiuss"
         ],
         "website": ""
     },
@@ -3932,7 +3936,9 @@
         "description": "Problem Solving environment for Uncertainty Analysis and Design Exploration",
         "name": "LLNL/psuade",
         "topics": [
-            "uncertainty-quantification"
+            "uncertainty-quantification",
+            "radiuss",
+            "math-physics"
         ],
         "website": "https://computing.llnl.gov/projects/psuade-uncertainty-quantification"
     },
@@ -4084,6 +4090,14 @@
         "name": "LLNL/radiuss-spack-configs",
         "topics": null,
         "website": null
+    },
+    "LLNL/radiuss-spack-testing": {
+        "description": "Gitlab CI automation of Spack testing with RADIUSS projects builds.",
+        "name": "LLNL/radiuss-spack-testing",
+        "topics": [
+            "radiuss"
+        ],
+        "website": ""
     },
     "LLNL/radiuss-stack": {
         "description": "A spack stack with radiuss (some) radiuss packages",
@@ -5557,16 +5571,6 @@
         "topics": null,
         "website": null
     },
-    "spack/spack-bot": {
-        "description": "Spack maintainer bot \ud83e\udd16",
-        "name": "spack/spack-bot",
-        "topics": [
-            "spack",
-            "spack-bot",
-            "github-app"
-        ],
-        "website": "https://spack.github.io/spack-bot/"
-    },
     "spack/spack-ci-containers": {
         "description": "Container recipes used by Spack for test purposes",
         "name": "spack/spack-ci-containers",
@@ -5678,6 +5682,16 @@
         "topics": null,
         "website": "https://spack.io"
     },
+    "spack/spackbot": {
+        "description": "Spack maintainer bot \ud83e\udd16",
+        "name": "spack/spackbot",
+        "topics": [
+            "spack",
+            "spack-bot",
+            "github-app"
+        ],
+        "website": "https://spack.github.io/spack-bot/"
+    },
     "spack/stars-over-time": {
         "description": "Plot github stars over time of different repositories",
         "name": "spack/stars-over-time",
@@ -5705,6 +5719,12 @@
             "hpc"
         ],
         "website": "https://visit-dav.github.io/largedata/"
+    },
+    "visit-dav/live-customer-response": {
+        "description": "An issue repo to track live customer support incidents and activity",
+        "name": "visit-dav/live-customer-response",
+        "topics": null,
+        "website": ""
     },
     "visit-dav/migration": {
         "description": "Scripts for VisIt's SVN to Github Migration",

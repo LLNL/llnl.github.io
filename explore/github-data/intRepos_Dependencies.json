@@ -10534,6 +10534,19 @@
                 ]
             }
         },
+        "GLVis/xeus-glvis": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "GMLC-TDC/HELICS": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -12870,6 +12883,47 @@
                     {
                         "color": "#DA5B0B",
                         "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
+        "GMLC-TDC/pyhelics": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cffi",
+                                    "repository": {
+                                        "nameWithOwner": "chevah/python-cffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "helics-apps",
+                                    "repository": {
+                                        "nameWithOwner": "GMLC-TDC/HELICS"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "strip-hints",
+                                    "repository": {
+                                        "nameWithOwner": "abarker/strip-hints"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -24044,6 +24098,19 @@
                 "nodes": []
             }
         },
+        "LLNL/radiuss-spack-testing": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#89e051",
+                        "name": "Shell"
+                    }
+                ]
+            }
+        },
         "LLNL/radiuss-stack": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -29074,6 +29141,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "caliper-reader",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Caliper"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "codecov",
                                     "repository": {
                                         "nameWithOwner": "webknjaz/codecov-python"
@@ -29162,6 +29236,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "caliper-reader",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Caliper"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "matplotlib",
@@ -30427,75 +30508,6 @@
                 ]
             }
         },
-        "spack/spack-bot": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "gidgethub",
-                                    "repository": {
-                                        "nameWithOwner": "brettcannon/gidgethub"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "isort",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/isort"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mypy",
-                                    "repository": {
-                                        "nameWithOwner": "python/mypy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-dotenv",
-                                    "repository": {
-                                        "nameWithOwner": "theskumar/python-dotenv"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sh",
-                                    "repository": {
-                                        "nameWithOwner": "amoffat/sh"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "spack/spack-ci-containers": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -31582,6 +31594,75 @@
                 ]
             }
         },
+        "spack/spackbot": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "aiohttp",
+                                    "repository": {
+                                        "nameWithOwner": "aio-libs/aiohttp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "flake8",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gidgethub",
+                                    "repository": {
+                                        "nameWithOwner": "brettcannon/gidgethub"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "isort",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/isort"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "theskumar/python-dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sh",
+                                    "repository": {
+                                        "nameWithOwner": "amoffat/sh"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "spack/stars-over-time": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -31669,6 +31750,14 @@
                         "name": "HTML"
                     }
                 ]
+            }
+        },
+        "visit-dav/live-customer-response": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "visit-dav/migration": {
