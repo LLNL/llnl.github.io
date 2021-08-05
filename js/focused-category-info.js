@@ -47,15 +47,16 @@ angular.module('app', []).controller('gitHubDataController', [
             return false;
         }
 
-        function titleCase(str) {
-            return str
-                .toLowerCase()
-                .split(' ')
-                .map(function(word) {
-                    return word.charAt(0).toUpperCase() + word.slice(1);
-                })
-                .join(' ');
-        }
+        // display category titles in title case
+//        function titleCase(str) {
+//            return str
+//                .toLowerCase()
+//                .split(' ')
+//                .map(function(word) {
+//                    return word.charAt(0).toUpperCase() + word.slice(1);
+//                })
+//                .join(' ');
+//        }
 
         $scope.orderProp = '-stars';
 
@@ -67,12 +68,12 @@ angular.module('app', []).controller('gitHubDataController', [
             $scope.catData = [];
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
-                data['displayTitle'] = titleCase(data.title);
+                data['displayTitle'] = (data.title);
                 $scope.catData.push(data);
             });
             $scope.catData = sortAlphabetically($scope.catData, 'title');
             var complete = {
-                title: 'ALL SOFTWARE',
+                title: 'All Software',
                 icon: {
                     path: '/assets/images/catalog.svg',
                     alt: 'All Software'
