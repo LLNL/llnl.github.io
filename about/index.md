@@ -40,6 +40,7 @@ This portal abounds with examples of projects that have found a home in the open
 - Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
 
 ### Other References
+
 * [18F Handbook: GitHub](https://handbook.18f.gov/github/)
 * [fisma-ready/github: Controls necessary for Federal use of GitHub](https://github.com/fisma-ready/github)
 * [Guidance for Agency Use of Third-Party Websites and Applications](https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/memoranda_2010/m10-23.pdf)
