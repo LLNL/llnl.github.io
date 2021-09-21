@@ -1322,6 +1322,12 @@
         "topics": null,
         "website": null
     },
+    "GMLC-TDC/cheader2json": {
+        "description": "libclang parser to dump c header info to json",
+        "name": "GMLC-TDC/cheader2json",
+        "topics": null,
+        "website": null
+    },
     "GMLC-TDC/cmake-helpers": {
         "description": "Helper functions for cmake code that are used throughout the GMLC-TDC organization",
         "name": "GMLC-TDC/cmake-helpers",
@@ -1437,6 +1443,12 @@
         "name": "GMLC-TDC/homebrew-helics",
         "topics": null,
         "website": ""
+    },
+    "GMLC-TDC/matHELICS": {
+        "description": "matlab interfaces for HELICS",
+        "name": "GMLC-TDC/matHELICS",
+        "topics": null,
+        "website": null
     },
     "GMLC-TDC/netif": {
         "description": "Header-only C++14 library for getting network addresses associated with network interface without name lookups on Windows, macOS, Linux, and FreeBSD",
@@ -1823,6 +1835,12 @@
             "gpu"
         ],
         "website": ""
+    },
+    "LLNL/Exaworks-SDK": {
+        "description": null,
+        "name": "LLNL/Exaworks-SDK",
+        "topics": null,
+        "website": null
     },
     "LLNL/FAROS": {
         "description": "FAROS: A Framework for Benchmarking and Analysis of Compiler Optimization",
@@ -2254,8 +2272,7 @@
             "python",
             "scientific-computing",
             "machine-learning",
-            "math-physics",
-            "radiuss"
+            "math-physics"
         ],
         "website": ""
     },
@@ -2811,6 +2828,12 @@
         ],
         "website": ""
     },
+    "LLNL/autoatlas": {
+        "description": "AutoAtlas is a neural network for unsupervised 3D partitioning and representation learning.",
+        "name": "LLNL/autoatlas",
+        "topics": null,
+        "website": null
+    },
     "LLNL/avalaunch": {
         "description": "Research prototype for fast launch of MPI jobs",
         "name": "LLNL/avalaunch",
@@ -2851,7 +2874,8 @@
         "name": "LLNL/b-mpi3",
         "topics": [
             "mpi",
-            "cpp"
+            "cpp",
+            "radiuss"
         ],
         "website": ""
     },
@@ -3354,12 +3378,6 @@
         "topics": null,
         "website": null
     },
-    "LLNL/hypre_matmat_paper": {
-        "description": null,
-        "name": "LLNL/hypre_matmat_paper",
-        "topics": null,
-        "website": null
-    },
     "LLNL/ibtopo": {
         "description": "Perl scripts to process ibnetdiscover to extract network topology info",
         "name": "LLNL/ibtopo",
@@ -3620,7 +3638,7 @@
         "website": ""
     },
     "LLNL/mappgene": {
-        "description": "Massively Parallel and Portable Genomic Sequence Analysis (mappgene) is a sequencing analysis workflow for high performance computing.",
+        "description": "mappgene (Massively Parallel and Portable Genomic Sequence Analysis) runs SARS-CoV-2 sequencing on HPC platforms.",
         "name": "LLNL/mappgene",
         "topics": null,
         "website": ""
@@ -3654,9 +3672,10 @@
             "redis-server",
             "celery-workers",
             "workflows",
-            "hpc"
+            "hpc",
+            "radiuss"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/merlin-spellbook": {
         "description": "Useful utilities for merlin workflows!",
@@ -4106,6 +4125,12 @@
         "topics": null,
         "website": null
     },
+    "LLNL/radiuss-docker": {
+        "description": "Automated builds of Docker container bases for RADIUSS projects",
+        "name": "LLNL/radiuss-docker",
+        "topics": null,
+        "website": null
+    },
     "LLNL/radiuss-spack-configs": {
         "description": "Shared spack configurations for RADIUSS projects",
         "name": "LLNL/radiuss-spack-configs",
@@ -4414,20 +4439,26 @@
     "LLNL/spot2_container": {
         "description": "The container infrastructure for the SPOT performance visualization tool",
         "name": "LLNL/spot2_container",
-        "topics": null,
-        "website": null
+        "topics": [
+            "radiuss"
+        ],
+        "website": ""
     },
     "LLNL/spotbe": {
         "description": "The web backend for the SPOT performance visualization tool",
         "name": "LLNL/spotbe",
-        "topics": null,
-        "website": null
+        "topics": [
+            "radiuss"
+        ],
+        "website": ""
     },
     "LLNL/spotfe": {
         "description": "The web frontend for the SPOT performance visualization tool",
         "name": "LLNL/spotfe",
-        "topics": null,
-        "website": null
+        "topics": [
+            "radiuss"
+        ],
+        "website": ""
     },
     "LLNL/strawman": {
         "description": "A many-core capable lightweight in situ visualization and analysis infrastructure for multi-physics HPC simulations",
@@ -5092,6 +5123,18 @@
         "topics": null,
         "website": null
     },
+    "flux-framework/flux-pmix": {
+        "description": "flux shell plugin to bootstrap openmpi v5+",
+        "name": "flux-framework/flux-pmix",
+        "topics": null,
+        "website": null
+    },
+    "flux-framework/flux-power-mgr": {
+        "description": "Flux Power Management Module for the system-level instance. Work in progress/research code as of Sep 2021.",
+        "name": "flux-framework/flux-power-mgr",
+        "topics": null,
+        "website": ""
+    },
     "flux-framework/flux-research-artifacts": {
         "description": "Collection of Research Artifacts from Papers Involving Flux",
         "name": "flux-framework/flux-research-artifacts",
@@ -5158,6 +5201,12 @@
         "topics": null,
         "website": null
     },
+    "flux-framework/kubeflux": {
+        "description": "Repository for code and documentation for the KubeFlux project: a joint effort with IBM, Red Hat, and LLNL",
+        "name": "flux-framework/kubeflux",
+        "topics": null,
+        "website": null
+    },
     "flux-framework/planning": {
         "description": "Repository for planning documents related to the Flux Framework project",
         "name": "flux-framework/planning",
@@ -5194,7 +5243,8 @@
             "hpc",
             "python",
             "performance",
-            "data-analytics"
+            "data-analytics",
+            "radiuss"
         ],
         "website": "https://hatchet.readthedocs.io"
     },
@@ -5387,6 +5437,12 @@
         "name": "mfem/web",
         "topics": null,
         "website": "http://mfem.org"
+    },
+    "openzfs/libabigail-docker": {
+        "description": "OpenZFS CI image for libabigail",
+        "name": "openzfs/libabigail-docker",
+        "topics": null,
+        "website": "https://github.com/openzfs/libabigail-docker/pkgs/container/libabigail"
     },
     "openzfs/openzfs": {
         "description": "OpenZFS is a storage platform that encompasses the functionality of traditional filesystems and volume managers, delivering enterprise reliability, modern functionality, and consistent performance in an easy to administer package on several operating system platforms.",
@@ -5781,7 +5837,8 @@
             "visualization",
             "data-analysis",
             "radiuss",
-            "data-viz"
+            "data-viz",
+            "python"
         ],
         "website": "https://visit.llnl.gov"
     },
