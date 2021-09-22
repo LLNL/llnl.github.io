@@ -13698,6 +13698,19 @@
                 ]
             }
         },
+        "LLNL/CUDAMicroBench": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/Caliper": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -25585,19 +25598,6 @@
                 ]
             }
         },
-        "LLNL/scr": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "LLNL/scr-fe": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -32333,59 +32333,6 @@
                                     "packageName": "scikit-learn",
                                     "repository": {
                                         "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "spack/spack-tutorial": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "docutils",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-levenshtein",
-                                    "repository": {
-                                        "nameWithOwner": "ztane/python-Levenshtein"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinxcontrib-programoutput",
-                                    "repository": {
-                                        "nameWithOwner": "NextThought/sphinxcontrib-programoutput"
                                     }
                                 }
                             ]
