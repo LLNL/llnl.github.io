@@ -25598,6 +25598,19 @@
                 ]
             }
         },
+        "LLNL/scr": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/scr-fe": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -29816,8 +29829,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#89e051",
-                        "name": "Shell"
+                        "color": "#555555",
+                        "name": "C"
                     }
                 ]
             }
@@ -31686,269 +31699,6 @@
                 ]
             }
         },
-        "spack/spack-infrastructure": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "attrs",
-                                    "repository": {
-                                        "nameWithOwner": "python-attrs/attrs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "boto3",
-                                    "repository": {
-                                        "nameWithOwner": "boto/boto3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "cffi",
-                                    "repository": {
-                                        "nameWithOwner": "chevah/python-cffi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coverage",
-                                    "repository": {
-                                        "nameWithOwner": "nedbat/coveragepy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "gitdb",
-                                    "repository": {
-                                        "nameWithOwner": "gitpython-developers/gitdb"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "importlib-metadata",
-                                    "repository": {
-                                        "nameWithOwner": "python/importlib_metadata"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mccabe",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/mccabe"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "more-itertools",
-                                    "repository": {
-                                        "nameWithOwner": "more-itertools/more-itertools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "packaging",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/packaging"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pluggy",
-                                    "repository": {
-                                        "nameWithOwner": "s0undt3ch/pluggy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "py",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pycodestyle",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/pycodestyle"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pycparser",
-                                    "repository": {
-                                        "nameWithOwner": "eliben/pycparser"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyflakes",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/pyflakes"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pygithub",
-                                    "repository": {
-                                        "nameWithOwner": "PyGithub/PyGithub"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyparsing",
-                                    "repository": {
-                                        "nameWithOwner": "pyparsing/pyparsing"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest-cov",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest-cov"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-dateutil",
-                                    "repository": {
-                                        "nameWithOwner": "dateutil/dateutil"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "smmap",
-                                    "repository": {
-                                        "nameWithOwner": "gitpython-developers/smmap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "wcwidth",
-                                    "repository": {
-                                        "nameWithOwner": "jquast/wcwidth"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "zipp",
-                                    "repository": {
-                                        "nameWithOwner": "jaraco/zipp"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "boto3",
-                                    "repository": {
-                                        "nameWithOwner": "boto/boto3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "boto3",
-                                    "repository": {
-                                        "nameWithOwner": "boto/boto3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "botocore",
-                                    "repository": {
-                                        "nameWithOwner": "boto/botocore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jmespath",
-                                    "repository": {
-                                        "nameWithOwner": "jmespath/jmespath.py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-dateutil",
-                                    "repository": {
-                                        "nameWithOwner": "dateutil/dateutil"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "s3transfer",
-                                    "repository": {
-                                        "nameWithOwner": "boto/s3transfer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "urllib3",
-                                    "repository": {
-                                        "nameWithOwner": "urllib3/urllib3"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "spack/spack-monitor": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -32333,6 +32083,59 @@
                                     "packageName": "scikit-learn",
                                     "repository": {
                                         "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "spack/spack-tutorial": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-levenshtein",
+                                    "repository": {
+                                        "nameWithOwner": "ztane/python-Levenshtein"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-programoutput",
+                                    "repository": {
+                                        "nameWithOwner": "NextThought/sphinxcontrib-programoutput"
                                     }
                                 }
                             ]
