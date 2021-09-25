@@ -12980,47 +12980,6 @@
                 ]
             }
         },
-        "GMLC-TDC/pyhelics": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "cffi",
-                                    "repository": {
-                                        "nameWithOwner": "chevah/python-cffi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "helics-apps",
-                                    "repository": {
-                                        "nameWithOwner": "GMLC-TDC/HELICS"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "strip-hints",
-                                    "repository": {
-                                        "nameWithOwner": "abarker/strip-hints"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/toml11": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14239,6 +14198,25 @@
         "LLNL/Copson_Expansion_Solution": {
             "dependencyGraphManifests": {
                 "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/Curvallis": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": []
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -23365,6 +23343,13 @@
                                     "packageName": "johnnydep",
                                     "repository": {
                                         "nameWithOwner": "wimglenn/johnnydep"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pylint",
+                                    "repository": {
+                                        "nameWithOwner": "s0undt3ch/pylint"
                                     }
                                 },
                                 {
