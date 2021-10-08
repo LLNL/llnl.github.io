@@ -14210,7 +14210,28 @@
         },
         "LLNL/CcNav": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "flask",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/flask"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "redis",
+                                    "repository": {
+                                        "nameWithOwner": "alisaifee/redis-py"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -18897,6 +18918,19 @@
                     {
                         "color": "#ecdebe",
                         "name": "Roff"
+                    }
+                ]
+            }
+        },
+        "LLNL/Silo": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
                     }
                 ]
             }
@@ -26277,19 +26311,6 @@
                 ]
             }
         },
-        "LLNL/spheral-docker": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#384d54",
-                        "name": "Dockerfile"
-                    }
-                ]
-            }
-        },
         "LLNL/spify": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -27357,7 +27378,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "buildmail",
                                     "repository": {
-                                        "nameWithOwner": "nodemailer/buildmail"
+                                        "nameWithOwner": "vladtreny/buildmail"
                                     }
                                 },
                                 {
@@ -29837,7 +29858,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#dea584",
+                        "name": "Rust"
+                    }
+                ]
             }
         },
         "flux-framework/flux-docs": {
@@ -32267,6 +32293,13 @@
                                     "packageName": "social-auth-app-django",
                                     "repository": {
                                         "nameWithOwner": "python-social-auth/social-app-django"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "social-auth-core",
+                                    "repository": {
+                                        "nameWithOwner": "python-social-auth/social-core"
                                     }
                                 }
                             ]
