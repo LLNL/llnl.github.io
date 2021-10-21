@@ -13580,19 +13580,6 @@
                 ]
             }
         },
-        "LLNL/BAnD": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/BCML-COVID19": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -13813,13 +13800,6 @@
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
                                     }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "statsmodels",
-                                    "repository": {
-                                        "nameWithOwner": "statsmodels/statsmodels"
-                                    }
                                 }
                             ]
                         }
@@ -13916,13 +13896,6 @@
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "statsmodels",
-                                    "repository": {
-                                        "nameWithOwner": "statsmodels/statsmodels"
                                     }
                                 }
                             ]
@@ -14191,8 +14164,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#41b883",
+                        "name": "Vue"
                     }
                 ]
             }
@@ -14656,19 +14629,6 @@
             }
         },
         "LLNL/Elemental": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
-        "LLNL/ExaCA": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -18127,6 +18087,19 @@
                 ]
             }
         },
+        "LLNL/Privateer": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/PyDV": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -18868,19 +18841,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/SW4CK": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
                     }
                 ]
             }
@@ -22001,19 +21961,6 @@
             }
         },
         "LLNL/geopm": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
-        "LLNL/gidiplus": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -29966,68 +29913,6 @@
                 "nodes": []
             }
         },
-        "flux-framework/flux-framework.github.io": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "github-pages",
-                                    "repository": {
-                                        "nameWithOwner": "github/pages-gem"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-feed",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-feed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-theme-cayman",
-                                    "repository": {
-                                        "nameWithOwner": "pages-themes/cayman"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "kramdown",
-                                    "repository": {
-                                        "nameWithOwner": "ashmaroli/calmdown"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "pygments.rb",
-                                    "repository": {
-                                        "nameWithOwner": "pygments/pygments.rb"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#e34c26",
-                        "name": "HTML"
-                    }
-                ]
-            }
-        },
         "flux-framework/flux-hierarchy": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -32173,26 +32058,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "boto3",
-                                    "repository": {
-                                        "nameWithOwner": "boto/boto3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "botocore",
                                     "repository": {
                                         "nameWithOwner": "boto/botocore"
@@ -32231,6 +32096,26 @@
                                     "packageName": "urllib3",
                                     "repository": {
                                         "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
