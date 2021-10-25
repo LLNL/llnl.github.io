@@ -8625,6 +8625,68 @@
                 ]
             }
         },
+        "ESGF/esgf-keycloak-user-migration": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click-config-file",
+                                    "repository": {
+                                        "nameWithOwner": "phha/click_config_file"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pg8000",
+                                    "repository": {
+                                        "nameWithOwner": "tlocke/pg8000"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlalchemy",
+                                    "repository": {
+                                        "nameWithOwner": "sqlalchemy/sqlalchemy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-map": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -31089,6 +31151,13 @@
                                     "packageName": "sphinx-issues",
                                     "repository": {
                                         "nameWithOwner": "sloria/sphinx-issues"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-notfound-page",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx-notfound-page"
                                     }
                                 },
                                 {
