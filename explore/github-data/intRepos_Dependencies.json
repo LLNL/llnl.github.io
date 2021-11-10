@@ -10976,7 +10976,21 @@
         },
         "GMLC-TDC/cheader2json": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "libclang",
+                                    "repository": {
+                                        "nameWithOwner": "sighingnow/libclang"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -20229,7 +20243,7 @@
                                     "packageManager": "MAVEN",
                                     "packageName": "net.jodah:failsafe",
                                     "repository": {
-                                        "nameWithOwner": "failsafe-lib/failsafe"
+                                        "nameWithOwner": "cybernetics/failsafe"
                                     }
                                 },
                                 {
@@ -20709,7 +20723,7 @@
                                     "packageManager": "MAVEN",
                                     "packageName": "net.jodah:failsafe",
                                     "repository": {
-                                        "nameWithOwner": "failsafe-lib/failsafe"
+                                        "nameWithOwner": "cybernetics/failsafe"
                                     }
                                 },
                                 {
@@ -25138,53 +25152,6 @@
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/python-lora": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
