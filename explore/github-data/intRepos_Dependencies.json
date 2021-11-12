@@ -11129,19 +11129,6 @@
                 ]
             }
         },
-        "GMLC-TDC/helics-action": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/helics-buildenv": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -22831,6 +22818,88 @@
                 ]
             }
         },
+        "LLNL/lbann": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "breathe",
+                                    "repository": {
+                                        "nameWithOwner": "michaeljones/breathe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "protocolbuffers/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-napoleon",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-contrib/napoleon"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "protocolbuffers/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/ldapotp-java-api": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -25076,6 +25145,19 @@
                         }
                     }
                 ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/pytaridx": {
+            "dependencyGraphManifests": {
+                "nodes": []
             },
             "languages": {
                 "nodes": [
