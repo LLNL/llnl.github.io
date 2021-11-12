@@ -7,4 +7,4 @@ Exascale computing will transform the ability to tackle some of the world’s mo
 
 - [Video playlist](https://www.exascaleproject.org/exascale-day-2021-video/)
 - [Podcast playlist](https://www.exascaleproject.org/exascale-day-2021-audio/)
-- [Artciles](https://www.exascaleproject.org/exascale-day-2021-articles/)
+- [Articles](https://www.exascaleproject.org/exascale-day-2021-articles/)
