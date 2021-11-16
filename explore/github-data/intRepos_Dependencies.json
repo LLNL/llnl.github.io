@@ -10755,7 +10755,28 @@
         },
         "GMLC-TDC/HELICS-Examples": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -30747,7 +30768,21 @@
         },
         "hatchet/hatchet-notebooks-sc19": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hatchet",
+                                    "repository": {
+                                        "nameWithOwner": "hatchet/hatchet"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -30786,8 +30821,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#DA5B0B",
-                        "name": "Jupyter Notebook"
+                        "color": "#555555",
+                        "name": "C"
                     }
                 ]
             }
