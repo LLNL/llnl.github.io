@@ -24,7 +24,7 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
 
         // if there was a release before the first recorded GH star, append it to the beginning of the array
         if (data.length && releaseDates.length) {
-        const earliestRelease = new Date(releaseDates[0]).setUTCHours(0, 0, 0, 0);
+            const earliestRelease = new Date(releaseDates[0]).setUTCHours(0, 0, 0, 0);
             if (earliestRelease < data[0].date) {
                 data.unshift({ date: earliestRelease, value: 0 });
             }
