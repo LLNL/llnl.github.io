@@ -20,6 +20,15 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
             d.date = parseTime(d.date);
             d.value = +d.value;
         });
+        const releaseDates = releaseData[repoNameWOwner]['dates'];
+
+        // if there was a release before the first recorded GH star, append it to the beginning of the array
+        if (data.length && releaseDates.length) {
+            const earliestRelease = new Date(releaseDates[0]).setUTCHours(0, 0, 0, 0);
+            if (earliestRelease < data[0].date) {
+                data.unshift({ date: earliestRelease, value: 0 });
+            }
+        }
 
         var margin = { top: stdMargin.top, right: stdMargin.right * 1.75, bottom: stdMargin.bottom, left: stdMargin.left * 1.15 },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -180,8 +189,8 @@ function draw_line_repoStarHistory(areaID, repoNameWOwner) {
         var indexArray = [];
 
         // Process release data to prevent clumps
-        for (var i = 0; i < releaseData[repoNameWOwner]['dates'].length; i++) {
-            var date = parseTime(releaseData[repoNameWOwner]['dates'][i].slice(0, releaseData[repoNameWOwner]['dates'][i].indexOf('T')));
+        for (var i = 0; i < releaseDates.length; i++) {
+            var date = parseTime(releaseDates[i].slice(0, releaseDates[i].indexOf('T')));
             current = x(date);
             if (start < 0) {
                 start = current;
