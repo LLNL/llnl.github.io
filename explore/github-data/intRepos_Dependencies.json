@@ -19797,6 +19797,19 @@
                 ]
             }
         },
+        "LLNL/axom-docker": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#384d54",
+                        "name": "Dockerfile"
+                    }
+                ]
+            }
+        },
         "LLNL/axom_data": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -20094,47 +20107,6 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
-                    }
-                ]
-            }
-        },
-        "LLNL/camp": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "breathe",
-                                    "repository": {
-                                        "nameWithOwner": "michaeljones/breathe"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "exhale",
-                                    "repository": {
-                                        "nameWithOwner": "svenevs/exhale"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
                     }
                 ]
             }
