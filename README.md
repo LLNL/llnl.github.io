@@ -48,7 +48,7 @@ If you have any questions or would like to request a private repository, please 
 
 You can also find us on our mailing list: <open-source@llnl.gov>.
 
-# Release
+## Release
 
 The code of this site is released under the MIT License. For more details, see the
 [LICENSE](LICENSE) File.
