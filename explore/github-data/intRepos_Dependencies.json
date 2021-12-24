@@ -12409,19 +12409,6 @@
                 ]
             }
         },
-        "GMLC-TDC/helics-packaging": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/helics.nim": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14612,25 +14599,6 @@
                 ]
             }
         },
-        "LLNL/Curvallis": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": []
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/CxxPolyFit": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14765,7 +14733,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "atlassian/httpcore"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -20664,6 +20634,20 @@
                                     "packageName": "org.apache.commons:commons-math3",
                                     "repository": {
                                         "nameWithOwner": "haidaros/defects4j-math"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.logging.log4j:log4j-api",
+                                    "repository": {
+                                        "nameWithOwner": "apache/logging-log4j2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.logging.log4j:log4j-core",
+                                    "repository": {
+                                        "nameWithOwner": "apache/logging-log4j2"
                                     }
                                 },
                                 {
