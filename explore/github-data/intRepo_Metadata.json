@@ -2425,6 +2425,12 @@
         ],
         "website": ""
     },
+    "LLNL/PNE_MTINV": {
+        "description": "Data processing routines and moment tensor inversion of PNE data",
+        "name": "LLNL/PNE_MTINV",
+        "topics": null,
+        "website": null
+    },
     "LLNL/PYB11Generator": {
         "description": "PYB11Generator is a python based code generator that creates pybind11 code for binding C++ libraries as extensions in Python.",
         "name": "LLNL/PYB11Generator",
@@ -2785,10 +2791,15 @@
         "website": null
     },
     "LLNL/UMT": {
-        "description": null,
+        "description": "UMT (Unstructured Mesh Transport) is an LLNL ASC proxy application (mini-app) that solves a thermal radiative transport equation using discrete ordinates (Sn). It utilizes an upstream corner balance method to compute the solution to the Boltzmann transport equation on unstructured spatial grids.",
         "name": "LLNL/UMT",
-        "topics": null,
-        "website": null
+        "topics": [
+            "radiation-transport",
+            "unstructured-meshes",
+            "hpc",
+            "scientific-computing"
+        ],
+        "website": ""
     },
     "LLNL/UQ_combustion": {
         "description": null,
