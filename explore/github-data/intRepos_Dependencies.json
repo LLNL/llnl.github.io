@@ -3721,7 +3721,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "eslint-config-prettier",
                                     "repository": {
-                                        "nameWithOwner": "nfriedly/eslint-config-prettier"
+                                        "nameWithOwner": "prettier/eslint-config-prettier"
                                     }
                                 },
                                 {
@@ -13914,7 +13914,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "eslint-config-prettier",
                                     "repository": {
-                                        "nameWithOwner": "nfriedly/eslint-config-prettier"
+                                        "nameWithOwner": "prettier/eslint-config-prettier"
                                     }
                                 },
                                 {
@@ -14400,19 +14400,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "LLNL/2022_DVRFS_microbiome": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#198CE7",
-                        "name": "R"
-                    }
-                ]
             }
         },
         "LLNL/2DHEVF": {
@@ -20845,19 +20832,6 @@
                 ]
             }
         },
-        "LLNL/avalaunch": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "LLNL/axom": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -23296,6 +23270,74 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/gitlab-runner-auth": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "archspec",
+                                    "repository": {
+                                        "nameWithOwner": "archspec/archspec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "httmock",
+                                    "repository": {
+                                        "nameWithOwner": "patrys/httmock"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "Julian/jsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-gitlab",
+                                    "repository": {
+                                        "nameWithOwner": "python-gitlab/python-gitlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toml",
+                                    "repository": {
+                                        "nameWithOwner": "uiri/toml"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -28114,6 +28156,19 @@
                         }
                     }
                 ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/spack": {
+            "dependencyGraphManifests": {
+                "nodes": []
             },
             "languages": {
                 "nodes": [
