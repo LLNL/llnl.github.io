@@ -9939,6 +9939,40 @@
                 ]
             }
         },
+        "ESGF/esgf-user-support": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-utils": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -15203,7 +15237,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue-next"
+                                        "nameWithOwner": "vuejs/core"
                                     }
                                 },
                                 {
@@ -26957,19 +26991,6 @@
                 ]
             }
         },
-        "LLNL/qnd": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/quandary": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -30497,7 +30518,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue-next"
+                                        "nameWithOwner": "vuejs/core"
                                     }
                                 },
                                 {
@@ -31909,6 +31930,19 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "flux-framework/flux-coral2": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#89e051",
+                        "name": "Shell"
                     }
                 ]
             }
