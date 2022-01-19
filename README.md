@@ -42,6 +42,17 @@ Sometimes there can be dependency conflicts if your local version of Ruby is dif
 
 For example, the default version of Ruby used to deploy GitHub Pages on github.com as of 2021-04-08 was Ruby 2.7.1. If you tried running Ruby version 3.0.0 locally on macOS, you'll need to do some extra steps to correctly install the dependencies for this repository. You'd need to run `bundle add webrick` as it is no longer a prepackaged dependency with Ruby in 3.0.0. You may also need to run `gem install eventmachine -- --with-openssl-dir=/usr/local/opt/openssl@1.1` as MacOS >10.14 doesn't use OpenSSL from the same path as is still assumed to be in by eventmachine.
 
+## Contributions and Catalog Requirements
+
+Start with the [FAQ](https://software.llnl.gov/about/faq/). Please see the following `README` files for additional instructions:
+
+- [Project logos](https://github.com/LLNL/llnl.github.io/blob/main/assets/images/logos/README.md)
+- [Catalog categories](https://github.com/LLNL/llnl.github.io/blob/main/category/README.md)
+- [RADIUSS tags](https://github.com/LLNL/llnl.github.io/blob/main/radiuss/README.md)
+- [News posts](https://github.com/LLNL/llnl.github.io/blob/main/news/README.md)
+- "Explore" [visualizations](https://github.com/LLNL/llnl.github.io/blob/main/_explore/README.md) and [scripts](https://github.com/LLNL/llnl.github.io/blob/main/_explore/scripts/README.md)
+- [Data fetching](https://github.com/LLNL/llnl.github.io/blob/main/explore/README.md)
+
 ## Contact
 
 If you have any questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or one of [the GitHub organization admins](mailto:github-admin@llnl.gov).
