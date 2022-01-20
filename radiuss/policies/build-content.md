@@ -13,16 +13,16 @@
 
 ---
 <a name="mbld2"></a>
-[![Generic badge](https://img.shields.io/badge/M.bld-2-red.svg)](#mbld2) **Compilable projects (e.g. those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).**
+[![Generic badge](https://img.shields.io/badge/M.bld-2-red.svg)](#mbld2) **Compilable projects (e.g., those written in C++ and/or Fortran) must be buildable with [CMake](https://cmake.org).**
 
-> Details
-> : We suggest considering [BLT](https://github.com/llnl/blt) (Build, Link and Test) which handles known CMake limitations and provides a set of templates to easily stand up a robust CMake-based build system.
+>Details
+>: We suggest considering [BLT](https://github.com/llnl/blt) (Build, Link, and Test) which handles known CMake limitations and provides a set of templates to easily stand up a robust CMake-based build system.
 >
-> Rationale
-> : Consistent use of CMake and BLT will enable individual users, computing centers, and package managers (such as Spack) to install the package in a way that is compatible with other RADIUSS products on the same system.
+>Rationale
+>: Consistent use of CMake and BLT will enable individual users, computing centers, and package managers (such as Spack) to install the package in a way that is compatible with other RADIUSS products on the same system.
 >
-> Ref
-> : *WSC 3.1*
+>Ref
+>: *WSC 3.1*
 >
 >Tag
 >: Tools

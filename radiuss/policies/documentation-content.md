@@ -2,13 +2,11 @@
 [![Generic badge](https://img.shields.io/badge/M.doc-1-red.svg)](#mdoc1) **Develop documentation from a readable plain-text format that can be publish documentation in a web-based format or as a PDF**
 
 >Rationale
->: Web-based documentation is accessible, searchable, and linkable. It allows users to easily point each other to relevant parts of the documentation in emails, the code, and other documents. It also makes it easier to manage under revision control (see also M.doc.3)).
->: All of these tools allow developers to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format.
+>: Web-based documentation is accessible, searchable, and linkable. It allows users to easily point each other to relevant parts of the documentation in emails, the code, and other documents. It also makes it easier to manage under revision control (see also M.doc.3). All of these tools allow developers to create web-based manuals and API documentation automatically, using a familiar, non-HTML plain-text format. Examples:
 >
->Examples
->: - [Sphinx](http://www.sphinx-doc.org/en/master/#)
->  - [LaTeX](https://www.latex-project.org/)
->  - [Doxygen](http://www.doxygen.nl/).
+> * [Sphinx](http://www.sphinx-doc.org/en/master/#)
+> * [LaTeX](https://www.latex-project.org/)
+> * [Doxygen](http://www.doxygen.nl/)
 >
 >Ref
 >: *WSC 4.1*
@@ -21,9 +19,9 @@
 >Details
 >: The description should typically be answering "What is it for ?" and "Should I use it ?", and not simply an extension of an acronym or otherwise fully generic description that does not differentiate the software from other products. This description (1-3 sentences) should be consistently used in:
 >
-> - The GitHub host web interface (modified with the 'Edit' button)
-> - The top of the root README.md
-> - The corresponding Spack package
+> * The GitHub host web interface (modified with the 'Edit' button)
+> * The top of the root README.md
+> * The corresponding Spack package
 >
 >Rationale
 >: Developers who come across your project or repository should be able to determine almost immediately if your project is applicable to their needs. The GitHub repo description is also used as the basis to automatically describe each project at [https://software.llnl.gov/](https://software.llnl.gov/).
@@ -59,7 +57,7 @@
 >: Examples should be compiled and tested as part of a release to make sure they are kept up to date with API changes. New examples should be added when major new features are released, or existing examples should be extended to include those new features. Existing [proxy apps](https://software.llnl.gov/category/#/PROXYAPPLICATIONS) are a potential good starting place.
 >
 >Rationale
->: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/radiuss/policies/tests-ci))
+>: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/radiuss/policies/tests-ci)).
 
 ---
 <a name="rdoc6"></a>

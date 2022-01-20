@@ -36,9 +36,10 @@
 
 >Details
 >: Example CI systems in use by RADIUSS products:
-> - RAJA with Travis CI on GitHub. See [.travis.yml](https://lc.llnl.gov/gitlab)
-> - MFEM with AppVeyor on GitHub. See [.appveyor.yml](https://github.com/mfem/mfem/blob/master/.appveyor.yml)
-> - Ascent with Azure Pipelines on GitHub. See [azure-pipelines.yml](https://github.com/Alpine-DAV/ascent/blob/develop/azure-pipelines.yml)
+>
+> * RAJA with Travis CI on GitHub. See [.travis.yml](https://lc.llnl.gov/gitlab)
+> * MFEM with AppVeyor on GitHub. See [.appveyor.yml](https://github.com/mfem/mfem/blob/master/.appveyor.yml)
+> * Ascent with Azure Pipelines on GitHub. See [azure-pipelines.yml](https://github.com/Alpine-DAV/ascent/blob/develop/azure-pipelines.yml)
 >
 >Rationale
 >: CI helps to prevent integration problems by identifying issues as they arise instead of allowing them to compound. This process helps reduce rework, cost, and time. Examples of CI tools include [Travis CI](https://travis-ci.org) for projects hosted on GitHub, or [GitLab CI](https://about.gitlab.com) for projects hosted on a GitLab instance such as [LC-GitLab](https://lc.llnl.gov/gitlab). Some products may use Azure Pipelines in the future.
@@ -59,10 +60,11 @@
 
 >Details
 >: Example tools:
->  - Asan (AddressSanitizer)
->  - clang-tidy
->  - cppcheck
->  - cpplint
+>
+> * Asan (AddressSanitizer)
+> * clang-tidy
+> * cppcheck
+> * cpplint
 >
 >Rationale
 >: Code quality checkers help to prevent code constructs that may result in errors in future environments where the code may run. They also reduce noise in build output that may obfuscate real errors. Code style checkers can also help enforce consistent style across a project.
