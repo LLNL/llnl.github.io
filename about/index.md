@@ -27,17 +27,17 @@ This portal abounds with examples of projects that have found a home in the open
 
 ### Learn More about OSS at LLNL
 
-- [Federal OSS policy guide](https://sourcecode.cio.gov/)
-- 2020 LLNL Computing Virtual Expo materials
-	- Releasing Open Source Software at the Lab ([poster](https://computing.llnl.gov/sites/default/files/COMP_Poster_OSS.pdf))
-	- Video: Open Source at LLNL (11:31) ([YouTube](https://youtu.be/kL4wIYhNVxE)) ([slides](https://computing.llnl.gov/sites/default/files/2020CompExpo_Open_Source.pdf))
-- 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
-- *Science & Technology Review* coverage
-	- [Cover story: Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
-	- [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
-	- [Video (3:04): Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
-- LLNL news: [Spack, A Lab-Developed 'App Store for Supercomputers,' becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
-- Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
+* [Federal OSS policy guide](https://sourcecode.cio.gov/)
+* 2020 LLNL Computing Virtual Expo materials
+  * Releasing Open Source Software at the Lab ([poster](https://computing.llnl.gov/sites/default/files/COMP_Poster_OSS.pdf))
+  * Video: Open Source at LLNL (11:31) ([YouTube](https://youtu.be/kL4wIYhNVxE)) ([slides](https://computing.llnl.gov/sites/default/files/2020CompExpo_Open_Source.pdf))
+* 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
+* *Science & Technology Review* coverage
+  * [Cover story: Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
+  * [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
+  * [Video (3:04): Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
+* LLNL news: [Spack, A Lab-Developed 'App Store for Supercomputers,' becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
+* Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
 
 ### Other References
 
@@ -49,8 +49,6 @@ This portal abounds with examples of projects that have found a home in the open
 ### Contact
 
 Check out our [FAQ](faq). If you have other questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or our [LLNL GitHub admins](mailto:github-admin@llnl.gov). You can also find us on our mailing list: [open-source@llnl.gov](mailto:open-source@llnl.gov).
-
-Follow us on Twitter for up-to-date information about the latest developments!
 
 <div class="text-center">
   <a href="https://twitter.com/LLNL_OpenSource" class="twitter-follow-button" data-show-count="true">Follow @LLNL_OpenSource</a>
