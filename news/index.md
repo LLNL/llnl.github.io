@@ -4,17 +4,16 @@ layout: news
 permalink: /news/
 ---
 
-
   <div class="filterBtnGroup btn-group" role="group">
-    <button class="btn btn-default" id="allB">All</button>
-    <button class="btn btn-default" id="event">Events</button>
-    <button class="btn btn-default" id="event-report">Event Reports</button>
-    <button class="btn btn-default" id="multimedia">Multimedia</button>
-    <button class="btn btn-default" id="new-repo">New Repos</button>
-    <button class="btn btn-default" id="profile">Profiles</button>
-    <button class="btn btn-default" id="release">Releases</button>
-    <button class="btn btn-default" id="story">Stories</button>
-    <button class="btn btn-default" id="this-website">Meta</button>
+    <button type="button" class="btn btn-outline-primary" id="allB">All</button>
+    <button type="button" class="btn btn-outline-primary" id="event">Events</button>
+    <button type="button" class="btn btn-outline-primary" id="event-report">Event Reports</button>
+    <button type="button" class="btn btn-outline-primary" id="multimedia">Multimedia</button>
+    <button type="button" class="btn btn-outline-primary" id="new-repo">New Repos</button>
+    <button type="button" class="btn btn-outline-primary" id="profile">Profiles</button>
+    <button type="button" class="btn btn-outline-primary" id="release">Releases</button>
+    <button type="button" class="btn btn-outline-primary" id="story">Stories</button>
+    <button type="button" class="btn btn-outline-primary" id="this-website">Meta</button>
   </div>
 
   {% assign cap = 20 %} {% comment %} maximum number of each type to store {% endcomment %}
@@ -78,4 +77,4 @@ permalink: /news/
   {% endfor %}
   
   <br />
-  <a class="btn btn-primary btn-block news" href="/news/archive/" role="button">See all news in the archive</a>
+  <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/news/archive/">See all news in the archive</a></button>
