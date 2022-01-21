@@ -1,29 +1,4 @@
-.static-text a,
-a:visited {
-    color: #005dab;
-    text-decoration: underline;
-}
-
-.static-text a:hover {
-    color: #009bab;
-    text-decoration: underline;
-}
-
-/* Buttons */
-
-.btn {
-    color: #005dab;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn a:hover {
-    color: #009bab;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* FlexBox configuration */
+/* FlexBox configuration (category browse) */
 
 .flex-container {
     align-items: stretch;
@@ -31,6 +6,7 @@ a:visited {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    text-decoration: none;
 }
 
 .flex-container-category {
@@ -69,7 +45,7 @@ a:visited {
 }
 
 .flex-item:hover {
-    border: 1px solid steelblue;
+    border: 1px #81D0D3;
     box-shadow: 3px 3px #ddd;
     cursor: pointer;
 }
@@ -209,48 +185,96 @@ a:visited {
     }
 }
 
-/* --- */
+/* Links in text on non-category pages */
+
+.static-text a,
+a:visited {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.static-text a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Buttons */
+
+.btn {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Site title & home link in navigation bar */
+
 .navbar-header a.navbar-brand {
     color: #005dab;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-header a.navbar-brand:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* The rest of the navigation bar */
+/* Top-level link color set by OneLab CSS, not here */
+
+.navbar {
+    margin-bottom: 0;
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar a.navbar-normal {
     color: #005dab;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar a.navbar-normal:hover {
     color: #009bab;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.navbar {
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-/* Dropdown */
+/* Dropdown menu */
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f8f8f8;
+    color: #005dab;
     min-width: 160px;
     padding: 5px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
     .dropdown-content {
+        color: #005dab;
         visibility: hidden;
         text-decoration: none;
     }
 }
 
 .dropdown:hover .dropdown-content {
+    color: #009bab;
     display: block;
+    font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -278,7 +302,7 @@ a:visited {
 }
 
 .dynamic:hover {
-    border: 1px solid steelblue;
+    border: 1px solid #81D0D3;
     box-shadow: 3px 3px #ddd;
     cursor: pointer;
 }
@@ -312,7 +336,7 @@ a:visited {
 
 .flex-category a:hover {
     /* Don't decorate links in repo items */
-    color: #777;
+    color: #81D0D3;
     text-decoration: none;
 }
 
@@ -498,7 +522,7 @@ a:visited {
     color: black;
 }
 .selected-tab {
-    background-color: steelblue;
+    background-color: #81D0D3;
     color: white;
 }
 
