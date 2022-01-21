@@ -5,7 +5,7 @@ layout: homepage
 
 {% raw %}
 
-<p class="page-title">Welcome to the LLNL software portal—a hub for our open source projects. <br />Our <a ng-click="categoryHref('All Software')" style="cursor: pointer">full catalog</a> is updated regularly as repositories are added or modified.</p>
+<p class="page-title">Welcome to the LLNL software portal—a hub for our open source projects. <br />Our <a href="/category/#/AllSoftware">full catalog</a> is updated regularly as repositories are added or modified.</p>
 
 <section class="flex-container" id="categories">
     <div ng-repeat="category in catData" class="flex-category dynamic" ng-click="categoryHref(category.title)">
@@ -34,7 +34,7 @@ layout: homepage
                 </span>
 
                 <span>
-                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Rpo Info" title="Repo Info">
+                    <a ng-click="repoHref(repo.nameWithOwner); $event.stopPropagation();" alt="Repo Info" title="Repo Info">
                         <span class="fa fa-info-circle"></span>
                     </a>
                 </span>
