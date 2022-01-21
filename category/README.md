@@ -26,6 +26,7 @@ In general, topic tags raise a repo's visibility on GitHub and help users find r
 Repos that appear in the [RADIUSS catalog](https://software.llnl.gov/radiuss/) must also be tagged with `radiuss`. See the [RADIUSS README](https://github.com/LLNL/llnl.github.io/blob/main/radiuss/README.md) for more information.
 
 To add a new category to the catalog:
+
 1. Update this README with the category name (in alphabetical order), description, and tag.
 2. Add the new icon (.svg) to [Assets > Images](https://github.com/LLNL/llnl.github.io/tree/main/assets/images).
 3. Update [`category_info.json`](https://github.com/LLNL/llnl.github.io/blob/main/category/category_info.json) with category metadata such as image file path, descriptive blurb, and corresponding topic(s).

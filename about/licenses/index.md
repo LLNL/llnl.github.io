@@ -28,12 +28,12 @@ called "Release".  See
 
 Additionally, we recommend that all projects have the following sections:
 
-- A description of your project.
-- "Getting Started": Simple instructions for how to install and use your
+* A description of your project.
+* "Getting Started": Simple instructions for how to install and use your
   project.
-- "Getting Involved": Information about mailing lists or other ways users
+* "Getting Involved": Information about mailing lists or other ways users
   connect with you and each other.
-- "Contributing": Instructions for how you'd like people to contribute to
+* "Contributing": Instructions for how you'd like people to contribute to
   your code.
 
 The `.md` suffix stands for "markdown".  Markdown is a plain text format.
@@ -54,6 +54,7 @@ file named `NOTICE`:
 ```
 {% include_relative NOTICE %}
 ```
+
 [Additional information](https://github.com/LLNL/.github/tree/main/community-health/NOTICE.md) about the Notice can be found in our LLNL/.github repo.
 
 #### 3. Open Source LICENSE file
@@ -62,13 +63,13 @@ One of the following files must be included at the top level of your repository
 with the file name `LICENSE`. The only content which may be changed in the file
 is the copyright year.
 
-- [Apache 2.0 License with LLVM Exception](/about/licenses/apache-2.0-llvm-exception.txt)
-- [Apache 2.0 License](/about/licenses/apache-2.0.txt)
-- [BSD-3 License](/about/licenses/bsd-3-clause.txt)
-- [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
-- [GPL-3.0 License](/about/licenses/gpl-3.0.txt)
-- [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
-- [MIT License](/about/licenses/mit.txt)
+* [Apache 2.0 License with LLVM Exception](/about/licenses/apache-2.0-llvm-exception.txt)
+* [Apache 2.0 License](/about/licenses/apache-2.0.txt)
+* [BSD-3 License](/about/licenses/bsd-3-clause.txt)
+* [GPL-2.0 License](/about/licenses/gpl-2.0.txt)
+* [GPL-3.0 License](/about/licenses/gpl-3.0.txt)
+* [LGPL-2.1 License](/about/licenses/lgpl-2.1.txt)
+* [MIT License](/about/licenses/mit.txt)
 
 If your repository was approved for release under a different open source
 license, the text of that license will be provided by the Innovation and
@@ -99,8 +100,8 @@ policies in your `README.md` or in a
 [`CONTRIBUTING.md` file](https://github.com/LLNL/.github/blob/main/community-health/CONTRIBUTING.md).
 It is good practice to make the following details explicit:
 
-- The license under which contributions should be made
-- How to submit contributions (pull requests, branches, etc.)
+* The license under which contributions should be made
+* How to submit contributions (pull requests, branches, etc.)
 
 With most open source projects, it is assumed that contributions are made
 under the *same* license under which the project is distributed. For
@@ -194,25 +195,19 @@ simply rely on the default inbound = outbound assumption.
 
 #### Digital Object Identifier (DOI)
 
-A digital object identifier (DOI) is a unique persistent identifier that 
-references a digital object and provides long-term access. Just as journal 
-articles carry DOIs, so too can open source software repositories.
+A digital object identifier (DOI) is a unique persistent identifier that references a digital object and provides long-term access. Just as journal articles carry DOIs, so too can open source software repositories.
 
-The U.S. Office of Scientific and Technical Information (OSTI) assigns DOIs 
-to software *after* your code has been submitted to [DOE CODE](https://www.osti.gov/doecode/faq#what-is). 
-See OSTI's [FAQ on DOIs](https://www.osti.gov/doecode/faq#what-is-a-doi) for 
-details about how DOIs work and why they are beneficial.
+The U.S. Office of Scientific and Technical Information (OSTI) assigns DOIs to software *after* your code has been submitted to [DOE CODE](https://www.osti.gov/doecode/faq#what-is). See OSTI's [FAQ on DOIs](https://www.osti.gov/doecode/faq#what-is-a-doi) for details about how DOIs work and why they are beneficial.
 
-OSTI is evaluating a notification workflow that would let a developer know 
-when a DOI has been assigned. Until then, you can find your repo's DOI *and* 
-add it to the repo by following these steps:
+OSTI is evaluating a notification workflow that would let a developer know when a DOI has been assigned. Until then, you can find your repo's DOI *and* add it to the repo by following these steps:
 
 1. Type in the name of your repo at [DOE CODE](https://www.osti.gov/doecode/), then select it.
 2. Look in the RESOURCE section for the DOI number.
 3. In the SAVE/SHARE section, click Export Metadata and download the YAML file.
 4. Include that file in your repo in one of two ways:
-- Create a [CITATION file](https://citation-file-format.github.io/)
-- Add it to the [README file](https://guides.github.com/activities/citable-code/)
+
+* Create a [CITATION file](https://citation-file-format.github.io/)
+* Add it to the [README file](https://guides.github.com/activities/citable-code/)
 
 ### Have Questions?
 

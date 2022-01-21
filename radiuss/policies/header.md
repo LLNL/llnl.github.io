@@ -1,6 +1,6 @@
-### {{ page.title }}
+## {{ page.title }}
 <!--- {: .page-header} --->
-[Back to Policies and Guidelines home](/radiuss/policies/)
+[<< Back to Policies and Guidelines home](/radiuss/policies/)
 
 ---
 

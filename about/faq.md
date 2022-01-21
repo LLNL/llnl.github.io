@@ -37,29 +37,29 @@ If you’re new to GitHub and open source in general, figuring out how to get se
 *Membership in the @LLNL GitHub organization will soon require that 2FA has been enabled on your GitHub account.* There are several options for configuring 2FA for your GitHub account:
 
 * [YubiKey](https://yubico.com) hardware security keys
-    * Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
-        * YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
-    * [Learn more about setting up your YubiKey with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
+  * Note that the YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
+    * YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKeys they are highly recommended for securing your GitHub (and other) accounts which support them.
+  * [Learn more about setting up your YubiKey with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
 
 * [Google Authenticator](https://support.google.com/accounts/answer/1066447)
-    * Google Authenticator is a mobile application which you can install on your personal or government issued phone.
-    * It provides a one-time token (OTP) which you can use to authenticate to GitHub.com
-    * [Learn more about setting up Google Authenticator with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-a-totp-mobile-app)
-    
+  * Google Authenticator is a mobile application which you can install on your personal or government issued phone.
+  * It provides a one-time token (OTP) which you can use to authenticate to GitHub.com
+  * [Learn more about setting up Google Authenticator with GitHub.com](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-a-totp-mobile-app)
+
 * [Authy](https://authy.com/guides/github/)
-    * Authy is a desktop- or laptop-based application which can be used to generate a one-time token (OTP) for use logging in to GitHub.com.
-    * This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
-    * [Learn more about setting up Authy with GitHub.com](https://authy.com/guides/github/)
+  * Authy is a desktop- or laptop-based application which can be used to generate a one-time token (OTP) for use logging in to GitHub.com.
+  * This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
+  * [Learn more about setting up Authy with GitHub.com](https://authy.com/guides/github/)
 
 Additional 2FA info:
-    
+
 * You also have the option during 2FA to generate and save a list of recovery codes to get into your account in the event you lose access to one of your 2FA methods. This is *highly* recommended, and the recovery codes should be stored someplace safe. Some options for storing your recovery codes include:
-    * Printing the codes and storing them in a safe place in your office.
-    * Storing the recovery codes in a password manager that you might be using.
-    
+  * Printing the codes and storing them in a safe place in your office.
+  * Storing the recovery codes in a password manager that you might be using.
+
 * We recommend that you set up *MULTIPLE* 2FA options. This can protect your access to your account in the event that you lose access to one of your authenticators.
-    * For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
-    * Having trouble setting up 2FA? Contact the [LLNL GitHub admins](mailto:github-admin@llnl.gov) who may be able to help.
+  * For more information, check out the [Two-factor Authentication](https://github.com/blog/1614-two-factor-authentication) post on the GitHub Blog.
+  * Having trouble setting up 2FA? Contact the [LLNL GitHub admins](mailto:github-admin@llnl.gov) who may be able to help.
 
 ### How do I join the LLNL organization on GitHub?
 
@@ -158,7 +158,7 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 
 ### My repo has grown. How do I move it out of the LLNL organization?
 
-The process to transfer organizational ownership is straightforward, but generally discouraged. This should really only be done for projects that are starting to build a "bigger than LLNL" community, and the decision should not be made lightly. 
+The process to transfer organizational ownership is straightforward, but generally discouraged. This should really only be done for projects that are starting to build a "bigger than LLNL" community, and the decision should not be made lightly.
 
 Migrating the repo outside of the LLNL organization requires an organization admin. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to coordinate the move.
 

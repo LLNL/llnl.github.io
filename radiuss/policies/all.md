@@ -32,4 +32,3 @@ layout: info
 ## Portability
 
 {% include_relative portability-content.md %}
-
