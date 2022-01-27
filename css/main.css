@@ -1,3 +1,11 @@
+/* General (ideal) color palette */
+
+/* blue links #005dab
+regular teal hover #009bab
+light teal accent #81D0D3
+text gray #555555
+light gray background #ddd */
+
 /* FlexBox configuration (category browse) */
 
 .flex-container {
@@ -143,8 +151,8 @@
     }
     #forkongithub a {
         pointer-events: all;
-        background: #555555;
-        color: #fff;
+        background: #ddd;
+        color: #005dab;
         text-decoration: none;
         font-family: arial, sans-serif;
         text-align: center;
@@ -164,8 +172,8 @@
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     }
     #forkongithub a:hover {
-        background: #333333;
-        color: #fff;
+        background: #ddd;
+        color: #009bab;
     }
     #forkongithub a::before,
     #forkongithub a::after {
@@ -207,7 +215,7 @@ a:visited {
     text-decoration: none;
 }
 
-/* Buttons */
+/* Buttons (not news filters) */
 
 .btn {
     color: #005dab;
@@ -466,6 +474,8 @@ a:visited {
     }
 }
 
+/* Stickynav & tab = left-hand menu of catalog categories */
+
 .stickynav div {
     padding-left: 5px;
     padding-right: 15px;
@@ -493,8 +503,22 @@ a:visited {
 }
 
 .stickynav div:hover > a {
+    color: #009bab;
+}
+
+.tab {
     color: black;
 }
+.selected-tab {
+    background-color: #81D0D3;
+    color: white;
+}
+
+.selected-tab > a {
+    color: white;
+}
+
+/* Hamburger nav at various widths */
 
 .hamburger-nav div {
     width: 100%;
@@ -517,24 +541,12 @@ a:visited {
 }
 
 .hamburger-nav div:hover > a {
-    color: black;
+    color: #009bab;
 }
 
 .hamburger-nav div:hover {
     background-color: lightgrey;
     padding-left: 18px;
-}
-
-.tab {
-    color: black;
-}
-.selected-tab {
-    background-color: #81D0D3;
-    color: white;
-}
-
-.selected-tab > a {
-    color: white;
 }
 
 .hamburger-container span {
