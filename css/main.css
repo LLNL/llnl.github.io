@@ -207,6 +207,27 @@ a:visited {
     font-weight: bold;
 }
 
+/* Centered intro paragraphs on home & RADIUSS catalog */
+
+.title-para {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.title-para a {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title-para a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* News post date and tag */
 
 .static-text h4 > small {
@@ -249,6 +270,13 @@ a:visited {
 .navbar {
     margin-bottom: 0;
     color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar:hover {
+    margin-bottom: 0;
+    color: #009bab;
     text-decoration: none;
     font-weight: bold;
 }
@@ -518,7 +546,7 @@ a:visited {
     color: white;
 }
 
-/* Hamburger nav at various widths */
+/* Hamburger nav for catalog categories at various widths */
 
 .hamburger-nav div {
     width: 100%;
@@ -563,7 +591,7 @@ a:visited {
 
 .hamburger-container span:hover {
     cursor: pointer;
-    color: black;
+    color: #009bab;
 }
 
 .hamburger-nav {
