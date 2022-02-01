@@ -1,29 +1,12 @@
-.static-text a,
-a:visited {
-    color: #005dab;
-    text-decoration: underline;
-}
+/* General (ideal) color palette */
 
-.static-text a:hover {
-    color: #009bab;
-    text-decoration: underline;
-}
+/* blue links #005dab
+regular teal hover #009bab
+light teal accent #81D0D3
+text gray #555555
+light gray background #ddd */
 
-/* Buttons */
-
-.btn {
-    color: #005dab;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn a:hover {
-    color: #009bab;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* FlexBox configuration */
+/* FlexBox configuration (category browse) */
 
 .flex-container {
     align-items: stretch;
@@ -31,6 +14,7 @@ a:visited {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    text-decoration: none;
 }
 
 .flex-container-category {
@@ -69,7 +53,7 @@ a:visited {
 }
 
 .flex-item:hover {
-    border: 1px solid steelblue;
+    border: 1px #81D0D3;
     box-shadow: 3px 3px #ddd;
     cursor: pointer;
 }
@@ -102,7 +86,6 @@ a:visited {
 }
 
 .flex-item h4 > small {
-    /* Display of news post date and tag */
     border-left: 1px solid #777;
     padding-left: 5px;
 }
@@ -168,8 +151,8 @@ a:visited {
     }
     #forkongithub a {
         pointer-events: all;
-        background: #555;
-        color: #fff;
+        background: #ddd;
+        color: #005dab;
         text-decoration: none;
         font-family: arial, sans-serif;
         text-align: center;
@@ -189,8 +172,8 @@ a:visited {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     }
     #forkongithub a:hover {
-        background: #333;
-        color: #fff;
+        background: #ddd;
+        color: #009bab;
     }
     #forkongithub a::before,
     #forkongithub a::after {
@@ -209,48 +192,134 @@ a:visited {
     }
 }
 
-/* --- */
+/* Links in text on non-category pages */
+
+.static-text a,
+a:visited {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.static-text a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Centered intro paragraphs on home & RADIUSS catalog */
+
+.title-para {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.title-para a {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title-para a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* News post date and tag */
+
+.static-text h4 > small {
+    border-left: 1px;
+    color: #555555;
+    text-decoration: none;
+}
+
+/* Buttons */
+
+.btn {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+}
+
+/* Site title & home link in navigation bar */
+
 .navbar-header a.navbar-brand {
     color: #005dab;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-header a.navbar-brand:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* The rest of the navigation bar */
+/* Top-level link color set by OneLab CSS, not here */
+
+.navbar {
+    margin-bottom: 0;
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar:hover {
+    margin-bottom: 0;
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar a.navbar-normal {
     color: #005dab;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar a.navbar-normal:hover {
     color: #009bab;
     text-decoration: none;
+    font-weight: bold;
 }
 
-.navbar {
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-/* Dropdown */
+/* Dropdown menu */
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f8f8f8;
+    color: #005dab;
     min-width: 160px;
     padding: 5px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
     .dropdown-content {
+        color: #005dab;
         visibility: hidden;
         text-decoration: none;
     }
 }
 
 .dropdown:hover .dropdown-content {
+    color: #009bab;
     display: block;
+    font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -278,7 +347,7 @@ a:visited {
 }
 
 .dynamic:hover {
-    border: 1px solid steelblue;
+    border: 1px solid #81D0D3;
     box-shadow: 3px 3px #ddd;
     cursor: pointer;
 }
@@ -312,7 +381,7 @@ a:visited {
 
 .flex-category a:hover {
     /* Don't decorate links in repo items */
-    color: #777;
+    color: #81D0D3;
     text-decoration: none;
 }
 
@@ -435,6 +504,8 @@ a:visited {
     }
 }
 
+/* Stickynav & tab = left-hand menu of catalog categories */
+
 .stickynav div {
     padding-left: 5px;
     padding-right: 15px;
@@ -462,8 +533,22 @@ a:visited {
 }
 
 .stickynav div:hover > a {
+    color: #009bab;
+}
+
+.tab {
     color: black;
 }
+.selected-tab {
+    background-color: #81D0D3;
+    color: white;
+}
+
+.selected-tab > a {
+    color: white;
+}
+
+/* Hamburger nav for catalog categories at various widths */
 
 .hamburger-nav div {
     width: 100%;
@@ -486,24 +571,12 @@ a:visited {
 }
 
 .hamburger-nav div:hover > a {
-    color: black;
+    color: #009bab;
 }
 
 .hamburger-nav div:hover {
     background-color: lightgrey;
     padding-left: 18px;
-}
-
-.tab {
-    color: black;
-}
-.selected-tab {
-    background-color: steelblue;
-    color: white;
-}
-
-.selected-tab > a {
-    color: white;
 }
 
 .hamburger-container span {
@@ -520,7 +593,7 @@ a:visited {
 
 .hamburger-container span:hover {
     cursor: pointer;
-    color: black;
+    color: #009bab;
 }
 
 .hamburger-nav {

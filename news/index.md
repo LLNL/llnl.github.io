@@ -4,16 +4,16 @@ layout: news
 permalink: /news/
 ---
 
-  <div class="filterBtnGroup btn-group" role="group">
-    <button type="button" class="btn btn-outline-primary" id="allB">All</button>
-    <button type="button" class="btn btn-outline-primary" id="event">Events</button>
-    <button type="button" class="btn btn-outline-primary" id="event-report">Event Reports</button>
-    <button type="button" class="btn btn-outline-primary" id="multimedia">Multimedia</button>
-    <button type="button" class="btn btn-outline-primary" id="new-repo">New Repos</button>
-    <button type="button" class="btn btn-outline-primary" id="profile">Profiles</button>
-    <button type="button" class="btn btn-outline-primary" id="release">Releases</button>
-    <button type="button" class="btn btn-outline-primary" id="story">Stories</button>
-    <button type="button" class="btn btn-outline-primary" id="this-website">Meta</button>
+<div class="filterBtnGroup btn-group" role="group" style="margin-bottom: 30px;">
+    <button type="button" class="btn" id="allB">All</button>
+    <button type="button" class="btn" id="event">Events</button>
+    <button type="button" class="btn" id="event-report">Event Reports</button>
+    <button type="button" class="btn" id="multimedia">Multimedia</button>
+    <button type="button" class="btn" id="new-repo">New Repos</button>
+    <button type="button" class="btn" id="profile">Profiles</button>
+    <button type="button" class="btn" id="release">Releases</button>
+    <button type="button" class="btn" id="story">Stories</button>
+    <button type="button" class="btn" id="this-website">Meta</button>
   </div>
 
   {% assign cap = 20 %} {% comment %} maximum number of each type to store {% endcomment %}
@@ -77,4 +77,4 @@ permalink: /news/
   {% endfor %}
   
   <br />
-  <button type="button" class="btn btn-outline-primary btn-lg btn-block"><a href="/news/archive/">See all news in the archive</a></button>
+  <button type="button" class="btn btn-lg btn-block"><a href="/news/archive/">See all news in the archive</a></button>
