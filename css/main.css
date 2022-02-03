@@ -234,6 +234,7 @@ a:visited {
     border-left: 1px;
     color: #555555;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Buttons */
@@ -246,6 +247,13 @@ a:visited {
 }
 
 .btn:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn:disabled {
     color: #009bab;
     text-decoration: none;
     font-weight: bold;
@@ -283,13 +291,13 @@ a:visited {
     font-weight: bold;
 }
 
-.navbar a.navbar-normal {
+.navbar-normal {
     color: #005dab;
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar a.navbar-normal:hover {
+.navbar-normal:hover {
     color: #009bab;
     text-decoration: none;
     font-weight: bold;
