@@ -8492,7 +8492,7 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-test",
+                                    "packageName": "ecp-veloc/github-actions/cmake-build",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
@@ -8683,7 +8683,7 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-test",
+                                    "packageName": "ecp-veloc/github-actions/cmake-build",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
@@ -26975,6 +26975,117 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/core",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/preset-env",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/preset-react",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "babel-loader",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel-loader"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "css-loader",
+                                    "repository": {
+                                        "nameWithOwner": "webpack-contrib/css-loader"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "d3",
+                                    "repository": {
+                                        "nameWithOwner": "d3/d3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "d3v4",
+                                    "repository": {
+                                        "nameWithOwner": "Choniawko/d3-chart"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint",
+                                    "repository": {
+                                        "nameWithOwner": "eslint/eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint-plugin-import",
+                                    "repository": {
+                                        "nameWithOwner": "import-js/eslint-plugin-import"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint-plugin-node",
+                                    "repository": {
+                                        "nameWithOwner": "mysticatea/eslint-plugin-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint-plugin-promise",
+                                    "repository": {
+                                        "nameWithOwner": "xjamundx/eslint-plugin-promise"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "html-webpack-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "jantimon/html-webpack-plugin"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "style-loader",
+                                    "repository": {
+                                        "nameWithOwner": "webpack-contrib/style-loader"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "webpack",
+                                    "repository": {
+                                        "nameWithOwner": "webpack/webpack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "webpack-cli",
+                                    "repository": {
+                                        "nameWithOwner": "webpack/webpack-cli"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -29201,6 +29312,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "build",
+                                    "repository": {
+                                        "nameWithOwner": "benjamin-hodgson/build"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "dep-license",
                                     "repository": {
                                         "nameWithOwner": "abduhbm/dep-license"
@@ -29356,6 +29474,33 @@
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
                                     }
                                 }
                             ]
