@@ -1644,8 +1644,10 @@
     "LLNL/BCML-COVID19": {
         "description": "Repository for \"Budget Constrained Machine Learning for Early Prediction of Adverse Outcomes for COVID-19 Patients\"",
         "name": "LLNL/BCML-COVID19",
-        "topics": null,
-        "website": null
+        "topics": [
+            "machine-learning"
+        ],
+        "website": ""
     },
     "LLNL/Babel": {
         "description": "Babel is a high-performance language interoperability tool. ",
@@ -1712,8 +1714,11 @@
     "LLNL/CRADL": {
         "description": "Machine learning proxy application for capturing performance metrics of inference algorithms operating on mesh data from multi-physics codes.",
         "name": "LLNL/CRADL",
-        "topics": null,
-        "website": null
+        "topics": [
+            "machine-learning",
+            "proxy-application"
+        ],
+        "website": ""
     },
     "LLNL/CUDAMicroBench": {
         "description": null,
@@ -1819,15 +1824,19 @@
         "name": "LLNL/DJINN",
         "topics": [
             "neural-network",
-            "machine-learning"
+            "machine-learning",
+            "deep-learning"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/DNN-MFBO": {
         "description": "Multi-fidelity Bayesian Optimization via Deep Neural Nets",
         "name": "LLNL/DNN-MFBO",
-        "topics": null,
-        "website": null
+        "topics": [
+            "neural-network",
+            "deep-learning"
+        ],
+        "website": ""
     },
     "LLNL/DiHydrogen": {
         "description": null,
@@ -1858,7 +1867,8 @@
         "description": "Distributed-memory, arbitrary-precision, dense and sparse-direct linear algebra, conic optimization, and lattice reduction",
         "name": "LLNL/Elemental",
         "topics": [
-            "cpp"
+            "cpp",
+            "math-physics"
         ],
         "website": "http://libelemental.org"
     },
@@ -1915,8 +1925,10 @@
     "LLNL/FAST": {
         "description": "Fusion models for Atomic and molecular STructures (FAST)",
         "name": "LLNL/FAST",
-        "topics": null,
-        "website": null
+        "topics": [
+            "python"
+        ],
+        "website": ""
     },
     "LLNL/FGPU": {
         "description": null,
@@ -2141,8 +2153,10 @@
     "LLNL/LOKI": {
         "description": "4D Eulerian Vlasov Code ",
         "name": "LLNL/LOKI",
-        "topics": null,
-        "website": null
+        "topics": [
+            "math-physics"
+        ],
+        "website": ""
     },
     "LLNL/LULESH": {
         "description": "Livermore Unstructured Lagrangian Explicit Shock Hydrodynamics (LULESH)",
@@ -2195,9 +2209,11 @@
         "description": "A browser-based visualization of chemistry papers, specifically morphology, material, and chemical data extracted from them. The UI was made with nanomaterial synthesis papers in mind.",
         "name": "LLNL/MI-ChemVis",
         "topics": [
-            "data-viz"
+            "data-viz",
+            "chemistry",
+            "materials"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/MPI-Stages": {
         "description": "MPI library that supports serializing (and checkpointing) its state",
@@ -2294,9 +2310,11 @@
         "description": "Example Merlin Workflows",
         "name": "LLNL/MerlinWorkflows",
         "topics": [
-            "workflows"
+            "workflows",
+            "radiuss",
+            "machine-learning"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/Mitos": {
         "description": "Memory Sampling Tool using Linux perf_events",
@@ -2314,9 +2332,10 @@
         "description": "A demonstration code to test performance of basic operations for different representations of multi-material data structures.",
         "name": "LLNL/MultiMatTest",
         "topics": [
-            "performance"
+            "performance",
+            "materials"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/MultiscaleTopOpt": {
         "description": "A 3D multsicale topology optimization code using surrogate models of lattice microscale response",
@@ -2457,8 +2476,10 @@
     "LLNL/PolyClipper": {
         "description": "PolyClipper provides methods to clip arbitrary polygons (in 2D) and polyhedra (in 3D) by planes.",
         "name": "LLNL/PolyClipper",
-        "topics": null,
-        "website": null
+        "topics": [
+            "math-physics"
+        ],
+        "website": ""
     },
     "LLNL/Privateer": {
         "description": "Multi-versioned memory-mapped data stores for high-performance data science",
@@ -2668,7 +2689,8 @@
         "topics": [
             "synthetic-data-generation",
             "clinical-research",
-            "machine-learning"
+            "machine-learning",
+            "statistics"
         ],
         "website": ""
     },
@@ -2680,7 +2702,8 @@
             "linter-plugin",
             "vim-plugin",
             "python3",
-            "linting"
+            "linting",
+            "arbitrary-lagrangian-eulerian"
         ],
         "website": ""
     },
@@ -2725,9 +2748,10 @@
         "name": "LLNL/SmallMolEval",
         "topics": [
             "machine-learning",
-            "python"
+            "python",
+            "statistics"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/SoRa": {
         "description": "SoRa uses genetic programming to find mathematical representations from experimental data",
@@ -2769,8 +2793,11 @@
     "LLNL/TopoMS": {
         "description": "Topological Analysis for Molecular Systems",
         "name": "LLNL/TopoMS",
-        "topics": null,
-        "website": null
+        "topics": [
+            "data-analysis",
+            "data-viz"
+        ],
+        "website": ""
     },
     "LLNL/TourRobotDance": {
         "description": "Make your tape library robots dance for the delight of tour groups in your data center",
@@ -2876,6 +2903,12 @@
     "LLNL/Wemul": {
         "description": "Workflow I/O Emulation Framework",
         "name": "LLNL/Wemul",
+        "topics": null,
+        "website": null
+    },
+    "LLNL/XNAS": {
+        "description": null,
+        "name": "LLNL/XNAS",
         "topics": null,
         "website": null
     },
@@ -3660,7 +3693,8 @@
             "hpc",
             "cpp",
             "radiuss",
-            "performance"
+            "performance",
+            "artificial-intelligence"
         ],
         "website": "http://software.llnl.gov/lbann/"
     },
@@ -3841,7 +3875,10 @@
     "LLNL/mappertrac": {
         "description": "Massively Parallel, Portable, and Reproducible Tractography (MaPPeRTrac). A probabilistic diffusion MRI tractography pipeline for high performance computing. Generates edge-centric connectomes and edge density images. Highly extensible.",
         "name": "LLNL/mappertrac",
-        "topics": null,
+        "topics": [
+            "python",
+            "workflows"
+        ],
         "website": ""
     },
     "LLNL/mappgene": {
@@ -3889,7 +3926,8 @@
         "name": "LLNL/merlin-spellbook",
         "topics": [
             "workflows",
-            "merlin"
+            "merlin",
+            "radiuss"
         ],
         "website": ""
     },
@@ -4219,8 +4257,10 @@
     "LLNL/pyPICfusion": {
         "description": "A set of python scripts to perform nuclear fusion for an arbitrary distribution of ions",
         "name": "LLNL/pyPICfusion",
-        "topics": null,
-        "website": null
+        "topics": [
+            "python"
+        ],
+        "website": ""
     },
     "LLNL/pynamic": {
         "description": "The Python Dynamic Benchmark",
@@ -4292,7 +4332,8 @@
             "mpi",
             "cpp",
             "c-plus-plus",
-            "molecular-dynamics"
+            "molecular-dynamics",
+            "simulation"
         ],
         "website": ""
     },
@@ -4516,7 +4557,10 @@
     "LLNL/selfsupervised": {
         "description": "Deep Learning Self-Supervised source code related to Mundenk et al. CVPR 2018",
         "name": "LLNL/selfsupervised",
-        "topics": null,
+        "topics": [
+            "deep-learning",
+            "machine-learning"
+        ],
         "website": "https://gdo-datasci.llnl.gov/selfsupervised/"
     },
     "LLNL/sepsense": {
@@ -4524,9 +4568,11 @@
         "name": "LLNL/sepsense",
         "topics": [
             "machine-learning",
-            "python"
+            "python",
+            "neural-network",
+            "deep-learning"
         ],
-        "website": null
+        "website": ""
     },
     "LLNL/serac": {
         "description": "Serac is a high order nonlinear thermomechanical simulation code",
@@ -4697,7 +4743,8 @@
         "description": "The web backend for the SPOT performance visualization tool",
         "name": "LLNL/spotbe",
         "topics": [
-            "radiuss"
+            "radiuss",
+            "python"
         ],
         "website": ""
     },
