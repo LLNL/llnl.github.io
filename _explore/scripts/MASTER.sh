@@ -3,7 +3,7 @@
 
 exec &> >(tee ../LAST_MASTER_UPDATE.log)
 
-export GITHUB_DATA=../../explore/github-data
+export GITHUB_DATA=../../visualize/github-data
 DATELOG=../LAST_MASTER_UPDATE.txt
 
 # On exit

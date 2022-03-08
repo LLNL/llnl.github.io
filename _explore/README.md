@@ -23,7 +23,7 @@ The actual queries sent to [GitHub's GraphQL API][gitgraphql] when the data fetc
 
 ## [./scripts][scripts dir]
 
-Scripts for data fetching and manipulation. Data is written to [`explore/github-data`][data dir] in appropriate json formats.
+Scripts for data fetching and manipulation. Data is written to [`visualize/github-data`][data dir] in appropriate json formats.
 
 New files are created for each type of data structure.  
 For most files, data is overwritten each time the scripts are run.  
@@ -35,7 +35,7 @@ The scripts are only for gathering new data. You do not need them to run in orde
 
 [jump2 scripts]: #scripts
 [inputs file]: input_lists.json
-[data dir]: ../explore/github-data
+[data dir]: ../visualize/github-data
 [queries dir]: queries
 [scripts dir]: scripts
 [requires]: scripts/requirements.txt
