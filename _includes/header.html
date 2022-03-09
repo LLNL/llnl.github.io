@@ -17,14 +17,15 @@
         <li id="explore"
             {% if page.url == "/explore/" %} class="active dropdown"
             {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="/explore/#/ALLSOFTWARE">Browse projects</a>
+            {% endif %}><a class="navbar-normal" href="/explore/#/AllSoftware">Explore</a>
         </li>
-        <li id="news"
-            {% if page.url == "/news/" %} class="active dropdown"
-            {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="/news/">News</a>
+        <li id="visualize"
+        {% if page.url == "/visualize/" %} class="active dropdown"
+        {% else %} class="dropdown"
+        {% endif %}><a class="navbar-normal" href="/visualize/">Visualize</a>
           <div class="dropdown-content">
-            <p><a class="navbar-normal" href="/news/archive/">Archive</a></p>
+            <p><a class="navbar-normal" href="/visualize/dependencies/">Dependencies</a></p>
+            <p><a class="navbar-normal" href="/visualize/popular-repos/">Popular Repositories</a></p>
           </div>
         </li>
         <li id="about"
@@ -33,17 +34,16 @@
             {% endif %}><a class="navbar-normal" href="/about/">About</a>
           <div class="dropdown-content">
             <p><a class="navbar-normal" href="/about/faq/">FAQ</a></p>
-            <p><a class="navbar-normal" href="/about/project/">Policies & Guidelines</a>
+            <p><a class="navbar-normal" href="/about/policies/">Policies & Guidelines</a>
             <p><a class="navbar-normal" href="/about/licenses/">Licenses Guide</a></p>
           </div>
         </li>
-        <li id="visualize"
-            {% if page.url == "/visualize/" %} class="active dropdown"
-            {% else %} class="dropdown"
-            {% endif %}><a class="navbar-normal" href="/visualize/">Visualize</a>
+        <li id="news"
+        {% if page.url == "/news/" %} class="active dropdown"
+        {% else %} class="dropdown"
+        {% endif %}><a class="navbar-normal" href="/news/">News</a>
           <div class="dropdown-content">
-            <p><a class="navbar-normal" href="/visualize/dependencies/">Dependencies</a></p>
-            <p><a class="navbar-normal" href="/visualize/popular-repos/">Popular Repositories</a></p>
+            <p><a class="navbar-normal" href="/news/archive/">Archive</a></p>
           </div>
         </li>
         <li id="github-button"><a href="https://github.com/llnl"><span class="fa fa-github fa-lg"></span></a></li>
