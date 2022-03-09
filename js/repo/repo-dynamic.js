@@ -5,7 +5,7 @@ angular.module('app', []).controller('repoDataController', [
     function($scope, $http, $location) {
         var hash = $location.url().substring(1);
 
-        var promiseRepoInfo = $http.get('../explore/github-data/intReposInfo.json', {
+        var promiseRepoInfo = $http.get('../visualize/github-data/intReposInfo.json', {
             cache: true
         });
 

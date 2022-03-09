@@ -1,5 +1,5 @@
 ---
-title: Explore
+title: Visualize
 layout: default
 permalink: /visualize/popular-repos/
 ---
@@ -28,18 +28,18 @@ permalink: /visualize/popular-repos/
 <script type="text/javascript" src="../../static/d3-tip/1.0/d3-tip.js"></script>
 <script type="text/javascript" src="../../static/d3-v4-cloud/1.2.2/build/d3.layout.cloud.js"></script>
 <script type="text/javascript" src="https://unpkg.com/d3-simple-slider@1.8.0/dist/d3-simple-slider.min.js"></script>
-<script type="text/javascript" src="../../js/explore/helpers.js"></script>
+<script type="text/javascript" src="../../js/visualize/helpers.js"></script>
 
 <!-- Load drawing JS -->
-<script type="text/javascript" src="../../js/explore/largeRepos/cluster_repoSize.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/line_repoActivity.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/generate_popularRepos.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/line_repoCreationHistory.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/sunburst_licenses.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/list_popularRepos.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/pie_activityCommits.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/pie_activityLines.js"></script>
-<script type="text/javascript" src="../../js/explore/largeRepos/line_repoStarHistory.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/cluster_repoSize.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/line_repoActivity.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/generate_popularRepos.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/line_repoCreationHistory.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/sunburst_licenses.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/list_popularRepos.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/pie_activityCommits.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/pie_activityLines.js"></script>
+<script type="text/javascript" src="../../js/visualize/largeRepos/line_repoStarHistory.js"></script>
 
 <script>
     // GiHub Data Directory

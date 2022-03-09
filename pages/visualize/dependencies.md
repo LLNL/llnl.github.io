@@ -1,5 +1,5 @@
 ---
-title: Explore
+title: Visualize
 layout: default
 permalink: /visualize/dependencies/
 ---
@@ -24,10 +24,10 @@ permalink: /visualize/dependencies/
 <script type="text/javascript" src="../../static/d3-tip/1.0/d3-tip.js"></script>
 <script type="text/javascript" src="../../static/d3-v4-cloud/1.2.2/build/d3.layout.cloud.js"></script>
 <script type="text/javascript" src="https://unpkg.com/d3-simple-slider@1.8.0/dist/d3-simple-slider.min.js"></script>
-<script type="text/javascript" src="../../js/explore/helpers.js"></script>
+<script type="text/javascript" src="../../js/visualize/helpers.js"></script>
 
 <!-- Load drawing JS -->
-<script type="text/javascript" src="../../js/explore/dependencies/force_dependencyGraph.js"></script>
+<script type="text/javascript" src="../../js/visualize/dependencies/force_dependencyGraph.js"></script>
 
 <script>
     // GiHub Data Directory

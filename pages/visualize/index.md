@@ -1,5 +1,5 @@
 ---
-title: Explore
+title: Visualize
 layout: default
 permalink: /visualize/
 ---
@@ -29,20 +29,20 @@ permalink: /visualize/
 <script type="text/javascript" src="../static/d3-tip/1.0/d3-tip.js"></script>
 <script type="text/javascript" src="../static/d3-v4-cloud/1.2.2/build/d3.layout.cloud.js"></script>
 <script type="text/javascript" src="https://unpkg.com/d3-simple-slider@1.8.0/dist/d3-simple-slider.min.js"></script>
-<script type="text/javascript" src="../js/explore/helpers.js"></script>
+<script type="text/javascript" src="../js/visualize/helpers.js"></script>
 
 <!-- Load drawing JS -->
-<script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
-<script type="text/javascript" src="../js/explore/pie_members.js"></script>
-<script type="text/javascript" src="../js/explore/pie_repos.js"></script>
-<script type="text/javascript" src="../js/explore/line_repoActivityExplore.js"></script>
-<script type="text/javascript" src="../js/explore/scatter_repoPulls.js"></script>
-<script type="text/javascript" src="../js/explore/scatter_repoIssues.js"></script>
-<script type="text/javascript" src="../js/explore/pie_languageExplore.js"></script>
-<script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
-<script type="text/javascript" src="../js/explore/sunburst_licenses.js"></script>
-<script type="text/javascript" src="../js/explore/pack_hierarchy.js"></script>
-<script type="text/javascript" src="../js/explore/line_repoStarHistoryExplore.js"></script>
+<script type="text/javascript" src="../js/visualize/line_repoCreationHistory.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_members.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_repos.js"></script>
+<script type="text/javascript" src="../js/visualize/line_repoActivityExplore.js"></script>
+<script type="text/javascript" src="../js/visualize/scatter_repoPulls.js"></script>
+<script type="text/javascript" src="../js/visualize/scatter_repoIssues.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_languageExplore.js"></script>
+<script type="text/javascript" src="../js/visualize/cloud_topics.js"></script>
+<script type="text/javascript" src="../js/visualize/sunburst_licenses.js"></script>
+<script type="text/javascript" src="../js/visualize/pack_hierarchy.js"></script>
+<script type="text/javascript" src="../js/visualize/line_repoStarHistoryExplore.js"></script>
 
 <script>
     // GiHub Data Directory

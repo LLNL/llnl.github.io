@@ -58,21 +58,21 @@ permalink: /repo/
 <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.16.0/d3.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="../static/d3-tip/1.0/d3-tip.js"></script>
 <script type="text/javascript" src="../static/d3-v4-cloud/1.2.2/build/d3.layout.cloud.js"></script>
-<script type="text/javascript" src="../js/explore/helpers.js"></script>
+<script type="text/javascript" src="../js/visualize/helpers.js"></script>
 
 <!-- Load drawing JS -->
-<script type="text/javascript" src="../js/explore/line_repoActivity.js"></script>
-<script type="text/javascript" src="../js/explore/pie_repoUsers.js"></script>
-<script type="text/javascript" src="../js/explore/pie_repoPulls.js"></script>
-<script type="text/javascript" src="../js/explore/pie_repoIssues.js"></script>
-<script type="text/javascript" src="../js/explore/line_repoCreationHistory.js"></script>
-<script type="text/javascript" src="../js/explore/pie_language.js"></script>
-<script type="text/javascript" src="../js/explore/cloud_topics.js"></script>
-<script type="text/javascript" src="../js/explore/line_repoStarHistory.js"></script>
+<script type="text/javascript" src="../js/visualize/line_repoActivity.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_repoUsers.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_repoPulls.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_repoIssues.js"></script>
+<script type="text/javascript" src="../js/visualize/line_repoCreationHistory.js"></script>
+<script type="text/javascript" src="../js/visualize/pie_language.js"></script>
+<script type="text/javascript" src="../js/visualize/cloud_topics.js"></script>
+<script type="text/javascript" src="../js/visualize/line_repoStarHistory.js"></script>
 
 <script>
     // GiHub Data Directory
-    var ghDataDir = '../explore/github-data';
+    var ghDataDir = '../visualize/github-data';
     // Global chart standards
     var stdTotalWidth = 500,
         stdTotalHeight = 400;

@@ -121,7 +121,7 @@ Make sure your repository is included on this website’s home page and [full ca
 
 * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
 
-* Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_explore/input_lists.json), with your organization and/or repository names.
+* Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json), with your organization and/or repository names.
 
 * If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/main/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
 
@@ -153,7 +153,7 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 
 1. Remove your repo’s topic tags (e.g., `math-physics`), which connect it to this website’s browsable categories. Also remove the `radiuss` tag, if applicable.
 
-2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_explore/input_lists.json) to remove your repo’s name.
+2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo’s name.
 
 3. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
 
@@ -165,7 +165,7 @@ Migrating the repo outside of the LLNL organization requires an organization adm
 
 Once the repository has moved to the new organization:
 
-1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_explore/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
+1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
 
 2. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories, including the `radiuss` tag, if applicable.
 
