@@ -1,6 +1,6 @@
 # Project Logos
 
-The home and `/radiuss` pages display a logo next to each repo when they appear under the topic categories. This feature does not apply to the `/catalog` view.
+The home page displays a logo next to each repo when they appear under the topic categories. This feature does not apply to the [Explore](/explore/#/AllSoftware) view.
 
 If a repo has its own logo, that should display. If not, then its organization's avatar should display. Every repo should have one logo or avatar; no repo should be "empty." Organization avatars are pulled from GitHub.
 
