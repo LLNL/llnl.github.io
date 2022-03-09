@@ -4,15 +4,15 @@ angular.module('app', []).controller('gitHubDataController', [
     '$window',
     '$location',
     function($scope, $http, $window, $location) {
-        var getCategoryInfo = $http.get('/category/category_info.json', {
+        var getCategoryInfo = $http.get('/pages/explore/category_info.json', {
             cache: true
         });
 
-        var getReposTopics = $http.get('/explore/github-data/intRepos_Topics.json', {
+        var getReposTopics = $http.get('/visualize/github-data/intRepos_Topics.json', {
             cache: true
         });
 
-        var getReposInfo = $http.get('/explore/github-data/intReposInfo.json', {
+        var getReposInfo = $http.get('/visualize/github-data/intReposInfo.json', {
             cache: true
         });
 
@@ -99,7 +99,7 @@ angular.module('app', []).controller('gitHubDataController', [
                     var index = $scope.catData.length - 1;
                     $scope.selectedIndex = index;
                     var result = $scope.catData[index].title.replace(/ /g, '');
-                    $window.location.href = '../category#' + result;
+                    $window.location.href = '../explore#' + result;
                 }
             }
 
@@ -171,7 +171,7 @@ angular.module('app', []).controller('gitHubDataController', [
                 //function to generate hash url for each category
                 $scope.categoryHref = function(nametag) {
                     var result = nametag.replace(/ /g, '');
-                    $window.location.href = '../category#' + result;
+                    $window.location.href = '../explore#' + result;
                 };
             });
         });

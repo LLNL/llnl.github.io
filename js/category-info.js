@@ -1,13 +1,13 @@
 app.controller('gitHubDataController', function($scope, $http, $window, Category) {
-    var getCategoryInfo = $http.get('../category/category_info.json', {
+    var getCategoryInfo = $http.get('/pages/explore/category_info.json', {
         cache: true
     });
 
-    var getReposTopics = $http.get('./explore/github-data/intRepos_Topics.json', {
+    var getReposTopics = $http.get('./visualize/github-data/intRepos_Topics.json', {
         cache: true
     });
 
-    var getReposInfo = $http.get('./explore/github-data/intReposInfo.json', {
+    var getReposInfo = $http.get('./visualize/github-data/intReposInfo.json', {
         cache: true
     });
 

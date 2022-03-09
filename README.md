@@ -14,25 +14,38 @@ Before you begin, make sure you have working installs of Git, Ruby, and [Bundler
 
 To work locally, first clone into the repository:
 
-```shell
+```bash
 git clone https://github.com/LLNL/llnl.github.io.git
 ```
 
 Make sure you are in the directory you just created by running `cd llnl.github.io` Then you can use `bundler` to install the Ruby dependencies (see the [Jekyll installation docs](https://jekyllrb.com/docs/installation/) for step-by-step guides to setting this up):
 
-```shell
+```bash
 bundle install
 ```
 
 Running this will install everything in your Gemfile (including Jekyll).
 
-Next, run the development web server with:
-
-```shell
+```bash
 bundle exec jekyll serve
 ```
 
 Finally, open <http://localhost:4000> in a web browser.
+
+### Checking Spelling
+
+The [GitHub workflow](.github/workflows/main.yaml) currently includes an action for
+a Rust tool called [crate-ci/typos](https://github.com/marketplace/actions/typos-action)
+that will spell check all posts and pages. If you CI fails, the spelling suggestions will be shown and you can manually
+update the mistakes, or [install typos](https://github.com/crate-ci/typos#install) 
+and have all errors fixed automatically:
+
+```bash
+typos ./pages ./_posts ./README.md --write-changes
+```
+
+If there is a word that needs to be ignored, see [instructions](https://github.com/crate-ci/typos#false-positives) 
+for adding an entry to the [_typos.toml](_typos.toml) file.
 
 ### Tips
 
