@@ -91,7 +91,7 @@ app.controller('gitHubDataController', function($scope, $http, $window, Category
                 //function to generate hash url for each category
                 $scope.categoryHref = function(nametag) {
                     var result = nametag.replace(/ /g, '');
-                    $window.location.href = '../category#' + result;
+                    $window.location.href = '../explore#' + result;
                 };
             });
         });
