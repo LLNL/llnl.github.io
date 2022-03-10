@@ -60,11 +60,11 @@ For example, the default version of Ruby used to deploy GitHub Pages on github.c
 Start with the [FAQ](https://software.llnl.gov/about/faq/). Please see the following `README` files for additional instructions:
 
 - [Project logos](https://github.com/LLNL/llnl.github.io/blob/main/assets/images/logos/README.md)
-- [Catalog categories](https://github.com/LLNL/llnl.github.io/blob/main/category/README.md)
+- ["Explore" categories](https://github.com/LLNL/llnl.github.io/blob/main/pages/explore/README.md)
 - [RADIUSS tags](https://github.com/LLNL/llnl.github.io/blob/main/radiuss/README.md)
 - [News posts](https://github.com/LLNL/llnl.github.io/blob/main/news/README.md)
-- "Explore" [visualizations](https://github.com/LLNL/llnl.github.io/blob/main/_explore/README.md) and [scripts](https://github.com/LLNL/llnl.github.io/blob/main/_explore/scripts/README.md)
-- [Data fetching](https://github.com/LLNL/llnl.github.io/blob/main/explore/README.md)
+- Data [visualizations](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/README.md) and [scripts](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/scripts/README.md)
+- [Data fetching](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md)
 
 ## Contact
 
