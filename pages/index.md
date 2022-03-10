@@ -9,7 +9,7 @@ permalink: /
 <p class="title-para">Welcome to the LLNL software portal—a hub for our open source projects. <br />Our <a href="/explore/#/AllSoftware">full catalog</a> is updated regularly as repositories are added or modified.</p>
 
 <section class="flex-container" id="categories">
-    <div ng-repeat="category in catData" class="flex-category dynamic">
+    <div ng-repeat="category in catData" ng-if="category.title!='All Software'" class="flex-category dynamic">
         <img ng-src="{{ category.icon.path }}" style="width: 150px; height: 150px" alt="{{ category.icon.alt }}" />
         <h4><a href="../explore#{{ category.hash }}">{{ category.title }}</a></h4>
         <p class="text-center">{{ category.description.short }}</p>
