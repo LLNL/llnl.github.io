@@ -68,21 +68,21 @@ angular.module('app', []).controller('gitHubDataController', [
             $scope.catData = [];
             angular.forEach($scope.cats, function(value, key) {
                 var data = catsObj[value];
-                data['displayTitle'] = (data.title);
+                data['title'] = (data.title);
                 $scope.catData.push(data);
             });
             $scope.catData = sortAlphabetically($scope.catData, 'title');
-            var complete = {
-                title: 'All Software',
-                icon: {
-                    path: '/assets/images/catalog.svg',
-                    alt: 'All Software'
-                },
-                description: 'Browse all LLNL open source projects',
-                displayTitle: 'All Software',
-                topics: []
-            };
-            $scope.catData.unshift(complete);
+//            var complete = {
+//                title: 'All Software',
+//                icon: {
+//                    path: '/assets/images/catalog.svg',
+//                    alt: 'All Software'
+//                },
+//                description: 'Browse all LLNL open source projects',
+//                displayTitle: 'All Software',
+//                topics: []
+//            };
+//            $scope.catData.unshift(complete);
 
             var catTitle = $location.path().slice(1);
 
