@@ -11,7 +11,7 @@ permalink: /
 <section class="flex-container" id="categories">
     <div ng-repeat="category in catData" class="flex-category dynamic">
         <img ng-src="{{ category.icon.path }}" style="width: 150px; height: 150px" alt="{{ category.icon.alt }}" />
-        <h4><a ng-href="../explore#{{ category.hash}}">{{ category.title}}</a></h4>
+        <h4><a href="../explore#{{ category.hash }}">{{ category.title }}</a></h4>
         <p class="text-center">{{ category.description.short }}</p>
 
         <div ng-repeat="repo in topicRepos[catData.indexOf(category)]">
@@ -41,7 +41,7 @@ permalink: /
                 </span>
             </p>
         </div>
-        <a class="more" ng-if="topicRepos[catData.indexOf(category)].length > 4">...MORE</a>
+        <a class="more" ng-if="topicRepos[catData.indexOf(category)].length > 4" href="../explore#{{ category.hash }}">...MORE</a>
     </div>
 </section>
 
