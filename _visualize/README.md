@@ -1,7 +1,7 @@
 # How to Generate New Data
 
 ```bash
-cd _explore/scripts/
+cd _visualize/scripts/
 ./MASTER.sh
 ```
 
