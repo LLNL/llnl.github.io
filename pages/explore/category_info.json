@@ -1,7 +1,38 @@
 {
     "data": {
+        "App Infrastructure": {
+            "title": "App Infrastructure",
+            "hash": "AppInfrastructure",
+            "icon": {
+                "path": "/assets/images/app-infrastructure.svg",
+                "alt": "App Infrastructure"
+            },
+            "description": {
+                "short": "Browse tools for basic functionality common in HPC codes",
+                "long": ""
+            },
+            "topics":[
+                "app-infrastructure"
+            ]
+        },
+        "Applications": {
+            "title": "Applications",
+            "hash": "Applications",
+            "icon": {
+                "path": "/assets/images/application.svg",
+                "alt": "Applications"
+            },
+            "description": {
+                "short": "Browse scientific simulation codes and IT management tools",
+                "long": ""
+            },
+            "topics": [
+                "application"
+            ]
+        },
         "Build Tools": {
             "title": "Build Tools",
+            "hash": "BuildTools", 
             "icon": {
                 "path": "/assets/images/build-tools.svg",
                 "alt": "Build Tools"
@@ -14,22 +45,9 @@
                 "build-tools"
             ]
         },
-        "Math & Physics Libraries": {
-            "title": "Math & Physics Libraries",
-            "icon": {
-                "path": "/assets/images/math.svg",
-                "alt": "Math & Physics Libraries"
-            },
-            "description": {
-                "short": "Optimize solvers, higher order methods, and AMR frameworks",
-                "long": ""
-            },
-            "topics": [
-                "math-physics"
-            ]
-        },
         "Data Management & Viz": {
             "title": "Data Management & Viz",
+            "hash": "DataManagement&Viz",
             "icon": {
                 "path": "/assets/images/data-manage.svg",
                 "alt": "Data Management & Visualization"
@@ -43,65 +61,39 @@
                 "data-viz"
             ]
         },
-        "Applications": {
-            "title": "Applications",
+        "File Systems": {
+            "title": "File Systems",
+            "hash": "FileSystems",
             "icon": {
-                "path": "/assets/images/application.svg",
-                "alt": "Applications"
+                "path": "/assets/images/file-systems.svg",
+                "alt": "File Systems"
             },
             "description": {
-                "short": "Browse scientific simulation codes and IT management tools",
+                "short": "Configure data storage and retrieval for more efficient workloads",
                 "long": ""
             },
             "topics": [
-                "application"
+                "file-system"
             ]
         },
-        "Proxy Applications": {
-            "title": "Proxy Applications",
+        "Math & Physics Libraries": {
+            "title": "Math & Physics Libraries",
+            "hash": "Math&PhysicsLibraries",
             "icon": {
-                "path": "/assets/images/prox-app.svg",
-                "alt": "Proxy Applications"
+                "path": "/assets/images/math.svg",
+                "alt": "Math & Physics Libraries"
             },
             "description": {
-                "short": "Prepare for testing and porting applications",
+                "short": "Optimize solvers, higher order methods, and AMR frameworks",
                 "long": ""
             },
             "topics": [
-                "proxy-application"
-            ]
-        },
-        "System Software": {
-            "title": "System Software",
-            "icon": {
-                "path": "/assets/images/system-software.svg",
-                "alt": "System Software"
-            },
-            "description": {
-                "short": "Manage laptop and desktop computer systems, HPC clusters, and parallel environments",
-                "long": ""
-            },
-            "topics": [
-                "system-software"
-            ]
-        },
-        "Portable Execution & Memory Mmgt": {
-            "title": "Portable Execution & Memory Mmgt",
-            "icon": {
-                "path": "/assets/images/portable.svg",
-                "alt": "Portable Execution & Memory Management"
-            },
-            "description": {
-                "short": "Automate data motion and memory allocation on advanced architectures",
-                "long": ""
-            },
-            "topics": [
-                "portability",
-                "memory-management"
+                "math-physics"
             ]
         },
         "Performance & Workflow": {
             "title": "Performance & Workflow",
+            "hash": "Performance&Workflow",
             "icon": {
                 "path": "/assets/images/performance.svg",
                 "alt": "Performance & Workflow"
@@ -115,36 +107,40 @@
                 "workflows"
             ]
         },
-        "File Systems": {
-            "title": "File Systems",
+        "Portable Execution & Memory Mmgt": {
+            "title": "Portable Execution & Memory Mmgt",
+            "hash": "PortableExecution&MemoryMmgt",
             "icon": {
-                "path": "/assets/images/file-systems.svg",
-                "alt": "File Systems"
+                "path": "/assets/images/portable.svg",
+                "alt": "Portable Execution & Memory Management"
             },
             "description": {
-                "short": "Configure data storage and retrieval for more efficient workloads",
+                "short": "Automate data motion and memory allocation on advanced architectures",
                 "long": ""
             },
             "topics": [
-                "file-system"
+                "portability",
+                "memory-management"
             ]
         },
-        "App Infrastructure": {
-            "title": "App Infrastructure",
+        "Proxy Applications": {
+            "title": "Proxy Applications",
+            "hash": "ProxyApplications",
             "icon": {
-                "path": "/assets/images/app-infrastructure.svg",
-                "alt": "App Infrastructure"
+                "path": "/assets/images/prox-app.svg",
+                "alt": "Proxy Applications"
             },
             "description": {
-                "short": "Browse tools for basic functionality common in HPC codes",
+                "short": "Prepare for testing and porting applications",
                 "long": ""
             },
-            "topics":[
-                "app-infrastructure"
+            "topics": [
+                "proxy-application"
             ]
         },
         "RADIUSS": {
             "title": "RADIUSS",
+            "hash": "RADIUSS",
             "icon": {
                 "path": "/assets/images/radiuss.svg",
                 "alt": "RADIUSS logo"
@@ -156,6 +152,21 @@
                 "topics":[
                 "radiuss"
             ]            
+        },
+        "System Software": {
+            "title": "System Software",
+            "hash": "SystemSoftware",
+            "icon": {
+                "path": "/assets/images/system-software.svg",
+                "alt": "System Software"
+            },
+            "description": {
+                "short": "Manage laptop and desktop computer systems, HPC clusters, and parallel environments",
+                "long": ""
+            },
+            "topics": [
+                "system-software"
+            ]
         }
     }
 }
