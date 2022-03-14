@@ -57,7 +57,7 @@
 >: Examples should be compiled and tested as part of a release to make sure they are kept up to date with API changes. New examples should be added when major new features are released, or existing examples should be extended to include those new features. Existing [proxy apps](https://software.llnl.gov/explore/#/ProxyApplications) are a potential good starting place.
 >
 >Rationale
->: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/about/policies/tests-ci)).
+>: This recommendation serves two purposes. The first is for documentation of the concrete usage of the product, training, or new feature demonstration. The second is for maintenance purpose as these examples provides a primary set of tests for non-regression or installation verification (see [Testing and Continuous Integration](/project/policies/tests-ci)).
 
 ---
 <a name="rdoc6"></a>
