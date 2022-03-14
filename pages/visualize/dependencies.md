@@ -7,7 +7,7 @@ permalink: /visualize/dependencies/
 {% raw %}
 
 <link rel="stylesheet" type="text/css" href="../../css/graphstyle.css" />
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<link rel="stylesheet" type="text/css" href="../../css/main.css" />
 
 <h2 class="page-header text-center">
     LLNL GitHub Visualizations
