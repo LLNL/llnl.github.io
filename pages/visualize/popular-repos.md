@@ -9,7 +9,7 @@ permalink: /visualize/popular-repos/
 <link rel="stylesheet" type="text/css" href="../../css/graphstyle.css" />
 
 <h2 class="page-header text-center">
-    LLNL GitHub Visualizations
+    LLNL GitHub Visualizations: Popular Repos
 </h2>
 
 <!-- Preset vis display areas -->
