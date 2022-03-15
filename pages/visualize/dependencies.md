@@ -10,7 +10,7 @@ permalink: /visualize/dependencies/
 <link rel="stylesheet" type="text/css" href="../../css/main.css" />
 
 <h2 class="page-header text-center">
-    LLNL GitHub Visualizations
+    LLNL GitHub Visualizations: Dependencies
 </h2>
 
 <!-- Preset vis display areas -->

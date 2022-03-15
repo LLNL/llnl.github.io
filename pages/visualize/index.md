@@ -9,14 +9,12 @@ permalink: /visualize/
 <link rel="stylesheet" type="text/css" href="/css/graphstyle.css" />
 
 <h2 class="page-header text-center">
-    LLNL GitHub Visualizations
+    LLNL GitHub Visualizations: Repositories
 </h2>
 
 <!-- Preset vis display areas -->
 <center>
     <svg class="repoCreationHistory"></svg>
-    <br /><svg class="hierarchyPack"></svg>
-    <br /><svg class="pieMembers"></svg><svg class="pieRepos"></svg>
     <br /><svg class="repoActivityChart"></svg>
     <br /><svg class="repoStarHistoryChart"></svg>
     <br /><svg class="repoPulls"></svg><svg class="repoIssues"></svg>
@@ -33,15 +31,12 @@ permalink: /visualize/
 
 <!-- Load drawing JS -->
 <script type="text/javascript" src="../js/visualize/line_repoCreationHistory.js"></script>
-<script type="text/javascript" src="../js/visualize/pie_members.js"></script>
-<script type="text/javascript" src="../js/visualize/pie_repos.js"></script>
 <script type="text/javascript" src="../js/visualize/line_repoActivityExplore.js"></script>
 <script type="text/javascript" src="../js/visualize/scatter_repoPulls.js"></script>
 <script type="text/javascript" src="../js/visualize/scatter_repoIssues.js"></script>
 <script type="text/javascript" src="../js/visualize/pie_languageExplore.js"></script>
 <script type="text/javascript" src="../js/visualize/cloud_topics.js"></script>
 <script type="text/javascript" src="../js/visualize/sunburst_licenses.js"></script>
-<script type="text/javascript" src="../js/visualize/pack_hierarchy.js"></script>
 <script type="text/javascript" src="../js/visualize/line_repoStarHistoryExplore.js"></script>
 
 <script>
@@ -59,15 +54,12 @@ permalink: /visualize/
         stdLgndSpacing = 20;
     // Call draw functions
     draw_line_repoCreationHistory('repoCreationHistory');
-    draw_pie_members('pieMembers');
-    draw_pie_repos('pieRepos');
     draw_line_repoActivity('repoActivityChart');
     draw_scatter_repoPulls('repoPulls');
     draw_scatter_repoIssues('repoIssues');
     draw_pie_language('languagePie');
     draw_cloud_topics('topicCloud');
     draw_sunburst_licenses('licenseSunburst');
-    draw_pack_hierarchy('hierarchyPack');
     draw_line_repoStarHistory('repoStarHistoryChart');
 </script>
 
