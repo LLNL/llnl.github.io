@@ -10,7 +10,7 @@ function draw_pack_hierarchy(areaID) {
     });
 
     function drawGraph(data, areaID) {
-        const graphHeader = 'Organizations and Contributions';
+        const graphHeader = 'Organizations and Contributors';
 
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             width = stdTotalWidth * 2 - margin.left - margin.right,
@@ -219,7 +219,7 @@ function draw_pack_hierarchy(areaID) {
         }
 
         // Data for legend
-        const labels = ['External Contributors', 'Internal Contributors', 'Repositories', 'GitHub Organizations', 'LLNL'];
+        const labels = ['External Contributors', 'Internal Contributors', 'Repositories', 'GitHub Organizations', 'LLNL Catalog'];
     
         // Creates legend
         const legend = chart
