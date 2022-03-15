@@ -1,7 +1,7 @@
 ---
 title: Visualize
 layout: default
-permalink: /visualize/contributors
+permalink: /visualize/contributors/
 ---
 
 {% raw %}
