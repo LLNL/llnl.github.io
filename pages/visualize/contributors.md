@@ -26,8 +26,8 @@ permalink: /visualize/contributors/
 <script type="text/javascript" src="../../js/visualize/helpers.js"></script>
 
 <!-- Load drawing JS -->
-<script type="text/javascript" src="../../js/visualize/pie_members.js"></script>
-<script type="text/javascript" src="../../js/visualize/pie_repos.js"></script>
+<script type="text/javascript" src="../../js/visualize/contributors/pie_members.js"></script>
+<script type="text/javascript" src="../../js/visualize/contributors/pie_repos.js"></script>
 <script type="text/javascript" src="../../js/visualize/contributors/pack_hierarchy.js"></script>
 
 <script>
