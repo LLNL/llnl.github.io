@@ -8,7 +8,7 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
     // Draws graph
     function drawGraph(data, areaID, adjacentAreaID) {
-        const graphHeader = 'LLNL Dependencies';
+        const graphHeader = '';
 
         const margin = { top: stdMargin.top, right: stdMargin.right / 2, bottom: stdMargin.bottom / 2, left: stdMargin.left / 2 },
             width = stdTotalWidth * 2 + 80 - margin.left - margin.right,

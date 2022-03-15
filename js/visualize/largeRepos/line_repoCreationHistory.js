@@ -10,7 +10,7 @@ function draw_line_repoCreationHistory(areaID, repoNamesWOwner) {
 
     // Draw graph from data
     function drawGraph(data, data2, dataR, dataR2, areaID) {
-        var graphHeader = `Repo Creation History, Top ${cutOffSize} Repos by Stars`;
+        var graphHeader = `Creation History, Top ${cutOffSize} Repos by Stars`;
         var seriesData = [{ label: 'First Commit' }, { label: 'Added to GitHub' }];
         var showSingle = dataR2.length ? true : false;
 
