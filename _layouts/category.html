@@ -8,25 +8,25 @@
         {% include header.html %}
 
         <div>
-            <div class="banner"/>
+            <div class="banner"></div>
         </div>
 
         {% raw %}
 
         <div class="hamburger-container">
             <span ng-click="showHamburger = !showHamburger" class="fa fa-bars fa-2x"></span>
-            <div class="hamburger-nav" ng-if="showHamburger" >
-                <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }">
-                    <a class="tab"> {{category.displayTitle}} </a>
+            <div class="hamburger-nav" ng-if="showHamburger">
+                <div ng-repeat="category in catData" ng-class="{'selected-tab': $index == selectedIndex }">
+                    <a class="tab" href="../explore#{{ category.hash }}">{{ category.title }}</a>
                 </div>
             </div>
         </div>
         <div class="wrapper">
             <div class="nav-container">
                 <nav class="stickynav">
-                    <div ng-repeat="category in catData" ng-click="categoryHref(category.title)" ng-class="{'selected-tab': $index == selectedIndex }" >
-                        <img ng-src="{{category.icon.path}}" style="width: 40px; height: 40px; margin-right: 10px;">
-                        <a class="tab">{{category.displayTitle}}</a>
+                    <div ng-repeat="category in catData" ng-class="{'selected-tab': $index == selectedIndex }">
+                        <img ng-src="{{ category.icon.path }}" style="width: 40px; height: 40px; margin-right: 10px;" alt="{{ category.icon.alt }}" title="{{ category.icon.alt }}" />
+                        <a class="tab" href="../explore#{{ category.hash }}">{{ category.title }}</a>
                     </div>
                 </nav>
             </div>
@@ -37,33 +37,34 @@
 
                         <div ng-if="category.title === currentLocation">
                             <div class="title-container page-header">
-                                <img ng-src="{{category.icon.path}}" alt="{{category.icon.alt}}">
-                                <div class="title-description">
-                                    <h3>{{category.title}}</h3>
-                                    <p>{{category.description}} </p>
+                                <img ng-src="{{ category.icon.path }}" style="width: 125px; height: 125px" alt="{{ category.icon.alt }}" title="{{ category.icon.alt }}" />
+                                <div class="title-description" style="width: 700px">
+                                    <h2>{{ category.title }}</h2>
+                                    <p>{{ category.description.short }}{{ category.description.long }}</p>
                                 </div>
                             </div>
                             <div style="display: flex; display: -webkit-flex; justify-content: center;">
-                            <input ng-model="searchText" type="text" style="width: 25%; margin-bottom: 10px; margin-right: 10px;" autofocus placeholder="Filter Repositories">
-                            <p> Sort By:
-                                <select ng-model="orderProp">
-                                    <option value="-stars"> Stars </option>
-                                    <option value="-forks"> Forks </option>
-                                    <option value="name"> Name </option>
-                                    <option value="owner">Org </option>
-                                </select>
-                            </p>
+                                <input ng-model="searchText" type="text" style="width: 25%; margin-bottom: 10px; margin-right: 10px;" autofocus placeholder="Filter Repositories" />
+                                <p>
+                                    Sort By:
+                                    <select ng-model="orderProp">
+                                        <option value="-stars"> Stars </option>
+                                        <option value="-forks"> Forks </option>
+                                        <option value="name"> Name </option>
+                                        <option value="owner"> Org </option>
+                                    </select>
+                                </p>
                             </div>
 
                             <section class="flex-container-category" id="repositories">
-                                <div class="flex-item {{repo.name}} {{repo.owner.login}} {{repo.primaryLanguage.name}}" ng-repeat="repo in topicRepos[catData.indexOf(category)] | filter: searchText | orderBy: orderProp" ng-click="repoHref(repo.nameWithOwner)">
+                                <div class="flex-item {{ repo.name }} {{ repo.owner.login }} {{ repo.primaryLanguage.name }}" ng-repeat="repo in topicRepos[catData.indexOf(category)] | filter: searchText | orderBy: orderProp" ng-click="repoHref(repo.nameWithOwner)">
                                     <h4 class="text-center">
                                         <span alt="Name" title="Name"> {{ repo.name }} </span>
                                         <small><span alt="Owner" title="Owner"> {{ repo.owner }} </span></small>
-                                        <small><span alt="Primary Language" title="Primary Language"> {{ repo.language }} </span></small>
+                                        <small><span alt="Primary Language" title="Primary Language"> {{ repo.language || '-' }} </span></small>
                                     </h4>
 
-                                    <p class="text-justify"> {{ repo.description }} </p>
+                                    <p>{{ repo.description }}</p>
 
                                     <p class="stats text-center">
                                         <a href="{{ repo.gitUrl }}" alt="GitHub Page" title="GitHub Page">
@@ -75,7 +76,7 @@
                                         </a>
 
                                         <a href="{{ repo.gitUrl }}/network" alt="Forks" title="Forks">
-                                            <span class="fa fa-code-fork"></span> {{ repo.forks}}
+                                            <span class="fa fa-code-fork"></span> {{ repo.forks }}
                                         </a>
 
                                         <a ng-if="repo.homepageUrl" href="{{ repo.homepageUrl }}" alt="Project Website" title="Project Website">
@@ -84,12 +85,10 @@
                                     </p>
                                 </div>
                             </section>
-
                         </div>
+
                     </div>
                 </div>
-
-
             </div>
         </div>
 
@@ -98,12 +97,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="/js/focused-category-info.js"></script>
 
-
         {% include footer.html %}
 
         {% include scripts.html %}
 
         {% include piwik.html %}
-
     </body>
 </html>

@@ -2,16 +2,17 @@ name: "LLNL Software Portal"
 author: "LLNL Open Source <open-source@llnl.gov>"
 title: LLNL Software Portal
 description: "Lawrence Livermore National Laboratory Software Portal"
-remote_theme: LLNL/Jekyll-LLNL-Theme
+remote_theme: LLNL/Jekyll-LLNL-Theme@main
 
 url: "https://software.llnl.gov"
+repo_url: "https://github.com/LLNL/llnl.github.io"
 
 # LLNL Piwik Analytics https://analytics.llnl.gov
 piwik_id: 250
 
-# Google Analytics ID
-google_analytics:
-  tracking_id: UA-75179431-1
+# Google Analytics ID -- Commented out in favor of new tag instructions
+# google_analytics:
+#   tracking_id: UA-75179431-1
 
 # Twitter username (used by jekyll-seo-tag)
 twitter:
@@ -46,3 +47,5 @@ exclude:
     - Gemfile.lock
     - README.md
     - Makefile
+    - build
+    - visualize/README.md

@@ -1,5 +1,6 @@
 ---
 title: "Caliper Library Highlighted at 31st VI-HPS Tuning Workshop"
+categories: event-report
 ---
 
 The [Virtual Institute – High Productivity Supercomputing (VI-HPS)](https://www.vi-hps.org/) conducts a long-running series of tuning workshops, where participants can learn about programming tools developed by the institute partners. Morning sessions consist of tool presentations and hands-on exercises. In the afternoon, users can apply the tools to their own codes with the help of the instructors. Whilst most of the workshops take place in Europe, the 31st tuning workshop was held at the University of Tennessee, Knoxville (UTK), on April 9–12, 2019.

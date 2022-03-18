@@ -1,0 +1,65 @@
+query ($ownName: String!, $repoName: String!) {
+  repository(owner: $ownName, name: $repoName) {
+    nameWithOwner
+    name
+    owner {
+      login
+      avatarUrl
+    }
+    url
+    homepageUrl
+    description
+    createdAt
+    defaultBranchRef {
+      name
+    }
+    licenseInfo {
+      name
+      nickname
+      spdxId
+      url
+    }
+    stargazers {
+      totalCount
+    }
+    mentionableUsers {
+      totalCount
+    }
+    forks {
+      totalCount
+    }
+    primaryLanguage {
+      name
+    }
+    languages {
+      totalCount
+    }
+    repositoryTopics {
+      totalCount
+    }
+    parent {
+      nameWithOwner
+      name
+      owner {
+        login
+        avatarUrl
+      }
+    }
+    pullRequests_Open: pullRequests(states: OPEN) {
+      totalCount
+    }
+    pullRequests_Closed: pullRequests(states: CLOSED) {
+      totalCount
+    }
+    pullRequests_Merged: pullRequests(states: MERGED) {
+      totalCount
+    }
+    issues_Open: issues(states: OPEN) {
+      totalCount
+    }
+    issues_Closed: issues(states: CLOSED) {
+      totalCount
+    }
+  }
+}
+# {"ownName": "LLNL", "repoName": "llnl.github.io"}

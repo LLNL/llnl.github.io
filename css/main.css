@@ -1,15 +1,20 @@
-.ignore-click {
-  pointer-events: none;
-}
+/* General (ideal) color palette */
 
-/* FlexBox configuration */
+/* blue links #005dab
+regular teal hover #009bab
+light teal accent #81D0D3
+text gray #555555
+light gray background #ddd */
+
+/* FlexBox configuration (category browse) */
 
 .flex-container {
-  align-items: stretch;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+    align-items: stretch;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .flex-container-category {
@@ -23,95 +28,95 @@
     margin-left: auto;
 }
 
-@media(max-width:767px) {
-  .flex-item {
-    width: 100%;
-  }
+@media (max-width: 767px) {
+    .flex-item {
+        width: 100%;
+    }
 }
 
-@media(min-width:768px) {
-  .flex-item {
-    width: 45%;
-  }
+@media (min-width: 768px) {
+    .flex-item {
+        width: 45%;
+    }
 }
 
-@media(min-width:992px) {
-  .flex-item {
-    width: 30%;
-  }
+@media (min-width: 992px) {
+    .flex-item {
+        width: 30%;
+    }
 }
 
 .flex-item {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px;
 }
 
 .flex-item:hover {
-  border: 1px solid steelblue;
-  box-shadow: 3px 3px #ddd;
-  cursor: pointer;
+    border: 1px #81D0D3;
+    box-shadow: 3px 3px #ddd;
+    cursor: pointer;
 }
 
 .flex-item > h4 {
-  background-color: #f5f5f5;
-  margin: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    background-color: #f5f5f5;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .flex-item:hover > h4 {
-  background-color: #d8ecf3;
+    background-color: #d8ecf3;
 }
 
 .flex-item > p {
-  margin: 10px 0;
-  padding-left: 15px;
-  padding-right: 15px;
+    margin: 10px 0;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .flex-item > p:last-child {
-  align-self: flex-end;
+    align-self: flex-end;
 }
 
 .flex-item a {
-  /* Don't decorate links in repo items */
-  color: inherit;
-  text-decoration: none;
- }
+    /* Don't decorate links in repo items */
+    color: inherit;
+    text-decoration: none;
+}
 
- .flex-item h4 > small {
-  border-left: 1px solid #777;
-  padding-left: 5px;
- }
+.flex-item h4 > small {
+    border-left: 1px solid #777;
+    padding-left: 5px;
+}
 
 /* --- */
 
 #repositories p.stats > a {
-  margin-left: 15px;
+    margin-left: 15px;
 }
 
 #repositories p.stats > a:last-child {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 /* links for each repo in a category */
-#categories p.links{
+#categories p.links {
     text-align: right;
     align-items: center;
     line-height: 2.5;
 }
 
 /* Org logo */
-#categories p.links > span:first-child{
+#categories p.links > span:first-child {
     margin-left: 15%;
     margin-right: 10px;
-    float:left;
+    float: left;
 }
 
 /* repo name */
 #categories p.links > span:nth-child(2) {
-    float:left;
+    float: left;
     font-weight: bold;
     font-size: 1.6rem;
 }
@@ -122,50 +127,233 @@
 }
 
 /* repo info */
-#categories p.links > span:last-child{
+#categories p.links > span:last-child {
     margin-right: 15%;
 }
 
-/* --- */
-.navbar-header a.navbar-brand {
-  color: #005dab;
-  font-weight: bold;
+/* GitHub fork ribbon */
+/*   based on https://codepo8.github.io/css-fork-on-github-ribbon/ */
+#forkongithub {
+    /* hide if window is smaller than threshold */
+    display: none;
 }
-.navbar {
-    margin-bottom: 0;
+@media screen and (min-width: 800px) {
+    #forkongithub {
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 138px;
+        overflow: hidden;
+        height: 138px;
+        z-index: 9999;
+    }
+    #forkongithub a {
+        pointer-events: all;
+        background: #ddd;
+        color: #005dab;
+        text-decoration: none;
+        font-family: arial, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        line-height: 1rem;
+        width: 200px;
+        position: absolute;
+        top: 40px;
+        right: -45px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+    #forkongithub a:hover {
+        background: #ddd;
+        color: #009bab;
+    }
+    #forkongithub a::before,
+    #forkongithub a::after {
+        content: '';
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    #forkongithub a::after {
+        bottom: 1px;
+        top: auto;
+    }
 }
 
-/* Dropdown */
+/* Links in text on non-category pages */
+
+.static-text a {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.static-text a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Centered intro paragraphs on home & RADIUSS catalog */
+
+.title-para {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.title-para a {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title-para a:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* News post date and tag */
+
+.static-text h4 > small {
+    border-left: 1px;
+    color: #555555;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Other text elements */
+
+details {
+	padding-bottom: 20px;
+	color: #555555;
+    text-decoration: none;
+}
+
+blockquote {
+    font-size: 14px;
+}
+
+/* Buttons */
+
+.btn {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn:disabled {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+}
+
+/* Site title & home link in navigation bar */
+
+.navbar-header a.navbar-brand {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-header a.navbar-brand:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* The rest of the navigation bar */
+/* Top-level link color set by OneLab CSS, not here */
+
+.navbar {
+    margin-bottom: 0;
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar:hover {
+    margin-bottom: 0;
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-normal {
+    color: #005dab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-normal:hover {
+    color: #009bab;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dropdown menu */
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f8f8f8;
+    color: #005dab;
     min-width: 160px;
-    align: center;
     padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
-    .dropdown-content { visibility: hidden; }
+    .dropdown-content {
+        color: #005dab;
+        visibility: hidden;
+        text-decoration: none;
+    }
 }
 
-.dropdown:hover .dropdown-content { display: block; }
+.dropdown:hover .dropdown-content {
+    color: #009bab;
+    display: block;
+    font-weight: bold;
+}
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .flex-category {
         width: 100%;
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .flex-category {
         width: 50%;
     }
 }
 
-
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
     .flex-category {
         width: 33%;
     }
@@ -175,17 +363,16 @@
     margin-bottom: 30px;
     transition: 0.3s;
     align-items: center;
-   // background-color: red;
 }
 
 .dynamic:hover {
-    border: 1px solid steelblue;
+    border: 1px solid #81D0D3;
     box-shadow: 3px 3px #ddd;
     cursor: pointer;
 }
 
 .flex-category > img {
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     display: block;
     height: 150px;
@@ -193,12 +380,10 @@
 }
 
 .flex-category > h4 {
-   // margin-left: 18px;
-   margin-top: 15px;
+    margin-top: 15px;
     padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
-//    background-color: green;
 }
 
 .flex-category > p {
@@ -213,10 +398,16 @@
     text-decoration: none;
 }
 
+.flex-category a:hover {
+    /* Don't decorate links in repo items */
+    color: #81D0D3;
+    text-decoration: none;
+}
+
 .more {
-    float:right;
-    font-weight:bold;
-    margin-right:60px;
+    float: right;
+    font-weight: bold;
+    margin-right: 60px;
     margin-bottom: 20px;
     transition: 0.3s;
     font-size: 1.3rem;
@@ -232,24 +423,20 @@
     cursor: pointer;
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
     .banner {
-        background-image:
-            url('/assets/images/banner-top.svg'),
-            url('/assets/images/OS-logo-white.png');
+        background-image: url('/assets/images/banner-top.svg'), url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
-        background-position:  center, 50% 90%;
+        background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
-        background-size:  auto, 80px 80px;
+        background-size: auto, 80px 80px;
         height: 200px;
     }
 }
 
-@media(min-width:769px) {
+@media (min-width: 769px) {
     .banner {
-        background-image:
-            url('/assets/images/banner-top.svg'),
-            url('/assets/images/OS-logo-white.png');
+        background-image: url('/assets/images/banner-top.svg'), url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
         background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
@@ -258,25 +445,20 @@
     }
 }
 
-/* @media(min-width:768px), and (max-width: 1199px) {
+/* @media (min-width: 768px) and (max-width: 1199px) {
     .banner {
-        background-image:
-            url('/assets/images/banner-top.svg'),
-            url('/assets/images/OS-logo-white.png');
+        background-image: url('/assets/images/banner-top.svg'), url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
-        background-position:  center, 50% 90%;
+        background-position: center, 50% 90%;
         background-repeat: no-repeat, no-repeat;
-        background-size:  auto, 80px 80px;
+        background-size: auto, 80px 80px;
         height: 200px;
     }
 } */
 
-@media(min-width:1200px) {
+@media (min-width: 1200px) {
     .banner {
-        background-image:
-            url('/assets/images/OS-icon-color.png'),
-            url('/assets/images/banner-top.svg'),
-            url('/assets/images/OS-logo-white.png');
+        background-image: url('/assets/images/OS-icon-color.png'), url('/assets/images/banner-top.svg'), url('/assets/images/OS-logo-white.png');
         background-color: #3d444a;
         background-position: 30% 50%, 70% 50%, 67% 90%;
         background-position: -webkit-calc(50% - 310px) 50%, -webkit-calc(50% + 310px) 50%, -webkit-calc(50% + 310px) 90%;
@@ -286,7 +468,6 @@
         height: 300px;
     }
 }
-
 
 .wrapper {
     display: flex;
@@ -299,19 +480,19 @@
 }
 
 .page {
-    justify-content:center;
+    justify-content: center;
     height: 100%;
 }
 
-@media(max-width:1199px){
+@media (max-width: 1199px) {
     .nav-container {
         display: none;
     }
 }
-@media(min-width:1200px){
+@media (min-width: 1200px) {
     .nav-container {
         min-width: 300px;
-        width:400px;
+        width: 400px;
         height: 100%;
         position: -webkit-sticky;
         position: sticky;
@@ -326,36 +507,38 @@
     }
 }
 
-@media(max-width:1199px){
+@media (max-width: 1199px) {
     .hamburger-container {
         width: 100%;
         background-color: #f8f8f8;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        z-index:1;
+        z-index: 1;
     }
 }
-@media(min-width:1200px){
+@media (min-width: 1200px) {
     .hamburger-container {
         display: none;
     }
 }
 
+/* Stickynav & tab = left-hand menu of catalog categories */
+
 .stickynav div {
     padding-left: 5px;
-    padding-right:15px;
+    padding-right: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height:50px;
+    line-height: 50px;
     font-size: 1.8rem;
     display: block;
     transition: 0.3s;
     border-top: solid 1px lightgrey;
 }
 .stickynav div:first-child {
-  border-top: none;
+    border-top: none;
 }
 
 .stickynav a {
@@ -363,29 +546,42 @@
     transition: 0.3s;
 }
 
-
 .stickynav div:hover {
     background-color: #e6e6e6;
     padding-left: 10px;
 }
 
-.stickynav div:hover > a{
-    color: black;
+.stickynav div:hover > a {
+    color: #009bab;
 }
 
-.hamburger-nav div{
+.tab {
+    color: black;
+}
+.selected-tab {
+    background-color: #81D0D3;
+    color: white;
+}
+
+.selected-tab > a {
+    color: white;
+}
+
+/* Hamburger nav for catalog categories at various widths */
+
+.hamburger-nav div {
     width: 100%;
     padding-left: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height:35px;
+    line-height: 35px;
     font-size: 1.5rem;
     display: block;
     transition: 0.3s;
     border: solid 1px lightgrey;
     border-top: none;
-  //  background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
 }
 
 .hamburger-nav a {
@@ -393,25 +589,13 @@
     transition: 0.3s;
 }
 
-.hamburger-nav div:hover > a{
-    color: black;
+.hamburger-nav div:hover > a {
+    color: #009bab;
 }
 
 .hamburger-nav div:hover {
     background-color: lightgrey;
     padding-left: 18px;
-}
-
-.tab{
-    color: black;
-}
-.selected-tab {
-    background-color: steelblue;
-    color: white;
-}
-
-.selected-tab > a{
-    color: white;
 }
 
 .hamburger-container span {
@@ -423,15 +607,15 @@
     position: absolute;
     background-color: #f8f8f8;
     border-bottom: solid 1px lightgrey;
-    width: 100%
+    width: 100%;
 }
 
 .hamburger-container span:hover {
     cursor: pointer;
-    color: black;
+    color: #009bab;
 }
 
-.hamburger-nav{
+.hamburger-nav {
     padding-top: 40px;
 }
 
@@ -467,49 +651,32 @@
     object-fit: contain;
 }
 
-@media(max-width:767px) {
-    .title-description{
+@media (max-width: 767px) {
+    .title-description {
         text-align: center;
     }
     .title-description h3 {
         font-size: 1.3em;
     }
     .page-title {
-      font-size: 16px;
+        font-size: 16px;
     }
-
 }
 
-@media(min-width:768px) {
-    .text-description{
+@media (min-width: 768px) {
+    .text-description {
         text-align: left;
     }
 
     .page-title {
-      font-size: 20px;
+        font-size: 20px;
     }
-
-
+}
 
 .twitterFeed {
     float: right;
     margin-left: 2em;
     margin-bottom: 2em;
-    //height: 100%;
-    // margin-top: 30px;
-}
-
-.twitter-title{
-    font-weight: bold;
-    text-align: center;
-}
-
-.tweet-border{
-    border-left: solid lightgrey 1px;
-    border-bottom: solid lightgrey 1px;
-    padding-left:30px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
 }
 
 .twitterFeed-mobile {
@@ -518,26 +685,40 @@
     margin-right: auto;
     margin-top: 30px;
 }
-@media (max-width: 767px){
+
+.twitter-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.tweet-border {
+    border-left: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
     .twitterFeed {
         display: none;
     }
 }
 
-@media (min-width: 768px){
-    .twitterFeed-mobile{
+@media (min-width: 768px) {
+    .twitterFeed-mobile {
         display: none;
     }
 }
 
-@media (min-width:768px), and (max-width: 988px){
-    .twitterFeed{
+@media (min-width: 768px) and (max-width: 988px) {
+    .twitterFeed {
         width: 280px;
     }
 }
 
-@media (min-width: 989px){
-    .twitterFeed{
+@media (min-width: 989px) {
+    .twitterFeed {
         width: 330px;
     }
 }

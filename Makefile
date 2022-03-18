@@ -18,3 +18,4 @@ deploy: clean build
 
 test:
 	flake8
+	black --check .
