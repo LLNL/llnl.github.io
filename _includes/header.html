@@ -2,14 +2,14 @@
 
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteNavbar" aria-label="toggle">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
 
-      <p id="llnl-menu-tab" class="pull-left"><a href="https://www.llnl.gov" title="LLNL"></a></p>
-      <a class="navbar-brand" href="/" title="LLNL Software Portal"><b>{{ site.name }}</b></a>
+      <p id="llnl-menu-tab" class="pull-left"><a href="https://www.llnl.gov" aria-label="LLNL"></a></p>
+      <a class="navbar-brand" href="/" aria-label="LLNL Software Portal"><b>{{ site.name }}</b></a>
     </div>
 
     <div id="siteNavbar" class="collapse navbar-collapse">
@@ -47,12 +47,12 @@
             <p><a class="navbar-normal" href="/news/archive/">Archive</a></p>
           </div>
         </li>
-        <li id="github-button"><a href="https://github.com/llnl"><span class="fa fa-github fa-lg" title="GitHub icon"></span></a></li>
-        <li id="twitter-button"><a href="https://twitter.com/LLNL_OpenSource"><span class="fa fa-twitter fa-lg" title="Twitter icon"></span></a></li>
+        <li id="github-button"><a href="https://github.com/llnl"><span class="fa fa-github fa-lg" aria-label="GitHub icon"></span></a></li>
+        <li id="twitter-button"><a href="https://twitter.com/LLNL_OpenSource"><span class="fa fa-twitter fa-lg" aria-label="Twitter icon"></span></a></li>
       </ul>
     </div>
 
   </div>
 </nav>
 
-<span id="forkongithub"><a alt="Fork me on GitHub" title="Fork me on GitHub" href="{{site.repo_url}}/tree/main/{{page.path}}" target="_blank">Fork me on GitHub</a></span>
+<span id="forkongithub"><a alt="Fork me on GitHub" aria-label="Fork me on GitHub" href="{{site.repo_url}}/tree/main/{{page.path}}" target="_blank">Fork me on GitHub</a></span>
