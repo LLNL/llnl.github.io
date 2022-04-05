@@ -1,5 +1,5 @@
 ---
-title: LLNL Software Licensing
+title: Software Licenses Guide
 layout: info
 permalink: /about/licenses/
 ---

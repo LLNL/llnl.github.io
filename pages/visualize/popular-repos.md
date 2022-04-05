@@ -1,5 +1,5 @@
 ---
-title: Visualize
+title: Popular Repos
 layout: default
 permalink: /visualize/popular-repos/
 ---

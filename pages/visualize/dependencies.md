@@ -1,5 +1,5 @@
 ---
-title: Visualize
+title: Dependencies
 layout: default
 permalink: /visualize/dependencies/
 ---
