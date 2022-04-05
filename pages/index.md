@@ -18,7 +18,7 @@ permalink: /
             <p class="links" ng-show="topicRepos[catData.indexOf(category)].indexOf(repo) < 4">
                 <span>
                     <a href="https://github.com/{{ repo.ownerLogin }}" alt="View Owner on GitHub" title="Owner: {{ repo.ownerLogin }}">
-                        <img class="orgAvatar" ng-src="{{ repo.ownerAvatar }}" />
+                        <img alt="organization logo" class="orgAvatar" ng-src="{{ repo.ownerAvatar }}" />
                     </a>
                 </span>
 
