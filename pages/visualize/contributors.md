@@ -1,5 +1,5 @@
 ---
-title: Visualize
+title: Contributors
 layout: default
 permalink: /visualize/contributors/
 ---
