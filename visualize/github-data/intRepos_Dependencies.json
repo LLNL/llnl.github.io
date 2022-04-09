@@ -8416,6 +8416,19 @@
                             "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions-rs/tarpaulin",
                                     "repository": {
                                         "nameWithOwner": "actions-rs/tarpaulin"
@@ -14809,26 +14822,6 @@
                                     "packageName": "webpack-cli",
                                     "repository": {
                                         "nameWithOwner": "webpack/webpack-cli"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 }
                             ]
@@ -29064,26 +29057,6 @@
                                 }
                             ]
                         }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "ashutoshvarma/action-cmake-build",
-                                    "repository": {
-                                        "nameWithOwner": "ashutoshvarma/action-cmake-build"
-                                    }
-                                }
-                            ]
-                        }
                     }
                 ]
             },
@@ -39597,54 +39570,6 @@
                                     "packageName": "sphinx-rtd-theme",
                                     "repository": {
                                         "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/create-release",
-                                    "repository": {
-                                        "nameWithOwner": "actions/create-release"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-release-asset",
-                                    "repository": {
-                                        "nameWithOwner": "actions/upload-release-asset"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "codecov/codecov-action",
-                                    "repository": {
-                                        "nameWithOwner": "codecov/codecov-action"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "docker/setup-buildx-action",
-                                    "repository": {
-                                        "nameWithOwner": "docker/setup-buildx-action"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "flux-framework/pr-validator",
-                                    "repository": {
-                                        "nameWithOwner": "flux-framework/pr-validator"
                                     }
                                 }
                             ]
