@@ -15962,19 +15962,6 @@
                                 }
                             ]
                         }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
                     }
                 ]
             },
@@ -16472,47 +16459,6 @@
                                 }
                             ]
                         }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/cache",
-                                    "repository": {
-                                        "nameWithOwner": "actions/cache"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "pre-commit/action",
-                                    "repository": {
-                                        "nameWithOwner": "pre-commit/action"
-                                    }
-                                }
-                            ]
-                        }
                     }
                 ]
             },
@@ -16531,6 +16477,18 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-rtd-theme",
@@ -16589,6 +16547,13 @@
                                     "packageName": "imagesize",
                                     "repository": {
                                         "nameWithOwner": "shibukawa/imagesize_py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "importlib-metadata",
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_metadata"
                                     }
                                 },
                                 {
@@ -16708,6 +16673,13 @@
                                     "packageName": "urllib3",
                                     "repository": {
                                         "nameWithOwner": "pormes/ninja_gram"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "zipp",
+                                    "repository": {
+                                        "nameWithOwner": "jaraco/zipp"
                                     }
                                 }
                             ]
@@ -17251,6 +17223,19 @@
                     {
                         "color": "#b07219",
                         "name": "Java"
+                    }
+                ]
+            }
+        },
+        "LLNL/BinFPE": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -21811,6 +21796,19 @@
             }
         },
         "LLNL/LOKI": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/LOPE": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -33822,6 +33820,27 @@
             }
         },
         "LLNL/saamge": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/saltatlas": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
+        "LLNL/saltatlas_h5_io": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
