@@ -2,7 +2,7 @@
 
 Author: Ian Lee <lee1001@llnl.gov>
 
-Welcome to the Lawrence Livermore National Laboratory software portal! The purpose of this software portal is to serve as a hub for open source software that is produced by Lawrence Livermore National Laboratory.
+Welcome to the Lawrence Livermore National Laboratory software portal! The purpose of this software portal is to serve as a hub for open source software produced by LLNL.
 
 LLNL produces software on a daily basis. Some of this software is used only internally, other components are licensed for use by external partners and collaborators, still other software is released, or even actively developed, in the open on software hosting platforms such as GitHub.com, Bitbucket.org, Sourceforge.net, and others.
 
@@ -31,6 +31,8 @@ bundle exec jekyll serve
 ```
 
 Finally, open <http://localhost:4000> in a web browser.
+
+*Note:* The [RADIUSS website](https://software.llnl.gov/radiuss/) and [product catalog](https://software.llnl.gov/radiuss/projects/) "live" on this site but are managed by a [separate repo](https://github.com/LLNL/radiuss).
 
 ### Checking Spelling
 
@@ -61,10 +63,10 @@ Start with the [FAQ](https://software.llnl.gov/about/faq/). Please see the follo
 
 - [Project logos](https://github.com/LLNL/llnl.github.io/blob/main/assets/images/logos/README.md)
 - ["Explore" categories](https://github.com/LLNL/llnl.github.io/blob/main/pages/explore/README.md)
-- [RADIUSS tags](https://github.com/LLNL/llnl.github.io/blob/main/radiuss/README.md)
 - [News posts](https://github.com/LLNL/llnl.github.io/blob/main/news/README.md)
 - Data [visualizations](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/README.md) and [scripts](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/scripts/README.md)
 - [Data fetching](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md)
+- [RADIUSS site](https://github.com/LLNL/radiuss/blob/main/README.md)
 
 ## Contact
 
