@@ -123,6 +123,8 @@ Make sure your repository is included on this website’s home page and [full ca
 
 * Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json), with your organization and/or repository names.
 
+* If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
+
 * If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/main/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
 
 ### How do I let people know about my new repo?
@@ -134,8 +136,6 @@ Now that your project is on GitHub, make sure users and contributors can find it
     * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/main/pages/explore/README.md) of recommended, standardized topics.
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
-
-    * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
 2. Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can tweet on your behalf.
 
