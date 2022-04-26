@@ -135,7 +135,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
-    * If your repo is part of the [RADIUSS project](/explore/#/RADIUSS), be sure to add the `radiuss` topic.
+    * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
 2. Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can tweet on your behalf.
 
@@ -151,11 +151,13 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 
 ### What should I do if my repo is no longer actively developed/maintained?
 
-1. Remove your repo’s topic tags (e.g., `math-physics`), which connect it to this website’s browsable categories. Also remove the `radiuss` tag, if applicable.
+1. Remove the specific topic tags (e.g., `math-physics`) that connect it to this website’s browsable categories.
 
-2. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo’s name.
+2. Remove the repo from the RADIUSS [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml), if applicable.
 
-3. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
+3. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo’s name.
+
+4. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
 
 ### My repo has grown. How do I move it out of the LLNL organization?
 
@@ -167,7 +169,9 @@ Once the repository has moved to the new organization:
 
 1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo’s name. This allows for the software catalog to continue including the project even after it moves.
 
-2. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories, including the `radiuss` tag, if applicable.
+2. Retain topic tags (e.g., `math-physics`) to connect it to this website’s browsable categories.
+
+3. Update the org in the RADIUSS [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml), if applicable.
 
 ### How do I contribute to an LLNL repo?
 
