@@ -23,7 +23,7 @@ For each category, this file contains its title, [icon][icon dir] filepath, and 
 
 In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `arbitrary-lagrangian-eulerian` (ALE), `artificial-intelligence`, `benchmark`, `checkpoint`, `chemistry`, `cmake`, `compiler`, `cpp` (C++), `data-analysis`, `deep-learning`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `library`, `machine-learning`, `materials`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `natural-language-processing`, `neural-network`, `openmp`, `parallel-computing`, `python`, `shell`, `simulation`, `solver`, `templates`, `testing`, `uncertainty-quantification`.
 
-Repos that appear in the [RADIUSS catalog](/explore/#/RADIUSS) must also be tagged with `radiuss`.
+Repos that appear on the [RADIUSS site](https://software.llnl.gov/radiuss/projects/) are listed in that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
 To add a new category to the catalog:
 
