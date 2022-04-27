@@ -37,6 +37,7 @@ April 2022: <https://software.llnl.gov/radiuss/> launched via <https://github.co
     };
 ```
 
+* Update link/text on home page
 * Update links/text on Policies & Guidelines page
 * Update links/text on FAQ page
 * Update relevant READMEs
