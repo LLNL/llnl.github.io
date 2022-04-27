@@ -26,7 +26,7 @@ software developed over many years at [Lawrence
 Livermore National Laboratory (LLNL)](https://www.llnl.gov) for use
 outside of their primary funding organization and within the broader
 scientific research community. With [these libraries and
-tools](/explore/#/RADIUSS) we
+tools](https://software.llnl.gov/radiuss/) we
 cover a wide range of features a team would need to develop a modern
 scientific simulation code, particularly when targeting High Performance
 Computing (HPC). Each of these products are used in applications that
