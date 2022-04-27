@@ -28,14 +28,14 @@ app.service('Category', function() {
     };
 
     //check if repo is tagged as "radiuss" as well as one of the categories
-    this.containsRadiussTopics = function(catTopics, repoTopics) {
-        for (var i = 0; i < catTopics.length; i++) {
-            if ($.inArray(catTopics[i], repoTopics) != -1 && $.inArray('radiuss', repoTopics) != -1) {
-                return true;
-            }
-        }
-        return false;
-    };
+    //this.containsRadiussTopics = function(catTopics, repoTopics) {
+    //    for (var i = 0; i < catTopics.length; i++) {
+    //        if ($.inArray(catTopics[i], repoTopics) != -1 && $.inArray('radiuss', repoTopics) != -1) {
+    //            return true;
+    //        }
+    //    }
+    //    return false;
+    //};
 
     this.uniqueLogo = function(logos, fileName, ownerAvatar) {
         var match = false;

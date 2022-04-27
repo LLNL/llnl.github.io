@@ -6,7 +6,7 @@ permalink: /
 
 {% raw %}
 
-<p class="title-para">Welcome to the LLNL software portal—a hub for our open source projects. <br />Our <a href="/explore/#/AllSoftware">full catalog</a> is updated regularly as repositories are added or modified.</p>
+<p class="title-para">Welcome to the LLNL software portal—a hub for our open source projects.<br />Our <a href="/explore/#/AllSoftware">full catalog</a> is updated regularly as repositories are added or modified.<br />(Looking for RADIUSS projects? Browse them <a href="https://software.llnl.gov/radiuss/" target="_blank">here</a>.)</p>
 
 <section class="flex-container" id="categories">
     <div ng-repeat="category in catData" ng-if="category.title!='All Software'" class="flex-category dynamic">
