@@ -16126,6 +16126,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "gym",
+                                    "repository": {
+                                        "nameWithOwner": "openai/gym"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -16179,6 +16186,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gym",
+                                    "repository": {
+                                        "nameWithOwner": "openai/gym"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "matplotlib",
@@ -27572,6 +27586,20 @@
                                 },
                                 {
                                     "packageManager": "NPM",
+                                    "packageName": "d3-flextree",
+                                    "repository": {
+                                        "nameWithOwner": "Klortho/d3-flextree"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "d3-quadtree",
+                                    "repository": {
+                                        "nameWithOwner": "d3/d3-quadtree"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
                                     "packageName": "d3v4",
                                     "repository": {
                                         "nameWithOwner": "Choniawko/d3-chart"
@@ -27668,8 +27696,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#f1e05a",
+                        "name": "JavaScript"
                     }
                 ]
             }
@@ -27709,16 +27737,35 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "hatchet",
+                                    "packageName": "caliper-reader",
                                     "repository": {
-                                        "nameWithOwner": "hatchet/hatchet"
+                                        "nameWithOwner": "LLNL/Caliper"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-hatchet",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/hatchet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-sina",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "multiprocess",
                                     "repository": {
                                         "nameWithOwner": "uqfoundation/multiprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
                                     }
                                 }
                             ]
