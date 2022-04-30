@@ -28838,13 +28838,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "appdirs",
-                                    "repository": {
-                                        "nameWithOwner": "ActiveState/appdirs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "astroid",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/astroid"
@@ -28901,9 +28894,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "chardet",
+                                    "packageName": "charset-normalizer",
                                     "repository": {
-                                        "nameWithOwner": "dcramer/chardet"
+                                        "nameWithOwner": "Ousret/charset_normalizer"
                                     }
                                 },
                                 {
@@ -29114,6 +29107,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "platformdirs",
+                                    "repository": {
+                                        "nameWithOwner": "platformdirs/platformdirs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
                                         "nameWithOwner": "s0undt3ch/pluggy"
@@ -29195,6 +29195,11 @@
                                     "repository": {
                                         "nameWithOwner": "farisachugthai/winreadline"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyreadline3",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -29328,6 +29333,11 @@
                                     "repository": {
                                         "nameWithOwner": "uiri/toml"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tomli",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -31388,6 +31398,33 @@
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
                                     }
                                 }
                             ]
