@@ -12375,6 +12375,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "gmlc-tdc-sphinxcontrib-redoc",
+                                    "repository": {
+                                        "nameWithOwner": "GMLC-TDC/redoc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "ipykernel",
                                     "repository": null
                                 },
@@ -12486,6 +12493,40 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
                                 {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
