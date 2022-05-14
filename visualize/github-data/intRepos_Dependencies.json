@@ -4762,7 +4762,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "traitlets",
                                     "repository": {
-                                        "nameWithOwner": "ipython/traitlets"
+                                        "nameWithOwner": "cournape/traitlets"
                                     }
                                 },
                                 {
@@ -14374,6 +14374,20 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/upload-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-artifact"
@@ -15376,10 +15390,34 @@
         },
         "GMLC-TDC/matHELICS": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "clang",
+                                    "repository": {
+                                        "nameWithOwner": "ethanhs/clang"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pkg-resources",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "GMLC-TDC/netif": {
@@ -38906,6 +38944,26 @@
                             "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/cache",
                                     "repository": {
                                         "nameWithOwner": "actions/cache"
@@ -39643,6 +39701,101 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "spack/cache": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-feed",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-feed"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-paginate",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-paginate"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-sitemap",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-sitemap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown",
+                                    "repository": {
+                                        "nameWithOwner": "ashmaroli/calmdown"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown-parser-gfm",
+                                    "repository": {
+                                        "nameWithOwner": "kramdown/parser-gfm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyaml",
+                                    "repository": {
+                                        "nameWithOwner": "mk-fg/pretty-yaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#563d7c",
+                        "name": "CSS"
                     }
                 ]
             }
