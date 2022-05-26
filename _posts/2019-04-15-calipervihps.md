@@ -10,6 +10,6 @@ As part of the workshop, LLNL computer scientist David Boehme conducted a 75-min
 The workshop also provided an opportunity to discuss common software infrastructure as well as integration and interoperability possibilities with other performance analysis tools. For example, the [PAPI](http://icl.utk.edu/papi/) team plans to explore using Caliper’s data collection and processing functionality. Finally, as a VI-HPS member organization, LLNL’s participation in the tuning workshop series helped showcase the Lab’s strong portfolio of open-source programming tools among the VI-HPS partners and in the HPC community at large.
 
 Learn more about Caliper:
-- [GitHub repo](https://github.com/LLNL/Caliper)
-- [Documentation](https://llnl.github.io/Caliper/)
+- [Caliper GitHub repo](https://github.com/LLNL/Caliper)
+- [Caliper documentation](https://llnl.github.io/Caliper/)
 - [Caliper: Application Introspection System](https://computing.llnl.gov/projects/caliper)
