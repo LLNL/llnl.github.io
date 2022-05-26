@@ -11593,6 +11593,13 @@
                                 },
                                 {
                                     "packageManager": "NPM",
+                                    "packageName": "@gar/promisify",
+                                    "repository": {
+                                        "nameWithOwner": "wraithgar/gar-promisify"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
                                     "packageName": "@jupyter-widgets/base",
                                     "repository": {
                                         "nameWithOwner": "jupyter-widgets/ipywidgets"
@@ -11782,58 +11789,9 @@
                                 },
                                 {
                                     "packageManager": "NPM",
-                                    "packageName": "@npmcli/arborist",
+                                    "packageName": "@npmcli/fs",
                                     "repository": {
-                                        "nameWithOwner": "npm/cli"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/ci-detect",
-                                    "repository": {
-                                        "nameWithOwner": "npm/ci-detect"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/config",
-                                    "repository": {
-                                        "nameWithOwner": "npm/config"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/disparity-colors",
-                                    "repository": {
-                                        "nameWithOwner": "npm/disparity-colors"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/git",
-                                    "repository": {
-                                        "nameWithOwner": "npm/git"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/installed-package-contents",
-                                    "repository": {
-                                        "nameWithOwner": "npm/installed-package-contents"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/map-workspaces",
-                                    "repository": {
-                                        "nameWithOwner": "npm/map-workspaces"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/metavuln-calculator",
-                                    "repository": {
-                                        "nameWithOwner": "npm/metavuln-calculator"
+                                        "nameWithOwner": "npm/fs"
                                     }
                                 },
                                 {
@@ -11841,41 +11799,6 @@
                                     "packageName": "@npmcli/move-file",
                                     "repository": {
                                         "nameWithOwner": "npm/move-file"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/name-from-folder",
-                                    "repository": {
-                                        "nameWithOwner": "npm/name-from-folder"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/node-gyp",
-                                    "repository": {
-                                        "nameWithOwner": "npm/node-gyp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/package-json",
-                                    "repository": {
-                                        "nameWithOwner": "npm/package-json"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/promise-spawn",
-                                    "repository": {
-                                        "nameWithOwner": "npm/promise-spawn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@npmcli/run-script",
-                                    "repository": {
-                                        "nameWithOwner": "npm/run-script"
                                     }
                                 },
                                 {
@@ -11890,13 +11813,6 @@
                                     "packageName": "@szmarczak/http-timer",
                                     "repository": {
                                         "nameWithOwner": "szmarczak/http-timer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@tootallnate/once",
-                                    "repository": {
-                                        "nameWithOwner": "TooTallNate/once"
                                     }
                                 },
                                 {
@@ -12193,13 +12109,6 @@
                                 },
                                 {
                                     "packageManager": "NPM",
-                                    "packageName": "abbrev",
-                                    "repository": {
-                                        "nameWithOwner": "npm/abbrev-js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
                                     "packageName": "accepts",
                                     "repository": {
                                         "nameWithOwner": "jshttp/accepts"
@@ -12256,13 +12165,6 @@
                                 },
                                 {
                                     "packageManager": "NPM",
-                                    "packageName": "agentkeepalive",
-                                    "repository": {
-                                        "nameWithOwner": "node-modules/agentkeepalive"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
                                     "packageName": "aggregate-error",
                                     "repository": {
                                         "nameWithOwner": "sindresorhus/aggregate-error"
@@ -12280,6 +12182,104 @@
                                     "packageName": "ajv-keywords",
                                     "repository": {
                                         "nameWithOwner": "ajv-validator/ajv-keywords"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-escapes",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/ansi-escapes"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-regex",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/ansi-regex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-styles",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/ansi-styles"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-styles",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/ansi-styles"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "apache-md5",
+                                    "repository": {
+                                        "nameWithOwner": "gevorg/apache-md5"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "argparse",
+                                    "repository": {
+                                        "nameWithOwner": "nodeca/argparse"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "array-equal",
+                                    "repository": {
+                                        "nameWithOwner": "component/array-equal"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "array-flatten",
+                                    "repository": {
+                                        "nameWithOwner": "blakeembrey/array-flatten"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "array-union",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/array-union"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "asn1",
+                                    "repository": {
+                                        "nameWithOwner": "TritonDataCenter/node-asn1"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "assert-plus",
+                                    "repository": {
+                                        "nameWithOwner": "TritonDataCenter/node-assert-plus"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "async",
+                                    "repository": {
+                                        "nameWithOwner": "caolan/async"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "asynckit",
+                                    "repository": {
+                                        "nameWithOwner": "alexindigo/asynckit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "at-least-node",
+                                    "repository": {
+                                        "nameWithOwner": "RyanZim/at-least-node"
                                     }
                                 }
                             ]
@@ -12321,13 +12321,6 @@
                                     "packageName": "lodash",
                                     "repository": {
                                         "nameWithOwner": "lodash/lodash"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "npm",
-                                    "repository": {
-                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
                                     }
                                 },
                                 {
