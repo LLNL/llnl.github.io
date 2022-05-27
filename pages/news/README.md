@@ -13,7 +13,7 @@ News posts appear on the [News](https://software.llnl.gov/news/), [Events](https
 
 Categories should appear alphabetically in each post's frontmatter under the title, with no punctuation between multiple categories:
 
-```
+```bash
 title: "Title of Post"
 categories: new-repo story
 ```
