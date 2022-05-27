@@ -39,14 +39,14 @@ Finally, open <http://localhost:4000> in a web browser.
 The [GitHub workflow](.github/workflows/main.yaml) currently includes an action for
 a Rust tool called [crate-ci/typos](https://github.com/marketplace/actions/typos-action)
 that will spell check all posts and pages. If you CI fails, the spelling suggestions will be shown and you can manually
-update the mistakes, or [install typos](https://github.com/crate-ci/typos#install) 
+update the mistakes, or [install typos](https://github.com/crate-ci/typos#install)
 and have all errors fixed automatically:
 
 ```bash
 typos ./pages ./_posts ./README.md --write-changes
 ```
 
-If there is a word that needs to be ignored, see [instructions](https://github.com/crate-ci/typos#false-positives) 
+If there is a word that needs to be ignored, see [instructions](https://github.com/crate-ci/typos#false-positives)
 for adding an entry to the [_typos.toml](_typos.toml) file.
 
 ### Tips
