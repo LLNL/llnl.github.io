@@ -14,6 +14,6 @@ v0.8.0 includes many performance updates, new features, and improvements, such a
 - Pyzfs and Python 3 compatibility
 
 Learn more:
-- [Release notes](https://github.com/zfsonlinux/zfs/releases/tag/zfs-0.8.0)
-- [GitHub repo](https://github.com/zfsonlinux/zfs)
-- [Documentation](https://zfsonlinux.org/)
+- [v0.8.0 release notes](https://github.com/zfsonlinux/zfs/releases/tag/zfs-0.8.0)
+- [ZFS on Linux GitHub repo](https://github.com/zfsonlinux/zfs)
+- [ZFS on Linux documentation](https://zfsonlinux.org/)

@@ -7,6 +7,6 @@ This LLNL-authored blog post describes the practice of continuous technology ref
 
 Learn more:
 - [VisIt organization on GitHub](https://github.com/visit-dav)
-- [Primary source code repo](https://github.com/visit-dav/visit)
-- [User wiki](https://www.visitusers.org/index.php?title=Main_Page)
-- [Website](https://visit-dav.github.io/visit-website/)
+- [VisIt primary source code repo](https://github.com/visit-dav/visit)
+- [VisIt user wiki](https://www.visitusers.org/index.php?title=Main_Page)
+- [VisIt website](https://wci.llnl.gov/simulation/computer-codes/visit)

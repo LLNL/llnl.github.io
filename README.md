@@ -63,7 +63,7 @@ Start with the [FAQ](https://software.llnl.gov/about/faq/). Please see the follo
 
 - [Project logos](https://github.com/LLNL/llnl.github.io/blob/main/assets/images/logos/README.md)
 - ["Explore" categories](https://github.com/LLNL/llnl.github.io/blob/main/pages/explore/README.md)
-- [News posts](https://github.com/LLNL/llnl.github.io/blob/main/news/README.md)
+- [News posts](https://github.com/LLNL/llnl.github.io/blob/main/pages/news/README.md)
 - Data [visualizations](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/README.md) and [scripts](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/scripts/README.md)
 - [Data fetching](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md)
 - [RADIUSS site](https://github.com/LLNL/radiuss/blob/main/README.md)
