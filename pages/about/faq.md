@@ -91,7 +91,7 @@ Remember that these repositories *are hosted* on GitHub servers, *NOT LLNL serve
 
 When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidance.
 
-### My project is approved for release. Now what?
+### My project is approved for release. Now what? What about docs?
 
 Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/main/community-health):
 
