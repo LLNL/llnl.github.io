@@ -8295,11 +8295,53 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "RUST",
+                                    "packageName": "katexit",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "libceed-sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "version-sync",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "six",
                                     "repository": {
                                         "nameWithOwner": "benjaminp/six"
                                     }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "bindgen",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "pkg-config",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "version-sync",
+                                    "repository": null
                                 }
                             ]
                         }
@@ -8486,6 +8528,50 @@
                                     "repository": {
                                         "nameWithOwner": "codecov/codecov-action"
                                     }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "structopt",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "structopt",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "structopt",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "structopt",
+                                    "repository": null
                                 }
                             ]
                         }
@@ -25921,7 +26007,7 @@
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.validation:validation-api",
                                     "repository": {
-                                        "nameWithOwner": "eclipse-ee4j/beanvalidation-api"
+                                        "nameWithOwner": "jakartaee/validation"
                                     }
                                 },
                                 {
@@ -37544,6 +37630,32 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "RUST",
+                                    "packageName": "error-chain",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "lazy_static",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "serde",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "serde_json",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -37869,7 +37981,24 @@
         },
         "flux-framework/flux-sys-rs": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "bindgen",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "which",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -42903,6 +43032,28 @@
                         "name": "Python"
                     }
                 ]
+            }
+        },
+        "visit-dav/summer-projects": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "alex-page/github-project-automation-plus",
+                                    "repository": {
+                                        "nameWithOwner": "alex-page/github-project-automation-plus"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "visit-dav/third-party": {
