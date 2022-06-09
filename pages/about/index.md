@@ -10,7 +10,11 @@ permalink: /about/
 * Table of Contents
 {:toc}
 
-**Collaboration fuels our culture.**
+### Collaboration Fuels Our Culture
+
+<div class="videoPlayer">
+<iframe style="left-align" width="400" height="225" src="https://www.youtube.com/embed/nTxMn1NWHQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Welcome to the Lawrence Livermore National Laboratory (LLNL) software portal&mdash;a hub for open source software (OSS) produced at the Lab.
 
@@ -26,7 +30,7 @@ Case in point: The DOE’s [Advanced Simulation and Computing (ASC) Program](htt
 
 This portal abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You’ll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE). You can also browse our projects on [GitHub](https://github.com/LLNL), [GitLab](https://gitlab.com/llnl), and [Bitbucket](https://bitbucket.org/llnl).
 
-### Learn More about OSS at LLNL
+### Learn More About OSS at LLNL
 
 * [Federal OSS policy guide](https://sourcecode.cio.gov/)
 * 2020 LLNL Computing Virtual Expo materials
