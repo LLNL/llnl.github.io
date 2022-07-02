@@ -15598,6 +15598,40 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "gmlc-tdc/helics-action/install",
+                                    "repository": {
+                                        "nameWithOwner": "GMLC-TDC/helics-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "matlab-actions/run-command",
+                                    "repository": {
+                                        "nameWithOwner": "matlab-actions/run-command"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "matlab-actions/setup-matlab",
+                                    "repository": {
+                                        "nameWithOwner": "matlab-actions/setup-matlab"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
