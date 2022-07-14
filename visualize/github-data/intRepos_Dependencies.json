@@ -5038,7 +5038,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "service-identity",
                                     "repository": {
-                                        "nameWithOwner": "pexip/os-python-service-identity"
+                                        "nameWithOwner": "mithrandi/service_identity"
                                     }
                                 },
                                 {
@@ -8337,12 +8337,16 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "bindgen",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/rust-bindgen"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "pkg-config",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/pkg-config-rs"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUST",
@@ -27908,6 +27912,19 @@
                 ]
             }
         },
+        "LLNL/echemfem": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/f-strings": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -38884,22 +38901,30 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "error-chain",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang-deprecated/error-chain"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "lazy_static",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang-nursery/lazy-static.rs"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "serde",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "serde-rs/serde"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "serde_json",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "serde-rs/json"
+                                    }
                                 }
                             ]
                         }
@@ -39240,12 +39265,16 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "bindgen",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/rust-bindgen"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "which",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "harryfei/which-rs"
+                                    }
                                 }
                             ]
                         }
@@ -40697,9 +40726,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-notfound-page",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx-notfound-page"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -43862,47 +43889,6 @@
                 ]
             }
         },
-        "spack/spack-user-survey": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "seaborn",
-                                    "repository": {
-                                        "nameWithOwner": "mwaskom/seaborn"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "spack/spack.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -44194,47 +44180,6 @@
                     {
                         "color": "#563d7c",
                         "name": "CSS"
-                    }
-                ]
-            }
-        },
-        "spack/stars-over-time": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pygithub",
-                                    "repository": {
-                                        "nameWithOwner": "PyGithub/PyGithub"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
                     }
                 ]
             }
