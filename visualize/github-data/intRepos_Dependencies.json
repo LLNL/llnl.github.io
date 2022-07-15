@@ -8313,7 +8313,9 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "version-sync",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mgeisler/version-sync"
+                                    }
                                 }
                             ]
                         }
@@ -8351,7 +8353,9 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "version-sync",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mgeisler/version-sync"
+                                    }
                                 }
                             ]
                         }
@@ -8548,7 +8552,9 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "structopt",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "TeXitoi/structopt"
+                                    }
                                 }
                             ]
                         }
@@ -8559,7 +8565,9 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "structopt",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "TeXitoi/structopt"
+                                    }
                                 }
                             ]
                         }
@@ -8570,7 +8578,9 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "structopt",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "TeXitoi/structopt"
+                                    }
                                 }
                             ]
                         }
@@ -8581,7 +8591,9 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "structopt",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "TeXitoi/structopt"
+                                    }
                                 }
                             ]
                         }
@@ -40340,19 +40352,6 @@
                 "nodes": []
             }
         },
-        "mfem/libparanumal": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "mfem/mfem": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -43889,6 +43888,47 @@
                 ]
             }
         },
+        "spack/spack-user-survey": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "spack/spack.github.io": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -44180,6 +44220,47 @@
                     {
                         "color": "#563d7c",
                         "name": "CSS"
+                    }
+                ]
+            }
+        },
+        "spack/stars-over-time": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pygithub",
+                                    "repository": {
+                                        "nameWithOwner": "PyGithub/PyGithub"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
