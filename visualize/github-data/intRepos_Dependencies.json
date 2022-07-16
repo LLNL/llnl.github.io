@@ -851,6 +851,19 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "ipykernel",
                                     "repository": null
@@ -10984,8 +10997,10 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "backports.entry-points-selectable",
-                                    "repository": null
+                                    "packageName": "backports-entry-points-selectable",
+                                    "repository": {
+                                        "nameWithOwner": "jaraco/backports.entry_points_selectable"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -30832,8 +30847,10 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx_rtd_theme",
-                                    "repository": null
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -44069,6 +44086,47 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "gidgethub",
+                                    "repository": {
+                                        "nameWithOwner": "brettcannon/gidgethub"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "theskumar/python-dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "rq",
+                                    "repository": {
+                                        "nameWithOwner": "rq/rq"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sh",
+                                    "repository": {
+                                        "nameWithOwner": "amoffat/sh"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "aiohttp",
+                                    "repository": {
+                                        "nameWithOwner": "aio-libs/aiohttp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
@@ -44100,6 +44158,13 @@
                                     "packageName": "python-dotenv",
                                     "repository": {
                                         "nameWithOwner": "theskumar/python-dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "rq",
+                                    "repository": {
+                                        "nameWithOwner": "rq/rq"
                                     }
                                 },
                                 {
