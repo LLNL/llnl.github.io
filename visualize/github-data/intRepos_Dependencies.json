@@ -11751,6 +11751,48 @@
                                 },
                                 {
                                     "packageManager": "NPM",
+                                    "packageName": "@jridgewell/gen-mapping",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/gen-mapping"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/resolve-uri",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/resolve-uri"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/set-array",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/set-array"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/source-map",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/source-map"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/sourcemap-codec",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/sourcemap-codec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/trace-mapping",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/trace-mapping"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
                                     "packageName": "@jupyter-widgets/base",
                                     "repository": {
                                         "nameWithOwner": "jupyter-widgets/ipywidgets"
@@ -12389,48 +12431,6 @@
                                     "packageName": "array-flatten",
                                     "repository": {
                                         "nameWithOwner": "blakeembrey/array-flatten"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "array-union",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/array-union"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "asn1",
-                                    "repository": {
-                                        "nameWithOwner": "TritonDataCenter/node-asn1"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "assert-plus",
-                                    "repository": {
-                                        "nameWithOwner": "TritonDataCenter/node-assert-plus"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "async",
-                                    "repository": {
-                                        "nameWithOwner": "caolan/async"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "asynckit",
-                                    "repository": {
-                                        "nameWithOwner": "alexindigo/asynckit"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "at-least-node",
-                                    "repository": {
-                                        "nameWithOwner": "RyanZim/at-least-node"
                                     }
                                 }
                             ]
@@ -19192,7 +19192,12 @@
                                 },
                                 {
                                     "packageManager": "MAVEN",
-                                    "packageName": "com.oracle:ojdbc7",
+                                    "packageName": "com.oracle.database.jdbc:ojdbc8",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.OregonDSP:OregonDSP",
                                     "repository": null
                                 },
                                 {
@@ -19211,30 +19216,25 @@
                                 },
                                 {
                                     "packageManager": "MAVEN",
-                                    "packageName": "commons-lang:commons-lang",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
-                                },
-                                {
-                                    "packageManager": "MAVEN",
                                     "packageName": "edu.iris.dmc:IRIS-WS",
                                     "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
-                                    "packageName": "edu.sc.seis:seis-file",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "MAVEN",
-                                    "packageName": "gov.llnl.gnem:GnemExternal",
+                                    "packageName": "edu.sc.seis:seisFile",
                                     "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "gov.nasa.arc:worldwind",
                                     "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.xml.bind:jaxb-api",
+                                    "repository": {
+                                        "nameWithOwner": "javaee/jaxb-spec"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -19262,6 +19262,13 @@
                                     "packageName": "nz.ac.waikato.cms.weka:weka-stable",
                                     "repository": {
                                         "nameWithOwner": "MeiyappanKannappa/Weka-Android"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.commons:commons-lang3",
+                                    "repository": {
+                                        "nameWithOwner": "apache/commons-lang"
                                     }
                                 },
                                 {
@@ -19336,13 +19343,6 @@
                                 },
                                 {
                                     "packageManager": "MAVEN",
-                                    "packageName": "org.codehaus.mojo:buildnumber-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "mojohaus/buildnumber-maven-plugin"
-                                    }
-                                },
-                                {
-                                    "packageManager": "MAVEN",
                                     "packageName": "org.codehaus.mojo:license-maven-plugin",
                                     "repository": {
                                         "nameWithOwner": "mojohaus/license-maven-plugin"
@@ -19350,8 +19350,20 @@
                                 },
                                 {
                                     "packageManager": "MAVEN",
+                                    "packageName": "org.glassfish.jaxb:jaxb-runtime",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
                                     "packageName": "org.jogamp.jogl:jogl-all",
                                     "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.ojalgo:ojalgo",
+                                    "repository": {
+                                        "nameWithOwner": "optimatika/ojAlgo"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -41444,6 +41456,19 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "spack/cp2k": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#4d41b1",
+                        "name": "Fortran"
                     }
                 ]
             }
