@@ -25890,7 +25890,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "flag-icon-css",
                                     "repository": {
-                                        "nameWithOwner": "SeppPenner/flag-icon-css"
+                                        "nameWithOwner": "Passiverecords/angular-flag-icon-css"
                                     }
                                 },
                                 {
@@ -40182,7 +40182,483 @@
         },
         "flux-framework/flux-k8s": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/grpc",
+                                    "repository": {
+                                        "nameWithOwner": "grpc/grpc-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/protobuf",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/api",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/api"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/davecgh/go-spew",
+                                    "repository": {
+                                        "nameWithOwner": "davecgh/go-spew"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-logr/logr",
+                                    "repository": {
+                                        "nameWithOwner": "go-logr/logr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/gogo/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "gogo/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/golang/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "golang/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/go-cmp",
+                                    "repository": {
+                                        "nameWithOwner": "google/go-cmp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/gofuzz",
+                                    "repository": {
+                                        "nameWithOwner": "google/gofuzz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/json-iterator/go",
+                                    "repository": {
+                                        "nameWithOwner": "json-iterator/go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/kr/text",
+                                    "repository": {
+                                        "nameWithOwner": "kr/text"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/concurrent",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/concurrent"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/reflect2",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/reflect2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/niemeyer/pretty",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/pmezard/go-difflib",
+                                    "repository": {
+                                        "nameWithOwner": "pmezard/go-difflib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/spf13/pflag",
+                                    "repository": {
+                                        "nameWithOwner": "spf13/pflag"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/stretchr/testify",
+                                    "repository": {
+                                        "nameWithOwner": "stretchr/testify"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/net",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/text",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/xerrors",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/genproto",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/go-genproto"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/grpc",
+                                    "repository": {
+                                        "nameWithOwner": "grpc/grpc-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/protobuf",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/check.v1",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/inf.v0",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v3",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/api",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/api"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/apimachinery",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/apimachinery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/klog/v2",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/klog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/structured-merge-diff/v4",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/structured-merge-diff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/yaml",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/yaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "fluxcli",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/genproto",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/go-genproto"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/grpc",
+                                    "repository": {
+                                        "nameWithOwner": "grpc/grpc-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/api",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/api"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/apimachinery",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/apimachinery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/client-go",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/client-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/kubernetes"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/davecgh/go-spew",
+                                    "repository": {
+                                        "nameWithOwner": "davecgh/go-spew"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-logr/logr",
+                                    "repository": {
+                                        "nameWithOwner": "go-logr/logr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/gogo/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "gogo/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/golang/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "golang/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/go-cmp",
+                                    "repository": {
+                                        "nameWithOwner": "google/go-cmp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/gofuzz",
+                                    "repository": {
+                                        "nameWithOwner": "google/gofuzz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/json-iterator/go",
+                                    "repository": {
+                                        "nameWithOwner": "json-iterator/go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/kr/text",
+                                    "repository": {
+                                        "nameWithOwner": "kr/text"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/concurrent",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/concurrent"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/reflect2",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/reflect2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/niemeyer/pretty",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/pmezard/go-difflib",
+                                    "repository": {
+                                        "nameWithOwner": "pmezard/go-difflib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/spf13/pflag",
+                                    "repository": {
+                                        "nameWithOwner": "spf13/pflag"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/stretchr/testify",
+                                    "repository": {
+                                        "nameWithOwner": "stretchr/testify"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/net",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/text",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/xerrors",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/genproto",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/go-genproto"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/grpc",
+                                    "repository": {
+                                        "nameWithOwner": "grpc/grpc-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/protobuf",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/check.v1",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/inf.v0",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v3",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/api",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/api"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/apimachinery",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/apimachinery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/klog/v2",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/klog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/structured-merge-diff/v4",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/structured-merge-diff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/yaml",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/yaml"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -43165,7 +43641,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pep517",
                                     "repository": {
-                                        "nameWithOwner": "pypa/pep517"
+                                        "nameWithOwner": "pfmoore/pep517experiments"
                                     }
                                 },
                                 {
@@ -43283,7 +43759,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pep517",
                                     "repository": {
-                                        "nameWithOwner": "pypa/pep517"
+                                        "nameWithOwner": "pfmoore/pep517experiments"
                                     }
                                 },
                                 {
@@ -43359,7 +43835,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pep517",
                                     "repository": {
-                                        "nameWithOwner": "pypa/pep517"
+                                        "nameWithOwner": "pfmoore/pep517experiments"
                                     }
                                 },
                                 {
@@ -43440,7 +43916,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pep517",
                                     "repository": {
-                                        "nameWithOwner": "pypa/pep517"
+                                        "nameWithOwner": "pfmoore/pep517experiments"
                                     }
                                 },
                                 {
@@ -43514,7 +43990,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pep517",
                                     "repository": {
-                                        "nameWithOwner": "pypa/pep517"
+                                        "nameWithOwner": "pfmoore/pep517experiments"
                                     }
                                 },
                                 {
@@ -43574,7 +44050,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pep517",
                                     "repository": {
-                                        "nameWithOwner": "pypa/pep517"
+                                        "nameWithOwner": "pfmoore/pep517experiments"
                                     }
                                 },
                                 {
