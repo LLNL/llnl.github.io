@@ -23163,6 +23163,14 @@
                 ]
             }
         },
+        "LLNL/PDBspheres": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "LLNL/PENNANT": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -29300,7 +29308,21 @@
         },
         "LLNL/echemfem": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
