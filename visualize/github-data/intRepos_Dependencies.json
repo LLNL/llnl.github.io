@@ -22856,19 +22856,6 @@
                 ]
             }
         },
-        "LLNL/Mitos": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/MountPointAttributes": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -27778,7 +27765,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.glassfish.tyrus.bundles:tyrus-standalone-client",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "eclipse-ee4j/tyrus"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28046,7 +28035,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.glassfish.tyrus.bundles:tyrus-standalone-client",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "eclipse-ee4j/tyrus"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -33389,6 +33380,19 @@
             }
         },
         "LLNL/minq": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/mitos": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -39981,23 +39985,9 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/create-release",
-                                    "repository": {
-                                        "nameWithOwner": "actions/create-release"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-release-asset",
-                                    "repository": {
-                                        "nameWithOwner": "actions/upload-release-asset"
                                     }
                                 },
                                 {
@@ -40019,6 +40009,13 @@
                                     "packageName": "flux-framework/pr-validator",
                                     "repository": {
                                         "nameWithOwner": "flux-framework/pr-validator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "softprops/action-gh-release",
+                                    "repository": {
+                                        "nameWithOwner": "softprops/action-gh-release"
                                     }
                                 }
                             ]
