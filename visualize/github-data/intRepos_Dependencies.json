@@ -15649,7 +15649,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "GMLC-TDC/large-scale-helics-demo": {
@@ -41189,6 +41194,33 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "syspack/pakages/action/build",
+                                    "repository": {
+                                        "nameWithOwner": "syspack/pakages"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -42544,6 +42576,19 @@
                     {
                         "color": "#1d365d",
                         "name": "Less"
+                    }
+                ]
+            }
+        },
+        "nsgcc/nsCamera": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
