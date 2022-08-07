@@ -15651,8 +15651,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#555555",
+                        "name": "C"
                     }
                 ]
             }
@@ -41214,7 +41214,7 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "syspack/pakages/action/build",
+                                    "packageName": "syspack/pakages/action/install",
                                     "repository": {
                                         "nameWithOwner": "syspack/pakages"
                                     }
@@ -42582,7 +42582,42 @@
         },
         "nsgcc/nsCamera": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cython",
+                                    "repository": {
+                                        "nameWithOwner": "cython/cython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyserial",
+                                    "repository": {
+                                        "nameWithOwner": "pyserial/pyserial"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
