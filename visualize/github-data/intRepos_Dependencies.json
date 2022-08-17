@@ -19594,6 +19594,14 @@
                 ]
             }
         },
+        "LLNL/EQ3_6": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "LLNL/Elemental": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21789,7 +21797,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "m2r2",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "CrossNox/m2r2"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -30041,7 +30051,12 @@
                 ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/gtest-mpi-listener": {
@@ -41149,7 +41164,7 @@
                                     "packageManager": "RUST",
                                     "packageName": "serde_json",
                                     "repository": {
-                                        "nameWithOwner": "ijl/orjson"
+                                        "nameWithOwner": "arkaitzj/json"
                                     }
                                 }
                             ]
