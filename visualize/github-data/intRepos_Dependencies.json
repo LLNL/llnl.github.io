@@ -13271,7 +13271,48 @@
         },
         "GMLC-TDC/HELICSBuilder": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "julia-actions/setup-julia",
+                                    "repository": {
+                                        "nameWithOwner": "julia-actions/setup-julia"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "softprops/action-gh-release",
+                                    "repository": {
+                                        "nameWithOwner": "softprops/action-gh-release"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -19053,7 +19094,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue-router",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue-router"
+                                        "nameWithOwner": "vuejs/router"
                                     }
                                 },
                                 {
@@ -24832,7 +24873,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "deepdiff",
                                     "repository": {
-                                        "nameWithOwner": "joshainglis/deepdiff"
+                                        "nameWithOwner": "seperman/deepdiff"
                                     }
                                 },
                                 {
