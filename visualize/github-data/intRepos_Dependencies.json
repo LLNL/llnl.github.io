@@ -15837,6 +15837,14 @@
                 ]
             }
         },
+        "GMLC-TDC/multisite-demo": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "GMLC-TDC/netif": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -17453,6 +17461,98 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/AMP": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "logging",
+                                    "repository": {
+                                        "nameWithOwner": "AlphaGriffin/logpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torchvision",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/vision"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "yaml",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/analyze",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/autobuild",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/init",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -19977,6 +20077,19 @@
                     {
                         "color": "#555555",
                         "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/GPP": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -30833,7 +30946,9 @@
                                 {
                                     "packageManager": "ACTIONS",
                                     "packageName": "spyoungtech/mirror-action",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "yesolutions/mirror-action"
+                                    }
                                 }
                             ]
                         }
@@ -31718,6 +31833,19 @@
                     {
                         "color": "#555555",
                         "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/macc": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -42723,7 +42851,89 @@
         },
         "flux-framework/flux-spack": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "syspack/pakages/action/install",
+                                    "repository": {
+                                        "nameWithOwner": "syspack/pakages"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "vsoch/pull-request-action",
+                                    "repository": {
+                                        "nameWithOwner": "vsoch/pull-request-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "sciworks/spack-updater",
+                                    "repository": {
+                                        "nameWithOwner": "sciworks/spack-updater"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "syspack/pakages/action/install",
+                                    "repository": {
+                                        "nameWithOwner": "syspack/pakages"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -45974,13 +46184,6 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
                                 }
                             ]
                         }
@@ -46045,6 +46248,26 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "dorny/paths-filter",
+                                    "repository": {
+                                        "nameWithOwner": "dorny/paths-filter"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
@@ -46056,12 +46279,32 @@
                                     "repository": {
                                         "nameWithOwner": "codecov/codecov-action"
                                     }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "dorny/paths-filter",
+                                    "packageName": "actions/setup-python",
                                     "repository": {
-                                        "nameWithOwner": "dorny/paths-filter"
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
                                     }
                                 }
                             ]
