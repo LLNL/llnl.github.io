@@ -7113,7 +7113,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "@plotly/d3-sankey",
                                     "repository": {
-                                        "nameWithOwner": "plotly/d3-sankey"
+                                        "nameWithOwner": "d3/d3-sankey"
                                     }
                                 },
                                 {
@@ -42234,7 +42234,9 @@
                                 {
                                     "packageManager": "GO",
                                     "packageName": "github.com/niemeyer/pretty",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "niemeyer/pretty"
+                                    }
                                 },
                                 {
                                     "packageManager": "GO",
@@ -42359,14 +42361,9 @@
                             "nodes": [
                                 {
                                     "packageManager": "GO",
-                                    "packageName": "fluxcli",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "GO",
-                                    "packageName": "google.golang.org/genproto",
+                                    "packageName": "github.com/cmisale/flux-sched/resource/hlapi/bindings/go/src/fluxcli",
                                     "repository": {
-                                        "nameWithOwner": "googleapis/go-genproto"
+                                        "nameWithOwner": "cmisale/flux-sched"
                                     }
                                 },
                                 {
@@ -42375,6 +42372,11 @@
                                     "repository": {
                                         "nameWithOwner": "grpc/grpc-go"
                                     }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/protobuf",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "GO",
@@ -42404,9 +42406,9 @@
                                 },
                                 {
                                     "packageManager": "GO",
-                                    "packageName": "k8s.io/kubernetes",
+                                    "packageName": "k8s.io/kubectl",
                                     "repository": {
-                                        "nameWithOwner": "kubernetes/kubernetes"
+                                        "nameWithOwner": "kubernetes/kubectl"
                                     }
                                 }
                             ]
@@ -42415,6 +42417,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/cmisale/flux-sched/resource/hlapi/bindings/go/src/fluxcli",
+                                    "repository": {
+                                        "nameWithOwner": "cmisale/flux-sched"
+                                    }
+                                },
                                 {
                                     "packageManager": "GO",
                                     "packageName": "github.com/davecgh/go-spew",
@@ -42459,6 +42468,13 @@
                                 },
                                 {
                                     "packageManager": "GO",
+                                    "packageName": "github.com/googleapis/gnostic",
+                                    "repository": {
+                                        "nameWithOwner": "google/gnostic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
                                     "packageName": "github.com/json-iterator/go",
                                     "repository": {
                                         "nameWithOwner": "json-iterator/go"
@@ -42488,7 +42504,9 @@
                                 {
                                     "packageManager": "GO",
                                     "packageName": "github.com/niemeyer/pretty",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "niemeyer/pretty"
+                                    }
                                 },
                                 {
                                     "packageManager": "GO",
@@ -42518,7 +42536,17 @@
                                 },
                                 {
                                     "packageManager": "GO",
+                                    "packageName": "golang.org/x/oauth2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
                                     "packageName": "golang.org/x/sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/term",
                                     "repository": null
                                 },
                                 {
@@ -42528,8 +42556,20 @@
                                 },
                                 {
                                     "packageManager": "GO",
+                                    "packageName": "golang.org/x/time",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
                                     "packageName": "golang.org/x/xerrors",
                                     "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/appengine",
+                                    "repository": {
+                                        "nameWithOwner": "golang/appengine"
+                                    }
                                 },
                                 {
                                     "packageManager": "GO",
@@ -42586,9 +42626,30 @@
                                 },
                                 {
                                     "packageManager": "GO",
+                                    "packageName": "k8s.io/client-go",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/client-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
                                     "packageName": "k8s.io/klog/v2",
                                     "repository": {
                                         "nameWithOwner": "kubernetes/klog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/kubectl",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/kubectl"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/utils",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/utils"
                                     }
                                 },
                                 {
@@ -43444,7 +43505,9 @@
                                 {
                                     "packageManager": "GO",
                                     "packageName": "github.com/niemeyer/pretty",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "niemeyer/pretty"
+                                    }
                                 },
                                 {
                                     "packageManager": "GO",
