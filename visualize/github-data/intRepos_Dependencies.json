@@ -17599,8 +17599,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
                     }
                 ]
             }
@@ -32710,6 +32710,26 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -42959,7 +42979,9 @@
                                 {
                                     "packageManager": "GO",
                                     "packageName": "github.com/munnerz/goautoneg",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "munnerz/goautoneg"
+                                    }
                                 },
                                 {
                                     "packageManager": "GO",
@@ -43500,7 +43522,9 @@
                                 {
                                     "packageManager": "GO",
                                     "packageName": "github.com/munnerz/goautoneg",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "munnerz/goautoneg"
+                                    }
                                 },
                                 {
                                     "packageManager": "GO",
@@ -43797,6 +43821,33 @@
                                     "packageName": "sigs.k8s.io/yaml",
                                     "repository": {
                                         "nameWithOwner": "kubernetes-sigs/yaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
                                     }
                                 }
                             ]
