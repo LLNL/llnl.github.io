@@ -3212,6 +3212,19 @@
                 ]
             }
         },
+        "CDAT/cdtime": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "CDAT/cdtime-feedstock": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -45507,6 +45520,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
@@ -45517,6 +45537,13 @@
                                     "packageName": "six",
                                     "repository": {
                                         "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "swig",
+                                    "repository": {
+                                        "nameWithOwner": "nightlark/swig-pypi"
                                     }
                                 }
                             ]
@@ -45609,6 +45636,13 @@
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
                                     }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
                                 }
                             ]
                         }
@@ -45618,8 +45652,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#f34b7d",
-                        "name": "C++"
+                        "color": null,
+                        "name": "SWIG"
                     }
                 ]
             }
@@ -48851,6 +48885,33 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "botocore",
+                                    "repository": {
+                                        "nameWithOwner": "boto/botocore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -49250,6 +49311,19 @@
                     {
                         "color": null,
                         "name": "M4"
+                    }
+                ]
+            }
+        },
+        "spack/spack-stack": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#427819",
+                        "name": "Makefile"
                     }
                 ]
             }
