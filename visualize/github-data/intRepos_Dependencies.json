@@ -15485,7 +15485,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "deep-is",
                                     "repository": {
-                                        "nameWithOwner": "thlorenz/deep-is"
+                                        "nameWithOwner": "deepin-community/node-deep-is"
                                     }
                                 },
                                 {
@@ -21954,7 +21954,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "readline",
                                     "repository": {
-                                        "nameWithOwner": "ludwigschwardt/python-readline"
+                                        "nameWithOwner": "ludwigschwardt/python-gnureadline"
                                     }
                                 },
                                 {
@@ -46709,6 +46709,40 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "spack/concretizer-paper-sc22": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "xu-cheng/latex-action",
+                                    "repository": {
+                                        "nameWithOwner": "xu-cheng/latex-action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3D6117",
+                        "name": "TeX"
                     }
                 ]
             }
