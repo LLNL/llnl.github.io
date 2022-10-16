@@ -13028,7 +13028,41 @@
         },
         "GMLC-TDC/HELICS-FMI": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "msys2/setup-msys2",
+                                    "repository": {
+                                        "nameWithOwner": "msys2/setup-msys2"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -19301,7 +19335,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue"
+                                        "nameWithOwner": "vuejs/core"
                                     }
                                 },
                                 {
@@ -20404,7 +20438,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vscode",
                                     "repository": {
-                                        "nameWithOwner": "microsoft/vscode-extension-vscode"
+                                        "nameWithOwner": "VoiceCode/vscode"
                                     }
                                 },
                                 {
@@ -39875,7 +39909,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue"
+                                        "nameWithOwner": "vuejs/core"
                                     }
                                 },
                                 {
