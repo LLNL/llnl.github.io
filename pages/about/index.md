@@ -20,7 +20,7 @@ Welcome to the Lawrence Livermore National Laboratory (LLNL) software portal&mda
 
 LLNL developers create and evolve software on a daily basis. Some of this software is used only internally; other components are licensed for use by external partners and collaborators; and still other software is released and actively developed out in the open on software-hosting platforms. This website is the gateway to all of it.
 
-LLNL is a Department of Energy (DOE) institution, so we abide by the [Federal Source Code Policy](https://sourcecode.cio.gov) that guides release of open source software (OSS). And not just because we have to but because we *want* to. Long before GitHub was founded, [we started releasing software](https://software.llnl.gov/visualize/) for public use and collaboration.
+LLNL is a Department of Energy (DOE) institution, so we abide by the Federal Source Code Policy* that guides release of open source software (OSS). And not just because we have to but because we *want* to. Long before GitHub was founded, [we started releasing software](https://software.llnl.gov/visualize/) for public use and collaboration.
 
 We often work with other national labs, universities, and industry partners. Working on these projects is a lot easier when we can share code directly. For example, building the next generation of supercomputers requires collaboration. The [Exascale Computing Project (ECP)](https://www.exascaleproject.org) uses OSS to develop the exascale ecosystem of apps, analytics, infrastructure, and so much more. The ECP is tackling a huge range of scientific areas, like precision medicine and nuclear physics. Future breakthroughs will likely owe some debt to the best practices and accelerated development made possible by OSS.
 
@@ -29,6 +29,8 @@ One of the great things about a large government organization is that we’re no
 Case in point: The DOE’s [Advanced Simulation and Computing (ASC) Program](https://www.energy.gov/nnsa/missions/maintaining-stockpile) leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing supercomputing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and reliability of the nation’s nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. ASC leadership joined the DOE’s Office of Advanced Scientific Computing Research to establish a policy of using and distributing OSS to achieve the Program’s goals. With OSS, we can develop quickly and choose the best solutions.
 
 This portal abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You’ll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE). You can also browse our projects on [GitHub](https://github.com/LLNL), [GitLab](https://gitlab.com/llnl), and [Bitbucket](https://bitbucket.org/llnl).
+
+* The original policy memorandum is no longer available online. See [The People's Code blog post](https://www.cio.gov/2016/08/11/peoples-code.html) and [the archived policy on GitHub](https://github.com/WhiteHouse/source-code-policy).
 
 ### Learn More About OSS at LLNL
 
