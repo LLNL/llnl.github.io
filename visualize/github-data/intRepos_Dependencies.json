@@ -44530,6 +44530,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "flux-restful-client",
+                                    "repository": {
+                                        "nameWithOwner": "flux-framework/flux-restful-api"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "ipykernel",
                                     "repository": null
                                 },
@@ -44687,6 +44694,19 @@
                                     "packageName": "crate-ci/typos",
                                     "repository": {
                                         "nameWithOwner": "crate-ci/typos"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
