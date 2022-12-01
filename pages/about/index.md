@@ -34,17 +34,18 @@ This portal abounds with examples of projects that have found a home in the open
 
 ### Learn More About OSS at LLNL
 
-* [Federal OSS policy guide](https://sourcecode.cio.gov/)
+* This website's [News Archive](/news/archive/)
+* 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
+* *Science & Technology Review* coverage
+  * Cover story: [Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
+  * [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
+  * Video (3:04): [Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
+  * Highlight: [Visualization Software Stands the Test of Time](https://str.llnl.gov/2021-05/brugger)
+* Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
+* LLNL news: [Spack, A Lab-Developed ‘App Store for Supercomputers,’ becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
 * 2020 LLNL Computing Virtual Expo materials
   * Releasing Open Source Software at the Lab ([poster](https://computing.llnl.gov/sites/default/files/COMP_Poster_OSS.pdf))
   * Video: Open Source at LLNL (11:31) ([YouTube](https://youtu.be/kL4wIYhNVxE)) ([slides](https://computing.llnl.gov/sites/default/files/2020CompExpo_Open_Source.pdf))
-* 18F guest post: [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
-* *Science & Technology Review* coverage
-  * [Cover story: Ambassadors of Code](https://str.llnl.gov/2018-01/lee)
-  * [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
-  * [Video (3:04): Ambassadors of Code](https://youtu.be/nTxMn1NWHQU)
-* LLNL news: [Spack, A Lab-Developed 'App Store for Supercomputers,' becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
-* Code.gov blog post: [OSS Spotlight: Lawrence Livermore National Laboratory and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
 
 ### Other References
 
