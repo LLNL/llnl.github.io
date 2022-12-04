@@ -1915,7 +1915,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "npm/cli"
+                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
                                     }
                                 },
                                 {
@@ -32600,7 +32600,28 @@
         },
         "LLNL/libROM": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pierotofy/set-swap-space",
+                                    "repository": {
+                                        "nameWithOwner": "pierotofy/set-swap-space"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
