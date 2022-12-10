@@ -1923,7 +1923,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "VietOregon/nghenhinaudio.com"
+                                        "nameWithOwner": "npm/cli"
                                     }
                                 },
                                 {
@@ -13441,6 +13441,19 @@
                 ]
             }
         },
+        "GMLC-TDC/Yggdrasil": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#a270ba",
+                        "name": "Julia"
+                    }
+                ]
+            }
+        },
         "GMLC-TDC/cheader2json": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -14813,6 +14826,19 @@
                                     "packageName": "pypa/gh-action-pypi-publish",
                                     "repository": {
                                         "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
@@ -40341,6 +40367,19 @@
                 ]
             }
         },
+        "LLNL/tripoll": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/typeforge": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -48779,23 +48818,9 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/download-artifact",
-                                    "repository": {
-                                        "nameWithOwner": "actions/download-artifact"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-artifact",
-                                    "repository": {
-                                        "nameWithOwner": "actions/upload-artifact"
                                     }
                                 },
                                 {
@@ -50573,9 +50598,23 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "qualname/grey"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "boto3",
                                     "repository": {
                                         "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "clingo",
+                                    "repository": {
+                                        "nameWithOwner": "potassco/clingo"
                                     }
                                 },
                                 {
