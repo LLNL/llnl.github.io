@@ -4789,7 +4789,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "nbformat",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbformat"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -26466,7 +26468,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Google.ProtocolBuffers",
                                     "repository": {
-                                        "nameWithOwner": "theouteredge/PersistantCache"
+                                        "nameWithOwner": "jcbjcbjc/unique-project-client"
                                     }
                                 },
                                 {
@@ -30659,8 +30661,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
                     }
                 ]
             }
@@ -31136,7 +31138,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "nbformat",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbformat"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -40615,6 +40619,26 @@
                                     "packageName": "github/codeql-action/init",
                                     "repository": {
                                         "nameWithOwner": "github/codeql-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
                                     }
                                 }
                             ]
