@@ -18,7 +18,7 @@ permalink: /news/archive/
   </div>
 
 <div>
-   {% for year in postsByYear limit:4 %}
+   {% for year in postsByYear limit:3 %}
         <button type="button" class="btn" data-toggle="collapse" data-target="#{{year.name}}" aria-expanded="true" aria-controls="{{year.name}}"> {{year.name}} <i class= "fa fa-caret-down"></i></button>
 
         <div>
