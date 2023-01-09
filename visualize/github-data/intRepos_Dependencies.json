@@ -12183,13 +12183,6 @@
                                 },
                                 {
                                     "packageManager": "NPM",
-                                    "packageName": "@tootallnate/once",
-                                    "repository": {
-                                        "nameWithOwner": "TooTallNate/once"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
                                     "packageName": "@types/backbone",
                                     "repository": {
                                         "nameWithOwner": "wazeHQ/backbone-types"
@@ -12303,13 +12296,6 @@
                                     "packageName": "@verdaccio/local-storage",
                                     "repository": {
                                         "nameWithOwner": "verdaccio/verdaccio"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@verdaccio/readme",
-                                    "repository": {
-                                        "nameWithOwner": "verdaccio/readme"
                                     }
                                 },
                                 {
@@ -12475,13 +12461,6 @@
                                 },
                                 {
                                     "packageManager": "NPM",
-                                    "packageName": "abab",
-                                    "repository": {
-                                        "nameWithOwner": "jsdom/abab"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
                                     "packageName": "accepts",
                                     "repository": {
                                         "nameWithOwner": "jshttp/accepts"
@@ -12496,30 +12475,9 @@
                                 },
                                 {
                                     "packageManager": "NPM",
-                                    "packageName": "acorn",
-                                    "repository": {
-                                        "nameWithOwner": "acornjs/acorn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "acorn-globals",
-                                    "repository": {
-                                        "nameWithOwner": "ForbesLindesay/acorn-globals"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
                                     "packageName": "acorn-import-assertions",
                                     "repository": {
                                         "nameWithOwner": "xtuc/acorn-import-assertions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "acorn-walk",
-                                    "repository": {
-                                        "nameWithOwner": "acornjs/acorn"
                                     }
                                 },
                                 {
@@ -12604,6 +12562,48 @@
                                     "packageName": "array-union",
                                     "repository": {
                                         "nameWithOwner": "sindresorhus/array-union"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "asn1",
+                                    "repository": {
+                                        "nameWithOwner": "TritonDataCenter/node-asn1"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "assert-plus",
+                                    "repository": {
+                                        "nameWithOwner": "TritonDataCenter/node-assert-plus"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "async",
+                                    "repository": {
+                                        "nameWithOwner": "caolan/async"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "asynckit",
+                                    "repository": {
+                                        "nameWithOwner": "alexindigo/asynckit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "at-least-node",
+                                    "repository": {
+                                        "nameWithOwner": "RyanZim/at-least-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "atomic-sleep",
+                                    "repository": {
+                                        "nameWithOwner": "davidmarkclements/atomic-sleep"
                                     }
                                 }
                             ]
@@ -35661,7 +35661,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.kafka:connect-api",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "moutainhigh/kafka-1"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -46431,6 +46433,40 @@
                                     "packageName": "sphinx-rtd-theme",
                                     "repository": {
                                         "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/analyze",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/autobuild",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/init",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
                                     }
                                 }
                             ]
