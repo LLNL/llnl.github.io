@@ -6794,7 +6794,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "inflight",
                                     "repository": {
-                                        "nameWithOwner": "npm/inflight"
+                                        "nameWithOwner": "isaacs/inflight"
                                     }
                                 },
                                 {
@@ -20697,7 +20697,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "inflight",
                                     "repository": {
-                                        "nameWithOwner": "npm/inflight"
+                                        "nameWithOwner": "isaacs/inflight"
                                     }
                                 },
                                 {
@@ -20821,7 +20821,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "wrappy",
                                     "repository": {
-                                        "nameWithOwner": "npm/wrappy"
+                                        "nameWithOwner": "isaacs/wrappy"
                                     }
                                 }
                             ]
@@ -25655,7 +25655,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "jspm",
                                     "repository": {
-                                        "nameWithOwner": "jspm/jspm-cli"
+                                        "nameWithOwner": "jspm/jspm"
                                     }
                                 }
                             ]
@@ -38236,40 +38236,6 @@
                 ]
             }
         },
-        "LLNL/spheral": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "docker/login-action",
-                                    "repository": {
-                                        "nameWithOwner": "docker/login-action"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/spheral-docker": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -46300,6 +46266,25 @@
                                     "repository": {
                                         "nameWithOwner": "breathe-doc/breathe"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
                                 }
                             ]
                         }
@@ -48698,6 +48683,14 @@
                         "name": "Shell"
                     }
                 ]
+            }
+        },
+        "spack/merge-queue-test": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "spack/packages.spack.io": {
