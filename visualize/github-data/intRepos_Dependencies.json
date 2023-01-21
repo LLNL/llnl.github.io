@@ -13013,16 +13013,16 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "gmlc-tdc/create-pr-action",
+                                    "packageName": "gmlc-tdc/helics-action/update-swig-interfaces",
                                     "repository": {
-                                        "nameWithOwner": "GMLC-TDC/create-pr-action"
+                                        "nameWithOwner": "GMLC-TDC/helics-action"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "gmlc-tdc/helics-action/update-swig-interfaces",
+                                    "packageName": "peter-evans/create-pull-request",
                                     "repository": {
-                                        "nameWithOwner": "GMLC-TDC/helics-action"
+                                        "nameWithOwner": "peter-evans/create-pull-request"
                                     }
                                 },
                                 {
@@ -27729,7 +27729,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/b-mpi3": {
@@ -40430,6 +40435,288 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/thicket": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "beautifulsoup4",
+                                    "repository": {
+                                        "nameWithOwner": "getanewsletter/BeautifulSoup4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pydot",
+                                    "repository": {
+                                        "nameWithOwner": "pydot/pydot"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "caliper-reader",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Caliper"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cython",
+                                    "repository": {
+                                        "nameWithOwner": "cython/cython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "multiprocess",
+                                    "repository": {
+                                        "nameWithOwner": "uqfoundation/multiprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pydot",
+                                    "repository": {
+                                        "nameWithOwner": "pydot/pydot"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "textx",
+                                    "repository": {
+                                        "nameWithOwner": "textX/textX"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/core",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/preset-env",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@reduxjs/toolkit",
+                                    "repository": {
+                                        "nameWithOwner": "reduxjs/redux-toolkit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "babel-loader",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel-loader"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "d3",
+                                    "repository": {
+                                        "nameWithOwner": "d3/d3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "html-webpack-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "jantimon/html-webpack-plugin"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "redux",
+                                    "repository": {
+                                        "nameWithOwner": "reduxjs/redux"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "vega-embed",
+                                    "repository": {
+                                        "nameWithOwner": "vega/vega-embed"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "vega-lite",
+                                    "repository": {
+                                        "nameWithOwner": "vega/vega-lite"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "webpack-cli",
+                                    "repository": {
+                                        "nameWithOwner": "webpack/webpack-cli"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f1e05a",
+                        "name": "JavaScript"
                     }
                 ]
             }
