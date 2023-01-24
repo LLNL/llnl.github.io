@@ -18219,6 +18219,13 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "jwlawson/actions-setup-cmake",
+                                    "repository": {
+                                        "nameWithOwner": "jwlawson/actions-setup-cmake"
+                                    }
                                 }
                             ]
                         }
@@ -23847,6 +23854,26 @@
         "LLNL/PYB11Generator": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "decorator",
+                                    "repository": {
+                                        "nameWithOwner": "micheles/decorator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pybind11",
+                                    "repository": {
+                                        "nameWithOwner": "dialkforkaushik/DECAGT"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
@@ -40515,6 +40542,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "llnl-hatchet",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/hatchet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -51351,7 +51385,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "spack/spackpedia": {
