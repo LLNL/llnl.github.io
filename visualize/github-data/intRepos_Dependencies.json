@@ -13079,6 +13079,60 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tk",
+                                    "repository": {
+                                        "nameWithOwner": "cwbeitel/tk"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
@@ -26355,13 +26409,6 @@
                                 },
                                 {
                                     "packageManager": "NUGET",
-                                    "packageName": "System.ComponentModel.Annotations",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
                                     "packageName": "System.Data.SQLite",
                                     "repository": {
                                         "nameWithOwner": "cityindex-attic/CIAPI.CS"
@@ -26454,6 +26501,13 @@
                                     "packageName": "System.ValueTuple",
                                     "repository": {
                                         "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "WintapAPI",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Wintap"
                                     }
                                 },
                                 {
@@ -40749,6 +40803,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-node",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
@@ -40766,6 +40827,28 @@
                         "name": "JavaScript"
                     }
                 ]
+            }
+        },
+        "LLNL/thicket-tutorial": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-thicket",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/thicket"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "LLNL/toss-stig": {
@@ -40807,7 +40890,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
             }
         },
         "LLNL/tripoll": {
@@ -48358,6 +48446,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "docker/setup-buildx-action",
                                     "repository": {
                                         "nameWithOwner": "docker/setup-buildx-action"
@@ -51111,6 +51206,13 @@
                                     "packageName": "jekyll-paginate",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll-paginate"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-sass-converter",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-sass-converter"
                                     }
                                 },
                                 {
