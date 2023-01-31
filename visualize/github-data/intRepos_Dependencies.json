@@ -8104,19 +8104,6 @@
                 ]
             }
         },
-        "CDAT/wk": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/xcdat_test": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -15262,7 +15249,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "GMLC-TDC/matHELICS": {
@@ -42171,6 +42163,13 @@
                                     "packageName": "mypy",
                                     "repository": {
                                         "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ply",
+                                    "repository": {
+                                        "nameWithOwner": "Josiastech/ply"
                                     }
                                 },
                                 {
