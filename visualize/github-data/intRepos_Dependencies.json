@@ -50965,7 +50965,42 @@
         },
         "spack/spackmarkbot": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "aiohttp",
+                                    "repository": {
+                                        "nameWithOwner": "aio-libs/aiohttp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cachetools",
+                                    "repository": {
+                                        "nameWithOwner": "miku/cachetools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gidgethub",
+                                    "repository": {
+                                        "nameWithOwner": "brettcannon/gidgethub"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gidgetlab",
+                                    "repository": {
+                                        "nameWithOwner": "beenje/gidgetlab"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
