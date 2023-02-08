@@ -10284,7 +10284,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pg8000",
                                     "repository": {
-                                        "nameWithOwner": "mfenniak/pg8000"
+                                        "nameWithOwner": "tlocke/pg8000"
                                     }
                                 },
                                 {
@@ -24795,7 +24795,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "more-itertools",
                                     "repository": {
-                                        "nameWithOwner": "Vykstorm/more-itertools"
+                                        "nameWithOwner": "more-itertools/more-itertools"
                                     }
                                 },
                                 {
@@ -36300,26 +36300,34 @@
         },
         "LLNL/raja-suite-tutorial": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
                     {
                         "color": "#f34b7d",
                         "name": "C++"
-                    }
-                ]
-            }
-        },
-        "LLNL/rajaperf-tutorials": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#DA5B0B",
-                        "name": "Jupyter Notebook"
                     }
                 ]
             }
@@ -48746,6 +48754,26 @@
         "spack/spack": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "clingo",
+                                    "repository": {
+                                        "nameWithOwner": "potassco/clingo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "setuptools",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/setuptools"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
