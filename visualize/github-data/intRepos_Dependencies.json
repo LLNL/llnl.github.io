@@ -12997,7 +12997,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "terminaltables",
                                     "repository": {
-                                        "nameWithOwner": "matthewdeanmartin/terminaltables"
+                                        "nameWithOwner": "kyokley/terminaltables"
                                     }
                                 },
                                 {
@@ -40642,6 +40642,19 @@
                 ]
             }
         },
+        "LLNL/weave-demos": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "LLNL/wrap": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -41999,7 +42012,28 @@
         },
         "flux-framework/dyad": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -48088,7 +48122,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "userpath",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "ofek/userpath"
+                                    }
                                 }
                             ]
                         }
