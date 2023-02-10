@@ -4671,7 +4671,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "chartkick",
                                     "repository": {
-                                        "nameWithOwner": "mher/chartkick.py"
+                                        "nameWithOwner": "ankane/chartkick.py"
                                     }
                                 },
                                 {
@@ -8368,7 +8368,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-hoverxref",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx-hoverxref"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -9946,7 +9948,7 @@
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.servlet:jstl",
                                     "repository": {
-                                        "nameWithOwner": "eclipse-ee4j/jstl-api"
+                                        "nameWithOwner": "jakartaee/tags"
                                     }
                                 },
                                 {
@@ -40196,7 +40198,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/tox": {
@@ -40644,7 +40651,68 @@
         },
         "LLNL/weave-demos": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-sina",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "maestrowf",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/maestrowf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "merlin",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/merlin"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbconvert",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbconvert"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "themis",
+                                    "repository": {
+                                        "nameWithOwner": "celskeggs/themis"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -40808,7 +40876,40 @@
         },
         "LLNL/zero-rk": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruamel-yaml",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -47099,7 +47200,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-notfound-page",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx-notfound-page"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
