@@ -3149,40 +3149,6 @@
                 ]
             }
         },
-        "CDAT/cdms": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "readthedocs-sphinx-ext",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/readthedocs-sphinx-ext"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "recommonmark",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/recommonmark"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/cdms_manual": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -8367,16 +8333,16 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx-hoverxref",
+                                    "packageName": "sphinx-design",
                                     "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx-hoverxref"
+                                        "nameWithOwner": "executablebooks/sphinx-design"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx-panels",
+                                    "packageName": "sphinx-hoverxref",
                                     "repository": {
-                                        "nameWithOwner": "executablebooks/sphinx-panels"
+                                        "nameWithOwner": "readthedocs/sphinx-hoverxref"
                                     }
                                 },
                                 {
@@ -19330,10 +19296,64 @@
         },
         "LLNL/DeltaUQ": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "botorch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/botorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gpytorch",
+                                    "repository": {
+                                        "nameWithOwner": "cornellius-gp/gpytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/DiHydrogen": {
@@ -42356,7 +42376,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "or",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "borjaf696/Machine-Learning-Personal-Training"
+                                    }
                                 }
                             ]
                         }
@@ -42646,8 +42668,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#f34b7d",
-                        "name": "C++"
+                        "color": "#555555",
+                        "name": "C"
                     }
                 ]
             }
@@ -50500,6 +50522,26 @@
                                     "packageName": "urllib3",
                                     "repository": {
                                         "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
                                     }
                                 }
                             ]
