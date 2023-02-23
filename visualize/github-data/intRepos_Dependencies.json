@@ -3149,6 +3149,40 @@
                 ]
             }
         },
+        "CDAT/cdms": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "readthedocs-sphinx-ext",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/readthedocs-sphinx-ext"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "recommonmark",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/recommonmark"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/cdms_manual": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -9552,9 +9586,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-antrun-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -9570,23 +9602,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-antrun-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-resources-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.codehaus.mojo:exec-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "mojohaus/exec-maven-plugin"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -9597,16 +9623,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.soebes.maven.plugins:iterator-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "khmarbaise/iterator-maven-plugin"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-antrun-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -9617,16 +9639,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.soebes.maven.plugins:iterator-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "khmarbaise/iterator-maven-plugin"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.codehaus.mojo:exec-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "mojohaus/exec-maven-plugin"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -9887,9 +9905,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": {
-                                        "nameWithOwner": "FasterXML/jackson-databind"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -9899,16 +9915,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.sun.xml.bind:jaxb-impl",
-                                    "repository": {
-                                        "nameWithOwner": "javagems/jaxb-impl"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.activation:activation",
-                                    "repository": {
-                                        "nameWithOwner": "gesellix/javamail-android-forked"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -9920,23 +9932,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.xml.bind:jaxb-api",
-                                    "repository": {
-                                        "nameWithOwner": "javaee/jaxb-spec"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax:javaee-web-api",
-                                    "repository": {
-                                        "nameWithOwner": "s15851/test"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "junit:junit",
-                                    "repository": {
-                                        "nameWithOwner": "junit-team/junit4"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -9948,9 +9954,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-core",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -10697,16 +10701,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "junit:junit",
-                                    "repository": {
-                                        "nameWithOwner": "junit-team/junit4"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.codehaus.mojo:findbugs-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "gleclaire/findbugs-maven-plugin"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -12492,9 +12492,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": {
-                                        "nameWithOwner": "FasterXML/jackson-databind"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -12504,23 +12502,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-api",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-core",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-shade-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -18987,9 +18979,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-annotations",
-                                    "repository": {
-                                        "nameWithOwner": "FasterXML/jackson-annotations"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -19023,16 +19013,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "commons-cli:commons-cli",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-cli"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "commons-io:commons-io",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-io"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -19052,51 +19038,37 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.xml.bind:jaxb-api",
-                                    "repository": {
-                                        "nameWithOwner": "javaee/jaxb-spec"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "junit:junit",
-                                    "repository": {
-                                        "nameWithOwner": "junit-team/junit4"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "net.jcip:jcip-annotations",
-                                    "repository": {
-                                        "nameWithOwner": "chrisoei/JCIP"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "net.sf.geographiclib:GeographicLib-Java",
-                                    "repository": {
-                                        "nameWithOwner": "geographiclib/geographiclib-java"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "nz.ac.waikato.cms.weka:weka-stable",
-                                    "repository": {
-                                        "nameWithOwner": "MeiyappanKannappa/Weka-Android"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-lang3",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-math3",
-                                    "repository": {
-                                        "nameWithOwner": "haidaros/defects4j-math"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -19108,65 +19080,47 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": {
-                                        "nameWithOwner": "atlassian/httpcore"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-dependency-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-jar-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-shade-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-anim",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-svggen",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-transcoder",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.codehaus.mojo:license-maven-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "mojohaus/license-maven-plugin"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -19188,9 +19142,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.swinglabs.swingx:swingx-all",
-                                    "repository": {
-                                        "nameWithOwner": "tmyroadctfig/swingx"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -23422,23 +23374,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -28210,93 +28156,67 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.annotation:javax.annotation-api",
-                                    "repository": {
-                                        "nameWithOwner": "javaee/javax.annotation"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.xml.bind:jaxb-api",
-                                    "repository": {
-                                        "nameWithOwner": "javaee/jaxb-spec"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "net.jodah:failsafe",
-                                    "repository": {
-                                        "nameWithOwner": "cybernetics/failsafe"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "net.sf.geographiclib:GeographicLib-Java",
-                                    "repository": {
-                                        "nameWithOwner": "geographiclib/geographiclib-java"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-compress",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-compress"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-math3",
-                                    "repository": {
-                                        "nameWithOwner": "haidaros/defects4j-math"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-api",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-core",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-jar-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-shade-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28308,44 +28228,32 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-anim",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-awt-util",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-dom",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-svggen",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-transcoder",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-util",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28364,9 +28272,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.eclipse.persistence:javax.persistence",
-                                    "repository": {
-                                        "nameWithOwner": "anddegs/javax.persistence"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28390,9 +28296,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.locationtech.jts:jts-core",
-                                    "repository": {
-                                        "nameWithOwner": "locationtech/jts"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28404,9 +28308,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28416,9 +28318,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.openjfx:javafx-controls",
-                                    "repository": {
-                                        "nameWithOwner": "TonyFPY/Frogger_G52SWM"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28499,9 +28399,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "xml-apis:xml-apis",
-                                    "repository": {
-                                        "nameWithOwner": "Ramana3/mavenproject"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28517,30 +28415,22 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-jar-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28580,65 +28470,47 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "net.jodah:failsafe",
-                                    "repository": {
-                                        "nameWithOwner": "cybernetics/failsafe"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-compress",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-compress"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-lang3",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-math3",
-                                    "repository": {
-                                        "nameWithOwner": "haidaros/defects4j-math"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-dependency-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-jar-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28664,9 +28536,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28727,9 +28597,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "0574MisterXu/spring-framework-build-5.0.4.RELEASE"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -28808,9 +28676,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": {
-                                        "nameWithOwner": "FasterXML/jackson-databind"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28832,51 +28698,37 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-compress",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-compress"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-lang3",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-math3",
-                                    "repository": {
-                                        "nameWithOwner": "haidaros/defects4j-math"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-jar-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -28993,9 +28845,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": {
-                                        "nameWithOwner": "0574MisterXu/spring-framework-build-5.0.4.RELEASE"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29007,9 +28857,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "0574MisterXu/spring-framework-build-5.0.4.RELEASE"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -29020,37 +28868,27 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-annotations",
-                                    "repository": {
-                                        "nameWithOwner": "FasterXML/jackson-annotations"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.validation:validation-api",
-                                    "repository": {
-                                        "nameWithOwner": "jakartaee/validation"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29069,9 +28907,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.eclipse.persistence:javax.persistence",
-                                    "repository": {
-                                        "nameWithOwner": "anddegs/javax.persistence"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29129,23 +28965,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -29156,9 +28986,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": {
-                                        "nameWithOwner": "FasterXML/jackson-databind"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29190,30 +29018,22 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-lang3",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29302,9 +29122,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "0574MisterXu/spring-framework-build-5.0.4.RELEASE"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -29320,23 +29138,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -29381,44 +29193,32 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.annotation:javax.annotation-api",
-                                    "repository": {
-                                        "nameWithOwner": "javaee/javax.annotation"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-lang3",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-javadoc-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-source-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.assertj:assertj-core",
-                                    "repository": {
-                                        "nameWithOwner": "assertj/assertj"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29435,9 +29235,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.locationtech.jts:jts-core",
-                                    "repository": {
-                                        "nameWithOwner": "locationtech/jts"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -29449,9 +29247,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -32311,9 +32107,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "junit:junit",
-                                    "repository": {
-                                        "nameWithOwner": "junit-team/junit4"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -32330,16 +32124,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mongodb:mongo-java-driver",
-                                    "repository": {
-                                        "nameWithOwner": "vadlamak/mongo-java-driver"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.slf4j:jcl-over-slf4j",
-                                    "repository": {
-                                        "nameWithOwner": "qos-ch/slf4j"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -35516,9 +35306,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "commons-io:commons-io",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-io"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -35533,51 +35321,37 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.avro:avro",
-                                    "repository": {
-                                        "nameWithOwner": "apache/avro"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-compress",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-compress"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-csv",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-csv"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.commons:commons-lang3",
-                                    "repository": {
-                                        "nameWithOwner": "apache/commons-lang"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.curator:curator-framework",
-                                    "repository": {
-                                        "nameWithOwner": "apache/curator"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.curator:curator-recipes",
-                                    "repository": {
-                                        "nameWithOwner": "apache/curator"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.kafka:connect-api",
-                                    "repository": {
-                                        "nameWithOwner": "moutainhigh/kafka-1"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -35587,37 +35361,27 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-api",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.logging.log4j:log4j-core",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j2"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-dependency-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-jar-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -46639,23 +46403,17 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "javax.servlet:javax.servlet-api",
-                                    "repository": {
-                                        "nameWithOwner": "javaee/servlet-spec"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "jstl:jstl",
-                                    "repository": {
-                                        "nameWithOwner": "dohajmal/Cabinet_medecin"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "log4j:log4j",
-                                    "repository": {
-                                        "nameWithOwner": "apache/logging-log4j1"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -46665,37 +46423,27 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-compiler-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-eclipse-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "PaulKeeble/maven-eclipse-plugin"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.maven.plugins:maven-war-plugin",
-                                    "repository": {
-                                        "nameWithOwner": "apache/maven-plugins"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-codec",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.xmlgraphics:batik-transcoder",
-                                    "repository": {
-                                        "nameWithOwner": "apache/xmlgraphics-batik"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
