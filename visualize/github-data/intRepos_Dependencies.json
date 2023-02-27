@@ -42036,62 +42036,6 @@
                 ]
             }
         },
-        "chaos/slurm": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "abstract",
-                                    "repository": {
-                                        "nameWithOwner": "idin/abstract"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "communication-",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "elan-cap-type-multi-rail-",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "notes",
-                                    "repository": {
-                                        "nameWithOwner": "powellc/django-notes"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "program-",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "references",
-                                    "repository": {
-                                        "nameWithOwner": "Chive/references"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "chaos/slurm-spank-plugins": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -44966,6 +44910,33 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "medyagh/setup-minikube",
+                                    "repository": {
+                                        "nameWithOwner": "medyagh/setup-minikube"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "future",
                                     "repository": {
@@ -44974,9 +44945,23 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "python-dateutil",
                                     "repository": {
                                         "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 },
                                 {
@@ -45026,6 +45011,13 @@
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest-cov"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
                                 }
                             ]
                         }
@@ -45060,6 +45052,61 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "future",
+                                    "repository": {
+                                        "nameWithOwner": "PythonCharmers/python-future"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "setuptools",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/setuptools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "kubernetes",
                                     "repository": {
                                         "nameWithOwner": "kubernetes-client/python"
@@ -45077,6 +45124,13 @@
                                     "packageName": "pytest-cov",
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
