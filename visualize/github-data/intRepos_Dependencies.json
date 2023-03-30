@@ -3696,6 +3696,19 @@
                 ]
             }
         },
+        "CDAT/changelogger": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/ci-bots": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -3713,6 +3726,19 @@
                         }
                     }
                 ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "CDAT/compute_graph": {
+            "dependencyGraphManifests": {
+                "nodes": []
             },
             "languages": {
                 "nodes": [
@@ -9295,14 +9321,21 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-only",
+                                    "packageName": "ecp-veloc/github-actions/cmake-build",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-static",
+                                    "packageName": "ecp-veloc/github-actions/cmake-configure",
+                                    "repository": {
+                                        "nameWithOwner": "ECP-VeloC/github-actions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "ecp-veloc/github-actions/cmake-test",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
@@ -9418,14 +9451,21 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-only",
+                                    "packageName": "ecp-veloc/github-actions/cmake-build",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-static",
+                                    "packageName": "ecp-veloc/github-actions/cmake-configure",
+                                    "repository": {
+                                        "nameWithOwner": "ECP-VeloC/github-actions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "ecp-veloc/github-actions/cmake-test",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
@@ -9473,14 +9513,21 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-only",
+                                    "packageName": "ecp-veloc/github-actions/cmake-build",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build-static",
+                                    "packageName": "ecp-veloc/github-actions/cmake-configure",
+                                    "repository": {
+                                        "nameWithOwner": "ECP-VeloC/github-actions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "ecp-veloc/github-actions/cmake-test",
                                     "repository": {
                                         "nameWithOwner": "ECP-VeloC/github-actions"
                                     }
@@ -23097,7 +23144,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "torchmetrics",
                                     "repository": {
-                                        "nameWithOwner": "Lightning-AI/metrics"
+                                        "nameWithOwner": "Lightning-AI/torchmetrics"
                                     }
                                 },
                                 {
@@ -41353,6 +41400,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "bs4",
+                                    "repository": {
+                                        "nameWithOwner": "t2elzeth/regex-training"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "click",
                                     "repository": {
                                         "nameWithOwner": "pallets/click"
@@ -41367,9 +41421,64 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "beautifulsoup4",
+                                    "repository": {
+                                        "nameWithOwner": "getanewsletter/BeautifulSoup4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "bs4",
+                                    "repository": {
+                                        "nameWithOwner": "t2elzeth/regex-training"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "markupsafe",
                                     "repository": {
                                         "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "soupsieve",
+                                    "repository": {
+                                        "nameWithOwner": "facelessuser/soupsieve"
                                     }
                                 }
                             ]
@@ -46990,6 +47099,159 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "mfem/PyMFEM": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cmake",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-build/cmake-python-distributions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "swig",
+                                    "repository": {
+                                        "nameWithOwner": "nightlark/swig-pypi"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": []
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "glvis",
+                                    "repository": {
+                                        "nameWithOwner": "GLVis/pyglvis"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mfem",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": null,
+                        "name": "SWIG"
                     }
                 ]
             }
