@@ -1357,6 +1357,26 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "mpi4py/setup-mpi",
+                                    "repository": {
+                                        "nameWithOwner": "mpi4py/setup-mpi"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "ipykernel",
                                     "repository": {
@@ -26957,7 +26977,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Threading.Tasks.Extensions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/source-build"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -28694,6 +28714,31 @@
         "LLNL/blockbuster": {
             "dependencyGraphManifests": {
                 "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/blt": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -34745,7 +34790,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ply",
                                     "repository": {
-                                        "nameWithOwner": "Josiastech/ply"
+                                        "nameWithOwner": "alex/ply"
                                     }
                                 },
                                 {
@@ -43291,6 +43336,20 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "numba",
+                                    "repository": {
+                                        "nameWithOwner": "numba/numba"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "psutil",
                                     "repository": {
                                         "nameWithOwner": "giampaolo/psutil"
@@ -43630,7 +43689,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ply",
                                     "repository": {
-                                        "nameWithOwner": "Josiastech/ply"
+                                        "nameWithOwner": "alex/ply"
                                     }
                                 },
                                 {
@@ -51306,6 +51365,47 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
+                    }
+                ]
+            }
+        },
+        "spack/spack-user-survey": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
