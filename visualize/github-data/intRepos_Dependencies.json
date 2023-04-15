@@ -44656,37 +44656,22 @@
                                 },
                                 {
                                     "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-relative-links",
-                                    "repository": {
-                                        "nameWithOwner": "benbalter/jekyll-relative-links"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
                                     "packageName": "jekyll-sitemap",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll-sitemap"
                                     }
-                                },
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
                                 {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "tzinfo-data",
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
                                     "repository": {
-                                        "nameWithOwner": "tzinfo/tzinfo-data"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "wdm",
-                                    "repository": {
-                                        "nameWithOwner": "Maher4Ever/wdm"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "webrick",
-                                    "repository": {
-                                        "nameWithOwner": "ruby/webrick"
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
@@ -46586,6 +46571,19 @@
             }
         },
         "flux-framework/flux-power-mgr": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "flux-framework/flux-power-mgr-1": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
