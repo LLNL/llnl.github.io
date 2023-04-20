@@ -331,7 +331,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pyasn1-modules",
                                     "repository": {
-                                        "nameWithOwner": "etingof/pyasn1-modules"
+                                        "nameWithOwner": "pyasn1/pyasn1-modules"
                                     }
                                 },
                                 {
@@ -1008,7 +1008,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pyasn1-modules",
                                     "repository": {
-                                        "nameWithOwner": "etingof/pyasn1-modules"
+                                        "nameWithOwner": "pyasn1/pyasn1-modules"
                                     }
                                 },
                                 {
@@ -25580,7 +25580,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pyasn1-modules",
                                     "repository": {
-                                        "nameWithOwner": "etingof/pyasn1-modules"
+                                        "nameWithOwner": "pyasn1/pyasn1-modules"
                                     }
                                 },
                                 {
@@ -26232,7 +26232,9 @@
                                 {
                                     "packageManager": "NPM",
                                     "packageName": "jspm",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "jspm/jspm-cli"
+                                    }
                                 }
                             ]
                         }
@@ -31519,6 +31521,19 @@
                                     "packageManager": "PIP",
                                     "packageName": "docutils",
                                     "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
                                 }
                             ]
                         }
@@ -47686,6 +47701,46 @@
                 ]
             }
         },
+        "hatchet/2019-hatchet-notebooks-sc": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hatchet",
+                                    "repository": {
+                                        "nameWithOwner": "hatchet/hatchet"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "hatchet/2023-chopper-notebooks": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "hatchet/hatchet": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -47930,33 +47985,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "hatchet/hatchet-notebooks-sc19": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "hatchet",
-                                    "repository": {
-                                        "nameWithOwner": "hatchet/hatchet"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
                     }
                 ]
             }
@@ -52159,6 +52187,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "opensearch-dsl",
                                     "repository": {
                                         "nameWithOwner": "opensearch-project/opensearch-dsl-py"
@@ -53328,19 +53363,6 @@
                         }
                     }
                 ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "visit-dav/ci-test": {
-            "dependencyGraphManifests": {
-                "nodes": []
             },
             "languages": {
                 "nodes": [
