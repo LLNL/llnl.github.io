@@ -34321,8 +34321,29 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "h5py",
+                                    "repository": {
+                                        "nameWithOwner": "h5py/h5py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hdbscan",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn-contrib/hdbscan"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "llnl-sina",
                                     "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -34336,6 +34357,34 @@
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
                                     }
                                 }
                             ]
@@ -45435,31 +45484,6 @@
                             "nodes": [
                                 {
                                     "packageManager": "GO",
-                                    "packageName": "google.golang.org/grpc",
-                                    "repository": {
-                                        "nameWithOwner": "grpc/grpc-go"
-                                    }
-                                },
-                                {
-                                    "packageManager": "GO",
-                                    "packageName": "google.golang.org/protobuf",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "GO",
-                                    "packageName": "k8s.io/api",
-                                    "repository": {
-                                        "nameWithOwner": "kubernetes/api"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "GO",
                                     "packageName": "github.com/cmisale/flux-sched/resource/hlapi/bindings/go/src/fluxcli",
                                     "repository": {
                                         "nameWithOwner": "cmisale/flux-sched"
@@ -46624,19 +46648,6 @@
                 ]
             }
         },
-        "flux-framework/flux-power-mgr-1": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "flux-framework/flux-research-artifacts": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -47728,7 +47739,7 @@
                 ]
             }
         },
-        "hatchet/2023-chopper-notebooks": {
+        "hatchet/2023-chopper-notebooks-sc": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
