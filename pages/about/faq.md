@@ -117,7 +117,7 @@ If your repo is research software, consider submitting it to the *Journal of Ope
 
 Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
 
-Make sure your repository is included on this website’s home page and [full catalog](https://software.llnl.gov/). If you’ve set up your repository within the LLNL organization, you don’t need to take any action; it will automatically appear after the next data update.
+If you’ve set up your repository within the LLNL organization, you don’t need to take any action; it will automatically appear after the next data update.
 
 * If your repository exists under a different organization, you can move it to LLNL by selecting “Transfer Ownership” under Settings.
 
