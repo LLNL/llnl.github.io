@@ -43234,13 +43234,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "codecov",
-                                    "repository": {
-                                        "nameWithOwner": "webknjaz/codecov-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -43506,13 +43499,6 @@
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "codecov/codecov-action",
-                                    "repository": {
-                                        "nameWithOwner": "codecov/codecov-action"
                                     }
                                 }
                             ]
@@ -47554,6 +47540,45 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -48706,6 +48731,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "dataclasses",
+                                    "repository": {
+                                        "nameWithOwner": "ericvsmith/dataclasses"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
@@ -48745,6 +48777,11 @@
                                     "repository": {
                                         "nameWithOwner": "PyCQA/pep8-naming"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "perfetto",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
