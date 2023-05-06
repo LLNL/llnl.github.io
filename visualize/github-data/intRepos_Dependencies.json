@@ -27149,6 +27149,47 @@
                 ]
             }
         },
+        "LLNL/UnifyFS": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "egor-tensin/setup-gcc",
+                                    "repository": {
+                                        "nameWithOwner": "egor-tensin/setup-gcc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "kzscisoft/install-spack",
+                                    "repository": {
+                                        "nameWithOwner": "kzscisoft/install-spack"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/Varity": {
             "dependencyGraphManifests": {
                 "nodes": []
