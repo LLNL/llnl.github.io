@@ -7738,7 +7738,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "agent-base",
                                     "repository": {
-                                        "nameWithOwner": "TooTallNate/node-agent-base"
+                                        "nameWithOwner": "TooTallNate/proxy-agents"
                                     }
                                 },
                                 {
@@ -17620,7 +17620,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "agent-base",
                                     "repository": {
-                                        "nameWithOwner": "TooTallNate/node-agent-base"
+                                        "nameWithOwner": "TooTallNate/proxy-agents"
                                     }
                                 },
                                 {
@@ -52768,6 +52768,38 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruamel-yaml",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -54477,19 +54509,7 @@
         },
         "visit-dav/visit": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "docutils",
-                                    "repository": null
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             },
             "languages": {
                 "nodes": [
