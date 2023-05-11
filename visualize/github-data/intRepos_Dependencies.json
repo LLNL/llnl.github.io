@@ -36447,6 +36447,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "importlib-metadata",
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_metadata"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "jsonschema",
                                     "repository": {
                                         "nameWithOwner": "python-jsonschema/jsonschema"
@@ -47591,6 +47598,19 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -48244,6 +48264,13 @@
                                     "repository": {
                                         "nameWithOwner": "readthedocs/sphinx_rtd_theme"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
                                 }
                             ]
                         }
@@ -48465,62 +48492,7 @@
         },
         "flux-framework/flux-workflow-examples": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "recommonmark",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/recommonmark"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinxcontrib-spelling",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-contrib/spelling"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "flux-framework/pr-validator",
-                                    "repository": {
-                                        "nameWithOwner": "flux-framework/pr-validator"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             },
             "languages": {
                 "nodes": [
