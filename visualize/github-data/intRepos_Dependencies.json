@@ -25996,19 +25996,6 @@
                 ]
             }
         },
-        "LLNL/STKAddressConverter": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/STREAMSTAT": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -27050,6 +27037,14 @@
                         "name": "Fortran"
                     }
                 ]
+            }
+        },
+        "LLNL/UMT_TPLS": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "LLNL/UQ_combustion": {
@@ -30644,6 +30639,52 @@
                                     "packageManager": "PIP",
                                     "packageName": "docutils",
                                     "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "absl-py",
+                                    "repository": {
+                                        "nameWithOwner": "abseil/abseil-py"
+                                    }
                                 }
                             ]
                         }
@@ -47531,8 +47572,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#555555",
-                        "name": "C"
+                        "color": "#89e051",
+                        "name": "Shell"
                     }
                 ]
             }
