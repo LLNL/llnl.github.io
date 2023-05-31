@@ -196,9 +196,9 @@ simply rely on the default inbound = outbound assumption.
 
 #### Digital Object Identifier (DOI)
 
-A digital object identifier (DOI) is a unique persistent identifier that references a digital object and provides long-term access. Just as journal articles carry DOIs, so too can open source software repositories. See the U.S. Office of Scientific and Technical Information's (OSTI's) [FAQ on DOIs](https://www.osti.gov/doecode/faq#what-is-a-doi) for details about how DOIs work and why they are beneficial.
+A digital object identifier (DOI) is a unique persistent identifier that references a digital object and provides long-term access. Just as journal articles carry DOIs, so too can open source software repositories. See the U.S. Office of Scientific and Technical Information's (OSTI's) [FAQ on DOIs](hhttps://www.osti.gov/doecode/FAQs#what-is-a-doi) for details about how DOIs work and why they are beneficial.
 
-After your code receives an LLNL release number, the Information Management team will submit it to OSTI's [DOE CODE](https://www.osti.gov/doecode/faq#what-is), which assigns DOIs to software and adds them to the [DOE Code catalog](https://www.osti.gov/doecode/). [Contact OSTI](https://www.osti.gov/doecode/contact) with questions or concerns about this process.
+After your code receives an LLNL release number, the Information Management team will submit it to OSTI's [DOE CODE](https://www.osti.gov/doecode/FAQs#what-is), which assigns DOIs to software and adds them to the [DOE Code catalog](https://www.osti.gov/doecode/). [Contact OSTI](https://www.osti.gov/doecode/contact) with questions or concerns about this process.
 
 OSTI is evaluating a notification workflow that would let a developer know when a DOI has been assigned. Until then, you can find your repo's DOI *and* add it to the repo by following these steps:
 
