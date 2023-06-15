@@ -43449,6 +43449,20 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "extrap",
+                                    "repository": {
+                                        "nameWithOwner": "extra-p/extrap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-hatchet",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/hatchet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -43466,13 +43480,6 @@
                                     "packageName": "pandas",
                                     "repository": {
                                         "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
                                     }
                                 },
                                 {
@@ -43504,13 +43511,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
@@ -43525,23 +43525,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "pydot",
-                                    "repository": {
-                                        "nameWithOwner": "pydot/pydot"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "seaborn",
-                                    "repository": {
-                                        "nameWithOwner": "mwaskom/seaborn"
                                     }
                                 }
                             ]
@@ -43797,7 +43783,12 @@
                 ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
             }
         },
         "LLNL/toss-stig": {
@@ -57106,13 +57097,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "importlib-metadata",
-                                    "repository": {
-                                        "nameWithOwner": "python/importlib_metadata"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "jinja2",
                                     "repository": {
                                         "nameWithOwner": "pallets/jinja"
@@ -57228,13 +57212,6 @@
                                     "packageName": "urllib3",
                                     "repository": {
                                         "nameWithOwner": "urllib3/urllib3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "zipp",
-                                    "repository": {
-                                        "nameWithOwner": "jaraco/zipp"
                                     }
                                 }
                             ]
