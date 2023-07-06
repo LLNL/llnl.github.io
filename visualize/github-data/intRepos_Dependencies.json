@@ -2543,7 +2543,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "json-loader",
                                     "repository": {
-                                        "nameWithOwner": "webpack-contrib/json-loader"
+                                        "nameWithOwner": "kamilkisiela/graphql-inspector"
                                     }
                                 },
                                 {
@@ -4465,7 +4465,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "react-list",
                                     "repository": {
-                                        "nameWithOwner": "dxos/dxos"
+                                        "nameWithOwner": "caseywebdev/react-list"
                                     }
                                 },
                                 {
@@ -11579,6 +11579,53 @@
                 ]
             }
         },
+        "ESGF/esgf-user-support": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "seanzhengw/sphinx-pages",
+                                    "repository": {
+                                        "nameWithOwner": "seanzhengw/sphinx-pages"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-utils": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -13123,7 +13170,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "chrome-trace-event",
                                     "repository": {
-                                        "nameWithOwner": "TritonDataCenter/node-trace-event"
+                                        "nameWithOwner": "deepin-community/node-chrome-trace-event"
                                     }
                                 },
                                 {
@@ -13205,7 +13252,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "crypto",
                                     "repository": {
-                                        "nameWithOwner": "Gozala/crypto"
+                                        "nameWithOwner": "airgap-it/airgap-coin-lib"
                                     }
                                 },
                                 {
@@ -14133,6 +14180,60 @@
                                     "packageName": "JuliaRegistries/TagBot",
                                     "repository": {
                                         "nameWithOwner": "JuliaRegistries/TagBot"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#a270ba",
+                        "name": "Julia"
+                    }
+                ]
+            }
+        },
+        "GMLC-TDC/HELICSBuilder": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "julia-actions/setup-julia",
+                                    "repository": {
+                                        "nameWithOwner": "julia-actions/setup-julia"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "softprops/action-gh-release",
+                                    "repository": {
+                                        "nameWithOwner": "softprops/action-gh-release"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
@@ -15200,7 +15301,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "camel-case",
                                     "repository": {
-                                        "nameWithOwner": "blakeembrey/change-case"
+                                        "nameWithOwner": "tomByrer/camel-case"
                                     }
                                 },
                                 {
@@ -15517,6 +15618,126 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
+                    }
+                ]
+            }
+        },
+        "GMLC-TDC/helics-packaging": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -21400,7 +21621,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "diff",
                                     "repository": {
-                                        "nameWithOwner": "sanity-io/sanity"
+                                        "nameWithOwner": "kpdecker/jsdiff"
                                     }
                                 },
                                 {
@@ -24013,7 +24234,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "python-socketio",
                                     "repository": {
-                                        "nameWithOwner": "miguelgrinberg/python-socketio"
+                                        "nameWithOwner": "csulliv9/python_socketio"
                                     }
                                 }
                             ]
@@ -24704,7 +24925,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "python-socketio",
                                     "repository": {
-                                        "nameWithOwner": "miguelgrinberg/python-socketio"
+                                        "nameWithOwner": "csulliv9/python_socketio"
                                     }
                                 },
                                 {
@@ -27575,7 +27796,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.Net.Http.Headers",
                                     "repository": {
-                                        "nameWithOwner": "aspnet/HttpAbstractions"
+                                        "nameWithOwner": "dotnet/aspnetcore"
                                     }
                                 },
                                 {
@@ -28112,7 +28333,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.Net.Http.Headers",
                                     "repository": {
-                                        "nameWithOwner": "aspnet/HttpAbstractions"
+                                        "nameWithOwner": "dotnet/aspnetcore"
                                     }
                                 },
                                 {
@@ -45560,6 +45781,19 @@
                 ]
             }
         },
+        "alankaplan/CTMLD": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "chaos/9nbd": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -46424,6 +46658,14 @@
             }
         },
         "flux-framework/fliirm": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
+        "flux-framework/fluence": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -50203,6 +50445,61 @@
                 ]
             }
         },
+        "landajuela/cardiac_ml": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "h5py",
+                                    "repository": {
+                                        "nameWithOwner": "h5py/h5py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "mdg-graphics/griz": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -51748,7 +52045,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "python-socketio",
                                     "repository": {
-                                        "nameWithOwner": "miguelgrinberg/python-socketio"
+                                        "nameWithOwner": "csulliv9/python_socketio"
                                     }
                                 },
                                 {
@@ -52438,7 +52735,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "color",
                                     "repository": {
-                                        "nameWithOwner": "Qix-/color"
+                                        "nameWithOwner": "adobe/react-spectrum"
                                     }
                                 },
                                 {
@@ -53402,7 +53699,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "configparser",
                                     "repository": {
-                                        "nameWithOwner": "jaraco/configparser"
+                                        "nameWithOwner": "mdsitton/configparser-3.2.0r3"
                                     }
                                 },
                                 {
@@ -53498,7 +53795,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "singledispatch",
                                     "repository": {
-                                        "nameWithOwner": "jaraco/singledispatch"
+                                        "nameWithOwner": "ambv/singledispatch"
                                     }
                                 },
                                 {
@@ -54291,7 +54588,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "color",
                                     "repository": {
-                                        "nameWithOwner": "Qix-/color"
+                                        "nameWithOwner": "adobe/react-spectrum"
                                     }
                                 },
                                 {
@@ -57404,6 +57701,32 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
+                    }
+                ]
+            }
+        },
+        "tonyhutter/e1000_nvme_led": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
+        "tonyhutter/edit-initramfs": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#89e051",
+                        "name": "Shell"
                     }
                 ]
             }
