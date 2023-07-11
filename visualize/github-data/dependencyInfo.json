@@ -7690,17 +7690,6 @@
                 "login": "dotnet"
             }
         },
-        "dotnet/core-setup": {
-            "languages": {
-                "nodes": []
-            },
-            "name": "core-setup",
-            "nameWithOwner": "dotnet/core-setup",
-            "owner": {
-                "isVerified": true,
-                "login": "dotnet"
-            }
-        },
         "dotnet/corefx": {
             "languages": {
                 "nodes": []
@@ -7766,6 +7755,22 @@
             },
             "name": "runtime",
             "nameWithOwner": "dotnet/runtime",
+            "owner": {
+                "isVerified": true,
+                "login": "dotnet"
+            }
+        },
+        "dotnet/source-build": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#89e051",
+                        "name": "Shell"
+                    }
+                ]
+            },
+            "name": "source-build",
+            "nameWithOwner": "dotnet/source-build",
             "owner": {
                 "isVerified": true,
                 "login": "dotnet"
@@ -8628,21 +8633,6 @@
                 "login": "evanphx"
             }
         },
-        "evansd/whitenoise": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            },
-            "name": "whitenoise",
-            "nameWithOwner": "evansd/whitenoise",
-            "owner": {
-                "login": "evansd"
-            }
-        },
         "evanw/esbuild": {
             "languages": {
                 "nodes": [
@@ -9451,7 +9441,7 @@
                 "login": "fralau"
             }
         },
-        "frictionlessdata/framework": {
+        "frictionlessdata/frictionless-py": {
             "languages": {
                 "nodes": [
                     {
@@ -9460,8 +9450,8 @@
                     }
                 ]
             },
-            "name": "framework",
-            "nameWithOwner": "frictionlessdata/framework",
+            "name": "frictionless-py",
+            "nameWithOwner": "frictionlessdata/frictionless-py",
             "owner": {
                 "isVerified": true,
                 "login": "frictionlessdata"
@@ -11299,6 +11289,22 @@
             "owner": {
                 "isVerified": true,
                 "login": "ipython"
+            }
+        },
+        "iqmo-org/magic_duckdb": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "magic_duckdb",
+            "nameWithOwner": "iqmo-org/magic_duckdb",
+            "owner": {
+                "isVerified": false,
+                "login": "iqmo-org"
             }
         },
         "isaacs/block-stream": {
@@ -13590,6 +13596,22 @@
             "nameWithOwner": "kamitchell/altgraph",
             "owner": {
                 "login": "kamitchell"
+            }
+        },
+        "karma-runner/karma": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f1e05a",
+                        "name": "JavaScript"
+                    }
+                ]
+            },
+            "name": "karma",
+            "nameWithOwner": "karma-runner/karma",
+            "owner": {
+                "isVerified": false,
+                "login": "karma-runner"
             }
         },
         "karma-runner/karma-chrome-launcher": {
@@ -17184,6 +17206,21 @@
                 "login": "openid"
             }
         },
+        "openjck/whitenoise": {
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            },
+            "name": "whitenoise",
+            "nameWithOwner": "openjck/whitenoise",
+            "owner": {
+                "login": "openjck"
+            }
+        },
         "opensearch-project/opensearch-dsl-py": {
             "languages": {
                 "nodes": [
@@ -19210,22 +19247,6 @@
             },
             "name": "pytest-cov",
             "nameWithOwner": "pytest-dev/pytest-cov",
-            "owner": {
-                "isVerified": false,
-                "login": "pytest-dev"
-            }
-        },
-        "pytest-dev/pytest-randomly": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            },
-            "name": "pytest-randomly",
-            "nameWithOwner": "pytest-dev/pytest-randomly",
             "owner": {
                 "isVerified": false,
                 "login": "pytest-dev"
@@ -21902,22 +21923,6 @@
             "owner": {
                 "isVerified": false,
                 "login": "snowballstem"
-            }
-        },
-        "socialbaking/karma": {
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3178c6",
-                        "name": "TypeScript"
-                    }
-                ]
-            },
-            "name": "karma",
-            "nameWithOwner": "socialbaking/karma",
-            "owner": {
-                "isVerified": false,
-                "login": "socialbaking"
             }
         },
         "socketio/socket.io": {
