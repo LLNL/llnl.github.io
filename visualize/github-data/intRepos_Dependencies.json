@@ -5014,19 +5014,6 @@
                 ]
             }
         },
-        "CDAT/selenium-testlib": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/spark-cdms": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -11954,7 +11941,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "pytest-dev/pluggy"
+                                        "nameWithOwner": "s0undt3ch/pluggy"
                                     }
                                 },
                                 {
@@ -20327,7 +20314,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue-router",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue-router"
+                                        "nameWithOwner": "ionic-team/ionic-framework"
                                     }
                                 },
                                 {
@@ -27408,1498 +27395,1359 @@
                 ]
             }
         },
-        "LLNL/Wintap": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Antlr4.Runtime",
-                                    "repository": {
-                                        "nameWithOwner": "tunnelvisionlabs/antlr4cs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Antlr4.Runtime.Standard",
-                                    "repository": {
-                                        "nameWithOwner": "antlr/antlr4"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Castle.Core",
-                                    "repository": {
-                                        "nameWithOwner": "castleproject/Core"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Castle.Windsor",
-                                    "repository": {
-                                        "nameWithOwner": "castleproject/Windsor"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Common.Logging",
-                                    "repository": {
-                                        "nameWithOwner": "aspnetrun/run-aspnetcore-microservices"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Common.Logging.Core",
-                                    "repository": {
-                                        "nameWithOwner": "net-commons/common-logging"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Crc32.NET",
-                                    "repository": {
-                                        "nameWithOwner": "force-net/Crc32.NET"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "EntityFramework",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/ef6"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.Cors",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/CORS"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.SignalR.Core",
-                                    "repository": {
-                                        "nameWithOwner": "SignalR/SignalR"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.Client",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetWebStack"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.Core",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetWebStack"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.Owin",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.OwinSelfHost",
-                                    "repository": {
-                                        "nameWithOwner": "SzymonPobiega/PipelineManager"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.WebHost",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetWebStack"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authentication.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authentication.Core",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/HttpAbstractions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authorization",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authorization.Policy",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/Security"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Hosting.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/HttpAbstractions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http.Extensions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http.Features",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Metadata",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.ApiExplorer",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.Core",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.DataAnnotations",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.ResponseCaching.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Routing",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Routing.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.StaticFiles",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.WebUtilities",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Bcl.AsyncInterfaces",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.CSharp",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Diagnostics.Tracing.TraceEvent",
-                                    "repository": {
-                                        "nameWithOwner": "microsoft/perfview"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.DotNet.PlatformAbstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/source-build"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.ApiDescription.Server",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Configuration.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.DependencyInjection",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/DependencyInjection"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.DependencyModel",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.FileProviders.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.FileProviders.Embedded",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Hosting.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Localization",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Localization.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Logging.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.ObjectPool",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Options",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/Options"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Primitives",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.WebEncoders",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Net.Http.Headers",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.OpenApi",
-                                    "repository": {
-                                        "nameWithOwner": "microsoft/OpenAPI.NET"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Cors",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Diagnostics",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.FileSystems",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Host.HttpListener",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Hosting",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Security",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.StaticFiles",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Web.Infrastructure",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetWebStack"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "NEsper",
-                                    "repository": {
-                                        "nameWithOwner": "espertechinc/nesper"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Newtonsoft.Json",
-                                    "repository": {
-                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Nito.KitchenSink.CRC",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Owin",
-                                    "repository": {
-                                        "nameWithOwner": "owin-contrib/owin-hosting"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "RestSharp",
-                                    "repository": {
-                                        "nameWithOwner": "restsharp/RestSharp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Sharpen",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Stub.System.Data.SQLite.Core.NetFramework",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.WebApi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.AspNetCore",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.AspNetCore.Swagger",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.AspNetCore.SwaggerGen",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.AspNetCore.SwaggerUI",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.Core",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.WebApi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Buffers",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Collections.Immutable",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.ComponentModel.Annotations",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Data.SQLite",
-                                    "repository": {
-                                        "nameWithOwner": "cityindex-attic/CIAPI.CS"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Data.SQLite.Core",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Data.SQLite.EF6",
-                                    "repository": {
-                                        "nameWithOwner": "haf/System.Data.SQLite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Data.SQLite.Linq",
-                                    "repository": {
-                                        "nameWithOwner": "haf/System.Data.SQLite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Diagnostics.DiagnosticSource",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/corefx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.IO.Pipelines",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Memory",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Numerics.Vectors",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Reflection.Metadata",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Runtime.CompilerServices.Unsafe",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Runtime.InteropServices.RuntimeInformation",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Text.Encodings.Web",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Text.Json",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Threading.Tasks.Extensions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.ValueTuple",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "WebActivatorEx",
-                                    "repository": {
-                                        "nameWithOwner": "davidebbo/WebActivator"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "WintapAPI",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/Wintap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "XLR8.CGLib",
-                                    "repository": {
-                                        "nameWithOwner": "ajaxx/XLR8.CGLib"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authentication.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authentication.Core",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/HttpAbstractions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authorization",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Authorization.Policy",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/Security"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Hosting.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/HttpAbstractions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http.Extensions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Http.Features",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.ApiExplorer",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.Core",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Mvc.DataAnnotations",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.ResponseCaching.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Routing",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.Routing.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNetCore.WebUtilities",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Bcl.AsyncInterfaces",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.DotNet.PlatformAbstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/source-build"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Configuration.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.DependencyInjection",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/DependencyInjection"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.DependencyModel",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.FileProviders.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Hosting.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Localization",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Localization.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Logging.Abstractions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.ObjectPool",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Options",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/Options"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Extensions.Primitives",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Net.Http.Headers",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.OpenApi",
-                                    "repository": {
-                                        "nameWithOwner": "microsoft/OpenAPI.NET"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Newtonsoft.Json",
-                                    "repository": {
-                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.AspNetCore.Swagger",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Buffers",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.ComponentModel.Annotations",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Diagnostics.DiagnosticSource",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/corefx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Memory",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Numerics.Vectors",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Runtime.CompilerServices.Unsafe",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Runtime.InteropServices.RuntimeInformation",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Text.Encodings.Web",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Text.Json",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Threading.Tasks.Extensions",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.ValueTuple",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Antlr4.Runtime",
-                                    "repository": {
-                                        "nameWithOwner": "tunnelvisionlabs/antlr4cs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "AWSSDK.S3",
-                                    "repository": {
-                                        "nameWithOwner": "aws/aws-sdk-net"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "BouncyCastle.OpenPgp",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Castle.Core",
-                                    "repository": {
-                                        "nameWithOwner": "castleproject/Core"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "ChoETL.Parquet",
-                                    "repository": {
-                                        "nameWithOwner": "Cinchoo/ChoETL"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Common.Logging",
-                                    "repository": {
-                                        "nameWithOwner": "aspnetrun/run-aspnetcore-microservices"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "NEsper",
-                                    "repository": {
-                                        "nameWithOwner": "espertechinc/nesper"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "NETStandard.Library",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Newtonsoft.Json",
-                                    "repository": {
-                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Parquet.Net",
-                                    "repository": {
-                                        "nameWithOwner": "aloneguid/parquet-dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Memory",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Runtime.CompilerServices.Unsafe",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "WintapAPI",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/Wintap"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "ChoETL.Parquet",
-                                    "repository": {
-                                        "nameWithOwner": "Cinchoo/ChoETL"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Costura.Fody",
-                                    "repository": {
-                                        "nameWithOwner": "Fody/Costura"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Parquet.Net",
-                                    "repository": {
-                                        "nameWithOwner": "aloneguid/parquet-dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Memory",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Newtonsoft.Json",
-                                    "repository": {
-                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.ServiceProcess.ServiceController",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Antlr4.Runtime",
-                                    "repository": {
-                                        "nameWithOwner": "tunnelvisionlabs/antlr4cs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Castle.Core",
-                                    "repository": {
-                                        "nameWithOwner": "castleproject/Core"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Common.Logging",
-                                    "repository": {
-                                        "nameWithOwner": "aspnetrun/run-aspnetcore-microservices"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Common.Logging.Core",
-                                    "repository": {
-                                        "nameWithOwner": "net-commons/common-logging"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Costura.Fody",
-                                    "repository": {
-                                        "nameWithOwner": "Fody/Costura"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "EntityFramework",
-                                    "repository": {
-                                        "nameWithOwner": "dotnet/ef6"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Fody",
-                                    "repository": {
-                                        "nameWithOwner": "Fody/Fody"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Google.Protobuf",
-                                    "repository": {
-                                        "nameWithOwner": "protocolbuffers/protobuf"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Google.ProtocolBuffers",
-                                    "repository": {
-                                        "nameWithOwner": "jcbjcbjc/unique-project-client"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "jQuery",
-                                    "repository": {
-                                        "nameWithOwner": "jquery/jquery"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.Cors",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/CORS"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.SignalR.Core",
-                                    "repository": {
-                                        "nameWithOwner": "SignalR/SignalR"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.SignalR.JS",
-                                    "repository": {
-                                        "nameWithOwner": "SignalR/SignalR"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.SignalR.SelfHost",
-                                    "repository": {
-                                        "nameWithOwner": "SignalR/SignalR"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.Client",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetWebStack"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.Core",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetWebStack"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.Owin",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.AspNet.WebApi.OwinSelfHost",
-                                    "repository": {
-                                        "nameWithOwner": "SzymonPobiega/PipelineManager"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Diagnostics.Tracing.TraceEvent",
-                                    "repository": {
-                                        "nameWithOwner": "microsoft/perfview"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.IdentityModel.Logging",
-                                    "repository": {
-                                        "nameWithOwner": "AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.IdentityModel.Tokens",
-                                    "repository": {
-                                        "nameWithOwner": "AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Cors",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Diagnostics",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.FileSystems",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Host.HttpListener",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Hosting",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.Security",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.SelfHost",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Microsoft.Owin.StaticFiles",
-                                    "repository": {
-                                        "nameWithOwner": "aspnet/AspNetKatana"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "NEsper",
-                                    "repository": {
-                                        "nameWithOwner": "espertechinc/nesper"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Newtonsoft.Json",
-                                    "repository": {
-                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Nito.KitchenSink.CRC",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "NLog",
-                                    "repository": {
-                                        "nameWithOwner": "NLog/NLog"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Owin",
-                                    "repository": {
-                                        "nameWithOwner": "owin-contrib/owin-hosting"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "RestSharp",
-                                    "repository": {
-                                        "nameWithOwner": "restsharp/RestSharp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Sharpen",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "SslCertBinding.Net",
-                                    "repository": {
-                                        "nameWithOwner": "segor/SslCertBinding.Net"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "Swashbuckle.Core",
-                                    "repository": {
-                                        "nameWithOwner": "domaindrivendev/Swashbuckle.WebApi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.Data.SQLite.Core",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "System.IdentityModel.Tokens.Jwt",
-                                    "repository": {
-                                        "nameWithOwner": "AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NUGET",
-                                    "packageName": "XLR8.CGLib",
-                                    "repository": {
-                                        "nameWithOwner": "ajaxx/XLR8.CGLib"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#178600",
-                        "name": "C#"
-                    }
-                ]
-            }
-        },
         "LLNL/Wintap-PyUtil": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "altair",
+                                    "repository": {
+                                        "nameWithOwner": "altair-viz/altair"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "psf/black"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "duckdb/duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "humanfriendly",
+                                    "repository": {
+                                        "nameWithOwner": "xolox/python-humanfriendly"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "importlib-resources",
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_resources"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipyfilechooser",
+                                    "repository": {
+                                        "nameWithOwner": "crahan/ipyfilechooser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "isort",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/isort"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinjasql",
+                                    "repository": {
+                                        "nameWithOwner": "sripathikrishnan/jinjasql"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "magic-duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "iqmo-org/magic_duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbstripout",
+                                    "repository": {
+                                        "nameWithOwner": "kynan/nbstripout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "networkx",
+                                    "repository": {
+                                        "nameWithOwner": "networkx/networkx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyarrow",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "theskumar/python-dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlfluff",
+                                    "repository": {
+                                        "nameWithOwner": "sqlfluff/sqlfluff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toml",
+                                    "repository": {
+                                        "nameWithOwner": "uiri/toml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "altair",
+                                    "repository": {
+                                        "nameWithOwner": "altair-viz/altair"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "appdirs",
+                                    "repository": {
+                                        "nameWithOwner": "ActiveState/appdirs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "asttokens",
+                                    "repository": {
+                                        "nameWithOwner": "gristlabs/asttokens"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "attrs",
+                                    "repository": {
+                                        "nameWithOwner": "python-attrs/attrs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "backcall",
+                                    "repository": {
+                                        "nameWithOwner": "takluyver/backcall"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "psf/black"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "botocore",
+                                    "repository": {
+                                        "nameWithOwner": "boto/botocore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "chardet",
+                                    "repository": {
+                                        "nameWithOwner": "chardet/chardet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "colorama",
+                                    "repository": {
+                                        "nameWithOwner": "tartley/colorama"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "comm",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/comm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "contourpy",
+                                    "repository": {
+                                        "nameWithOwner": "contourpy/contourpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cycler",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/cycler"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "debugpy",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/debugpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "decorator",
+                                    "repository": {
+                                        "nameWithOwner": "micheles/decorator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "diff-cover",
+                                    "repository": {
+                                        "nameWithOwner": "Bachmann1234/diff_cover"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "duckdb/duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "exceptiongroup",
+                                    "repository": {
+                                        "nameWithOwner": "python-trio/exceptiongroup"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "executing",
+                                    "repository": {
+                                        "nameWithOwner": "alexmojaki/executing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "fastjsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "horejsek/python-fastjsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "fonttools",
+                                    "repository": {
+                                        "nameWithOwner": "fonttools/fonttools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "humanfriendly",
+                                    "repository": {
+                                        "nameWithOwner": "xolox/python-humanfriendly"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "importlib-resources",
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_resources"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "iniconfig",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/iniconfig"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipyfilechooser",
+                                    "repository": {
+                                        "nameWithOwner": "crahan/ipyfilechooser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipykernel",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipython",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipywidgets",
+                                    "repository": {
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "isort",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/isort"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jedi",
+                                    "repository": {
+                                        "nameWithOwner": "davidhalter/jedi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinjasql",
+                                    "repository": {
+                                        "nameWithOwner": "sripathikrishnan/jinjasql"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jmespath",
+                                    "repository": {
+                                        "nameWithOwner": "jmespath/jmespath.py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/jsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema-specifications",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/jsonschema-specifications"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter-client",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter_client"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter-core",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter_core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyterlab-widgets",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kiwisolver",
+                                    "repository": {
+                                        "nameWithOwner": "nucleic/kiwi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "magic-duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "iqmo-org/magic_duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib-inline",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/matplotlib-inline"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy_extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbformat",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbformat"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbstripout",
+                                    "repository": {
+                                        "nameWithOwner": "kynan/nbstripout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nest-asyncio",
+                                    "repository": {
+                                        "nameWithOwner": "erdewit/nest_asyncio"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "networkx",
+                                    "repository": {
+                                        "nameWithOwner": "networkx/networkx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "packaging",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/packaging"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "parso",
+                                    "repository": {
+                                        "nameWithOwner": "davidhalter/parso"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pathspec",
+                                    "repository": {
+                                        "nameWithOwner": "cpburnz/python-pathspec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pexpect",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/pexpect"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pickleshare",
+                                    "repository": {
+                                        "nameWithOwner": "pickleshare/pickleshare"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pillow",
+                                    "repository": {
+                                        "nameWithOwner": "python-pillow/Pillow"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "platformdirs",
+                                    "repository": {
+                                        "nameWithOwner": "platformdirs/platformdirs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pluggy",
+                                    "repository": {
+                                        "nameWithOwner": "s0undt3ch/pluggy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "prompt-toolkit",
+                                    "repository": {
+                                        "nameWithOwner": "prompt-toolkit/python-prompt-toolkit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psutil",
+                                    "repository": {
+                                        "nameWithOwner": "giampaolo/psutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ptyprocess",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/ptyprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pure-eval",
+                                    "repository": {
+                                        "nameWithOwner": "alexmojaki/pure_eval"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyarrow",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pygments",
+                                    "repository": {
+                                        "nameWithOwner": "pygments/pygments"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyparsing",
+                                    "repository": {
+                                        "nameWithOwner": "pyparsing/pyparsing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dotenv",
+                                    "repository": {
+                                        "nameWithOwner": "theskumar/python-dotenv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytz",
+                                    "repository": {
+                                        "nameWithOwner": "stub42/pytz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyzmq",
+                                    "repository": {
+                                        "nameWithOwner": "zeromq/pyzmq"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "referencing",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/referencing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "regex",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "rpds-py",
+                                    "repository": {
+                                        "nameWithOwner": "crate-py/rpds"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "s3transfer",
+                                    "repository": {
+                                        "nameWithOwner": "boto/s3transfer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sqlfluff",
+                                    "repository": {
+                                        "nameWithOwner": "sqlfluff/sqlfluff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "stack-data",
+                                    "repository": {
+                                        "nameWithOwner": "alexmojaki/stack_data"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tblib",
+                                    "repository": {
+                                        "nameWithOwner": "ionelmc/python-tblib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tokenize-rt",
+                                    "repository": {
+                                        "nameWithOwner": "asottile/tokenize-rt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toml",
+                                    "repository": {
+                                        "nameWithOwner": "uiri/toml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tomli",
+                                    "repository": {
+                                        "nameWithOwner": "hukkin/tomli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toolz",
+                                    "repository": {
+                                        "nameWithOwner": "pytoolz/toolz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tornado",
+                                    "repository": {
+                                        "nameWithOwner": "tornadoweb/tornado"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "traitlets",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/traitlets"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "typing-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/typing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tzdata",
+                                    "repository": {
+                                        "nameWithOwner": "python/tzdata"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "wcwidth",
+                                    "repository": {
+                                        "nameWithOwner": "jquast/wcwidth"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "widgetsnbextension",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "altair",
+                                    "repository": {
+                                        "nameWithOwner": "altair-viz/altair"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "asttokens",
+                                    "repository": {
+                                        "nameWithOwner": "gristlabs/asttokens"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "attrs",
+                                    "repository": {
+                                        "nameWithOwner": "python-attrs/attrs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "backcall",
+                                    "repository": {
+                                        "nameWithOwner": "takluyver/backcall"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "psf/black"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "botocore",
+                                    "repository": {
+                                        "nameWithOwner": "boto/botocore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "comm",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/comm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "contourpy",
+                                    "repository": {
+                                        "nameWithOwner": "contourpy/contourpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cycler",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/cycler"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "debugpy",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/debugpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "decorator",
+                                    "repository": {
+                                        "nameWithOwner": "micheles/decorator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "duckdb/duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "executing",
+                                    "repository": {
+                                        "nameWithOwner": "alexmojaki/executing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "fastjsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "horejsek/python-fastjsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "fonttools",
+                                    "repository": {
+                                        "nameWithOwner": "fonttools/fonttools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "humanfriendly",
+                                    "repository": {
+                                        "nameWithOwner": "xolox/python-humanfriendly"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "importlib-resources",
+                                    "repository": {
+                                        "nameWithOwner": "python/importlib_resources"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipyfilechooser",
+                                    "repository": {
+                                        "nameWithOwner": "crahan/ipyfilechooser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipykernel",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipython",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipywidgets",
+                                    "repository": {
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jedi",
+                                    "repository": {
+                                        "nameWithOwner": "davidhalter/jedi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinjasql",
+                                    "repository": {
+                                        "nameWithOwner": "sripathikrishnan/jinjasql"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jmespath",
+                                    "repository": {
+                                        "nameWithOwner": "jmespath/jmespath.py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/jsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema-specifications",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/jsonschema-specifications"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter-client",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter_client"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter-core",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter_core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyterlab-widgets",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kiwisolver",
+                                    "repository": {
+                                        "nameWithOwner": "nucleic/kiwi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "magic-duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "iqmo-org/magic_duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib-inline",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/matplotlib-inline"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy_extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbformat",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbformat"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbstripout",
+                                    "repository": {
+                                        "nameWithOwner": "kynan/nbstripout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nest-asyncio",
+                                    "repository": {
+                                        "nameWithOwner": "erdewit/nest_asyncio"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "networkx",
+                                    "repository": {
+                                        "nameWithOwner": "networkx/networkx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "packaging",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/packaging"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "parso",
+                                    "repository": {
+                                        "nameWithOwner": "davidhalter/parso"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pathspec",
+                                    "repository": {
+                                        "nameWithOwner": "cpburnz/python-pathspec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pexpect",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/pexpect"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pickleshare",
+                                    "repository": {
+                                        "nameWithOwner": "pickleshare/pickleshare"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pillow",
+                                    "repository": {
+                                        "nameWithOwner": "python-pillow/Pillow"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "platformdirs",
+                                    "repository": {
+                                        "nameWithOwner": "platformdirs/platformdirs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "prompt-toolkit",
+                                    "repository": {
+                                        "nameWithOwner": "prompt-toolkit/python-prompt-toolkit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psutil",
+                                    "repository": {
+                                        "nameWithOwner": "giampaolo/psutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ptyprocess",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/ptyprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pure-eval",
+                                    "repository": {
+                                        "nameWithOwner": "alexmojaki/pure_eval"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyarrow",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pygments",
+                                    "repository": {
+                                        "nameWithOwner": "pygments/pygments"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyparsing",
+                                    "repository": {
+                                        "nameWithOwner": "pyparsing/pyparsing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytz",
+                                    "repository": {
+                                        "nameWithOwner": "stub42/pytz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyzmq",
+                                    "repository": {
+                                        "nameWithOwner": "zeromq/pyzmq"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "referencing",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/referencing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "rpds-py",
+                                    "repository": {
+                                        "nameWithOwner": "crate-py/rpds"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "s3transfer",
+                                    "repository": {
+                                        "nameWithOwner": "boto/s3transfer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "stack-data",
+                                    "repository": {
+                                        "nameWithOwner": "alexmojaki/stack_data"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tokenize-rt",
+                                    "repository": {
+                                        "nameWithOwner": "asottile/tokenize-rt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toml",
+                                    "repository": {
+                                        "nameWithOwner": "uiri/toml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tomli",
+                                    "repository": {
+                                        "nameWithOwner": "hukkin/tomli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "toolz",
+                                    "repository": {
+                                        "nameWithOwner": "pytoolz/toolz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tornado",
+                                    "repository": {
+                                        "nameWithOwner": "tornadoweb/tornado"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "traitlets",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/traitlets"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "typing-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/typing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tzdata",
+                                    "repository": {
+                                        "nameWithOwner": "python/tzdata"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "wcwidth",
+                                    "repository": {
+                                        "nameWithOwner": "jquast/wcwidth"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "widgetsnbextension",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
@@ -28926,13 +28774,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "duckdb-engine",
-                                    "repository": {
-                                        "nameWithOwner": "Mause/duckdb_engine"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "humanfriendly",
                                     "repository": {
                                         "nameWithOwner": "xolox/python-humanfriendly"
@@ -28954,20 +28795,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "ipython-sql",
-                                    "repository": {
-                                        "nameWithOwner": "catherinedevlin/ipython-sql"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ipywidgets",
-                                    "repository": {
-                                        "nameWithOwner": "jakevdp/ipywidgets-static"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "jinja2",
                                     "repository": {
                                         "nameWithOwner": "pallets/jinja"
@@ -28978,13 +28805,6 @@
                                     "packageName": "jinjasql",
                                     "repository": {
                                         "nameWithOwner": "sripathikrishnan/jinjasql"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jupyterlab",
-                                    "repository": {
-                                        "nameWithOwner": "tojin12341za/jupyterlab"
                                     }
                                 },
                                 {
@@ -29022,23 +28842,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "python-dotenv",
+                                    "packageName": "toml",
                                     "repository": {
-                                        "nameWithOwner": "theskumar/python-dotenv"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sqlalchemy",
-                                    "repository": {
-                                        "nameWithOwner": "sqlalchemy/sqlalchemy"
+                                        "nameWithOwner": "uiri/toml"
                                     }
                                 },
                                 {
@@ -29055,79 +28861,17 @@
                         "dependencies": {
                             "nodes": [
                                 {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
                                     "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "atomicwrites",
-                                    "repository": {
-                                        "nameWithOwner": "untitaker/python-atomicwrites"
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 },
                                 {
-                                    "packageManager": "PIP",
-                                    "packageName": "dill",
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
                                     "repository": {
-                                        "nameWithOwner": "uqfoundation/dill"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest-cov",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest-cov"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinxcontrib-confluencebuilder",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-contrib/confluencebuilder"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tox",
-                                    "repository": {
-                                        "nameWithOwner": "tox-dev/tox"
+                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 }
                             ]
@@ -29138,8 +28882,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#e34c26",
-                        "name": "HTML"
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -34593,7 +34337,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "pytest-dev/pluggy"
+                                        "nameWithOwner": "s0undt3ch/pluggy"
                                     }
                                 },
                                 {
@@ -37006,7 +36750,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "pytest-dev/pluggy"
+                                        "nameWithOwner": "s0undt3ch/pluggy"
                                     }
                                 },
                                 {
@@ -56138,7 +55882,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "pytest-dev/pluggy"
+                                        "nameWithOwner": "s0undt3ch/pluggy"
                                     }
                                 },
                                 {
