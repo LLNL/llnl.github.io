@@ -1,6 +1,7 @@
 ---
 title: Visualize
 layout: default
+description: See how LLNL's open source programming has evolved over time with a look at activity across Lab repos.
 permalink: /visualize/
 ---
 
@@ -8,9 +9,12 @@ permalink: /visualize/
 
 <link rel="stylesheet" type="text/css" href="/css/graphstyle.css" />
 
-<h2 class="page-header text-center">
+<!-- @Doug, I promoted this header to an h1; can you please confirm that I did it right? It looks like all of the Software site needs this update. -->
+<h1 class="page-header text-center">
     LLNL GitHub Visualizations: Repositories
-</h2>
+</h1>
+
+Lawrence Livermore National Lab has contributed to open source repositories for years. See how our commits have evolved over time and how our open source contributions have grown.
 
 <!-- Preset vis display areas -->
 <center>
