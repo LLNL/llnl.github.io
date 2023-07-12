@@ -70,7 +70,7 @@ This portal abounds with examples of projects that have found a home in the open
 <!-- END: Quicklinks boxes -->
 
 ## Contact
-For more information, check out our [FAQ](faq). If you have other questions or would like to request a private repository, please don't hesitate to contact [Ian Lee](mailto:ian@llnl.gov) or our [LLNL GitHub admins](mailto:github-admin@llnl.gov). You can also find us on our mailing list: [open-source@llnl.gov](mailto:open-source@llnl.gov).
+For more information, check out our [FAQ](faq). If you have other questions or would like to request a private repository, please don't hesitate to contact our [LLNL GitHub admins](mailto:github-admin@llnl.gov). You can also find us on our mailing list: [open-source@llnl.gov](mailto:open-source@llnl.gov).
 
 <div class="text-center">
   <a href="https://twitter.com/LLNL_OpenSource" class="twitter-follow-button" data-show-count="true">Follow @LLNL_OpenSource</a>
