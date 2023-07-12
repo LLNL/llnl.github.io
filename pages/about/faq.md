@@ -94,7 +94,7 @@ Remember that these repositories *are hosted on GitHub* servers, ***not** LLNL s
 
 * No classified information
 * No export controlled information (ECI)
-* No Health Insurance Portability and Accountability Act- (HIPAA-) related information
+* No Health Insurance Portability and Accountability Act (HIPAA) related information
 * No personally identifiable information (PII)
 * No nondisclosure agreement or vendor-proprietary information
 * No controlled unclassifed information (CUI)
