@@ -1,6 +1,7 @@
 ---
 title: Contributors
 layout: default
+description: Get an overview of contributors to LLNL's GitHub repos, 
 permalink: /visualize/contributors/
 ---
 
@@ -8,10 +9,11 @@ permalink: /visualize/contributors/
 
 <link rel="stylesheet" type="text/css" href="/css/graphstyle.css" />
 
-<h2 class="page-header text-center">
+<h1 class="page-header text-center">
     LLNL GitHub Visualizations: Contributors
-</h2>
+</h1>
 
+Over 400 LLNL employees contribute to our repositories, but we also benefit from the work of external contributors. The majority of our repos have been enhanced by the work of the open source community.
 <!-- Preset vis display areas -->
 <center>
     <svg class="pieMembers"></svg><svg class="pieRepos"></svg>
