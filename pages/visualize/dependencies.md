@@ -1,6 +1,7 @@
 ---
 title: Dependencies
 layout: default
+description: See how LLNL both benefits from and contributes to a flourishing open source ecosystem.
 permalink: /visualize/dependencies/
 ---
 
@@ -9,9 +10,11 @@ permalink: /visualize/dependencies/
 <link rel="stylesheet" type="text/css" href="../../css/graphstyle.css" />
 <link rel="stylesheet" type="text/css" href="../../css/main.css" />
 
-<h2 class="page-header text-center">
+<h1 class="page-header text-center">
     LLNL GitHub Visualizations: Dependencies
-</h2>
+</h1>
+
+Livermore's work both fuels and depends on myriad open source packages. We're proud to be part of a robust development ecosystem both within and outside of the Laboratory.
 
 <!-- Preset vis display areas -->
 <center>
