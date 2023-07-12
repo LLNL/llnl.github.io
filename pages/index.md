@@ -1,12 +1,21 @@
 ---
 title: LLNL Software Portal
 layout: homepage
+description: Explore a repository of open source software projects developed at Lawrence Livermore National Laboratory.
 permalink: /
 ---
 
 {% raw %}
 
-<p class="title-para">Welcome to the LLNL software portal—a hub for our open source projects.<br />Our <a href="/explore/#/AllSoftware">full catalog</a> is updated regularly as repositories are added or modified.<br />(Looking for RADIUSS projects? Browse them <a href="https://software.llnl.gov/radiuss/" target="_blank">here</a>.)</p>
+<!-- @Doug, can you add an invisible h1: LLNL Software Portal? -->
+
+<p class="title-para">Welcome to the LLNL software portal — a hub for open source projects developed at the Lab.<br />Our <a href="/explore/#/AllSoftware">full catalog</a> is updated as repositories are added or modified.</p>
+
+<!-- START: CTA -->
+Looking for RADIUSS projects? 
+Find HPC build tools, math and physics libraries, data management and visualization tools, workflow tools, and portable programming and memory management libraries.
+<a href="/radiuss/projects/" target="_blank"><br/>Browse RADIUSS Projects</a>
+<!-- END: CTA -->
 
 <section class="flex-container" id="categories">
     <div ng-repeat="category in catData" ng-if="category.title!='All Software'" class="flex-category dynamic">
