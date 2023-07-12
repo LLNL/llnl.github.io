@@ -1,6 +1,7 @@
 ---
 title: Popular Repos
 layout: default
+description: Get details about our most popular repos, including how usage has grown over time.
 permalink: /visualize/popular-repos/
 ---
 
@@ -8,9 +9,11 @@ permalink: /visualize/popular-repos/
 
 <link rel="stylesheet" type="text/css" href="../../css/graphstyle.css" />
 
-<h2 class="page-header text-center">
+<h1 class="page-header text-center">
     LLNL GitHub Visualizations: Popular Repos
-</h2>
+</h1>
+
+We contribute to a variety of code repositories, some of which fuel internal work here at the Laboratory and others that are used widely by enterprise companies, academic institutions, and other national labs.
 
 <!-- Preset vis display areas -->
 <center>
