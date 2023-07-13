@@ -5014,6 +5014,19 @@
                 ]
             }
         },
+        "CDAT/selenium-testlib": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/spark-cdms": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -11941,7 +11954,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "s0undt3ch/pluggy"
+                                        "nameWithOwner": "pytest-dev/pluggy"
                                     }
                                 },
                                 {
@@ -20314,7 +20327,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue-router",
                                     "repository": {
-                                        "nameWithOwner": "ionic-team/ionic-framework"
+                                        "nameWithOwner": "vuejs/vue-router"
                                     }
                                 },
                                 {
@@ -21258,7 +21271,21 @@
         },
         "LLNL/GOTCHA": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -27395,6 +27422,1495 @@
                 ]
             }
         },
+        "LLNL/Wintap": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Antlr4.Runtime",
+                                    "repository": {
+                                        "nameWithOwner": "tunnelvisionlabs/antlr4cs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Antlr4.Runtime.Standard",
+                                    "repository": {
+                                        "nameWithOwner": "antlr/antlr4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Castle.Core",
+                                    "repository": {
+                                        "nameWithOwner": "castleproject/Core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Castle.Windsor",
+                                    "repository": {
+                                        "nameWithOwner": "castleproject/Windsor"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Common.Logging",
+                                    "repository": {
+                                        "nameWithOwner": "aspnetrun/run-aspnetcore-microservices"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Common.Logging.Core",
+                                    "repository": {
+                                        "nameWithOwner": "net-commons/common-logging"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Crc32.NET",
+                                    "repository": {
+                                        "nameWithOwner": "force-net/Crc32.NET"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "EntityFramework",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/ef6"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.Cors",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/CORS"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.SignalR.Core",
+                                    "repository": {
+                                        "nameWithOwner": "SignalR/SignalR"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.Client",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetWebStack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.Core",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetWebStack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.Owin",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.OwinSelfHost",
+                                    "repository": {
+                                        "nameWithOwner": "SzymonPobiega/PipelineManager"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.WebHost",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetWebStack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authentication.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authentication.Core",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/HttpAbstractions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authorization",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authorization.Policy",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/Security"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Hosting.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/HttpAbstractions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http.Extensions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http.Features",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Metadata",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.ApiExplorer",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.Core",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.DataAnnotations",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.ResponseCaching.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Routing",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Routing.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.StaticFiles",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.WebUtilities",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Bcl.AsyncInterfaces",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.CSharp",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Diagnostics.Tracing.TraceEvent",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/perfview"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.DotNet.PlatformAbstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/source-build"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.ApiDescription.Server",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Configuration.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.DependencyInjection",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/DependencyInjection"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.DependencyModel",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.FileProviders.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.FileProviders.Embedded",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Hosting.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Localization",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Localization.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Logging.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.ObjectPool",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Options",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/Options"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Primitives",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.WebEncoders",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Net.Http.Headers",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.OpenApi",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/OpenAPI.NET"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Cors",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Diagnostics",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.FileSystems",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Host.HttpListener",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Hosting",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Security",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.StaticFiles",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Web.Infrastructure",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetWebStack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "NEsper",
+                                    "repository": {
+                                        "nameWithOwner": "espertechinc/nesper"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Newtonsoft.Json",
+                                    "repository": {
+                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Nito.KitchenSink.CRC",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Owin",
+                                    "repository": {
+                                        "nameWithOwner": "owin-contrib/owin-hosting"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "RestSharp",
+                                    "repository": {
+                                        "nameWithOwner": "restsharp/RestSharp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Sharpen",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Stub.System.Data.SQLite.Core.NetFramework",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.WebApi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.AspNetCore",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.AspNetCore.Swagger",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.AspNetCore.SwaggerGen",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.AspNetCore.SwaggerUI",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.Core",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.WebApi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Buffers",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Collections.Immutable",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.ComponentModel.Annotations",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Data.SQLite",
+                                    "repository": {
+                                        "nameWithOwner": "cityindex-attic/CIAPI.CS"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Data.SQLite.Core",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Data.SQLite.EF6",
+                                    "repository": {
+                                        "nameWithOwner": "haf/System.Data.SQLite"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Data.SQLite.Linq",
+                                    "repository": {
+                                        "nameWithOwner": "haf/System.Data.SQLite"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Diagnostics.DiagnosticSource",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/corefx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.IO.Pipelines",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Memory",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Numerics.Vectors",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Reflection.Metadata",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Runtime.CompilerServices.Unsafe",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Runtime.InteropServices.RuntimeInformation",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Text.Encodings.Web",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Text.Json",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Threading.Tasks.Extensions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.ValueTuple",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "WebActivatorEx",
+                                    "repository": {
+                                        "nameWithOwner": "davidebbo/WebActivator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "WintapAPI",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Wintap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "XLR8.CGLib",
+                                    "repository": {
+                                        "nameWithOwner": "ajaxx/XLR8.CGLib"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authentication.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authentication.Core",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/HttpAbstractions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authorization",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Authorization.Policy",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/Security"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Hosting.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Hosting.Server.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/HttpAbstractions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http.Extensions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Http.Features",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.ApiExplorer",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.Core",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Mvc.DataAnnotations",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.ResponseCaching.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Routing",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.Routing.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNetCore.WebUtilities",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Bcl.AsyncInterfaces",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.DotNet.PlatformAbstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/source-build"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Configuration.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.DependencyInjection",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/DependencyInjection"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.DependencyInjection.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.DependencyModel",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.FileProviders.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Hosting.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Localization",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Localization.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Logging.Abstractions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.ObjectPool",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Options",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/Options"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Extensions.Primitives",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Net.Http.Headers",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/aspnetcore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.OpenApi",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/OpenAPI.NET"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Newtonsoft.Json",
+                                    "repository": {
+                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.AspNetCore.Swagger",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.AspNetCore"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Buffers",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.ComponentModel.Annotations",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Diagnostics.DiagnosticSource",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/corefx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Memory",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Numerics.Vectors",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Runtime.CompilerServices.Unsafe",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Runtime.InteropServices.RuntimeInformation",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Text.Encodings.Web",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Text.Json",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Threading.Tasks.Extensions",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.ValueTuple",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Antlr4.Runtime",
+                                    "repository": {
+                                        "nameWithOwner": "tunnelvisionlabs/antlr4cs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "AWSSDK.S3",
+                                    "repository": {
+                                        "nameWithOwner": "aws/aws-sdk-net"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "BouncyCastle.OpenPgp",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Castle.Core",
+                                    "repository": {
+                                        "nameWithOwner": "castleproject/Core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "ChoETL.Parquet",
+                                    "repository": {
+                                        "nameWithOwner": "Cinchoo/ChoETL"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Common.Logging",
+                                    "repository": {
+                                        "nameWithOwner": "aspnetrun/run-aspnetcore-microservices"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "NEsper",
+                                    "repository": {
+                                        "nameWithOwner": "espertechinc/nesper"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "NETStandard.Library",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Newtonsoft.Json",
+                                    "repository": {
+                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Parquet.Net",
+                                    "repository": {
+                                        "nameWithOwner": "aloneguid/parquet-dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Memory",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Runtime.CompilerServices.Unsafe",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "WintapAPI",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Wintap"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "ChoETL.Parquet",
+                                    "repository": {
+                                        "nameWithOwner": "Cinchoo/ChoETL"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Costura.Fody",
+                                    "repository": {
+                                        "nameWithOwner": "Fody/Costura"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Parquet.Net",
+                                    "repository": {
+                                        "nameWithOwner": "aloneguid/parquet-dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Memory",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Newtonsoft.Json",
+                                    "repository": {
+                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.ServiceProcess.ServiceController",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/runtime"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Antlr4.Runtime",
+                                    "repository": {
+                                        "nameWithOwner": "tunnelvisionlabs/antlr4cs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Castle.Core",
+                                    "repository": {
+                                        "nameWithOwner": "castleproject/Core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Common.Logging",
+                                    "repository": {
+                                        "nameWithOwner": "aspnetrun/run-aspnetcore-microservices"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Common.Logging.Core",
+                                    "repository": {
+                                        "nameWithOwner": "net-commons/common-logging"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Costura.Fody",
+                                    "repository": {
+                                        "nameWithOwner": "Fody/Costura"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "EntityFramework",
+                                    "repository": {
+                                        "nameWithOwner": "dotnet/ef6"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Fody",
+                                    "repository": {
+                                        "nameWithOwner": "Fody/Fody"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Google.Protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "protocolbuffers/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Google.ProtocolBuffers",
+                                    "repository": {
+                                        "nameWithOwner": "jcbjcbjc/unique-project-client"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "jQuery",
+                                    "repository": {
+                                        "nameWithOwner": "jquery/jquery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.Cors",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/CORS"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.SignalR.Core",
+                                    "repository": {
+                                        "nameWithOwner": "SignalR/SignalR"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.SignalR.JS",
+                                    "repository": {
+                                        "nameWithOwner": "SignalR/SignalR"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.SignalR.SelfHost",
+                                    "repository": {
+                                        "nameWithOwner": "SignalR/SignalR"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.Client",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetWebStack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.Core",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetWebStack"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.Owin",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.AspNet.WebApi.OwinSelfHost",
+                                    "repository": {
+                                        "nameWithOwner": "SzymonPobiega/PipelineManager"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Diagnostics.Tracing.TraceEvent",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/perfview"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.IdentityModel.Logging",
+                                    "repository": {
+                                        "nameWithOwner": "AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.IdentityModel.Tokens",
+                                    "repository": {
+                                        "nameWithOwner": "AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Cors",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Diagnostics",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.FileSystems",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Host.HttpListener",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Hosting",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.Security",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.SelfHost",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Microsoft.Owin.StaticFiles",
+                                    "repository": {
+                                        "nameWithOwner": "aspnet/AspNetKatana"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "NEsper",
+                                    "repository": {
+                                        "nameWithOwner": "espertechinc/nesper"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Newtonsoft.Json",
+                                    "repository": {
+                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Nito.KitchenSink.CRC",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "NLog",
+                                    "repository": {
+                                        "nameWithOwner": "NLog/NLog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Owin",
+                                    "repository": {
+                                        "nameWithOwner": "owin-contrib/owin-hosting"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "RestSharp",
+                                    "repository": {
+                                        "nameWithOwner": "restsharp/RestSharp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Sharpen",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "SslCertBinding.Net",
+                                    "repository": {
+                                        "nameWithOwner": "segor/SslCertBinding.Net"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Swashbuckle.Core",
+                                    "repository": {
+                                        "nameWithOwner": "domaindrivendev/Swashbuckle.WebApi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.Data.SQLite.Core",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "System.IdentityModel.Tokens.Jwt",
+                                    "repository": {
+                                        "nameWithOwner": "AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "XLR8.CGLib",
+                                    "repository": {
+                                        "nameWithOwner": "ajaxx/XLR8.CGLib"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#178600",
+                        "name": "C#"
+                    }
+                ]
+            }
+        },
         "LLNL/Wintap-PyUtil": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -27969,7 +29485,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "s0undt3ch/pluggy"
+                                        "nameWithOwner": "pytest-dev/pluggy"
                                     }
                                 },
                                 {
@@ -34337,7 +35853,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "s0undt3ch/pluggy"
+                                        "nameWithOwner": "pytest-dev/pluggy"
                                     }
                                 },
                                 {
@@ -36750,7 +38266,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "s0undt3ch/pluggy"
+                                        "nameWithOwner": "pytest-dev/pluggy"
                                     }
                                 },
                                 {
@@ -41064,7 +42580,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "safety",
                                     "repository": {
-                                        "nameWithOwner": "pyupio/safety"
+                                        "nameWithOwner": "sobolevn/safety"
                                     }
                                 },
                                 {
@@ -46443,6 +47959,19 @@
                                     "packageName": "sphinx-rtd-theme",
                                     "repository": {
                                         "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
@@ -51911,20 +53440,6 @@
                             "nodes": [
                                 {
                                     "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-feed",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-feed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-paginate",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-paginate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
                                     "packageName": "jekyll-sitemap",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll-sitemap"
@@ -52032,20 +53547,6 @@
                                     "packageName": "jekyll",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-feed",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-feed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-paginate",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-paginate"
                                     }
                                 },
                                 {
@@ -52955,13 +54456,6 @@
                     {
                         "dependencies": {
                             "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "gitpython",
-                                    "repository": {
-                                        "nameWithOwner": "gitpython-developers/GitPython"
-                                    }
-                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "pyaml",
@@ -55749,6 +57243,40 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "aws-actions/configure-aws-credentials",
+                                    "repository": {
+                                        "nameWithOwner": "aws-actions/configure-aws-credentials"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "hashicorp/setup-packer",
+                                    "repository": {
+                                        "nameWithOwner": "hashicorp/setup-packer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "hashicorp/setup-terraform",
+                                    "repository": {
+                                        "nameWithOwner": "hashicorp/setup-terraform"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "docker/build-push-action",
                                     "repository": {
                                         "nameWithOwner": "docker/build-push-action"
@@ -55882,7 +57410,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pluggy",
                                     "repository": {
-                                        "nameWithOwner": "s0undt3ch/pluggy"
+                                        "nameWithOwner": "pytest-dev/pluggy"
                                     }
                                 },
                                 {
