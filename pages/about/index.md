@@ -51,7 +51,10 @@ This portal abounds with examples of projects that have found a home in the open
 * [Ambassadors of Code (cover story)](https://str.llnl.gov/2018-01/lee)
 * [Ambassadors of Code (video, 3:04)](https://youtu.be/nTxMn1NWHQU){% raw %}{% endraw %}
 * [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18), LLNL Computing associate director
+* [Optimizing Workflow with Flux](https://str.llnl.gov/2022-07/milroy)
 * [Visualization Software Stands the Test of Time](https://str.llnl.gov/2021-05/brugger)
+* [Resiliency in Computer Applications](https://str.llnl.gov/2020-07/mohror)
+* [Software Installation Simplified](https://str.llnl.gov/2020-07/gamblin)
 <!-- END: Quicklinks boxes -->
   
 ### 2020 LLNL Computing Virtual Expo Materials
