@@ -84,7 +84,7 @@ If you are an employee at LLNL and have 2FA enabled, you are eligible to join th
 
 3. Head over to the [@LLNL People](https://github.com/orgs/LLNL/people){% raw %}{% endraw %} page and make your membership `Public`.
 
-## How Do I get My Repo Reviewed and Released for GitHub?
+## How Do I Get My Repo Reviewed and Released for GitHub?
 
 Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions {% raw %}<i class="fa fa-lock"></i>{% endraw %}](https://dev.llnl.gov/opensource/contributing/).
 
@@ -102,7 +102,7 @@ Remember that these repositories *are hosted on GitHub* servers, ***not** LLNL s
 
 When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidance.
 
-## My Project is Approved for Release. Now What? What about Docs?
+## My Project Is Approved for Release. Now What? What about Docs?
 
 Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/main/community-health){% raw %}{% endraw %}, including:
 
