@@ -57,7 +57,7 @@ This portal abounds with examples of projects that have found a home in the open
 * [Software Installation Simplified](https://str.llnl.gov/2020-07/gamblin)
 <!-- END: Quicklinks boxes -->
   
-### 2020 LLNL Computing Virtual Expo Materials
+### LLNL Computing Virtual Expo Materials
 <!-- START: Quicklinks boxes -->
 * [Releasing Open Source Software at the Lab (poster)](https://computing.llnl.gov/sites/default/files/COMP_Poster_OSS.pdf)
 * [Open Source at LLNL (video, 11:31)](https://youtu.be/kL4wIYhNVxE){% raw %}{% endraw %}
