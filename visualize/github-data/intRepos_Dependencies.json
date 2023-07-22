@@ -1727,7 +1727,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "assert",
                                     "repository": {
-                                        "nameWithOwner": "xylabs/sdk-js"
+                                        "nameWithOwner": "lehmannro/assert.sh"
                                     }
                                 },
                                 {
@@ -1867,7 +1867,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
@@ -2314,7 +2314,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
@@ -3934,7 +3934,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
@@ -5861,7 +5861,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "assert",
                                     "repository": {
-                                        "nameWithOwner": "xylabs/sdk-js"
+                                        "nameWithOwner": "lehmannro/assert.sh"
                                     }
                                 },
                                 {
@@ -6057,7 +6057,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
@@ -6357,7 +6357,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
@@ -7322,7 +7322,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "json-schema",
                                     "repository": {
-                                        "nameWithOwner": "microsoft/typespec"
+                                        "nameWithOwner": "kriszyp/json-schema"
                                     }
                                 },
                                 {
@@ -7395,7 +7395,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "lodash.flatten",
                                     "repository": {
-                                        "nameWithOwner": "lodash/lodash"
+                                        "nameWithOwner": "matteoantoci/lodash.flatten"
                                     }
                                 },
                                 {
@@ -7423,7 +7423,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "lodash.pick",
                                     "repository": {
-                                        "nameWithOwner": "lodash/lodash"
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
                                     }
                                 },
                                 {
@@ -8060,7 +8060,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "assert",
                                     "repository": {
-                                        "nameWithOwner": "xylabs/sdk-js"
+                                        "nameWithOwner": "lehmannro/assert.sh"
                                     }
                                 },
                                 {
@@ -18595,6 +18595,19 @@
                 ]
             }
         },
+        "LLNL/AMS": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "LLNL/ANS": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21126,6 +21139,47 @@
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "anyhow",
+                                    "repository": {
+                                        "nameWithOwner": "dtolnay/anyhow"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "PyO3/rust-numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "polars",
+                                    "repository": {
+                                        "nameWithOwner": "pola-rs/polars"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "pyo3",
+                                    "repository": {
+                                        "nameWithOwner": "PyO3/pyo3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "rand",
+                                    "repository": {
+                                        "nameWithOwner": "rust-random/rand"
                                     }
                                 }
                             ]
@@ -28532,7 +28586,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Threading.Tasks.Extensions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/dotnet"
+                                        "nameWithOwner": "dotnet/runtime"
                                     }
                                 },
                                 {
@@ -28888,7 +28942,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Threading.Tasks.Extensions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/dotnet"
+                                        "nameWithOwner": "dotnet/runtime"
                                     }
                                 },
                                 {
@@ -29154,7 +29208,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.AspNet.SignalR.SelfHost",
                                     "repository": {
-                                        "nameWithOwner": "SignalR/SignalR"
+                                        "nameWithOwner": "AnCh7/SignalR.ForexRates"
                                     }
                                 },
                                 {
@@ -36837,7 +36891,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
@@ -46107,7 +46161,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "babel-loader",
                                     "repository": {
-                                        "nameWithOwner": "remotion-dev/remotion"
+                                        "nameWithOwner": "babel/babel-loader"
                                     }
                                 },
                                 {
