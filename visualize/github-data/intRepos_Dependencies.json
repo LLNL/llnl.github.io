@@ -2761,7 +2761,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "docker-py",
                                     "repository": {
-                                        "nameWithOwner": "docker/docker-py"
+                                        "nameWithOwner": "ewindisch/docker-py"
                                     }
                                 },
                                 {
@@ -32654,7 +32654,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/bindee": {
@@ -42264,6 +42269,82 @@
                                     "packageName": "obspy",
                                     "repository": {
                                         "nameWithOwner": "obspy/obspy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/pysparkplug": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mpmath",
+                                    "repository": {
+                                        "nameWithOwner": "mpmath/mpmath"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numba",
+                                    "repository": {
+                                        "nameWithOwner": "numba/numba"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyspark",
+                                    "repository": {
+                                        "nameWithOwner": "apache/spark"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "jasonmccampbell/scipy-refactor"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tbb",
+                                    "repository": {
+                                        "nameWithOwner": "oneapi-src/oneTBB"
                                     }
                                 }
                             ]
