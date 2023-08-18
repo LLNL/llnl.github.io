@@ -35473,6 +35473,14 @@
                 ]
             }
         },
+        "LLNL/firecat": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "LLNL/flume-plugins": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -50091,6 +50099,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "dbhi/qus/action",
+                                    "repository": {
+                                        "nameWithOwner": "dbhi/qus"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "docker/setup-buildx-action",
                                     "repository": {
                                         "nameWithOwner": "docker/setup-buildx-action"
@@ -51839,6 +51854,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -51888,6 +51910,20 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pydantic",
+                                    "repository": {
+                                        "nameWithOwner": "pydantic/pydantic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pymdown-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "facelessuser/pymdown-extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "readthedocs-sphinx-search",
                                     "repository": {
                                         "nameWithOwner": "readthedocs/readthedocs-sphinx-search"
@@ -51898,6 +51934,13 @@
                                     "packageName": "recommonmark",
                                     "repository": {
                                         "nameWithOwner": "readthedocs/recommonmark"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
                                     }
                                 },
                                 {
@@ -53604,8 +53647,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#DA5B0B",
-                        "name": "Jupyter Notebook"
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
