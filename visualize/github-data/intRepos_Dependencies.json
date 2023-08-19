@@ -11873,7 +11873,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "filelock",
                                     "repository": {
-                                        "nameWithOwner": "tox-dev/py-filelock"
+                                        "nameWithOwner": "tox-dev/filelock"
                                     }
                                 },
                                 {
@@ -20349,7 +20349,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue"
+                                        "nameWithOwner": "vuejs/core"
                                     }
                                 },
                                 {
@@ -23965,7 +23965,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "filelock",
                                     "repository": {
-                                        "nameWithOwner": "tox-dev/py-filelock"
+                                        "nameWithOwner": "tox-dev/filelock"
                                     }
                                 },
                                 {
@@ -27528,9 +27528,30 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "h5pickle",
+                                    "repository": {
+                                        "nameWithOwner": "DaanVanVugt/h5pickle"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "requests",
                                     "repository": {
                                         "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "uedge",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/UEDGE"
                                     }
                                 }
                             ]
@@ -35475,10 +35496,29 @@
         },
         "LLNL/firecat": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
             }
         },
         "LLNL/flume-plugins": {
@@ -38991,7 +39031,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "filelock",
                                     "repository": {
-                                        "nameWithOwner": "tox-dev/py-filelock"
+                                        "nameWithOwner": "tox-dev/filelock"
                                     }
                                 },
                                 {
@@ -39502,7 +39542,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "filelock",
                                     "repository": {
-                                        "nameWithOwner": "tox-dev/py-filelock"
+                                        "nameWithOwner": "tox-dev/filelock"
                                     }
                                 },
                                 {
@@ -44008,8 +44048,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#f34b7d",
-                        "name": "C++"
+                        "color": "#4d41b1",
+                        "name": "Fortran"
                     }
                 ]
             }
@@ -46188,7 +46228,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "vue",
                                     "repository": {
-                                        "nameWithOwner": "vuejs/vue"
+                                        "nameWithOwner": "vuejs/core"
                                     }
                                 },
                                 {
@@ -56848,7 +56888,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "filelock",
                                     "repository": {
-                                        "nameWithOwner": "tox-dev/py-filelock"
+                                        "nameWithOwner": "tox-dev/filelock"
                                     }
                                 },
                                 {
@@ -58890,7 +58930,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "express",
                                     "repository": {
-                                        "nameWithOwner": "npm/deprecate-holder"
+                                        "nameWithOwner": "expressjs/express"
                                     }
                                 },
                                 {
@@ -59001,7 +59041,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "express",
                                     "repository": {
-                                        "nameWithOwner": "npm/deprecate-holder"
+                                        "nameWithOwner": "expressjs/express"
                                     }
                                 },
                                 {
