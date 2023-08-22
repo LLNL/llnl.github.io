@@ -5,6 +5,7 @@ query ($ownName: String!, $repoName: String!, $numReleases: Int!, $pgCursor: Str
         name
         publishedAt
         tagName
+        url
       }
       pageInfo {
         endCursor
