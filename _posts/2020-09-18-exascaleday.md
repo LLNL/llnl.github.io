@@ -15,5 +15,5 @@ LLNL's highlights include:
 - Audio: [Data management and analysis](https://www.exascaleproject.org/exascale-day-audio-kathryn-mohror/) featuring Kathryn Mohror
 - Audio: [Discretization algorithms](https://www.exascaleproject.org/exascale-day-audio-tzanio-kolev/) featuring Tzanio Kolev
 - Article: [Collaboration at exascale](https://www.exascaleproject.org/collaboration-at-exascale/) by Ulrike Meier Yang
-- Article: [Lab breaks ground for exascale facility upgrades](https://www.llnl.gov/news/lab-breaks-ground-exascale-facility-upgrades) by Jeremy Thomas
-- Article: [LLNL and HPE to partner with AMD on El Capitan](https://www.llnl.gov/news/llnl-and-hpe-partner-amd-el-capitan-projected-worlds-fastest-supercomputer) by Jeremy Thomas
+- Article: [Lab breaks ground for exascale facility upgrades](https://www.llnl.gov/article/46506/lab-breaks-ground-exascale-facility-upgrades) by Jeremy Thomas
+- Article: [LLNL and HPE to partner with AMD on El Capitan](https://www.llnl.gov/archive/news/llnl-hpe-partner-amd-el-capitan-projected-worlds-fastest-supercomputer) by Jeremy Thomas
