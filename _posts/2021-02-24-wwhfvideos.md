@@ -1,6 +1,6 @@
 ---
 title: "Videos from Wild West Hackin' Fest"
-categories: multimedia
+categories: event multimedia
 ---
 
 LLNL computer engineer Ian Lee presented at Wild West Hackin' Fest (WWHF) 2020, and both of his talks are now available on YouTube:

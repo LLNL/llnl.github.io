@@ -7,34 +7,24 @@ permalink: /news/
 <div class="filterBtnGroup btn-group" role="group" style="margin-bottom: 30px;">
     <button type="button" class="btn" id="allB">All</button>
     <button type="button" class="btn" id="event">Events</button>
-    <button type="button" class="btn" id="event-report">Event Reports</button>
     <button type="button" class="btn" id="multimedia">Multimedia</button>
     <button type="button" class="btn" id="new-repo">New Repos</button>
-    <button type="button" class="btn" id="profile">Profiles</button>
     <button type="button" class="btn" id="release">Releases</button>
     <button type="button" class="btn" id="story">Stories</button>
-    <button type="button" class="btn" id="this-website">Meta</button>
   </div>
 
-  {% assign cap = 20 %} {% comment %} maximum number of each type to store {% endcomment %}
+  {% assign cap = 15 %} {% comment %} maximum number of each type to store {% endcomment %}
   {% capture shh %}
     {% increment event %}
-    {% increment eventReport %}
     {% increment multimedia %}
     {% increment newRepo %}
-    {% increment profile %}
     {% increment release %}
     {% increment story %}
-    {% increment meta %}
   {% endcapture %}
   {% for page in site.posts %}
     {% if page.categories contains "event" and event <= cap %}
       {% capture quiet %}
         {% increment event %}
-      {% endcapture %}
-    {% elsif page.categories contains "event-report" and eventReport <= cap %}
-      {% capture quiet %}
-        {% increment eventReport %}
       {% endcapture %}
     {% elsif page.categories contains "multimedia" and multimedia <= cap %}
       {% capture quiet %}
@@ -44,10 +34,6 @@ permalink: /news/
       {% capture quiet %}
         {% increment newRepo %}
       {% endcapture %}
-    {% elsif page.categories contains "profile" and profile <= cap %}
-      {% capture quiet %}
-        {% increment profile %}
-      {% endcapture %}
     {% elsif page.categories contains "release" and release <= cap %}
       {% capture quiet %}
         {% increment release %}
@@ -55,10 +41,6 @@ permalink: /news/
     {% elsif page.categories contains "story" and story <= cap %}
       {% capture quiet %}
         {% increment story %}
-      {% endcapture %}
-    {% elsif page.categories contains "this-website" and meta <= cap %}
-      {% capture quiet %}
-        {% increment meta %}
       {% endcapture %}
     {% else %}
       {% continue %}

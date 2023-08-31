@@ -1,6 +1,6 @@
 ---
 title: "ECP Annual Meeting Videos Now Available: Spack, CEED, Flux"
-categories: event-report multimedia
+categories: event multimedia
 ---
 
 The [Exascale Computing Project](https://www.exascaleproject.org/), a joint effort between the DOE Office of Science and NNSA, brings together several national laboratories to address many hardware, software, and application challenges inherent in the organizations’ scientific and national security missions. The ECP's annual meeting was held virtually this year on April 12-16. Several sessions are available in a [dedicated YouTube playlist](https://www.youtube.com/playlist?list=PLF590mYJUDzLEalO05fJHX99cbbUOd-1e). LLNL's highlights feature open source projects that are crucial to the ECP's collaborative goals:

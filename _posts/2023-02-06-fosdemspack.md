@@ -1,6 +1,6 @@
 ---
 title: "Spack Videos from FOSDEM"
-categories: event-report multimedia
+categories: event multimedia
 ---
 
 FOSDEM is a free event for software developers to meet, share ideas, and collaborate. The [Spack](https://spack.io) team had three presentations at this year's event in February. If you missed them, you can watch the videos here:
