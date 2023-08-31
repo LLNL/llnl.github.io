@@ -1,6 +1,6 @@
 ---
 title: "ECP Annual Meeting Videos Now Available"
-categories: event-report multimedia
+categories: event multimedia
 ---
 
 The [Exascale Computing Project](https://www.exascaleproject.org/), a joint effort between the DOE Office of Science and NNSA, brings together several national laboratories to address many hardware, software, and application challenges inherent in the organizations’ scientific and national security missions. The ECP's annual meeting was held this year on May 2–6. Each day's sessions are available in a dedicated YouTube playlist. Individual sessions highlighted below feature LLNL staff and open source projects.
