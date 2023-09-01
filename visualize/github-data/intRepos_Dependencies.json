@@ -60541,6 +60541,52 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "django",
+                                    "repository": {
+                                        "nameWithOwner": "django/django"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "django-click",
+                                    "repository": {
+                                        "nameWithOwner": "GaretJax/django-click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "django-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "django-extensions/django-extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "psycopg2-binary",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-gitlab",
+                                    "repository": {
+                                        "nameWithOwner": "python-gitlab/python-gitlab"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "click",
                                     "repository": {
                                         "nameWithOwner": "pallets/click"
@@ -60564,6 +60610,19 @@
                                     "packageManager": "PIP",
                                     "packageName": "ruamel-yaml",
                                     "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
                                 }
                             ]
                         }
@@ -61066,6 +61125,40 @@
                                     "packageName": "wrapt",
                                     "repository": {
                                         "nameWithOwner": "GrahamDumpleton/wrapt"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "fastapi",
+                                    "repository": {
+                                        "nameWithOwner": "tiangolo/fastapi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "uvicorn",
+                                    "repository": {
+                                        "nameWithOwner": "encode/uvicorn"
                                     }
                                 }
                             ]
