@@ -13,6 +13,7 @@ For each category, this file contains its title, [icon][icon dir] filepath, and 
 - **Applications**: Browse scientific simulation codes and IT management tools - `application`
 - **Build Tools**: Automate and simplify complex dependencies and deployments - `build-tools`
 - **Data Management & Viz**: Manage visualizations with robust features and configurable analysis - `data-management`, `data-viz`
+- **Docs & Tutorials**: Learn more about our software via documentation, examples, and tutorials - `docs`, `documentation`, `tutorial`, `tutorials`
 - **File Systems**: Configure data storage and retrieval for more efficient workloads - `file-system`
 - **Full Catalog / All Software**: Browse all LLNL open source projects - no tags required
 - **Math & Physics Libraries**: Optimize solvers, higher order methods, and AMR frameworks - `math-physics`
