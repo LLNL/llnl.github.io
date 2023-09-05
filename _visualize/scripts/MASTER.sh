@@ -1,7 +1,7 @@
 #!/bin/bash
-# Run this script to refresh all data for today
+# Run this script to refresh all data
 
-exec &> >(tee ../LAST_MASTER_UPDATE.log)
+exec &> ../LAST_MASTER_UPDATE.log
 
 export GITHUB_DATA=../../visualize/github-data
 DATELOG=../LAST_MASTER_UPDATE.txt
