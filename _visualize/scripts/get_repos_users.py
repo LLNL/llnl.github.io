@@ -28,7 +28,7 @@ dataCollectorExt = qm.DataManager(datfilepathExt, False)
 dataCollectorExt.data = {"data": {}}
 
 # Initialize query manager
-queryMan = qm.GitHubQueryManager()
+queryMan = qm.GitHubQueryManager(maxRetry=10, retryDelay=1)
 
 # Iterate through internal repos
 print("Gathering data across multiple paginated queries...")
