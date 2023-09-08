@@ -18770,7 +18770,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "open-spiel",
                                     "repository": {
-                                        "nameWithOwner": "deepmind/open_spiel"
+                                        "nameWithOwner": "google-deepmind/open_spiel"
                                     }
                                 },
                                 {
@@ -18846,7 +18846,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "open-spiel",
                                     "repository": {
-                                        "nameWithOwner": "deepmind/open_spiel"
+                                        "nameWithOwner": "google-deepmind/open_spiel"
                                     }
                                 },
                                 {
@@ -26242,7 +26242,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "dm-tree",
                                     "repository": {
-                                        "nameWithOwner": "deepmind/tree"
+                                        "nameWithOwner": "google-deepmind/tree"
                                     }
                                 },
                                 {
@@ -32934,7 +32934,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#89e051",
+                        "name": "Shell"
+                    }
+                ]
             }
         },
         "LLNL/bmsl": {
@@ -40327,14 +40332,14 @@
                                     "packageManager": "PIP",
                                     "packageName": "dm-sonnet",
                                     "repository": {
-                                        "nameWithOwner": "deepmind/sonnet"
+                                        "nameWithOwner": "google-deepmind/sonnet"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "dm-tree",
                                     "repository": {
-                                        "nameWithOwner": "deepmind/tree"
+                                        "nameWithOwner": "google-deepmind/tree"
                                     }
                                 },
                                 {
@@ -40439,7 +40444,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "graph-nets",
                                     "repository": {
-                                        "nameWithOwner": "deepmind/graph_nets"
+                                        "nameWithOwner": "google-deepmind/graph_nets"
                                     }
                                 },
                                 {
@@ -47246,6 +47251,185 @@
                 "nodes": []
             }
         },
+        "LLNL/themis": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbconvert",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbconvert"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbsphinx",
+                                    "repository": {
+                                        "nameWithOwner": "spatialaudio/nbsphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "networkx",
+                                    "repository": {
+                                        "nameWithOwner": "networkx/networkx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python",
+                                    "repository": {
+                                        "nameWithOwner": "GDGToulouse/devfest-embedded-devices-monorepo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "jasonmccampbell/scipy-refactor"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-autoapi",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx-autoapi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "jasonmccampbell/scipy-refactor"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/thicket": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -53809,6 +53993,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/upload-release-asset",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-release-asset"
@@ -53819,6 +54010,20 @@
                                     "packageName": "crate-ci/typos",
                                     "repository": {
                                         "nameWithOwner": "crate-ci/typos"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "dbhi/qus/action",
+                                    "repository": {
+                                        "nameWithOwner": "dbhi/qus"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
                                     }
                                 },
                                 {
@@ -61171,6 +61376,33 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyjwt",
+                                    "repository": {
+                                        "nameWithOwner": "jpadilla/pyjwt"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "requests",
