@@ -20,7 +20,7 @@ dataCollector = qm.DataManager(datfilepath, False)
 dataCollector.data = {"data": {}}
 
 # Initialize query manager
-queryMan = qm.GitHubQueryManager(maxRetry=10, retryDelay=1)
+queryMan = qm.GitHubQueryManager(maxRetry=20, retryDelay=1)
 
 # Iterate through internal repos
 print("Gathering data across multiple queries...")
