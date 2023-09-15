@@ -1,0 +1,45 @@
+name: Scheduled Data Update
+
+on:
+  schedule:
+    - cron: "45 7 * * *"
+
+env:
+  # GitHub username (owner of BOT_TOKEN, will be credited for updates)
+  BOT_USER: lc-bot
+  # Paths used to store cloned repositories
+  ACTION_REPO: thisrepo
+  DATA_REPO: thisrepo
+
+jobs:
+  runDataUpdate:
+    name: Run Data Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: ${{ env.ACTION_REPO }}
+          token: ${{ secrets.BOT_TOKEN }}
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "${{ env.DATA_REPO }}/_visualize/scripts/requirements.txt"
+      - name: Install dependencies
+        shell: bash
+        run: pip install -r $DATA_REPO/_visualize/scripts/requirements.txt
+      - name: Run update script
+        shell: bash
+        run: ./$ACTION_REPO/.github/scripts/update.sh
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+      - name: Save log files
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: logfiles
+          path: |
+            ${{ env.DATA_REPO }}/_visualize/LAST_MASTER_UPDATE.txt
+            ${{ env.DATA_REPO }}/_visualize/LAST_MASTER_UPDATE.log
