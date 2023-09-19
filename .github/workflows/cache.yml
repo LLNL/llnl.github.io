@@ -2,7 +2,7 @@ name: Scheduled Cache Request
 
 on:
   schedule:
-    - cron: "45 6 * * *"
+    - cron: "45 6,18 * * *"
 
 env:
   # GitHub username (owner of BOT_TOKEN, will be credited for updates)
@@ -11,11 +11,20 @@ env:
   ACTION_REPO: thisrepo
   DATA_REPO: thisrepo
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   runDataUpdate:
     name: Run Cache Request
     runs-on: ubuntu-latest
+    env:
+      TIMESTAMP: X
     steps:
+      - name: Store timestamp
+        run: |
+          echo "TIMESTAMP=$(date -u +"%F-%H")" >> "$GITHUB_ENV"
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -28,18 +37,16 @@ jobs:
           cache: "pip"
           cache-dependency-path: "${{ env.DATA_REPO }}/_visualize/scripts/requirements.txt"
       - name: Install dependencies
-        shell: bash
         run: pip install -r $DATA_REPO/_visualize/scripts/requirements.txt
       - name: Run cache script
-        shell: bash
         run: ./$ACTION_REPO/.github/scripts/cache.sh
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       - name: Save log files
-        if: always()
+        if: ${{ always() }}
         uses: actions/upload-artifact@v3
         with:
-          name: logfiles
+          name: logfiles_${{ env.TIMESTAMP }}_cache
           path: |
             ${{ env.DATA_REPO }}/_visualize/LAST_CACHE_REQUEST.txt
             ${{ env.DATA_REPO }}/_visualize/LAST_CACHE_REQUEST.log
