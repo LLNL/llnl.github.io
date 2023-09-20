@@ -21,7 +21,7 @@ dataCollector = qm.DataManager(datfilepath, False)
 dataCollector.data = {"data": {}}
 
 # Initialize query manager
-queryMan = qm.GitHubQueryManager(maxRetry=10, retryDelay=2)
+queryMan = qm.GitHubQueryManager(maxRetry=15, retryDelay=2)
 
 # Set cutoff timestamp
 cutoffStamp = int((datetime.now() - relativedelta(years=1)).timestamp())
