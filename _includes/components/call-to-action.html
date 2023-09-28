@@ -1,0 +1,11 @@
+<div class="row pt-4 pb-2 my-5 bg-livermorium-ice">
+    {% if include.icon %}
+        <div class="col-12 col-md-2 col-xxl-1 d-flex justify-content-center vertical-center pb-5 pt-3 py-md-0">
+            <i class="fa {{ include.type | default: 'fa-regular' }} {{ include.icon }} fa-2xl"></i>
+        </div>
+    {% endif %}
+    <div class="{% if include.icon %}col-12 col-md-10 col-xxl-11 ps-4{% else %}col-12{% endif %}">
+        <h2 id="{{ include.title | slugify }}" class="mt-2 mb-4 text-center text-md-start">{{ include.title }}</h2>
+        {{ include.content }}
+    </div>
+</div>

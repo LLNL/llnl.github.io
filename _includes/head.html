@@ -1,34 +1,31 @@
-<head>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75179431-1"></script>
-  <script>
+{% if site.environment == 'production' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75179431-1"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'UA-75179431-1');
-  </script>
+</script>
+{% else %}
+<meta name="robots" content="noindex">
+{% endif %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/assets/images/OS-icon-color.png">
+<link rel="icon" href="/assets/images/logomark-software.svg" />
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/assets/css/llnl-header.css" />
+<link rel="stylesheet" href="/assets/css/utility.css" />
+<link rel="stylesheet" href="/assets/css/components.css" />
+<script src="https://kit.fontawesome.com/87728a7429.js" crossorigin="anonymous" async></script>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@llnl_opensource" />
+<meta name="twitter:title" content="LLNL Software Catalog" />
+<meta name="twitter:description" content="Software available from LLNL." />
+<meta name="twitter:image" content="https://cdn.llnl.gov/onelab/0.1.1/images/llnl-logo-blue-128x128.jpg" aria-label="LLNL logo" />
 
-  <link rel="shortcut icon" href="/assets/images/OS-icon-color.png">
+<meta name="google-site-verification" content="477TVoInt3HiUgSl_hU4rb5_JrgNMKK5Rl-KPMUClpQ" />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
-
-  <link rel="stylesheet" href="/css/main.css" media="screen">
-  <link rel="stylesheet" href="https://cdn.llnl.gov/onelab/0.1.1/css/onelab.css" media="screen">
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@llnl_opensource" />
-  <meta name="twitter:title" content="LLNL Software Catalog" />
-  <meta name="twitter:description" content="Software available from LLNL." />
-  <meta name="twitter:image" content="https://cdn.llnl.gov/onelab/0.1.1/images/llnl-logo-blue-128x128.jpg" aria-label="LLNL logo" />
-
-  <meta name="google-site-verification" content="477TVoInt3HiUgSl_hU4rb5_JrgNMKK5Rl-KPMUClpQ" />
-
-  {% seo %}
-</head>
+{% seo %}

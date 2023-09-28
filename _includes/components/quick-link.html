@@ -1,0 +1,8 @@
+<a href="{{ include.url }}" class="llnl-quick-link row text-decoration-none mb-2 box-shadow-10 bg-light-blue-hover h-100">
+    <div class="col-2 py-4 px-3 bg-gradient-software-blue-green-v d-flex justify-content-center vertical-center">
+        <i class="text-white fa {{ include.type | default: 'fa-regular' }} {{ include.icon }} {{ include.icon_size | default: 'fa-lg' }}"></i>
+    </div>
+    <div class="llnl-content col-10 py-2 d-flex align-items-center text-black">
+        <p class="ms-2 m-0">{{ include.title }}</p>
+    </div>
+</a>
