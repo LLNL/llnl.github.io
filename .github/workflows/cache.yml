@@ -42,6 +42,13 @@ jobs:
         run: ./$ACTION_REPO/.github/scripts/cache.sh
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+      - name: Show health stats
+        if: ${{ always() }}
+        run: |
+          cat $DATA_REPO/_visualize/LAST_CACHE_REQUEST.txt || true
+          echo "Warning Count: $(grep -c 'Warning' $DATA_REPO/_visualize/LAST_CACHE_REQUEST.log)"
+          echo "From Timeouts: $(grep -c 'but failed' $DATA_REPO/_visualize/LAST_CACHE_REQUEST.log)"
+          echo "Limit Reached: $(grep -c 'GITHUB NEEDS A BREAK' $DATA_REPO/_visualize/LAST_CACHE_REQUEST.log)"
       - name: Save log files
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
