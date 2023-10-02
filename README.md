@@ -2,7 +2,7 @@
 
 Author: Ian Lee <lee1001@llnl.gov>
 
-Welcome to the Lawrence Livermore National Laboratory software portal! The purpose of this software portal is to serve as a hub for open source software produced by LLNL.
+Welcome to the Lawrence Livermore National Laboratory software catalog! The purpose of this website is to serve as a hub for open source software produced by LLNL.
 
 LLNL produces software on a daily basis. Some of this software is used only internally, other components are licensed for use by external partners and collaborators, still other software is released, or even actively developed, in the open on software hosting platforms such as GitHub.com, Bitbucket.org, Sourceforge.net, and others.
 
@@ -61,12 +61,48 @@ For example, the default version of Ruby used to deploy GitHub Pages on github.c
 
 Start with the [FAQ](https://software.llnl.gov/about/faq/). Please see the following `README` files for additional instructions:
 
+- Catalog categories: see below
 - [Project logos](https://github.com/LLNL/llnl.github.io/blob/main/assets/images/logos/README.md)
-- ["Explore" categories](https://github.com/LLNL/llnl.github.io/blob/main/pages/explore/README.md)
-- [News posts](https://github.com/LLNL/llnl.github.io/blob/main/pages/news/README.md)
+- [News posts](https://github.com/LLNL/llnl.github.io/blob/main/news/README.md)
 - Data [visualizations](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/README.md) and [scripts](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/scripts/README.md)
 - [Data fetching](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md)
 - [RADIUSS site](https://github.com/LLNL/radiuss/blob/main/README.md)
+
+### Catalog Categories
+
+A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-data/category_info.json) contains the info for the software catalog categories displayed on the home page. If any changes need to be made to these categories, just edit the data in the JSON and the home page will reflect your changes automatically. (These catalog categories/topics are distinct from the category tags on [News posts](https://github.com/LLNL/llnl.github.io/blob/main/news/README.md).)
+
+A repository can have up to 20 tags. The list below also contains each category's blurb to ensure consistency in phrasing and length. Note that in some cases the category is plural but the corresponding tag is singular.
+
+For each category, this file contains its title, [icon][icon dir] filepath, and category description. This data is read by the [category info javascript][js dir].
+
+[icon dir]: ../assets/images/
+[js dir]: ../js/category-info.js
+
+- **App Infrastructure**: Browse tools for basic functionality common in HPC codes - `app-infrastructure`
+- **Applications**: Browse scientific simulation codes and IT management tools - `application`
+- **Build Tools**: Automate and simplify complex dependencies and deployments - `build-tools`
+- **Data Management & Viz**: Manage visualizations with robust features and configurable analysis - `data-management`, `data-viz`
+- **Docs & Tutorials**: Learn more about our software via documentation, examples, and tutorials - `docs`, `documentation`, `tutorial`, `tutorials`
+- **File Systems**: Configure data storage and retrieval for more efficient workloads - `file-system`
+- **Full Catalog / All Software**: Browse all LLNL open source projects - no tags required
+- **Math & Physics Libraries**: Optimize solvers, higher order methods, and AMR frameworks - `math-physics`
+- **Performance & Workflow**: Manage and scale complex workflows, tracking, and data collection - `performance`, `workflows`
+- **Portable Execution & Memory Mgmt**: Automate data motion and memory allocation on advanced architectures - `memory-management`, `portability`
+- **Proxy Applications**: Prepare for testing and porting applications - `proxy-application`
+- **System Software**: Manage laptop and desktop computer systems, HPC clusters, and parallel environments - `system-software`
+
+In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `arbitrary-lagrangian-eulerian` (ALE), `artificial-intelligence`, `benchmark`, `biology`, `checkpoint`, `chemistry`, `cmake`, `compiler`, `cpp` (C++), `data-analysis`, `deep-learning`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `library`, `machine-learning`, `materials`, `materials-science`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `natural-language-processing`, `neural-network`, `openmp`, `parallel-computing`, `pde`, `python`, `seismology`, `shell`, `simulation`, `solver`, `templates`, `testing`, `uncertainty-quantification`.
+
+Repos that appear on the [RADIUSS site](https://software.llnl.gov/radiuss/projects/) are listed in that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
+
+To add a new category to the catalog:
+
+1. Update the list above with the category name (in alphabetical order), description, and tag.
+2. Update [`category_info.json`](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-data/category_info.json) with category metadata such as Font Awesome icon, descriptive blurb, and corresponding topic(s). (See also the [Data fetching README](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md) for Font Awesome syntax.)
+3. Tag repos with the new topic as appropriate.
+
+To add your repo to the catalog, see instructions in [the site FAQ](https://software.llnl.gov/about/faq/#how-do-i-include-my-repo-in-the-llnl-organization-andor-this-websites-catalog).
 
 ## Contact
 
