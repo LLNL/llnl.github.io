@@ -1,6 +1,6 @@
 ---
 title: Licensing
-layout: default
+layout: contianer-default
 permalink: /project/policies/licensing/
 ---
 

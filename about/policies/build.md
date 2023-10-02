@@ -1,6 +1,6 @@
 ---
 title: Build
-layout: default
+layout: container-default
 permalink: /project/policies/build/
 ---
 

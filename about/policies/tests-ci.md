@@ -1,6 +1,6 @@
 ---
 title: Testing and Continuous Integration
-layout: default
+layout: container-default
 permalink: /project/policies/tests-ci/
 ---
 

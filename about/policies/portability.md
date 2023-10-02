@@ -1,7 +1,7 @@
 ---
 title: Portability
-layout: default
-permalink: /project/policies/portability/
+layout: container-default
+permalink: /about/policies/portability/
 ---
 
 {% include_relative header.md %}

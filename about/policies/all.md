@@ -1,6 +1,6 @@
 ---
 title: RADIUSS Policies and Guidelines
-layout: default
+layout: container-default
 permalink: /project/policies/all/
 ---
 

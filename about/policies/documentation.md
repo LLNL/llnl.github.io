@@ -1,6 +1,6 @@
 ---
 title: Documentation
-layout: default
+layout: container-default
 permalink: /project/policies/documentation/
 ---
 

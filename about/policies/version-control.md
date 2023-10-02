@@ -1,6 +1,6 @@
 ---
 title: Version Control
-layout: default
+layout: container-default
 permalink: /project/policies/version-control/
 ---
 
