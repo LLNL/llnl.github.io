@@ -22,7 +22,7 @@ Don't see your question listed below? Please contact [LLNL GitHub admins](mailto
 <!-- START: Accordions Each h2 below will be a separate accordion. If any of the requested functionality (e.g., info boxes) is a problem, let me know and I can adjust -->
 <div class="accordion default border-top-gradient-software-blue-green border-bottom-gradient-software-blue-green">
   {% capture accordionContent %}
-If you're new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [setting up and managing your GitHub profile](https://help.github.com/categories/setting-up-and-managing-your-github-profile/).
+If you’re new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [setting up and managing your GitHub profile](https://help.github.com/categories/setting-up-and-managing-your-github-profile/).
 
 1. [Create an account on GitHub](https://github.com/join).
 
@@ -34,7 +34,7 @@ If you're new to GitHub and open source in general, figuring out how to get set 
     * **Name**: Your first and last name.
     * **Bio**: Include a few words about yourself! Don't forget to mention @LLNL.
     * **URL**: This might be your [people.llnl.gov](https://people.llnl.gov) page, or a personal website if you prefer.
-    * **Company**: Probably `Lawrence Livermore National Laboratory, @LLNL`.
+    * **Company**: `Lawrence Livermore National Laboratory, @LLNL`.
     * **Location**: Your primary location.
     {:.mb-3}
 3. Add your `@LLNL` email address (and any aliases) to your [Email Settings](https://github.com/settings/emails) page. This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
@@ -44,7 +44,6 @@ If you're new to GitHub and open source in general, figuring out how to get set 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I set up a GitHub account?' content=accordionContent %}
-
 
 {% capture accordionContent %}
 <!-- START: Warning box -->
@@ -58,19 +57,22 @@ Membership in the @LLNL GitHub organization requires that 2FA has been enabled o
 There are several options for configuring 2FA for your GitHub account:
 
 ### [YubiKey](https://yubico.com) hardware security keys
-  * The YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
-    * YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKey, it is highly recommended for securing your GitHub (and other) accounts which support them.
-  * [Learn more about setting up your YubiKey with GitHub](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
+
+* The YubiKey deployment (called "MyPass" at LLNL) is in its pilot phase, and not all users have them yet.
+* YubiKeys are the preferred 2FA option, due to the security of the YubiKey hardware tokens. If you have been issued your LLNL YubiKey, it is highly recommended for securing your GitHub (and other) accounts which support them.
+* [Learn more about setting up your YubiKey with GitHub](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-fido-u2f)
 
 ### [Google Authenticator](https://support.google.com/accounts/answer/1066447)
-  * Google Authenticator is a mobile application which you can install on your personal or government issued phone.
-  * It provides a one-time token (OTP) which you can use to authenticate to GitHub.com
-  * [Learn more about setting up Google Authenticator with GitHub](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-a-totp-mobile-app)
+
+* Google Authenticator is a mobile application which you can install on your personal or government issued phone.
+* It provides a one-time token (OTP) which you can use to authenticate to GitHub.com
+* [Learn more about setting up Google Authenticator with GitHub](https://help.github.com/articles/configuring-two-factor-authentication/#configuring-two-factor-authentication-using-a-totp-mobile-app)
 
 ### [Authy](https://authy.com/guides/github/)
-  * Authy is a desktop- or laptop-based application which can be used to generate a one-time token (OTP) for use logging in to GitHub.
-  * This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
-  * [Learn more about setting up Authy with GitHub.com](https://authy.com/guides/github/)
+
+* Authy is a desktop- or laptop-based application which can be used to generate a one-time token (OTP) for use logging in to GitHub.
+* This option is usually best for when you do all or most of your work in an environment where you do not have access to a mobile phone or USB YubiKey.
+* [Learn more about setting up Authy with GitHub.com](https://authy.com/guides/github/)
 
 ### Additional 2FA info
 
@@ -125,7 +127,7 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 {% capture accordionContent %}
 Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/main/community-health), including:
 
-* An appropriate **open source license** and `LLNL-CODE-xxxxxx` **release number**. 
+* An appropriate **open source license** and `LLNL-CODE-xxxxxx` **release number**.
   * See the [LLNL Software Licensing](/about/licenses) page for details and examples.
 
 * A [**README**](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
@@ -142,7 +144,7 @@ Another good practice is to provide **user documentation**. Read the Docs (RtD) 
 
 Submit your repo to [**DOE CODE**](https://www.osti.gov/doecode/FAQs#what-is) so others can find it when searching through DOE-funded projects. After your repo is included in DOE CODE, you may also want to add the [**digital object identifier** (DOI)](/about/licenses/#digital-object-identifier-doi) to the repo.
 
-If your repo is research software, consider submitting it to the [*Journal of Open Source Software* (JOSS)](https://joss.theoj.org/about). Submission will produce a **citation** to include in your README file, then users or other researchers can cite your software correctly. 
+If your repo is research software, consider submitting it to the [*Journal of Open Source Software* (JOSS)](https://joss.theoj.org/about). Submission will produce a **citation** to include in your README file, then users or other researchers can cite your software correctly.
 
 The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) describes the submission requirements. JOSS defines *research software* as "software that solves complex modeling problems in a scientific context (physics, mathematics, biology, medicine, social science, neuroscience, engineering); supports the functioning of research instruments or the execution of research experiments; extracts knowledge from large data sets; offers a mathematical library; or similar." (You can also [become a reviewer](https://joss.readthedocs.io/en/latest/editing.html#), if you are so inclined.)
 {% endcapture %}
@@ -176,16 +178,16 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
 1. Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
 
-    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/main/pages/explore/README.md) of recommended, standardized topics.
+    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/main/README.md) of recommended, standardized topics.
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
 2. Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can tweet on your behalf.
 
-3. Publicize any outreach activities or major milestones related to your project such as: 
-   * A paper/poster/presentation being accepted at a conference
+3. Publicize any outreach activities or major milestones related to your project such as:
+   * A paper/poster/presentation is accepted at a conference
    * An upcoming workshop or webinar you're hosting
-   * Your project receiving an award nominations 
+   * Your project received an award nominations
    * You're guest blogging or speaking on a podcast
    {:.mb-3}
 
@@ -202,8 +204,8 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I contribute news or other content to this website?' content=accordionContent %}
 
-
 {% capture accordionContent %}
+
 1. Remove the specific topic tags (e.g., `math-physics`) that connect it to this website's browsable categories.
 
 2. Remove the repo from the RADIUSS [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml), if applicable.

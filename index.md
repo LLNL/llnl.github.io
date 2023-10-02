@@ -6,7 +6,8 @@ tags:
 breadcrumb: Home
 ---
 
-# LLNL Software Portal
+# LLNL Software Catalog
+
 {:.d-none}
 
 <div class="hero-home">

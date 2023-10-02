@@ -26,8 +26,7 @@ menus:
 <div class="container" markdown="1">
 ## LLNL Repos Over Time
 
-
-We contribute to a variety of code repositories, some of which fuel internal work here at the Laboratory and others that are used widely by enterprise companies, academic institutions, and other national labs.
+We contribute to a variety of code repositories, some of which fuel internal work here at the Lab and others that are used widely by enterprise companies, academic institutions, and other national labs.
 
 <!-- Preset vis display areas -->
 <svg class="listPopularRepos d-block mx-auto my-0"></svg>
@@ -36,20 +35,22 @@ We contribute to a variety of code repositories, some of which fuel internal wor
 </div>
 
 ### Creation History
+
 <div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
   <svg class="repoCreationHistory d-block mx-auto my-0"></svg>
 </div>
 
 ### Number of Stars Over Time
+
 <div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
   <svg class="repoStarHistory d-block mx-auto my-0"></svg>
 </div>
 
 ### Activity Across Top 10 Repos
+
 <div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
   <svg class="repoActivityChart d-block mx-auto my-0"></svg>
 </div>
-
 
 <div class="row">
     <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide" markdown="1">
@@ -67,6 +68,7 @@ We contribute to a variety of code repositories, some of which fuel internal wor
 </div>
 
 ### Repo Licenses
+
 <div class="">
 <svg class="popularLicenses d-block mx-auto my-0"></svg>
 </div>
@@ -121,5 +123,5 @@ We contribute to a variety of code repositories, some of which fuel internal wor
         draw_popularRepos('listPopularRepos', 5, true);
         draw_line_repoStarHistory('repoStarHistory');
     });
-    
+
 </script>

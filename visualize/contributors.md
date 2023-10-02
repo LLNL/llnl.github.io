@@ -1,7 +1,7 @@
 ---
 title: Contributors
 layout: container-default
-description: Get an overview of contributors to LLNL's GitHub repos, 
+description: Get an overview of contributors to LLNL's GitHub repos.
 permalink: /visualize/contributors/
 breadcrumb: Contributors
 menus:

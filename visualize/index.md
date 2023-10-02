@@ -25,25 +25,26 @@ menus:
   </div>
 </div>
 
-
 <div class="container" markdown="1">
-<!-- @Doug, I promoted this header to an h1; can you please confirm that I did it right? It looks like all of the Software site needs this update. -->
 {% include components/icon-header.html title='All Repositories' icon='fa-chart-scatter' tag="h2" %}
 
 Lawrence Livermore National Lab has contributed to open source repositories for years. See how our commits have evolved over time and how our open source contributions have grown.
 
 <!-- Preset vis display areas -->
 ### Creation History
+
 <div class="border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5">
   <svg class="repoCreationHistory d-block mx-auto my-0"></svg>
 </div>
 
 ### Activity Across All Repos
+
 <div class="border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5">
   <svg class="repoActivityChart d-block mx-auto my-0"></svg>
 </div>
 
 ### Number of Stars Over Time
+
 <div class="border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5">
   <svg class="repoStarHistoryChart d-block mx-auto my-0"></svg>
 </div>
@@ -58,7 +59,6 @@ Lawrence Livermore National Lab has contributed to open source repositories for 
 <svg class="repoIssues"></svg>
   </div>
 </div>
-
 
 <div class="row">
   <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5" markdown="1">
@@ -75,8 +75,8 @@ Lawrence Livermore National Lab has contributed to open source repositories for 
   </div>
 </div>
 
-
 ### Repo Licenses
+
 <svg class="licenseSunburst d-block mx-auto my-0"></svg>
 
 </div>
