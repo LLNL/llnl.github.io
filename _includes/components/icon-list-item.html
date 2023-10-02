@@ -1,0 +1,4 @@
+<a class="llnl-list-item d-flex align-items-center px-2 my-2 fs-14 fw-medium text-decoration-none text-black" href="{% if include.url %}{{ include.url }}{% endif %}{% unless include.url %}#{{ include.title | slugify }}{% endunless %}">
+    <div class="icon me-3 d-flex align-items-center justify-content-center"><i class="fa fa-light {{ include.icon }} fa-lg"></i></div>
+    <span>{{ include.title }}</span>
+</a>

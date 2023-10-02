@@ -1,6 +1,6 @@
 ---
 title: "ESGF Conference Caps a Productive Year"
-categories: event-report
+categories: event
 ---
 
 Held in Washington, DC, the Earth System Grid Federation’s (ESGF) 8th annual face-to-face conference was a lively, fruitful affair. The event packed 40 presentations, several plenary sessions, a poster session, guest speakers, an awards ceremony, and an executive committee meeting into the week. 

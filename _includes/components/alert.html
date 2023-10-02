@@ -1,0 +1,10 @@
+<div class="alert alert-{{ include.type }} row mt-3 mb-5 py-4 border-0">
+    {% if include.icon %}
+    <div class="col-1 d-flex justify-content-center vertical-center" role="alert">
+        <i class="fa fa-light {{ include.icon }} fa-2xl text-alert-{{ include.type }}-icon"></i>
+    </div>
+    {% endif %}
+    <div class="{% if include.icon %}col-11{% else %}col-12{% endif %} text-start text-black">
+        {{ include.content }}
+    </div>
+</div>

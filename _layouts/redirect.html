@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <meta http-equiv="refresh" content="1;url={{ page.redirect }}"/>
+    <link rel="canonical" href="{{ page.redirect }}"/>
+    <body class="static-text">
+        {% include header.html %}
+        {% include layout/hero.html title=page.title tag='h1' %}
+        <main class="container">
+            {% include breadcrumbs.html %}
+            <article>
+                If you are not redirected automatically, follow <a href='{{ page.redirect }}'>this link</a>.
+                {{ content }}
+            </article>
+        </main>
+        
+        {% include footer.html %}
+        {% include matomo.html %}
+    </body>
+    {% include additional_css.html %}
+    {% include scripts.html %}
+    <script type="text/javascript">
+        window.location.href = "{{ page.redirect }}"
+    </script>
+</html>

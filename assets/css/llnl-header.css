@@ -1,0 +1,643 @@
+
+  /* This adds padding above the header when the admin toolbar is visible */
+  body.toolbar-tray-open header.navbar-fixed-top {
+    top: 73px;
+  }
+  
+  .navbar-is-fixed-top .main-container {
+    padding-top: 100px;
+  }
+  
+  .no-margin-top {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .navbar-default {
+    min-height: 4rem;
+    background-color: #eee;
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.01);
+    /*height: 69px;*/
+  }
+  .navbar {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /*padding: .5rem 1rem;*/
+  }
+  
+  .navbar-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .navbar .nav > li > a {
+    color: #005dab;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px;
+    color: rgba(51,51,51,0.8);
+    font-weight: normal;
+  }
+  .menu--main.nav.navbar-nav > li > a {
+    font-size: 15px;
+  }
+  .navbar-default .navbar-nav {
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+  
+  #block-primary-menu > ul.menu.menu--main > .active {
+    background-color: #e6e6e6;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.1), 0 1px 4px rgba(255,255,255,.20);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(255, 255, 255, 0.2);
+  }
+  
+  .nav-tabs {
+    margin-bottom: 20px;
+  }
+  
+  .align-center > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #block-primary-menu-menu .menu--main li.active a {
+    text-decoration: underline;
+  }
+  
+  #site-org-logo-container {
+    border-right: solid #fff 1px;
+    line-height: 58px;
+    max-width: 260px;
+    float: left;
+    margin: 0px 0px;
+    text-transform: uppercase;
+    padding-right: 14px;
+    padding-left: 11px;
+  }
+  #site-no-org-logo-container {
+    float: left;
+    margin-left: -18px;
+    height: 40px;
+    width: 0px;
+  }
+  #site-org-logo {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+  
+  ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus {
+    background-color: #0032a0;
+  }
+  
+  .navbar-fixed-top {
+    z-index: 400;
+  }
+  
+  #llnl-logo {
+    position: absolute;
+    background: #0032a0;
+    width: 53px;
+    height: 76px;
+    z-index: 999;
+    top: -1px;
+  }
+  #llnl-logo img {
+    margin: 20px 0px 0 10px;
+  }
+  
+  .llnl-logo-wrap {
+    float: left;
+    min-height: 1px;
+    width: 72px;
+  }
+  .nav-wrap {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    width: 95%;
+  }
+  .toolbar-horizontal .toolbar-tray {
+    border-bottom: 1px solid #aaa;
+    box-shadow: none;
+  }
+  #llnl-menu {
+    display: block;
+    height: 10px;
+    background: #0532a0;
+    color: #fff;
+    width: 100%;
+    padding: 0 0 0 0px;
+  }
+  
+  .llnl-nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    margin-left: 10px;
+    display: none;
+  }
+  
+  ul.llnl-nav li {
+    float: left;
+    margin: 0 20px 0 0;
+  }
+  .llnl-nav li {
+    position: relative;
+    display: block;
+  }
+  .llnl-nav li a {
+    font-size: 11px;
+    line-height: 18px;
+    color: #fff;
+  }
+  
+  .footer {
+    background: #e8e8e8;
+    border-top: 1px solid #dddddd;
+    box-shadow: 0 -1px 7px rgba(0,0,0,0.05), inset 0 1px 0px #fff;
+    padding-top: 3.5em;
+    padding-bottom: 2.0em;
+    margin-top: 2.5em;
+    border-bottom: none;
+  }
+  .footer h4 {
+    letter-spacing: 2.7px;
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--elemental-navy);
+    margin: 0 0 20px 0;
+  }
+  .footer-bottom {
+    margin-top: 80px;
+    padding: 15px 0;
+    background: var(--elemental-navy);
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.05);
+    color: #c3c3c3;
+    font-size: 9px;
+    float: none;
+    position: relative;
+    z-index: 1200;
+  }
+  .footer-bottom .llnl img {
+    width: 35px;
+  }
+  .footer-bottom .llns {
+    margin-top: 2px;
+  }
+  .footer-bottom .llns img {
+    width: 35px;
+  }
+  .footer-bottom .doe {
+    margin-top: -2px;
+  }
+  .footer-bottom .doe img {
+    width: 105px;
+  }
+  .footer-bottom .nnsa {
+    margin-top: 7px;
+    margin-left: 2px;
+  }
+  .footer-bottom .nnsa img {
+    width: 75px;
+  }
+  .footer-bottom a {
+    margin-right: 12px;
+    color: #FCB317;
+  }
+  .footer-bottom .disclaimer a,
+  .footer-bottom .disclaimer {
+    font-size: 12px;
+    float: none;
+    color: #fff;
+  }
+  .footer-bottom .col-xs-12 {
+    margin-bottom: 0px;
+  }
+  .footer-bottom #footer-text {
+    width: 90%;
+    margin: 3px 0 0 0;
+    float: left;
+  }
+  #footer-text-name,
+  #footer-text-address {
+    float: left;
+  }
+  #footer-text-info {
+    clear: both;
+  }
+  .footer-bottom #footer-affiliates {
+    margin: 7px 0 0 0;
+  }
+  .footer-bottom #footer-logo {
+    margin: 7px 0 0 0;
+    float: left;
+  }
+  .footer-bottom #footer-links {
+    margin: 12px 0 0 0;
+    text-align: right;
+  }
+  .footer-social-media span.ext {
+    display: none;
+  }
+  .footer-social-media img {
+    width: 25px;
+  }
+  .footer-social-media img.social-icon-fb {
+    width: 15px;
+  }
+  .footer-social-media img.social-icon-gd {
+    width: 17px;
+  }
+  .footer-social-media img.social-icon-yt {
+    width: 33px;
+  }
+  .footer-social-media a {
+    text-decoration: none;
+  }
+  .footer-column span.ext {
+    display: none;
+  }
+  .footer-main-menu-block .navbar-nav > li {
+    float: none;
+    margin: 5px 0;
+  }
+  .footer-main-menu-block .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 0px 5px;
+  }
+  .footer-llnl-links li,
+  .footer-mission-areas li,
+  .footer-about-llnl li {
+    list-style: none;
+    margin: 0 0 5px 0;
+  }
+  .footer-llnl-links ul,
+  .footer-mission-areas ul,
+  .footer-about-llnl ul {
+    padding-left: 0px;
+  }
+  
+  .footer-column li a::before {
+    padding-right: 10px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f054";
+    color: #000;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .footer-column a:hover {
+    color: #191919;
+  }
+  
+  
+  .footer-social-media .social-icon {
+    margin: 0 10px 0 0;
+  }
+  
+  /* phone to tablet only */
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    #block-secondary-menu {
+      display: none;
+    }
+    .nav-wrap {
+      width: 100%;
+    }
+    .menu--main.navbar-nav {
+      display: none;
+    }
+    .site-text {
+      margin: 0 0 0 50px;
+    }
+    .site-text-container {
+      border-right: none;
+    }
+    .container.menu-wrap {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #llnl-logo {
+      height: 80px;
+    }
+    #llnl-logo img {
+      margin: 20px 0px 0 7px;
+    }
+    .navbar-toggle {
+      margin-right: 10px;
+      margin-top: 11px;
+    }
+  
+    #search-button {
+      float: none;
+      position: relative;
+    }
+    #llnl-header-search-form .form-group {
+      width: 100%;
+      border-radius: 25px;
+    }
+    .block-llnl-search-mobile .search-form .form-group:hover,
+    .block-llnl-search-mobile .search-form .form-group {
+      width: 255px;
+    }
+    #llnl-header-search-form .form-group:hover {
+      width: 100%;
+      border-radius: 25px;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+      border: none;
+    }
+    .footer {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    #megamenu {
+      width: 100%;
+    }
+    .footer-bottom {
+      height: unset;
+      text-align: center;
+    }
+    .llnl-notification a {
+      font-size: 14px;
+    }
+    #footer-accordion .card-header {
+      background: #595b60;
+      border-bottom: 1px solid #707070;
+    }
+    #footer-accordion .card-header h4 {
+      color: #fff;
+      margin: 10px 0 10px 30px;
+    }
+    #footer-accordion li a::before {
+      padding-right: 10px;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      content: "\f054";
+      color: #000;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+    #footer-accordion ul {
+      margin: 15px 0 15px 40px;
+    }
+    #footer-accordion li a {
+      text-decoration: none;
+      font-size: 18px;
+    }
+  
+    #footer-accordion h2,
+    #footer-accordion .h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    footer .container {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    #footer-stay-connected {
+      display: none;
+    }
+  
+    #footer-stay-connected .footer-social-media .social-icon {
+      margin: 0 23px 0 0;
+    }
+    .footer-social-media {
+      margin: 20px 0 20px 40px;
+    }
+    #footer-stay-connected .footer-social-media {
+      margin: 0;
+    }
+    .footer-main-menu-block .navbar-nav > li {
+      margin: 10px 0;
+    }
+    #footer-accordion .btn {
+      text-align: unset;
+    }
+    .site-text-container {
+      max-width: unset;
+      line-height: 14px;
+    }
+    .footer-accordion-title {
+      float: left;
+      width: 325px;
+    }
+  
+    .footer-accordion-arrow {
+      float: right;
+      margin: 10px 0 0 0;
+    }
+    .footer-accordion-arrow::before {
+      padding-right: 10px;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      content: "\f078";
+      color: #fff;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+    .footer-bottom #footer-links {
+      text-align: unset;
+      margin: 10px 0 0 0;
+    }
+    .footer-bottom #footer-text {
+      float: none;
+    }
+    .footer-bottom #footer-logo {
+      float: none;
+      margin: 0 0 13px 0;
+    }
+    .footer-bottom .disclaimer a,
+    .footer-bottom .disclaimer {
+      color: #FCB317;
+    }
+    #footer-text-name,
+    #footer-text-address {
+      float: none;
+    }
+    #footer-text-info {
+      margin: 10px 0 0 0;
+    }
+  }
+  
+  /* ipad */
+  @media only screen and (min-width: 500px) and (max-width: 768px) {
+    .navbar-header {
+      margin: 0 0 0 10px;
+    }
+    #llnl-logo img {
+      margin: 10px 0px 0 10px;
+    }
+    #llnl-logo {
+      height: 100px;
+      border: none !important;
+    }
+    #navbar .container {
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+    }
+  
+    .site-text a {
+      font-size: 10px;
+    }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+      min-height: 0;
+    }
+    #search-button {
+      margin: 12px 35px 0 0;
+    }
+    .site-text-container {
+      border-right: none;
+      line-height: 58px;
+      max-width: 145px;
+      float: left;
+      margin: 0px;
+      text-transform: uppercase;
+      padding-right: 0px;
+      border-right: solid #fff 1px;
+      height: 59px;
+    }
+    .navbar-collapse {
+      margin-top: 0px;
+    }
+    .navbar-nav {
+      margin: 0px;
+    }
+    .breadcrumb {
+      display: block;
+    }
+  
+    #block-secondary-menu,
+    #block-fostermedal {
+      display: block;
+    }
+  
+    #block-primary-menu {
+      display: block;
+    }
+  
+    .path-node .main-container {
+      padding-top: 80px;
+    }
+  
+    .page-node-type-lead-page .main-container {
+      padding-top: 69px;
+    }
+  
+    #site-org-logo-container {
+      border-right: 0px;
+    }
+  
+    /* carousel start */
+    .carousel-image.mobile {
+      display: block;
+    }
+    .carousel-image {
+      display: none;
+    }
+    .carousel-slide-title span {
+      font-size: 21px;
+      margin-bottom: 0px;
+    }
+    .carousel-slide-content {
+      margin: 0 auto;
+      padding: 0 20px;
+      max-width: 400px;
+    }
+    .carousel-slide-content-image-left-mobile {
+      display: block;
+    }
+    .carousel-slide-content-image-right-mobile {
+      display: block;
+    }
+    .carousel-slide-content-image-left {
+      display: none;
+    }
+    .carousel-slide-content-image-right {
+      display: none;
+    }
+    /* carousel end */
+  
+    #megamenu {
+      width: 100%;
+    }
+    .footer-bottom {
+      height: unset;
+    }
+    .responsive-menu-toggle-icon {
+      display: none;
+    }
+    .footer h4 {
+      font-size: 14px;
+    }
+    .doe img {
+      width: 75px;
+    }
+    .nnsa img {
+      width: 75px;
+    }
+    .footer-social-media .social-icon {
+      margin: 0 5px 0 0;
+    }
+    img.social-icon {
+      width: 15px;
+    }
+    .footer-column li a {
+      font-size: 9px;
+    }
+  }
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 52px;
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-item {
+    border-bottom: 1px solid #63666a;
+  }
+
+  .navbar-nav:last-child .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+    --bs-navbar-active-color: var(--software-blue);
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show {
+    --bs-navbar-active-color: var(--software-blue);
+  }
+}

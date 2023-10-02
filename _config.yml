@@ -7,6 +7,10 @@ release_number: LLNL-WEB-680594
 
 url: "https://software.llnl.gov"
 repo_url: "https://github.com/LLNL/llnl.github.io"
+baseurl: ""
+environment: production
+IM_NUMBER: LLNL-WEB-458451
+CONTACT: mailto:open-source-core@llnl.gov
 
 # LLNL Piwik Analytics https://analytics.llnl.gov
 piwik_id: 250
@@ -26,18 +30,22 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-remote-theme
 
+markdown: kramdown
 kramdown:
   auto_ids: true
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "container-default"
       permalink: "/news/:year/:month/:day/:title/"
 
 permalink: pretty
@@ -48,6 +56,6 @@ exclude:
     - Gemfile.lock
     - README.md
     - Makefile
+    - notes.md
     - build
     - visualize/README.md
-    - notes.md
