@@ -22,18 +22,15 @@ menus:
 <div class="container">
   <div class="col-12" markdown="1">
 
-<!-- Can the video display on-page at a small size and open to a lightbox for larger viewing? Or are we able to increase the width on this, esp. in a responsive way? (I'm open to ideas/options.) -->
-
-
 ## Collaboration Fuels Our Culture
 
 <div class="row">
   <div class="col-12 col-lg-6" markdown="1">
-Welcome to the Lawrence Livermore National Laboratory (LLNL) software portal &mdash; a hub for open source software (OSS) produced at the Lab.
+Welcome to the Lawrence Livermore National Laboratory ([LLNL](https://www.llnl.gov/)) software catalog&mdash;a hub for open source software (OSS) produced at the Lab.
 
 LLNL developers create and evolve software on a daily basis. Some of this software is used only internally, other components are licensed for use by external partners and collaborators, and still other software is released and actively developed out in the open on software-hosting platforms. This website is the gateway to all of it.
 
-LLNL is a [Department of Energy (DOE)](https://www.energy.gov/national-laboratories) institution, so we abide by the [Federal Source Code Policy](https://www.energy.gov/articles/doe-federal-source-code-policy)* that guides release of open source software (OSS). And not just because we have to but because we *want* to. Long before GitHub was founded, [we started releasing software](https://software.llnl.gov/visualize/) for public use and collaboration.
+LLNL is a Department of Energy ([DOE](https://www.energy.gov/national-laboratories)) institution, so we abide by the [Federal Source Code Policy](https://www.energy.gov/articles/doe-federal-source-code-policy)* that guides release of open source software (OSS). And not just because we have to but because we *want* to. Long before GitHub was founded, [we started releasing software](https://software.llnl.gov/visualize/) for public use and collaboration.
   </div>
   <div class="col-12 col-lg-6 mb-3">
     <div class="responsive-iframe-container">
@@ -42,13 +39,13 @@ LLNL is a [Department of Energy (DOE)](https://www.energy.gov/national-laborator
   </div>
 </div>
 
-We often work with other national labs, universities, and industry partners. Working on these projects is a lot easier when we can share code directly. The [Exascale Computing Project (ECP)](https://www.exascaleproject.org) uses OSS to develop the exascale ecosystem of apps, analytics, infrastructure, and so much more. Future breakthroughs will likely owe some debt to the best practices and accelerated development made possible by OSS.
+We often work with other national labs, universities, and industry partners. Working on these projects is a lot easier when we can share code directly. The Exascale Computing Project ([ECP](https://www.exascaleproject.org)) uses OSS to develop the exascale ecosystem of apps, analytics, infrastructure, and so much more. Future breakthroughs will likely owe some debt to the best practices and accelerated development made possible by OSS.
 
 One of the great things about a large government organization is that we're not motivated by profit. "The greater good" might sound like a cliché, but it's true. LLNL's national security mission governs our work, so our OSS portfolio of apps, libraries, compilers, and other tools support that mission. This includes everything from monitoring the performance of our supercomputers to making multiphysics codes run more smoothly.
 
-Case in point: The DOE's [Advanced Simulation and Computing (ASC) Program](https://asc.llnl.gov) leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing high-performance computing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and effectiveness of the nation's nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. With OSS, we can develop quickly and choose the best solutions.
+Case in point: The DOE's Advanced Simulation and Computing ([ASC] Program](https://asc.llnl.gov)) leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing high-performance computing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and effectiveness of the nation's nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. With OSS, we can develop quickly and choose the best solutions.
 
-This portal abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You'll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE), and we invite you to browse our projects on [GitHub](https://github.com/LLNL).
+This website abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You'll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE), and we invite you to browse our projects on [GitHub](https://github.com/LLNL).
 
 \* The original policy memorandum is no longer available online. For details, please see
 

@@ -29,10 +29,10 @@ This page contains information meant for LLNL employees with instructions for ho
 
 ## Required Files
 
-All LLNL software must contain the following files at the root of the source
-code repository:
+All LLNL software must contain the following files at the root of the source code repository:
 
 ### 1. README file
+
 {:.mt-5.mb-2}
 
 All projects shall have a `README.md` file at the root of the repository. The `README.md` must contain the LLNL release number (`LLNL-CODE-XXXXXX`). We recommend putting it at the bottom in a section called "Release".  See [this example](https://github.com/spack/spack#release).
@@ -44,8 +44,8 @@ Additionally, we recommend that all projects have the following sections:
 * **Getting Involved** - Information about mailing lists or other ways users can connect with you and each other.
 * **Contributing** - Instructions for how you'd like people to contribute to your code.
 
-The `.md` suffix stands for "markdown."  Markdown is a plain text format. It's easy to read and write, but it also allows you to add simple formatting and links so that your `README.md` will render nicely on GitHub. Take a look at GitHub's
-[markdown guide](https://guides.github.com/features/mastering-markdown/) for the basics. 
+The `.md` suffix stands for *markdown*.  Markdown is a plain text format. It's easy to read and write, but it also allows you to add simple formatting and links so that your `README.md` will render nicely on GitHub. Take a look at GitHub's
+[markdown guide](https://guides.github.com/features/mastering-markdown/) for the basics.
 
 #### README examples
 
@@ -55,6 +55,7 @@ The `.md` suffix stands for "markdown."  Markdown is a plain text format. It's e
 <!-- END: Buttons -->
 
 ### 2. NOTICE file
+
 {:.mt-5.mb-2}
 At the root of every source code repository shall be the following text in a file named `NOTICE`:
 
@@ -65,6 +66,7 @@ At the root of every source code repository shall be the following text in a fil
 [Additional information](https://github.com/LLNL/.github/tree/main/community-health/NOTICE.md) about the Notice can be found in our LLNL/.github repo.
 
 ### 3. Open source LICENSE file
+
 {:.mt-5.mb-2}
 One of the following files must be included at the top level of your repository with the file name `LICENSE`. The only content which may be changed in the file is the copyright year.
 
@@ -96,7 +98,7 @@ One of the following files must be included at the top level of your repository 
 
 If your repository was approved for release under a different open source license, the text of that license will be provided by the Innovation and Partnerships Office.
 
-If your project has more than one license, then you must include *all* of the relevant licenses in your repository.  We recommend that you name them with descriptive suffixes.  For example, if your project is dual licensed under Apache-2.0 and MIT, you should have top-level `LICENSE-APACHE` and `LICENSE-MIT` files. 
+If your project has more than one license, then you must include *all* of the relevant licenses in your repository.  We recommend that you name them with descriptive suffixes.  For example, if your project is dual licensed under Apache-2.0 and MIT, you should have top-level `LICENSE-APACHE` and `LICENSE-MIT` files.
 
 Because GitHub does not automatically detect multiple licenses, we recommend *also* adding a top-level `COPYRIGHT` file with a summary of license details. GitHub's "view license" link will then point to this file.  You can look at [Spack](https://github.com/spack/spack) and its `README.md`, `COPYRIGHT`, and `LICENSE-*` files for an example of how to organize a project with two licenses.
 
@@ -113,7 +115,7 @@ If you host your code publicly, you may receive contributions from outside the l
 
 With most open source projects, it is assumed that contributions are made under the *same* license under which the project is distributed. For example, if you distribute your project under the `MIT` license, contributed code is assumed to be under that license as well. The [Cardioid](https://github.com/llnl/cardioid) project makes this explicit in its `README.md`:
 
-```
+```bash
 Cardioid is distributed under the terms of the MIT license. All new contributions must be made under this license.
 ```
 
@@ -125,7 +127,7 @@ Cardioid is distributed under the terms of the MIT license. All new contribution
 
 SPDX provides a standard [list of license identifiers](https://spdx.dev/ids/) that can be used to label code.  To use SPDX identifiers in your project, you should find your license's short identifier in the list, and add a special `SPDX-License-Identifier` line to your `README.md`. For example, if your code is licensed under the `MIT` license like [Cardioid](https://github.com/llnl/cardioid), you would add this at the bottom of your README file:
 
-```
+```bash
 SPDX-License-Identifier: MIT
 ```
 
@@ -137,7 +139,7 @@ Additionally, you can use SPDX to label your source files. While not all open so
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 ```
 
-There are two interesting parts here. First, the copyright section prominently mentions LLNS. It also mentions other Spack developers, who hold the copyright on the parts of the code they contributed. The SPDX line allows us to avoid pasting much longer license headers into each file.  All together, this makes for a much shorter and more concise header.
+Note the copyright section prominently mentions LLNS. It also mentions other Spack developers, who hold the copyright on the parts of the code they contributed. The SPDX line allows us to avoid pasting much longer license headers into each file. Altogether, this makes for a much shorter and more concise header.
 
 The Spack example mentions a [`COPYRIGHT`](https://github.com/spack/spack/blob/develop/COPYRIGHT) file because Spack is dual-licensed (see above). If you just have a single license, you can simply refer to the `LICENSE` file in your header.
 

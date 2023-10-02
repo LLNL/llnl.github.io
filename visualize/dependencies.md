@@ -14,7 +14,7 @@ menus:
 <link rel="stylesheet" type="text/css" href="/assets/css/visualize/graphstyle.css" />
 
 <div class="container">
-Livermore's work both fuels and depends on myriad open source packages. We're proud to be part of a robust development ecosystem both within and outside of the Laboratory.
+Livermore's work both fuels and depends on myriad open source packages. We're proud to be part of a robust development ecosystem both within and outside of the Lab.
 </div>
 
 <!-- Preset vis display areas -->
