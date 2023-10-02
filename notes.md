@@ -1,10 +1,31 @@
 # Notes
 
+## Future Materials Science category
+
+* Add `Materials Science` into the catalog browse by adding this code (alphabetically among the other categories) to `/visualize/github-data/category_info.json`:
+
+        "Materials Science": {
+            "title": "Materials Science",
+            "hash": "MaterialsScience",
+            "icon": {
+                "fa": "fa-hexagon",
+                "alt": "Materials Science"
+            },
+            "description": {
+                "short": "Software supporting research in materials design, optimization, and innovation",
+                "long": ""
+            },
+            "topics": [
+                "materials",
+                "materials-science"
+            ]
+        },
+
 ## Deprecated RADIUSS features
 
 April 2022: <https://software.llnl.gov/radiuss/> launched via <https://github.com/llnl/radiuss>. See tasks in [issue 567](https://github.com/LLNL/llnl.github.io/issues/567). If we ever want/need to reinstate RADIUSS browsing, branding, and other features on this site, here's what to do:
 
-* Add `/explore/#/RADIUSS` back into the catalog browse by adding this code (as lines 154-168) to `category_info.json`:
+* Add `RADIUSS` back into the catalog browse (i.e., to "live" on this website) by adding this code (as lines 154-168) to `/visualize/github-data/category_info.json`:
 
 ```bash
         "RADIUSS": {
@@ -23,6 +44,8 @@ April 2022: <https://software.llnl.gov/radiuss/> launched via <https://github.co
             ]            
         },
 ```
+
+Note that `/project/category_info_radiuss.json` is not currently being used. If it were to be reinstated, it would need its categories updated to match the latest Catalog (e.g., Docs and Tuotirals).
 
 * Comment back in lines 31-38 in `Category.service.js`
 
