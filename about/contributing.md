@@ -117,14 +117,18 @@ See the [FAQ](/about/faq) topic *How do I include my repo in the LLNL organizati
 
 ### Project Logos
 
-The home page displays a logo next to each repo when they appear under the topic categories. If a repo has its own logo, that should display. If not, then its organization's avatar should display. Every repo should have one logo or avatar; no repo should be "empty." Organization avatars are pulled from GitHub.
+The home page displays a logo next to each repo when they appear under the topic categories. If a repo has its own logo, that should display. If not, then the LLNL logo displays by default. There are two steps to adding a logo to this website:
 
-Repo logo files should follow a naming convention and be added to the [logos directory](https://github.com/LLNL/llnl.github.io/tree/main/assets/images/logos). All files must be in .png format.
+**1. Upload the image file.**
 
-* Repository logo: `<repo_name>.png` (`org.png` is acceptable for repos in non-LLNL orgs, as they are unique inside their directory folders)
+Repo logo files should follow a naming convention and be added to the [logos directory](https://github.com/LLNL/llnl.github.io/tree/main/assets/images/logos). All files must be in `.png` format.
+
+* Repository logo: `<repo_name>.png`
 * Directory: `/assets/images/logos/<org name>`
 
-An LLNL repo with its own logo also needs the image file name added to [`repo_logos.json`](https://github.com/LLNL/llnl.github.io/blob/main/assets/images/logos/repo_logos.json).
+**2. Call the image file name.**
+
+An LLNL repo with its own logo also needs the image file name added to [`repo_logos.json`](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-data/repo_logos.json).
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
