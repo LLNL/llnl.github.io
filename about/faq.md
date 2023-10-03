@@ -11,18 +11,16 @@ menus:
 
 <!-- START: Info box -->
 {% capture alertContent %}
-**These FAQs primarily target LLNL developers** working in the [LLNL GitHub organization](https://github.com/LLNL).
-
-Don't see your question listed below? Please contact [LLNL GitHub admins](mailto:github-admin@llnl.gov).
+**These FAQs primarily target LLNL developers** working in the [LLNL GitHub organization](https://github.com/LLNL). Don't see your question listed below? Please contact [LLNL GitHub admins](mailto:github-admin@llnl.gov). Please also refer to our [Contributing Guidelines](/about/contribute) and [Code of Conduct](/about/conduct).
 {% endcapture %}
 {% assign alertContent = alertContent | markdownify %}
 {% include components/alert.html type="warning" icon="fa-circle-info" content=alertContent  %}
 <!-- End: Info box -->
 
-<!-- START: Accordions Each h2 below will be a separate accordion. If any of the requested functionality (e.g., info boxes) is a problem, let me know and I can adjust -->
+<!-- START: Accordions Each h2 below will be a separate accordion. -->
 <div class="accordion default border-top-gradient-software-blue-green border-bottom-gradient-software-blue-green">
   {% capture accordionContent %}
-If you’re new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [setting up and managing your GitHub profile](https://help.github.com/categories/setting-up-and-managing-your-github-profile/).
+If you’re new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [setting up and managing your GitHub profile](https://support.github.com/features/account).
 
 1. [Create an account on GitHub](https://github.com/join).
 
@@ -103,7 +101,7 @@ If you are an employee at LLNL and have 2FA enabled, you are eligible to join th
   {% include components/accordion.html title='How do I join the LLNL organization on GitHub?' content=accordionContent %}
 
 {% capture accordionContent %}
-Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/releasing/) and [incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/).
+Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/).
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I get my repo reviewed and released for GitHub?' content=accordionContent %}
@@ -116,7 +114,7 @@ Remember that these repositories *are hosted on GitHub* servers, ***not** LLNL s
 * No Health Insurance Portability and Accountability Act- (HIPAA-) related information
 * No personally identifiable information (PII)
 * No nondisclosure agreement or vendor-proprietary information
-* No controlled unclassifed information (CUI)
+* No controlled unclassified information (CUI)
 * No unclassified controlled nuclear information (UCNI)
 
 When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidance.
@@ -127,15 +125,10 @@ When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidan
 {% capture accordionContent %}
 Make sure your repo contains [community health files](https://github.com/LLNL/.github/tree/main/community-health), including:
 
-* An appropriate **open source license** and `LLNL-CODE-xxxxxx` **release number**.
-  * See the [LLNL Software Licensing](/about/licenses) page for details and examples.
-
+* An appropriate **open source license** and `LLNL-CODE-xxxxxx` **release number**. See the [LLNL Software Licensing](/about/licenses) page for details and examples.
 * A [**README**](https://guides.github.com/features/wikis/) file that summarizes what the software does and how others can use it.
-
 * A [**NOTICE**](https://github.com/LLNL/.github/blob/main/community-health/NOTICE.md) file that includes LLNL auspice and disclaimer statements.
-
 * A [**CODE OF CONDUCT**](https://github.com/LLNL/.github/blob/main/community-health/CODE_OF_CONDUCT.md) file that defines standards for how to engage in your project's community.
-
 * A [**CONTRIBUTING**](https://github.com/LLNL/.github/blob/main/community-health/CONTRIBUTING.md) file that communicates how others should contribute to your repo.
 
 After your project has been initially released on GitHub and you are ready to provide a new version, a good practice is to tag the version and include [**release notes**](https://github.com/LLNL/.github/blob/main/community-health/release-template.md).
@@ -164,11 +157,11 @@ If you've set up your repository within the LLNL organization, you don't need to
 
 * If your repository exists under a different organization, you can move it to LLNL by selecting "Transfer Ownership" under Settings.
 
-* Alternatively, you can submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
+* Alternatively, you can submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
 
 * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
-* If you have a project logo, please follow the [instructions](https://github.com/LLNL/llnl.github.io/tree/main/assets/images/logos) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
+* If you have a project logo, please follow the [Contributing Guidelines](/about/contribute) (see the question *How do I change how a specific repo appears in the catalog?*) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I include my repo in the LLNL organization and/or this website’s catalog?' content=accordionContent %}
@@ -178,7 +171,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
 1. Include meaningful metadata (description and topic tags) in your repository. Example: [Spack](https://github.com/spack/spack) lists several topic tags below a one-sentence description.
 
-    * Start with our [list](https://github.com/LLNL/llnl.github.io/blob/main/README.md) of recommended, standardized topics.
+    * Start with our list of recommended, standardized topics, which are listed under the question *How do I change how a specific repo appears in the catalog?* in our [Contributing Guidelines](/about/contribute).
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
@@ -187,7 +180,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 3. Publicize any outreach activities or major milestones related to your project such as:
    * A paper/poster/presentation is accepted at a conference
    * An upcoming workshop or webinar you're hosting
-   * Your project received an award nominations
+   * Your project received an award nomination
    * You're guest blogging or speaking on a podcast
    {:.mb-3}
 
@@ -197,7 +190,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
   {% include components/accordion.html title='How do I let people know about my new repo?' content=accordionContent %}
 
 {% capture accordionContent %}
-Submit a pull request! This website is a GitHub repo just like any other LLNL open source project. News is housed in the [`_posts` directory](https://github.com/LLNL/llnl.github.io/tree/main/_posts), and templates are found in the [LLNL/.github repo](https://github.com/LLNL/.github). See the guidelines below about contributing.
+Submit a pull request! This website is a GitHub repo just like any other LLNL open source project. News is housed in the [`_posts` directory](https://github.com/LLNL/llnl.github.io/tree/main/_posts), and templates are found in the [LLNL/.github repo](https://github.com/LLNL/.github). See [Contributing Guidelines](../contribute) for more information.
 
 Before contributing, please contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with your idea or if you have questions about whether your proposed content requires the LLNL review and release process.
 {% endcapture %}
@@ -210,7 +203,7 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 
 2. Remove the repo from the RADIUSS [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml), if applicable.
 
-3. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo's name.
+3. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo's name.
 
 4. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
 {% endcapture %}
@@ -224,7 +217,7 @@ Migrating the repo outside of the LLNL organization requires an organization adm
 
 **Once the repository has moved to the new organization:**
 
-1. Submit a pull request [updating the `input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo's name. This allows for the software catalog to continue including the project even after it moves.
+1. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo's name. This allows for the software catalog to continue including the project even after it moves.
 
 2. Retain topic tags (e.g., `math-physics`) to connect it to this website's browsable categories.
 
@@ -234,7 +227,7 @@ Migrating the repo outside of the LLNL organization requires an organization adm
   {% include components/accordion.html title='My repo has grown. How do I move it out of the LLNL organization?' content=accordionContent %}
 
 {% capture accordionContent %}
-Refer to individual projects for their requirements on accepting contributions. In general though, we follow the "fork and pull" Git workflow model:
+Refer to individual projects for their requirements on accepting contributions. (To contribute to this website, see our [Contributing Guidelines](/about/contribute).) In general, though, we follow the "fork and pull" Git workflow model:
 
 1. Fork a repository.
 
@@ -248,5 +241,6 @@ Refer to individual projects for their requirements on accepting contributions. 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I contribute to an LLNL repo?' content=accordionContent %}
+
 </div>
 <!-- END: Accordions -->
