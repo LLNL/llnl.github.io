@@ -8,7 +8,3 @@ These data files are intended to be read by [the Visualize page's js scripts][js
 [data dir]: ./github-data
 [scripts dir]: ../_visualize/scripts
 [js dir]: ../js/visualize
-
-### Category Icons
-
-To add/change an icon for a category, go to the `category_info.json` file and modify the `icon` property of the given category. To specify a Font Awesome icon, use the `fa` property listing the full CSS class for the Font Awesome Icon. To specify a file as an icon, use the `path` property to specify the absolute path to the icon. If the URL to icon is not in this repository, also specify the domain in the `path`.

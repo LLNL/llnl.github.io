@@ -43,7 +43,7 @@ We often work with other national labs, universities, and industry partners. Wor
 
 One of the great things about a large government organization is that we're not motivated by profit. "The greater good" might sound like a cliché, but it's true. LLNL's national security mission governs our work, so our OSS portfolio of apps, libraries, compilers, and other tools support that mission. This includes everything from monitoring the performance of our supercomputers to making multiphysics codes run more smoothly.
 
-Case in point: The DOE's Advanced Simulation and Computing ([ASC] Program](https://asc.llnl.gov)) leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing high-performance computing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and effectiveness of the nation's nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. With OSS, we can develop quickly and choose the best solutions.
+Case in point: The DOE's Advanced Simulation and Computing ([ASC](https://asc.llnl.gov)) Program leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing high-performance computing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and effectiveness of the nation's nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. With OSS, we can develop quickly and choose the best solutions.
 
 This website abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You'll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE), and we invite you to browse our projects on [GitHub](https://github.com/LLNL).
 
@@ -124,9 +124,8 @@ This website abounds with examples of projects that have found a home in the ope
 </div>
 <!-- END: Quicklinks boxes -->
 
-
 {% capture ctaContent %}
-For more information, check out our [FAQ](/about/faq).  Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL.  Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository.
+For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository.
 {% endcapture %}
 {% assign ctaContent = ctaContent | markdownify %}
 {% include components/call-to-action.html title='Contact' icon='fa-comments-question-check' content=ctaContent  %}
