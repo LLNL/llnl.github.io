@@ -10,4 +10,4 @@ Learn more:
 - [VisIt organization on GitHub](https://github.com/visit-dav)
 - [VisIt primary source code repo](https://github.com/visit-dav/visit)
 - [VisIt user wiki](https://www.visitusers.org/index.php?title=Main_Page)
-- [VisIt website](https://wci.llnl.gov/simulation/computer-codes/visit)
+- [VisIt website](https://sd.llnl.gov/simulation/computer-codes/visit)
