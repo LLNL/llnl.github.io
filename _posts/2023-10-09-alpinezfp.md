@@ -1,0 +1,6 @@
+---
+title: "ALPINE/zfp Addresses Analysis, Visualization, and Data Reduction Needs for Exascale Science Applications"
+categories: story
+---
+
+With the advent of the exascale supercomputing era, computational scientists can run simulations at higher resolutions, add more detailed physical phenomena, increase the size of the physical problems, and couple multiple codes spanning both physical and temporal scales. These exascale simulations generate ever-increasing amounts of data. The Data and Visualization efforts in the DOE's Exascale Computing Project ([ECP](https://www.exascaleproject.org/)) provide an ecosystem of capabilities for data management, analysis, lossy compression, and visualization that enables scientists to extract insight from these simulations while minimizing the amount of data that must be written to long-term storage. Big data is the conceptual link between the separate [ALPINE](https://alpine-dav.readthedocs.io/en/latest/introduction.html) and [zfp](https://github.com/LLNL/zfp) projects that comprise the joint ALPINE/zfp ECP effort. Read more about this effort on [the ECP website](https://www.exascaleproject.org/highlight/alpine-zfp-addresses-analysis-visualization-and-data-reduction-needs-for-exascale-science-applications/).
