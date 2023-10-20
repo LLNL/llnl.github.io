@@ -2740,7 +2740,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "chardet",
                                     "repository": {
-                                        "nameWithOwner": "chardet/chardet"
+                                        "nameWithOwner": "dcramer/chardet"
                                     }
                                 },
                                 {
@@ -5138,7 +5138,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "chardet",
                                     "repository": {
-                                        "nameWithOwner": "chardet/chardet"
+                                        "nameWithOwner": "dcramer/chardet"
                                     }
                                 },
                                 {
@@ -29828,7 +29828,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "chardet",
                                     "repository": {
-                                        "nameWithOwner": "chardet/chardet"
+                                        "nameWithOwner": "dcramer/chardet"
                                     }
                                 },
                                 {
@@ -35272,6 +35272,53 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/deploy-pages",
+                                    "repository": {
+                                        "nameWithOwner": "actions/deploy-pages"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-pages-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-pages-artifact"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -36398,7 +36445,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "chardet",
                                     "repository": {
-                                        "nameWithOwner": "chardet/chardet"
+                                        "nameWithOwner": "dcramer/chardet"
                                     }
                                 },
                                 {
@@ -40545,7 +40592,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "chardet",
                                     "repository": {
-                                        "nameWithOwner": "chardet/chardet"
+                                        "nameWithOwner": "dcramer/chardet"
                                     }
                                 },
                                 {
@@ -54617,6 +54664,14 @@
                 ]
             }
         },
+        "flux-framework/flux-test-collective": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "flux-framework/flux-workflow-examples": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -61267,62 +61322,6 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "attrs",
-                                    "repository": {
-                                        "nameWithOwner": "python-attrs/attrs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "boto3",
-                                    "repository": {
-                                        "nameWithOwner": "boto/boto3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "botocore",
-                                    "repository": {
-                                        "nameWithOwner": "boto/botocore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "certifi",
-                                    "repository": {
-                                        "nameWithOwner": "certifi/python-certifi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "cffi",
-                                    "repository": {
-                                        "nameWithOwner": "python-cffi/cffi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "charset-normalizer",
-                                    "repository": {
-                                        "nameWithOwner": "Ousret/charset_normalizer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coverage",
-                                    "repository": {
-                                        "nameWithOwner": "nedbat/coveragepy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "deprecated",
-                                    "repository": {
-                                        "nameWithOwner": "tantale/deprecated"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
@@ -61330,100 +61329,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "idna",
-                                    "repository": {
-                                        "nameWithOwner": "kjd/idna"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "iniconfig",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/iniconfig"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jmespath",
-                                    "repository": {
-                                        "nameWithOwner": "jmespath/jmespath.py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mccabe",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/mccabe"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "packaging",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/packaging"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pluggy",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pluggy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "py",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pycodestyle",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/pycodestyle"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pycparser",
-                                    "repository": {
-                                        "nameWithOwner": "eliben/pycparser"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyflakes",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/pyflakes"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "pygithub",
                                     "repository": {
                                         "nameWithOwner": "PyGithub/PyGithub"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyjwt",
-                                    "repository": {
-                                        "nameWithOwner": "jpadilla/pyjwt"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pynacl",
-                                    "repository": {
-                                        "nameWithOwner": "pyca/pynacl"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyparsing",
-                                    "repository": {
-                                        "nameWithOwner": "pyparsing/pyparsing"
                                     }
                                 },
                                 {
@@ -61449,51 +61357,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "requests",
+                                    "packageName": "sentry-sdk",
                                     "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "s3transfer",
-                                    "repository": {
-                                        "nameWithOwner": "boto/s3transfer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "toml",
-                                    "repository": {
-                                        "nameWithOwner": "uiri/toml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tomli",
-                                    "repository": {
-                                        "nameWithOwner": "hukkin/tomli"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "urllib3",
-                                    "repository": {
-                                        "nameWithOwner": "urllib3/urllib3"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "wrapt",
-                                    "repository": {
-                                        "nameWithOwner": "GrahamDumpleton/wrapt"
+                                        "nameWithOwner": "getsentry/sentry-python"
                                     }
                                 }
                             ]
