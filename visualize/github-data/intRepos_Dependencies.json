@@ -8779,6 +8779,13 @@
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "vermin",
+                                    "repository": {
+                                        "nameWithOwner": "netromdk/vermin"
+                                    }
                                 }
                             ]
                         }
@@ -16380,7 +16387,9 @@
                                 {
                                     "packageManager": "NPM",
                                     "packageName": "@types/parse-json",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
                                 },
                                 {
                                     "packageManager": "NPM",
@@ -17785,7 +17794,9 @@
                                 {
                                     "packageManager": "NPM",
                                     "packageName": "@types/parse-json",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
                                 },
                                 {
                                     "packageManager": "NPM",
@@ -29779,7 +29790,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "backcall",
                                     "repository": {
-                                        "nameWithOwner": "takluyver/backcall"
+                                        "nameWithOwner": "deepin-community/python-backcall"
                                     }
                                 },
                                 {
@@ -30483,7 +30494,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "backcall",
                                     "repository": {
-                                        "nameWithOwner": "takluyver/backcall"
+                                        "nameWithOwner": "deepin-community/python-backcall"
                                     }
                                 },
                                 {
@@ -35382,7 +35393,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "backcall",
                                     "repository": {
-                                        "nameWithOwner": "takluyver/backcall"
+                                        "nameWithOwner": "deepin-community/python-backcall"
                                     }
                                 },
                                 {
@@ -36396,7 +36407,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "backcall",
                                     "repository": {
-                                        "nameWithOwner": "takluyver/backcall"
+                                        "nameWithOwner": "deepin-community/python-backcall"
                                     }
                                 },
                                 {
@@ -36423,9 +36434,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "brotlipy",
-                                    "repository": {
-                                        "nameWithOwner": "python-hyper/brotlicffi"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -36492,7 +36501,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "commonmark",
                                     "repository": {
-                                        "nameWithOwner": "readthedocs/commonmark.py"
+                                        "nameWithOwner": "rolandshoemaker/CommonMark-py"
                                     }
                                 },
                                 {
@@ -47339,7 +47348,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-copybutton",
                                     "repository": {
-                                        "nameWithOwner": "choldgraf/sphinx-copybutton"
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
                                     }
                                 },
                                 {
@@ -51059,7 +51068,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "backcall",
                                     "repository": {
-                                        "nameWithOwner": "takluyver/backcall"
+                                        "nameWithOwner": "deepin-community/python-backcall"
                                     }
                                 },
                                 {
@@ -52302,7 +52311,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-copybutton",
                                     "repository": {
-                                        "nameWithOwner": "choldgraf/sphinx-copybutton"
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
                                     }
                                 },
                                 {
@@ -53272,7 +53281,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-copybutton",
                                     "repository": {
-                                        "nameWithOwner": "choldgraf/sphinx-copybutton"
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
                                     }
                                 },
                                 {
@@ -53859,9 +53868,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "python-jose",
-                                    "repository": {
-                                        "nameWithOwner": "mpdavis/python-jose"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -54013,7 +54020,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-copybutton",
                                     "repository": {
-                                        "nameWithOwner": "choldgraf/sphinx-copybutton"
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
                                     }
                                 },
                                 {
@@ -55570,7 +55577,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "commonmark",
                                     "repository": {
-                                        "nameWithOwner": "readthedocs/commonmark.py"
+                                        "nameWithOwner": "rolandshoemaker/CommonMark-py"
                                     }
                                 },
                                 {
@@ -59380,6 +59387,14 @@
                 "nodes": []
             }
         },
+        "spack/msvc-wrapper": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "spack/packages.spack.io": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -61187,6 +61202,13 @@
                                     "repository": {
                                         "nameWithOwner": "python-gitlab/python-gitlab"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
+                                    }
                                 }
                             ]
                         }
@@ -61432,6 +61454,26 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "boto3",
+                                    "repository": {
+                                        "nameWithOwner": "boto/boto3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "kubernetes",
                                     "repository": {
                                         "nameWithOwner": "kubernetes-client/python"
@@ -61521,9 +61563,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "deprecated",
-                                    "repository": {
-                                        "nameWithOwner": "tantale/deprecated"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -61569,6 +61609,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "urllib3",
                                     "repository": {
                                         "nameWithOwner": "urllib3/urllib3"
@@ -61610,6 +61657,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "uvicorn",
                                     "repository": {
                                         "nameWithOwner": "encode/uvicorn"
@@ -61657,6 +61711,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "uvicorn",
                                     "repository": {
                                         "nameWithOwner": "encode/uvicorn"
@@ -61673,6 +61734,13 @@
                                     "packageName": "requests",
                                     "repository": {
                                         "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
                                     }
                                 }
                             ]
@@ -61712,6 +61780,13 @@
                                     "packageName": "pyyaml",
                                     "repository": {
                                         "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
                                     }
                                 }
                             ]
@@ -62332,7 +62407,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sphinx-copybutton",
                                     "repository": {
-                                        "nameWithOwner": "choldgraf/sphinx-copybutton"
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
                                     }
                                 },
                                 {
