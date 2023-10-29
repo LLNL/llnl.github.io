@@ -25486,6 +25486,60 @@
                 ]
             }
         },
+        "LLNL/PYB11Generator": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "decorator",
+                                    "repository": {
+                                        "nameWithOwner": "micheles/decorator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pybind11",
+                                    "repository": {
+                                        "nameWithOwner": "dialkforkaushik/DECAGT"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "decorator",
+                                    "repository": {
+                                        "nameWithOwner": "micheles/decorator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pybind11",
+                                    "repository": {
+                                        "nameWithOwner": "dialkforkaushik/DECAGT"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/PairScore": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -25560,6 +25614,143 @@
                     {
                         "color": "#f34b7d",
                         "name": "C++"
+                    }
+                ]
+            }
+        },
+        "LLNL/PyDV": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "furo",
+                                    "repository": {
+                                        "nameWithOwner": "pradyunsg/furo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyside2",
+                                    "repository": {
+                                        "nameWithOwner": "raccoonmonk/pyside2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python",
+                                    "repository": {
+                                        "nameWithOwner": "GDGToulouse/devfest-embedded-devices-monorepo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "jasonmccampbell/scipy-refactor"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-autoapi",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx-autoapi"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/create-release",
+                                    "repository": {
+                                        "nameWithOwner": "actions/create-release"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -32217,7 +32408,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "zone.js",
                                     "repository": {
-                                        "nameWithOwner": "angular/angular"
+                                        "nameWithOwner": "angular/zone.js"
                                     }
                                 }
                             ]
