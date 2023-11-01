@@ -3273,7 +3273,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "fake-factory",
                                     "repository": {
-                                        "nameWithOwner": "joke2k/faker"
+                                        "nameWithOwner": "attilaolah/faker"
                                     }
                                 },
                                 {
@@ -3440,7 +3440,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "fake-factory",
                                     "repository": {
-                                        "nameWithOwner": "joke2k/faker"
+                                        "nameWithOwner": "attilaolah/faker"
                                     }
                                 },
                                 {
@@ -27015,6 +27015,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pytz",
+                                    "repository": {
+                                        "nameWithOwner": "stub42/pytz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "pyyaml",
                                     "repository": {
                                         "nameWithOwner": "yaml/pyyaml"
@@ -27039,6 +27046,13 @@
                                     "packageName": "sphinx",
                                     "repository": {
                                         "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
                                     }
                                 },
                                 {
@@ -44757,9 +44771,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "systems.uom:systems-common",
-                                    "repository": {
-                                        "nameWithOwner": "unitsofmeasurement/uom-parent"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -55408,6 +55420,107 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "flux-framework/locator-map": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "faraday",
+                                    "repository": {
+                                        "nameWithOwner": "lostisland/faraday"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "github-pages",
+                                    "repository": {
+                                        "nameWithOwner": "github/pages-gem"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-paginate",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-paginate"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "geopy",
+                                    "repository": {
+                                        "nameWithOwner": "geopy/geopy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#563d7c",
+                        "name": "CSS"
+                    }
+                ]
             }
         },
         "flux-framework/planning": {
