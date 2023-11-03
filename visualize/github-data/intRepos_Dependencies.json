@@ -33342,6 +33342,26 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "sphinx",
                                     "repository": {
@@ -41681,6 +41701,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "deepdiff",
+                                    "repository": {
+                                        "nameWithOwner": "seperman/deepdiff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "dep-license",
                                     "repository": {
                                         "nameWithOwner": "abduhbm/dep-license"
@@ -42708,6 +42735,19 @@
                     {
                         "color": "#555555",
                         "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/msr-genie": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
@@ -59359,6 +59399,28 @@
                 ]
             }
         },
+        "spack/github-actions-buildcache": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "spack/gitlab-runners": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -60205,7 +60267,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
             }
         },
         "spack/packages.spack.io": {
