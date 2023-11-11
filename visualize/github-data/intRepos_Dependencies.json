@@ -18893,6 +18893,40 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "argparse",
+                                    "repository": {
+                                        "nameWithOwner": "ThomasWaldmann/argparse"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kosh",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/kosh"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pika",
+                                    "repository": {
+                                        "nameWithOwner": "pika/pika"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -33402,6 +33436,19 @@
                                     "packageName": "actions/upload-pages-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-pages-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
