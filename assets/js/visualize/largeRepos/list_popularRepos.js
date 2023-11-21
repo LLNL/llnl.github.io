@@ -7,7 +7,7 @@ function draw_popularRepos(areaID, columns=2, orthogonalOrdering=false) {
         const graphHeader = 'Top 10 Popular Repos by Stars';
 
         const rowSpacing = 5,
-            columnSpacing = 15,
+            columnSpacing = -1,
             fontSize = 14;
         const margin = { top: stdMargin.top, right: stdMargin.right, bottom: stdMargin.bottom, left: stdMargin.left },
             element = document.querySelector('.' + areaID).parentNode,
@@ -19,7 +19,7 @@ function draw_popularRepos(areaID, columns=2, orthogonalOrdering=false) {
 
         const columnSizeTotal = columnSize * data.length + columnSpacing * (data.length - 1);
 
-        const centering = (width - columnSizeTotal) / 2;
+        const centering = (width - columnSizeTotal) / 30;
         
         let n = 0;
         let m = 0;
