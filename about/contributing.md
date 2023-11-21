@@ -70,14 +70,15 @@ If a word needs to be ignored, see [instructions](https://github.com/crate-ci/ty
   {% include components/accordion.html title='How do I build this site locally?' content=accordionContent %}
 
 {% capture accordionContent %}
-A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-data/category_info.json) contains the info for the software catalog categories displayed on the home page: title, Font Awesome icon, description. If any changes need to be made to these categories, just edit the data in the JSON and the home page will reflect your changes automatically. (These catalog categories/topics are distinct from the tags on [News posts](../../news).)
+A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-data/category_info.json) contains the info for the software catalog categories displayed on the home page: title, Font Awesome icon, description. If any changes need to be made to these categories, just edit the data in the JSON and the home page will reflect your changes automatically. (These catalog categories/topics are distinct from the tags on [News posts](../../news).) The list below contains each category's description to ensure consistency in phrasing and length. Note that in some cases the category is plural, but the corresponding tag is singular.
 
-The list below also contains each category's description to ensure consistency in phrasing and length. Note that in some cases the category is plural, but the corresponding tag is singular.
+**Note:** The `All Software` category appears at the top of the list by virtue of a blank space before the first letter in the `title` field (see the JSON file linked above). All other categories appear in alphabetical order.
 
 | -------- | ----------- | ------ | ------- |
 | Category | Description | Tag(s) | FA icon |
 | -------- | ----------- | ------ | ------- |
 | **All Software** | Browse all LLNL open source projects | (no tags required) | (image: `logomark-software.svg`) |
+| **AI & Machine Learning** | Integrate artificial intelligence and machine learning into scientific applications | `artificial-intelligence`, `deep-learning`, `machine-learning`, `neural-network` | fa-brain-circuit |
 | **App Infrastructure** | Browse tools for basic functionality common in HPC codes | `app-infrastructure` | fa-gear-complex-code |
 | **Applications** | Browse scientific simulation codes and IT management tools | `application` | fa-laptop-code |
 | **Build Tools** | Automate and simplify complex dependencies and deployments | `build-tools` | fa-tools |
