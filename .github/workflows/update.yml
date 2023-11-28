@@ -48,7 +48,7 @@ jobs:
           cat $DATA_REPO/_visualize/LAST_MASTER_UPDATE.txt || true
           echo "Warning Count: $(grep -c 'Warning' $DATA_REPO/_visualize/LAST_MASTER_UPDATE.log)"
           echo "From Timeouts: $(grep -c 'but failed' $DATA_REPO/_visualize/LAST_MASTER_UPDATE.log)"
-          echo "Limit Reached: $(grep -c 'GITHUB NEEDS A BREAK' $DATA_REPO/_visualize/LAST_MASTER_UPDATE.log)"
+          echo "Limit Reached: $(grep -c 'rate limit exceeded' $DATA_REPO/_visualize/LAST_MASTER_UPDATE.log)"
       - name: Save log files
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
