@@ -51114,6 +51114,26 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-fortran",
+                                    "repository": {
+                                        "nameWithOwner": "VACUMM/sphinx-fortran"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "cython",
                                     "repository": {
                                         "nameWithOwner": "cython/cython"
@@ -65125,6 +65145,14 @@
                 ]
             }
         },
+        "spack/windows-bootstrap-resources": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "tonyhutter/edit-initramfs": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -65144,19 +65172,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "visit-dav/dashboard-lite": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#e34c26",
-                        "name": "HTML"
-                    }
-                ]
             }
         },
         "visit-dav/java-client-docs": {
