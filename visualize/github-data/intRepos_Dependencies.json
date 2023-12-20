@@ -1463,7 +1463,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -2546,7 +2546,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 }
                             ]
@@ -12974,7 +12974,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -27620,7 +27620,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -30829,7 +30829,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -31542,7 +31542,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -34114,7 +34114,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -37807,7 +37807,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -46941,7 +46941,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "ipywidgets",
                                     "repository": {
-                                        "nameWithOwner": "jupyter-widgets/ipywidgets"
+                                        "nameWithOwner": "jakevdp/ipywidgets-static"
                                     }
                                 },
                                 {
@@ -52156,6 +52156,40 @@
         "chaos/pdsh": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/analyze",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/autobuild",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "github/codeql-action/init",
+                                    "repository": {
+                                        "nameWithOwner": "github/codeql-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
