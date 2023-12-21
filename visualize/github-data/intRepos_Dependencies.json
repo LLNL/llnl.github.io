@@ -25853,7 +25853,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/PENNANT": {
@@ -39108,6 +39113,26 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "black",
                                     "repository": {
@@ -39119,6 +39144,47 @@
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gidgethub",
+                                    "repository": {
+                                        "nameWithOwner": "gidgethub/gidgethub"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "gidgetlab",
+                                    "repository": {
+                                        "nameWithOwner": "beenje/gidgetlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-asyncio",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-asyncio"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tox",
+                                    "repository": {
+                                        "nameWithOwner": "tox-dev/tox"
                                     }
                                 }
                             ]
@@ -42259,7 +42325,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "opencv-python",
                                     "repository": {
-                                        "nameWithOwner": "bertsky/wrap_opencv-python-headless"
+                                        "nameWithOwner": "opencv/opencv-python"
                                     }
                                 },
                                 {
