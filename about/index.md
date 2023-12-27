@@ -125,7 +125,7 @@ This website abounds with examples of projects that have found a home in the ope
 <!-- END: Quicklinks boxes -->
 
 {% capture ctaContent %}
-For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository.
+For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository. Visit the [software licensing portal](https://softwarelicensing.llnl.gov/) for information about licensing LLNL's proprietary codes.
 {% endcapture %}
 {% assign ctaContent = ctaContent | markdownify %}
 {% include components/call-to-action.html title='Contact' icon='fa-comments-question-check' content=ctaContent  %}

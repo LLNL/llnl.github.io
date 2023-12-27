@@ -21,7 +21,7 @@ menus:
 
 <!-- START: Info box -->
 {% capture alertContent %}
-This page contains information meant for LLNL employees with instructions for how to mark their source code projects. It is not intended to serve as legal advice.
+This page contains information meant for LLNL employees with instructions for how to mark their source code projects. It is not intended to serve as legal advice. Visit the [software licensing portal](https://softwarelicensing.llnl.gov/) for information about licensing LLNL's proprietary codes.
 {% endcapture %}
 {% assign alertContent = alertContent | markdownify %}
 {% include components/alert.html type="warning" icon="fa-circle-info" content=alertContent  %}
