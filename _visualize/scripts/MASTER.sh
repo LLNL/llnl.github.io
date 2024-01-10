@@ -62,7 +62,6 @@ runScript get_repos_users.py
 runScript get_repos_languages.py
 runScript get_repos_topics.py
 runScript get_repos_activitycommits.py
-runScript get_repos_activitylines.py
 runScript get_repos_dependencies.py
 runScript get_dependency_info.py
 

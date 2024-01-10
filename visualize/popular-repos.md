@@ -52,18 +52,10 @@ We contribute to a variety of code repositories, some of which fuel internal wor
   <svg class="repoActivityChart d-block mx-auto my-0"></svg>
 </div>
 
-<div class="row">
-    <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide" markdown="1">
+<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide" markdown="1">
 ### Commits
 <div class="text-center">
 <svg class="commitPie"></svg>
-</div>
-</div>
-<div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide" markdown="1">
-### Line Edits
-<div class="text-center">
-<svg class="linePie"></svg>
-</div>
 </div>
 </div>
 
@@ -90,7 +82,6 @@ We contribute to a variety of code repositories, some of which fuel internal wor
 <script type="text/javascript" src="/assets/js/visualize/largeRepos/sunburst_licenses.js"></script>
 <script type="text/javascript" src="/assets/js/visualize/largeRepos/list_popularRepos.js"></script>
 <script type="text/javascript" src="/assets/js/visualize/largeRepos/pie_activityCommits.js"></script>
-<script type="text/javascript" src="/assets/js/visualize/largeRepos/pie_activityLines.js"></script>
 <script type="text/javascript" src="/assets/js/visualize/largeRepos/line_repoStarHistory.js"></script>
 
 <script>
@@ -119,7 +110,6 @@ We contribute to a variety of code repositories, some of which fuel internal wor
         draw_line_repoActivity('repoActivityChart');
         draw_sunburst_licenses('popularLicenses');
         draw_pie_commits('commitPie');
-        draw_pie_lines('linePie');
         draw_popularRepos('listPopularRepos', 5, true);
         draw_line_repoStarHistory('repoStarHistory');
     });
