@@ -45,7 +45,6 @@ echo -e "START\t$(date -u)" >> $DATELOG
 
 # --- CHACHEABLE QUERIES ---
 runScript cache_repos_activitycommits.py
-runScript cache_repos_activitylines.py
 
 
 echo "CACHE REQUEST COMPLETE"
