@@ -10770,7 +10770,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "FasterXML/jackson"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -14383,7 +14385,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "FasterXML/jackson"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -21392,9 +21396,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "edu.sc.seis:seisFile",
-                                    "repository": {
-                                        "nameWithOwner": "crotwell/seisFile"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -35455,7 +35457,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "FasterXML/jackson"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -35765,7 +35769,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "com.fasterxml.jackson.core:jackson-databind",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "FasterXML/jackson"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -40294,6 +40300,40 @@
                                     "packageName": "tqdm",
                                     "repository": {
                                         "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache/restore",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache/save",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 }
                             ]
@@ -46173,9 +46213,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "edu.sc.seis:seisFile",
-                                    "repository": {
-                                        "nameWithOwner": "crotwell/seisFile"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -46237,16 +46275,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "systems.uom:systems-common",
-                                    "repository": {
-                                        "nameWithOwner": "unitsofmeasurement/uom-parent"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "systems.uom:systems-quantity",
-                                    "repository": {
-                                        "nameWithOwner": "unitsofmeasurement/uom-parent"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -46958,7 +46992,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "safety",
                                     "repository": {
-                                        "nameWithOwner": "pyupio/safety"
+                                        "nameWithOwner": "sobolevn/safety"
                                     }
                                 },
                                 {
@@ -54366,13 +54400,6 @@
                                     "packageName": "isort",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/isort"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jsonschema",
-                                    "repository": {
-                                        "nameWithOwner": "python-jsonschema/jsonschema"
                                     }
                                 },
                                 {
