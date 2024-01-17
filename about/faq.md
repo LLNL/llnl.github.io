@@ -155,7 +155,7 @@ Repositories within the LLNL organization are owned and managed by LLNL. Please 
 
 If you've set up your repository within the LLNL organization, you don't need to take any action; it will automatically appear after the next data update.
 
-* If your repository exists under a different organization, you can move it to LLNL by selecting "Transfer Ownership" under Settings.
+* If your repository exists under a different organization, you can move it to LLNL: Settings > Danger Zone > Transfer ownership > Transfer button.
 
 * Alternatively, you can submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
 
@@ -196,6 +196,15 @@ Before contributing, please contact [open-source@llnl.gov](mailto:open-source@ll
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I contribute news or other content to this website?' content=accordionContent %}
+
+{% capture accordionContent %}
+Yes, you can give external contributors Write access to your GitHub repo. Anyone with Admin access to your repo can enable this: Settings > Collaborators > Manage access > Add people > enter their username and select.
+
+If you don't already have Admin access to your repo, contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to request it.
+
+{% endcapture %}
+  {% assign accordionContent = accordionContent | markdownify %}
+  {% include components/accordion.html title='Can non-LLNL developers contribute to my project?' content=accordionContent %}
 
 {% capture accordionContent %}
 
