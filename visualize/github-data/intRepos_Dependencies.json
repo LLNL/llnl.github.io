@@ -10428,6 +10428,98 @@
                 ]
             }
         },
+        "ESGF/esg-search": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.sun:tools",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.maven.plugins:maven-antrun-plugin",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.soebes.maven.plugins:maven-iterator-plugin",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.maven.plugins:maven-antrun-plugin",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.maven.plugins:maven-resources-plugin",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.codehaus.mojo:exec-maven-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "mojohaus/exec-maven-plugin"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.soebes.maven.plugins:iterator-maven-plugin",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.maven.plugins:maven-antrun-plugin",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.soebes.maven.plugins:iterator-maven-plugin",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.codehaus.mojo:exec-maven-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "mojohaus/exec-maven-plugin"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#b07219",
+                        "name": "Java"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-ansible": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -36977,14 +37069,14 @@
                                     "packageManager": "PIP",
                                     "packageName": "jupyterlab",
                                     "repository": {
-                                        "nameWithOwner": "tojin12341za/jupyterlab"
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "notebook",
                                     "repository": {
-                                        "nameWithOwner": "mirobeka/notebook"
+                                        "nameWithOwner": "jupyter/notebook"
                                     }
                                 },
                                 {
@@ -38260,7 +38352,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "notebook",
                                     "repository": {
-                                        "nameWithOwner": "mirobeka/notebook"
+                                        "nameWithOwner": "jupyter/notebook"
                                     }
                                 },
                                 {
@@ -53572,7 +53664,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "jupyterlab",
                                     "repository": {
-                                        "nameWithOwner": "tojin12341za/jupyterlab"
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
                                     }
                                 },
                                 {
@@ -55520,7 +55612,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "notebook",
                                     "repository": {
-                                        "nameWithOwner": "mirobeka/notebook"
+                                        "nameWithOwner": "jupyter/notebook"
                                     }
                                 },
                                 {
@@ -56277,7 +56369,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "notebook",
                                     "repository": {
-                                        "nameWithOwner": "mirobeka/notebook"
+                                        "nameWithOwner": "jupyter/notebook"
                                     }
                                 },
                                 {
@@ -63961,6 +64053,13 @@
                                     "packageManager": "PIP",
                                     "packageName": "psycopg2-binary",
                                     "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
