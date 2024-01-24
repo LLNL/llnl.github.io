@@ -28462,7 +28462,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "angr",
                                     "repository": {
-                                        "nameWithOwner": "angr/angr"
+                                        "nameWithOwner": "AkshaySG14/582proj-angr"
                                     }
                                 },
                                 {
@@ -64011,6 +64011,31 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruamel-yaml",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "celery",
                                     "repository": {
                                         "nameWithOwner": "celery/celery"
@@ -64091,38 +64116,6 @@
                         "dependencies": {
                             "nodes": [
                                 {
-                                    "packageManager": "PIP",
-                                    "packageName": "click",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/click"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "kubernetes",
-                                    "repository": {
-                                        "nameWithOwner": "kubernetes-client/python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "nameWithOwner": "yaml/pyyaml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ruamel-yaml",
-                                    "repository": null
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -64195,6 +64188,19 @@
                                     "packageName": "docker/setup-qemu-action",
                                     "repository": {
                                         "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
