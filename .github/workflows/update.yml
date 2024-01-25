@@ -2,7 +2,7 @@ name: Scheduled Data Update
 
 on:
   schedule:
-    - cron: "45 7 * * *"
+    - cron: "45 10 * * *"
 
 env:
   # GitHub username (owner of BOT_TOKEN, will be credited for updates)
@@ -31,7 +31,7 @@ jobs:
           path: ${{ env.ACTION_REPO }}
           token: ${{ secrets.BOT_TOKEN }}
       - name: Setup python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: "pip"
@@ -51,7 +51,7 @@ jobs:
           echo "Limit Reached: $(grep -c 'rate limit exceeded' $DATA_REPO/_visualize/LAST_MASTER_UPDATE.log)"
       - name: Save log files
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: logfiles_${{ env.TIMESTAMP }}_update
           path: |
