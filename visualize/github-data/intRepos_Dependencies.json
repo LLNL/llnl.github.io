@@ -9322,6 +9322,26 @@
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
                                     }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
@@ -27989,37 +28009,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "importlib-metadata",
+                                    "packageName": "ipython-genutils",
                                     "repository": {
-                                        "nameWithOwner": "python/importlib_metadata"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ipykernel",
-                                    "repository": {
-                                        "nameWithOwner": "ipython/ipykernel"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ipython",
-                                    "repository": {
-                                        "nameWithOwner": "ipython/ipython"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ipywidgets",
-                                    "repository": {
-                                        "nameWithOwner": "jakevdp/ipywidgets-static"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jinja2",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/jinja"
+                                        "nameWithOwner": "ipython/ipython_genutils"
                                     }
                                 },
                                 {
@@ -28031,23 +28023,23 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "markupsafe",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/markupsafe"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "mock",
                                     "repository": {
                                         "nameWithOwner": "calvinchengx/python-mock"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myst-nb",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/MyST-NB"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbconvert",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbconvert"
                                     }
                                 },
                                 {
@@ -28059,23 +28051,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "nbsphinx",
+                                    "packageName": "pytest",
                                     "repository": {
-                                        "nameWithOwner": "spatialaudio/nbsphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nose",
-                                    "repository": {
-                                        "nameWithOwner": "nose-devs/nose"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
+                                        "nameWithOwner": "pytest-dev/pytest"
                                     }
                                 },
                                 {
@@ -28087,16 +28065,16 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
+                                    "packageName": "sphinx-immaterial",
                                     "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                        "nameWithOwner": "jbms/sphinx-immaterial"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "tox",
+                                    "packageName": "sphinx-rtd-theme",
                                     "repository": {
-                                        "nameWithOwner": "tox-dev/tox"
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
                                     }
                                 }
                             ]
@@ -28464,7 +28442,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "angr",
                                     "repository": {
-                                        "nameWithOwner": "angr/angr"
+                                        "nameWithOwner": "AkshaySG14/582proj-angr"
                                     }
                                 },
                                 {
@@ -37028,7 +37006,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "python-slugify",
                                     "repository": {
-                                        "nameWithOwner": "un33k/python-slugify"
+                                        "nameWithOwner": "bernardosulzbach/python-slugify"
                                     }
                                 },
                                 {
@@ -42975,9 +42953,63 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx",
+                                    "packageName": "markdown-grid-tables",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs",
                                     "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                        "nameWithOwner": "mkdocs/mkdocs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-codeinclude-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "rnorth/mkdocs-codeinclude-plugin"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-gen-files",
+                                    "repository": {
+                                        "nameWithOwner": "oprypin/mkdocs-gen-files"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-glightbox",
+                                    "repository": {
+                                        "nameWithOwner": "blueswen/mkdocs-glightbox"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-literate-nav",
+                                    "repository": {
+                                        "nameWithOwner": "oprypin/mkdocs-literate-nav"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-material",
+                                    "repository": {
+                                        "nameWithOwner": "squidfunk/mkdocs-material"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocstrings",
+                                    "repository": {
+                                        "nameWithOwner": "mkdocstrings/mkdocstrings"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocstrings-python",
+                                    "repository": {
+                                        "nameWithOwner": "mkdocstrings/python"
                                     }
                                 }
                             ]
@@ -43287,31 +43319,6 @@
                                     "repository": {
                                         "nameWithOwner": "LLNL/maestrowf"
                                     }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "merlin",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/merlin"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "fakers",
-                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
