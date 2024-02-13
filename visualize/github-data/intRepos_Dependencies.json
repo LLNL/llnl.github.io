@@ -178,7 +178,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "keras",
                                     "repository": {
-                                        "nameWithOwner": "keras-team/keras"
+                                        "nameWithOwner": "dmlc/keras"
                                     }
                                 },
                                 {
@@ -850,7 +850,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "keras",
                                     "repository": {
-                                        "nameWithOwner": "keras-team/keras"
+                                        "nameWithOwner": "dmlc/keras"
                                     }
                                 },
                                 {
@@ -27360,7 +27360,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "keras",
                                     "repository": {
-                                        "nameWithOwner": "keras-team/keras"
+                                        "nameWithOwner": "dmlc/keras"
                                     }
                                 },
                                 {
@@ -29382,7 +29382,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.DotNet.PlatformAbstractions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/core-setup"
+                                        "nameWithOwner": "dotnet/source-build"
                                     }
                                 },
                                 {
@@ -29937,7 +29937,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.DotNet.PlatformAbstractions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/core-setup"
+                                        "nameWithOwner": "dotnet/source-build"
                                     }
                                 },
                                 {
@@ -34742,7 +34742,76 @@
         },
         "LLNL/clippy": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "nedbat/coveragepy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "flake8",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pylint",
+                                    "repository": {
+                                        "nameWithOwner": "pylint-dev/pylint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyproj",
+                                    "repository": {
+                                        "nameWithOwner": "pyproj4/pyproj"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -38058,7 +38127,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "entrypoints",
                                     "repository": {
-                                        "nameWithOwner": "takluyver/entrypoints"
+                                        "nameWithOwner": "sdruskat/poetry-entrypoints"
                                     }
                                 },
                                 {
@@ -38371,7 +38440,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "opendssdirect-py",
                                     "repository": {
-                                        "nameWithOwner": "dss-extensions/OpenDSSDirect.py"
+                                        "nameWithOwner": "MosayebAfshari/OpenDSSDirect"
                                     }
                                 },
                                 {
@@ -54987,6 +55056,19 @@
                 ]
             }
         },
+        "flux-framework/flux-go": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#00ADD8",
+                        "name": "Go"
+                    }
+                ]
+            }
+        },
         "flux-framework/flux-hierarchy": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -58251,19 +58333,17 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "typing-extensions",
                                     "repository": {
                                         "nameWithOwner": "python/typing"
                                     }
                                 }
                             ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": []
                         }
                     },
                     {
@@ -65846,6 +65926,54 @@
                 ]
             }
         },
+        "spack/spack-snap": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "canonical/setup-lxd",
+                                    "repository": {
+                                        "nameWithOwner": "canonical/setup-lxd"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "get-woke/woke-action",
+                                    "repository": {
+                                        "nameWithOwner": "get-woke/woke-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "snapcore/action-build",
+                                    "repository": {
+                                        "nameWithOwner": "snapcore/action-build"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "spack/spack-stack": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -67187,8 +67315,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
