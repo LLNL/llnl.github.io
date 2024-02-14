@@ -28667,6 +28667,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "forthon",
+                                    "repository": {
+                                        "nameWithOwner": "dpgrote/Forthon"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "h5pickle",
                                     "repository": {
                                         "nameWithOwner": "DaanVanVugt/h5pickle"
@@ -28674,23 +28681,37 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "requests",
+                                    "packageName": "h5py",
                                     "repository": {
-                                        "nameWithOwner": "psf/requests"
+                                        "nameWithOwner": "h5py/h5py"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "tqdm",
+                                    "packageName": "matplotlib",
                                     "repository": {
-                                        "nameWithOwner": "tqdm/tqdm"
+                                        "nameWithOwner": "matplotlib/matplotlib"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "uedge",
+                                    "packageName": "numpy",
                                     "repository": {
-                                        "nameWithOwner": "LLNL/UEDGE"
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyaml",
+                                    "repository": {
+                                        "nameWithOwner": "mk-fg/pretty-yaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
                                     }
                                 }
                             ]
@@ -28701,8 +28722,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
                     }
                 ]
             }
@@ -38120,7 +38141,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "dss-python",
                                     "repository": {
-                                        "nameWithOwner": "dss-extensions/dss_python"
+                                        "nameWithOwner": "dss-extensions/DSS-Python"
                                     }
                                 },
                                 {
@@ -40857,196 +40878,6 @@
                     {
                         "color": "#DA3434",
                         "name": "CMake"
-                    }
-                ]
-            }
-        },
-        "LLNL/llnl.github.io": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-coffeescript",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-coffeescript"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-feed",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-feed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-github-metadata",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/github-metadata"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-redirect-from",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-redirect-from"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-remote-theme",
-                                    "repository": {
-                                        "nameWithOwner": "benbalter/jekyll-remote-theme"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-seo-tag",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-seo-tag"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-sitemap",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-sitemap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "kramdown-parser-gfm",
-                                    "repository": {
-                                        "nameWithOwner": "kramdown/parser-gfm"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "webrick",
-                                    "repository": {
-                                        "nameWithOwner": "ruby/webrick"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyaml",
-                                    "repository": {
-                                        "nameWithOwner": "mk-fg/pretty-yaml"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-artifact",
-                                    "repository": {
-                                        "nameWithOwner": "actions/upload-artifact"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "crate-ci/typos",
-                                    "repository": {
-                                        "nameWithOwner": "crate-ci/typos"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-artifact",
-                                    "repository": {
-                                        "nameWithOwner": "actions/upload-artifact"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "llnl-scraper",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/scraper"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f1e05a",
-                        "name": "JavaScript"
                     }
                 ]
             }
@@ -51010,6 +50841,11 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "head",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "nbsphinx",
                                     "repository": {
                                         "nameWithOwner": "spatialaudio/nbsphinx"
@@ -51020,6 +50856,13 @@
                                     "packageName": "sphinx",
                                     "repository": {
                                         "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
                                     }
                                 }
                             ]
