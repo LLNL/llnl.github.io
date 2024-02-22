@@ -24336,36 +24336,9 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "nbsphinx",
+                                    "packageName": "numpy",
                                     "repository": {
-                                        "nameWithOwner": "spatialaudio/nbsphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "readthedocs-sphinx-search",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/readthedocs-sphinx-search"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                        "nameWithOwner": "numpy/numpy"
                                     }
                                 },
                                 {
@@ -40491,6 +40464,75 @@
                                     "packageName": "tqdm",
                                     "repository": {
                                         "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs",
+                                    "repository": {
+                                        "nameWithOwner": "mkdocs/mkdocs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-gen-files",
+                                    "repository": {
+                                        "nameWithOwner": "oprypin/mkdocs-gen-files"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-glightbox",
+                                    "repository": {
+                                        "nameWithOwner": "blueswen/mkdocs-glightbox"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-jupyter",
+                                    "repository": {
+                                        "nameWithOwner": "danielfrg/mkdocs-jupyter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-literate-nav",
+                                    "repository": {
+                                        "nameWithOwner": "oprypin/mkdocs-literate-nav"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-material",
+                                    "repository": {
+                                        "nameWithOwner": "squidfunk/mkdocs-material"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-material-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "facelessuser/mkdocs-material-extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocs-mermaid2-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "fralau/mkdocs-mermaid2-plugin"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mkdocstrings-python",
+                                    "repository": {
+                                        "nameWithOwner": "mkdocstrings/python"
                                     }
                                 }
                             ]
@@ -64168,28 +64210,6 @@
                         "name": "Python"
                     }
                 ]
-            }
-        },
-        "spack/spack-contributions": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "contrib",
-                                    "repository": {
-                                        "nameWithOwner": "spack/contrib"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": []
             }
         },
         "spack/spack-cscs2019": {
