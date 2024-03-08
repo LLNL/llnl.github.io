@@ -34527,6 +34527,19 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "semver",
+                                    "repository": {
+                                        "nameWithOwner": "python-semver/python-semver"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -34538,6 +34551,13 @@
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "MarkusJx/install-boost",
+                                    "repository": {
+                                        "nameWithOwner": "MarkusJx/install-boost"
                                     }
                                 }
                             ]
@@ -54896,6 +54916,13 @@
                                     "repository": {
                                         "nameWithOwner": "pygments/pygments.rb"
                                     }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
+                                    }
                                 }
                             ]
                         }
@@ -57463,107 +57490,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "flux-framework/locator-map": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "faraday",
-                                    "repository": {
-                                        "nameWithOwner": "lostisland/faraday"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "github-pages",
-                                    "repository": {
-                                        "nameWithOwner": "github/pages-gem"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-paginate",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-paginate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "webrick",
-                                    "repository": {
-                                        "nameWithOwner": "ruby/webrick"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "geopy",
-                                    "repository": {
-                                        "nameWithOwner": "geopy/geopy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#563d7c",
-                        "name": "CSS"
-                    }
-                ]
             }
         },
         "flux-framework/planning": {
@@ -64277,6 +64203,13 @@
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "isort",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/isort"
                                     }
                                 }
                             ]
