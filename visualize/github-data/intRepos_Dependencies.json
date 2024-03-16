@@ -55905,13 +55905,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "pydantic",
-                                    "repository": {
-                                        "nameWithOwner": "pydantic/pydantic"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "pymdown-extensions",
                                     "repository": {
                                         "nameWithOwner": "facelessuser/pymdown-extensions"
@@ -56048,6 +56041,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-go",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-go"
@@ -56099,33 +56099,6 @@
                                     "packageName": "softprops/action-gh-release",
                                     "repository": {
                                         "nameWithOwner": "softprops/action-gh-release"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-go",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-go"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "medyagh/setup-minikube",
-                                    "repository": {
-                                        "nameWithOwner": "medyagh/setup-minikube"
                                     }
                                 }
                             ]
@@ -56223,6 +56196,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mock",
+                                    "repository": {
+                                        "nameWithOwner": "calvinchengx/python-mock"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "pytest",
