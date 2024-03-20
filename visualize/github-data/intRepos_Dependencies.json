@@ -30419,6 +30419,33 @@
                 ]
             }
         },
+        "LLNL/Wintap-Plugins": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NUGET",
+                                    "packageName": "Newtonsoft.Json",
+                                    "repository": {
+                                        "nameWithOwner": "JamesNK/Newtonsoft.Json"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#178600",
+                        "name": "C#"
+                    }
+                ]
+            }
+        },
         "LLNL/Wintap-PyUtil": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -63266,6 +63293,19 @@
                 "nodes": []
             }
         },
+        "spack/pypi-to-spack-package": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "spack/repolib": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -65421,6 +65461,26 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "hashicorp/setup-terraform",
+                                    "repository": {
+                                        "nameWithOwner": "hashicorp/setup-terraform"
                                     }
                                 }
                             ]
