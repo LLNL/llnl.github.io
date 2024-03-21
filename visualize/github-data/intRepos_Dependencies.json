@@ -28175,6 +28175,26 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "py-tlsh",
+                                    "repository": {
+                                        "nameWithOwner": "trendmicro/tlsh"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "surfactant",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Surfactant"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "binary2strings",
                                     "repository": {
                                         "nameWithOwner": "glmcdona/binary2strings"
@@ -44465,7 +44485,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.kafka:connect-api",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "apache/kafka"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -65461,6 +65483,33 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "aws-actions/configure-aws-credentials",
+                                    "repository": {
+                                        "nameWithOwner": "aws-actions/configure-aws-credentials"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "hashicorp/setup-terraform",
+                                    "repository": {
+                                        "nameWithOwner": "hashicorp/setup-terraform"
                                     }
                                 }
                             ]
