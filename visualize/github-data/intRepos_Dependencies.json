@@ -33969,6 +33969,19 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -45051,6 +45064,19 @@
                     {
                         "color": "#555555",
                         "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/pyorick": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -63304,7 +63330,35 @@
         },
         "spack/pypi-to-spack-package": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "awscli",
+                                    "repository": {
+                                        "nameWithOwner": "aws/aws-cli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "azure-cli",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/azure-cli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "psf/black"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -64436,6 +64490,19 @@
                                     "packageName": "docker/setup-qemu-action",
                                     "repository": {
                                         "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/labeler",
+                                    "repository": {
+                                        "nameWithOwner": "actions/labeler"
                                     }
                                 }
                             ]
