@@ -10,9 +10,9 @@ window.addEventListener('load', function() {
         if (!element) {
             return;
         }
-        console.log(element);
         if (element.className.indexOf('accordion-collapse') > -1) {
             new bootstrap.Collapse(element, { show: true });
+            recordAccordionOpen(element);
         }
     }
 
@@ -22,6 +22,7 @@ window.addEventListener('load', function() {
             element.addEventListener('show.bs.collapse', function(event) {
                 const hash = '#' + event.target.id;
                 window.history.replaceState('', '', hash);
+                recordAccordionOpen(element);
             });
 
             element.addEventListener('hide.bs.collapse', function(event) {
@@ -32,5 +33,11 @@ window.addEventListener('load', function() {
             });
 
         });
+    }
+
+    function recordAccordionOpen(element) {
+        if (typeof _paq !== 'undefined') {
+          _paq.push(['trackEvent', 'Accordion', 'Opened', element.id]);
+        }
     }
 });
