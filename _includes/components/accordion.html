@@ -1,4 +1,7 @@
 {% assign slug = include.title | slugify %}
+{% if include.slug %}
+    {% assign slug = include.slug %}
+{% endif %}
 <div class="accordion default" id="accordion-{{ slug }}">
     <div class="accordion-item" id="accordion-item-{{ slug }}">
       <p class="accordion-header" id="accordion-header-{{ slug }}">
