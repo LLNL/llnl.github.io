@@ -43,8 +43,8 @@ angular.module("app", []).controller("ProjectController", function($scope) {
       }
       var query = $scope.query.toLowerCase(),
           name = value.name.toLowerCase(),
-          description = value.description ? value.description.toLowerCase() : '';
-      queryMatch = name.indexOf(query) > -1 || description.indexOf(query) > -1;
+          description = value.description ? value.description.toLowerCase() : '',
+          queryMatch = name.indexOf(query) > -1 || description.indexOf(query) > -1;
       return queryMatch;
   };
 
