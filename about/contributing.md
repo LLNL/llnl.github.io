@@ -67,7 +67,7 @@ If a word needs to be ignored, see [instructions](https://github.com/crate-ci/ty
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I build this site locally?' content=accordionContent %}
+  {% include components/accordion.html title='How do I build this site locally?' slug='local' content=accordionContent %}
 
 {% capture accordionContent %}
 A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-data/category_info.json) contains the info for the software catalog categories displayed on the home page: title, Font Awesome icon, description. If any changes need to be made to these categories, just edit the data in the JSON and the home page will reflect your changes automatically. (These catalog categories/topics are distinct from the tags on [News posts](../../news).) The list below contains each category's description to ensure consistency in phrasing and length. Note that in some cases the category is plural, but the corresponding tag is singular.
@@ -108,7 +108,7 @@ Repos that appear on the [RADIUSS site](https://software.llnl.gov/radiuss/projec
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I update the catalog categories?' content=accordionContent %}
+  {% include components/accordion.html title='How do I update the catalog categories?' slug='categories' content=accordionContent %}
 
 {% capture accordionContent %}
 
@@ -133,7 +133,7 @@ An LLNL repo with its own logo also needs the image file name added to [`repo_lo
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I change how a specific repo appears in the catalog?' content=accordionContent %}
+  {% include components/accordion.html title='How do I change how a specific repo appears in the catalog?' slug='catalog' content=accordionContent %}
 
 {% capture accordionContent %}
 News posts appear in reverse chronological order (i.e., newest first). The list is curated to promote LLNL's open source endeavors and community engagement. Posts should be tagged with at least one of the following categories, which are not associated with the catalog browse categories (described above) applied to repos.
@@ -156,7 +156,7 @@ Software releases are not included in News. See the separate, and automatically 
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I update news content?' content=accordionContent %}
+  {% include components/accordion.html title='How do I update news content?' slug='news' content=accordionContent %}
 
 {% capture accordionContent %}
 
@@ -171,9 +171,11 @@ The informational pages on this site (e.g., this page, [About](/about), [FAQ](/a
 
 **To modify the site menu:** Update the menu in the [`header.html`](https://github.com/LLNL/llnl.github.io/blob/main/_includes/header.html), rather than adding each page to the menu using page attributes.
 
+**To create an accordion slug:** Accordion titles automatically generate a unique URL hash so the user can go directly to an expanded accordion using a unique URL. As an accordion's title is often lengthy question text, a shortened slug can be used to shorten the URL hash. For example, this accordion's title is `How do I update the FAQ or other text?` but the hash is the much shorter `#faq`. Add `slug='unique-hash'` after the `title` in the accordion's `include` syntax. Slugs should be unique to the page they're on; in other words, a page should not have two accordions with the same slug.
+
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I update the FAQ or other text?' content=accordionContent %}
+  {% include components/accordion.html title='How do I update the FAQ or other text?' slug='faq' content=accordionContent %}
 
 {% capture accordionContent %}
 This site's [visualizations](../../visualize) are governed by several scripts and queries. See the following `README` files for details:
@@ -184,7 +186,7 @@ This site's [visualizations](../../visualize) are governed by several scripts an
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I modify the visualizations?' content=accordionContent %}
+  {% include components/accordion.html title='How do I modify the visualizations?' slug='viz' content=accordionContent %}
 
 {% capture accordionContent %}
 
@@ -262,7 +264,7 @@ No changes yet, if ever:
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='For site admins only: notes on future and deprecated features' content=accordionContent %}
+  {% include components/accordion.html title='For site admins only: notes on future and deprecated features' slug='admins' content=accordionContent %}
 
 </div>
 <!-- END: Accordions -->
