@@ -1,9 +1,11 @@
 window.addEventListener('load', function() {
-    const headings = document.querySelectorAll('h2[id], h3[id]'),
-      jumpLinks = document.querySelectorAll('.jump-links a'),
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ).filter(element => !element.closest('.accordion'));
+    const jumpLinks = document.querySelectorAll('.jump-links a'),
       jumpLinkLookup = {},
       jumpLinkTargetLookup = {};
-    
+        
     // create jumplink/heading lookups
     for (var i = 0; i < jumpLinks.length; i++) {
       const element = jumpLinks[i];
