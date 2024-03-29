@@ -58,7 +58,11 @@ var posts = {"items":[{% for post in site.posts %}{% unless post.categories cont
   "title": {{post.title | jsonify}},
   "slug": {{ post.title | slugify | jsonify }},
   "url": {{ post.url | prepend: site.baseurl | prepend: site.url | jsonify }},
-  "date": {{ post.date | jsonify }},
+  "date": {
+    "year": {{ post.date | date: '%Y' }},
+    "month": {{ post.date | date: '%m' }} - 1,
+    "day": {{ post.date | date: '%d' }},
+  },
   "categories": {{ post.categories | jsonify }},
   "tags": {{ post.tags | jsonify }},
   "author": {{ post.author | jsonify }},

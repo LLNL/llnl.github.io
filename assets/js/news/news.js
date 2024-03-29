@@ -1,7 +1,7 @@
 angular.
-  module('tid-custom', ['ngAnimate'])
-    .filter('categoryIcon', function () {
-        return function (val) {
+module('tid-custom', ['ngAnimate'])
+    .filter('categoryIcon', function() {
+        return function(val) {
             var icons = {
                 'event': 'fa-calendar',
                 'multimedia': 'fa-photo-film',
@@ -24,12 +24,12 @@ angular.
         return function(str) {
             return str.split('-').join(' ');
         };
-    }).filter('safeHtml', function ($sce) {
-        return function (val) {
+    }).filter('safeHtml', function($sce) {
+        return function(val) {
             return $sce.trustAsHtml(val);
         };
-    }).filter('localeDate', function () {
-        return function (val) {
+    }).filter('localeDate', function() {
+        return function(val) {
             options = {
                 year: 'numeric',
                 month: 'long',
@@ -39,19 +39,16 @@ angular.
         };
     });
 
-angular.module("app", ['tid-custom']).controller("PostController", function($scope, $sce) {  
+angular.module("app", ['tid-custom']).controller("PostController", function($scope, $sce) {
     $scope.sortByValue = '-date';
     $scope.lowerBoundYear = 2021;
 
     for (var i = 0; i < posts.items.length; i++) {
         var post = posts.items[i],
-            rawDateTimeString = post.date,
-            rawDateString = rawDateTimeString.split(' ')[0],
-            rawTimestamp = Date.parse(rawDateString),
-            parsedDate = new Date(rawTimestamp);
+            parsedDate = new Date(post.date.year, post.date.month, post.date.day);
         posts.items[i].date = parsedDate;
     }
-  
+
     $scope.years = years.items;
     $scope.categories = categories.items;
     $scope.posts = posts.items;
@@ -65,7 +62,7 @@ angular.module("app", ['tid-custom']).controller("PostController", function($sco
         }
         return value.categories.indexOf($scope.activeCategory) > -1;
     };
-    
+
     $scope.filterYearsByLowerBoundYear = function(value) {
         return value >= $scope.lowerBoundYear;
     };
@@ -90,12 +87,12 @@ angular.module("app", ['tid-custom']).controller("PostController", function($sco
     $scope.clearYear = function() {
         $scope.activeYear = null;
     }
-  
+
     $scope.setYear = function(year) {
         if (year === $scope.activeYear) {
             $scope.clearYear();
         } else {
             $scope.activeYear = year;
-        } 
+        }
     }
-  });
+});
