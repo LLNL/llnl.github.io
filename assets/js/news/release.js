@@ -26,11 +26,16 @@ angular.module("app", ['ngAnimate']).controller("ReleaseController", function($s
     }
   
     $scope.setYear = function(year) {
+        var actionName = year;
         if (year === $scope.activeYear) {
             $scope.clearYear();
+            actionName = 'All';
         } else {
             $scope.activeYear = year;
-        } 
+        }
+        if (typeof _paq !== 'undefined') {
+            _paq.push(['trackEvent', 'Release', 'Year Filter', actionName]);
+        }
     }
 
     $scope.sortByPublishedAt = function(a, b) {
