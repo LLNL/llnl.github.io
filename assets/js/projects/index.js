@@ -59,6 +59,9 @@ angular.module("app", []).controller("ProjectController", function($scope) {
   $scope.setCategory = function(category) {
       $scope.pageNumber = 1;
       $scope.activeCategory = category;
+      if (typeof _paq !== 'undefined') {
+        _paq.push(['trackEvent', 'Project', 'Category Filter', category.title]);
+      }
   }
 
   $scope.onCategoryChange = function() {
