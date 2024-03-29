@@ -95,12 +95,12 @@ breadcrumb: Home
                 </div>
                 <div class="row fs-14 fw-medium">
                     <div class="col-12 col-lg-6 d-flex align-items-center mb-4 mb-md-0">
-                        <input class="form-control fs-14 fw-semibold" type="text" name="query" placeholder="What are you looking for?" ng-model="query" ng-keyup="trackSearchQuery(activeCategory, query)" ng-blur="trackSearchQuery(activeCategory, query)" />
+                        <input class="form-control fs-14 fw-semibold" type="text" name="query" placeholder="What are you looking for?" ng-model="query" ng-keyup="trackSearchQuery(activeCategory, query)" ng-blur="trackSearchQuery(activeCategory, query)" ng-change="trackProjectImpressions()" />
                         <i class="fa fa-light fa-search text-software-blue ms--2"></i>
                     </div>
                     <div class="col-7 col-md-6 col-lg-3 d-flex align-items-center text-quantum-slate mt-md-2">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" ng-model="showProprietaryRepositories" style="height: 1.5em; width: 3em;">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" ng-model="showProprietaryRepositories" style="height: 1.5em; width: 3em;" ng-change="trackProjectImpressions()" >
                             <label class="form-check-label fw-medium fs-14 ms-2" for="flexSwitchCheckDefault">Show proprietary repos </label><i class="fa fa-light fa-lock ms-2"></i>
                         </div>
                     </div>
@@ -109,7 +109,7 @@ breadcrumb: Home
                             <label class="col-form-label fw-medium">Sort by</label>
                         </div>
                         <div class="col-8 px-0">
-                            <select class="form-control form-select fs-14 fw-semibold sort-by" id="sort" name="sort" ng-model="sortBy">
+                            <select class="form-control form-select fs-14 fw-semibold sort-by" id="sort" name="sort" ng-model="sortBy" ng-change="trackProjectImpressions()" >
                                 <option value="-stargazers.totalCount">Stars</option>
                                 <option value="owner.login">Organization</option>
                                 <option value="name">Repo Name</option>
@@ -120,7 +120,7 @@ breadcrumb: Home
                     </div>  
                 </div>
                 <div class="row mt-3 gx-27 gy-27" id="repository-container">
-                    <div class="col-12 col-md-6 col-xl-4 text-decoration-none text-black llnl-card-perspective transition-slide-up" ng-repeat="repository in filteredRepositories = (repositories | filter:filterByCategory | filter:filterByQuery | filter:filterByPrivacy) | orderBy: sortBy : sortByReverse | limitTo: perPage : perPage * (pageNumber - 1)">
+                    <div class="col-12 col-md-6 col-xl-4 text-decoration-none text-black llnl-card-perspective transition-slide-up" ng-repeat="repository in filteredRepositories = (repositories | filter:filterByCategory | filter:filterByQuery | filter:filterByPrivacy) | orderBy: sortBy : sortByReverse | limitTo: perPage : perPage * (pageNumber - 1)" data-track-content="" data-content-name="{{ repository.displayName }}" data-content-piece="{{ repository.logo ? '/assets/images/logos/' + repository.logo : '/assets/images/logomark.png' }}" data-content-target="{{ repository.url }}" >
                         <div class="llnl-card d-flex flex-column justify-content-between box-shadow-16 text-decoration-none text-black bg-white">
                             <div class="header text-center mt-4 position-relative px-4">
                                 <i ng-if="repository.isProprietary" class="fa fa-light fa-lock float-end translate-middle-x position-absolute top-5 right-5" style="top: 1em; right: 1em;"></i>

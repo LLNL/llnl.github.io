@@ -63,10 +63,12 @@ angular.module("app", []).controller("ProjectController", function($scope) {
 
   $scope.range = range;
   $scope.console = console;
+  $scope.trackProjectImpressions = trackProjectImpressions;
 
   $scope.setPage = function(pageNumber) {
       $scope.pageNumber = 1;
       $scope.pageNumber = pageNumber;
+      $scope.trackProjectImpressions();
   }
 
   $scope.setCategory = function(category) {
@@ -75,6 +77,7 @@ angular.module("app", []).controller("ProjectController", function($scope) {
       if (typeof _paq !== 'undefined') {
         _paq.push(['trackEvent', 'Project', 'Category Filter', category.title]);
         $scope.trackSearchQuery(category, $scope.query);
+        $scope.trackProjectImpressions();
       }
   }
 
@@ -141,6 +144,7 @@ angular.module("app", []).controller("ProjectController", function($scope) {
               var repositories = Object.values(repositoryInfo.data);
               $scope.repositories = Object.values(repositories);
               $scope.$apply();
+              $scope.trackProjectImpressions();
           });
       });
   });
@@ -170,4 +174,19 @@ function recordSearchQuery(category, query, results) {
         results
     ]);
   }, 50);
+}
+
+
+function trackProjectImpressions(timeout) {
+  if (typeof _paq === 'undefined') {
+    return;
+  }
+  timeout = timeout || 500;
+  // wait for Angular to re-render before tracking new projects for impressions
+  setTimeout(function() {
+    const element = document.querySelector('#repository-container');
+    if (element) {
+      _paq.push(['trackContentImpressionsWithinNode', element]);
+    }
+  }, timeout);
 }
