@@ -11,6 +11,19 @@ angular.module("app", []).controller("ProjectController", function($scope) {
   $scope.activeCategory = null;
   $scope.Math = Math;
 
+  $scope.typingTimer;
+  $scope.typingInterval = 1000;
+
+
+  $scope.trackSearchQuery = function(category, query) {
+      clearTimeout($scope.typingTimer);
+      $scope.typingTimer = setTimeout(function() {
+        // fetch number of search results
+        var results = $scope.repositories.filter($scope.filterByCategory).filter($scope.filterByQuery).filter($scope.filterByPrivacy).length;
+        recordSearchQuery(category, query, results);
+      }, $scope.typingInterval);
+  }
+
   $scope.filterByCategory = function(value) {
       var isInCategory = false;
       if ($scope.activeCategory.topics) {
@@ -61,6 +74,7 @@ angular.module("app", []).controller("ProjectController", function($scope) {
       $scope.activeCategory = category;
       if (typeof _paq !== 'undefined') {
         _paq.push(['trackEvent', 'Project', 'Category Filter', category.title]);
+        $scope.trackSearchQuery(category, $scope.query);
       }
   }
 
@@ -140,3 +154,20 @@ function range(min, max, step) {
   }
   return input;
 };
+
+function recordSearchQuery(category, query, results) {
+  if (typeof _paq === 'undefined') {
+    return;
+  }
+  setTimeout(function() {
+    var searchCategory = category ? category.title : '';
+    _paq.push(['trackSiteSearch',
+        // Search keyword searched for
+        query,
+        // Search category selected in your search engine. If you do not need this, set to false
+        searchCategory,
+        // Number of results on the Search results page. Zero indicates a 'No Result Search Keyword'. Set to false if you don't know
+        results
+    ]);
+  }, 50);
+}

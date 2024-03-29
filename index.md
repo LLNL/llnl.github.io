@@ -95,7 +95,7 @@ breadcrumb: Home
                 </div>
                 <div class="row fs-14 fw-medium">
                     <div class="col-12 col-lg-6 d-flex align-items-center mb-4 mb-md-0">
-                        <input class="form-control fs-14 fw-semibold" type="text" name="query" placeholder="What are you looking for?" ng-model="query" />
+                        <input class="form-control fs-14 fw-semibold" type="text" name="query" placeholder="What are you looking for?" ng-model="query" ng-keyup="trackSearchQuery(activeCategory, query)" ng-blur="trackSearchQuery(activeCategory, query)" />
                         <i class="fa fa-light fa-search text-software-blue ms--2"></i>
                     </div>
                     <div class="col-7 col-md-6 col-lg-3 d-flex align-items-center text-quantum-slate mt-md-2">
