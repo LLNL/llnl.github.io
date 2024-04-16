@@ -28,7 +28,7 @@ To contribute to this website, please create a fork of [llnl.github.io](https://
 * Be explicit when opening issues and reporting bugs. What behavior are you expecting? What is your justification or use case for the new feature/enhancement? How can the bug be recreated? What are any environment variables to consider (e.g., browser, OS)?
 
 <!-- START: Accordions Each h2 below will be a separate accordion. -->
-<div class="accordion default border-top-gradient-software-blue-green border-bottom-gradient-software-blue-green">
+<div class="border-top-gradient-software-blue-green border-bottom-gradient-software-blue-green">
 
 {% capture accordionContent %}
 Before you begin, make sure you have working installs of Git, Ruby, and [Bundler](https://bundler.io). After you fork the repo, make sure you are in the directory you just created by running `cd llnl.github.io` Then you can use `bundler` to install the Ruby dependencies (see the [Jekyll installation docs](https://jekyllrb.com/docs/installation/) for step-by-step guides to setting this up):

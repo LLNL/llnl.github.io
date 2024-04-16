@@ -34,7 +34,7 @@ LLNL is a Department of Energy ([DOE](https://www.energy.gov/national-laboratori
   </div>
   <div class="col-12 col-lg-6 mb-3">
     <div class="responsive-iframe-container">
-      <iframe class="responsive-iframe" width="50%" src="https://www.youtube.com/embed/nTxMn1NWHQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="responsive-iframe" width="50%" src="https://www.youtube.com/embed/nTxMn1NWHQU?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </div>

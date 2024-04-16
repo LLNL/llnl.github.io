@@ -82,6 +82,9 @@ angular.module("app", ['tid-custom']).controller("PostController", function($sco
 
     $scope.setCategory = function(category) {
         $scope.activeCategory = category;
+        if (typeof _paq !== 'undefined') {
+            _paq.push(['trackEvent', 'News', 'Category Filter', category]);
+        }
     }
 
     $scope.clearYear = function() {
@@ -89,10 +92,15 @@ angular.module("app", ['tid-custom']).controller("PostController", function($sco
     }
 
     $scope.setYear = function(year) {
+        var actionName = year;
         if (year === $scope.activeYear) {
             $scope.clearYear();
+            actionName = 'All';
         } else {
             $scope.activeYear = year;
+        }
+        if (typeof _paq !== 'undefined') {
+            _paq.push(['trackEvent', 'News', 'Year Filter', actionName]);
         }
     }
 });
