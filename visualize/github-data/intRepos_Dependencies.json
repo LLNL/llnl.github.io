@@ -14603,60 +14603,6 @@
                 ]
             }
         },
-        "GMLC-TDC/helics-buildenv": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "azure/docker-login",
-                                    "repository": {
-                                        "nameWithOwner": "Azure/docker-login"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "azure/docker-login",
-                                    "repository": {
-                                        "nameWithOwner": "Azure/docker-login"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#384d54",
-                        "name": "Dockerfile"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/helics-cli": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -15617,48 +15563,6 @@
                         "name": "Python"
                     }
                 ]
-            }
-        },
-        "GMLC-TDC/helics-conda": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "conda-incubator/setup-miniconda",
-                                    "repository": {
-                                        "nameWithOwner": "conda-incubator/setup-miniconda"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": []
             }
         },
         "GMLC-TDC/helics-ns3": {
@@ -37595,47 +37499,6 @@
                 ]
             }
         },
-        "LLNL/dynim": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "faiss",
-                                    "repository": {
-                                        "nameWithOwner": "facebookresearch/faiss"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "nameWithOwner": "yaml/pyyaml"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/echemfem": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -59090,6 +58953,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "crate-ci/typos",
                                     "repository": {
                                         "nameWithOwner": "crate-ci/typos"
@@ -67584,7 +67454,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "django-girder-utils",
                                     "repository": {
-                                        "nameWithOwner": "girder/django-girder-utils"
+                                        "nameWithOwner": "kitware-resonant/django-resonant-utils"
                                     }
                                 },
                                 {
@@ -68120,7 +67990,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "django-girder-utils",
                                     "repository": {
-                                        "nameWithOwner": "girder/django-girder-utils"
+                                        "nameWithOwner": "kitware-resonant/django-resonant-utils"
                                     }
                                 },
                                 {
@@ -68712,6 +68582,26 @@
                                     "packageName": "requests",
                                     "repository": {
                                         "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
                                     }
                                 }
                             ]
