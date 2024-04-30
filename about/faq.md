@@ -157,15 +157,17 @@ The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) descr
 {% include components/alert.html type="warning" icon="fa-circle-info" content=alertContent  %}
 <!-- END: Warning Box -->
 
-If you've set up your repository within the LLNL organization, you don't need to take any action; it will automatically appear after the next data update.
+If you've set up your repository within the **LLNL organization**, you don't need to take any action; it will automatically appear after the next data update.
 
 * If your repository exists under a different organization, you can move it to LLNL: Settings > Danger Zone > Transfer ownership > Transfer button.
 
 * Alternatively, you can submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
 
-* If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
+* If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that website's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
-* If you have a project logo, please follow the [Contributing Guidelines](/about/contribute) (see the question *How do I change how a specific repo appears in the catalog?*) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
+If you have a **project logo**, please follow the [Contributing Guidelines](/about/contribute) (see the question [How do I change how a specific repo appears in the catalog?](https://software.llnl.gov/about/contribute/#catalog)) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
+
+Please also tag your repo with this site's **catalog categories** so it will show up in the filterable catalog. Follow the [Contributing Guidelines](/about/contribute) (see the question [How do I update or use the catalog categories?](https://software.llnl.gov/about/contribute/#categories)) for a list of tags.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I include my repo in the LLNL organization and/or this website’s catalog?'  slug='catalog' content=accordionContent %}
@@ -179,7 +181,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
-2. Let [Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can tweet on your behalf.
+2. Let [X/Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can post on your behalf.
 
 3. Publicize any outreach activities or major milestones related to your project such as:
    * A paper/poster/presentation is accepted at a conference
