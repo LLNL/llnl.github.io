@@ -104,17 +104,17 @@ Repos that appear on the [RADIUSS site](https://software.llnl.gov/radiuss/projec
 
 **To add/change an icon for a category:** Go to the `category_info.json` file and modify the `icon` property of the given category. To specify a Font Awesome icon, use the `fa` property listing the full CSS class for the Font Awesome Icon. To specify a file as an icon, use the `path` property to specify the absolute path to the icon. If the URL to icon is not in this repository, also specify the domain in the `path`.
 
-**To add your repo to the catalog:** See [FAQ](/about/faq) topic *How do I include my repo in the LLNL organization and/or this website’s catalog?*
+**To add your repo to the catalog:** See the FAQ [How do I include my repo in the LLNL organization and/or this website’s catalog?](https://software.llnl.gov/about/faq/#catalog)
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I update the catalog categories?' slug='categories' content=accordionContent %}
+  {% include components/accordion.html title='How do I update or use the catalog categories?' slug='categories' content=accordionContent %}
 
 {% capture accordionContent %}
 
 ### Project Tags
 
-See the [FAQ](/about/faq) topic *How do I include my repo in the LLNL organization and/or this website’s catalog?* for information about tagging an individual repo. See the topic *How do I update the catalog categories?* above for information about managing the categories.
+See the FAQ [How do I include my repo in the LLNL organization and/or this website’s catalog?](https://software.llnl.gov/about/faq/#catalog) for information about tagging an individual repo. See the topic [How do I update or use the catalog categories?](https://software.llnl.gov/about/contribute/#categories) above for information about managing the categories.
 
 ### Project Logos
 
