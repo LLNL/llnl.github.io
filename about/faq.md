@@ -181,7 +181,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
-2. Let [X/Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag this handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can post on your behalf.
+2. Let [X/Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag the `@LLNL_OpenSource` handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can post on your behalf.
 
 3. Publicize any outreach activities or major milestones related to your project such as:
    * A paper/poster/presentation is accepted at a conference
