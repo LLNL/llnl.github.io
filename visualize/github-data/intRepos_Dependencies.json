@@ -37279,7 +37279,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -45538,13 +45540,6 @@
                                     "packageName": "actions/cache",
                                     "repository": {
                                         "nameWithOwner": "actions/cache"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
                                     }
                                 },
                                 {
@@ -64726,6 +64721,26 @@
         "spack/github-actions-buildcache": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "spack/setup-spack",
+                                    "repository": {
+                                        "nameWithOwner": "spack/setup-spack"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
