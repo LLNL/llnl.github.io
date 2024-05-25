@@ -41917,6 +41917,13 @@
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
                                     }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
+                                    }
                                 }
                             ]
                         }
@@ -58988,9 +58995,123 @@
                             "nodes": [
                                 {
                                     "packageManager": "GO",
-                                    "packageName": "github.com/flux-framework/flux-sched/resource/reapi/bindings/go",
+                                    "packageName": "github.com/davecgh/go-spew",
                                     "repository": {
-                                        "nameWithOwner": "flux-framework/flux-sched"
+                                        "nameWithOwner": "davecgh/go-spew"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/flux-framework/fluxion-go",
+                                    "repository": {
+                                        "nameWithOwner": "flux-framework/fluxion-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-logr/logr",
+                                    "repository": {
+                                        "nameWithOwner": "go-logr/logr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/gogo/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "gogo/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/golang/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "golang/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/go-cmp",
+                                    "repository": {
+                                        "nameWithOwner": "google/go-cmp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/gofuzz",
+                                    "repository": {
+                                        "nameWithOwner": "google/gofuzz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/googleapis/gnostic",
+                                    "repository": {
+                                        "nameWithOwner": "google/gnostic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/json-iterator/go",
+                                    "repository": {
+                                        "nameWithOwner": "json-iterator/go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/concurrent",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/concurrent"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/reflect2",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/reflect2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/net",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/oauth2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/term",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/text",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/time",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/appengine",
+                                    "repository": {
+                                        "nameWithOwner": "golang/appengine"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/genproto",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/go-genproto"
                                     }
                                 },
                                 {
@@ -59007,7 +59128,17 @@
                                 },
                                 {
                                     "packageManager": "GO",
+                                    "packageName": "gopkg.in/inf.v0",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
                                     "packageName": "gopkg.in/yaml.v2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v3",
                                     "repository": null
                                 },
                                 {
@@ -59033,9 +59164,37 @@
                                 },
                                 {
                                     "packageManager": "GO",
+                                    "packageName": "k8s.io/klog/v2",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/klog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
                                     "packageName": "k8s.io/kubectl",
                                     "repository": {
                                         "nameWithOwner": "kubernetes/kubectl"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/utils",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/utils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/structured-merge-diff/v4",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/structured-merge-diff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/yaml",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/yaml"
                                     }
                                 }
                             ]
