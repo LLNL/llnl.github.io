@@ -28,13 +28,21 @@ breadcrumb: Home
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 mb-2 mt-2">
+                <p class="cta-text"><strong>Learn how to use a modern HPC software stack.</strong> Join us throughout August for free tutorials demonstrating how to use several GPU-ready projects. No previous experience is necessary, and everyone is welcome.</p>
+            </div>
+            <div class="col-12 col-md-4 text-center d-flex align-items-center justify-content-center justify-content-lg-end mb-1 mb-md-0">
+                {% include components/button.html content="Register today" url="https://hpcic.llnl.gov/2024-hpc-tutorials" icon="fa-calendar-days" tag="a" %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-8 mb-2 mt-2">
                 <p class="cta-text"><strong>Looking for RADIUSS projects?</strong> Find HPC build tools, math and physics libraries, data management and visualization tools, workflow tools, and portable programming and memory management libraries.</p>
             </div>
             <div class="col-12 col-md-4 text-center d-flex align-items-center justify-content-center justify-content-lg-end mb-1 mb-md-0">
                 {% include components/button.html content="Browse RADIUSS projects" url="https://software.llnl.gov/radiuss/projects/" icon="fa-search" tag="a" %}
             </div>
         </div>
-                <div class="row">
+        <div class="row">
             <div class="col-12 col-md-8 mb-2 mt-2">
                 <p class="cta-text"><strong>Looking for proprietary software solutions?</strong> The Innovation and Partnerships Office works with businesses interested in distributing software or incorporating LLNL software into commercial products.</p>
             </div>
