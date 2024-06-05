@@ -163,6 +163,10 @@ function draw_pack_hierarchy(areaID) {
         parentCircles.on('click', clicked);
 
         function clicked(o) {
+            if (typeof _paq !== 'undefined') {
+                var actionName = o.depth > focus.depth ? 'Drilldown' : 'Drillup';
+                _paq.push(['trackEvent', 'Contributions - Projects', actionName, o.data.name]);
+            }
             d3.select('#zoomTitle').text(() => {
                 while (o.depth > focus.depth + 1) {
                     o = o.parent;

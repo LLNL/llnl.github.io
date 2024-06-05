@@ -87,6 +87,9 @@ function draw_pie_commits(areaID) {
             .on('click', clicked);
 
         function clicked(d) {
+            if (typeof _paq !== 'undefined') {
+                _paq.push(['trackEvent', 'Commits', 'Drill Down', d.label]);
+            }
             const pieData = pie(decompress(data));
             const scaleCoeff = 2 * Math.PI / (2 * Math.PI - (pieData[pieData.length - 1].endAngle - pieData[pieData.length - 1].startAngle));
             let shift = 0;
@@ -157,6 +160,9 @@ function draw_pie_commits(areaID) {
         }
 
         function unclicked(d) {
+            if (typeof _paq !== 'undefined') {
+                _paq.push(['trackEvent', 'Commits', 'Drillup', d.label]);
+            }
             const dur = 1000;
 
             const t = chart.transition().duration(dur);

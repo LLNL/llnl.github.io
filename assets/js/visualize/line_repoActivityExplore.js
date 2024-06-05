@@ -210,6 +210,10 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .on('mouseover', tip.show)
                 .on('mouseout', tip.hide)
                 .on('click', d => {
+                    if (d && typeof _paq !== 'undefined') {
+                        var value = d.date.getFullYear() + '-' + d.date.getMonth() + '-' + d.date.getDate();
+                        _paq.push(['trackEvent', 'Line Chart', 'Click', value]);
+                    }
                     tip.hide(d);
                     update(smallX,y);
                     d3.select('#Thanksgiving').attr('y', d => {

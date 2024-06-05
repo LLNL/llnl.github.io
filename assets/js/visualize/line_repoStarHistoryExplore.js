@@ -78,6 +78,9 @@ function draw_line_repoStarHistory(areaID) {
             .tickFormat(d3.format('d'))
             .default([1, d3.max(flattenedData.map(d => d.value))])
             .on('end', val => {
+                if (val && typeof _paq !== 'undefined') {
+                    _paq.push(['trackEvent', 'Star Chart', 'Filter - Stars', val.join(' - ')]);
+                }
                 chart.selectAll('g').remove();
                 var reposInRange = [];
                 for (var repo in data) {
