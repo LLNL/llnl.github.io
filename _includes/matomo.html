@@ -1,17 +1,69 @@
 {% if site.environment == 'production' and site.piwik_id %}
 <!-- Piwik -->
 <script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackVisibleContentImpressions']);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//analytics.llnl.gov/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', {{ site.piwik_id }}]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
+    var _paq = _paq || [];
+    pingUserType('https://osc.llnl.gov/ping/', function(userType) {
+      _paq.push(['setCustomDimension', 1, userType, 'visit']);
+      _paq.push(['trackVisibleContentImpressions']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+
+      (function() {
+        var u="//analytics.llnl.gov/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', {{ site.piwik_id }}]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    });
+
+    function pingUserType(url, callbackFn) {
+        /**
+         * Pings the specified URL, and stores last result in localStorage,
+         * if possible. If localStorage cache is marked as an internal user,
+         * will send to Matomo without ping re-verification.
+         **/
+        var pingKey = 'userType',
+            defaultUserType = 'Anonymous',
+            internalUserType = 'Internal',
+            userType = defaultUserType;
+
+        // check localStorage cache (previous pings) for userType, if possible
+        if ("localStorage" in window) {
+            userType = localStorage.getItem(pingKey) || defaultUserType;
+        }
+
+        // if identified as internal from localStorage cache, record as internal
+        if (userType === internalUserType) {
+            recordUserType(userType);
+            return;
+        }
+
+        // use ping URL to attempt to determine user type
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                var isSuccess = this.status >= 200 && this.status < 400;
+                if (isSuccess) {
+                    userType = internalUserType;
+                }
+                recordUserType(userType);
+            }
+        };
+
+        // consider a timeout to be an unsuccessful attempt
+        xhr.ontimeout = function() {
+            recordUserType(userType);
+        };
+        xhr.timeout = 500;
+        xhr.open('GET', url, true);
+        xhr.send();
+
+        function recordUserType(userType) {
+            localStorage.setItem(pingKey, userType);
+            callbackFn(userType);
+        }
+    }
 </script>
 <noscript><p><img src="//analytics.llnl.gov/piwik.php?idsite={{ site.piwik_id }}" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
