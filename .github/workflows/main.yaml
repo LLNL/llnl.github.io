@@ -1,13 +1,34 @@
-name: Check Spelling
+name: Code Checks
 
 on: pull_request
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   spelling-check:
+    name: Spelling Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check Spelling
-        uses: crate-ci/typos@v1.16.12
+      - name: Check spelling
+        uses: crate-ci/typos@v1.22.7
         with:
           files: ./_posts ./README.md ./about/faq.md ./about/contributing.md
+
+  python-check:
+    name: Python Check
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9', '3.10', '3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: pip install flake8 black
+      - run: make test
