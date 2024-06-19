@@ -292,6 +292,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
             .ticks(optionsArray.length - 1)
             .height(10 * optionsArray.length - 1)
             .on('onchange', val => {
+                if (typeof _paq !== 'undefined') {
+                    _paq.push(['trackEvent', 'Dependency Graph', 'Dimension Change', optionsArray[val].text]);
+                }
                 optionChanged(optionsArray[Math.round(val)]);
                 d3.select('.' + adjacentAreaID).select('g').remove();
             });
@@ -545,6 +548,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     nodeTip.hide(d);
                 })
                 .on('click', d => {
+                    if (d && typeof _paq !== 'undefined') {
+                        _paq.push(['trackEvent', 'Dependency Graph', 'Repository - Click', d.id]);
+                    }
                     node.selectAll('circle').each(d => {
                         d['focused'] = false;
                         document.getElementById(d['id']).removeAttribute('searched');
@@ -910,6 +916,9 @@ function draw_force_graph(areaID, adjacentAreaID) {
                     nodeTip.hide(d)
                 })
                 .on('click', d => {
+                    if (d && typeof _paq !== 'undefined') {
+                        _paq.push(['trackEvent', 'Dependency Graph', 'Repository - Click', d.data.id]);
+                    }
                     nodeTip.hide(d);
                     d = nodes[nodes.findIndex(o => o.id == d.data.id)];
                     const data = { name: d.name, package: d.package, id: d.id, notPackage: d.notPackage, children: getCurrentNeighbors(d) };
@@ -1023,19 +1032,25 @@ function draw_force_graph(areaID, adjacentAreaID) {
 
 function searchForm(event) {
     event.preventDefault();
+    var searchQueryElement = document.getElementById('search').value.toUpperCase(),
+        rawSearchQueryValue = searchQueryElement.value,
+        searchQueryValue = rawSearchQueryValue.toUpperCase();
+    if (typeof _paq !== 'undefined') {
+        _paq.push(['trackEvent', 'Dependency Graph', 'Search', searchQueryValue]);
+    }
     $('.inGraph').attr('fill-opacity', function(i, d) {
-        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 1 : 0.2;
+        return $(this).attr('id').toUpperCase().includes(searchQueryValue) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 1 : 0.2;
     });
 
     $('.inGraph').attr('stroke-opacity', function(i, d) {
-        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 1 : 0.2;
+        return $(this).attr('id').toUpperCase().includes(searchQueryValue) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 1 : 0.2;
     });
     
     $('.inGraph').attr('r', function(i, d) {
-        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 6.5 : 5;
+        return $(this).attr('id').toUpperCase().includes(searchQueryValue) || ($(this).attr('language') && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase())) ? 6.5 : 5;
     });
 
     $('.inGraph').attr('searched', function(i, d) {
-        return $(this).attr('id').toUpperCase().includes(document.getElementById('search').value.toUpperCase()) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase()));
+        return $(this).attr('id').toUpperCase().includes(searchQueryValue) || (($(this).attr('language') != null) && $(this).attr('language').toUpperCase().includes(document.getElementById('search').value.toUpperCase()));
     });
 }

@@ -155,6 +155,10 @@ function draw_sunburst_licenses(areaID) {
         let lastClickedObject = root;
 
         function clicked(o) {
+            if (o.data.name && typeof _paq !== 'undefined') {
+                var actionName = o.depth > lastClickedObject.depth ? 'Drilldown' : 'Drillup';
+                _paq.push(['trackEvent', 'Licenses - Sunburst', actionName, o.data.name]);
+            }
             lastClickedObject = o;
 
             let newLabel = label.filter(d => labelEverVisible(d));
@@ -215,6 +219,10 @@ function draw_sunburst_licenses(areaID) {
             })
             .ticks(3)
             .on('onchange', val => {
+                if (typeof _paq !== 'undefined') {
+                    var humanReadableValue = options[val];
+                    _paq.push(['trackEvent', 'Licenses - Sunburst', 'Dimension Change', humanReadableValue]);
+                }
                 data = reformatData(obj, val);
                 root = partition(data);
                 root.each(d => d.current = d);
