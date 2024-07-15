@@ -11369,7 +11369,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "pandoc",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "boisgera/pandoc"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -49453,7 +49455,35 @@
         },
         "LLNL/radiuss-shared-ci": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": {
+                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": []
@@ -53187,7 +53217,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "md5",
                                     "repository": {
-                                        "nameWithOwner": "coolaj86/jsMD5"
+                                        "nameWithOwner": "pvorb/node-md5"
                                     }
                                 },
                                 {
