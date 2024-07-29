@@ -40105,6 +40105,19 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "svgpathtools",
+                                    "repository": {
+                                        "nameWithOwner": "mathandy/svgpathtools"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -43292,7 +43305,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "setuptools-scm",
                                     "repository": {
-                                        "nameWithOwner": "phargogh/setuptools_scm"
+                                        "nameWithOwner": "pypa/setuptools_scm"
                                     }
                                 },
                                 {
@@ -43693,7 +43706,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "setuptools-scm",
                                     "repository": {
-                                        "nameWithOwner": "phargogh/setuptools_scm"
+                                        "nameWithOwner": "pypa/setuptools_scm"
                                     }
                                 },
                                 {
@@ -64003,40 +64016,66 @@
                 "nodes": [
                     {
                         "dependencies": {
+                            "nodes": []
+                        }
+                    },
+                    {
+                        "dependencies": {
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "docutils",
+                                    "packageName": "cffi",
                                     "repository": {
-                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                        "nameWithOwner": "python-cffi/cffi"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "jinja2",
+                                    "packageName": "coverage",
                                     "repository": {
-                                        "nameWithOwner": "pallets/jinja"
+                                        "nameWithOwner": "nedbat/coveragepy"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx",
+                                    "packageName": "jsonschema",
                                     "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                        "nameWithOwner": "python-jsonschema/jsonschema"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
+                                    "packageName": "markupsafe",
                                     "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                        "nameWithOwner": "pallets/markupsafe"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "urllib3",
+                                    "packageName": "ply",
                                     "repository": {
-                                        "nameWithOwner": "urllib3/urllib3"
+                                        "nameWithOwner": "alex/ply"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-spelling",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-contrib/spelling"
                                     }
                                 }
                             ]
@@ -64106,6 +64145,47 @@
                                     "packageName": "types-pyyaml",
                                     "repository": {
                                         "nameWithOwner": "python/typeshed"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": {
+                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
                                     }
                                 }
                             ]
