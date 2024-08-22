@@ -40803,6 +40803,14 @@
                 ]
             }
         },
+        "LLNL/aiida-inq": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "LLNL/al_nlp": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -43069,7 +43077,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -78455,6 +78465,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "types-cachetools",
+                                    "repository": {
+                                        "nameWithOwner": "python/typeshed"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "typing-extensions",
                                     "repository": {
                                         "nameWithOwner": "python/typing"
@@ -78515,6 +78532,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cachetools",
+                                    "repository": {
+                                        "nameWithOwner": "tkem/cachetools"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "celery",
