@@ -2964,9 +2964,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "xdiagnose",
-                                    "repository": {
-                                        "nameWithOwner": "lelelelelelelelelelelelelelele/X-diagnosis"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -13025,6 +13023,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "stdlib-list",
+                                    "repository": {
+                                        "nameWithOwner": "pypi/stdlib-list"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "stevedore",
                                     "repository": {
                                         "nameWithOwner": "openstack/stevedore"
@@ -14767,6 +14772,14 @@
             }
         },
         "GLVis/releases": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
+        "GLVis/releases-js": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -33908,7 +33921,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "javatools",
                                     "repository": {
-                                        "nameWithOwner": "obriencj/python-javatools"
+                                        "nameWithOwner": "appknox/python-javatools"
                                     }
                                 },
                                 {
@@ -46721,6 +46734,19 @@
                 ]
             }
         },
+        "LLNL/hypar-lightweight": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/hypre": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -52061,6 +52087,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
@@ -52112,6 +52145,67 @@
                                     "packageName": "sphinxcontrib-bibtex",
                                     "repository": {
                                         "nameWithOwner": "mcmtroffaes/sphinxcontrib-bibtex"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
                                     }
                                 }
                             ]
@@ -71167,6 +71261,14 @@
                         "name": "Java"
                     }
                 ]
+            }
+        },
+        "rose-compiler/docs": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "rose-compiler/matlab-frontend": {
