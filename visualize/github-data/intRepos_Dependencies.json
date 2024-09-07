@@ -57,13 +57,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "jax",
-                                    "repository": {
-                                        "nameWithOwner": "google/jax"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "lightning",
                                     "repository": {
                                         "nameWithOwner": "Lightning-AI/pytorch-lightning"
@@ -146,10 +139,8 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "tensorflow",
-                                    "repository": {
-                                        "nameWithOwner": "tensorflow/tensorflow"
-                                    }
+                                    "packageName": "tensorflow-cpu",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -236,13 +227,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "jax",
-                                    "repository": {
-                                        "nameWithOwner": "google/jax"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "lightning",
                                     "repository": {
                                         "nameWithOwner": "Lightning-AI/pytorch-lightning"
@@ -325,13 +309,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "tensorflow",
-                                    "repository": {
-                                        "nameWithOwner": "tensorflow/tensorflow"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "tensorrt",
                                     "repository": {
                                         "nameWithOwner": "NVIDIA/TensorRT"
@@ -363,6 +340,103 @@
                                     "packageName": "xgboost",
                                     "repository": {
                                         "nameWithOwner": "dmlc/xgboost"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "bokeh",
+                                    "repository": {
+                                        "nameWithOwner": "bokeh/bokeh"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipykernel",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyterlab",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "maestrowf",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/maestrowf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib-venn",
+                                    "repository": {
+                                        "nameWithOwner": "konstantint/matplotlib-venn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-xdist",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-xdist"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruff",
+                                    "repository": {
+                                        "nameWithOwner": "astral-sh/ruff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "seaborn",
+                                    "repository": {
+                                        "nameWithOwner": "mwaskom/seaborn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "umap-learn",
+                                    "repository": {
+                                        "nameWithOwner": "lmcinnes/umap"
                                     }
                                 }
                             ]
@@ -871,10 +945,8 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "tensorflow",
-                                    "repository": {
-                                        "nameWithOwner": "tensorflow/tensorflow"
-                                    }
+                                    "packageName": "tensorflow-cpu",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -915,13 +987,6 @@
                                     "packageName": "ipykernel",
                                     "repository": {
                                         "nameWithOwner": "ipython/ipykernel"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jax",
-                                    "repository": {
-                                        "nameWithOwner": "google/jax"
                                     }
                                 },
                                 {
@@ -1035,23 +1100,16 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
+                                    "packageName": "docker/login-action",
                                     "repository": {
-                                        "nameWithOwner": "actions/setup-python"
+                                        "nameWithOwner": "docker/login-action"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "Jimver/cuda-toolkit",
+                                    "packageName": "docker/setup-buildx-action",
                                     "repository": {
-                                        "nameWithOwner": "Jimver/cuda-toolkit"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "s-weigand/setup-conda",
-                                    "repository": {
-                                        "nameWithOwner": "s-weigand/setup-conda"
+                                        "nameWithOwner": "docker/setup-buildx-action"
                                     }
                                 }
                             ]
@@ -1060,6 +1118,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
                                 {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
@@ -1073,19 +1138,32 @@
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
                                     }
-                                },
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "Jimver/cuda-toolkit",
+                                    "packageName": "actions/cache",
                                     "repository": {
-                                        "nameWithOwner": "Jimver/cuda-toolkit"
+                                        "nameWithOwner": "actions/cache"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "s-weigand/setup-conda",
+                                    "packageName": "actions/checkout",
                                     "repository": {
-                                        "nameWithOwner": "s-weigand/setup-conda"
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 }
                             ]
@@ -14731,31 +14809,6 @@
                                     "packageManager": "PIP",
                                     "packageName": "mfem",
                                     "repository": null
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mfem",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
                                 }
                             ]
                         }
@@ -59149,13 +59202,6 @@
                                     "packageName": "ipython",
                                     "repository": {
                                         "nameWithOwner": "ipython/ipython"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "llnl-thicket",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/thicket"
                                     }
                                 },
                                 {
