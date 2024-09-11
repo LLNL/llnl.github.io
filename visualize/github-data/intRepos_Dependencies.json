@@ -599,10 +599,8 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "tensorflow",
-                                    "repository": {
-                                        "nameWithOwner": "tensorflow/tensorflow"
-                                    }
+                                    "packageName": "tensorflow-cpu",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -45032,19 +45030,6 @@
                 "nodes": []
             }
         },
-        "LLNL/goulash": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/graph-embed": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -52217,6 +52202,27 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "astropy",
+                                    "repository": {
+                                        "nameWithOwner": "astropy/astropy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyterlab",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -52224,9 +52230,30 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "nbsphinx",
+                                    "repository": {
+                                        "nameWithOwner": "spatialaudio/nbsphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "popclass",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/popclass"
                                     }
                                 },
                                 {
