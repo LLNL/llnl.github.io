@@ -12255,9 +12255,9 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "pdm-project/setup-pdm",
+                                    "packageName": "eifinger/setup-rye",
                                     "repository": {
-                                        "nameWithOwner": "pdm-project/setup-pdm"
+                                        "nameWithOwner": "eifinger/setup-rye"
                                     }
                                 }
                             ]
@@ -12275,9 +12275,9 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "pdm-project/setup-pdm",
+                                    "packageName": "eifinger/setup-rye",
                                     "repository": {
-                                        "nameWithOwner": "pdm-project/setup-pdm"
+                                        "nameWithOwner": "eifinger/setup-rye"
                                     }
                                 },
                                 {
@@ -12302,9 +12302,16 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "pdm-project/setup-pdm",
+                                    "packageName": "eifinger/setup-rye",
                                     "repository": {
-                                        "nameWithOwner": "pdm-project/setup-pdm"
+                                        "nameWithOwner": "eifinger/setup-rye"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
                                     }
                                 }
                             ]
@@ -20716,6 +20723,60 @@
                 ]
             }
         },
+        "LLNL/Adiak": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/deploy-pages",
+                                    "repository": {
+                                        "nameWithOwner": "actions/deploy-pages"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-pages-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-pages-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/Aluminum": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -27869,19 +27930,6 @@
                 "nodes": []
             }
         },
-        "LLNL/LCUSS": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/LEAP": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -32424,6 +32472,20 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "imageio",
+                                    "repository": {
+                                        "nameWithOwner": "imageio/imageio"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipython",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "ipython-genutils",
                                     "repository": {
                                         "nameWithOwner": "ipython/ipython_genutils"
@@ -32494,6 +32556,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
@@ -32547,6 +32616,13 @@
                                     "repository": {
                                         "nameWithOwner": "executablebooks/sphinx-tabs"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
                                 }
                             ]
                         }
@@ -32559,13 +32635,6 @@
                                     "packageName": "astropy",
                                     "repository": {
                                         "nameWithOwner": "astropy/astropy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "docutils",
-                                    "repository": {
-                                        "nameWithOwner": "jwilk-mirrors/docutils"
                                     }
                                 },
                                 {
@@ -32703,48 +32772,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-autobuild",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx-autobuild"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-automodapi",
-                                    "repository": {
-                                        "nameWithOwner": "astropy/sphinx-automodapi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-copybutton",
-                                    "repository": {
-                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-tabs",
-                                    "repository": {
-                                        "nameWithOwner": "executablebooks/sphinx-tabs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "tqdm",
                                     "repository": {
                                         "nameWithOwner": "tqdm/tqdm"
@@ -32782,6 +32809,27 @@
                                     "packageName": "crazy-max/ghaction-github-pages",
                                     "repository": {
                                         "nameWithOwner": "crazy-max/ghaction-github-pages"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
                                     }
                                 }
                             ]
@@ -61012,7 +61060,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#DA3434",
+                        "name": "CMake"
+                    }
+                ]
             }
         },
         "LLNL/ygm-tutorial": {
