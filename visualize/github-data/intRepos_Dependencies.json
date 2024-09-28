@@ -42138,9 +42138,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42378,9 +42376,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43138,9 +43134,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -76137,6 +76131,26 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "dorny/paths-filter",
+                                    "repository": {
+                                        "nameWithOwner": "dorny/paths-filter"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/download-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/download-artifact"
@@ -76144,16 +76158,16 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "codecov/codecov-action",
+                                    "packageName": "actions/setup-python",
                                     "repository": {
-                                        "nameWithOwner": "codecov/codecov-action"
+                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "dorny/paths-filter",
+                                    "packageName": "codecov/codecov-action",
                                     "repository": {
-                                        "nameWithOwner": "dorny/paths-filter"
+                                        "nameWithOwner": "codecov/codecov-action"
                                     }
                                 }
                             ]
@@ -76290,6 +76304,19 @@
                                     "packageName": "vermin",
                                     "repository": {
                                         "nameWithOwner": "netromdk/vermin"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "nedbat/coveragepy"
                                     }
                                 }
                             ]
