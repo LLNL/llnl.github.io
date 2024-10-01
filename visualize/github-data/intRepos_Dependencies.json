@@ -1163,6 +1163,13 @@
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
                                     }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
+                                    }
                                 }
                             ]
                         }
@@ -14859,10 +14866,42 @@
         },
         "GLVis/releases-js": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#e34c26",
+                        "name": "HTML"
+                    }
+                ]
             }
         },
         "GLVis/web": {
@@ -30187,7 +30226,36 @@
                 "nodes": [
                     {
                         "dependencies": {
-                            "nodes": []
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "bayesian-optimization",
+                                    "repository": {
+                                        "nameWithOwner": "bayesian-optimization/BayesianOptimization"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                }
+                            ]
                         }
                     },
                     {
@@ -42437,9 +42505,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -42691,9 +42757,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42705,9 +42769,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -42993,9 +43055,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -52381,6 +52441,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "nbsphinx",
+                                    "repository": {
+                                        "nameWithOwner": "spatialaudio/nbsphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
@@ -52405,6 +52472,13 @@
                                     "packageName": "pytest-cov",
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
                                     }
                                 },
                                 {
@@ -79990,122 +80064,6 @@
                 ]
             }
         },
-        "spack/spack-stack-catalog": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-feed",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-feed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-paginate",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-paginate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-seo-tag",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-seo-tag"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-sitemap",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-sitemap"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "gitpython",
-                                    "repository": {
-                                        "nameWithOwner": "gitpython-developers/GitPython"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jinja2",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/jinja"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyaml",
-                                    "repository": {
-                                        "nameWithOwner": "mk-fg/pretty-yaml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pygithub",
-                                    "repository": {
-                                        "nameWithOwner": "PyGithub/PyGithub"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scikit-learn",
-                                    "repository": {
-                                        "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "ad-m/github-push-action",
-                                    "repository": {
-                                        "nameWithOwner": "ad-m/github-push-action"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "spack/spack-tutorial": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -80336,137 +80294,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "spack/spack.io": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "ffi",
-                                    "repository": {
-                                        "nameWithOwner": "ffi/ffi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-algolia",
-                                    "repository": {
-                                        "nameWithOwner": "algolia/jekyll-algolia"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-feed",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-feed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-gist",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-gist"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-include-cache",
-                                    "repository": {
-                                        "nameWithOwner": "benbalter/jekyll-include-cache"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-paginate",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-paginate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-sass-converter",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-sass-converter"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jekyll-sitemap",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jekyll-sitemap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "jemoji",
-                                    "repository": {
-                                        "nameWithOwner": "jekyll/jemoji"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "minimal-mistakes-jekyll",
-                                    "repository": {
-                                        "nameWithOwner": "mmistakes/minimal-mistakes"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUBYGEMS",
-                                    "packageName": "webrick",
-                                    "repository": {
-                                        "nameWithOwner": "ruby/webrick"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/cache",
-                                    "repository": {
-                                        "nameWithOwner": "actions/cache"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "helaili/jekyll-action",
-                                    "repository": {
-                                        "nameWithOwner": "helaili/jekyll-action"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#e34c26",
-                        "name": "HTML"
-                    }
-                ]
             }
         },
         "spack/spack_spack": {
