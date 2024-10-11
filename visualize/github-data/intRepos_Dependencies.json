@@ -18404,6 +18404,53 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "cffi",
+                                    "repository": {
+                                        "nameWithOwner": "python-cffi/cffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "clang",
+                                    "repository": {
+                                        "nameWithOwner": "ethanhs/clang"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pycparser",
+                                    "repository": {
+                                        "nameWithOwner": "eliben/pycparser"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cffi",
+                                    "repository": {
+                                        "nameWithOwner": "python-cffi/cffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "clang",
+                                    "repository": {
+                                        "nameWithOwner": "ethanhs/clang"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "clang",
                                     "repository": {
                                         "nameWithOwner": "ethanhs/clang"
@@ -18425,6 +18472,13 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
                                     }
                                 },
                                 {
@@ -18453,6 +18507,13 @@
                                     "packageName": "matlab-actions/setup-matlab",
                                     "repository": {
                                         "nameWithOwner": "matlab-actions/setup-matlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "softprops/action-gh-release",
+                                    "repository": {
+                                        "nameWithOwner": "softprops/action-gh-release"
                                     }
                                 }
                             ]
@@ -53182,6 +53243,256 @@
                         "name": "Python"
                     }
                 ]
+            }
+        },
+        "LLNL/pySigma-backend-duckdb": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "psf/black"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "certifi",
+                                    "repository": {
+                                        "nameWithOwner": "certifi/python-certifi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "charset-normalizer",
+                                    "repository": {
+                                        "nameWithOwner": "jawah/charset_normalizer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "colorama",
+                                    "repository": {
+                                        "nameWithOwner": "tartley/colorama"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "nedbat/coveragepy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "exceptiongroup",
+                                    "repository": {
+                                        "nameWithOwner": "python-trio/exceptiongroup"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "idna",
+                                    "repository": {
+                                        "nameWithOwner": "kjd/idna"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "iniconfig",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/iniconfig"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "isort",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/isort"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy_extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "packaging",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/packaging"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pathspec",
+                                    "repository": {
+                                        "nameWithOwner": "cpburnz/python-pathspec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "platformdirs",
+                                    "repository": {
+                                        "nameWithOwner": "tox-dev/platformdirs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pluggy",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pluggy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyparsing",
+                                    "repository": {
+                                        "nameWithOwner": "pyparsing/pyparsing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pysigma",
+                                    "repository": {
+                                        "nameWithOwner": "SigmaHQ/pySigma"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tomli",
+                                    "repository": {
+                                        "nameWithOwner": "hukkin/tomli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "typing-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/typing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "black",
+                                    "repository": {
+                                        "nameWithOwner": "psf/black"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pysigma",
+                                    "repository": {
+                                        "nameWithOwner": "SigmaHQ/pySigma"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/pySigma-pipeline-wintap": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "LLNL/pylibROM": {
