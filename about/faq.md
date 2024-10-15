@@ -159,9 +159,9 @@ The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) descr
 
 If you've set up your repository within the **LLNL organization**, you don't need to take any action; it will automatically appear after the next data update.
 
-* If your repository exists under a different organization, you can move it to LLNL: Settings > Danger Zone > Transfer ownership > Transfer button.
+* If your repository exists under a different organization, you can move it to LLNL: Settings > Danger Zone > Transfer ownership > Transfer button. This process notifies our GitHub admins, who can update your role. For instance, upon transfer, repo admins are defaulted to the `write` role instead of `admin`. The transfer process also includes your project's association with team members who contribute to the repo; they too come over with the `write` role by default.
 
-* Alternatively, you can submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
+* Alternatively, if you do not wish to transfer your repo, you can instead submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
 
 * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that website's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
