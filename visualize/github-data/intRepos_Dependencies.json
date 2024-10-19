@@ -9339,47 +9339,6 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "cftime",
-                                    "repository": {
-                                        "nameWithOwner": "Unidata/cftime"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "netcdf4",
-                                    "repository": {
-                                        "nameWithOwner": "Unidata/netcdf4-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "xarray",
-                                    "repository": {
-                                        "nameWithOwner": "pydata/xarray"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "zarr",
-                                    "repository": {
-                                        "nameWithOwner": "zarr-developers/zarr-python"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "mpi4py",
                                     "repository": {
                                         "nameWithOwner": "mpi4py/mpi4py"
@@ -40583,6 +40542,54 @@
                 ]
             }
         },
+        "LLNL/aiida-inq": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "aiida-ase",
+                                    "repository": {
+                                        "nameWithOwner": "aiidaplugins/aiida-ase"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "aiida-core",
+                                    "repository": {
+                                        "nameWithOwner": "aiidateam/aiida-core"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ase",
+                                    "repository": {
+                                        "nameWithOwner": "jfalken/aws_enumeration_lib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/al_nlp": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -48345,6 +48352,19 @@
                 ]
             }
         },
+        "LLNL/ldms": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/ldms-plugins-llnl": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -52417,19 +52437,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "LLNL/ovis": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
             }
         },
         "LLNL/pLiner": {
@@ -77251,13 +77258,6 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/upload-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-artifact"
@@ -77316,13 +77316,6 @@
                                     "packageName": "actions/download-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/download-artifact"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 },
                                 {
