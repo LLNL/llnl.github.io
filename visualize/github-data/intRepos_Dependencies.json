@@ -42367,7 +42367,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42605,7 +42607,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43355,7 +43359,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -82109,6 +82115,33 @@
                                     "packageName": "zipp",
                                     "repository": {
                                         "nameWithOwner": "jaraco/zipp"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "tj-actions/changed-files",
+                                    "repository": {
+                                        "nameWithOwner": "tj-actions/changed-files"
                                     }
                                 }
                             ]
