@@ -3148,7 +3148,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "django-debug-toolbar",
                                     "repository": {
-                                        "nameWithOwner": "jazzband/django-debug-toolbar"
+                                        "nameWithOwner": "django-commons/django-debug-toolbar"
                                     }
                                 },
                                 {
@@ -3294,7 +3294,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "django-debug-toolbar",
                                     "repository": {
-                                        "nameWithOwner": "jazzband/django-debug-toolbar"
+                                        "nameWithOwner": "django-commons/django-debug-toolbar"
                                     }
                                 },
                                 {
@@ -23937,6 +23937,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "h5py",
+                                    "repository": {
+                                        "nameWithOwner": "h5py/h5py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
@@ -38386,7 +38393,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "prettytable",
                                     "repository": {
-                                        "nameWithOwner": "jazzband/prettytable"
+                                        "nameWithOwner": "prettytable/prettytable"
                                     }
                                 }
                             ]
@@ -42673,7 +42680,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 }
                             ]
                         }
@@ -42937,7 +42946,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 }
                             ]
                         }
@@ -43223,7 +43234,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 }
                             ]
                         }
@@ -56599,19 +56612,6 @@
                 ]
             }
         },
-        "LLNL/spack": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/spark-hdf5": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -60392,6 +60392,149 @@
                 "nodes": []
             }
         },
+        "LLNL/toss-stig": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "beautifulsoup4",
+                                    "repository": {
+                                        "nameWithOwner": "wention/BeautifulSoup4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python",
+                                    "repository": {
+                                        "nameWithOwner": "python/cpython"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "bs4",
+                                    "repository": {
+                                        "nameWithOwner": "t2elzeth/regex-training"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "beautifulsoup4",
+                                    "repository": {
+                                        "nameWithOwner": "wention/BeautifulSoup4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "bs4",
+                                    "repository": {
+                                        "nameWithOwner": "t2elzeth/regex-training"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "soupsieve",
+                                    "repository": {
+                                        "nameWithOwner": "facelessuser/soupsieve"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "ansible/ansible-lint-action",
+                                    "repository": {
+                                        "nameWithOwner": "ansible/ansible-lint-action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/tox": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -63665,7 +63808,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "prettytable",
                                     "repository": {
-                                        "nameWithOwner": "jazzband/prettytable"
+                                        "nameWithOwner": "prettytable/prettytable"
                                     }
                                 },
                                 {
@@ -72690,67 +72833,6 @@
                 "nodes": []
             }
         },
-        "spack/build-quality-tools": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pexpect",
-                                    "repository": {
-                                        "nameWithOwner": "pexpect/pexpect"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "pre-commit-ci/lite-action",
-                                    "repository": {
-                                        "nameWithOwner": "pre-commit-ci/lite-action"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "pre-commit/action",
-                                    "repository": {
-                                        "nameWithOwner": "pre-commit/action"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "spack/cache.spack.io": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -74028,6 +74110,67 @@
                     {
                         "color": "#4d41b1",
                         "name": "Fortran"
+                    }
+                ]
+            }
+        },
+        "spack/gh-spack-pr": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pexpect",
+                                    "repository": {
+                                        "nameWithOwner": "pexpect/pexpect"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pre-commit-ci/lite-action",
+                                    "repository": {
+                                        "nameWithOwner": "pre-commit-ci/lite-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pre-commit/action",
+                                    "repository": {
+                                        "nameWithOwner": "pre-commit/action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -78940,7 +79083,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "django-debug-toolbar",
                                     "repository": {
-                                        "nameWithOwner": "jazzband/django-debug-toolbar"
+                                        "nameWithOwner": "django-commons/django-debug-toolbar"
                                     }
                                 },
                                 {
