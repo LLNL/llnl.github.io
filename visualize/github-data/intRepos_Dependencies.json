@@ -9323,13 +9323,6 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/github-script",
-                                    "repository": {
-                                        "nameWithOwner": "actions/github-script"
-                                    }
                                 }
                             ]
                         }
@@ -9343,13 +9336,6 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/github-script",
-                                    "repository": {
-                                        "nameWithOwner": "actions/github-script"
-                                    }
                                 }
                             ]
                         }
@@ -9362,13 +9348,6 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/github-script",
-                                    "repository": {
-                                        "nameWithOwner": "actions/github-script"
                                     }
                                 },
                                 {
@@ -35972,7 +35951,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Numerics.Vectors",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/corefx"
+                                        "nameWithOwner": "dotnet/runtime"
                                     }
                                 },
                                 {
@@ -36063,7 +36042,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Threading.Tasks.Extensions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/corefx"
+                                        "nameWithOwner": "dotnet/runtime"
                                     }
                                 },
                                 {
@@ -36341,7 +36320,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Numerics.Vectors",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/corefx"
+                                        "nameWithOwner": "dotnet/runtime"
                                     }
                                 },
                                 {
@@ -41837,6 +41816,33 @@
                 ]
             }
         },
+        "LLNL/blt-phpmd": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "COMPOSER",
+                                    "packageName": "phpmd/phpmd",
+                                    "repository": {
+                                        "nameWithOwner": "phpmd/phpmd"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#4F5D95",
+                        "name": "PHP"
+                    }
+                ]
+            }
+        },
         "LLNL/blt_test": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -44482,7 +44488,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "ecs-logging",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "elastic/ecs-logging-python"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -44888,7 +44896,9 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "ecs-logging",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "elastic/ecs-logging-python"
+                                    }
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -82131,12 +82141,7 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": [
-                    {
-                        "color": "#e34c26",
-                        "name": "HTML"
-                    }
-                ]
+                "nodes": []
             }
         },
         "visit-dav/java-client-docs": {
