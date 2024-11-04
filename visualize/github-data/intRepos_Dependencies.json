@@ -5457,19 +5457,6 @@
                 ]
             }
         },
-        "CDAT/uvcmetrics": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/uvdjango": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -42922,9 +42909,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -43176,9 +43161,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43190,9 +43173,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -43478,9 +43459,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -44488,9 +44467,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "ecs-logging",
-                                    "repository": {
-                                        "nameWithOwner": "elastic/ecs-logging-python"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -44896,9 +44873,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "ecs-logging",
-                                    "repository": {
-                                        "nameWithOwner": "elastic/ecs-logging-python"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -56670,6 +56645,33 @@
                                     "packageName": "pyyaml",
                                     "repository": {
                                         "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": {
+                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
                                     }
                                 }
                             ]
