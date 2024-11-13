@@ -13912,6 +13912,14 @@
                 ]
             }
         },
+        "ESGF/esgf-vocab": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "ESGF/esgf-web-fe": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -43202,7 +43210,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -71677,6 +71687,19 @@
                                     "packageName": "styfle/cancel-workflow-action",
                                     "repository": {
                                         "nameWithOwner": "styfle/cancel-workflow-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/stale",
+                                    "repository": {
+                                        "nameWithOwner": "actions/stale"
                                     }
                                 }
                             ]
