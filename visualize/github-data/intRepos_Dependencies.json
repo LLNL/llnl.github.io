@@ -9292,6 +9292,26 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
@@ -13929,6 +13949,33 @@
                     {
                         "color": "#f1e05a",
                         "name": "JavaScript"
+                    }
+                ]
+            }
+        },
+        "ESGF/esgf-wget": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "django",
+                                    "repository": {
+                                        "nameWithOwner": "django/django"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -42626,9 +42673,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42866,9 +42911,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42929,9 +42972,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -43183,9 +43224,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43197,9 +43236,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -43485,9 +43522,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -43626,9 +43661,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": {
-                                        "nameWithOwner": "mockito/mockito"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -55198,16 +55231,12 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "systems.uom:systems-common",
-                                    "repository": {
-                                        "nameWithOwner": "unitsofmeasurement/uom-parent"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "systems.uom:systems-quantity",
-                                    "repository": {
-                                        "nameWithOwner": "unitsofmeasurement/uom-parent"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
