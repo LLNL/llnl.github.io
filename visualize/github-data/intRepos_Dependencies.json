@@ -25231,9 +25231,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "deprecated",
-                                    "repository": {
-                                        "nameWithOwner": "laurent-laporte-pro/deprecated"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -80161,9 +80159,7 @@
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "deprecated",
-                                    "repository": {
-                                        "nameWithOwner": "laurent-laporte-pro/deprecated"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "PIP",
@@ -81816,7 +81812,21 @@
         },
         "visit-dav/dashboard": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": []
