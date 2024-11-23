@@ -18188,7 +18188,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "clang",
                                     "repository": {
-                                        "nameWithOwner": "ethanhs/clang"
+                                        "nameWithOwner": "emmatyping/clang"
                                     }
                                 },
                                 {
@@ -18215,7 +18215,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "clang",
                                     "repository": {
-                                        "nameWithOwner": "ethanhs/clang"
+                                        "nameWithOwner": "emmatyping/clang"
                                     }
                                 }
                             ]
@@ -18228,7 +18228,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "clang",
                                     "repository": {
-                                        "nameWithOwner": "ethanhs/clang"
+                                        "nameWithOwner": "emmatyping/clang"
                                     }
                                 },
                                 {
@@ -33277,7 +33277,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "clang",
                                     "repository": {
-                                        "nameWithOwner": "ethanhs/clang"
+                                        "nameWithOwner": "emmatyping/clang"
                                     }
                                 },
                                 {
@@ -43803,10 +43803,314 @@
         },
         "LLNL/dapper": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "aho-corasick",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/aho-corasick"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "cc",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/cc-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "crossbeam-deque",
+                                    "repository": {
+                                        "nameWithOwner": "crossbeam-rs/crossbeam"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "crossbeam-epoch",
+                                    "repository": {
+                                        "nameWithOwner": "crossbeam-rs/crossbeam"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "crossbeam-utils",
+                                    "repository": {
+                                        "nameWithOwner": "crossbeam-rs/crossbeam"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "either",
+                                    "repository": {
+                                        "nameWithOwner": "rayon-rs/either"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "memchr",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/memchr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "rayon",
+                                    "repository": {
+                                        "nameWithOwner": "rayon-rs/rayon"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "rayon-core",
+                                    "repository": {
+                                        "nameWithOwner": "rayon-rs/rayon"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "regex",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/regex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "regex-automata",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/regex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "regex-syntax",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/regex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "same-file",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/same-file"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "shlex",
+                                    "repository": {
+                                        "nameWithOwner": "comex/rust-shlex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "streaming-iterator",
+                                    "repository": {
+                                        "nameWithOwner": "sfackler/streaming-iterator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-cpp",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter-cpp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-language",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-rust",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter-rust"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "walkdir",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/walkdir"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "winapi-util",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/winapi-util"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows-sys",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows-targets",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_aarch64_gnullvm",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_aarch64_msvc",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_i686_gnu",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_i686_gnullvm",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_i686_msvc",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_x86_64_gnu",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_x86_64_gnullvm",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "windows_x86_64_msvc",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/windows-rs"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "cc",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/cc-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "rayon",
+                                    "repository": {
+                                        "nameWithOwner": "rayon-rs/rayon"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "streaming-iterator",
+                                    "repository": {
+                                        "nameWithOwner": "sfackler/streaming-iterator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-cpp",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter-cpp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-rust",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter-rust"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "walkdir",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/walkdir"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#dea584",
+                        "name": "Rust"
+                    }
+                ]
             }
         },
         "LLNL/dataracebench": {
