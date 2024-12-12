@@ -59068,6 +59068,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "sphinx-toolbox",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-toolbox/sphinx-toolbox"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "sphinxcontrib-bibtex",
                                     "repository": {
                                         "nameWithOwner": "mcmtroffaes/sphinxcontrib-bibtex"
@@ -59183,22 +59190,9 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-artifact",
+                                    "packageName": "actions/download-artifact",
                                     "repository": {
-                                        "nameWithOwner": "actions/upload-artifact"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
+                                        "nameWithOwner": "actions/download-artifact"
                                     }
                                 },
                                 {
@@ -59219,6 +59213,80 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
                                     }
                                 }
                             ]
@@ -59259,6 +59327,19 @@
                                     "packageName": "KyleMayes/install-llvm-action",
                                     "repository": {
                                         "nameWithOwner": "KyleMayes/install-llvm-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
                                     }
                                 }
                             ]
@@ -59401,6 +59482,13 @@
                                     "packageName": "scikit-learn",
                                     "repository": {
                                         "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
                                     }
                                 },
                                 {
@@ -60084,6 +60172,54 @@
                                     "packageName": "pip",
                                     "repository": {
                                         "nameWithOwner": "pypa/pip"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyomo",
+                                    "repository": {
+                                        "nameWithOwner": "Pyomo/pyomo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
                                     }
                                 }
                             ]
@@ -73408,7 +73544,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "@jridgewell/gen-mapping",
                                     "repository": {
-                                        "nameWithOwner": "jridgewell/sourcemaps"
+                                        "nameWithOwner": "jridgewell/gen-mapping"
                                     }
                                 },
                                 {
@@ -75414,7 +75550,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "@jridgewell/gen-mapping",
                                     "repository": {
-                                        "nameWithOwner": "jridgewell/sourcemaps"
+                                        "nameWithOwner": "jridgewell/gen-mapping"
                                     }
                                 },
                                 {
