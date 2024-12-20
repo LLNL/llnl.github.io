@@ -44224,9 +44224,23 @@
                             "nodes": [
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "ahash",
+                                    "repository": {
+                                        "nameWithOwner": "tkaitchuck/aHash"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "aho-corasick",
                                     "repository": {
                                         "nameWithOwner": "BurntSushi/aho-corasick"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "bitflags",
+                                    "repository": {
+                                        "nameWithOwner": "bitflags/bitflags"
                                     }
                                 },
                                 {
@@ -44235,6 +44249,11 @@
                                     "repository": {
                                         "nameWithOwner": "rust-lang/cc-rs"
                                     }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "cfg-if",
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "RUST",
@@ -44266,9 +44285,72 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "fallible-iterator",
+                                    "repository": {
+                                        "nameWithOwner": "sfackler/rust-fallible-iterator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "fallible-streaming-iterator",
+                                    "repository": {
+                                        "nameWithOwner": "sfackler/fallible-streaming-iterator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "hashbrown",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/hashbrown"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "hashlink",
+                                    "repository": {
+                                        "nameWithOwner": "kyren/hashlink"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "libsqlite3-sys",
+                                    "repository": {
+                                        "nameWithOwner": "rusqlite/rusqlite"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "memchr",
                                     "repository": {
                                         "nameWithOwner": "BurntSushi/memchr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "once_cell",
+                                    "repository": {
+                                        "nameWithOwner": "matklad/once_cell"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "pkg-config",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/pkg-config-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "proc-macro2",
+                                    "repository": {
+                                        "nameWithOwner": "dtolnay/proc-macro2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "quote",
+                                    "repository": {
+                                        "nameWithOwner": "dtolnay/quote"
                                     }
                                 },
                                 {
@@ -44308,6 +44390,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "rusqlite",
+                                    "repository": {
+                                        "nameWithOwner": "rusqlite/rusqlite"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "same-file",
                                     "repository": {
                                         "nameWithOwner": "BurntSushi/same-file"
@@ -44322,9 +44411,23 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "smallvec",
+                                    "repository": {
+                                        "nameWithOwner": "servo/rust-smallvec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "streaming-iterator",
                                     "repository": {
                                         "nameWithOwner": "sfackler/streaming-iterator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "syn",
+                                    "repository": {
+                                        "nameWithOwner": "dtolnay/syn"
                                     }
                                 },
                                 {
@@ -44353,6 +44456,25 @@
                                     "packageName": "tree-sitter-rust",
                                     "repository": {
                                         "nameWithOwner": "tree-sitter/tree-sitter-rust"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "unicode-ident",
+                                    "repository": {
+                                        "nameWithOwner": "dtolnay/unicode-ident"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "vcpkg",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "version_check",
+                                    "repository": {
+                                        "nameWithOwner": "SergioBenitez/version_check"
                                     }
                                 },
                                 {
@@ -44438,6 +44560,20 @@
                                     "repository": {
                                         "nameWithOwner": "microsoft/windows-rs"
                                     }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "zerocopy",
+                                    "repository": {
+                                        "nameWithOwner": "google/zerocopy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "zerocopy-derive",
+                                    "repository": {
+                                        "nameWithOwner": "google/zerocopy"
+                                    }
                                 }
                             ]
                         }
@@ -44457,6 +44593,13 @@
                                     "packageName": "rayon",
                                     "repository": {
                                         "nameWithOwner": "rayon-rs/rayon"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "rusqlite",
+                                    "repository": {
+                                        "nameWithOwner": "rusqlite/rusqlite"
                                     }
                                 },
                                 {
@@ -77290,6 +77433,13 @@
                                     "packageName": "actions/upload-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "Homebrew/actions/setup-homebrew",
+                                    "repository": {
+                                        "nameWithOwner": "Homebrew/actions"
                                     }
                                 }
                             ]
