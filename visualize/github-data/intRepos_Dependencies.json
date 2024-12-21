@@ -41936,6 +41936,19 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "absl-py",
+                                    "repository": {
+                                        "nameWithOwner": "abseil/abseil-py"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
@@ -41946,32 +41959,6 @@
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "absl-py",
-                                    "repository": {
-                                        "nameWithOwner": "abseil/abseil-py"
                                     }
                                 }
                             ]
@@ -44313,6 +44300,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "lazy_static",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang-nursery/lazy-static.rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "libsqlite3-sys",
                                     "repository": {
                                         "nameWithOwner": "rusqlite/rusqlite"
@@ -44586,6 +44580,13 @@
                                     "packageName": "cc",
                                     "repository": {
                                         "nameWithOwner": "rust-lang/cc-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "lazy_static",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang-nursery/lazy-static.rs"
                                     }
                                 },
                                 {
