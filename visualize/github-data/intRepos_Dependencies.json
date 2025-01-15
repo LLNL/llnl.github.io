@@ -53211,7 +53211,118 @@
         },
         "LLNL/pEyeON": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "alive-progress",
+                                    "repository": {
+                                        "nameWithOwner": "rsalmei/alive-progress"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "nedbat/coveragepy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "duckdb",
+                                    "repository": {
+                                        "nameWithOwner": "duckdb/duckdb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "dynaconf",
+                                    "repository": {
+                                        "nameWithOwner": "dynaconf/dynaconf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonschema",
+                                    "repository": {
+                                        "nameWithOwner": "python-jsonschema/jsonschema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lief",
+                                    "repository": {
+                                        "nameWithOwner": "lief-project/LIEF"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pefile",
+                                    "repository": {
+                                        "nameWithOwner": "erocarrera/pefile"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-magic",
+                                    "repository": {
+                                        "nameWithOwner": "ahupp/python-magic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "streamlit",
+                                    "repository": {
+                                        "nameWithOwner": "streamlit/streamlit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "surfactant",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Surfactant"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "telfhash",
+                                    "repository": {
+                                        "nameWithOwner": "trendmicro/telfhash"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "dynaconf",
+                                    "repository": {
+                                        "nameWithOwner": "dynaconf/dynaconf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "streamlit",
+                                    "repository": {
+                                        "nameWithOwner": "streamlit/streamlit"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -67579,40 +67690,6 @@
                     {
                         "color": "#3572A5",
                         "name": "Python"
-                    }
-                ]
-            }
-        },
-        "flux-framework/flux-coral2": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "flux-framework/pr-validator",
-                                    "repository": {
-                                        "nameWithOwner": "flux-framework/pr-validator"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
                     }
                 ]
             }
