@@ -13989,6 +13989,20 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "sphinx-copybutton",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-tabs",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/sphinx-tabs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "sqlalchemy",
                                     "repository": {
                                         "nameWithOwner": "sqlalchemy/sqlalchemy"
@@ -14013,6 +14027,33 @@
                                     "packageName": "typer",
                                     "repository": {
                                         "nameWithOwner": "fastapi/typer"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "eifinger/setup-rye",
+                                    "repository": {
+                                        "nameWithOwner": "eifinger/setup-rye"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "peaceiris/actions-gh-pages",
+                                    "repository": {
+                                        "nameWithOwner": "peaceiris/actions-gh-pages"
                                     }
                                 }
                             ]
@@ -17009,7 +17050,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "base",
                                     "repository": {
-                                        "nameWithOwner": "base/base"
+                                        "nameWithOwner": "base-repos/base"
                                     }
                                 },
                                 {
@@ -45525,123 +45566,6 @@
                 ]
             }
         },
-        "LLNL/elastic-stacker": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "black",
-                                    "repository": {
-                                        "nameWithOwner": "psf/black"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "build",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/build"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ipython",
-                                    "repository": {
-                                        "nameWithOwner": "ipython/ipython"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "setuptools",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/setuptools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "setuptools-scm",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/setuptools-scm"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "twine",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/twine"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ecs-logging",
-                                    "repository": {
-                                        "nameWithOwner": "elastic/ecs-logging-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "fire",
-                                    "repository": {
-                                        "nameWithOwner": "google/python-fire"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "httpx",
-                                    "repository": {
-                                        "nameWithOwner": "encode/httpx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "marshmallow",
-                                    "repository": {
-                                        "nameWithOwner": "marshmallow-code/marshmallow"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-slugify",
-                                    "repository": {
-                                        "nameWithOwner": "un33k/python-slugify"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "nameWithOwner": "yaml/pyyaml"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/exadis": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -57955,6 +57879,39 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "decorator",
+                                    "repository": {
+                                        "nameWithOwner": "micheles/decorator"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
@@ -64945,6 +64902,33 @@
                 ]
             }
         },
+        "chaos/cerebro": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "chaos/chaos.github.com": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -68500,8 +68484,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#89e051",
-                        "name": "Shell"
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -75184,7 +75168,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "base",
                                     "repository": {
-                                        "nameWithOwner": "base/base"
+                                        "nameWithOwner": "base-repos/base"
                                     }
                                 },
                                 {
@@ -77211,7 +77195,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "base",
                                     "repository": {
-                                        "nameWithOwner": "base/base"
+                                        "nameWithOwner": "base-repos/base"
                                     }
                                 },
                                 {
