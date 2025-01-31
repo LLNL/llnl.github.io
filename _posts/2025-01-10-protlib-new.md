@@ -1,0 +1,8 @@
+---
+title: "New Repo: protlib-designer"
+categories: new-repo
+---
+
+[protlib-designer](https://github.com/LLNL/protlib-designer) contains a lightweight Python library for designing diverse protein libraries by seeding linear programming with deep mutational scanning data (or any other data that can be represented as a matrix of scores per single-point mutation). The software takes as input the score matrix, where each row corresponds to a mutation and each column corresponds to a different source of scores, and outputs a subset of mutations that maximize the diversity of the library while Pareto-optimizing the scores from the different sources. Related paper: [Antibody Library Design by Seeding Linear Programming with Inverse Folding and Protein Language Models](https://www.biorxiv.org/content/10.1101/2024.11.03.621763v1). Abstract:
+
+> We propose a novel approach for antibody library design that combines deep learning and multi-objective linear programming with diversity constraints. Our method leverages recent advances in sequence and structure-based deep learning for protein engineering to predict the effects of mutations on antibody properties. These predictions are then used to seed a cascade of constrained integer linear programming problems, the solutions of which yield a diverse and high-performing antibody library. Operating in a cold-start setting, our approach creates designs without iterative feedback from wet laboratory experiments or computational simulations. We demonstrate the effectiveness of our method by designing antibody libraries for Trastuzumab in complex with the HER2 receptor, showing that it outperforms existing techniques in overall quality and diversity of the generated libraries.
