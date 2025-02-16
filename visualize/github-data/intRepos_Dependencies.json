@@ -70268,7 +70268,95 @@
         },
         "flux-framework/flux-go": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/net",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/text",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/genproto/googleapis/rpc",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/go-genproto"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/grpc",
+                                    "repository": {
+                                        "nameWithOwner": "grpc/grpc-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/protobuf",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
