@@ -47,7 +47,7 @@ Finally, open <http://localhost:4000> in a web browser.
 
 *Note:* The [RADIUSS website](https://software.llnl.gov/radiuss/) and [product catalog](https://software.llnl.gov/radiuss/projects/) "live" on this URL but are managed by a [separate repo](https://github.com/LLNL/radiuss).
 
-### Tips
+## Tips
 
 The gems in your sourcefile get updated frequently. It is a good idea to occasionally run `bundle update` from within your project's root directory to make sure the software on your computer is up to date.
 
@@ -55,7 +55,7 @@ Sometimes there can be dependency conflicts if your local version of Ruby is dif
 
 For example, the default version of Ruby used to deploy GitHub Pages on github.com as of 2021-04-08 was Ruby 2.7.1. If you tried running Ruby version 3.0.0 locally on macOS, you'll need to do some extra steps to correctly install the dependencies for this repository. You'd need to run `bundle add webrick` as it is no longer a prepackaged dependency with Ruby in 3.0.0. You may also need to run `gem install eventmachine -- --with-openssl-dir=/usr/local/opt/openssl@1.1` as MacOS >10.14 doesn't use OpenSSL from the same path as is still assumed to be in by eventmachine.
 
-### Spellcheck
+## Spellcheck
 
 The [GitHub workflow](https://github.com/LLNL/llnl.github.io/blob/main/.github/workflows/main.yaml) currently includes an action for a Rust tool called [crate-ci/typos](https://github.com/marketplace/actions/typos-action) that will spellcheck all posts and pages. If your CI fails, spelling suggestions will be shown and you can manually update the mistakes, or [install typos](https://github.com/crate-ci/typos#install) and have all errors fixed automatically:
 
@@ -63,7 +63,7 @@ The [GitHub workflow](https://github.com/LLNL/llnl.github.io/blob/main/.github/w
 typos ./_posts ./README.md ./about/faq.md ./about/contributing.md --write-changes
 ```
 
-If a word needs to be ignored, see [instructions](https://github.com/crate-ci/typos#false-positives) for adding an entry to the [_typos.toml](https://github.com/LLNL/llnl.github.io/blob/main/_typos.toml) file.
+If a word needs to be ignored, see [instructions](https://github.com/crate-ci/typos#false-positives) for adding an entry to the [`_typos.toml`](https://github.com/LLNL/llnl.github.io/blob/main/_typos.toml) file.
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
@@ -112,11 +112,11 @@ Repos that appear on the [RADIUSS site](https://software.llnl.gov/radiuss/projec
 
 {% capture accordionContent %}
 
-### Project Tags
+## Project Tags
 
 See the FAQ [How do I include my repo in the LLNL organization and/or this website’s catalog?](https://software.llnl.gov/about/faq/#catalog) for information about tagging an individual repo. See the topic [How do I update or use the catalog categories?](https://software.llnl.gov/about/contribute/#categories) above for information about managing the categories.
 
-### Project Logos
+## Project Logos
 
 The home page displays a logo next to each repo when they appear under the topic categories. If a repo has its own logo, that should display. If not, then the LLNL logo displays by default. There are two steps to adding a logo to this website:
 
@@ -167,7 +167,7 @@ The informational pages on this site (e.g., this page, [About](/about), [FAQ](/a
 * News post titles in title case
 * Accordion titles in the form of a sentence-case question
 
-**To update the banner on the home page:** The existing RADIUSS message is in a container using the [`button.html` include file](https://github.com/LLNL/llnl.github.io/blob/main/_includes/components/button.html).
+**To update the banners on the home page:** The existing RADIUSS and IPO messages are in `<div>` containers using the [`button.html` include file](https://github.com/LLNL/llnl.github.io/blob/main/_includes/components/button.html).
 
 **To modify the site menu:** Update the menu in the [`header.html`](https://github.com/LLNL/llnl.github.io/blob/main/_includes/header.html), rather than adding each page to the menu using page attributes.
 
@@ -180,9 +180,9 @@ The informational pages on this site (e.g., this page, [About](/about), [FAQ](/a
 {% capture accordionContent %}
 This site's [visualizations](../../visualize) are governed by several scripts and queries. See the following `README` files for details:
 
-* [scripts/README.md](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/scripts/README.md): data collection scripts
-* [_visualize/README.md](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/README.md): queries to GitHub's GraphQL API
-* [visualize/README.md](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md): data storage
+* [`scripts/README.md`](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/scripts/README.md): data collection scripts
+* [`_visualize/README.md`](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/README.md): queries to GitHub's GraphQL API
+* [`visualize/README.md`](https://github.com/LLNL/llnl.github.io/blob/main/visualize/README.md): data storage
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
@@ -190,7 +190,7 @@ This site's [visualizations](../../visualize) are governed by several scripts an
 
 {% capture accordionContent %}
 
-### Future Materials Science category
+## Materials Science Category
 
 Add `Materials Science` into the catalog browse by adding this code (alphabetically among the other categories) to `/visualize/github-data/category_info.json`:
 
@@ -211,11 +211,11 @@ Add `Materials Science` into the catalog browse by adding this code (alphabetica
             ]
         },
 
-### Deprecated RADIUSS features
+## RADIUSS Features
 
-April 2022: RADIUSS launched at [github.com/llnl/radiuss](https://github.com/llnl/radiuss). See tasks in [issue 567](https://github.com/LLNL/llnl.github.io/issues/567). If we ever want/need to reinstate RADIUSS browsing, branding, and other features on this site, here's what to do:
+April 2022: RADIUSS launched at [github.com/llnl/radiuss](https://github.com/llnl/radiuss). See tasks in [issue 567](https://github.com/LLNL/llnl.github.io/issues/567). If we ever want/need to reinstate RADIUSS browsing, branding, and other features on *this* site, here's what to do:
 
-* Add `RADIUSS` back into the catalog browse (i.e., to "live" on this website) by adding this code (as lines 154-168) to `/visualize/github-data/category_info.json`:
+* Add `RADIUSS` back into the catalog browse (i.e., to "live" on this website) by replacing the existing code (lines 190–205) in `/visualize/github-data/category_info.json` with this:
 
 ```bash
         "RADIUSS": {
@@ -235,9 +235,9 @@ April 2022: RADIUSS launched at [github.com/llnl/radiuss](https://github.com/lln
         },
 ```
 
-Note that `/project/category_info_radiuss.json` is not currently being used. If it were to be reinstated, it would need its categories updated to match the latest Catalog (e.g., `Docs and Tutorials``).
+Note that `/project/category_info_radiuss.json` is not currently being used. If it were to be reinstated, it would need its categories updated to match the latest Catalog (e.g., `Docs and Tutorials`).
 
-* Comment back in lines 31-38 in `Category.service.js`
+<!--* Comment back in lines 31-38 in `Category.service.js`
 
 ```bash
     this.containsRadiussTopics = function(catTopics, repoTopics) {
@@ -248,23 +248,23 @@ Note that `/project/category_info_radiuss.json` is not currently being used. If 
         }
         return false;
     };
-```
+```-->
 
 * Update link/text on home page
-* Update links/text on Policies & Guidelines page
-* Update links/text on FAQ page
+* Update links/text on [Policies & Guidelines](/about/policies)
+* Update links/text on [FAQ](/about/faq)
 * Update relevant READMEs
 * Update links/text on <https://dev.llnl.gov/radiuss/>
 * Point URL alias <https://radiuss.llnl.gov> back to `/explore/#/RADIUSS` (request this of <webmaster-comp@llnl.gov>)
 
 No changes yet, if ever:
 
-* Policies & Guidelines are currently still on this site: (/about/policies)
-* RADIUSS logo (`radiuss.svg`) is still in the `/assets/` folder
+* [Policies & Guidelines](/about/policies) are currently still on this site
+* RADIUSS logo (`radiuss-icon-bw.png`) is still in the `/assets/images/` folder
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='For site admins only: notes on future and deprecated features' slug='admins' content=accordionContent %}
+  {% include components/accordion.html title='For site admins: notes on deprecated features' slug='admins' content=accordionContent %}
 
 </div>
 <!-- END: Accordions -->
