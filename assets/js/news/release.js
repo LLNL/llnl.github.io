@@ -5,7 +5,7 @@ angular.module("app", ['ngAnimate']).controller("ReleaseController", function($s
     $scope.releases = [];
     $scope.activeYear = null;
 
-    $scope.lowerBoundYear = 2021;
+    $scope.lowerBoundYear = 2023;
     
     $scope.filterByPublishedAt = function(value, index, array) {
       return !$scope.activeYear || ($scope.activeYear && value.publishedAt.value.getFullYear() == $scope.activeYear);

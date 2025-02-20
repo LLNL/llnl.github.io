@@ -39,7 +39,7 @@ LLNL is a Department of Energy ([DOE](https://www.energy.gov/national-laboratori
   </div>
 </div>
 
-We often work with other national labs, universities, and industry partners. Working on these projects is a lot easier when we can share code directly. The Exascale Computing Project ([ECP](https://www.exascaleproject.org)) uses OSS to develop the exascale ecosystem of apps, analytics, infrastructure, and so much more. Future breakthroughs will likely owe some debt to the best practices and accelerated development made possible by OSS.
+We often work with other national labs, universities, and industry partners. Working on these projects is a lot easier when we can share code directly. The DOE's Exascale Computing Project ([ECP](https://www.exascaleproject.org)) (2016–2024) used OSS to develop the exascale ecosystem of apps, analytics, infrastructure, and so much more. Future breakthroughs will likely owe some debt to the best practices and accelerated development made possible by OSS.
 
 One of the great things about a large government organization is that we're not motivated by profit. "The greater good" might sound like a cliché, but it's true. LLNL's national security mission governs our work, so our OSS portfolio of apps, libraries, compilers, and other tools support that mission. This includes everything from monitoring the performance of our supercomputers to making multiphysics codes run more smoothly.
 
@@ -68,39 +68,38 @@ This website abounds with examples of projects that have found a home in the ope
 <!-- START: Quicklinks boxes -->
 {% capture cardContent %}
 * [LLNL Software News](/news)
+* [LLNL Computing News](https://computing.llnl.gov/topic/open-source-software)
+* [The Lab that Launched a Thousand Software Projects](https://computing.llnl.gov/about/newsroom/lab-launched-thousand-software-projects)
 * [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
-* [OSS Spotlight: LLNL and ZFS on Linux](https://medium.com/codedotgov/oss-spotlight-lawrence-livermore-national-laboratory-and-zfs-on-linux-6596fca6e5f6)
-* [Spack, A Lab-Developed ‘App Store for Supercomputers,’ becoming Standard-Bearer](https://www.llnl.gov/news/spack-lab-developed-app-store-supercomputers-becoming-standard-bearer)
+* [Ambassadors of Code](https://str.llnl.gov/2018-01/lee)  (*Science & Technology Review* cover story)
 {% endcapture %}
 {% assign cardContent = cardContent | markdownify %}
-{% include components/card.html title='Open Source at LLNL' content=cardContent classes="h-100" %}
-<!-- END: Quicklinks boxes -->
-  </div>
-  <div class="col-12 col-lg-4">
-<!-- START: Quicklinks boxes -->
-{% capture cardTitle %}
-*Science & Technology Review* coverage
-{% endcapture %}
-{% capture cardContent %}
-* [Ambassadors of Code (cover story)](https://str.llnl.gov/2018-01/lee)
-* [Ambassadors of Code (video, 3:04)](https://youtu.be/nTxMn1NWHQU)
-* [Commentary by Bruce Hendrickson](https://str.llnl.gov/2018-01/comjan18)
-* [Visualization Software Stands the Test of Time](https://str.llnl.gov/2021-05/brugger)
-{% endcapture %}
-{% assign cardTitle = cardTitle | markdownify %}
-{% assign cardContent = cardContent | markdownify %}
-{% include components/card.html title=cardTitle content=cardContent classes="h-100" %}
+{% include components/card.html title='News Coverage' content=cardContent classes="h-100" %}
 <!-- END: Quicklinks boxes -->
   </div>
   <div class="col-12 col-lg-4">
 <!-- START: Quicklinks boxes -->
 {% capture cardContent %}
-* [Releasing Open Source Software at the Lab (poster)](https://computing.llnl.gov/sites/default/files/COMP_Poster_OSS.pdf)
-* [Open Source at LLNL (video, 11:31)](https://youtu.be/kL4wIYhNVxE)
-* [Open Source at LLNL (slides)](https://computing.llnl.gov/sites/default/files/2020CompExpo_Open_Source.pdf)
+* [UnifyFS: User-Level File System for Supercomputers](https://computing.llnl.gov/projects/unifyfs)
+* [UMap: An Application-Oriented, User-Level Memory-Mapping Library](https://computing.llnl.gov/projects/umap)
+* [zfp: Compressed Floating-Point and Integer Arrays](https://computing.llnl.gov/projects/zfp)
+* [Variorum: Vendor-Agnostic Power Management](https://computing.llnl.gov/projects/variorum)
+* [The Laboratory’s Habit of Innovation](https://str.llnl.gov/past-issues/march-2024/laboratorys-habit-innovation)  (*Science & Technology Review* cover story)
 {% endcapture %}
 {% assign cardContent = cardContent | markdownify %}
-{% include components/card.html title='LLNL Computing Virtual Expo Materials' content=cardContent classes="h-100" %}
+{% include components/card.html title='R&D 100 Winners (2023–2024)' content=cardContent classes="h-100" %}
+<!-- END: Quicklinks boxes -->
+  </div>
+  <div class="col-12 col-lg-4">
+<!-- START: Quicklinks boxes -->
+{% capture cardContent %}
+* [How Will El Capitan Run? Software and Storage Solutions Powering NNSA’s First Exascale Supercomputer](https://www.youtube.com/watch?v=K7ccgEoJnuM) (5:56)
+* [Supercomputer Problems You’ve Never Heard Of](https://www.youtube.com/watch?v=IZSWymZmkc0) (5:39)
+* [Ambassadors of Code](https://www.youtube.com/watch?v=nTxMn1NWHQU) (3:04)
+* [An Introduction to Open Source Software](https://www.youtube.com/watch?v=kL4wIYhNVxE) (11:31)
+{% endcapture %}
+{% assign cardContent = cardContent | markdownify %}
+{% include components/card.html title='Multimedia' content=cardContent classes="h-100" %}
 <!-- END: Quicklinks boxes -->
   </div>
 </div>

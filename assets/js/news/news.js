@@ -41,7 +41,7 @@ module('tid-custom', ['ngAnimate'])
 
 angular.module("app", ['tid-custom']).controller("PostController", function($scope, $sce) {
     $scope.sortByValue = '-date';
-    $scope.lowerBoundYear = 2021;
+    $scope.lowerBoundYear = 2023;
 
     for (var i = 0; i < posts.items.length; i++) {
         var post = posts.items[i],
