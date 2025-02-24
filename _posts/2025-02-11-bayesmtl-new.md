@@ -1,0 +1,8 @@
+---
+title: "New Repo: BayesMTL"
+categories: new-repo
+---
+
+[BayesMTL](https://github.com/LLNL/BayesMTL) is an implementation of Bayesian multitask learning from the paper [Hierarchical Sparse Bayesian Multitask Model with Scalable Inference for Microbiome Analysis](https://arxiv.org/abs/2502.02552). Abstract:
+
+> This paper proposes a hierarchical Bayesian multitask learning model that is applicable to the general multi-task binary classification learning problem where the model assumes a shared sparsity structure across different tasks. We derive a computationally efficient inference algorithm based on variational inference to approximate the posterior distribution. We demonstrate the potential of the new approach on various synthetic datasets and for predicting human health status based on microbiome profile. Our analysis incorporates data pooled from multiple microbiome studies, along with a comprehensive comparison with other benchmark methods. Results in synthetic datasets show that the proposed approach has superior support recovery property when the underlying regression coefficients share a common sparsity structure across different tasks. Our experiments on microbiome classification demonstrate the utility of the method in extracting informative taxa while providing well-calibrated predictions with uncertainty quantification and achieving competitive performance in terms of prediction metrics. Notably, despite the heterogeneity of the pooled datasets (e.g., different experimental objectives, laboratory setups, sequencing equipment, patient demographics), our method delivers robust results.
