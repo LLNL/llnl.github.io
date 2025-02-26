@@ -149,7 +149,7 @@ The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) descr
 {% capture alertContent %}
 
 * Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
-* All LLNL repos must go through the IM process (see the FAQ [How do I get my repo reviewed and released for GitHub?](/about/faq/#how-do-i-get-my-repo-reviewed-and-released-for-github)) and display the appropriate open source license and `LLNL-CODE-xxxxxx` release number.
+* All LLNL repos must go through the IM process (see the FAQ [How do I get my repo reviewed and released for GitHub?](https://software.llnl.gov/about/faq/#released)) and display the appropriate open source license and `LLNL-CODE-xxxxxx` release number.
 * If the repo wasn't developed at LLNL, its license needs to be clearly indicated. See the [LLNL Software Licensing](/about/licenses) page for examples.
 
 {% endcapture %}
@@ -240,6 +240,23 @@ Migrating the repo outside of the LLNL organization requires an organization adm
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='My repo has grown. How do I move it out of the LLNL organization?'  slug='transfer-out' content=accordionContent %}
+
+{% capture accordionContent %}
+<!-- START: Warning Box -->
+{% capture alertContent %}
+
+Even if your collection of repos are housed under another organization but developed on behalf of LLNL, they must go through the IM process (see the FAQ [How do I get my repo reviewed and released for GitHub?](https://software.llnl.gov/about/faq/#released)) and display the appropriate open source license and `LLNL-CODE-xxxxxx` release number.
+
+{% endcapture %}
+{% assign alertContent = alertContent | markdownify %}
+{% include components/alert.html type="warning" icon="fa-circle-info" content=alertContent  %}
+<!-- END: Warning Box -->
+
+Follow the instructions in the question [How do I include my repo in the LLNL organization and/or this website’s catalog?](https://software.llnl.gov/about/faq/#catalog) beginning with the second bullet point since you are not transferring the organization to LLNL.
+
+{% endcapture %}
+  {% assign accordionContent = accordionContent | markdownify %}
+  {% include components/accordion.html title='I need to create repos under a new org for business reasons. Can I still include them in this catalog?'  slug='new-org' content=accordionContent %}
 
 {% capture accordionContent %}
 Refer to individual projects for their requirements on accepting contributions. (To contribute to this website, see our [Contributing Guidelines](/about/contribute).) In general, though, we follow the "fork and pull" Git workflow model:
