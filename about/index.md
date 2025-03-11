@@ -49,16 +49,14 @@ This website abounds with examples of projects that have found a home in the ope
 
 \* The original policy memorandum is no longer available online. For details, please see
 
-<!-- START: Quicklinks -->
 <div class="row gx-5 gy-5">
-  <div class="col-12 col-sm-6 col-lg-3">
+  <div class="col-4 col-sm-4 col-lg-4">
     {% include components/quick-link.html title="The People's Code Blog Post" url="https://www.cio.gov/2016/08/11/peoples-code.html" icon="fa-code" %}
   </div>
-  <div class="col-12 col-sm-6 col-lg-3">
+  <div class="col-4 col-sm-4 col-lg-4">
     {% include components/quick-link.html title="The Archived Policy on GitHub" url="https://github.com/WhiteHouse/source-code-policy" icon="fa-github" %}
   </div>
 </div>
-<!-- END: Quicklinks -->
 
 ## Learn More About OSS at LLNL
 {:.mt-5}
@@ -70,8 +68,8 @@ This website abounds with examples of projects that have found a home in the ope
 * [LLNL Software News](/news)
 * [LLNL Computing News](https://computing.llnl.gov/topic/open-source-software)
 * [The Lab that Launched a Thousand Software Projects](https://computing.llnl.gov/about/newsroom/lab-launched-thousand-software-projects)
-* [The Case for Open Source Software](https://18f.gsa.gov/2018/07/12/the-case-for-open-source-software/)
 * [Ambassadors of Code](https://str.llnl.gov/2018-01/lee)  (*Science & Technology Review* cover story)
+* [The High Value of Open-Source Software](https://str.llnl.gov/past-issues/januaryfebruary-2018/high-value-open-source-software)  (*Science & Technology Review* commentary)
 {% endcapture %}
 {% assign cardContent = cardContent | markdownify %}
 {% include components/card.html title='News Coverage' content=cardContent classes="h-100" %}
@@ -105,23 +103,18 @@ This website abounds with examples of projects that have found a home in the ope
 </div>
 
 ## Other Resources
-<!-- START: Quicklinks boxes -->
 
 <div class="row gx-5 gy-5">
-  <div class="col-12 col-sm-6 col-lg-3">
-    {% include components/quick-link.html title="18F Handbook: GitHub" url="https://handbook.18f.gov/github/" icon="fa-github" %}
+  <div class="col-4 col-sm-4 col-lg-4">
+    {% include components/quick-link.html title="TTS (Technology Transformation Services) Handbook: GitHub" url="https://handbook.tts.gsa.gov/tools/github/" icon="fa-github" %}
   </div>
-  <div class="col-12 col-sm-6 col-lg-3">
+  <div class="col-4 col-sm-4 col-lg-4">
     {% include components/quick-link.html title="Controls Necessary for Federal Use of GitHub" url="https://github.com/fisma-ready/github" icon="fa-github" %}
   </div>
-  <div class="col-12 col-sm-6 col-lg-3">
+  <div class="col-4 col-sm-4 col-lg-4">
     {% include components/quick-link.html title="Guidance for Agency Use of Third-Party Websites and Applications" url="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/memoranda_2010/m10-23.pdf" icon="fa-file-pdf" %}
   </div>
-  <div class="col-12 col-sm-6 col-lg-3">
-    {% include components/quick-link.html title="Facts about Publishing Open Source Code" url="https://18f.gsa.gov/2016/08/08/facts-about-publishing-open-source-code-in-government/" icon="fa-globe" %}
-  </div>
 </div>
-<!-- END: Quicklinks boxes -->
 
 {% capture ctaContent %}
 For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository. Visit the [software licensing portal](https://softwarelicensing.llnl.gov/) for information about licensing LLNL's proprietary codes.
