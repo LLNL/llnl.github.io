@@ -3590,19 +3590,6 @@
                 ]
             }
         },
-        "CDAT/cdtime": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "CDAT/cdtime-feedstock": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -13762,6 +13749,82 @@
                     {
                         "color": "#663399",
                         "name": "CSS"
+                    }
+                ]
+            }
+        },
+        "ESGF/esgf-test-suite": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "lxml",
+                                    "repository": {
+                                        "nameWithOwner": "lxml/lxml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myproxyclient",
+                                    "repository": {
+                                        "nameWithOwner": "cedadev/MyProxyClient"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nose",
+                                    "repository": {
+                                        "nameWithOwner": "nose-devs/nose"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nose-htmloutput",
+                                    "repository": {
+                                        "nameWithOwner": "ionelmc/nose-htmloutput"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nose-testconfig",
+                                    "repository": {
+                                        "nameWithOwner": "singingwolfboy/nose-testconfig"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyopenssl",
+                                    "repository": {
+                                        "nameWithOwner": "pyca/pyopenssl"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "selenium",
+                                    "repository": {
+                                        "nameWithOwner": "SeleniumHQ/selenium"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -45485,6 +45548,11 @@
                                     }
                                 }
                             ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": []
                         }
                     },
                     {
@@ -79928,6 +79996,19 @@
                         }
                     }
                 ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "spack/pytorch": {
+            "dependencyGraphManifests": {
+                "nodes": []
             },
             "languages": {
                 "nodes": [
