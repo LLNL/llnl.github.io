@@ -8683,61 +8683,6 @@
                 ]
             }
         },
-        "ECP-VeloC/rankstr": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-build",
-                                    "repository": {
-                                        "nameWithOwner": "ECP-VeloC/github-actions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-configure",
-                                    "repository": {
-                                        "nameWithOwner": "ECP-VeloC/github-actions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/cmake-test",
-                                    "repository": {
-                                        "nameWithOwner": "ECP-VeloC/github-actions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "ecp-veloc/github-actions/get-scr-os-deps",
-                                    "repository": {
-                                        "nameWithOwner": "ECP-VeloC/github-actions"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "ECP-VeloC/redset": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -55860,6 +55805,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "codespell",
+                                    "repository": {
+                                        "nameWithOwner": "codespell-project/codespell"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "ruff",
