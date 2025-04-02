@@ -69968,6 +69968,13 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "crate-ci/typos",
+                                    "repository": {
+                                        "nameWithOwner": "crate-ci/typos"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "docker/setup-buildx-action",
                                     "repository": {
                                         "nameWithOwner": "docker/setup-buildx-action"
@@ -71142,6 +71149,1016 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "flux-framework/flux-operator": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "cloud.google.com/go",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/google-cloud-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/Azure/go-autorest",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/go-autorest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/Azure/go-autorest/autorest",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/go-autorest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/Azure/go-autorest/autorest/adal",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/go-autorest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/Azure/go-autorest/autorest/date",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/go-autorest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/Azure/go-autorest/logger",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/go-autorest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/Azure/go-autorest/tracing",
+                                    "repository": {
+                                        "nameWithOwner": "Azure/go-autorest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/beorn7/perks",
+                                    "repository": {
+                                        "nameWithOwner": "beorn7/perks"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/cespare/xxhash/v2",
+                                    "repository": {
+                                        "nameWithOwner": "cespare/xxhash"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/davecgh/go-spew",
+                                    "repository": {
+                                        "nameWithOwner": "davecgh/go-spew"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/emicklei/go-restful/v3",
+                                    "repository": {
+                                        "nameWithOwner": "emicklei/go-restful"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/evanphx/json-patch",
+                                    "repository": {
+                                        "nameWithOwner": "evanphx/json-patch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/fsnotify/fsnotify",
+                                    "repository": {
+                                        "nameWithOwner": "fsnotify/fsnotify"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-logr/logr",
+                                    "repository": {
+                                        "nameWithOwner": "go-logr/logr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-logr/zapr",
+                                    "repository": {
+                                        "nameWithOwner": "go-logr/zapr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-openapi/jsonpointer",
+                                    "repository": {
+                                        "nameWithOwner": "go-openapi/jsonpointer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-openapi/jsonreference",
+                                    "repository": {
+                                        "nameWithOwner": "go-openapi/jsonreference"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/go-openapi/swag",
+                                    "repository": {
+                                        "nameWithOwner": "go-openapi/swag"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/gogo/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "gogo/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/golang-jwt/jwt/v4",
+                                    "repository": {
+                                        "nameWithOwner": "golang-jwt/jwt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/golang/groupcache",
+                                    "repository": {
+                                        "nameWithOwner": "golang/groupcache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/golang/protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "golang/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/gnostic",
+                                    "repository": {
+                                        "nameWithOwner": "google/gnostic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/go-cmp",
+                                    "repository": {
+                                        "nameWithOwner": "google/go-cmp"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/gofuzz",
+                                    "repository": {
+                                        "nameWithOwner": "google/gofuzz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/google/uuid",
+                                    "repository": {
+                                        "nameWithOwner": "google/uuid"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/imdario/mergo",
+                                    "repository": {
+                                        "nameWithOwner": "darccio/mergo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/josharian/intern",
+                                    "repository": {
+                                        "nameWithOwner": "josharian/intern"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/json-iterator/go",
+                                    "repository": {
+                                        "nameWithOwner": "json-iterator/go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/mailru/easyjson",
+                                    "repository": {
+                                        "nameWithOwner": "mailru/easyjson"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/matttproud/golang_protobuf_extensions",
+                                    "repository": {
+                                        "nameWithOwner": "matttproud/golang_protobuf_extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/mitchellh/hashstructure/v2",
+                                    "repository": {
+                                        "nameWithOwner": "mitchellh/hashstructure"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/moby/spdystream",
+                                    "repository": {
+                                        "nameWithOwner": "moby/spdystream"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/concurrent",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/concurrent"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/modern-go/reflect2",
+                                    "repository": {
+                                        "nameWithOwner": "modern-go/reflect2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/munnerz/goautoneg",
+                                    "repository": {
+                                        "nameWithOwner": "munnerz/goautoneg"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/nxadm/tail",
+                                    "repository": {
+                                        "nameWithOwner": "nxadm/tail"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/onsi/ginkgo",
+                                    "repository": {
+                                        "nameWithOwner": "onsi/ginkgo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/onsi/gomega",
+                                    "repository": {
+                                        "nameWithOwner": "onsi/gomega"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/pkg/errors",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/prometheus/client_golang",
+                                    "repository": {
+                                        "nameWithOwner": "prometheus/client_golang"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/prometheus/client_model",
+                                    "repository": {
+                                        "nameWithOwner": "prometheus/client_model"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/prometheus/common",
+                                    "repository": {
+                                        "nameWithOwner": "prometheus/common"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/prometheus/procfs",
+                                    "repository": {
+                                        "nameWithOwner": "prometheus/procfs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/PuerkitoBio/purell",
+                                    "repository": {
+                                        "nameWithOwner": "PuerkitoBio/purell"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/PuerkitoBio/urlesc",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/spf13/pflag",
+                                    "repository": {
+                                        "nameWithOwner": "spf13/pflag"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "go.uber.org/atomic",
+                                    "repository": {
+                                        "nameWithOwner": "uber-go/atomic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "go.uber.org/multierr",
+                                    "repository": {
+                                        "nameWithOwner": "uber-go/multierr"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "go.uber.org/zap",
+                                    "repository": {
+                                        "nameWithOwner": "uber-go/zap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/crypto",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/net",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/oauth2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/sys",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/term",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/text",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "golang.org/x/time",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gomodules.xyz/jsonpatch/v2",
+                                    "repository": {
+                                        "nameWithOwner": "gomodules/jsonpatch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/appengine",
+                                    "repository": {
+                                        "nameWithOwner": "golang/appengine"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "google.golang.org/protobuf",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/inf.v0",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/tomb.v1",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v2",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "gopkg.in/yaml.v3",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/api",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/api"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/apiextensions-apiserver",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/apiextensions-apiserver"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/apimachinery",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/apimachinery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/client-go",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/client-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/component-base",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/component-base"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/klog/v2",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/klog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/kube-openapi",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/kube-openapi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "k8s.io/utils",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes/utils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/controller-runtime",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/controller-runtime"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/json",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/json"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/structured-merge-diff/v4",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/structured-merge-diff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "sigs.k8s.io/yaml",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-sigs/yaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipykernel",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipykernel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter-client",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter_client"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myst-parser",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/MyST-Parser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbconvert",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/nbconvert"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbsphinx",
+                                    "repository": {
+                                        "nameWithOwner": "spatialaudio/nbsphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "notebook",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/notebook"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pymdown-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "facelessuser/pymdown-extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "readthedocs-sphinx-search",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/readthedocs-sphinx-search"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "recommonmark",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/recommonmark"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-copybutton",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-immaterial",
+                                    "repository": {
+                                        "nameWithOwner": "jbms/sphinx-immaterial"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-markdown-tables",
+                                    "repository": {
+                                        "nameWithOwner": "ryanfox/sphinx-markdown-tables"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "JamesIves/github-pages-deploy-action",
+                                    "repository": {
+                                        "nameWithOwner": "JamesIves/github-pages-deploy-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "crate-ci/typos",
+                                    "repository": {
+                                        "nameWithOwner": "crate-ci/typos"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "medyagh/setup-minikube",
+                                    "repository": {
+                                        "nameWithOwner": "medyagh/setup-minikube"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-go",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-go"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "softprops/action-gh-release",
+                                    "repository": {
+                                        "nameWithOwner": "softprops/action-gh-release"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "flake8",
+                                    "repository": {
+                                        "nameWithOwner": "PyCQA/flake8"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pydantic",
+                                    "repository": {
+                                        "nameWithOwner": "pydantic/pydantic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tox",
+                                    "repository": {
+                                        "nameWithOwner": "tox-dev/tox"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "types-python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "python/typeshed"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "typing-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/typing"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "future",
+                                    "repository": {
+                                        "nameWithOwner": "PythonCharmers/python-future"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "setuptools",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/setuptools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "urllib3",
+                                    "repository": {
+                                        "nameWithOwner": "urllib3/urllib3"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-randomly",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-randomly"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "types-python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "python/typeshed"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/pebbe/zmq4",
+                                    "repository": {
+                                        "nameWithOwner": "pebbe/zmq4"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "flux-framework/flux-pam": {
