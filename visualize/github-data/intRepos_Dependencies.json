@@ -30741,40 +30741,6 @@
                 ]
             }
         },
-        "LLNL/MemSurfer": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "vtk",
-                                    "repository": {
-                                        "nameWithOwner": "KitwareMedical/VTKPythonPackage"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "LLNL/MerlinWorkflows": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -33596,6 +33562,145 @@
                                     "packageName": "tqdm",
                                     "repository": {
                                         "nameWithOwner": "tqdm/tqdm"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "asdf",
+                                    "repository": {
+                                        "nameWithOwner": "asdf-format/asdf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "astropy",
+                                    "repository": {
+                                        "nameWithOwner": "astropy/astropy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "graphviz",
+                                    "repository": {
+                                        "nameWithOwner": "xflr6/graphviz"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jupyter",
+                                    "repository": {
+                                        "nameWithOwner": "jupyter/jupyter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myst-parser",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/MyST-Parser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nbsphinx",
+                                    "repository": {
+                                        "nameWithOwner": "spatialaudio/nbsphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-git",
+                                    "repository": {
+                                        "nameWithOwner": "chidimo/python-git"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scikit-learn",
+                                    "repository": {
+                                        "nameWithOwner": "scikit-learn/scikit-learn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-autobuild",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx-autobuild"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-automodapi",
+                                    "repository": {
+                                        "nameWithOwner": "astropy/sphinx-automodapi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-copybutton",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-tabs",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/sphinx-tabs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-bibtex",
+                                    "repository": {
+                                        "nameWithOwner": "mcmtroffaes/sphinxcontrib-bibtex"
                                     }
                                 }
                             ]
@@ -56803,15 +56908,7 @@
                 "nodes": [
                     {
                         "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
+                            "nodes": []
                         }
                     },
                     {
@@ -56859,6 +56956,47 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
@@ -56892,6 +57030,26 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "build",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/build"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hatchling",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/hatch"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "codespell",
                                     "repository": {
                                         "nameWithOwner": "codespell-project/codespell"
@@ -56910,6 +57068,20 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "build",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/build"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hatchling",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/hatch"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "pytest",
@@ -63772,317 +63944,6 @@
         "LLNL/trainGMM": {
             "dependencyGraphManifests": {
                 "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/trata": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nbconvert",
-                                    "repository": {
-                                        "nameWithOwner": "jupyter/nbconvert"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nbsphinx",
-                                    "repository": {
-                                        "nameWithOwner": "spatialaudio/nbsphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scikit-learn",
-                                    "repository": {
-                                        "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-autoapi",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx-autoapi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "contourpy",
-                                    "repository": {
-                                        "nameWithOwner": "contourpy/contourpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "cycler",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/cycler"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "fonttools",
-                                    "repository": {
-                                        "nameWithOwner": "fonttools/fonttools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "importlib-resources",
-                                    "repository": {
-                                        "nameWithOwner": "python/importlib_resources"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "joblib",
-                                    "repository": {
-                                        "nameWithOwner": "joblib/joblib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "kiwisolver",
-                                    "repository": {
-                                        "nameWithOwner": "nucleic/kiwi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "packaging",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/packaging"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pillow",
-                                    "repository": {
-                                        "nameWithOwner": "python-pillow/Pillow"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyparsing",
-                                    "repository": {
-                                        "nameWithOwner": "pyparsing/pyparsing"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-dateutil",
-                                    "repository": {
-                                        "nameWithOwner": "dateutil/dateutil"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scikit-learn",
-                                    "repository": {
-                                        "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sqlalchemy",
-                                    "repository": {
-                                        "nameWithOwner": "sqlalchemy/sqlalchemy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "threadpoolctl",
-                                    "repository": {
-                                        "nameWithOwner": "joblib/threadpoolctl"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "tqdm",
-                                    "repository": {
-                                        "nameWithOwner": "tqdm/tqdm"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "zipp",
-                                    "repository": {
-                                        "nameWithOwner": "jaraco/zipp"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "h5py",
-                                    "repository": {
-                                        "nameWithOwner": "h5py/h5py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "kosh",
-                                    "repository": {
-                                        "nameWithOwner": "LLNL/kosh"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scikit-learn",
-                                    "repository": {
-                                        "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nbsphinx",
-                                    "repository": {
-                                        "nameWithOwner": "spatialaudio/nbsphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
             },
             "languages": {
                 "nodes": [
@@ -75805,7 +75666,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sphinxext-rediraffe",
                                     "repository": {
-                                        "nameWithOwner": "wpilibsuite/sphinxext-rediraffe"
+                                        "nameWithOwner": "sphinx-doc/sphinxext-rediraffe"
                                     }
                                 }
                             ]
@@ -78622,1504 +78483,12 @@
                 ]
             }
         },
-        "spack/packages.spack.io": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@alloc/quick-lru",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/quick-lru"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@babel/runtime",
-                                    "repository": {
-                                        "nameWithOwner": "babel/babel"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@jridgewell/gen-mapping",
-                                    "repository": {
-                                        "nameWithOwner": "jridgewell/gen-mapping"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@jridgewell/resolve-uri",
-                                    "repository": {
-                                        "nameWithOwner": "jridgewell/resolve-uri"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@jridgewell/set-array",
-                                    "repository": {
-                                        "nameWithOwner": "jridgewell/set-array"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@jridgewell/sourcemap-codec",
-                                    "repository": {
-                                        "nameWithOwner": "jridgewell/sourcemap-codec"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@jridgewell/sourcemap-codec",
-                                    "repository": {
-                                        "nameWithOwner": "jridgewell/sourcemap-codec"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@jridgewell/trace-mapping",
-                                    "repository": {
-                                        "nameWithOwner": "jridgewell/trace-mapping"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@nodelib/fs.scandir",
-                                    "repository": {
-                                        "nameWithOwner": "nodelib/nodelib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@nodelib/fs.stat",
-                                    "repository": {
-                                        "nameWithOwner": "nodelib/nodelib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "@nodelib/fs.walk",
-                                    "repository": {
-                                        "nameWithOwner": "nodelib/nodelib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "accepts",
-                                    "repository": {
-                                        "nameWithOwner": "jshttp/accepts"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "ansi-regex",
-                                    "repository": {
-                                        "nameWithOwner": "chalk/ansi-regex"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "ansi-styles",
-                                    "repository": {
-                                        "nameWithOwner": "chalk/ansi-styles"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "any-promise",
-                                    "repository": {
-                                        "nameWithOwner": "kevinbeaty/any-promise"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "anymatch",
-                                    "repository": {
-                                        "nameWithOwner": "micromatch/anymatch"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "anymatch",
-                                    "repository": {
-                                        "nameWithOwner": "micromatch/anymatch"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "apache-crypt",
-                                    "repository": {
-                                        "nameWithOwner": "gevorg/apache-crypt"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "apache-md5",
-                                    "repository": {
-                                        "nameWithOwner": "gevorg/apache-md5"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "arg",
-                                    "repository": {
-                                        "nameWithOwner": "vercel/arg"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "arr-diff",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/arr-diff"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "arr-flatten",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/arr-flatten"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "arr-union",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/arr-union"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "array-union",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/array-union"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "array-unique",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/array-unique"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "assign-symbols",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/assign-symbols"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "async-each",
-                                    "repository": {
-                                        "nameWithOwner": "paulmillr/async-each"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "atob",
-                                    "repository": {
-                                        "nameWithOwner": "HorseAJ86/node-browser-compat"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "autoprefixer",
-                                    "repository": {
-                                        "nameWithOwner": "postcss/autoprefixer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "balanced-match",
-                                    "repository": {
-                                        "nameWithOwner": "juliangruber/balanced-match"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "base",
-                                    "repository": {
-                                        "nameWithOwner": "base-repos/base"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "basic-auth",
-                                    "repository": {
-                                        "nameWithOwner": "jshttp/basic-auth"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "batch",
-                                    "repository": {
-                                        "nameWithOwner": "visionmedia/batch"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "bcryptjs",
-                                    "repository": {
-                                        "nameWithOwner": "dcodeIO/bcrypt.js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "binary-extensions",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/binary-extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "binary-extensions",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/binary-extensions"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "bindings",
-                                    "repository": {
-                                        "nameWithOwner": "TooTallNate/node-bindings"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "brace-expansion",
-                                    "repository": {
-                                        "nameWithOwner": "juliangruber/brace-expansion"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "braces",
-                                    "repository": {
-                                        "nameWithOwner": "micromatch/braces"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "braces",
-                                    "repository": {
-                                        "nameWithOwner": "micromatch/braces"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "browserslist",
-                                    "repository": {
-                                        "nameWithOwner": "browserslist/browserslist"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "cache-base",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/cache-base"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "camelcase-css",
-                                    "repository": {
-                                        "nameWithOwner": "stevenvachon/camelcase-css"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "caniuse-lite",
-                                    "repository": {
-                                        "nameWithOwner": "browserslist/caniuse-lite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "chalk",
-                                    "repository": {
-                                        "nameWithOwner": "chalk/chalk"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "chokidar",
-                                    "repository": {
-                                        "nameWithOwner": "paulmillr/chokidar"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "chokidar",
-                                    "repository": {
-                                        "nameWithOwner": "paulmillr/chokidar"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "class-utils",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/class-utils"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "cliui",
-                                    "repository": {
-                                        "nameWithOwner": "yargs/cliui"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "collection-visit",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/collection-visit"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "color",
-                                    "repository": {
-                                        "nameWithOwner": "Qix-/color"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "color-convert",
-                                    "repository": {
-                                        "nameWithOwner": "Qix-/color-convert"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "color-name",
-                                    "repository": {
-                                        "nameWithOwner": "colorjs/color-name"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "color-string",
-                                    "repository": {
-                                        "nameWithOwner": "Qix-/color-string"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "colors",
-                                    "repository": {
-                                        "nameWithOwner": "Marak/colors.js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "commander",
-                                    "repository": {
-                                        "nameWithOwner": "tj/commander.js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "component-emitter",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/component-emitter"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "concat-map",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "concurrently",
-                                    "repository": {
-                                        "nameWithOwner": "open-cli-tools/concurrently"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "connect",
-                                    "repository": {
-                                        "nameWithOwner": "senchalabs/connect"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "copy-descriptor",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/copy-descriptor"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "core-util-is",
-                                    "repository": {
-                                        "nameWithOwner": "isaacs/core-util-is"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "cors",
-                                    "repository": {
-                                        "nameWithOwner": "expressjs/cors"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "css-selector-tokenizer",
-                                    "repository": {
-                                        "nameWithOwner": "css-modules/css-selector-tokenizer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "cssesc",
-                                    "repository": {
-                                        "nameWithOwner": "mathiasbynens/cssesc"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "daisyui",
-                                    "repository": {
-                                        "nameWithOwner": "saadeghi/daisyui"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "date-fns",
-                                    "repository": {
-                                        "nameWithOwner": "date-fns/date-fns"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "debug",
-                                    "repository": {
-                                        "nameWithOwner": "debug-js/debug"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "decode-uri-component",
-                                    "repository": {
-                                        "nameWithOwner": "SamVerschueren/decode-uri-component"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "define-property",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/define-property"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "define-property",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/define-property"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "define-property",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/define-property"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "depd",
-                                    "repository": {
-                                        "nameWithOwner": "dougwilson/nodejs-depd"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "depd",
-                                    "repository": {
-                                        "nameWithOwner": "dougwilson/nodejs-depd"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "dependency-graph",
-                                    "repository": {
-                                        "nameWithOwner": "jriecken/dependency-graph"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "destroy",
-                                    "repository": {
-                                        "nameWithOwner": "stream-utils/destroy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "didyoumean",
-                                    "repository": {
-                                        "nameWithOwner": "dcporter/didyoumean.js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "dir-glob",
-                                    "repository": {
-                                        "nameWithOwner": "kevva/dir-glob"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "dlv",
-                                    "repository": {
-                                        "nameWithOwner": "developit/dlv"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "duplexer",
-                                    "repository": {
-                                        "nameWithOwner": "Raynos/duplexer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "ee-first",
-                                    "repository": {
-                                        "nameWithOwner": "jonathanong/ee-first"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "electron-to-chromium",
-                                    "repository": {
-                                        "nameWithOwner": "Kilian/electron-to-chromium"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "emoji-regex",
-                                    "repository": {
-                                        "nameWithOwner": "mathiasbynens/emoji-regex"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "encodeurl",
-                                    "repository": {
-                                        "nameWithOwner": "pillarjs/encodeurl"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "escalade",
-                                    "repository": {
-                                        "nameWithOwner": "lukeed/escalade"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "escape-html",
-                                    "repository": {
-                                        "nameWithOwner": "component/escape-html"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "etag",
-                                    "repository": {
-                                        "nameWithOwner": "jshttp/etag"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "event-stream",
-                                    "repository": {
-                                        "nameWithOwner": "dominictarr/event-stream"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "expand-brackets",
-                                    "repository": {
-                                        "nameWithOwner": "micromatch/expand-brackets"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "extend-shallow",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/extend-shallow"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "extend-shallow",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/extend-shallow"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "extglob",
-                                    "repository": {
-                                        "nameWithOwner": "micromatch/extglob"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "fast-glob",
-                                    "repository": {
-                                        "nameWithOwner": "mrmlnc/fast-glob"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "fastparse",
-                                    "repository": {
-                                        "nameWithOwner": "webpack/fastparse"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "fastq",
-                                    "repository": {
-                                        "nameWithOwner": "mcollina/fastq"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "faye-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "faye/faye-websocket-node"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "file-uri-to-path",
-                                    "repository": {
-                                        "nameWithOwner": "TooTallNate/file-uri-to-path"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "fill-range",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/fill-range"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "fill-range",
-                                    "repository": {
-                                        "nameWithOwner": "jonschlinkert/fill-range"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "finalhandler",
-                                    "repository": {
-                                        "nameWithOwner": "pillarjs/finalhandler"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "autoprefixer",
-                                    "repository": {
-                                        "nameWithOwner": "postcss/autoprefixer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "concurrently",
-                                    "repository": {
-                                        "nameWithOwner": "open-cli-tools/concurrently"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "daisyui",
-                                    "repository": {
-                                        "nameWithOwner": "saadeghi/daisyui"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "live-server",
-                                    "repository": {
-                                        "nameWithOwner": "tapio/live-server"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "postcss",
-                                    "repository": {
-                                        "nameWithOwner": "postcss/postcss"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "postcss-cli",
-                                    "repository": {
-                                        "nameWithOwner": "postcss/postcss-cli"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "tailwindcss",
-                                    "repository": {
-                                        "nameWithOwner": "tailwindlabs/tailwindcss"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#663399",
-                        "name": "CSS"
-                    }
-                ]
-            }
-        },
         "spack/patches": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "spack/pypi-to-spack-package": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "3to2",
-                                    "repository": {
-                                        "nameWithOwner": "hajs/lib3to2_fork"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "4suite-xml",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "a2wsgi",
-                                    "repository": {
-                                        "nameWithOwner": "abersheeran/a2wsgi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "a2wsgi",
-                                    "repository": {
-                                        "nameWithOwner": "abersheeran/a2wsgi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "abcpy",
-                                    "repository": {
-                                        "nameWithOwner": "eth-cscs/abcpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "abipy",
-                                    "repository": {
-                                        "nameWithOwner": "abinit/abipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "abipy",
-                                    "repository": {
-                                        "nameWithOwner": "abinit/abipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "about-time",
-                                    "repository": {
-                                        "nameWithOwner": "rsalmei/about-time"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "about-time",
-                                    "repository": {
-                                        "nameWithOwner": "rsalmei/about-time"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "about-time",
-                                    "repository": {
-                                        "nameWithOwner": "rsalmei/about-time"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "about-time",
-                                    "repository": {
-                                        "nameWithOwner": "rsalmei/about-time"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "absl-py",
-                                    "repository": {
-                                        "nameWithOwner": "abseil/abseil-py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "absl-py",
-                                    "repository": {
-                                        "nameWithOwner": "abseil/abseil-py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "absl-py",
-                                    "repository": {
-                                        "nameWithOwner": "abseil/abseil-py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accelerate",
-                                    "repository": {
-                                        "nameWithOwner": "huggingface/accelerate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accelerate",
-                                    "repository": {
-                                        "nameWithOwner": "huggingface/accelerate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accelerate",
-                                    "repository": {
-                                        "nameWithOwner": "huggingface/accelerate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accelerate",
-                                    "repository": {
-                                        "nameWithOwner": "huggingface/accelerate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accelerate",
-                                    "repository": {
-                                        "nameWithOwner": "huggingface/accelerate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accessible-pygments",
-                                    "repository": {
-                                        "nameWithOwner": "Quansight-Labs/accessible-pygments"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accessible-pygments",
-                                    "repository": {
-                                        "nameWithOwner": "Quansight-Labs/accessible-pygments"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "accimage",
-                                    "repository": {
-                                        "nameWithOwner": "pytorch/accimage"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "acme-tiny",
-                                    "repository": {
-                                        "nameWithOwner": "diafygi/acme-tiny"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "acme-tiny",
-                                    "repository": {
-                                        "nameWithOwner": "diafygi/acme-tiny"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "acme-tiny",
-                                    "repository": {
-                                        "nameWithOwner": "diafygi/acme-tiny"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adal",
-                                    "repository": {
-                                        "nameWithOwner": "AzureAD/azure-activedirectory-library-for-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adal",
-                                    "repository": {
-                                        "nameWithOwner": "AzureAD/azure-activedirectory-library-for-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adal",
-                                    "repository": {
-                                        "nameWithOwner": "AzureAD/azure-activedirectory-library-for-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adb-enhanced",
-                                    "repository": {
-                                        "nameWithOwner": "ashishb/adb-enhanced"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adb-enhanced",
-                                    "repository": {
-                                        "nameWithOwner": "ashishb/adb-enhanced"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adb-enhanced",
-                                    "repository": {
-                                        "nameWithOwner": "ashishb/adb-enhanced"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adb-enhanced",
-                                    "repository": {
-                                        "nameWithOwner": "ashishb/adb-enhanced"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "addict",
-                                    "repository": {
-                                        "nameWithOwner": "mewwts/addict"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "addict",
-                                    "repository": {
-                                        "nameWithOwner": "mewwts/addict"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "addict",
-                                    "repository": {
-                                        "nameWithOwner": "mewwts/addict"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "adios",
-                                    "repository": {
-                                        "nameWithOwner": "YugeTen/adios"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "advancedhtmlparser",
-                                    "repository": {
-                                        "nameWithOwner": "kata198/AdvancedHTMLParser"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "advancedhtmlparser",
-                                    "repository": {
-                                        "nameWithOwner": "kata198/AdvancedHTMLParser"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aenum",
-                                    "repository": {
-                                        "nameWithOwner": "ethanfurman/aenum"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aenum",
-                                    "repository": {
-                                        "nameWithOwner": "ethanfurman/aenum"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aenum",
-                                    "repository": {
-                                        "nameWithOwner": "ethanfurman/aenum"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aenum",
-                                    "repository": {
-                                        "nameWithOwner": "ethanfurman/aenum"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "affine",
-                                    "repository": {
-                                        "nameWithOwner": "rasterio/affine"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "affine",
-                                    "repository": {
-                                        "nameWithOwner": "rasterio/affine"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "affine",
-                                    "repository": {
-                                        "nameWithOwner": "rasterio/affine"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "agate",
-                                    "repository": {
-                                        "nameWithOwner": "wireservice/agate"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "agate-dbf",
-                                    "repository": {
-                                        "nameWithOwner": "wireservice/agate-dbf"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "agate-dbf",
-                                    "repository": {
-                                        "nameWithOwner": "wireservice/agate-dbf"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "agate-excel",
-                                    "repository": {
-                                        "nameWithOwner": "wireservice/agate-excel"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "agate-sql",
-                                    "repository": {
-                                        "nameWithOwner": "wireservice/agate-sql"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ahpy",
-                                    "repository": {
-                                        "nameWithOwner": "PhilipGriffith/AHPy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ahpy",
-                                    "repository": {
-                                        "nameWithOwner": "PhilipGriffith/AHPy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiobotocore",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiobotocore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiobotocore",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiobotocore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiobotocore",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiobotocore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiobotocore",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiobotocore"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiocontextvars",
-                                    "repository": {
-                                        "nameWithOwner": "fantix/aiocontextvars"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiodns",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiodns"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiodns",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiodns"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiodns",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiodns"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiofiles",
-                                    "repository": {
-                                        "nameWithOwner": "Tinche/aiofiles"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiofiles",
-                                    "repository": {
-                                        "nameWithOwner": "Tinche/aiofiles"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiofiles",
-                                    "repository": {
-                                        "nameWithOwner": "Tinche/aiofiles"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiofiles",
-                                    "repository": {
-                                        "nameWithOwner": "Tinche/aiofiles"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp-cors",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp-cors"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiohttp-cors",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiohttp-cors"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aioitertools",
-                                    "repository": {
-                                        "nameWithOwner": "omnilib/aioitertools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aioitertools",
-                                    "repository": {
-                                        "nameWithOwner": "omnilib/aioitertools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aioitertools",
-                                    "repository": {
-                                        "nameWithOwner": "omnilib/aioitertools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aioredis",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs-abandoned/aioredis-py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aioredis",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs-abandoned/aioredis-py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aioredis",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs-abandoned/aioredis-py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiosignal",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiosignal"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiosignal",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiosignal"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiosignal",
-                                    "repository": {
-                                        "nameWithOwner": "aio-libs/aiosignal"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiosqlite",
-                                    "repository": {
-                                        "nameWithOwner": "omnilib/aiosqlite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiosqlite",
-                                    "repository": {
-                                        "nameWithOwner": "omnilib/aiosqlite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "aiosqlite",
-                                    "repository": {
-                                        "nameWithOwner": "omnilib/aiosqlite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alabaster",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/alabaster"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alabaster",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/alabaster"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alabaster",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/alabaster"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alabaster",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/alabaster"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alabaster",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/alabaster"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alabaster",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/alabaster"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alembic",
-                                    "repository": {
-                                        "nameWithOwner": "sqlalchemy/alembic"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alive-progress",
-                                    "repository": {
-                                        "nameWithOwner": "rsalmei/alive-progress"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alive-progress",
-                                    "repository": {
-                                        "nameWithOwner": "rsalmei/alive-progress"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alpaca-eval",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alpaca-eval",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alpaca-eval",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alpaca-farm",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alpaca-farm",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alpaca-farm",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alphafold",
-                                    "repository": {
-                                        "nameWithOwner": "google-deepmind/alphafold"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "alphafold",
-                                    "repository": {
-                                        "nameWithOwner": "google-deepmind/alphafold"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
             }
         },
         "spack/pytorch": {
