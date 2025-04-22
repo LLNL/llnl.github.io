@@ -12443,6 +12443,40 @@
                 ]
             }
         },
+        "ESGF/esgf-drslib": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "metaconfig",
+                                    "repository": {
+                                        "nameWithOwner": "Evgenus/metaconfig"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "xlrd",
+                                    "repository": {
+                                        "nameWithOwner": "python-excel/xlrd"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#499886",
+                        "name": "LiveScript"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-fetcher": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -14080,6 +14114,73 @@
                                     "packageName": "django",
                                     "repository": {
                                         "nameWithOwner": "django/django"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "esgcet",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "globus-cli",
+                                    "repository": {
+                                        "nameWithOwner": "globus/globus-cli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "globus-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "globus/globus-sdk-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
                                     }
                                 }
                             ]
@@ -24485,7 +24586,7 @@
                                     "packageManager": "RUST",
                                     "packageName": "libm",
                                     "repository": {
-                                        "nameWithOwner": "rust-lang/libm"
+                                        "nameWithOwner": "rust-lang/compiler-builtins"
                                     }
                                 },
                                 {
