@@ -2274,7 +2274,7 @@
                                     "packageManager": "NPM",
                                     "packageName": "npm",
                                     "repository": {
-                                        "nameWithOwner": "npm/cli"
+                                        "nameWithOwner": "npm/deprecate-holder"
                                     }
                                 },
                                 {
@@ -49733,6 +49733,13 @@
                                     "repository": {
                                         "nameWithOwner": "yaml/pyyaml"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "repligit",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/repligit"
+                                    }
                                 }
                             ]
                         }
@@ -49815,24 +49822,15 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "black",
+                                    "packageName": "ruff",
                                     "repository": {
-                                        "nameWithOwner": "psf/black"
+                                        "nameWithOwner": "astral-sh/ruff"
                                     }
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "codespell",
-                                    "repository": {
-                                        "nameWithOwner": "codespell-project/codespell"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
+                                    "packageName": "typos",
+                                    "repository": null
                                 }
                             ]
                         }
@@ -49849,9 +49847,23 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "build",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/build"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "cachetools",
                                     "repository": {
                                         "nameWithOwner": "tkem/cachetools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "nedbat/coveragepy"
                                     }
                                 },
                                 {
@@ -49866,6 +49878,13 @@
                                     "packageName": "gidgetlab",
                                     "repository": {
                                         "nameWithOwner": "beenje/gidgetlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "hatchling",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/hatch"
                                     }
                                 },
                                 {
@@ -57084,6 +57103,40 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "benchmark-action/github-action-benchmark",
+                                    "repository": {
+                                        "nameWithOwner": "benchmark-action/github-action-benchmark"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "LouisBrunner/checks-action",
+                                    "repository": {
+                                        "nameWithOwner": "LouisBrunner/checks-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "spack/setup-spack",
                                     "repository": {
                                         "nameWithOwner": "spack/setup-spack"
@@ -57101,6 +57154,14 @@
                         "name": "C++"
                     }
                 ]
+            }
+        },
+        "LLNL/quandary-examples": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "LLNL/quantkriging": {
@@ -58186,17 +58247,15 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "codespell",
-                                    "repository": {
-                                        "nameWithOwner": "codespell-project/codespell"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "ruff",
                                     "repository": {
                                         "nameWithOwner": "astral-sh/ruff"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "typos",
+                                    "repository": null
                                 }
                             ]
                         }
