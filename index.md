@@ -26,6 +26,14 @@ breadcrumb: Home
 </div>
 <div class="bg-light-blue">
     <div class="container">
+         <div class="row">
+            <div class="col-12 col-md-8 mb-2 mt-2">
+                <p class="cta-text"><strong>Learn how to use a modern HPC software stack.</strong> Join us throughout the summer for free tutorials demonstrating how to use several GPU-ready projects. All experience levels are welcome.</p>
+            </div>
+            <div class="col-12 col-md-4 text-center d-flex align-items-center justify-content-center justify-content-lg-end mb-1 mb-md-0">
+                {% include components/button.html content="Learn more" url="https://hpcic.llnl.gov/2025-hpc-tutorials" icon="fa-calendar-days" tag="a" %}
+            </div>
+        </div>
         <div class="row">
             <div class="col-12 col-md-8 mb-2 mt-2">
                 <p class="cta-text"><strong>Looking for RADIUSS projects?</strong> Find HPC build tools, math and physics libraries, data management and visualization tools, workflow tools, and portable programming and memory management libraries.</p>
