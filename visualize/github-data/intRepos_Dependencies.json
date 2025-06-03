@@ -37344,7 +37344,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.DotNet.PlatformAbstractions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/core-setup"
+                                        "nameWithOwner": "dotnet/source-build"
                                     }
                                 },
                                 {
@@ -58132,7 +58132,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "rspec",
                                     "repository": {
-                                        "nameWithOwner": "rspec/rspec-metagem"
+                                        "nameWithOwner": "rspec/rspec"
                                     }
                                 },
                                 {
@@ -58257,7 +58257,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "rspec",
                                     "repository": {
-                                        "nameWithOwner": "rspec/rspec-metagem"
+                                        "nameWithOwner": "rspec/rspec"
                                     }
                                 },
                                 {
@@ -58354,7 +58354,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "rspec",
                                     "repository": {
-                                        "nameWithOwner": "rspec/rspec-metagem"
+                                        "nameWithOwner": "rspec/rspec"
                                     }
                                 }
                             ]
@@ -87607,6 +87607,26 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -89065,6 +89085,13 @@
                                     "packageName": "scipy",
                                     "repository": {
                                         "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sparse",
+                                    "repository": {
+                                        "nameWithOwner": "pydata/sparse"
                                     }
                                 },
                                 {
