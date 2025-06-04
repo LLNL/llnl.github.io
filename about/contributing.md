@@ -11,7 +11,7 @@ menus:
 
 <!-- START: Info box -->
 {% capture alertContent %}
-The LLNL Software Catalog website is an open source project. We welcome contributions via pull requests as well as questions, feature requests, or bug reports via issues. Contact our team at [open-source@llnl.gov](mailto:open-source@llnl.gov) with any questions. Please also refer to our [FAQ](/about/faq) and [Code of Conduct](/about/conduct).
+The LLNL Software Catalog website is an open-source project. We welcome contributions via pull requests as well as questions, feature requests, or bug reports via issues. Contact our team at [open-source@llnl.gov](mailto:open-source@llnl.gov) with any questions. Please also refer to our [FAQ](/about/faq) and [Code of Conduct](/about/conduct).
 {% endcapture %}
 {% assign alertContent = alertContent | markdownify %}
 {% include components/alert.html type="warning" icon="fa-circle-info" content=alertContent  %}
@@ -77,7 +77,7 @@ A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-
 | -------- | ----------- | ------ | ------- |
 | Category | Description | Tag(s) | FA icon |
 | -------- | ----------- | ------ | ------- |
-| **All Software** | Browse all LLNL open source projects | (no tags required) | (image: `logomark-software.svg`) |
+| **All Software** | Browse all LLNL open-source projects | (no tags required) | (image: `logomark-software.svg`) |
 | **AI & Machine Learning** | Integrate artificial intelligence and machine learning into scientific applications | `artificial-intelligence`, `deep-learning`, `machine-learning`, `neural-network` | fa-brain-circuit |
 | **App Infrastructure** | Browse tools for basic functionality common in HPC codes | `app-infrastructure` | fa-gear-complex-code |
 | **Applications** | Browse scientific simulation codes and IT management tools | `application` | fa-laptop-code |
@@ -136,7 +136,7 @@ An LLNL repo with its own logo also needs the image file name added to [`repo_lo
   {% include components/accordion.html title='How do I change how a specific repo appears in the catalog?' slug='catalog' content=accordionContent %}
 
 {% capture accordionContent %}
-News posts appear in reverse chronological order (i.e., newest first). The list is curated to promote LLNL's open source endeavors and community engagement. Posts should be tagged with at least one of the following categories, which are not associated with the catalog browse categories (described above) applied to repos.
+News posts appear in reverse chronological order (i.e., newest first). The list is curated to promote LLNL's open-source endeavors and community engagement. Posts should be tagged with at least one of the following categories, which are not associated with the catalog browse categories (described above) applied to repos.
 
 * `event` - announcement or recap of an event/conference
 * `multimedia` - synopsis of a video or podcast published on another platform (e.g., YouTube)

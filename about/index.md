@@ -1,7 +1,7 @@
 ---
 title: About the LLNL Software Catalog
 layout: default
-description: Learn about LLNL's open source software and why we're committed to creating open source codes whenever feasible.
+description: Learn about LLNL's open-source software and why we're committed to creating open-source codes whenever feasible.
 permalink: /about/
 breadcrumb: About
 menus:
@@ -26,11 +26,11 @@ menus:
 
 <div class="row">
   <div class="col-12 col-lg-6" markdown="1">
-Welcome to the Lawrence Livermore National Laboratory ([LLNL](https://www.llnl.gov/)) software catalog&mdash;a hub for open source software (OSS) produced at the Lab.
+Welcome to the Lawrence Livermore National Laboratory ([LLNL](https://www.llnl.gov/)) software catalog&mdash;a hub for open-source software (OSS) produced at the Lab.
 
 LLNL developers create and evolve software on a daily basis. Some of this software is used only internally, other components are licensed for use by external partners and collaborators, and still other software is released and actively developed out in the open on software-hosting platforms. This website is the gateway to all of it.
 
-LLNL is a Department of Energy ([DOE](https://www.energy.gov/national-laboratories)) institution, so we abide by the [Federal Source Code Policy](https://www.energy.gov/articles/doe-federal-source-code-policy)* that guides release of open source software (OSS). And not just because we have to but because we *want* to. Long before GitHub was founded, [we started releasing software](https://software.llnl.gov/visualize/) for public use and collaboration.
+LLNL is a Department of Energy ([DOE](https://www.energy.gov/national-laboratories)) institution, so we abide by the [Federal Source Code Policy](https://www.energy.gov/articles/doe-federal-source-code-policy)* that guides release of open-source software (OSS). And not just because we have to but because we *want* to. Long before GitHub was founded, [we started releasing software](https://software.llnl.gov/visualize/) for public use and collaboration.
   </div>
   <div class="col-12 col-lg-6 mb-3">
     <div class="responsive-iframe-container">
@@ -45,7 +45,7 @@ One of the great things about a large government organization is that we're not 
 
 Case in point: The DOE's Advanced Simulation and Computing ([ASC](https://asc.llnl.gov)) Program leverages OSS to build, field, and integrate Linux clusters into production service at our [Livermore Computing high-performance computing center](https://hpc.llnl.gov/). ASC is responsible for developing computer simulation capabilities that analyze and predict the performance, safety, and effectiveness of the nation's nuclear stockpile. In other words, the stakes are high for ensuring our code is accurate. With OSS, we can develop quickly and choose the best solutions.
 
-This website abounds with examples of projects that have found a home in the open source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You'll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE), and we invite you to browse our projects on [GitHub](https://github.com/LLNL).
+This website abounds with examples of projects that have found a home in the open-source community. Access is key, which is why we jumped at the chance to index our software on [Code.gov](https://code.gov). You'll find our work in the DOE [repo list](https://code.gov/#!/browse-projects?agencies=DOE), and we invite you to browse our projects on [GitHub](https://github.com/LLNL).
 
 \* The original policy memorandum is no longer available online. For details, please see
 
@@ -117,7 +117,7 @@ This website abounds with examples of projects that have found a home in the ope
 </div>
 
 {% capture ctaContent %}
-For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository. Visit the [software licensing portal](https://softwarelicensing.llnl.gov/) for information about licensing LLNL's proprietary codes.
+For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about OSS at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository. Visit the [software licensing portal](https://softwarelicensing.llnl.gov/) for information about licensing LLNL's proprietary codes.
 {% endcapture %}
 {% assign ctaContent = ctaContent | markdownify %}
 {% include components/call-to-action.html title='Contact' icon='fa-comments-question-check' content=ctaContent  %}
