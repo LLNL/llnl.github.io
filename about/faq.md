@@ -101,7 +101,7 @@ If you are an employee at LLNL and have 2FA enabled, you are eligible to join th
   {% include components/accordion.html title='How do I join the LLNL organization on GitHub?'  slug='join' content=accordionContent %}
 
 {% capture accordionContent %}
-Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/).
+Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/). LLNL employees can follow ["one-stop shop" instructions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/open-source/one-stop-shop/) for releasing software.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I get my repo reviewed and released for GitHub?' slug='released' content=accordionContent %}
@@ -159,9 +159,12 @@ The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) descr
 
 If you've set up your repository within the **LLNL organization**, you don't need to take any action; it will automatically appear after the next data update.
 
-* If your repository exists under a different organization, you can move it to LLNL: Settings > Danger Zone > Transfer ownership > Transfer button. This process notifies our GitHub admins, who can update your role. For instance, upon transfer, repo admins are defaulted to the `write` role instead of `admin`. The transfer process also includes your project's association with team members who contribute to the repo; they too come over with the `write` role by default.
+* **Organization transfer.** If your repository exists under a different organization, you can move it to LLNL: Settings > Danger Zone > Transfer ownership > Transfer button. This process notifies our GitHub admins, who can update your role. For instance, upon transfer, repo admins are defaulted to the `write` role instead of `admin`. The transfer process also includes your project's association with team members who contribute to the repo; they too come over with the `write` role by default.
 
-* Alternatively, if you do not wish to transfer your repo, you can instead submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
+    * See also [GitHub's instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository) for transferring a repo.
+    * Sometimes the transferring organization wants to retain a copy (mirror or fork) of the repo, or a project lead "takes" the repo with them to another organization.
+
+* **Standalone organization.** Alternatively, if you do not wish to transfer your repo, you can instead submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
 
 * If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that website's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 

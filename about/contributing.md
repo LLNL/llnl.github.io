@@ -190,6 +190,18 @@ This site's [visualizations](../../visualize) are governed by several scripts an
 
 {% capture accordionContent %}
 
+* *Organization-specific content to update/replace:* header, footer, favicon, default headers/text in data visualizations, CNAME, README, license, `_config.yml`
+* *Content to remove:* RADIUSS (including policies), LLNL news posts
+* *Elements to review:* links vis-a-vis GitHub pages base URL structure, Google Analytics setup
+
+See also GitHub's instructions for [creating a template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository).
+
+{% endcapture %}
+{% assign accordionContent = accordionContent | markdownify %}
+{% include components/accordion.html title='How do I adapt this website for my own organization?' content=accordionContent %}
+
+{% capture accordionContent %}
+
 ## Materials Science Category
 
 Add `Materials Science` into the catalog browse by adding this code (alphabetically among the other categories) to `/visualize/github-data/category_info.json`:
