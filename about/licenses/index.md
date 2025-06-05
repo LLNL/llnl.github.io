@@ -113,7 +113,7 @@ If your repository was approved for release under a different open source licens
 
 If your project has more than one license, then you must include *all* of the relevant licenses in your repository.  We recommend that you name them with descriptive suffixes.  For example, if your project is dual licensed under Apache-2.0 and MIT, you should have top-level `LICENSE-APACHE` and `LICENSE-MIT` files.
 
-Because GitHub does not automatically detect multiple licenses, we recommend *also* adding a top-level `COPYRIGHT` file with a summary of license details. GitHub's "view license" link will then point to this file.  You can look at [Spack](https://github.com/spack/spack) and its `README.md`, `COPYRIGHT`, and `LICENSE-*` files for an example of how to organize a project with two licenses.
+Because GitHub does not automatically detect multiple licenses, we recommend *also* adding a top-level `COPYRIGHT` file with a summary of license details. GitHub's "view license" link will then point to this file.  You can look at [Spack](https://github.com/spack/spack) and its `README.md`, `COPYRIGHT`, and `LICENSE-*` files for an example of how to organize a project with two licenses. See also the Linux Foundation's [recommendations for copyright notices](https://www.linuxfoundation.org/blog/blog/copyright-notices-in-open-source-software-projects).
 
 ## Other Considerations
 
