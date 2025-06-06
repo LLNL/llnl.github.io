@@ -3357,6 +3357,12 @@
         "topics": null,
         "website": null
     },
+    "LLNL/SHOCK-UQ": {
+        "description": "This repository is for the Uncertainty Quantification Demystified class given at SCCM 2025.",
+        "name": "LLNL/SHOCK-UQ",
+        "topics": null,
+        "website": null
+    },
     "LLNL/SNLS": {
         "description": "GPU-friendly Small Non-Linear Solvers (SNLS)",
         "name": "LLNL/SNLS",
@@ -7889,6 +7895,12 @@
         "topics": null,
         "website": null
     },
+    "spack/migrate-package-prs": {
+        "description": "Migrate package PRs from spack/spack to spack/spack-packages",
+        "name": "spack/migrate-package-prs",
+        "topics": null,
+        "website": null
+    },
     "spack/msvc-wrapper": {
         "description": "C++-based compiler wrapper for cl.exe on Windows",
         "name": "spack/msvc-wrapper",
@@ -8086,10 +8098,20 @@
         "website": "https://spack-monitor.readthedocs.io/"
     },
     "spack/spack-packages": {
-        "description": "work in progress: moving builtin into separate git repo",
+        "description": "Spack's community package recipes",
         "name": "spack/spack-packages",
-        "topics": null,
-        "website": ""
+        "topics": [
+            "hpc",
+            "linux",
+            "macos",
+            "package-manager",
+            "packages",
+            "python",
+            "scientific-computing",
+            "spack",
+            "windows"
+        ],
+        "website": "https://packages.spack.io"
     },
     "spack/spack-prereq": {
         "description": "A spack extension to check for spack pre-requisites",
