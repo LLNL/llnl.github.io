@@ -10,4 +10,3 @@ gem 'webrick'
 gem "jekyll-github-metadata"
 gem "jekyll-feed"
 gem "kramdown-parser-gfm"
-gem "fiddle"
