@@ -41741,9 +41741,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -51925,6 +51923,19 @@
                 ]
             }
         },
+        "LLNL/playwright-crx-ai": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            }
+        },
         "LLNL/playwright-tracegen": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -60850,178 +60861,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "LLNL/themis": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nbconvert",
-                                    "repository": {
-                                        "nameWithOwner": "jupyter/nbconvert"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nbsphinx",
-                                    "repository": {
-                                        "nameWithOwner": "spatialaudio/nbsphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "networkx",
-                                    "repository": {
-                                        "nameWithOwner": "networkx/networkx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scikit-learn",
-                                    "repository": {
-                                        "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-autoapi",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx-autoapi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scikit-learn",
-                                    "repository": {
-                                        "nameWithOwner": "scikit-learn/scikit-learn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "scipy",
-                                    "repository": {
-                                        "nameWithOwner": "scipy/scipy"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx",
-                                    "repository": {
-                                        "nameWithOwner": "sphinx-doc/sphinx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-rtd-theme",
-                                    "repository": {
-                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
             }
         },
         "LLNL/thicket": {
@@ -76670,6 +76509,75 @@
                 "nodes": []
             }
         },
+        "spack/gitlab-runners": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#384d54",
+                        "name": "Dockerfile"
+                    }
+                ]
+            }
+        },
         "spack/gnuconfig": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -79869,165 +79777,6 @@
                 "nodes": []
             }
         },
-        "spack/spack-cscs2019": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "express",
-                                    "repository": {
-                                        "nameWithOwner": "expressjs/express"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-autoprefixer",
-                                    "repository": {
-                                        "nameWithOwner": "nDmitry/grunt-autoprefixer"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-cli",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-cli"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-contrib-connect",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-contrib-connect"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-contrib-cssmin",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-contrib-cssmin"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-contrib-jshint",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-contrib-jshint"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-contrib-qunit",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-contrib-qunit"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-contrib-uglify",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-contrib-uglify"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-contrib-watch",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-contrib-watch"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-retire",
-                                    "repository": {
-                                        "nameWithOwner": "RetireJS/grunt-retire"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-sass",
-                                    "repository": {
-                                        "nameWithOwner": "sindresorhus/grunt-sass"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-zip",
-                                    "repository": {
-                                        "nameWithOwner": "twolfson/grunt-zip"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "mustache",
-                                    "repository": {
-                                        "nameWithOwner": "janl/mustache.js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "socket.io",
-                                    "repository": {
-                                        "nameWithOwner": "socketio/socket.io"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "express",
-                                    "repository": {
-                                        "nameWithOwner": "expressjs/express"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "grunt-cli",
-                                    "repository": {
-                                        "nameWithOwner": "gruntjs/grunt-cli"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "mustache",
-                                    "repository": {
-                                        "nameWithOwner": "janl/mustache.js"
-                                    }
-                                },
-                                {
-                                    "packageManager": "NPM",
-                                    "packageName": "socket.io",
-                                    "repository": {
-                                        "nameWithOwner": "socketio/socket.io"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f1e05a",
-                        "name": "JavaScript"
-                    }
-                ]
-            }
-        },
         "spack/spack-cscs2024": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -81959,182 +81708,6 @@
                                     "packageName": "requests",
                                     "repository": {
                                         "nameWithOwner": "psf/requests"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "spack/spack-packages": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "clingo",
-                                    "repository": {
-                                        "nameWithOwner": "potassco/clingo"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "setuptools",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/setuptools"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "dorny/paths-filter",
-                                    "repository": {
-                                        "nameWithOwner": "dorny/paths-filter"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "black",
-                                    "repository": {
-                                        "nameWithOwner": "psf/black"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "clingo",
-                                    "repository": {
-                                        "nameWithOwner": "potassco/clingo"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "isort",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/isort"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mypy",
-                                    "repository": {
-                                        "nameWithOwner": "python/mypy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pylint",
-                                    "repository": {
-                                        "nameWithOwner": "pylint-dev/pylint"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "types-six",
-                                    "repository": {
-                                        "nameWithOwner": "python/typeshed"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "vermin",
-                                    "repository": {
-                                        "nameWithOwner": "netromdk/vermin"
                                     }
                                 }
                             ]
