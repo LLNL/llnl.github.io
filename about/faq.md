@@ -199,14 +199,6 @@ Now that your project is on GitHub, make sure users and contributors can find it
   {% include components/accordion.html title='How do I let people know about my new repo?'  slug='publicize' content=accordionContent %}
 
 {% capture accordionContent %}
-Submit a pull request! This website is a GitHub repo just like any other LLNL open source project. News is housed in the [`_posts` directory](https://github.com/LLNL/llnl.github.io/tree/main/_posts), and templates are found in the [LLNL/.github repo](https://github.com/LLNL/.github). See [Contributing Guidelines](../contribute) for more information.
-
-Before contributing, please contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with your idea or if you have questions about whether your proposed content requires the LLNL review and release process.
-{% endcapture %}
-  {% assign accordionContent = accordionContent | markdownify %}
-  {% include components/accordion.html title='How do I contribute news or other content to this website?'  slug='contribute-here' content=accordionContent %}
-
-{% capture accordionContent %}
 Yes, you can give external contributors Write access to your GitHub repo. Anyone with Admin access to your repo can enable this: Settings > Collaborators > Manage access > Add people > enter their username and select.
 
 If you don't already have Admin access to your repo, contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to request it.
@@ -214,6 +206,15 @@ If you don't already have Admin access to your repo, contact [github-admin@llnl.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='Can non-LLNL developers/collaborators contribute to my project?'  slug='collaborators' content=accordionContent %}
+
+{% capture accordionContent %}
+If the owner/admin of a repo leaves the project, another team member(s) with a GitHub account must take over the Admin role.
+
+If you need help re-assigning permissions in your repo, contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to confirm the user's departure and successor(s).
+
+{% endcapture %}
+  {% assign accordionContent = accordionContent | markdownify %}
+  {% include components/accordion.html title='How do I change ownership of a specific repo?'  slug='new-owner' content=accordionContent %}
 
 {% capture accordionContent %}
 
@@ -276,6 +277,14 @@ Refer to individual projects for their requirements on accepting contributions. 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I contribute to an LLNL repo?'  slug='contribute-repo' content=accordionContent %}
+
+{% capture accordionContent %}
+Submit a pull request! This website is a GitHub repo just like any other LLNL open source project. News is housed in the [`_posts` directory](https://github.com/LLNL/llnl.github.io/tree/main/_posts), and templates are found in the [LLNL/.github repo](https://github.com/LLNL/.github). See [Contributing Guidelines](../contribute) for more information.
+
+Before contributing, please contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with your idea or if you have questions about whether your proposed content requires the LLNL review and release process.
+{% endcapture %}
+  {% assign accordionContent = accordionContent | markdownify %}
+  {% include components/accordion.html title='How do I contribute news or other content to this website?'  slug='contribute-here' content=accordionContent %}
 
 </div>
 <!-- END: Accordions -->
