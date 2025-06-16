@@ -158,6 +158,12 @@ The Spack example mentions a [`COPYRIGHT`](https://github.com/spack/spack/blob/d
 
 For more information on using SPDX in your code, see the [SPDX website](https://spdx.org/licenses/).
 
+### Source file license headers
+
+Header requirements can vary depending on the chosen license. Most open source licenses (e.g., Apache 2.0, MIT,  GPL) do not strictly require license headers in each file, while others (e.g., LGPL-3.0) do. In any case, brief headers are recommended to ensure that whichever license you choose is also included with the source code, especially if those files are re-used.
+
+For example, visit the [Spack](https://github.com/spack/spack) or [Flux](https://github.com/flux-framework) projects to see how the different source files are labeled with headers depending on the license.
+
 ### Developer Certificate of Origin (DCO)
 
 As mentioned above, the default assumption for open source projects is ["inbound license = outbound license"](https://opensource.guide/legal/), i.e., contributors provide their code under the same license under which the code is distributed. If this is not enough assurance for your project, you may use the [Developer Certificate of Origin (DCO)](https://developercertificate.org/) with your project.
