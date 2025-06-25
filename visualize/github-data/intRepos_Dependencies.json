@@ -12201,6 +12201,126 @@
                 ]
             }
         },
+        "ESGF/esgf-dashboard-ui": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.fasterxml.jackson.core:jackson-core",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.fasterxml.jackson.core:jackson-databind",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.sun.xml.bind:jaxb-core",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.sun.xml.bind:jaxb-impl",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.activation:activation",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.servlet:jstl",
+                                    "repository": {
+                                        "nameWithOwner": "jakartaee/tags"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax.xml.bind:jaxb-api",
+                                    "repository": {
+                                        "nameWithOwner": "javaee/jaxb-spec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "javax:javaee-web-api",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "junit:junit",
+                                    "repository": {
+                                        "nameWithOwner": "junit-team/junit4"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "net.sf.supercsv:super-csv",
+                                    "repository": {
+                                        "nameWithOwner": "super-csv/super-csv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.logging.log4j:log4j-core",
+                                    "repository": {
+                                        "nameWithOwner": "apache/logging-log4j2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.hibernate:hibernate-validator",
+                                    "repository": {
+                                        "nameWithOwner": "hibernate/hibernate-validator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.json:json",
+                                    "repository": {
+                                        "nameWithOwner": "stleary/JSON-java"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.postgresql:postgresql",
+                                    "repository": {
+                                        "nameWithOwner": "pgjdbc/pgjdbc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.springframework.data:spring-data-jpa",
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-data-jpa"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.springframework:spring-webmvc",
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#b07219",
+                        "name": "Java"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-devOps": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -13755,26 +13875,7 @@
         },
         "ESGF/esgf-stager": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "MAVEN",
-                                    "packageName": "junit:junit",
-                                    "repository": {
-                                        "nameWithOwner": "junit-team/junit4"
-                                    }
-                                },
-                                {
-                                    "packageManager": "MAVEN",
-                                    "packageName": "org.codehaus.mojo:findbugs-maven-plugin",
-                                    "repository": null
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             },
             "languages": {
                 "nodes": [
@@ -74692,6 +74793,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "numpy",
                                     "repository": {
                                         "nameWithOwner": "numpy/numpy"
@@ -74699,9 +74807,9 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "pathos",
+                                    "packageName": "pandas",
                                     "repository": {
-                                        "nameWithOwner": "uqfoundation/pathos"
+                                        "nameWithOwner": "pandas-dev/pandas"
                                     }
                                 },
                                 {
@@ -74709,6 +74817,13 @@
                                     "packageName": "psutil",
                                     "repository": {
                                         "nameWithOwner": "giampaolo/psutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "typing-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "python/typing"
                                     }
                                 }
                             ]
