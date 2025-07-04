@@ -41308,7 +41308,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -41546,7 +41548,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42296,7 +42300,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43332,6 +43338,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "tree-sitter-bash",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter-bash"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "tree-sitter-cpp",
                                     "repository": {
                                         "nameWithOwner": "tree-sitter/tree-sitter-cpp"
@@ -43422,13 +43435,6 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "wasm-bindgen-macro-support",
-                                    "repository": {
-                                        "nameWithOwner": "rustwasm/wasm-bindgen"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasm-bindgen-shared",
                                     "repository": {
                                         "nameWithOwner": "rustwasm/wasm-bindgen"
                                     }
@@ -43542,6 +43548,13 @@
                                     "packageName": "tree-sitter",
                                     "repository": {
                                         "nameWithOwner": "tree-sitter/tree-sitter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-bash",
+                                    "repository": {
+                                        "nameWithOwner": "tree-sitter/tree-sitter-bash"
                                     }
                                 },
                                 {
@@ -43682,8 +43695,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#dea584",
+                        "name": "Rust"
                     }
                 ]
             }
@@ -55333,6 +55346,19 @@
                 ]
             }
         },
+        "LLNL/sc-foi": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#DA5B0B",
+                        "name": "Jupyter Notebook"
+                    }
+                ]
+            }
+        },
         "LLNL/scaleupROM": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -61032,13 +61058,6 @@
                                     "packageName": "beautifulsoup4",
                                     "repository": {
                                         "nameWithOwner": "wention/BeautifulSoup4"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "extrap",
-                                    "repository": {
-                                        "nameWithOwner": "extra-p/extrap"
                                     }
                                 },
                                 {
