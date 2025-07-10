@@ -101,7 +101,7 @@ If you are an employee at LLNL and have 2FA enabled, you are eligible to join th
   {% include components/accordion.html title='How do I join the LLNL organization on GitHub?'  slug='join' content=accordionContent %}
 
 {% capture accordionContent %}
-Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/). LLNL employees can follow ["one-stop shop" instructions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/open-source/one-stop-shop/) for releasing software.
+Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process–even if you plan on setting the repository to *Private* instead of *Public*. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/). LLNL employees can follow ["one-stop shop" instructions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/open-source/one-stop-shop/) for releasing software.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I get my repo reviewed and released for GitHub?' slug='released' content=accordionContent %}
