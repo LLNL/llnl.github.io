@@ -2537,6 +2537,19 @@
                 ]
             }
         },
+        "CDAT/cd77": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/cdat": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -15489,7 +15502,1147 @@
         },
         "GMLC-TDC/pyhelics": {
             "dependencyGraphManifests": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cffi",
+                                    "repository": {
+                                        "nameWithOwner": "python-cffi/cffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "click",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/click"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "strip-hints",
+                                    "repository": {
+                                        "nameWithOwner": "abarker/strip-hints"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-node",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-node",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-node",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "codecov/codecov-action",
+                                    "repository": {
+                                        "nameWithOwner": "codecov/codecov-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "peaceiris/actions-gh-pages",
+                                    "repository": {
+                                        "nameWithOwner": "peaceiris/actions-gh-pages"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/cibuildwheel",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/cibuildwheel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/code-frame",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/code-frame",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/compat-data",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/core",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/generator",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-annotate-as-pure",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-compilation-targets",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-create-class-features-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-environment-visitor",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-function-name",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-hoist-variables",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-member-expression-to-functions",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-module-imports",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-module-transforms",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-optimise-call-expression",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-plugin-utils",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-replace-supers",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-simple-access",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-skip-transparent-expression-wrappers",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-split-export-declaration",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-validator-identifier",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helper-validator-option",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/helpers",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/highlight",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/parser",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-class-properties",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-dynamic-import",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-export-namespace-from",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-logical-assignment-operators",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-nullish-coalescing-operator",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-numeric-separator",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-optional-chaining",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-private-methods",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-proposal-private-property-in-object",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-async-generators",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-dynamic-import",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-export-namespace-from",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-json-strings",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-logical-assignment-operators",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-nullish-coalescing-operator",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-numeric-separator",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-object-rest-spread",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-optional-catch-binding",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-optional-chaining",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-private-property-in-object",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-syntax-typescript",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-transform-modules-commonjs",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/plugin-transform-typescript",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/preset-typescript",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/template",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/traverse",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/types",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@eslint/eslintrc",
+                                    "repository": {
+                                        "nameWithOwner": "eslint/eslintrc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/fontawesome-common-types",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/free-brands-svg-icons",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/free-regular-svg-icons",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/free-solid-svg-icons",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@humanwhocodes/config-array",
+                                    "repository": {
+                                        "nameWithOwner": "humanwhocodes/config-array"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@humanwhocodes/object-schema",
+                                    "repository": {
+                                        "nameWithOwner": "humanwhocodes/object-schema"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jest/types",
+                                    "repository": {
+                                        "nameWithOwner": "jestjs/jest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@nodelib/fs.scandir",
+                                    "repository": {
+                                        "nameWithOwner": "nodelib/nodelib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@nodelib/fs.stat",
+                                    "repository": {
+                                        "nameWithOwner": "nodelib/nodelib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@nodelib/fs.walk",
+                                    "repository": {
+                                        "nameWithOwner": "nodelib/nodelib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@playwright/test",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/playwright"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@popperjs/core",
+                                    "repository": {
+                                        "nameWithOwner": "floating-ui/floating-ui"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@rollup/pluginutils",
+                                    "repository": {
+                                        "nameWithOwner": "rollup/plugins"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@sveltejs/adapter-static",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/kit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@sveltejs/kit",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/kit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@sveltejs/vite-plugin-svelte",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/vite-plugin-svelte"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@tailwindcss/forms",
+                                    "repository": {
+                                        "nameWithOwner": "tailwindlabs/tailwindcss-forms"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@tailwindcss/typography",
+                                    "repository": {
+                                        "nameWithOwner": "tailwindlabs/tailwindcss-typography"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/istanbul-lib-coverage",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/istanbul-lib-report",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/istanbul-reports",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/json-schema",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/node",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/parse-json",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/pug",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/sass",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/stack-utils",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/yargs",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/yargs-parser",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/yauzl",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/eslint-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/parser",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/scope-manager",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/type-utils",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/types",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/typescript-estree",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/utils",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/visitor-keys",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "acorn",
+                                    "repository": {
+                                        "nameWithOwner": "acornjs/acorn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "acorn-jsx",
+                                    "repository": {
+                                        "nameWithOwner": "acornjs/acorn-jsx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "acorn-node",
+                                    "repository": {
+                                        "nameWithOwner": "browserify/acorn-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "acorn-walk",
+                                    "repository": {
+                                        "nameWithOwner": "acornjs/acorn"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "agent-base",
+                                    "repository": {
+                                        "nameWithOwner": "TooTallNate/proxy-agents"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ajv",
+                                    "repository": {
+                                        "nameWithOwner": "ajv-validator/ajv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ajv",
+                                    "repository": {
+                                        "nameWithOwner": "ajv-validator/ajv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-colors",
+                                    "repository": {
+                                        "nameWithOwner": "doowb/ansi-colors"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-regex",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/ansi-regex"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/free-brands-svg-icons",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/free-regular-svg-icons",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@fortawesome/free-solid-svg-icons",
+                                    "repository": {
+                                        "nameWithOwner": "FortAwesome/Font-Awesome"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@playwright/test",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/playwright"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@sveltejs/adapter-static",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/kit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@sveltejs/kit",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/kit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@tailwindcss/forms",
+                                    "repository": {
+                                        "nameWithOwner": "tailwindlabs/tailwindcss-forms"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@tailwindcss/typography",
+                                    "repository": {
+                                        "nameWithOwner": "tailwindlabs/tailwindcss-typography"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/eslint-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@typescript-eslint/parser",
+                                    "repository": {
+                                        "nameWithOwner": "typescript-eslint/typescript-eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "autoprefixer",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/autoprefixer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "d3",
+                                    "repository": {
+                                        "nameWithOwner": "d3/d3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint",
+                                    "repository": {
+                                        "nameWithOwner": "eslint/eslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint-config-prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/eslint-config-prettier"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "eslint-plugin-svelte3",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/eslint-plugin-svelte3"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "layercake",
+                                    "repository": {
+                                        "nameWithOwner": "mhkeller/layercake"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "postcss",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/postcss"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "postcss-load-config",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/postcss-load-config"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier-plugin-svelte",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/prettier-plugin-svelte"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "svelte",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/svelte"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "svelte-check",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/language-tools"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "svelte-fa",
+                                    "repository": {
+                                        "nameWithOwner": "Cweili/svelte-fa"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "svelte-file-dropzone",
+                                    "repository": {
+                                        "nameWithOwner": "thecodejack/svelte-file-dropzone"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "svelte-preprocess",
+                                    "repository": {
+                                        "nameWithOwner": "sveltejs/svelte-preprocess"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tailwindcss",
+                                    "repository": {
+                                        "nameWithOwner": "tailwindlabs/tailwindcss"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslib",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/tslib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tw-elements",
+                                    "repository": {
+                                        "nameWithOwner": "mdbootstrap/Bootstarters"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "typescript",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/TypeScript"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -37577,6 +38730,11 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "json-logic-qubit",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "mypy",
                                     "repository": {
                                         "nameWithOwner": "python/mypy"
@@ -37602,6 +38760,13 @@
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest"
                                     }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tqdm",
+                                    "repository": {
+                                        "nameWithOwner": "tqdm/tqdm"
+                                    }
                                 }
                             ]
                         }
@@ -37609,6 +38774,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jsonlogic-py",
+                                    "repository": {
+                                        "nameWithOwner": "MetallData/jsonlogic-py"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "semver",
@@ -37645,6 +38817,47 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -37660,6 +38873,26 @@
         "LLNL/clippy-cpp": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-clippy",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/clippy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
