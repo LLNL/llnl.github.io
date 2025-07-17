@@ -20489,7 +20489,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "apache/httpcomponents-core"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -24602,7 +24604,9 @@
                                 {
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "coffee-script",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "rails/ruby-coffee-script"
+                                    }
                                 },
                                 {
                                     "packageManager": "RUBYGEMS",
@@ -25154,7 +25158,7 @@
                                     "packageManager": "RUBYGEMS",
                                     "packageName": "sass-listen",
                                     "repository": {
-                                        "nameWithOwner": "hixio-mh/listen"
+                                        "nameWithOwner": "sass/listen"
                                     }
                                 },
                                 {
@@ -31283,7 +31287,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "checksec-py",
                                     "repository": {
-                                        "nameWithOwner": "xianju6x/snyk_test"
+                                        "nameWithOwner": "Wenzel/checksec.py"
                                     }
                                 },
                                 {
@@ -37877,6 +37881,33 @@
                                     "packageName": "xmltodict",
                                     "repository": {
                                         "nameWithOwner": "martinblech/xmltodict"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-programoutput",
+                                    "repository": {
+                                        "nameWithOwner": "OpenNTI/sphinxcontrib-programoutput"
                                     }
                                 }
                             ]
@@ -53870,7 +53901,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "systems.uom:systems-quantity",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "unitsofmeasurement/uom-parent"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -67307,6 +67340,19 @@
                 ]
             }
         },
+        "flux-framework/brewcop": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "flux-framework/capacitor": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -68150,6 +68196,14 @@
                         "name": "CSS"
                     }
                 ]
+            }
+        },
+        "flux-framework/flux-fiction": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "flux-framework/flux-foundry": {
@@ -79502,6 +79556,26 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "PIP",
                                     "packageName": "black",
                                     "repository": {
@@ -79555,6 +79629,26 @@
                                     "packageName": "vermin",
                                     "repository": {
                                         "nameWithOwner": "netromdk/vermin"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
                                     }
                                 }
                             ]
