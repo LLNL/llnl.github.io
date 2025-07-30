@@ -1,6 +1,7 @@
 ---
 title: Portability
 layout: container-default
+description: Policies and guidelines for portability to different computing architectures.
 permalink: /project/policies/portability/
 ---
 

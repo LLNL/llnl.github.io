@@ -1,6 +1,7 @@
 ---
 title: Documentation
 layout: container-default
+description: Policies and guidelines for developing documentation.
 permalink: /project/policies/documentation/
 ---
 

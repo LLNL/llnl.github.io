@@ -1,7 +1,7 @@
 ---
 title: Releases
 layout: default
-description: Get answers to frequently asked questions about Lawrence Livermore National Laboratory's open source software.
+description: An automated feed of open source software releases by LLNL project teams.
 permalink: /releases/
 breadcrumb: Releases
 ---

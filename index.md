@@ -1,7 +1,7 @@
 ---
 title: LLNL Software Catalog
 layout: project-index
-description: Get links, resources, tutorials, and other information for developers at the Lab who want to participate in our software community.
+description: A portal for open source projects developed at Lawrence Livermore National Laboratory.
 tags: 
 breadcrumb: Home
 ---
