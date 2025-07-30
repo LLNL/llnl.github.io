@@ -1,6 +1,7 @@
 ---
 title: RADIUSS Policies and Guidelines
 layout: container-default
+description: A set of policies and guidelines based on best practices for open source development.
 permalink: /project/policies/all/
 ---
 

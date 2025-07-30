@@ -1,6 +1,7 @@
 ---
 title: Repo
 layout: default
+description: Generic template page that the end-user does not see.
 permalink: /repo/
 breadcrumb: Repository
 ---

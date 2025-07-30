@@ -1,6 +1,7 @@
 ---
 title: Testing and Continuous Integration
 layout: container-default
+description: Policies and guidelines for testing and CI.
 permalink: /project/policies/tests-ci/
 ---
 

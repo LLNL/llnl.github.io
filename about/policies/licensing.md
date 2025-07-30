@@ -1,6 +1,7 @@
 ---
 title: Licensing
 layout: container-default
+description: Policies and guidelines for licensing open source projects.
 permalink: /project/policies/licensing/
 ---
 

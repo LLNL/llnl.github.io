@@ -1,6 +1,7 @@
 ---
 title: Build
 layout: container-default
+description: Policies and guidelines for build functionality.
 permalink: /project/policies/build/
 ---
 

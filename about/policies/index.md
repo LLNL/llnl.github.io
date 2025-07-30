@@ -1,6 +1,7 @@
 ---
 title: Policies & Guidelines
 layout: container-default
+description: Collection of policies and guidelines for developing and deploying open source software.
 permalink: /about/policies/
 breadcrumb: Policies
 menus:
@@ -10,7 +11,7 @@ menus:
 ---
 ---
 
-LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash; aims to broaden usage across LLNL and the open source community of a set of libraries and tools used for HPC scientific application development
+LLNL's RADIUSS project&mdash;Rapid Application Development via an Institutional Universal Software Stack&mdash;aims to broaden usage across LLNL and the open source community of a set of libraries and tools used for HPC scientific application development
 
 <!--
 Prepared by LLNL under Contract DE-AC52-07NA27344.
