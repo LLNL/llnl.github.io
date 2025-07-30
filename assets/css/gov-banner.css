@@ -1,0 +1,255 @@
+/* gov banner */
+.usa-banner {
+  background-color: #d9dfea;
+  width: 100%;
+}
+
+.usa-banner__content,
+.usa-banner__header {
+  color: #52565c;
+}
+
+.usa-accordion {
+  padding-bottom: .25rem;
+  padding-top: .25rem;
+}
+
+.usa-accordion__content {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  display: inline-flex;
+}
+
+.usa-media-block__body {
+  display: flex;
+  align-items: start;
+}
+
+.usa-banner__header-flag {
+  float: left;
+  width: 1rem;
+  margin-right: .5rem;
+}
+
+.usa-banner__header-text {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: .75rem;
+  line-height: 1.2;
+}
+
+.usa-accordion__button.usa-banner__button {
+  border-style: none;
+  color: #21409a;
+  display: inline;
+  margin-left: .5rem;
+}
+
+.usa-banner__button {
+  border-style: none;
+  color: #21409a;
+  display: inline;
+  margin-left: .5rem;
+  background-color: transparent;
+  font-size: .75rem;
+  height: auto;
+  line-height: 1.2;
+  padding: 0;
+  text-decoration: none;
+  width: auto;
+}
+
+.usa-banner__button-text {
+  text-decoration: underline;
+}
+
+.usa-banner__icon {
+  width: 2.5rem;
+  margin-right: .5rem;
+}
+
+.usa-banner__lock-image {
+  height: 1.5ex;
+  width: 1.21875ex;
+}
+
+.site-banner .usa-banner__button::after, .site-banner .usa-banner__button:hover::after {
+  background-color: #2491ff;
+}
+
+@media (min-width: 40em) {
+  .usa-banner__button::after, 
+  .usa-banner__button:hover::after,
+  .usa-banner__button[aria-expanded="true"]::after {
+    position: absolute;
+  }
+
+  .usa-banner__inner {
+    display: flex
+  }
+}
+
+@supports ((-webkit-mask:url()) or (mask:url())) {
+  .usa-banner__button::after,
+  .usa-banner__header-action::after {
+    background: 0 0;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>'),linear-gradient(transparent,transparent);
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>'),linear-gradient(transparent,transparent);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 1rem 1rem;
+    mask-size: 1rem 1rem;
+  }
+}
+
+.usa-banner__button::after,
+.usa-banner__header-action::after  {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem 1rem;
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  content: "";
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@media (min-width: 40em) {
+  @supports ((-webkit-mask:url()) or (mask:url())) {
+    .usa-banner__button[aria-expanded="true"]::after {
+      background: 0 0;
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>'),linear-gradient(transparent,transparent);
+      mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>'),linear-gradient(transparent,transparent);
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 1rem 1rem;
+      mask-size: 1rem 1rem;
+    }
+  }
+}
+
+@media (min-width: 40em) {
+  .usa-banner__button[aria-expanded="true"]::after {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1rem 1rem;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    content: "";
+    vertical-align: middle;
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 39.99em) {
+  .usa-banner__button[aria-expanded="true"]::before {
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    right: 0;
+    background-color: #e6e6e6;
+    content: "";
+    display: block;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .usa-banner__button::after {
+    display: none;
+  }
+}
+
+@media (max-width: 39.99em) {
+  @supports ((-webkit-mask:url()) or (mask:url())) {
+    .usa-banner__button[aria-expanded="true"]::after {
+      background: 0 0;
+      background-color: rgba(0, 0, 0, 0);
+      background-color: #005ea2;
+      -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'),linear-gradient(transparent,transparent);
+      mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'),linear-gradient(transparent,transparent);
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 1.5rem 1.5rem;
+      mask-size: 1.5rem 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 39.99em) {
+  .usa-banner__button[aria-expanded="true"]::after {
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    right: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.5rem 1.5rem;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    content: "";
+    vertical-align: middle;
+    margin-left: 0;
+  }
+}
+
+.usa-banner {
+  position: relative;
+  min-height: 3rem;
+}
+
+.usa-accordion__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.usa-banner__button-text {
+  position: absolute;
+  left: -999em;
+  right: auto;
+}
+
+.usa-banner__header-action {
+  color: #21409a;
+  font-size: .75rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 2px;
+  text-decoration: underline;
+}
+
+@media (min-width: 40em) {
+  .usa-banner {
+    min-height: 0;
+  }
+
+  .usa-banner__button {
+    position: relative;
+  }
+
+  .usa-banner__button-text {
+    position: static;
+    display: inline;
+  }
+
+  .usa-banner__header-action {
+    display: none;
+  }
+}
+/* end gov banner */
