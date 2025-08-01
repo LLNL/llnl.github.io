@@ -3502,19 +3502,6 @@
                 ]
             }
         },
-        "CDAT/e3sm_nex": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/genutil": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -53547,6 +53534,27 @@
                             "nodes": [
                                 {
                                     "packageManager": "RUBYGEMS",
+                                    "packageName": "base64",
+                                    "repository": {
+                                        "nameWithOwner": "blanketastronomer/base64"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "bigdecimal",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/bigdecimal"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "csv",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/csv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
                                     "packageName": "jekyll",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll"
@@ -53564,6 +53572,13 @@
                                     "packageName": "jekyll-paginate",
                                     "repository": {
                                         "nameWithOwner": "jekyll/jekyll-paginate"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "logger",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/logger"
                                     }
                                 },
                                 {
@@ -68832,19 +68847,6 @@
                     {
                         "color": "#555555",
                         "name": "C"
-                    }
-                ]
-            }
-        },
-        "flux-framework/flux-depend": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#dea584",
-                        "name": "Rust"
                     }
                 ]
             }
