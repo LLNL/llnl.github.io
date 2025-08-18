@@ -95,6 +95,9 @@ One of the following files must be included at the top level of your repository 
     {% include components/quick-link.html title="BSD-3 License" icon="fa-file-lines" url="/about/licenses/bsd-3-clause.txt" %}
   </div>
   <div class="col-12 col-sm-6 col-lg-3">
+    {% include components/quick-link.html title="BSD-Commercial License" icon="fa-file-lines" url="/about/licenses/bsd-commercial.txt" %}
+  </div>
+  <div class="col-12 col-sm-6 col-lg-3">
     {% include components/quick-link.html title="GPL-2.0 License" icon="fa-file-lines" url="/about/licenses/gpl-2.0.txt" %}
   </div>
   <div class="col-12 col-sm-6 col-lg-3">
