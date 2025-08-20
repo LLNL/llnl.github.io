@@ -1586,19 +1586,6 @@
                 ]
             }
         },
-        "CDAT/TestsRunner": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "CDAT/UV-CDAT_scientific_examples": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -40463,7 +40450,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -40701,7 +40690,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -41453,7 +41444,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42239,6 +42232,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "once_cell_polyfill",
+                                    "repository": {
+                                        "nameWithOwner": "polyfill-rs/once_cell_polyfill"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "option-ext",
                                     "repository": {
                                         "nameWithOwner": "soc/option-ext"
@@ -42270,6 +42270,13 @@
                                     "packageName": "quote",
                                     "repository": {
                                         "nameWithOwner": "dtolnay/quote"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "r-efi",
+                                    "repository": {
+                                        "nameWithOwner": "r-efi/r-efi"
                                     }
                                 },
                                 {
@@ -42551,20 +42558,6 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "wasm-bindgen-backend",
-                                    "repository": {
-                                        "nameWithOwner": "wasm-bindgen/wasm-bindgen"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasm-bindgen-macro",
-                                    "repository": {
-                                        "nameWithOwner": "wasm-bindgen/wasm-bindgen"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasm-bindgen-macro-support",
                                     "repository": {
                                         "nameWithOwner": "wasm-bindgen/wasm-bindgen"
                                     }
@@ -43873,6 +43866,47 @@
                     {
                         "color": "#555555",
                         "name": "C"
+                    }
+                ]
+            }
+        },
+        "LLNL/dynim": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "faiss",
+                                    "repository": {
+                                        "nameWithOwner": "facebookresearch/faiss"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -62085,101 +62119,6 @@
                 ]
             }
         },
-        "Olympus-HPC/proteus": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "conda-incubator/setup-miniconda",
-                                    "repository": {
-                                        "nameWithOwner": "conda-incubator/setup-miniconda"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "conda-incubator/setup-miniconda",
-                                    "repository": {
-                                        "nameWithOwner": "conda-incubator/setup-miniconda"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "cpp-linter/cpp-linter-action",
-                                    "repository": {
-                                        "nameWithOwner": "cpp-linter/cpp-linter-action"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/configure-pages",
-                                    "repository": {
-                                        "nameWithOwner": "actions/configure-pages"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/deploy-pages",
-                                    "repository": {
-                                        "nameWithOwner": "actions/deploy-pages"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/upload-pages-artifact",
-                                    "repository": {
-                                        "nameWithOwner": "actions/upload-pages-artifact"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
-            }
-        },
         "Olympus-HPC/proteus-benchmarks": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -76835,6 +76774,54 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "spack/spack-benchmark": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "scipy",
+                                    "repository": {
+                                        "nameWithOwner": "scipy/scipy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "tabulate",
+                                    "repository": {
+                                        "nameWithOwner": "astanin/python-tabulate"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "spack/spack-bibliography": {
