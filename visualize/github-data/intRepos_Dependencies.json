@@ -1586,6 +1586,19 @@
                 ]
             }
         },
+        "CDAT/TestsRunner": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "CDAT/UV-CDAT_scientific_examples": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -32000,47 +32013,6 @@
                 ]
             }
         },
-        "LLNL/SoRa": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "deap",
-                                    "repository": {
-                                        "nameWithOwner": "DEAP/deap"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mpi4py",
-                                    "repository": {
-                                        "nameWithOwner": "mpi4py/mpi4py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
         "LLNL/Surfactant": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -40753,7 +40725,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 }
                             ]
                         }
@@ -41019,7 +40993,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 }
                             ]
                         }
@@ -41305,7 +41281,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "spring-projects/spring-framework"
+                                    }
                                 }
                             ]
                         }
@@ -54129,6 +54107,19 @@
                 "nodes": []
             }
         },
+        "LLNL/radiuss-aws-tutorials": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/radiuss-ci": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -62103,6 +62094,101 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
+        "Olympus-HPC/proteus": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "conda-incubator/setup-miniconda",
+                                    "repository": {
+                                        "nameWithOwner": "conda-incubator/setup-miniconda"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "conda-incubator/setup-miniconda",
+                                    "repository": {
+                                        "nameWithOwner": "conda-incubator/setup-miniconda"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "cpp-linter/cpp-linter-action",
+                                    "repository": {
+                                        "nameWithOwner": "cpp-linter/cpp-linter-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/configure-pages",
+                                    "repository": {
+                                        "nameWithOwner": "actions/configure-pages"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/deploy-pages",
+                                    "repository": {
+                                        "nameWithOwner": "actions/deploy-pages"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-pages-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-pages-artifact"
                                     }
                                 }
                             ]
@@ -76347,13 +76433,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "furo",
-                                    "repository": {
-                                        "nameWithOwner": "pradyunsg/furo"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "isort",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/isort"
@@ -76399,13 +76478,6 @@
                                     "packageName": "sphinx-copybutton",
                                     "repository": {
                                         "nameWithOwner": "executablebooks/sphinx-copybutton"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "sphinx-design",
-                                    "repository": {
-                                        "nameWithOwner": "executablebooks/sphinx-design"
                                     }
                                 },
                                 {
