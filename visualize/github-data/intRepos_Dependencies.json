@@ -10273,6 +10273,19 @@
                 ]
             }
         },
+        "ESGF/esgf-stac-tests": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "ESGF/esgf-stager": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -32003,6 +32016,47 @@
         "LLNL/SmallMolEval": {
             "dependencyGraphManifests": {
                 "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "LLNL/SoRa": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "deap",
+                                    "repository": {
+                                        "nameWithOwner": "DEAP/deap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mpi4py",
+                                    "repository": {
+                                        "nameWithOwner": "mpi4py/mpi4py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "numpy",
+                                    "repository": {
+                                        "nameWithOwner": "numpy/numpy"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
             },
             "languages": {
                 "nodes": [
@@ -70973,6 +71027,19 @@
                             "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/github-script",
+                                    "repository": {
+                                        "nameWithOwner": "actions/github-script"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
@@ -70983,6 +71050,13 @@
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
                                     }
                                 },
                                 {
