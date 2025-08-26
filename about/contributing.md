@@ -45,8 +45,6 @@ bundle exec jekyll serve
 
 Finally, open <http://localhost:4000> in a web browser.
 
-*Note:* The [RADIUSS website](https://software.llnl.gov/radiuss/) and [product catalog](https://software.llnl.gov/radiuss/projects/) "live" on this URL but are managed by a [separate repo](https://github.com/LLNL/radiuss).
-
 ## Tips
 
 The gems in your sourcefile get updated frequently. It is a good idea to occasionally run `bundle update` from within your project's root directory to make sure the software on your computer is up to date.
@@ -89,12 +87,11 @@ A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-
 | **Performance & Workflow** | Manage and scale complex workflows, tracking, and data collection | `performance`, `workflows` | fa-gauge-high |
 | **Portable Execution & Memory Mgmt** | Automate data motion and memory allocation on advanced architectures | `memory-management`, `portability` | fa-briefcase |
 | **Proxy Applications** | Prepare for testing and porting applications | `proxy-application` | fa-clone |
+| **RADIUSS** | Rapid Application Development via an Institutional Universal Software Stack | `radiuss` | radiuss-icon-bw.png |
 | **System Software** | Manage laptop and desktop computer systems, HPC clusters, and parallel environments | `system-software` | fa-floppy-disk |
 {:.table .table-striped .table-bordered}
 
 A repository can have up to 20 tags. In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `arbitrary-lagrangian-eulerian` (ALE), `benchmark`, `biology`, `checkpoint`, `chemistry`, `cmake`, `compiler`, `cpp` (C++), `data-analysis`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `library`, `materials`, `materials-science`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `natural-language-processing`, `openmp`, `parallel-computing`, `pde`, `python`, `seismology`, `shell`, `simulation`, `solver`, `templates`, `testing`, `uncertainty-quantification`.
-
-Repos that appear on the [RADIUSS site](https://software.llnl.gov/radiuss/projects/) are listed in that repo's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
 
 **To add a new category to the catalog:**
 
@@ -167,7 +164,7 @@ The informational pages on this site (e.g., this page, [About](/about), [FAQ](/a
 * News post titles in title case
 * Accordion titles in the form of a sentence-case question
 
-**To update the banners on the home page:** The existing RADIUSS and IPO messages are in `<div>` containers using the [`button.html` include file](https://github.com/LLNL/llnl.github.io/blob/main/_includes/components/button.html).
+**To update the banners on the home page:** The IPO message is in a `<div>` container using the [`button.html` include file](https://github.com/LLNL/llnl.github.io/blob/main/_includes/components/button.html).
 
 **To modify the site menu:** Update the menu in the [`header.html`](https://github.com/LLNL/llnl.github.io/blob/main/_includes/header.html), rather than adding each page to the menu using page attributes.
 
@@ -225,31 +222,34 @@ Add `Materials Science` into the catalog browse by adding this code (alphabetica
 
 ## RADIUSS Features
 
-April 2022: RADIUSS launched at [github.com/llnl/radiuss](https://github.com/llnl/radiuss). See tasks in [issue 567](https://github.com/LLNL/llnl.github.io/issues/567). If we ever want/need to reinstate RADIUSS browsing, branding, and other features on *this* site, here's what to do:
+April 2022: The standalone RADIUSS site launched at [github.com/llnl/radiuss](https://github.com/llnl/radiuss) via [issue 567](https://github.com/LLNL/llnl.github.io/issues/567).
 
-* Add `RADIUSS` back into the catalog browse (i.e., to "live" on this website) by replacing the existing code (lines 190–205) in `/visualize/github-data/category_info.json` with this:
+September 2025: The RADIUSS site was retired and the filterable browse on this site reinstated via [issue 719](https://github.com/LLNL/llnl.github.io/issues/719).
+
+<!--* The code for standalone RADIUSS site was lines 190–205 in `/visualize/github-data/category_info.json`:
 
 ```bash
         "RADIUSS": {
-            "title": "RADIUSS",
-            "hash": "RADIUSS",
+            "title": "RADIUSS Software",
+            "hash": "RADIUSSSoftware",
             "icon": {
-                "path": "/assets/images/radiuss.svg",
-                "alt": "RADIUSS logo"
+                "path": "/assets/images/radiuss-icon-bw.png",
+                "alt": "RADIUSS Software"
             },
             "description": {
-                "short": "Rapid Application Development via an Institutional Universal Software Stack",
-                "long": ": LLNL's RADIUSS project aims to broaden usage across LLNL and the open source community of a set of libraries and tools used for HPC scientific application development."
+                "short": "",
+                "long": ""
             },
-                "topics":[
-                "radiuss"
-            ]            
+            "topics": [
+                "radiuss-software"
+            ],
+            "url": "https://software.llnl.gov/radiuss/projects/"
         },
 ```
 
 Note that `/project/category_info_radiuss.json` is not currently being used. If it were to be reinstated, it would need its categories updated to match the latest Catalog (e.g., `Docs and Tutorials`).
 
-<!--* Comment back in lines 31-38 in `Category.service.js`
+Comment back in lines 31-38 in `Category.service.js`
 
 ```bash
     this.containsRadiussTopics = function(catTopics, repoTopics) {
@@ -260,7 +260,7 @@ Note that `/project/category_info_radiuss.json` is not currently being used. If 
         }
         return false;
     };
-```-->
+```
 
 * Update link/text on home page
 * Update links/text on [Policies & Guidelines](/about/policies)
@@ -273,6 +273,7 @@ No changes yet, if ever:
 
 * [Policies & Guidelines](/about/policies) are currently still on this site
 * RADIUSS logo (`radiuss-icon-bw.png`) is still in the `/assets/images/` folder
+-->
 
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}

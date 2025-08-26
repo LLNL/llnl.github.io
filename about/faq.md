@@ -166,8 +166,6 @@ If you've set up your repository within the **LLNL organization**, you don't nee
 
 * **Standalone organization.** Alternatively, if you do not wish to transfer your repo, you can instead submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) with your organization and/or repository names. List your organization under the `"orgs"` line *only if you intend for all of its repositories to be included in the catalog* (e.g., `glvis`); otherwise, list only the repository under the `"repos"` line within the context of your organization (e.g., `hpc/spindle`).
 
-* If your repo is part of the [RADIUSS project](https://software.llnl.gov/radiuss/projects/), be sure to add it to that website's [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml).
-
 If you have a **project logo**, please follow the [Contributing Guidelines](/about/contribute) (see the question [How do I change how a specific repo appears in the catalog?](https://software.llnl.gov/about/contribute/#catalog)) for naming and uploading the file. If your repo is part of a non-LLNL organization that has its own avatar, that image will automatically display next to the repo name in the catalog, unless superseded by a repo-specific logo.
 
 Please also tag your repo with this site's **catalog categories** so it will show up in the filterable catalog. Follow the [Contributing Guidelines](/about/contribute) (see the question [How do I update or use the catalog categories?](https://software.llnl.gov/about/contribute/#categories)) for a list of tags.
@@ -220,11 +218,9 @@ If you need help re-assigning permissions in your repo, contact [github-admin@ll
 
 1. Remove the specific topic tags (e.g., `math-physics`) that connect it to this website's browsable categories.
 
-2. Remove the repo from the RADIUSS [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml), if applicable.
+2. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo's name.
 
-3. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to remove your repo's name.
-
-4. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
+3. Change your repo's status via Settings > Manage Access > Who has access > Manage > Danger Zone > Archive this repository (`settings#danger-zone`). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) if for some reason GitHub won't let you complete this step.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='What should I do if my repo is no longer actively developed/maintained?'  slug='remove' content=accordionContent %}
@@ -239,8 +235,6 @@ Migrating the repo outside of the LLNL organization requires an organization adm
 1. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo's name. This allows for the software catalog to continue including the project even after it moves.
 
 2. Retain topic tags (e.g., `math-physics`) to connect it to this website's browsable categories.
-
-3. Update the org in the RADIUSS [`contributor-ci.yaml` file](https://github.com/LLNL/radiuss/blob/main/contributor-ci.yaml), if applicable.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='My repo has grown. How do I move it out of the LLNL organization?'  slug='transfer-out' content=accordionContent %}

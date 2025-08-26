@@ -10,8 +10,6 @@ See our [Contributing Guidelines](/about/contribute) for information about how t
 
 To join the LLNL GitHub organization and/or to add your LLNL repo to the catalog, start with the [FAQ](https://software.llnl.gov/about/faq/).
 
-*Note:* The [RADIUSS website](https://software.llnl.gov/radiuss/) and [product catalog](https://software.llnl.gov/radiuss/projects/) "live" on this URL but are managed by a [separate repo](https://github.com/LLNL/radiuss). See the [RADIUSS README](https://github.com/LLNL/radiuss/blob/main/README.md) for details.
-
 ## Contact
 
 For more information, check out our [FAQ](/about/faq). Contact [open-source@llnl.gov](mailto:open-source@llnl.gov) with questions about open source software at LLNL. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) with questions about working in the LLNL GitHub organization or to request a private repository.
