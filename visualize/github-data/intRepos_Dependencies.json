@@ -4181,6 +4181,152 @@
                 ]
             }
         },
+        "CDAT/jupyterlab-tutorial": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jupyterlab/application",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jupyterlab/mainmenu",
+                                    "repository": {
+                                        "nameWithOwner": "jupyterlab/jupyterlab"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react-dom",
+                                    "repository": {
+                                        "nameWithOwner": "DefinitelyTyped/DefinitelyTyped"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@types/react-joyride",
+                                    "repository": {
+                                        "nameWithOwner": "gilbarbara/react-joyride"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bufferutil",
+                                    "repository": {
+                                        "nameWithOwner": "websockets/bufferutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/prettier"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prettier-tslint",
+                                    "repository": {
+                                        "nameWithOwner": "azz/prettier-tslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "prop-types",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/prop-types"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react-dom",
+                                    "repository": {
+                                        "nameWithOwner": "facebook/react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "react-joyride",
+                                    "repository": {
+                                        "nameWithOwner": "gilbarbara/react-joyride"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "rimraf",
+                                    "repository": {
+                                        "nameWithOwner": "isaacs/rimraf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslint",
+                                    "repository": {
+                                        "nameWithOwner": "palantir/tslint"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslint-config-prettier",
+                                    "repository": {
+                                        "nameWithOwner": "prettier/tslint-config-prettier"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tslint-react",
+                                    "repository": {
+                                        "nameWithOwner": "palantir/tslint-react"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "typescript",
+                                    "repository": {
+                                        "nameWithOwner": "microsoft/TypeScript"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "utf-8-validate",
+                                    "repository": {
+                                        "nameWithOwner": "websockets/utf-8-validate"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            }
+        },
         "CDAT/jupyterlab-tutorial-extension": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -33400,7 +33546,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.AspNet.SignalR.SelfHost",
                                     "repository": {
-                                        "nameWithOwner": "SignalR/SignalR"
+                                        "nameWithOwner": "Kibnet/SignalR"
                                     }
                                 },
                                 {
@@ -39609,7 +39755,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -39847,7 +39995,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -40599,7 +40749,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -41023,6 +41175,27 @@
                             "nodes": [
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "addr2line",
+                                    "repository": {
+                                        "nameWithOwner": "gimli-rs/addr2line"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "adler2",
+                                    "repository": {
+                                        "nameWithOwner": "oyvindln/adler2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "aes",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/block-ciphers"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "aho-corasick",
                                     "repository": {
                                         "nameWithOwner": "BurntSushi/aho-corasick"
@@ -41086,6 +41259,27 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "backtrace",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/backtrace-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "base64",
+                                    "repository": {
+                                        "nameWithOwner": "marshallpierce/rust-base64"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "base64ct",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/formats"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "bitflags",
                                     "repository": {
                                         "nameWithOwner": "bitflags/bitflags"
@@ -41093,9 +41287,51 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "bitflags",
+                                    "repository": {
+                                        "nameWithOwner": "bitflags/bitflags"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "block-buffer",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/utils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "bumpalo",
                                     "repository": {
                                         "nameWithOwner": "fitzgen/bumpalo"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "byteorder",
+                                    "repository": {
+                                        "nameWithOwner": "BurntSushi/byteorder"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "bytes",
+                                    "repository": {
+                                        "nameWithOwner": "tokio-rs/bytes"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "bzip2",
+                                    "repository": {
+                                        "nameWithOwner": "trifectatechfoundation/bzip2-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "bzip2-sys",
+                                    "repository": {
+                                        "nameWithOwner": "trifectatechfoundation/bzip2-rs"
                                     }
                                 },
                                 {
@@ -41117,6 +41353,13 @@
                                     "packageName": "chrono",
                                     "repository": {
                                         "nameWithOwner": "chronotope/chrono"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "cipher",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/traits"
                                     }
                                 },
                                 {
@@ -41156,9 +41399,37 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "constant_time_eq",
+                                    "repository": {
+                                        "nameWithOwner": "cesarb/constant_time_eq"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "core-foundation",
+                                    "repository": {
+                                        "nameWithOwner": "servo/core-foundation-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "core-foundation-sys",
                                     "repository": {
                                         "nameWithOwner": "servo/core-foundation-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "cpufeatures",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/utils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "crc32fast",
+                                    "repository": {
+                                        "nameWithOwner": "srijs/rust-crc32fast"
                                     }
                                 },
                                 {
@@ -41184,6 +41455,27 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "crypto-common",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/traits"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "deranged",
+                                    "repository": {
+                                        "nameWithOwner": "jhpratt/deranged"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "digest",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/traits"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "directories",
                                     "repository": {
                                         "nameWithOwner": "dirs-dev/directories-rs"
@@ -41198,9 +41490,23 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "displaydoc",
+                                    "repository": {
+                                        "nameWithOwner": "yaahc/displaydoc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "either",
                                     "repository": {
                                         "nameWithOwner": "rayon-rs/either"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "encoding_rs",
+                                    "repository": {
+                                        "nameWithOwner": "hsivonen/encoding_rs"
                                     }
                                 },
                                 {
@@ -41240,6 +41546,27 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "find-msvc-tools",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/cc-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "flate2",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/flate2-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "fnv",
+                                    "repository": {
+                                        "nameWithOwner": "servo/rust-fnv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "foldhash",
                                     "repository": {
                                         "nameWithOwner": "orlp/foldhash"
@@ -41247,6 +41574,76 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "foreign-types",
+                                    "repository": {
+                                        "nameWithOwner": "sfackler/foreign-types"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "foreign-types-shared",
+                                    "repository": {
+                                        "nameWithOwner": "sfackler/foreign-types"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "form_urlencoded",
+                                    "repository": {
+                                        "nameWithOwner": "servo/rust-url"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "futures-channel",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/futures-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "futures-core",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/futures-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "futures-io",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/futures-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "futures-sink",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/futures-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "futures-task",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/futures-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "futures-util",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/futures-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "generic-array",
+                                    "repository": {
+                                        "nameWithOwner": "fizyk20/generic-array"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "getrandom",
                                     "repository": {
                                         "nameWithOwner": "rust-random/getrandom"
@@ -41257,6 +41654,20 @@
                                     "packageName": "getrandom",
                                     "repository": {
                                         "nameWithOwner": "rust-random/getrandom"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "gimli",
+                                    "repository": {
+                                        "nameWithOwner": "gimli-rs/gimli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "h2",
+                                    "repository": {
+                                        "nameWithOwner": "hyperium/h2"
                                     }
                                 },
                                 {
@@ -41282,6 +41693,55 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "hmac",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/MACs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "http",
+                                    "repository": {
+                                        "nameWithOwner": "hyperium/http"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "http-body",
+                                    "repository": {
+                                        "nameWithOwner": "hyperium/http-body"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "httparse",
+                                    "repository": {
+                                        "nameWithOwner": "seanmonstar/httparse"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "httpdate",
+                                    "repository": {
+                                        "nameWithOwner": "pyfisch/httpdate"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "hyper",
+                                    "repository": {
+                                        "nameWithOwner": "hyperium/hyper"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "hyper-tls",
+                                    "repository": {
+                                        "nameWithOwner": "hyperium/hyper-tls"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "iana-time-zone",
                                     "repository": {
                                         "nameWithOwner": "strawlab/iana-time-zone"
@@ -41296,9 +41756,93 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "icu_collections",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "icu_locale_core",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "icu_normalizer",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "icu_normalizer_data",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "icu_properties",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "icu_properties_data",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "icu_provider",
+                                    "repository": {
+                                        "nameWithOwner": "unicode-org/icu4x"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "idna",
+                                    "repository": {
+                                        "nameWithOwner": "servo/rust-url"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "idna_adapter",
+                                    "repository": {
+                                        "nameWithOwner": "hsivonen/idna_adapter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "indexmap",
                                     "repository": {
                                         "nameWithOwner": "indexmap-rs/indexmap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "inout",
+                                    "repository": {
+                                        "nameWithOwner": "RustCrypto/utils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "io-uring",
+                                    "repository": {
+                                        "nameWithOwner": "tokio-rs/io-uring"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "ipnet",
+                                    "repository": {
+                                        "nameWithOwner": "krisprice/ipnet"
                                     }
                                 },
                                 {
@@ -41317,400 +41861,14 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "jobserver",
+                                    "repository": {
+                                        "nameWithOwner": "rust-lang/jobserver-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "js-sys",
-                                    "repository": {
-                                        "nameWithOwner": "wasm-bindgen/wasm-bindgen"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "lazy_static",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang-nursery/lazy-static.rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "libc",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/libc"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "libredox",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "libsqlite3-sys",
-                                    "repository": {
-                                        "nameWithOwner": "rusqlite/rusqlite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "linux-raw-sys",
-                                    "repository": {
-                                        "nameWithOwner": "sunfishcode/linux-raw-sys"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "log",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/log"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "memchr",
-                                    "repository": {
-                                        "nameWithOwner": "BurntSushi/memchr"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "num-traits",
-                                    "repository": {
-                                        "nameWithOwner": "rust-num/num-traits"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "once_cell",
-                                    "repository": {
-                                        "nameWithOwner": "matklad/once_cell"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "once_cell_polyfill",
-                                    "repository": {
-                                        "nameWithOwner": "polyfill-rs/once_cell_polyfill"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "option-ext",
-                                    "repository": {
-                                        "nameWithOwner": "soc/option-ext"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "path-slash",
-                                    "repository": {
-                                        "nameWithOwner": "rhysd/path-slash"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "pkg-config",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/pkg-config-rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "proc-macro2",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/proc-macro2"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "quote",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/quote"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "r-efi",
-                                    "repository": {
-                                        "nameWithOwner": "r-efi/r-efi"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "rayon",
-                                    "repository": {
-                                        "nameWithOwner": "rayon-rs/rayon"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "rayon-core",
-                                    "repository": {
-                                        "nameWithOwner": "rayon-rs/rayon"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "redox_users",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "regex",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/regex"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "regex-automata",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/regex"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "regex-syntax",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/regex"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "rusqlite",
-                                    "repository": {
-                                        "nameWithOwner": "rusqlite/rusqlite"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "rustix",
-                                    "repository": {
-                                        "nameWithOwner": "bytecodealliance/rustix"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "rustversion",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/rustversion"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "ryu",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/ryu"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "same-file",
-                                    "repository": {
-                                        "nameWithOwner": "BurntSushi/same-file"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "serde",
-                                    "repository": {
-                                        "nameWithOwner": "serde-rs/serde"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "serde_derive",
-                                    "repository": {
-                                        "nameWithOwner": "serde-rs/serde"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "serde_json",
-                                    "repository": {
-                                        "nameWithOwner": "serde-rs/json"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "serde_spanned",
-                                    "repository": {
-                                        "nameWithOwner": "toml-rs/toml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "shlex",
-                                    "repository": {
-                                        "nameWithOwner": "comex/rust-shlex"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "smallvec",
-                                    "repository": {
-                                        "nameWithOwner": "servo/rust-smallvec"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "streaming-iterator",
-                                    "repository": {
-                                        "nameWithOwner": "sfackler/streaming-iterator"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "strsim",
-                                    "repository": {
-                                        "nameWithOwner": "rapidfuzz/strsim-rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "syn",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/syn"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tempfile",
-                                    "repository": {
-                                        "nameWithOwner": "Stebalien/tempfile"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "thiserror",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/thiserror"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "thiserror-impl",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/thiserror"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "toml",
-                                    "repository": {
-                                        "nameWithOwner": "toml-rs/toml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "toml_datetime",
-                                    "repository": {
-                                        "nameWithOwner": "toml-rs/toml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "toml_parser",
-                                    "repository": {
-                                        "nameWithOwner": "toml-rs/toml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "toml_writer",
-                                    "repository": {
-                                        "nameWithOwner": "toml-rs/toml"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tree-sitter",
-                                    "repository": {
-                                        "nameWithOwner": "tree-sitter/tree-sitter"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tree-sitter-bash",
-                                    "repository": {
-                                        "nameWithOwner": "tree-sitter/tree-sitter-bash"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tree-sitter-cpp",
-                                    "repository": {
-                                        "nameWithOwner": "tree-sitter/tree-sitter-cpp"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tree-sitter-language",
-                                    "repository": {
-                                        "nameWithOwner": "tree-sitter/tree-sitter"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tree-sitter-python",
-                                    "repository": {
-                                        "nameWithOwner": "tree-sitter/tree-sitter-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "tree-sitter-rust",
-                                    "repository": {
-                                        "nameWithOwner": "tree-sitter/tree-sitter-rust"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "unicode-ident",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/unicode-ident"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "utf8parse",
-                                    "repository": {
-                                        "nameWithOwner": "alacritty/vte"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "vcpkg",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "walkdir",
-                                    "repository": {
-                                        "nameWithOwner": "BurntSushi/walkdir"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasi",
-                                    "repository": {
-                                        "nameWithOwner": "bytecodealliance/wasi-rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasi",
-                                    "repository": {
-                                        "nameWithOwner": "bytecodealliance/wasi-rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasm-bindgen",
-                                    "repository": {
-                                        "nameWithOwner": "wasm-bindgen/wasm-bindgen"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "wasm-bindgen-backend",
                                     "repository": {
                                         "nameWithOwner": "wasm-bindgen/wasm-bindgen"
                                     }
@@ -77566,6 +77724,213 @@
                 ]
             }
         },
+        "spack/spack-bootstrap-mirrors": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "spack/spack-ci-containers": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -79988,13 +80353,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "furo",
-                                    "repository": {
-                                        "nameWithOwner": "pradyunsg/furo"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "isort",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/isort"
@@ -80030,6 +80388,11 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "ruamel-yaml",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "sphinx",
                                     "repository": {
                                         "nameWithOwner": "sphinx-doc/sphinx"
@@ -80047,6 +80410,20 @@
                                     "packageName": "sphinx-design",
                                     "repository": {
                                         "nameWithOwner": "executablebooks/sphinx-design"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-last-updated-by-git",
+                                    "repository": {
+                                        "nameWithOwner": "mgeier/sphinx-last-updated-by-git"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-sitemap",
+                                    "repository": {
+                                        "nameWithOwner": "jdillard/sphinx-sitemap"
                                     }
                                 },
                                 {
