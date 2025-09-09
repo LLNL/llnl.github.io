@@ -32779,7 +32779,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.DotNet.PlatformAbstractions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/core-setup"
+                                        "nameWithOwner": "dotnet/source-build"
                                     }
                                 },
                                 {
@@ -38758,6 +38758,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "docstrfmt",
+                                    "repository": {
+                                        "nameWithOwner": "LilSpazJoekp/docstrfmt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "flake8",
                                     "repository": {
                                         "nameWithOwner": "PyCQA/flake8"
@@ -41236,13 +41243,6 @@
                                 },
                                 {
                                     "packageManager": "RUST",
-                                    "packageName": "android-tzdata",
-                                    "repository": {
-                                        "nameWithOwner": "RumovZ/android-tzdata"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
                                     "packageName": "android_system_properties",
                                     "repository": {
                                         "nameWithOwner": "nical/android_system_properties"
@@ -41285,6 +41285,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "atomic-waker",
+                                    "repository": {
+                                        "nameWithOwner": "smol-rs/atomic-waker"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "autocfg",
                                     "repository": {
                                         "nameWithOwner": "cuviper/autocfg"
@@ -41309,13 +41316,6 @@
                                     "packageName": "base64ct",
                                     "repository": {
                                         "nameWithOwner": "RustCrypto/formats"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "bitflags",
-                                    "repository": {
-                                        "nameWithOwner": "bitflags/bitflags"
                                     }
                                 },
                                 {
@@ -41747,16 +41747,16 @@
                                 },
                                 {
                                     "packageManager": "RUST",
-                                    "packageName": "httparse",
+                                    "packageName": "http-body-util",
                                     "repository": {
-                                        "nameWithOwner": "seanmonstar/httparse"
+                                        "nameWithOwner": "hyperium/http-body"
                                     }
                                 },
                                 {
                                     "packageManager": "RUST",
-                                    "packageName": "httpdate",
+                                    "packageName": "httparse",
                                     "repository": {
-                                        "nameWithOwner": "pyfisch/httpdate"
+                                        "nameWithOwner": "seanmonstar/httparse"
                                     }
                                 },
                                 {
@@ -41768,9 +41768,23 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "hyper-rustls",
+                                    "repository": {
+                                        "nameWithOwner": "rustls/hyper-rustls"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "hyper-tls",
                                     "repository": {
                                         "nameWithOwner": "hyperium/hyper-tls"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "hyper-util",
+                                    "repository": {
+                                        "nameWithOwner": "hyperium/hyper-util"
                                     }
                                 },
                                 {
@@ -41880,6 +41894,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "iri-string",
+                                    "repository": {
+                                        "nameWithOwner": "lo48576/iri-string"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "is_terminal_polyfill",
                                     "repository": {
                                         "nameWithOwner": "polyfill-rs/is_terminal_polyfill"
@@ -41890,20 +41911,6 @@
                                     "packageName": "itoa",
                                     "repository": {
                                         "nameWithOwner": "dtolnay/itoa"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "jobserver",
-                                    "repository": {
-                                        "nameWithOwner": "rust-lang/jobserver-rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "js-sys",
-                                    "repository": {
-                                        "nameWithOwner": "wasm-bindgen/wasm-bindgen"
                                     }
                                 }
                             ]
@@ -52139,7 +52146,33 @@
                 ]
             }
         },
+        "LLNL/playwright": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            }
+        },
         "LLNL/playwright-crx-ai": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3178c6",
+                        "name": "TypeScript"
+                    }
+                ]
+            }
+        },
+        "LLNL/playwright-mcp": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
