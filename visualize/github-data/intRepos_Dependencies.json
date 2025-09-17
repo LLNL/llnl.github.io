@@ -8851,13 +8851,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "myproxyclient",
-                                    "repository": {
-                                        "nameWithOwner": "cedadev/MyProxyClient"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "nest-asyncio",
                                     "repository": {
                                         "nameWithOwner": "erdewit/nest_asyncio"
@@ -40172,9 +40165,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -40426,9 +40417,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-webflux",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -40440,9 +40429,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -40728,9 +40715,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.springframework:spring-websocket",
-                                    "repository": {
-                                        "nameWithOwner": "spring-projects/spring-framework"
-                                    }
+                                    "repository": null
                                 }
                             ]
                         }
@@ -50512,6 +50497,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "orderly-set",
+                                    "repository": {
+                                        "nameWithOwner": "seperman/orderly-set"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "pylint",
                                     "repository": {
                                         "nameWithOwner": "pylint-dev/pylint"
@@ -50595,20 +50587,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "importlib-metadata",
-                                    "repository": {
-                                        "nameWithOwner": "python/importlib_metadata"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "importlib-resources",
-                                    "repository": {
-                                        "nameWithOwner": "python/importlib_resources"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "maestrowf",
                                     "repository": {
                                         "nameWithOwner": "LLNL/maestrowf"
@@ -50671,23 +50649,9 @@
                             "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "actions/cache",
-                                    "repository": {
-                                        "nameWithOwner": "actions/cache"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 }
                             ]
@@ -50853,6 +50817,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "merlin-spellbook",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/merlin-spellbook"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "scikit-learn",
                                     "repository": {
                                         "nameWithOwner": "scikit-learn/scikit-learn"
@@ -50876,6 +50847,13 @@
                                     "packageName": "matplotlib",
                                     "repository": {
                                         "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "merlin-spellbook",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/merlin-spellbook"
                                     }
                                 },
                                 {
@@ -50946,6 +50924,13 @@
                     {
                         "dependencies": {
                             "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "merlin-spellbook",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/merlin-spellbook"
+                                    }
+                                },
                                 {
                                     "packageManager": "PIP",
                                     "packageName": "merlin-spellbook",
@@ -69821,6 +69806,26 @@
         "flux-framework/flux-python": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "cffi",
+                                    "repository": {
+                                        "nameWithOwner": "python-cffi/cffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
