@@ -32704,14 +32704,14 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.Extensions.FileProviders.Embedded",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.Extensions.ObjectPool",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -32842,7 +32842,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Collections.Immutable",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -32898,7 +32898,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.IO.Pipelines",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -33010,7 +33010,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Text.Encodings.Web",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -33117,7 +33117,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Collections.Immutable",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -33232,7 +33232,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Collections.Immutable",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -41350,6 +41350,13 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "arbitrary",
+                                    "repository": {
+                                        "nameWithOwner": "rust-fuzz/arbitrary"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "atomic-waker",
                                     "repository": {
                                         "nameWithOwner": "smol-rs/atomic-waker"
@@ -41378,13 +41385,6 @@
                                 },
                                 {
                                     "packageManager": "RUST",
-                                    "packageName": "base64ct",
-                                    "repository": {
-                                        "nameWithOwner": "RustCrypto/formats"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
                                     "packageName": "bitflags",
                                     "repository": {
                                         "nameWithOwner": "bitflags/bitflags"
@@ -41406,13 +41406,6 @@
                                 },
                                 {
                                     "packageManager": "RUST",
-                                    "packageName": "byteorder",
-                                    "repository": {
-                                        "nameWithOwner": "BurntSushi/byteorder"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
                                     "packageName": "bytes",
                                     "repository": {
                                         "nameWithOwner": "tokio-rs/bytes"
@@ -41421,13 +41414,6 @@
                                 {
                                     "packageManager": "RUST",
                                     "packageName": "bzip2",
-                                    "repository": {
-                                        "nameWithOwner": "trifectatechfoundation/bzip2-rs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "bzip2-sys",
                                     "repository": {
                                         "nameWithOwner": "trifectatechfoundation/bzip2-rs"
                                     }
@@ -41525,6 +41511,20 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "crc",
+                                    "repository": {
+                                        "nameWithOwner": "mrhooray/crc-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "crc-catalog",
+                                    "repository": {
+                                        "nameWithOwner": "akhilles/crc-catalog"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "crc32fast",
                                     "repository": {
                                         "nameWithOwner": "srijs/rust-crc32fast"
@@ -41560,9 +41560,23 @@
                                 },
                                 {
                                     "packageManager": "RUST",
+                                    "packageName": "deflate64",
+                                    "repository": {
+                                        "nameWithOwner": "anatawa12/deflate64-rs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
                                     "packageName": "deranged",
                                     "repository": {
                                         "nameWithOwner": "jhpratt/deranged"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "derive_arbitrary",
+                                    "repository": {
+                                        "nameWithOwner": "rust-fuzz/arbitrary"
                                     }
                                 },
                                 {
@@ -41962,20 +41976,6 @@
                                     "packageName": "iri-string",
                                     "repository": {
                                         "nameWithOwner": "lo48576/iri-string"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "is_terminal_polyfill",
-                                    "repository": {
-                                        "nameWithOwner": "polyfill-rs/is_terminal_polyfill"
-                                    }
-                                },
-                                {
-                                    "packageManager": "RUST",
-                                    "packageName": "itoa",
-                                    "repository": {
-                                        "nameWithOwner": "dtolnay/itoa"
                                     }
                                 }
                             ]
@@ -79175,6 +79175,26 @@
                                     "packageName": "requests",
                                     "repository": {
                                         "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sentry-sdk",
+                                    "repository": {
+                                        "nameWithOwner": "getsentry/sentry-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "kubernetes",
+                                    "repository": {
+                                        "nameWithOwner": "kubernetes-client/python"
                                     }
                                 },
                                 {
