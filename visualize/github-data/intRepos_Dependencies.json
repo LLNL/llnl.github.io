@@ -13858,33 +13858,6 @@
                 ]
             }
         },
-        "GMLC-TDC/helics-action": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "gmlc-tdc/helics-action/install",
-                                    "repository": {
-                                        "nameWithOwner": "GMLC-TDC/helics-action"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#89e051",
-                        "name": "Shell"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/helics-buildenv": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -32940,7 +32913,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Reflection.Metadata",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -33165,14 +33138,14 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.ComponentModel.Composition",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
                                     "packageManager": "NUGET",
                                     "packageName": "System.Configuration.ConfigurationManager",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -33309,7 +33282,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Reflection.Metadata",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -33392,7 +33365,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.ServiceProcess.ServiceController",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 }
                             ]
@@ -47702,72 +47675,6 @@
                     {
                         "color": "#555555",
                         "name": "C"
-                    }
-                ]
-            }
-        },
-        "LLNL/jsonlogic": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coverage",
-                                    "repository": {
-                                        "nameWithOwner": "nedbat/coveragepy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "json-logic-qubit",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mypy",
-                                    "repository": {
-                                        "nameWithOwner": "python/mypy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
                     }
                 ]
             }
