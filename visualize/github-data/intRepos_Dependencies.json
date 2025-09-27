@@ -7893,6 +7893,14 @@
                 ]
             }
         },
+        "ESGF/cc-plugin-wcrp": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
         "ESGF/cic": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -10215,6 +10223,14 @@
                         "name": "Python"
                     }
                 ]
+            }
+        },
+        "ESGF/esgf-qa-qc": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
             }
         },
         "ESGF/esgf-qc": {
@@ -28376,6 +28392,20 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
@@ -31255,6 +31285,19 @@
                 ]
             }
         },
+        "LLNL/Spindle": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "LLNL/Surfactant": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -31490,6 +31533,24 @@
                                     "packageName": "loguru",
                                     "repository": {
                                         "nameWithOwner": "Delgan/loguru"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "dapper-python",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "surfactant",
+                                    "repository": {
+                                        "nameWithOwner": "LLNL/Surfactant"
                                     }
                                 }
                             ]
@@ -42128,6 +42189,13 @@
                                     "packageName": "tree-sitter-bash",
                                     "repository": {
                                         "nameWithOwner": "tree-sitter/tree-sitter-bash"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUST",
+                                    "packageName": "tree-sitter-cmake",
+                                    "repository": {
+                                        "nameWithOwner": "uyha/tree-sitter-cmake"
                                     }
                                 },
                                 {
@@ -71402,19 +71470,6 @@
                     {
                         "color": "#f1e05a",
                         "name": "JavaScript"
-                    }
-                ]
-            }
-        },
-        "hpc/Spindle": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
                     }
                 ]
             }
