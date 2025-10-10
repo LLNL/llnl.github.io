@@ -1,5 +1,6 @@
 from scraper.github import queryManager as qm
 from os import environ as env
+import time  # FIXME temporary fix attempt
 
 ghDataDir = env.get("GITHUB_DATA", "../github-data")
 datfilepath = "%s/intReposInfo.json" % ghDataDir
@@ -24,6 +25,7 @@ for org in orglist:
     print("\n'%s'" % (org))
 
     try:
+        time.sleep(1.2)  # FIXME temporary fix attempt
         outObj = queryMan.queryGitHubFromFile(
             queryPath,
             {"orgName": org, "numRepos": 50, "pgCursor": None},
