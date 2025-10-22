@@ -20895,7 +20895,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "apache/httpcomponents-core"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -42857,54 +42859,6 @@
                 ]
             }
         },
-        "LLNL/ddd": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "matplotlib",
-                                    "repository": {
-                                        "nameWithOwner": "matplotlib/matplotlib"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "numpy",
-                                    "repository": {
-                                        "nameWithOwner": "numpy/numpy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pandas",
-                                    "repository": {
-                                        "nameWithOwner": "pandas-dev/pandas"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python",
-                                    "repository": {
-                                        "nameWithOwner": "python/cpython"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#4d41b1",
-                        "name": "Fortran"
-                    }
-                ]
-            }
-        },
         "LLNL/deepopt": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -43233,6 +43187,14 @@
             }
         },
         "LLNL/dftracer-bak": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": []
+            }
+        },
+        "LLNL/dftracer-traces": {
             "dependencyGraphManifests": {
                 "nodes": []
             },
@@ -51910,7 +51872,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "sentence-transformers",
                                     "repository": {
-                                        "nameWithOwner": "UKPLab/sentence-transformers"
+                                        "nameWithOwner": "huggingface/sentence-transformers"
                                     }
                                 },
                                 {
@@ -71301,11 +71263,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "perfetto",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "pycubexr",
                                     "repository": {
                                         "nameWithOwner": "extra-p/pycubexr"
@@ -79316,6 +79273,13 @@
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/create-github-app-token",
+                                    "repository": {
+                                        "nameWithOwner": "actions/create-github-app-token"
                                     }
                                 },
                                 {
