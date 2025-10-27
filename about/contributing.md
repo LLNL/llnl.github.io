@@ -78,7 +78,7 @@ A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-
 | **All Software** | Browse all LLNL open-source projects | (no tags required) | (image: `logomark-software.svg`) |
 | **AI & Machine Learning** | Integrate artificial intelligence and machine learning into scientific applications | `artificial-intelligence`, `deep-learning`, `machine-learning`, `neural-network` | fa-brain-circuit |
 | **App Infrastructure** | Browse tools for basic functionality common in HPC codes | `app-infrastructure` | fa-gear-complex-code |
-| **Applications** | Browse scientific simulation codes and IT management tools | `application` | fa-laptop-code |
+| **Applications** | Browse scientific simulation codes and IT management tools | `application`, `applications`, `simulation`, `simulations` | fa-laptop-code |
 | **Build Tools** | Automate and simplify complex dependencies and deployments | `build-tools` | fa-tools |
 | **Data Management & Viz** | Manage visualizations with robust features and configurable analysis | `data-management`, `data-viz` | fa-display-chart-up |
 | **Docs & Tutorials** | Learn more about our software via documentation, examples, and tutorials | `docs`, `documentation`, `tutorial`, `tutorials` | fa-file-lines |
@@ -91,7 +91,7 @@ A [JSON file](https://github.com/LLNL/llnl.github.io/blob/main/visualize/github-
 | **System Software** | Manage laptop and desktop computer systems, HPC clusters, and parallel environments | `system-software` | fa-floppy-disk |
 {:.table .table-striped .table-bordered}
 
-A repository can have up to 20 tags. In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `arbitrary-lagrangian-eulerian` (ALE), `benchmark`, `biology`, `checkpoint`, `chemistry`, `cmake`, `compiler`, `cpp` (C++), `data-analysis`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `library`, `materials`, `materials-science`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `natural-language-processing`, `openmp`, `parallel-computing`, `pde`, `python`, `seismology`, `shell`, `simulation`, `solver`, `templates`, `testing`, `uncertainty-quantification`.
+A repository can have up to 20 tags. In general, topic tags raise a repo's visibility on GitHub and help users find related projects. The following tags, which are not associated with the home page categories above, are recommended for LLNL repos: `amr` (adaptive mesh refinement), `arbitrary-lagrangian-eulerian` (ALE), `benchmark`, `biology`, `checkpoint`, `chemistry`, `cmake`, `compiler`, `cpp` (C++), `data-analysis`, `energy`, `exascale-computing`, `finite-elements`, `fortran`, `gpu`, `graph`, `high-dimensional-data`, `hpc`, `java`, `javascript`, `library`, `materials`, `materials-science`, `matlab`, `molecular-dynamics`, `monte-carlo`, `mpi`, `natural-language-processing`, `openmp`, `parallel-computing`, `pde`, `python`, `quantum`, `seismology`, `shell`, `simulation`, `solver`, `templates`, `testing`, `uncertainty-quantification`.
 
 **To add a new category to the catalog:**
 
