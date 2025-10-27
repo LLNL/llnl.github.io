@@ -141,7 +141,7 @@ Cardioid is distributed under the terms of the MIT license. All new contribution
 
 **[SPDX](https://spdx.org/) is an emerging standard for concisely labeling source code with license information.** While it is not a requirement, we encourage you to use SPDX identifiers in your code, as they significantly reduce the amount of license boilerplate included in each source file.
 
-SPDX provides a standard [list of license identifiers](https://spdx.dev/ids/) that can be used to label code.  To use SPDX identifiers in your project, you should find your license's short identifier in the list, and add a special `SPDX-License-Identifier` line to your `README.md`. For example, if your code is licensed under the `MIT` license like [Cardioid](https://github.com/llnl/cardioid), you would add this at the bottom of your README file:
+SPDX provides a standard [list of license identifiers](https://spdx.dev/ids/) that can be used to label code.  To use SPDX identifiers in your project, you should find your license's short identifier in the list and add a special `SPDX-License-Identifier` line to your `README.md`. For example, if your code is licensed under the `MIT` license like [Cardioid](https://github.com/llnl/cardioid), you would add this at the bottom of your README file:
 
 ```bash
 SPDX-License-Identifier: MIT
@@ -171,7 +171,7 @@ For example, visit the [Spack](https://github.com/spack/spack) or [Flux](https:/
 
 As mentioned above, the default assumption for open source projects is ["inbound license = outbound license"](https://opensource.guide/legal/), i.e., contributors provide their code under the same license under which the code is distributed. If this is not enough assurance for your project, you may use the [Developer Certificate of Origin (DCO)](https://developercertificate.org/) with your project.
 
-**In this model, you can require contributors to use Git's [sign-off](https://stackoverflow.com/questions/1962094/what-is-the-sign-off-feature-in-git-for) feature to acknowledge the DCO.** This is *not* a license nor a CLA, but instead is a positive assertion by the contributor that they are authorized to make the contribution they are making. You should document your project's requirement of DCO sign-off in your `README.md` or your [`CONTRIBUTING.md` file](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
+**In this model, you can require contributors to use Git's [sign-off](https://stackoverflow.com/questions/1962094/what-is-the-sign-off-feature-in-git-for) feature to acknowledge the DCO.** This is *not* a license nor a CLA but instead is a positive assertion by the contributor that they are authorized to make the contribution they are making. You should document your project's requirement of DCO sign-off in your `README.md` or your [`CONTRIBUTING.md` file](https://help.github.com/articles/setting-guidelines-for-repository-contributors/).
 
 You are not required to use the DCO, and it may add overhead to your process that deters potential contributors. **Unless you feel that you need this level of assurance for your project, we recommend that you simply rely on the default inbound = outbound assumption.**
 
