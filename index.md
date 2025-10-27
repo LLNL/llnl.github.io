@@ -99,10 +99,12 @@ breadcrumb: Home
                         <i class="fa fa-light fa-search text-software-blue ms--2"></i>
                     </div>
                     <div class="col-7 col-md-6 col-lg-3 d-flex align-items-center text-quantum-slate mt-md-2">
+                    <!-- comment out proprietary repos toggle
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" ng-model="showProprietaryRepositories" style="height: 1.5em; width: 3em;" ng-change="trackProjectImpressions()" >
                             <label class="form-check-label fw-medium fs-14 ms-2" for="flexSwitchCheckDefault">Show proprietary repos </label><i class="fa fa-light fa-lock ms-2"></i>
                         </div>
+                    -->
                     </div>
                     <div class="col-5 col-md-6 col-lg-3 row align-items-center justify-content-end px-0 text-quantum-slate mt-md-2">
                         <div class="col-4 text-end">
