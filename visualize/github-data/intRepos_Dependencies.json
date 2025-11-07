@@ -20909,7 +20909,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "apache/httpcomponents-core"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -36357,7 +36359,12 @@
                 "nodes": []
             },
             "languages": {
-                "nodes": []
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
             }
         },
         "LLNL/anchoring": {
@@ -54464,6 +54471,19 @@
         "LLNL/shroud": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
@@ -77208,6 +77228,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "awscli",
+                                    "repository": {
+                                        "nameWithOwner": "aws/aws-cli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "boto3",
                                     "repository": {
                                         "nameWithOwner": "boto/boto3"
@@ -77222,6 +77249,62 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "certifi",
+                                    "repository": {
+                                        "nameWithOwner": "certifi/python-certifi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "charset-normalizer",
+                                    "repository": {
+                                        "nameWithOwner": "jawah/charset_normalizer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "colorama",
+                                    "repository": {
+                                        "nameWithOwner": "tartley/colorama"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": {
+                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "idna",
+                                    "repository": {
+                                        "nameWithOwner": "kjd/idna"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jmespath",
+                                    "repository": {
+                                        "nameWithOwner": "jmespath/jmespath.py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyasn1",
+                                    "repository": {
+                                        "nameWithOwner": "etingof/pyasn1"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-dateutil",
+                                    "repository": {
+                                        "nameWithOwner": "dateutil/dateutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "python-gitlab",
                                     "repository": {
                                         "nameWithOwner": "python-gitlab/python-gitlab"
@@ -77229,9 +77312,51 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "pyyaml",
+                                    "repository": {
+                                        "nameWithOwner": "yaml/pyyaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests-toolbelt",
+                                    "repository": {
+                                        "nameWithOwner": "requests/toolbelt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "rsa",
+                                    "repository": {
+                                        "nameWithOwner": "sybrenstuvel/python-rsa"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "s3transfer",
+                                    "repository": {
+                                        "nameWithOwner": "boto/s3transfer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "sentry-sdk",
                                     "repository": {
                                         "nameWithOwner": "getsentry/sentry-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "six",
+                                    "repository": {
+                                        "nameWithOwner": "benjaminp/six"
                                     }
                                 },
                                 {
@@ -77422,6 +77547,19 @@
                         }
                     }
                 ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
+        "spack/spack-it": {
+            "dependencyGraphManifests": {
+                "nodes": []
             },
             "languages": {
                 "nodes": [
