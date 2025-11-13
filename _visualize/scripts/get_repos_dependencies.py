@@ -32,8 +32,8 @@ for repo in repolist:
             {
                 "ownName": r[0],
                 "repoName": r[1],
-                "numManifests": 100,
-                "numDependents": 100,
+                "numManifests": 25,
+                "numDependents": 75,
                 "pgCursor": None,
             },
             paginate=True,
