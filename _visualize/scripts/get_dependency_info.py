@@ -42,7 +42,6 @@ for repo in repolist:
                 "ownName": r[0],
                 "repoName": r[1],
             },
-            headers={"Accept": "application/vnd.github.hawkgirl-preview+json"},
         )
     except Exception as error:
         print("Warning: Could not complete '%s'" % (repo))
