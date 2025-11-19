@@ -6864,7 +6864,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -7205,7 +7205,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -7662,7 +7662,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -8963,7 +8963,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -9624,7 +9624,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -9896,7 +9896,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -11381,7 +11381,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -11937,7 +11937,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -14362,40 +14362,6 @@
             },
             "languages": {
                 "nodes": []
-            }
-        },
-        "GMLC-TDC/helics-ns3": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "gmlc-tdc/helics-action/install",
-                                    "repository": {
-                                        "nameWithOwner": "GMLC-TDC/helics-action"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
-                    }
-                ]
             }
         },
         "GMLC-TDC/helics-omnetpp": {
@@ -52411,7 +52377,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -70326,7 +70292,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "pydantic-settings",
                                     "repository": {
-                                        "nameWithOwner": "danields761/pydantic-settings"
+                                        "nameWithOwner": "pydantic/pydantic-settings"
                                     }
                                 },
                                 {
@@ -72196,6 +72162,147 @@
                                     "packageName": "sphinx-rtd-theme",
                                     "repository": {
                                         "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "hendrikmuhs/ccache-action",
+                                    "repository": {
+                                        "nameWithOwner": "hendrikmuhs/ccache-action"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/cache",
+                                    "repository": {
+                                        "nameWithOwner": "actions/cache"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
                                     }
                                 }
                             ]
