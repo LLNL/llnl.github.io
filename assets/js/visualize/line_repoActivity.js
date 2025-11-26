@@ -57,12 +57,6 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .nice();
 
         var dToday = x.domain()[1];
-        // Supercomputing
-        var dSupercomp = '11-18';
-        // Thanksgiving
-        var dThnxgiv = '11-25';
-        // Christmas
-        var dXmas = '12-25';
 
         function addDateLine(dateString, label) {
             var dateObj = getYearDate(dateString, dToday);
@@ -160,9 +154,15 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             .attr('d', valueline);
 
         // Draw date-of-interest reference lines
-        addDateLine(dSupercomp, 'Supercomputing');
-        addDateLine(dThnxgiv, 'Thanksgiving');
-        addDateLine(dXmas, 'Christmas');
+        var annotationDates = {
+            'Supercomputing': '11-18',
+            'Thanksgiving': '11-25',
+            'Christmas': '12-25'
+        };
+        for (var annotationName in annotationDates) {
+            var annotationDate = annotationDates[annotationName];
+            addDateLine(annotationDate, annotationName);
+        }
 
         // Draw dots
         chart

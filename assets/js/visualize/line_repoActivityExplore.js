@@ -34,7 +34,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             element = document.querySelector('.' + areaID).parentNode,
             containerWidth = element.offsetWidth,
             width = containerWidth - margin.left - margin.right,
-            height = Math.max(containerWidth / 3, 400)  - margin.top - margin.bottom;
+            height = Math.max(containerWidth / 3, 400) - margin.top - margin.bottom;
         var dotRadius = stdDotRadius;
 
         var x = d3
@@ -86,7 +86,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 }
                 return '<sub>[Week of ' + formatTime(d.date) + ']</sub>' + '<br>' + d.value + repos;
             });
-        
+
         var pieTip = d3
             .tip()
             .attr('class', 'd3-tip')
@@ -96,14 +96,8 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
             });
 
         var dToday = x.domain()[1];
-        // Supercomputing
-        var dSupercomp = '11-18';
-        // Thanksgiving
-        var dThnxgiv = '11-25';
-        // Christmas
-        var dXmas = '12-25';
 
-        function update(x, y) {    
+        function update(x, y) {
             chart.selectAll('g').remove();
 
             var xAxis = d3.axisBottom().scale(x);
@@ -187,9 +181,15 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
                 .attr('d', valueline);
 
             // Draw date-of-interest reference lines
-            addDateLine(dSupercomp, 'Supercomputing');
-            addDateLine(dThnxgiv, 'Thanksgiving');
-            addDateLine(dXmas, 'Christmas');
+            var annotationDates = {
+                'Supercomputing': '11-18',
+                'Thanksgiving': '11-25',
+                'Christmas': '12-25'
+            };
+            for (var annotationName in annotationDates) {
+                var annotationDate = annotationDates[annotationName];
+                addDateLine(annotationDate, annotationName);
+            }
 
             // Draw dots
             chart
@@ -269,7 +269,7 @@ function draw_line_repoActivity(areaID, repoNameWOwner) {
 
             // Colors used for coloring the pie chart
             const colors = d3.scaleSequential(d3.interpolate('lightblue', 'white')).domain([0, root.descendants().length]);
-            
+
             // Equivalent of chart but for the pie chart
             const pieGroup = chart
                 .append('g')
