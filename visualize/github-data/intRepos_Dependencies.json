@@ -13592,6 +13592,65 @@
                 ]
             }
         },
+        "GMLC-TDC/HELICS-HLA": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.fasterxml.jackson.core:jackson-core",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "com.fasterxml.jackson.core:jackson-databind",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "gov.nist.hla:gateway-federate",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.logging.log4j:log4j-api",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.logging.log4j:log4j-core",
+                                    "repository": {
+                                        "nameWithOwner": "apache/logging-log4j2"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.apache.maven.plugins:maven-shade-plugin",
+                                    "repository": {
+                                        "nameWithOwner": "apache/maven-shade-plugin"
+                                    }
+                                },
+                                {
+                                    "packageManager": "MAVEN",
+                                    "packageName": "org.porticoproject:portico",
+                                    "repository": null
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#b07219",
+                        "name": "Java"
+                    }
+                ]
+            }
+        },
         "GMLC-TDC/HELICS-PMU": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -21117,9 +21176,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": {
-                                        "nameWithOwner": "apache/httpcomponents-core"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -40404,7 +40461,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -40642,7 +40701,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -41400,7 +41461,9 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.mockito:mockito-junit-jupiter",
-                                    "repository": null
+                                    "repository": {
+                                        "nameWithOwner": "mockito/mockito"
+                                    }
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43456,6 +43519,68 @@
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
                                     }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
+                                    }
                                 }
                             ]
                         }
@@ -44480,123 +44605,6 @@
                                     "packageName": "actions/upload-pages-artifact",
                                     "repository": {
                                         "nameWithOwner": "actions/upload-pages-artifact"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "LLNL/elastic-stacker": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "black",
-                                    "repository": {
-                                        "nameWithOwner": "psf/black"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "build",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/build"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ipython",
-                                    "repository": {
-                                        "nameWithOwner": "ipython/ipython"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "setuptools",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/setuptools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "setuptools-scm",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/setuptools-scm"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "twine",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/twine"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ecs-logging",
-                                    "repository": {
-                                        "nameWithOwner": "elastic/ecs-logging-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "fire",
-                                    "repository": {
-                                        "nameWithOwner": "google/python-fire"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "httpx",
-                                    "repository": {
-                                        "nameWithOwner": "encode/httpx"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "marshmallow",
-                                    "repository": {
-                                        "nameWithOwner": "marshmallow-code/marshmallow"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-slugify",
-                                    "repository": {
-                                        "nameWithOwner": "un33k/python-slugify"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "nameWithOwner": "yaml/pyyaml"
                                     }
                                 }
                             ]
@@ -48054,72 +48062,6 @@
                     {
                         "color": "#555555",
                         "name": "C"
-                    }
-                ]
-            }
-        },
-        "LLNL/jsonlogic": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "coverage",
-                                    "repository": {
-                                        "nameWithOwner": "coveragepy/coveragepy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "json-logic-qubit",
-                                    "repository": null
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mypy",
-                                    "repository": {
-                                        "nameWithOwner": "python/mypy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#f34b7d",
-                        "name": "C++"
                     }
                 ]
             }
@@ -55621,6 +55563,13 @@
                                     "packageName": "actions/setup-python",
                                     "repository": {
                                         "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
                                     }
                                 }
                             ]
@@ -73224,61 +73173,6 @@
                 "nodes": []
             }
         },
-        "mfem/web": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "jinja2",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/jinja"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "markdown",
-                                    "repository": {
-                                        "nameWithOwner": "Python-Markdown/markdown"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mkdocs",
-                                    "repository": {
-                                        "nameWithOwner": "mkdocs/mkdocs"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "mkdocs-exclude-search",
-                                    "repository": {
-                                        "nameWithOwner": "chrieke/mkdocs-exclude-search"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyyaml",
-                                    "repository": {
-                                        "nameWithOwner": "yaml/pyyaml"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#1d365d",
-                        "name": "Less"
-                    }
-                ]
-            }
-        },
         "mkite-group/mkite_db": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -73495,7 +73389,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "monty",
                                     "repository": {
-                                        "nameWithOwner": "materialsvirtuallab/monty"
+                                        "nameWithOwner": "materialyzeai/monty"
                                     }
                                 },
                                 {
@@ -74385,110 +74279,6 @@
         "sabersw/pysaber": {
             "dependencyGraphManifests": {
                 "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#3572A5",
-                        "name": "Python"
-                    }
-                ]
-            }
-        },
-        "shusenl/nlpvis": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "bson",
-                                    "repository": {
-                                        "nameWithOwner": "py-bson/bson"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "eventlet",
-                                    "repository": {
-                                        "nameWithOwner": "eventlet/eventlet"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "flask",
-                                    "repository": {
-                                        "nameWithOwner": "pallets/flask"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "google-cloud",
-                                    "repository": {
-                                        "nameWithOwner": "googleapis/google-cloud-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "h5py",
-                                    "repository": {
-                                        "nameWithOwner": "h5py/h5py"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "nltk",
-                                    "repository": {
-                                        "nameWithOwner": "nltk/nltk"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pattern",
-                                    "repository": {
-                                        "nameWithOwner": "clips/pattern"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "python-socketio",
-                                    "repository": {
-                                        "nameWithOwner": "miguelgrinberg/python-socketio"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "requests",
-                                    "repository": {
-                                        "nameWithOwner": "psf/requests"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "torch",
-                                    "repository": {
-                                        "nameWithOwner": "pytorch/pytorch"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "torchvision",
-                                    "repository": {
-                                        "nameWithOwner": "pytorch/vision"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "ujson",
-                                    "repository": {
-                                        "nameWithOwner": "ultrajson/ultrajson"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
             },
             "languages": {
                 "nodes": [
