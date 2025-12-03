@@ -170,6 +170,20 @@ The informational pages on this site (e.g., this page, [About](/about), [FAQ](/a
 
 **To create an accordion slug:** Accordion titles automatically generate a unique URL hash so the user can go directly to an expanded accordion using a unique URL. As an accordion's title is often lengthy question text, a shortened slug can be used to shorten the URL hash. For example, this accordion's title is `How do I update the FAQ or other text?` but the hash is the much shorter `#faq`. Add `slug='unique-hash'` after the `title` in the accordion's `include` syntax. Slugs should be unique to the page they're on; in other words, a page should not have two accordions with the same slug.
 
+Here is a template for creating a new accordion. Somewhat unintuitively, the title of the accordion appears *below* its contents.
+
+```liquid
+{% raw %}
+{% capture accordionContent %}
+
+Text/content goes here
+
+{% endcapture %}
+  {% assign accordionContent = accordionContent | markdownify %}
+  {% include components/accordion.html title='Title of the FAQ in the form of a question?' slug='unique-hash' content=accordionContent %}
+{% endraw %}
+```
+
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I update the FAQ or other text?' slug='faq' content=accordionContent %}
