@@ -118,6 +118,6 @@ badge](https://img.shields.io/badge/R.lic-3-yellow.svg)](/project/policies/licen
 ### References
 
 [^bss]: [Better Scientific Software](https://bssw.io)
-[^xsdk]: [xSDK Community Policies](https://xsdk.info/policies)
+[^xsdk]: [xSDK Community Policies](https://github.com/xsdk-project/xsdk-community-policies)
 [^sl]: [Smart Libraries: Best SQE Practices for Libraries with Emphasis on Scientific Computing](https://www.osti.gov/biblio/936460)
 [^wsc]: [Weapons Simulation and Computing (WSC) Software Guidelines](https://lc.llnl.gov/confluence/display/WSCSOFT/WSC+Software+Guidelines) <i class="fa fa-light fa-lock"></i>
