@@ -35,7 +35,7 @@ If you’re new to GitHub and open source in general, figuring out how to get se
     * **Company**: `Lawrence Livermore National Laboratory, @LLNL`.
     * **Location**: Your primary location.
     {:.mb-3}
-3. Add your `@LLNL` email address (and any aliases) to your [Email Settings](https://github.com/settings/emails) page. This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
+3. Add your `@llnl.gov` email address (and any aliases) to your [Email Settings](https://github.com/settings/emails) page. This will link any commits done via [your Git identity](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity) to your GitHub account.
 
 4. [Enable two-factor authentication (2FA)](https://github.com/settings/security).
     * [Learn how to set up 2FA at the Lab <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/security-access/2fa).
@@ -101,7 +101,7 @@ If you are an employee at LLNL and have 2FA enabled, you are eligible to join th
   {% include components/accordion.html title='How do I join the LLNL organization on GitHub?'  slug='join' content=accordionContent %}
 
 {% capture accordionContent %}
-Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process–even if you plan on setting the repository to *Private* instead of *Public*. All information produced by LLNL must follow the guidance set forth by the LLNL IM policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/). LLNL employees can follow ["one-stop shop" instructions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/open-source/one-stop-shop/) for releasing software.
+Before content is placed into an LLNL GitHub.com repository, it should be reviewed and released via LLNL's Information Management (IM) process–even if you plan on setting the repository to *Private* instead of *Public*. All information produced by LLNL must follow the guidance set forth by the LLNL IM/RR policy for both [initial release and incremental contributions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/opensource/contributing/). LLNL employees can follow ["one-stop shop" instructions <i class="fa fa-light fa-lock"></i>](https://dev.llnl.gov/open-source/one-stop-shop/) for releasing software.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I get my repo reviewed and released for GitHub?' slug='released' content=accordionContent %}
@@ -117,7 +117,7 @@ Remember that these repositories *are hosted on GitHub* servers, ***not** LLNL s
 * No controlled unclassified information (CUI)
 * No unclassified controlled nuclear information (UCNI)
 
-When in doubt, contact a Derivative Classifier (DC) and/or IM for further guidance.
+When in doubt, contact a Derivative Classifier (DC) and/or IM/RR for further guidance.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title="What is/isn't allowed in my repo?"  slug='allowed' content=accordionContent %}
@@ -145,11 +145,29 @@ The [JOSS RtD site](https://joss.readthedocs.io/en/latest/submitting.html) descr
   {% include components/accordion.html title="My project is approved for release. Now what? What about docs?"  slug='approved' content=accordionContent %}
 
 {% capture accordionContent %}
+
+Most LLNL repos use the standard GitHub URL of `github.com/llnl/*`. However, you may use the `software.llnl.gov` domain, where you append `/*` to it. Alternatively, you can use GitHub pages to create a custom `*.llnl.gov` URL that redirects to `software.llnl.gov/*`.
+
+| --- | ----- | ---- |
+| URL | Setup | Help |
+| --- | ----- | ---- |
+| `github.com/llnl/*` | [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) | <github-admin@llnl.gov> |
+| `software.llnl.gov/*` | [Configuring a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) | <webmaster-comp@llnl.gov> |
+| `*.llnl.gov` | [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) | <github-admin@llnl.gov> |
+{:.table .table-striped .table-bordered}
+
+**Note:** `software.llnl.gov` uses a reverse proxy and is hosted on LLNL Computing servers, which fetches the content from GitHub behind the scenes. If you would like to use the `software.llnl.gov/*` URL, you do *not* need to check the "Enforce HTTPS" box in your repo's settings (Settings > Pages > Custom Domain > Enforce HTTPS). This checkbox is for sites that point directly to GitHub, not the LLNL Computing servers. The <webmaster-comp@llnl.gov> team manages the DNS and SSL certificate for `software.llnl.gov` only, not for `*.llnl.gov`.
+
+{% endcapture %}
+  {% assign accordionContent = accordionContent | markdownify %}
+  {% include components/accordion.html title='Can I create a custom URL for my repo?' slug='repo-url' content=accordionContent %}
+
+{% capture accordionContent %}
 <!-- START: Warning Box -->
 {% capture alertContent %}
 
 * Repositories within the LLNL organization are owned and managed by LLNL. Please do not create personal repositories here.
-* All LLNL repos must go through the IM process (see the FAQ [How do I get my repo reviewed and released for GitHub?](https://software.llnl.gov/about/faq/#released)) and display the appropriate open source license and `LLNL-CODE-xxxxxx` release number.
+* All LLNL repos must go through the IM/RR process (see the FAQ [How do I get my repo reviewed and released for GitHub?](https://software.llnl.gov/about/faq/#released)) and display the appropriate open source license and `LLNL-CODE-xxxxxxx` release number.
 * If the repo wasn't developed at LLNL, its license needs to be clearly indicated. See the [LLNL Software Licensing](/about/licenses) page for examples.
 
 {% endcapture %}
@@ -184,7 +202,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
 
     * See helpful hints on [GitHub's topic help page](https://help.github.com/articles/about-topics/). Add tags relevant to your project's programming language, platforms, and more (e.g., Python, HPC, Linux).
 
-2. Let [X/Twitter](https://twitter.com/LLNL_OpenSource) followers know your project is available on GitHub. Feel free to tag the `@LLNL_OpenSource` handle on your own tweet, or submit a request to [open-source@llnl.gov](mailto:open-source@llnl.gov) so we can post on your behalf.
+2. Let [X/Twitter](https://twitter.com/Livermore_Comp) followers know your project is available on GitHub. Feel free to tag the `@Livermore_Comp` handle in your own post, or submit a request to <comp-comms@llnl.gov> to post on your behalf.
 
 3. Publicize any outreach activities or major milestones related to your project such as:
    * A paper/poster/presentation is accepted at a conference
@@ -193,7 +211,7 @@ Now that your project is on GitHub, make sure users and contributors can find it
    * You're guest blogging or speaking on a podcast
    {:.mb-3}
 
-4. Include a summary of your project with GitHub and documentation links on LLNL's [Computing website](https://computing.llnl.gov/projects). Contact [webmaster-comp@llnl.gov](mailto:webmaster-comp@llnl.gov) for this particular task.
+4. Include a summary of your project with GitHub and documentation links on LLNL's [Computing website](https://computing.llnl.gov/projects). Contact <comp-comms@llnl.gov> for this particular task.
 {% endcapture %}
   {% assign accordionContent = accordionContent | markdownify %}
   {% include components/accordion.html title='How do I let people know about my new repo?'  slug='publicize' content=accordionContent %}
@@ -228,13 +246,13 @@ If you need help re-assigning permissions in your repo, contact [github-admin@ll
   {% include components/accordion.html title='What should I do if my repo is no longer actively developed/maintained?'  slug='remove' content=accordionContent %}
 
 {% capture accordionContent %}
-The process to transfer organizational ownership is straightforward, but generally discouraged. This should really only be done for projects that are starting to build a "bigger than LLNL" community, and the decision should not be made lightly.
+The process to transfer organizational ownership is straightforward but generally discouraged. This should really only be done for projects that are starting to build a "bigger than LLNL" community, and the decision should not be made lightly.
 
 Migrating the repo outside of the LLNL organization requires an organization admin. Contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to coordinate the move.
 
 **Once the repository has moved to the new organization:**
 
-1. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo's name. This allows for the software catalog to continue including the project even after it moves.
+1. Submit a pull request updating the [`input_lists.json` file](https://github.com/LLNL/llnl.github.io/blob/main/_visualize/input_lists.json) to add the new organization/repo's name. This allows the software catalog to continue including the project even after it moves.
 
 2. Retain topic tags (e.g., `math-physics`) to connect it to this website's browsable categories.
 {% endcapture %}
@@ -245,7 +263,7 @@ Migrating the repo outside of the LLNL organization requires an organization adm
 <!-- START: Warning Box -->
 {% capture alertContent %}
 
-Even if your collection of repos are housed under another organization but developed on behalf of LLNL, they must go through the IM process (see the FAQ [How do I get my repo reviewed and released for GitHub?](https://software.llnl.gov/about/faq/#released)) and display the appropriate open source license and `LLNL-CODE-xxxxxx` release number.
+Even if your collection of repos are housed under another organization but developed on behalf of LLNL, they must go through the IM/RR process (see the FAQ [How do I get my repo reviewed and released for GitHub?](https://software.llnl.gov/about/faq/#released)) and display the appropriate open source license and `LLNL-CODE-xxxxxxx` release number.
 
 {% endcapture %}
 {% assign alertContent = alertContent | markdownify %}
