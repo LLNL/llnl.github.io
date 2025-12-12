@@ -18412,6 +18412,26 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
@@ -32287,7 +32307,7 @@
                                     "packageManager": "PIP",
                                     "packageName": "cve-bin-tool",
                                     "repository": {
-                                        "nameWithOwner": "intel/cve-bin-tool"
+                                        "nameWithOwner": "ossf/cve-bin-tool"
                                     }
                                 },
                                 {
@@ -38636,8 +38656,8 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#e16737",
+                        "name": "MATLAB"
                     }
                 ]
             }
@@ -47357,6 +47377,13 @@
                                 },
                                 {
                                     "packageManager": "PIP",
+                                    "packageName": "aiojobs",
+                                    "repository": {
+                                        "nameWithOwner": "aio-libs/aiojobs"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
                                     "packageName": "cachetools",
                                     "repository": {
                                         "nameWithOwner": "tkem/cachetools"
@@ -47408,6 +47435,47 @@
                                     "packageName": "dorny/paths-filter",
                                     "repository": {
                                         "nameWithOwner": "dorny/paths-filter"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/build-push-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-qemu-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-qemu-action"
                                     }
                                 }
                             ]
@@ -48510,10 +48578,186 @@
                         "dependencies": {
                             "nodes": [
                                 {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": {
+                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "jinja2",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/jinja"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "markupsafe",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/markupsafe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "matplotlib",
+                                    "repository": {
+                                        "nameWithOwner": "matplotlib/matplotlib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "myst-parser",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/MyST-Parser"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pydantic",
+                                    "repository": {
+                                        "nameWithOwner": "pydantic/pydantic"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "recommonmark",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/recommonmark"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-copybutton",
+                                    "repository": {
+                                        "nameWithOwner": "executablebooks/sphinx-copybutton"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-gallery",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-gallery/sphinx-gallery"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-immaterial",
+                                    "repository": {
+                                        "nameWithOwner": "jbms/sphinx-immaterial"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-markdown-tables",
+                                    "repository": {
+                                        "nameWithOwner": "ryanfox/sphinx-markdown-tables"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinxcontrib-spelling",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-contrib/spelling"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
                                     "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
                                     }
                                 }
                             ]
@@ -72364,6 +72608,54 @@
                 ]
             }
         },
+        "hypre-space/hypre": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "breathe",
+                                    "repository": {
+                                        "nameWithOwner": "breathe-doc/breathe"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "docutils",
+                                    "repository": {
+                                        "nameWithOwner": "jwilk-mirrors/docutils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx",
+                                    "repository": {
+                                        "nameWithOwner": "sphinx-doc/sphinx"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "sphinx-rtd-theme",
+                                    "repository": {
+                                        "nameWithOwner": "readthedocs/sphinx_rtd_theme"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#555555",
+                        "name": "C"
+                    }
+                ]
+            }
+        },
         "hypre-space/hypredrive": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -74614,6 +74906,110 @@
                 ]
             }
         },
+        "shusenl/nlpvis": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "bson",
+                                    "repository": {
+                                        "nameWithOwner": "py-bson/bson"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "eventlet",
+                                    "repository": {
+                                        "nameWithOwner": "eventlet/eventlet"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "flask",
+                                    "repository": {
+                                        "nameWithOwner": "pallets/flask"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "google-cloud",
+                                    "repository": {
+                                        "nameWithOwner": "googleapis/google-cloud-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "h5py",
+                                    "repository": {
+                                        "nameWithOwner": "h5py/h5py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "nltk",
+                                    "repository": {
+                                        "nameWithOwner": "nltk/nltk"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pattern",
+                                    "repository": {
+                                        "nameWithOwner": "clips/pattern"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "python-socketio",
+                                    "repository": {
+                                        "nameWithOwner": "miguelgrinberg/python-socketio"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torch",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/pytorch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "torchvision",
+                                    "repository": {
+                                        "nameWithOwner": "pytorch/vision"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ujson",
+                                    "repository": {
+                                        "nameWithOwner": "ultrajson/ultrajson"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "spack/all-pythons": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -74628,6 +75024,1067 @@
             },
             "languages": {
                 "nodes": []
+            }
+        },
+        "spack/cache.spack.io": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-sitemap",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-sitemap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown",
+                                    "repository": {
+                                        "nameWithOwner": "deepin-community/ruby-kramdown"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown-parser-gfm",
+                                    "repository": {
+                                        "nameWithOwner": "kramdown/parser-gfm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "addressable",
+                                    "repository": {
+                                        "nameWithOwner": "sporkmonger/addressable"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "colorator",
+                                    "repository": {
+                                        "nameWithOwner": "octopress/colorator"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "concurrent-ruby",
+                                    "repository": {
+                                        "nameWithOwner": "ruby-concurrency/concurrent-ruby"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "em-websocket",
+                                    "repository": {
+                                        "nameWithOwner": "igrigorik/em-websocket"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "eventmachine",
+                                    "repository": {
+                                        "nameWithOwner": "eventmachine/eventmachine"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "ffi",
+                                    "repository": {
+                                        "nameWithOwner": "ffi/ffi"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "forwardable-extended",
+                                    "repository": {
+                                        "nameWithOwner": "envygeeks/forwardable-extended"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "google-protobuf",
+                                    "repository": {
+                                        "nameWithOwner": "protocolbuffers/protobuf"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "http_parser.rb",
+                                    "repository": {
+                                        "nameWithOwner": "tmm1/http_parser.rb"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "i18n",
+                                    "repository": {
+                                        "nameWithOwner": "ruby-i18n/i18n"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-sass-converter",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-sass-converter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-sitemap",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-sitemap"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "jekyll-watch",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/jekyll-watch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown",
+                                    "repository": {
+                                        "nameWithOwner": "deepin-community/ruby-kramdown"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "kramdown-parser-gfm",
+                                    "repository": {
+                                        "nameWithOwner": "kramdown/parser-gfm"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "liquid",
+                                    "repository": {
+                                        "nameWithOwner": "Shopify/liquid"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "listen",
+                                    "repository": {
+                                        "nameWithOwner": "guard/listen"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "mercenary",
+                                    "repository": {
+                                        "nameWithOwner": "jekyll/mercenary"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "pathutil",
+                                    "repository": {
+                                        "nameWithOwner": "envygeeks/pathutil"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "public_suffix",
+                                    "repository": {
+                                        "nameWithOwner": "weppos/publicsuffix-ruby"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "rb-fsevent",
+                                    "repository": {
+                                        "nameWithOwner": "guard/rb-fsevent"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "rb-inotify",
+                                    "repository": {
+                                        "nameWithOwner": "guard/rb-inotify"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "rexml",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/rexml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "rouge",
+                                    "repository": {
+                                        "nameWithOwner": "rouge-ruby/rouge"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "safe_yaml",
+                                    "repository": {
+                                        "nameWithOwner": "dtao/safe_yaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "sass-embedded",
+                                    "repository": {
+                                        "nameWithOwner": "sass-contrib/sass-embedded-host-ruby"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "sass-embedded",
+                                    "repository": {
+                                        "nameWithOwner": "sass-contrib/sass-embedded-host-ruby"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "terminal-table",
+                                    "repository": {
+                                        "nameWithOwner": "tj/terminal-table"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "unicode-display_width",
+                                    "repository": {
+                                        "nameWithOwner": "janlelis/unicode-display_width"
+                                    }
+                                },
+                                {
+                                    "packageManager": "RUBYGEMS",
+                                    "packageName": "webrick",
+                                    "repository": {
+                                        "nameWithOwner": "ruby/webrick"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyaml",
+                                    "repository": {
+                                        "nameWithOwner": "mk-fg/pretty-yaml"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "requests",
+                                    "repository": {
+                                        "nameWithOwner": "psf/requests"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@alloc/quick-lru",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/quick-lru"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@babel/runtime",
+                                    "repository": {
+                                        "nameWithOwner": "babel/babel"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/gen-mapping",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/gen-mapping"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/resolve-uri",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/resolve-uri"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/set-array",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/set-array"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/sourcemap-codec",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/sourcemap-codec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/sourcemap-codec",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/sourcemap-codec"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@jridgewell/trace-mapping",
+                                    "repository": {
+                                        "nameWithOwner": "jridgewell/trace-mapping"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@nodelib/fs.scandir",
+                                    "repository": {
+                                        "nameWithOwner": "nodelib/nodelib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@nodelib/fs.stat",
+                                    "repository": {
+                                        "nameWithOwner": "nodelib/nodelib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "@nodelib/fs.walk",
+                                    "repository": {
+                                        "nameWithOwner": "nodelib/nodelib"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "accepts",
+                                    "repository": {
+                                        "nameWithOwner": "jshttp/accepts"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-regex",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/ansi-regex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ansi-styles",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/ansi-styles"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "any-promise",
+                                    "repository": {
+                                        "nameWithOwner": "kevinbeaty/any-promise"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "anymatch",
+                                    "repository": {
+                                        "nameWithOwner": "micromatch/anymatch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "anymatch",
+                                    "repository": {
+                                        "nameWithOwner": "micromatch/anymatch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "apache-crypt",
+                                    "repository": {
+                                        "nameWithOwner": "gevorg/apache-crypt"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "apache-md5",
+                                    "repository": {
+                                        "nameWithOwner": "gevorg/apache-md5"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "arg",
+                                    "repository": {
+                                        "nameWithOwner": "vercel/arg"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "arr-diff",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/arr-diff"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "arr-flatten",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/arr-flatten"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "arr-union",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/arr-union"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "array-union",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/array-union"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "array-unique",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/array-unique"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "assign-symbols",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/assign-symbols"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "async-each",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "atob",
+                                    "repository": {
+                                        "nameWithOwner": "HorseAJ86/node-browser-compat"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "autoprefixer",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/autoprefixer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "balanced-match",
+                                    "repository": {
+                                        "nameWithOwner": "juliangruber/balanced-match"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "base",
+                                    "repository": {
+                                        "nameWithOwner": "base-repos/base"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "basic-auth",
+                                    "repository": {
+                                        "nameWithOwner": "jshttp/basic-auth"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "batch",
+                                    "repository": {
+                                        "nameWithOwner": "visionmedia/batch"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bcryptjs",
+                                    "repository": {
+                                        "nameWithOwner": "dcodeIO/bcrypt.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "binary-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/binary-extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "binary-extensions",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/binary-extensions"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "bindings",
+                                    "repository": {
+                                        "nameWithOwner": "TooTallNate/node-bindings"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "brace-expansion",
+                                    "repository": {
+                                        "nameWithOwner": "juliangruber/brace-expansion"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "braces",
+                                    "repository": {
+                                        "nameWithOwner": "micromatch/braces"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "braces",
+                                    "repository": {
+                                        "nameWithOwner": "micromatch/braces"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "browserslist",
+                                    "repository": {
+                                        "nameWithOwner": "browserslist/browserslist"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "cache-base",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/cache-base"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "camelcase-css",
+                                    "repository": {
+                                        "nameWithOwner": "stevenvachon/camelcase-css"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "caniuse-lite",
+                                    "repository": {
+                                        "nameWithOwner": "browserslist/caniuse-lite"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chalk",
+                                    "repository": {
+                                        "nameWithOwner": "chalk/chalk"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chokidar",
+                                    "repository": {
+                                        "nameWithOwner": "paulmillr/chokidar"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "chokidar",
+                                    "repository": {
+                                        "nameWithOwner": "paulmillr/chokidar"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "class-utils",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/class-utils"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "cliui",
+                                    "repository": {
+                                        "nameWithOwner": "yargs/cliui"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "collection-visit",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/collection-visit"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "color",
+                                    "repository": {
+                                        "nameWithOwner": "Qix-/color"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "color-convert",
+                                    "repository": {
+                                        "nameWithOwner": "Qix-/color-convert"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "color-name",
+                                    "repository": {
+                                        "nameWithOwner": "colorjs/color-name"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "color-string",
+                                    "repository": {
+                                        "nameWithOwner": "Qix-/color-string"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "colors",
+                                    "repository": {
+                                        "nameWithOwner": "Marak/colors.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "commander",
+                                    "repository": {
+                                        "nameWithOwner": "tj/commander.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "component-emitter",
+                                    "repository": {
+                                        "nameWithOwner": "sindresorhus/component-emitter"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "concat-map",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "concurrently",
+                                    "repository": {
+                                        "nameWithOwner": "open-cli-tools/concurrently"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "connect",
+                                    "repository": {
+                                        "nameWithOwner": "senchalabs/connect"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "copy-descriptor",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/copy-descriptor"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "core-util-is",
+                                    "repository": {
+                                        "nameWithOwner": "isaacs/core-util-is"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "cors",
+                                    "repository": {
+                                        "nameWithOwner": "expressjs/cors"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "css-selector-tokenizer",
+                                    "repository": {
+                                        "nameWithOwner": "css-modules/css-selector-tokenizer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "cssesc",
+                                    "repository": {
+                                        "nameWithOwner": "mathiasbynens/cssesc"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "daisyui",
+                                    "repository": {
+                                        "nameWithOwner": "saadeghi/daisyui"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "date-fns",
+                                    "repository": {
+                                        "nameWithOwner": "date-fns/date-fns"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "debug",
+                                    "repository": {
+                                        "nameWithOwner": "debug-js/debug"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "decode-uri-component",
+                                    "repository": {
+                                        "nameWithOwner": "SamVerschueren/decode-uri-component"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "define-property",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/define-property"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "define-property",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/define-property"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "define-property",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/define-property"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "depd",
+                                    "repository": {
+                                        "nameWithOwner": "dougwilson/nodejs-depd"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "depd",
+                                    "repository": {
+                                        "nameWithOwner": "dougwilson/nodejs-depd"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "dependency-graph",
+                                    "repository": {
+                                        "nameWithOwner": "jriecken/dependency-graph"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "destroy",
+                                    "repository": {
+                                        "nameWithOwner": "stream-utils/destroy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "didyoumean",
+                                    "repository": {
+                                        "nameWithOwner": "dcporter/didyoumean.js"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "dir-glob",
+                                    "repository": {
+                                        "nameWithOwner": "kevva/dir-glob"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "dlv",
+                                    "repository": {
+                                        "nameWithOwner": "developit/dlv"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "duplexer",
+                                    "repository": {
+                                        "nameWithOwner": "Raynos/duplexer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "ee-first",
+                                    "repository": {
+                                        "nameWithOwner": "jonathanong/ee-first"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "electron-to-chromium",
+                                    "repository": {
+                                        "nameWithOwner": "Kilian/electron-to-chromium"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "emoji-regex",
+                                    "repository": {
+                                        "nameWithOwner": "mathiasbynens/emoji-regex"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "encodeurl",
+                                    "repository": {
+                                        "nameWithOwner": "pillarjs/encodeurl"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "escalade",
+                                    "repository": {
+                                        "nameWithOwner": "lukeed/escalade"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "escape-html",
+                                    "repository": {
+                                        "nameWithOwner": "component/escape-html"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "etag",
+                                    "repository": {
+                                        "nameWithOwner": "jshttp/etag"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "event-stream",
+                                    "repository": {
+                                        "nameWithOwner": "dominictarr/event-stream"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "expand-brackets",
+                                    "repository": {
+                                        "nameWithOwner": "micromatch/expand-brackets"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "extend-shallow",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/extend-shallow"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "extend-shallow",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/extend-shallow"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "extglob",
+                                    "repository": {
+                                        "nameWithOwner": "micromatch/extglob"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fast-glob",
+                                    "repository": {
+                                        "nameWithOwner": "mrmlnc/fast-glob"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fastparse",
+                                    "repository": {
+                                        "nameWithOwner": "webpack/fastparse"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fastq",
+                                    "repository": {
+                                        "nameWithOwner": "mcollina/fastq"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "faye-websocket",
+                                    "repository": {
+                                        "nameWithOwner": "faye/faye-websocket-node"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "file-uri-to-path",
+                                    "repository": {
+                                        "nameWithOwner": "TooTallNate/file-uri-to-path"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fill-range",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/fill-range"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "fill-range",
+                                    "repository": {
+                                        "nameWithOwner": "jonschlinkert/fill-range"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "finalhandler",
+                                    "repository": {
+                                        "nameWithOwner": "pillarjs/finalhandler"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "autoprefixer",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/autoprefixer"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "concurrently",
+                                    "repository": {
+                                        "nameWithOwner": "open-cli-tools/concurrently"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "daisyui",
+                                    "repository": {
+                                        "nameWithOwner": "saadeghi/daisyui"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "live-server",
+                                    "repository": {
+                                        "nameWithOwner": "tapio/live-server"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "postcss",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/postcss"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "postcss-cli",
+                                    "repository": {
+                                        "nameWithOwner": "postcss/postcss-cli"
+                                    }
+                                },
+                                {
+                                    "packageManager": "NPM",
+                                    "packageName": "tailwindcss",
+                                    "repository": {
+                                        "nameWithOwner": "tailwindlabs/tailwindcss"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#663399",
+                        "name": "CSS"
+                    }
+                ]
             }
         },
         "spack/canonical-unparse": {
