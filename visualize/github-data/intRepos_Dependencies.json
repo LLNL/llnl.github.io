@@ -43441,6 +43441,19 @@
                 ]
             }
         },
+        "LLNL/denodo-ai-sdk": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
+                    }
+                ]
+            }
+        },
         "LLNL/devil_ray": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -45048,6 +45061,19 @@
                     {
                         "color": "#89e051",
                         "name": "Shell"
+                    }
+                ]
+            }
+        },
+        "LLNL/fence-agents": {
+            "dependencyGraphManifests": {
+                "nodes": []
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#3572A5",
+                        "name": "Python"
                     }
                 ]
             }
@@ -52975,6 +53001,13 @@
                             "nodes": [
                                 {
                                     "packageManager": "ACTIONS",
+                                    "packageName": "actions/attest-build-provenance",
+                                    "repository": {
+                                        "nameWithOwner": "actions/attest-build-provenance"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
                                     "packageName": "actions/checkout",
                                     "repository": {
                                         "nameWithOwner": "actions/checkout"
@@ -52982,9 +53015,23 @@
                                 },
                                 {
                                     "packageManager": "ACTIONS",
-                                    "packageName": "docker/setup-buildx-action",
+                                    "packageName": "docker/build-push-action",
                                     "repository": {
-                                        "nameWithOwner": "docker/setup-buildx-action"
+                                        "nameWithOwner": "docker/build-push-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/login-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/login-action"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/metadata-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/metadata-action"
                                     }
                                 }
                             ]
@@ -53026,6 +53073,26 @@
                                     "packageName": "pypa/gh-action-pypi-publish",
                                     "repository": {
                                         "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "docker/setup-buildx-action",
+                                    "repository": {
+                                        "nameWithOwner": "docker/setup-buildx-action"
                                     }
                                 }
                             ]
@@ -73117,19 +73184,6 @@
                 ]
             }
         },
-        "mdg-graphics/griz": {
-            "dependencyGraphManifests": {
-                "nodes": []
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#555555",
-                        "name": "C"
-                    }
-                ]
-            }
-        },
         "mdg-graphics/mili": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -81687,42 +81741,7 @@
         },
         "visit-dav/spack": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "clingo",
-                                    "repository": {
-                                        "nameWithOwner": "potassco/clingo"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "setuptools",
-                                    "repository": {
-                                        "nameWithOwner": "pypa/setuptools"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "six",
-                                    "repository": {
-                                        "nameWithOwner": "benjaminp/six"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "types-six",
-                                    "repository": {
-                                        "nameWithOwner": "python/typeshed"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             },
             "languages": {
                 "nodes": [
