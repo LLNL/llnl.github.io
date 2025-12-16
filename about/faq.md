@@ -217,7 +217,9 @@ Now that your project is on GitHub, make sure users and contributors can find it
   {% include components/accordion.html title='How do I let people know about my new repo?'  slug='publicize' content=accordionContent %}
 
 {% capture accordionContent %}
-Yes, you can give external contributors Write access to your GitHub repo. Anyone with Admin access to your repo can enable this: Settings > Collaborators > Manage access > Add people > enter their username and select.
+Yes, you can give external contributors Write access to your GitHub repo. Anyone with Admin access to your repo can enable this: Settings > Collaborators and teams > Manage access > Add people > enter their username and select.
+
+**Note:** At this time, external (non-LLNL) collaborators should be invited as [Outside Collaborators](https://github.com/orgs/LLNL/outside-collaborators), not [LLNL org Members](https://github.com/orgs/LLNL/people). They can be added to a [Team](https://github.com/orgs/LLNL/teams) for a specific repo without being a Member of the LLNL org. This setup allows them to contribute to LLNL repos from the source branch (i.e., the collaborator creates a branch in the repo and submits a PR from it).
 
 If you don't already have Admin access to your repo, contact [github-admin@llnl.gov](mailto:github-admin@llnl.gov) to request it.
 
