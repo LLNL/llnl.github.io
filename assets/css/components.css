@@ -48,7 +48,7 @@ select.form-control {
 
 .hero-home,
 .hero-default {
-    background: url('/assets/images/software-hero.png') center center / cover;
+    background: url('/assets/images/software-hero-new.png') center center / cover;
 }
 
 .hero-home {
@@ -78,7 +78,7 @@ select.form-control {
 
 @media (max-width: 991px) {
     .hero-home {
-        background: url('/assets/images/software-mobile-hero.png') top center / cover;
+        background: url('/assets/images/software-mobile-hero-new.png') top center / cover;
     }
 
     .hero-home .logo {
@@ -88,17 +88,17 @@ select.form-control {
 
 @media (max-width: 719px) {
     .hero-home {
-        background: linear-gradient(to top, black 0%, rgba(0, 141, 203, 0.8) 38%, transparent), url('/assets/images/software-mobile-hero.png') top center / cover
+        background: linear-gradient(to top, black 0%, rgba(0, 141, 203, 0.8) 38%, transparent), url('/assets/images/software-mobile-hero-new.png') top center / cover
     }
 }
 
 .alert-warning,
 .bg-alert-yellow {
-    background: #FFF7E7;
+    background: #fdcc63;
 }
 
 .text-alert-warning-icon {
-    color: #FCB317;
+    color: #00A5B8;
 }
 
 .cta-title {
@@ -145,7 +145,7 @@ select.sort-by {
     display: block;
     height: var(--hover-border-width);
     transform: translateY(var(--hover-border-width));
-    background: linear-gradient(to right, var(--software-blue), var(--software-green));
+    background: linear-gradient(to right, var(--impact-blue), var(--extreme));
     transition: 0.2s transform;
 }
 
@@ -245,7 +245,7 @@ select.sort-by {
 
 .llnl-list-item.active,
 .llnl-list-item:hover {
-    color: var(--software-blue) !important;
+    color: var(--impact-blue) !important;
 }
 
 .llnl-list-item:hover .icon,

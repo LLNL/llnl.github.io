@@ -99,24 +99,24 @@ a.text-black-hover:hover * {
     text-decoration: underline;
 }
 
-.border-top-gradient-software-blue-green::before,
-.border-bottom-gradient-software-blue-green::after {
+.border-top-gradient-impact-extreme::before,
+.border-bottom-gradient-impact-extreme::after {
     content: "";
     display: block;
-    background: linear-gradient(to right, var(--software-blue), var(--software-green));
+    background: linear-gradient(to right, var(--impact-blue), var(--extreme));
     height: 6px;
 }
 
-.border-top-gradient-software-blue-green.thin::before,
-.border-bottom-gradient-software-blue-green.thin::after {
+.border-top-gradient-impact-extreme.thin::before,
+.border-bottom-gradient-impact-extreme.thin::after {
     height: 4px;
 }
 
-.border-bottom-gradient-software-blue-green {
+.border-bottom-gradient-impact-extreme {
     position: relative;
 }
 
-.border-bottom-gradient-software-blue-green::after {
+.border-bottom-gradient-impact-extreme::after {
     position: absolute;
     left: 0;
     right: 0;
@@ -129,26 +129,26 @@ a.text-black-hover:hover * {
 
 .btn-gradient,
 .btn-outline-gradient {
-    --bs-btn-color: var(--software-blue);
-    --bs-btn-border-color: var(--software-blue);
+    --bs-btn-color: var(--impact-blue);
+    --bs-btn-border-color: var(--impact-blue);
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: black;
     --bs-btn-hover-border-color: black;
     --bs-btn-focus-shadow-rgb: 25,135,84;
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: linear-gradient(to right, var(--software-blue), var(--software-green));
-    --bs-btn-active-border-color: var(--software-blue);
+    --bs-btn-active-bg: linear-gradient(to right, var(--impact-blue), var(--extreme));
+    --bs-btn-active-border-color: var(--impact-blue);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: var(--software-blue);
+    --bs-btn-disabled-color: var(--impact-blue);
     --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: var(--software-blue);
+    --bs-btn-disabled-border-color: var(--impact-blue);
     --bs-gradient: none;
 }
 
 .btn-gradient,
 .btn-outline-gradient:active,
 .btn-outline-gradient.active {
-    background: linear-gradient(to right, var(--software-blue), var(--software-green));
+    background: linear-gradient(to right, var(--impact-blue), var(--extreme));
 }
 
 .btn-gradient:hover {
