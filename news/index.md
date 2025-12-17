@@ -10,13 +10,13 @@ breadcrumb: News
 <div ng-app="app" ng-controller="PostController" class="contain-paint" ng-cloak>
 <div class="d-none d-xl-block sticky-xl-top">
     <div class="col-12 col-xl-2 float-lg-start ps-3" id="llnl-side-category-container">
-        <a role="button" href="#" ng-class="{'llnl-list-item text-decoration-none d-flex align-items-center px-2 my-3 fs-14 fw-medium text-black text-software-blue-hover': true, 'active': activeCategory === null}" ng-click="setCategory(null)">
+        <a role="button" href="#" ng-class="{'llnl-list-item text-decoration-none d-flex align-items-center px-2 my-3 fs-14 fw-medium text-black text-impact-blue-hover': true, 'active': activeCategory === null}" ng-click="setCategory(null)">
             <div class="icon me-3 d-flex align-items-center justify-content-center">
                 <i class="mx-1 fa fa-light fa-newspaper fa-lg"></i>
             </div>
             <span class="">All News</span>
         </a>
-        <a role="button" ng-repeat="category in categories" ng-class="{'llnl-list-item text-decoration-none d-flex align-items-center px-2 my-3 fs-14 fw-medium text-black text-software-blue-hover': true, 'active': activeCategory === category}" ng-click="setCategory(category)">
+        <a role="button" ng-repeat="category in categories" ng-class="{'llnl-list-item text-decoration-none d-flex align-items-center px-2 my-3 fs-14 fw-medium text-black text-impact-blue-hover': true, 'active': activeCategory === category}" ng-click="setCategory(category)">
             <div class="icon me-3 d-flex align-items-center justify-content-center">
                 <i class="mx-1 fa fa-light {{ category | categoryIcon }} fa-lg"></i>
             </div>
@@ -39,7 +39,7 @@ breadcrumb: News
             <i class="fa fa-light {{ activeCategory | categoryIcon }} fa-xxl"></i>
             <h2 class="ms-3 my-0">{{ activeCategory | deslugify | titleCase }}</h2>
         </div>
-        <article ng-repeat="post in posts | filter:filterPostsByCategory | filter:filterPostsByLowerBoundYear | filter:filterPostsByActiveYear | orderBy: sortByValue" class="border-bottom border-bottom-software-blue border-2 pb-4 mt-5 transition-slide-up">
+        <article ng-repeat="post in posts | filter:filterPostsByCategory | filter:filterPostsByLowerBoundYear | filter:filterPostsByActiveYear | orderBy: sortByValue" class="border-bottom border-bottom-impact-blue border-2 pb-4 mt-5 transition-slide-up">
             <h3 class="d-inline-block mt-0">{{ post.title }} <a href="#{{ post.slug }}" class="d-inline-block text-decoration-none fa fa-link fs-13 ps-2 align-middle"></a></h3>
             <div class="fs-13 fw-semibold text-quantum-slate"><time ng-if="post.date" datetime="{{ post.date }}">{{ post.date | localeDate }}</time> <div ng-if="post.categories.length > 0" class="llnl-post-categories d-inline">(<span ng-repeat="category in post.categories" class="comma-delimit">{{ category | deslugify | titleCase }}</span>)</div></div>
             <div ng-bind-html="post.content | safeHtml"></div>

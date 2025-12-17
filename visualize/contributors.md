@@ -19,10 +19,10 @@ Over 400 LLNL employees contribute to our repositories, but we also benefit from
 <!-- Preset vis display areas -->
 
 <div class="row">
-    <div class="col-12 col-md-6 text-center border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide" >
+    <div class="col-12 col-md-6 text-center border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide" >
         <svg class="pieMembers"></svg>
     </div>
-    <div class="col-12 col-md-6 text-center border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+    <div class="col-12 col-md-6 text-center border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
         <svg class="pieRepos"></svg>
     </div>
 </div>

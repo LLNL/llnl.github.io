@@ -23,7 +23,7 @@ breadcrumb: Releases
     </div>
     <div class="row">
         <div class="col-12" id="release-container">
-            <article ng-repeat="release in releases | filter:filterPostsByLowerBoundYear | filter:filterByPublishedAt | orderBy: sortBy : sortByReverse" id="{{ release.name }}" class="border-bottom border-bottom-software-blue border-2 pb-4 transition-slide-up">
+            <article ng-repeat="release in releases | filter:filterPostsByLowerBoundYear | filter:filterByPublishedAt | orderBy: sortBy : sortByReverse" id="{{ release.name }}" class="border-bottom border-bottom-impact-blue border-2 pb-4 transition-slide-up">
                 <h3 title="{{ release.name }}"><a class="text-decoration-none" href="{{ release.url }}">{{ release.project }} - {{ release.tagName }}</a></h3>
                 <p class="fs-13 fw-semibold text-quantum-slate"><time datetime="{{ release.publishedAt }}">{{ release.publishedAt.value | date: 'MMMM d, yyyy' }}</time></p>
                 <p><b>Name</b>: {{ release.name }}</p>

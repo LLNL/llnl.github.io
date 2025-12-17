@@ -33,41 +33,41 @@ Lawrence Livermore National Lab has contributed to open source repositories for 
 <!-- Preset vis display areas -->
 ### Creation History
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5">
   <svg class="repoCreationHistory d-block mx-auto my-0"></svg>
 </div>
 
 ### Activity Across All Repos
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5">
   <svg class="repoActivityChart d-block mx-auto my-0"></svg>
 </div>
 
 ### Number of Stars Over Time
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5">
   <svg class="repoStarHistoryChart d-block mx-auto my-0"></svg>
 </div>
 
 <div class="row">
-  <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5" markdown="1">
+  <div class="col-12 col-md-6 border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5" markdown="1">
 ### Pull Requests
 <svg class="repoPulls"></svg>
   </div>
-  <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5" markdown="1">
+  <div class="col-12 col-md-6 border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5" markdown="1">
 ### Repository Issues
 <svg class="repoIssues"></svg>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5" markdown="1">
+  <div class="col-12 col-md-6 border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5" markdown="1">
 ### Language Breakdown
 <div class="text-center">
 <svg class="languagePie"></svg>
 </div>
   </div>
-  <div class="col-12 col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 pb-5" markdown="1">
+  <div class="col-12 col-md-6 border-bottom-gradient-impact-extreme thin border-bottom-1 pb-5" markdown="1">
 ### Repository Topics
 <div class="text-center">
 <svg class="topicCloud"></svg>

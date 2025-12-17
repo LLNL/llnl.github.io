@@ -30,29 +30,29 @@ We contribute to a variety of code repositories, some of which fuel internal wor
 
 <!-- Preset vis display areas -->
 <svg class="listPopularRepos d-block mx-auto my-0"></svg>
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
     <svg class="cluster d-block mx-auto my-0"></svg>
 </div>
 
 ### Creation History
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
   <svg class="repoCreationHistory d-block mx-auto my-0"></svg>
 </div>
 
 ### Number of Stars Over Time
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
   <svg class="repoStarHistory d-block mx-auto my-0"></svg>
 </div>
 
 ### Activity Across Top 10 Repos
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
   <svg class="repoActivityChart d-block mx-auto my-0"></svg>
 </div>
 
-<div class="border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide" markdown="1">
+<div class="border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide" markdown="1">
 ### Commits
 <div class="text-center">
 <svg class="commitPie"></svg>
