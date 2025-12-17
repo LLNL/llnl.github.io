@@ -18,7 +18,7 @@ menus:
 <!-- End: Info box -->
 
 <!-- START: Accordions Each h2 below will be a separate accordion. -->
-<div class="border-top-gradient-software-blue-green border-bottom-gradient-software-blue-green">
+<div class="border-top-gradient-impact-extreme border-bottom-gradient-impact-extreme">
   {% capture accordionContent %}
 If you’re new to GitHub and open source in general, figuring out how to get set up can be a challenge. You may want to read through the GitHub Help pages on [setting up and managing your GitHub profile](https://support.github.com/features/account).
 

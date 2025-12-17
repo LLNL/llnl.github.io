@@ -38,39 +38,39 @@ breadcrumb: Repository
         </div>
     </div>
     <!-- Preset vis display areas -->
-    <div class="row border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+    <div class="row border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
         <div class="col-12">
             <svg class="repoActivityChart d-block mx-auto my-0"></svg>
         </div>
     </div>
-    <div class="row border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+    <div class="row border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
         <div class="col-12">
             <svg class="pieUsers d-block mx-auto my-0"></svg>
         </div>
     </div>
     <div class="row">
-        <div ng-show="count.pulls" class="col-12 col-md-6 text-center border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+        <div ng-show="count.pulls" class="col-12 col-md-6 text-center border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
             <svg class="piePulls"></svg>
         </div>
-        <div ng-show="count.issues" class="col-12 col-md-6 text-center border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+        <div ng-show="count.issues" class="col-12 col-md-6 text-center border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
             <svg class="pieIssues"></svg>
         </div>
     </div>
-    <div class="row border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+    <div class="row border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
         <div class="col-12">
             <svg class="repoCreationHistory d-block mx-auto my-0"></svg>
         </div>
     </div>
-    <div ng-show="repo.stargazers.totalCount" class="row border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+    <div ng-show="repo.stargazers.totalCount" class="row border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
         <div class="col-12">
             <svg class="repoStarHistory d-block mx-auto my-0"></svg>
         </div>
     </div>
     <div ng-if="repo.languages.totalCount || repo.repositoryTopics.totalCount" class="row">
-        <div ng-show="repo.languages.totalCount" ng-class="{'text-center col-12': true, 'col-md-6 border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide': repo.repositoryTopics.totalCount > 0}">
+        <div ng-show="repo.languages.totalCount" ng-class="{'text-center col-12': true, 'col-md-6 border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide': repo.repositoryTopics.totalCount > 0}">
             <svg class="languagePie"></svg>
         </div>
-        <div ng-show="repo.repositoryTopics.totalCount" class="col-12 col-md-6 text-center border-bottom-gradient-software-blue-green thin border-bottom-1 chart-divide">
+        <div ng-show="repo.repositoryTopics.totalCount" class="col-12 col-md-6 text-center border-bottom-gradient-impact-extreme thin border-bottom-1 chart-divide">
             <svg class="topicCloud"></svg>
         </div>
     </div>

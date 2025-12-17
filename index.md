@@ -14,7 +14,7 @@ breadcrumb: Home
         <div class="row text-white">
             <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-8">
                 <div class="hero-content-container d-lg-flex flex-column flex-lg-row align-items-center text-center text-lg-start">
-                    <img class="me-lg-3 logo mb-4 mb-lg-0" src="/assets/images/software-logomark-white.png" />
+                    <img class="me-lg-3 logo mb-4 mb-lg-0" src="/assets/images/logomark-unbounded-alternative-lab-white.png" />
                     <div class="content d-block">
                         <p class="h1 text-balance fw-light">Welcome to the LLNL software catalog</p>
                         <p class="text-balance fs-18">Your portal for open source projects developed at Lawrence Livermore National Laboratory</p>
@@ -50,7 +50,7 @@ breadcrumb: Home
     <div class="d-none d-xl-block sticky-xxl-top mt-3" ng-if="categories.length">
         <ul class="col-12 col-xl-2 float-lg-start ps-3 d-flex flex-column list-unstyled" id="llnl-side-container">
             <li role="button" ng-repeat="category in categories | orderBy: 'title'">
-                <div ng-if="!category.url" ng-click="setCategory(category)" ng-class="{'llnl-list-item d-flex align-items-center px-2 my-2 fs-14 fw-medium': true, 'active text-software-blue': category.hash === activeCategory.hash }">
+                <div ng-if="!category.url" ng-click="setCategory(category)" ng-class="{'llnl-list-item d-flex align-items-center px-2 my-2 fs-14 fw-medium': true, 'active text-impact-blue': category.hash === activeCategory.hash }">
                     <div ng-if="category.icon.path" class="icon me-3 d-flex align-items-center justify-content-center">
                         <img class="logo" src="{{ category.icon.path }}" />
                     </div>
@@ -59,7 +59,7 @@ breadcrumb: Home
                     </div>
                     <span>{{ category.title }}</span>
                 </div>
-                <a role="button" ng-if="category.url" href="{{ category.url }}" ng-class="{'llnl-list-item d-flex align-items-center px-2 my-2 fs-14 fw-medium text-decoration-none text-body-default': true, 'active text-software-blue': category.hash === activeCategory.hash, 'external-link': category.url }">
+                <a role="button" ng-if="category.url" href="{{ category.url }}" ng-class="{'llnl-list-item d-flex align-items-center px-2 my-2 fs-14 fw-medium text-decoration-none text-body-default': true, 'active text-impact-blue': category.hash === activeCategory.hash, 'external-link': category.url }">
                     <div ng-if="category.icon.path" class="icon me-3 d-flex align-items-center justify-content-center">
                         <img class="logo" src="{{ category.icon.path }}">
                     </div>
@@ -96,7 +96,7 @@ breadcrumb: Home
                 <div class="row fs-14 fw-medium">
                     <div class="col-12 col-lg-6 d-flex align-items-center mb-4 mb-md-0">
                         <input class="form-control fs-14 fw-semibold" type="text" name="query" placeholder="What are you looking for?" ng-model="query" ng-keyup="trackSearchQuery(activeCategory, query)" ng-blur="trackSearchQuery(activeCategory, query)" ng-change="trackProjectImpressions()" />
-                        <i class="fa fa-light fa-search text-software-blue ms--2"></i>
+                        <i class="fa fa-light fa-search text-impact-blue ms--2"></i>
                     </div>
                     <div class="col-7 col-md-6 col-lg-3 d-flex align-items-center text-quantum-slate mt-md-2">
                     <!-- comment out proprietary repos toggle
@@ -172,15 +172,15 @@ breadcrumb: Home
                                 <hr class="bg-quantum-slate border-2" />
                                 <div class="d-flex justify-content-around my-3 links">
                                     <a ng-if="repository.url && repository.url.indexOf('github.com') > -1" class="text-decoration-none text-black text-black-hover" href="{{ repository.url }}">
-                                        <i class="fa fa-light fa-github fw-semibold text-software-blue me-1"></i> Github</a>
+                                        <i class="fa fa-light fa-github fw-semibold text-impact-blue me-1"></i> Github</a>
                                     <a ng-if="repository.url && repository.url.indexOf('gitlab.') > -1" class="text-decoration-none text-black text-black-hover" href="{{ repository.url }}">
-                                        <i class="fa fa-light fa-gitlab fw-semibold text-software-blue me-1"></i> Gitlab</a>
+                                        <i class="fa fa-light fa-gitlab fw-semibold text-impact-blue me-1"></i> Gitlab</a>
                                     <a ng-if="repository.homepageUrl" class="text-decoration-none text-black text-black-hover" href="{{ repository.homepageUrl }}">
-                                        <i class="fa fa-light fa-globe fw-semibold text-software-blue text-black-hover me-1"></i> Website </a>
+                                        <i class="fa fa-light fa-globe fw-semibold text-impact-blue text-black-hover me-1"></i> Website </a>
                                     <a ng-if="repository.documentation" class="text-decoration-none text-black text-black-hover" href="{{ repository.documentation }}">
-                                        <i class="fa fa-light fa-file-lines fw-semibold text-software-blue text-black-hover me-1"></i> Docs </a>
+                                        <i class="fa fa-light fa-file-lines fw-semibold text-impact-blue text-black-hover me-1"></i> Docs </a>
                                     <a ng-if="repository && !repository.isProprietary" class="text-decoration-none text-black text-black-hover" href="{{ '/repo/#!/' + repository.nameWithOwner}}">
-                                        <i class="fa fa-light fa-chart-mixed fw-semibold text-software-blue text-black-hover me-1"></i> Data </a>
+                                        <i class="fa fa-light fa-chart-mixed fw-semibold text-impact-blue text-black-hover me-1"></i> Data </a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@ breadcrumb: Home
                         <ul class="pagination justify-content-center box-shadow-3-6 mx-auto w-fit-content overflow-hidden rounded">
                             {% raw %}
                             <li class="page-item d-inline-block" ng-if="pageNumber > 1">
-                                <a class="page-link text-software-blue text-white-hover border-0 rounded" role="button" ng-click="setPage(pageNumber - 1)"><i class="fa fa-light fa-chevrons-left"></i></a>
+                                <a class="page-link text-impact-blue text-white-hover border-0 rounded" role="button" ng-click="setPage(pageNumber - 1)"><i class="fa fa-light fa-chevrons-left"></i></a>
                             </li>
                             <li class="page-item d-inline-block" ng-repeat="i in range(Math.max(pageNumber - 3, 1), pageNumber - 1)">
                                 <a class="page-link border-0" role="button" ng-click="setPage(i)">{{ i }}</a>
@@ -205,7 +205,7 @@ breadcrumb: Home
                                 <a class="page-link border-0" role="button" ng-click="setPage(i)">{{ i }}</a>
                             </li>
                             <li class="page-item d-inline-block" ng-if="pageNumber < filteredRepositories.length / perPage">
-                                <a class="page-link cursor-pointer text-software-blue text-white-hover border-0 rounded" role="button" ng-click="setPage(pageNumber + 1)"><i class="fa fa-light fa-chevrons-right"></i></a>
+                                <a class="page-link cursor-pointer text-impact-blue text-white-hover border-0 rounded" role="button" ng-click="setPage(pageNumber + 1)"><i class="fa fa-light fa-chevrons-right"></i></a>
                             </li>
                             {% endraw %}
                         </ul>
