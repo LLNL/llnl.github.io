@@ -17946,6 +17946,31 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mpi4py",
+                                    "repository": {
+                                        "nameWithOwner": "mpi4py/mpi4py"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pandas",
+                                    "repository": {
+                                        "nameWithOwner": "pandas-dev/pandas"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pyarrow",
+                                    "repository": null
+                                }
+                            ]
+                        }
                     }
                 ]
             },
@@ -43396,7 +43421,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.Extensions.FileProviders.Abstractions",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -43410,7 +43435,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "Microsoft.Extensions.ObjectPool",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/aspnetcore"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -43716,7 +43741,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Text.Json",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -43830,7 +43855,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Text.Json",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 }
                             ]
@@ -43871,7 +43896,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.Configuration.ConfigurationManager",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
@@ -44091,7 +44116,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.ServiceProcess.ServiceController",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 }
                             ]
@@ -50133,13 +50158,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "json-logic-qubit",
                                     "repository": null
                                 },
@@ -50152,23 +50170,16 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "pylint",
-                                    "repository": {
-                                        "nameWithOwner": "pylint-dev/pylint"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pyproj",
-                                    "repository": {
-                                        "nameWithOwner": "pyproj4/pyproj"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "pytest",
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruff",
+                                    "repository": {
+                                        "nameWithOwner": "astral-sh/ruff"
                                     }
                                 }
                             ]
@@ -50267,63 +50278,15 @@
             "languages": {
                 "nodes": [
                     {
-                        "color": "#3572A5",
-                        "name": "Python"
+                        "color": "#f34b7d",
+                        "name": "C++"
                     }
                 ]
             }
         },
         "llnl/clippy-cpp": {
             "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "llnl-clippy",
-                                    "repository": {
-                                        "nameWithOwner": "llnl/clippy"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
-                                    "packageName": "pytest",
-                                    "repository": {
-                                        "nameWithOwner": "pytest-dev/pytest"
-                                    }
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/checkout",
-                                    "repository": {
-                                        "nameWithOwner": "actions/checkout"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "actions/setup-python",
-                                    "repository": {
-                                        "nameWithOwner": "actions/setup-python"
-                                    }
-                                },
-                                {
-                                    "packageManager": "ACTIONS",
-                                    "packageName": "MarkusJx/install-boost",
-                                    "repository": {
-                                        "nameWithOwner": "MarkusJx/install-boost"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
+                "nodes": []
             },
             "languages": {
                 "nodes": [
@@ -58496,13 +58459,6 @@
                                 },
                                 {
                                     "packageManager": "PIP",
-                                    "packageName": "flake8",
-                                    "repository": {
-                                        "nameWithOwner": "PyCQA/flake8"
-                                    }
-                                },
-                                {
-                                    "packageManager": "PIP",
                                     "packageName": "json-logic-qubit",
                                     "repository": null
                                 },
@@ -58518,6 +58474,13 @@
                                     "packageName": "pytest",
                                     "repository": {
                                         "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruff",
+                                    "repository": {
+                                        "nameWithOwner": "astral-sh/ruff"
                                     }
                                 }
                             ]
