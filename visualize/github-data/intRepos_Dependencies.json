@@ -12983,40 +12983,6 @@
                 ]
             }
         },
-        "GMLC-TDC/CmdWebCtrl": {
-            "dependencyGraphManifests": {
-                "nodes": [
-                    {
-                        "dependencies": {
-                            "nodes": [
-                                {
-                                    "packageManager": "GO",
-                                    "packageName": "github.com/olahol/melody",
-                                    "repository": {
-                                        "nameWithOwner": "olahol/melody"
-                                    }
-                                },
-                                {
-                                    "packageManager": "GO",
-                                    "packageName": "github.com/spf13/viper",
-                                    "repository": {
-                                        "nameWithOwner": "spf13/viper"
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            "languages": {
-                "nodes": [
-                    {
-                        "color": "#00ADD8",
-                        "name": "Go"
-                    }
-                ]
-            }
-        },
         "GMLC-TDC/HELICS": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -58444,6 +58410,113 @@
                 ]
             }
         },
+        "llnl/jsonlogic": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "coverage",
+                                    "repository": {
+                                        "nameWithOwner": "coveragepy/coveragepy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "json-logic-qubit",
+                                    "repository": null
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruff",
+                                    "repository": {
+                                        "nameWithOwner": "astral-sh/ruff"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/checkout",
+                                    "repository": {
+                                        "nameWithOwner": "actions/checkout"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/download-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/download-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/setup-python",
+                                    "repository": {
+                                        "nameWithOwner": "actions/setup-python"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "actions/upload-artifact",
+                                    "repository": {
+                                        "nameWithOwner": "actions/upload-artifact"
+                                    }
+                                },
+                                {
+                                    "packageManager": "ACTIONS",
+                                    "packageName": "pypa/gh-action-pypi-publish",
+                                    "repository": {
+                                        "nameWithOwner": "pypa/gh-action-pypi-publish"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#f34b7d",
+                        "name": "C++"
+                    }
+                ]
+            }
+        },
         "llnl/jupyterhub": {
             "dependencyGraphManifests": {
                 "nodes": []
@@ -80713,7 +80786,7 @@
                                     "packageManager": "ACTIONS",
                                     "packageName": "snapcore/action-build",
                                     "repository": {
-                                        "nameWithOwner": "canonical/action-build"
+                                        "nameWithOwner": "snapcore/action-build"
                                     }
                                 }
                             ]
