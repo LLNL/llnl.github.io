@@ -12983,6 +12983,40 @@
                 ]
             }
         },
+        "GMLC-TDC/CmdWebCtrl": {
+            "dependencyGraphManifests": {
+                "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/olahol/melody",
+                                    "repository": {
+                                        "nameWithOwner": "olahol/melody"
+                                    }
+                                },
+                                {
+                                    "packageManager": "GO",
+                                    "packageName": "github.com/spf13/viper",
+                                    "repository": {
+                                        "nameWithOwner": "spf13/viper"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "languages": {
+                "nodes": [
+                    {
+                        "color": "#00ADD8",
+                        "name": "Go"
+                    }
+                ]
+            }
+        },
         "GMLC-TDC/HELICS": {
             "dependencyGraphManifests": {
                 "nodes": [
@@ -17900,6 +17934,74 @@
         "MetallData/metalldata": {
             "dependencyGraphManifests": {
                 "nodes": [
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ipython",
+                                    "repository": {
+                                        "nameWithOwner": "ipython/ipython"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "mypy",
+                                    "repository": {
+                                        "nameWithOwner": "python/mypy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "ruff",
+                                    "repository": {
+                                        "nameWithOwner": "astral-sh/ruff"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "dependencies": {
+                            "nodes": [
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "llnl-clippy",
+                                    "repository": {
+                                        "nameWithOwner": "llnl/clippy"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-cov",
+                                    "repository": {
+                                        "nameWithOwner": "pytest-dev/pytest-cov"
+                                    }
+                                },
+                                {
+                                    "packageManager": "PIP",
+                                    "packageName": "pytest-ordering",
+                                    "repository": {
+                                        "nameWithOwner": "ftobia/pytest-ordering"
+                                    }
+                                }
+                            ]
+                        }
+                    },
                     {
                         "dependencies": {
                             "nodes": [
@@ -31331,9 +31433,7 @@
                                 {
                                     "packageManager": "MAVEN",
                                     "packageName": "org.apache.httpcomponents:httpcore",
-                                    "repository": {
-                                        "nameWithOwner": "apache/httpcomponents-core"
-                                    }
+                                    "repository": null
                                 },
                                 {
                                     "packageManager": "MAVEN",
@@ -43588,7 +43688,7 @@
                                     "packageManager": "NUGET",
                                     "packageName": "System.IO.Pipelines",
                                     "repository": {
-                                        "nameWithOwner": "dotnet/runtime"
+                                        "nameWithOwner": "dotnet/dotnet"
                                     }
                                 },
                                 {
